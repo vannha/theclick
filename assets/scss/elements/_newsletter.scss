@@ -1,0 +1,16 @@
+.ef5-newsletter-1{
+	label{
+		display: none;
+	}
+	.tnp-name{
+		margin-bottom: 10px;
+	}
+	.tnp-submit,
+	.tnp-button{
+		background-color: $accent_color;
+		padding-top: 10.5px;
+		padding-bottom: 10.5px;
+		margin-top: 20px;
+		@include border-radius(20px);
+	}
+}

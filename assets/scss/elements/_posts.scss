@@ -1,0 +1,18 @@
+.ef5-posts-1{
+	.ef5-post-item{
+		@include box-shadow('0 0 1px #000');
+		overflow: hidden;
+		margin-bottom: 29px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.ef5-posts-2{
+	.post-grid-item{
+		@include box-shadow('0 0 1px #000');
+		.post-image {
+			@include border-radius(10px 10px 0 0);
+		}
+	}
+}
