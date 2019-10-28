@@ -53,8 +53,8 @@ if(!function_exists('theclick_widget_expander')){
 add_filter( 'use_block_editor_for_post', 'theclick_support_gtb', 100 );
 function theclick_support_gtb(){
     $gutenberg = theclick_get_opts('gutenberg', '0');
+    var_dump($gutenberg);
     if(empty($theme_options['gutenberg']) )
         return false;
-
 }
  
