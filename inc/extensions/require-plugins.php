@@ -74,7 +74,7 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'name'               => esc_html__('Newsletter','theclick'),
                 'slug'               => 'newsletter',
                 'required'           => false,
-            )
+            ),
             array(
                 'name'               => esc_html__('WP User Avatars','theclick'),
                 'slug'               => 'wp-user-avatars',
