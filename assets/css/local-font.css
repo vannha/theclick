@@ -47,11 +47,16 @@
     url("../fonts/TheRedlightFree.otf") format("truetype");
 }
 
-.futura-pt-bold-font{
-	font-family: 'futura-pt-bold';
-}
+
 .futura-pt-book-font{
 	font-family: 'futura-pt-book';
+}
+.futura-pt-medium-font{
+	font-family: 'futura-pt-medium';
+}
+
+.futura-pt-bold-font{
+	font-family: 'futura-pt-bold';
 }
 .futura-pt-demi-font{
 	font-family: 'futura-pt-demi';
@@ -65,9 +70,7 @@
 .futura-pt-light-font{
 	font-family: 'futura-pt-light';
 }
-.futura-pt-medium-font{
-	font-family: 'futura-pt-medium';
-}
+
 .the-red-light-free-font{
 	font-family: 'the-red-light-free';	
 }
