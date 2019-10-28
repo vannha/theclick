@@ -219,12 +219,10 @@ class OverCome_CSS_Generator
         $accent_color  = 'var(--accent-color)';
         $darkent_accent_accent  = 'var(--darkent-accent-color)';
         $lightent_accent_accent  = 'var(--lightent-accent-color)';
-        $secondary_color  = 'var(--secondary-color)';
         printf('$primary_color:%s;',$primary_color);
         printf('$accent_color:%s;',$accent_color);
         printf('$darkent_accent_accent:%s;',$darkent_accent_accent);
         printf('$lightent_accent_accent:%s;',$lightent_accent_accent);
-        printf('$secondary_color:%s;',$secondary_color);
         printf('$invalid_color:%s;',theclick_configs('invalid_color'));
         printf('$color_red:%s;',theclick_configs('color_red'));
         printf('$color_green:%s;',theclick_configs('color_green'));
@@ -348,11 +346,9 @@ class OverCome_CSS_Generator
         $accent_color  = theclick_get_theme_opt( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
         $darken_color  = theclick_get_theme_opt( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
         $lighten_color  = theclick_get_theme_opt( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
-        $secondary_color  = theclick_get_theme_opt( 'secondary_color', apply_filters('theclick_secondary_color', theclick_configs('secondary_color')) );
-
         $preset_primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
         $preset_accent_color  = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
-        $preset_secondary_color = theclick_get_opts( 'secondary_color', apply_filters('theclick_secondary_color',theclick_configs('secondary_color') ));
+       
 
         // Menu links color for options page
         //--------------------------------------------------

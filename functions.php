@@ -12,11 +12,10 @@
 if(!function_exists('theclick_configs')){
     function theclick_configs($value){
         $configs = [
-            'primary_color'         => '#303030',
-            'accent_color'          => '#f5b91b',
-            'secondary_color'       => '#e6a423',
-            'darkent_accent_color'  => '#e6a423',
-            'lightent_accent_color' => '#ffdd65',
+            'primary_color'         => '#111111',
+            'accent_color'          => '#777777',
+            'darkent_accent_color'  => '#303030',
+            'lightent_accent_color' => '#999999',
             'invalid_color'         => 'red',
             'color_red'             => 'red',
             'color_green'           => 'green',
@@ -31,7 +30,7 @@ if(!function_exists('theclick_configs')){
             'body_font_size_small'  => '14px',
             'body_font_size_xsmall' => '13px',
             'body_font_size_xxsmall'=> '12px',
-            'body_font_color'       => '#303030',
+            'body_font_color'       => '#111111',
             'body_line_height'      => '1.6',
             'content_width'         => 1170,
             'h1_size'               => '36px',
@@ -383,7 +382,6 @@ function theclick_inline_styles() {
     $preset_accent_color  = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
     $darkent_accent_color  = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
     $lightent_accent_color  = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
-    $preset_secondary_color = theclick_get_opts( 'secondary_color', apply_filters('theclick_secondary_color',theclick_configs('secondary_color') ));
     $main_menu_height = theclick_get_opts( 'main_menu_height', ['height' => theclick_configs('main_menu_height')]);
     // CSS Variable
     printf(':root{--primary-color:%s;}', $preset_primary_color);
@@ -392,7 +390,6 @@ function theclick_inline_styles() {
     printf(':root{--accent-color-03:%s;}', theclick_hex2rgba($preset_accent_color, 0.3));
     printf(':root{--darkent-accent-color:%s;}', $darkent_accent_color);
     printf(':root{--lightent-accent-color:%s;}', $lightent_accent_color);
-    printf(':root{--secondary-color:%s;}', $preset_secondary_color);
     printf(':root{--main-menu-height:%s;}', $main_menu_height['height']);
     return ob_get_clean();
 }

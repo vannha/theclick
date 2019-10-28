@@ -422,13 +422,7 @@ Redux::setSection($opt_name, array(
             'type'        => 'color',
             'title'       => esc_html__('Lightent Accent Color', 'theclick'),
             'transparent' => false,
-        ),
-        array(
-            'id'          => 'secondary_color',
-            'type'        => 'color',
-            'title'       => esc_html__('Secondary Color', 'theclick'),
-            'transparent' => false,
-        ),
+        ) 
     )
 ));
 

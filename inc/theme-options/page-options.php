@@ -30,12 +30,6 @@ function theclick_page_options_register($metabox)
                     'title'       => esc_html__('Accent Color', 'theclick'),
                     'transparent' => false,
                 ),
-                array(
-                    'id'          => 'secondary_color',
-                    'type'        => 'color',
-                    'title'       => esc_html__('Secondary Color', 'theclick'),
-                    'transparent' => false,
-                ),
             ),
             theclick_page_opts(true),
             theclick_general_opts(['default' => true])
