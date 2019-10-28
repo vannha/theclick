@@ -46,3 +46,14 @@ if(!function_exists('theclick_widget_expander')){
         return '<span class="'.implode(' ', $classes).'"><span class="'.implode(' ', $inner_classes).'"></span></span>';
     }
 }
+
+/**
+ * Gutenberg
+*/
+add_filter( 'use_block_editor_for_post', 'theclick_support_gtb', 100 );
+function theclick_support_gtb(){
+    $gutenberg = theclick_get_opts('gutenberg', '0');
+    return false;
+    //if(!empty($theme_options['gutenberg']) ){  
+}
+ 
