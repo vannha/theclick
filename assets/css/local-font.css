@@ -1,0 +1,73 @@
+@font-face{
+    font-family:"futura-pt-bold";
+    src:url("../fonts/FuturaPTBold.otf") format("woff"),
+    url("../fonts/FuturaPTBold.otf") format("opentype"),
+    url("../fonts/FuturaPTBold.otf") format("truetype");
+}
+@font-face {
+	font-family:"futura-pt-book";
+    src:url("../fonts/FuturaPTBook.otf") format("woff"),
+    url("../fonts/FuturaPTBook.otf") format("opentype"),
+    url("../fonts/FuturaPTBook.otf") format("truetype");
+}
+@font-face {
+	font-family:"futura-pt-demi";
+    src:url("../fonts/FuturaPTDemi.otf") format("woff"),
+    url("../fonts/FuturaPTDemi.otf") format("opentype"),
+    url("../fonts/FuturaPTDemi.otf") format("truetype");
+}
+@font-face {
+	font-family:"futura-pt-extra-bold";
+    src:url("../fonts/FuturaPTExtraBold.otf") format("woff"),
+    url("../fonts/FuturaPTExtraBold.otf") format("opentype"),
+    url("../fonts/FuturaPTExtraBold.otf") format("truetype");
+}
+@font-face {
+	font-family:"futura-pt-heavy";
+    src:url("../fonts/FuturaPTHeavy.otf") format("woff"),
+    url("../fonts/FuturaPTHeavy.otf") format("opentype"),
+    url("../fonts/FuturaPTHeavy.otf") format("truetype");
+}
+@font-face {
+	font-family:"futura-pt-light";
+    src:url("../fonts/FuturaPTLight.otf") format("woff"),
+    url("../fonts/FuturaPTLight.otf") format("opentype"),
+    url("../fonts/FuturaPTLight.otf") format("truetype");
+}
+@font-face {
+	font-family:"futura-pt-medium";
+    src:url("../fonts/FuturaPTMedium.otf") format("woff"),
+    url("../fonts/FuturaPTMedium.otf") format("opentype"),
+    url("../fonts/FuturaPTMedium.otf") format("truetype");
+}
+@font-face {
+	font-family:"the-red-light-free";
+    src:url("../fonts/TheRedlightFree.otf") format("woff"),
+    url("../fonts/TheRedlightFree.ttf") format("ttf"),
+    url("../fonts/TheRedlightFree.otf") format("truetype");
+}
+
+.futura-pt-bold-font{
+	font-family: 'futura-pt-bold';
+}
+.futura-pt-book-font{
+	font-family: 'futura-pt-book';
+}
+.futura-pt-demi-font{
+	font-family: 'futura-pt-demi';
+}
+.futura-pt-extrabold-font{
+	font-family: 'futura-pt-extra-bold';
+}
+.futura-pt-heavy-font{
+	font-family: 'futura-pt-heavy';
+}
+.futura-pt-light-font{
+	font-family: 'futura-pt-light';
+}
+.futura-pt-medium-font{
+	font-family: 'futura-pt-medium';
+}
+.the-red-light-free-font{
+	font-family: 'the-red-light-free';	
+}
