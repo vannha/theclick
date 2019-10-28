@@ -53,7 +53,9 @@ if(!function_exists('theclick_widget_expander')){
 add_filter( 'use_block_editor_for_post', 'theclick_support_gtb', 100 );
 function theclick_support_gtb(){
     $gutenberg = theclick_get_opts('gutenberg', '0');
-    if( $gutenberg === '0' )
+    if( $gutenberg == '0' )
         return false;
+    else
+        return true;
 }
  
