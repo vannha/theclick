@@ -13,7 +13,7 @@ if(is_archive() || is_home() || is_front_page() || is_search()) $classes[] = 'ef
 ?>
 
 <div <?php post_class(trim(implode(' ', $classes))); ?>>
-    <?php theclick_post_media(['thumbnail_size' => 'large']); ?>
+    <?php theclick_post_media(['thumbnail_size' => 'medium']); ?>
     <div class="ef5-loop-info"><?php
             theclick_post_header(['class' => 'loop ef5-loop-header']);
             theclick_post_excerpt();
