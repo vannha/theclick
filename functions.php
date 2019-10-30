@@ -52,8 +52,8 @@ if(!function_exists('theclick_configs')){
             'main_border2'          => '2px solid #D8D8D8', 
             'main_border_color'     => '#D8D8D8', 
             // Thumbnail Size
-            'large_size_w'                   => 770,
-            'large_size_h'                   => 353,
+            'large_size_w'                   => 810,
+            'large_size_h'                   => 650,
             'medium_size_w'                  => 370,
             'medium_size_h'                  => 250,
             'thumbnail_size_w'               => 86,
@@ -61,12 +61,12 @@ if(!function_exists('theclick_configs')){
             'post_thumbnail_size_w'          => 1170,
             'post_thumbnail_size_h'          => 500,
             'theclick_default_post_thumbnail' => true,
-            'theclick_thumbnail_is_bg'        => true,
+            'theclick_thumbnail_is_bg'        => false,
             // Header 
-            'logo_width'       => '192',
-            'logo_height'      => '38',
+            'logo_width'       => '108',
+            'logo_height'      => '42',
             'logo_units'       => 'px',
-            'main_menu_height' => '100px',
+            'main_menu_height' => '102px',
             'header_sidewidth' => '320px',
             // Menu Color
             'menu_link_color_regular' => 'var(--primary-color)',
