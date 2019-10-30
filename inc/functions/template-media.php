@@ -27,7 +27,7 @@ if(!function_exists('theclick_post_thumbnail')){
         if($echo) {
         ?>
             <div <?php echo implode(' ', $thumbnail_atts);?>>
-                <?php theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => $args['img_class']]);?>
+                <?php //theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => $args['img_class']]);?>
             </div>
             <?php do_action('theclick_post_thumbnail_content');
         } else {
