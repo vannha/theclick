@@ -61,7 +61,7 @@ if(!function_exists('theclick_configs')){
             'post_thumbnail_size_w'          => 1170,
             'post_thumbnail_size_h'          => 500,
             'theclick_default_post_thumbnail' => true,
-            'theclick_thumbnail_is_bg'        => false,
+            'theclick_thumbnail_is_bg'        => true,
             // Header 
             'logo_width'       => '108',
             'logo_height'      => '42',
