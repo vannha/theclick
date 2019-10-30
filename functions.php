@@ -59,7 +59,7 @@ if(!function_exists('theclick_configs')){
             'thumbnail_size_w'               => 86,
             'thumbnail_size_h'               => 80,
             'post_thumbnail_size_w'          => 1170,
-            'post_thumbnail_size_h'          => 500,
+            'post_thumbnail_size_h'          => 720,
             'theclick_default_post_thumbnail' => true,
             'theclick_thumbnail_is_bg'        => true,
             // Header 
