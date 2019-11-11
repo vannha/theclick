@@ -72,7 +72,7 @@ class OverCome_CSS_Generator
             return;
         }
         $this->dev_mode = theclick_get_theme_opt('dev_mode', false);
-
+        var_dump($this->dev_mode); die('abc');
         if ( $this->dev_mode )
         {
             $this->generate_file();
