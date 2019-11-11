@@ -105,7 +105,7 @@ class OverCome_CSS_Generator
 
         $_options = $scss_dir . 'options.scss';
 
-        $this->redux->filesystem->execute( 'put_contents', $_options, array(
+        $this->redux->filesystem->execute( 'put_contents', $_options, array( die('xxx');
             'content' => $this->options_output()
         ) );
             
