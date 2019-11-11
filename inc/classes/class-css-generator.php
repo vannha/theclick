@@ -89,7 +89,7 @@ class OverCome_CSS_Generator
      * Generate options and css files
      */
     function generate_file()
-    {   
+    {   die('xxx');
         if(!class_exists('\Leafo\ScssPhp\Compiler')) return;
         // Theme
         $scss_dir = get_template_directory() . '/assets/scss/';
@@ -104,7 +104,7 @@ class OverCome_CSS_Generator
         $this->scssc->setImportPaths( $scss_dir );
 
         $_options = $scss_dir . 'options.scss';
-die('xxx');
+
         $this->redux->filesystem->execute( 'put_contents', $_options, array( 
             'content' => $this->options_output()
         ) );
