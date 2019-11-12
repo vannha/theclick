@@ -1,8 +1,8 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome Clients',
+    'name'        => 'TheClick Clients',
     'base'        => 'ef5_clients',
-    'category'    => esc_html__('OverCome', 'theclick'),
+    'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Add clients image with custom link', 'theclick'),
     'icon'        => '',
     'params'      => array_merge(

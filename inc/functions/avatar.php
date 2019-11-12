@@ -16,7 +16,7 @@ function theclick_update_avatar(){
  */
 function theclick_default_avatar( $avatar_defaults ) {
 	$ef5_avatar = get_template_directory_uri() . '/assets/images/avatar.png';
-	$avatar_defaults[$ef5_avatar] = esc_html__('OverCome Avatar','theclick');
+	$avatar_defaults[$ef5_avatar] = esc_html__('TheClick Avatar','theclick');
 	return $avatar_defaults;
 }
 

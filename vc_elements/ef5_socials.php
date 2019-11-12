@@ -1,9 +1,9 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome Socials',
+    'name'        => 'TheClick Socials',
     'base'        => 'ef5_socials',
     'icon'        => '',
-    'category'    => esc_html__('OverCome', 'theclick'),
+    'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Add text with icon', 'theclick'),
     'params'      => array_merge(
         array(

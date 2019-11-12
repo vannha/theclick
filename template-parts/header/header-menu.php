@@ -15,7 +15,7 @@ $args =  array(
     'menu_class'     => theclick_header_menu_class(),
     'link_before'	 => '<span class="menu-title">',
     'link_after'	 => '</span>',	
-    'walker'         => ($megamenu && class_exists( 'EF5Systems_MegaMenu_Walker' )) ? new EF5Systems_MegaMenu_Walker : new OverCome_Main_Menu_Walker,
+    'walker'         => ($megamenu && class_exists( 'EF5Systems_MegaMenu_Walker' )) ? new EF5Systems_MegaMenu_Walker : new TheClick_Main_Menu_Walker,
     'fallback_cb' =>   'theclick_header_menu_fallback'
 );
 wp_nav_menu($args);

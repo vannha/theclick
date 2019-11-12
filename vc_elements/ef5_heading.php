@@ -1,8 +1,8 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome Heading',
+    'name'        => 'TheClick Heading',
     'base'        => 'ef5_heading',
-    'category'    => esc_html__('OverCome', 'theclick'),
+    'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Add your custom heading', 'theclick'),
     'icon'        => 'icon-wpb-ui-custom_heading',
     'params'      => array_merge(
@@ -51,8 +51,8 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','theclick'),
                 'param_name' => 'heading_text',
-                'value'      => 'This is OverCome custom heading element',
-                'std'        => 'This is OverCome custom heading element',
+                'value'      => 'This is TheClick custom heading element',
+                'std'        => 'This is TheClick custom heading element',
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','theclick')   
             )
@@ -148,7 +148,7 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','theclick'),
                 'param_name' => 'desc_text',
-                'value'      => 'This is OverCome custom description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo.',
+                'value'      => 'This is TheClick custom description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo.',
                 'holder'     => 'div',
                 'group'      => esc_html__('Description','theclick'),
             ),

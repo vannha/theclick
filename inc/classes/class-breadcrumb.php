@@ -3,7 +3,7 @@
  * Breadcrumb class for the theme.
  * 
  * @package EF5 Theme
- * @subpackage OverCome
+ * @subpackage TheClick
  * @since 1.0.0
  * @author EF5 Team
  */
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class OverCome_Breadcrumb
+class TheClick_Breadcrumb
 {
     /**
      * Array of breadcrumb entries. Each one contains title, url, text

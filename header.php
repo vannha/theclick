@@ -4,7 +4,7 @@
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @package EF5 Theme
- * @subpackage OverCome
+ * @subpackage TheClick
  * @since 1.0.0
  * @author EF5 Team
  *

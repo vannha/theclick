@@ -35,7 +35,7 @@ function theclick_woocommerce_count_ordering(){
 
 
 /**
- * Add an action to call all OverCome function
+ * Add an action to call all TheClick function
  * before shop loop
  *
 */

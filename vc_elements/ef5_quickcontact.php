@@ -1,8 +1,8 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome Quick Contact',
+    'name'        => 'TheClick Quick Contact',
     'base'        => 'ef5_quickcontact',
-    'category'    => esc_html__('OverCome', 'unbreak'),
+    'category'    => esc_html__('TheClick', 'unbreak'),
     'description' => esc_html__('Add your quick contact info', 'unbreak'),
     'icon'        => 'icon-wpb-wp',
     'params'      => array_merge(

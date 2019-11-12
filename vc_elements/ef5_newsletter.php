@@ -1,10 +1,10 @@
 <?php
 if(!class_exists('Newsletter')) return;
 vc_map(array(
-	'name'        => 'OverCome Newsletter',
+	'name'        => 'TheClick Newsletter',
 	'base'        => 'ef5_newsletter',
 	'icon'        => 'ef5-icon-newsletter',
-	'category'    => esc_html__('OverCome', 'theclick'),
+	'category'    => esc_html__('TheClick', 'theclick'),
 	'description' => esc_html__('Add Newsletter Form.', 'theclick'),
 	'params'      => array(
 		array(

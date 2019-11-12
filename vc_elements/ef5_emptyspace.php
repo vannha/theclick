@@ -1,9 +1,9 @@
 <?php
 vc_map(array(
-    'name' => 'OverCome Empty Space',
+    'name' => 'TheClick Empty Space',
     'base' => 'ef5_emptyspace',
     'icon' => 'icon-wpb-ui-empty_space',
-    'category' => esc_html__('OverCome', 'theclick'),
+    'category' => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Blank space with custom height for each screen size', 'theclick'),
     'params' => array(
         array(

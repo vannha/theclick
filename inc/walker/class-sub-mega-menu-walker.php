@@ -1,6 +1,6 @@
 <?php
 /**
- * OverCome_SubMenu_MegaMenu_Walker
+ * TheClick_SubMenu_MegaMenu_Walker
  *
  * @version 1.0
  * @package EF5 Theme
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class OverCome_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
+class TheClick_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
 			$t = '';

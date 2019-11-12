@@ -1,9 +1,9 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome Video',
+    'name'        => 'TheClick Video',
     'base'        => 'ef5_video',
     'icon'        => 'icon-wpb-film-youtube',
-    'category'    => esc_html__('OverCome','theclick'),
+    'category'    => esc_html__('TheClick','theclick'),
     'description' => esc_html__('Add a HTML5 Videos', 'theclick'),
     'params'      => array(
         array(

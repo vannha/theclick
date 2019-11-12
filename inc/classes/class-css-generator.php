@@ -4,7 +4,7 @@ if ( ! class_exists( 'ReduxFrameworkInstances' ) )
     return;
 }
 
-class OverCome_CSS_Generator
+class TheClick_CSS_Generator
 {
     /**
      * Compiler class instance
@@ -540,4 +540,4 @@ class OverCome_CSS_Generator
     }
 }
 
-new OverCome_CSS_Generator();
+new TheClick_CSS_Generator();

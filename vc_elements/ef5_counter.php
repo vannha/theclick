@@ -1,10 +1,10 @@
 <?php
 vc_map(
 	array(
-		'name'        => esc_html__('OverCome Counter', 'theclick'),
+		'name'        => esc_html__('TheClick Counter', 'theclick'),
 		'base'        => 'ef5_counter',
 		'icon'        => 'vc-icon-counter',
-		'category'    => esc_html__('OverCome', 'theclick'),
+		'category'    => esc_html__('TheClick', 'theclick'),
 		'description' => esc_html__('Add counter', 'theclick'),
 		'params'   => array_merge(
 			array(

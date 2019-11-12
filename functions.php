@@ -1,9 +1,9 @@
 <?php
 /**
- * OverCome functions and definitions
+ * TheClick functions and definitions
  *
  * @package EF5 Theme
- * @subpackage OverCome
+ * @subpackage TheClick
  * @since 1.0.0
  * @author EF5 Team
  *

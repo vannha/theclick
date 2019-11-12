@@ -7,7 +7,7 @@ if(!function_exists('theclick_add_new_user_role')){
 	function theclick_add_new_user_role(){
 		add_role(
 		    'theclick_support_manager',
-		    esc_html__( 'OverCome Support Manager','theclick'),
+		    esc_html__( 'TheClick Support Manager','theclick'),
 		    array(
 		        'read'         => true,  // true allows this capability
 		        'edit_posts'   => false,

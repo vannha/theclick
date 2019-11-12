@@ -1,6 +1,6 @@
 <?php
 /**
- * OverCome
+ * TheClick
  */
 $header_social = theclick_get_opts( 'header_social', '0' );
 

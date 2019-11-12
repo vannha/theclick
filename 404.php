@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  * 
  * @package EF5 Theme
- * @subpackage OverCome
+ * @subpackage TheClick
  * @since 1.0.0
  * @author EF5 Team
  *

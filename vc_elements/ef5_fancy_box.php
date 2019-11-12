@@ -1,8 +1,8 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome Fancy Box',
+    'name'        => 'TheClick Fancy Box',
     'base'        => 'ef5_fancy_box',
-    'category'    => esc_html__('OverCome', 'theclick'),
+    'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Add fancy boxes', 'theclick'),
     'icon'        => 'icon-wpb-ui-icon',
     'params'      => array_merge(

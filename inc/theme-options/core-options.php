@@ -462,7 +462,7 @@ if(!function_exists('theclick_header_atts')){
                 array(
                     'id'       => 'header_side_copyright',
                     'type'     => 'textarea',
-                    'default'  => sprintf('&copy; OverCome. by <a href="%s">SpyroPress</a>', esc_url('spyropress.com')),
+                    'default'  => sprintf('&copy; TheClick. by <a href="%s">SpyroPress</a>', esc_url('spyropress.com')),
                     'required' => array('header_layout', '=', '3'),
                     'title'    => esc_html__('Copyright Text', 'theclick'),
                     'subtitle' => esc_html__('Enter your copyright text', 'theclick'),

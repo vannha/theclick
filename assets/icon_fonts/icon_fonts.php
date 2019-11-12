@@ -1,5 +1,5 @@
 <?php
-define('OVERCOME_ICON_FONT_DIR' , get_template_directory_uri() . '/assets/icon_fonts/');
+define('THECLICK_ICON_FONT_DIR' , get_template_directory_uri() . '/assets/icon_fonts/');
 /**
  * EF5 Systems supported some icon font
  * like: Elegant, ET Line, Flaticon, Linear, Pe7 Stroke, Simple Line
@@ -20,7 +20,7 @@ define('OVERCOME_ICON_FONT_DIR' , get_template_directory_uri() . '/assets/icon_f
 		'fontname' => [
 			'title'   => 'Font Name',
 			'icon'    => theclick_iconpicker_fontname_icons(), // icons list
-			'css'     => OVERCOME_ICON_FONT_DIR . 'fontname/fontname.css',
+			'css'     => THECLICK_ICON_FONT_DIR . 'fontname/fontname.css',
 			'version' => '1.0'
 		]
 	];
@@ -33,7 +33,7 @@ function theclick_extras_icons(){
 		'theclick' => [
 			'title'   => 'Over Come',
 			'icon'    => theclick_iconpicker_theclick_icons(), // icons list
-			'css'     => OVERCOME_ICON_FONT_DIR.'theclick/theclick.css',
+			'css'     => THECLICK_ICON_FONT_DIR.'theclick/theclick.css',
 			'version' => '1.0'
 		]
 	];

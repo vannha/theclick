@@ -1,6 +1,6 @@
 <?php
 /**
- * OverCome_Menu_Walker
+ * TheClick_Menu_Walker
  *
  * @version 1.0
  * @package EF5 Theme
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class OverCome_Menu_Walker extends Walker_Nav_Menu {
+class TheClick_Menu_Walker extends Walker_Nav_Menu {
 	/**
 	 * Starts the element output.
 	 *

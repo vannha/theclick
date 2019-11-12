@@ -22,12 +22,12 @@ if(class_exists('WC_Widget_Product_Categories')){
 	if(!function_exists('theclick_woocommerce_product_categories_widget_args')){
 		add_filter('woocommerce_product_categories_widget_args', 'theclick_woocommerce_product_categories_widget_args', 10, 1);
 		function theclick_woocommerce_product_categories_widget_args($list_args){
-			$list_args['walker'] = new OverCome_WC_Product_Cat_List_Walker();
+			$list_args['walker'] = new TheClick_WC_Product_Cat_List_Walker();
 			return $list_args;
 		}
 	}
 
-	class OverCome_WC_Product_Cat_List_Walker extends WC_Product_Cat_List_Walker{
+	class TheClick_WC_Product_Cat_List_Walker extends WC_Product_Cat_List_Walker{
 		public function start_el( &$output, $cat, $depth = 0, $args = array(), $current_object_id = 0 ) {
 			$cat_id = intval( $cat->term_id );
 

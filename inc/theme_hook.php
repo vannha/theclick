@@ -192,10 +192,10 @@ add_filter('theclick_cpts_footer', function(){ return true;});
 add_filter('ef5systems_spacings','theclick_spacings');
 function theclick_spacings(){
 	return [
-		'custom1 pt-8 pb-8' => ['OverCome Space 01', 'Top 8px - Bottom 8px'],
-		'87-0-92'          	=> ['OverCome Space 02', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
-		'93-0-100'          => ['OverCome Space 03', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
-		'100-0'             => ['OverCome Space 04', 'Top 100px - Bottom 100px', '100px 0'],
+		'custom1 pt-8 pb-8' => ['TheClick Space 01', 'Top 8px - Bottom 8px'],
+		'87-0-92'          	=> ['TheClick Space 02', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
+		'93-0-100'          => ['TheClick Space 03', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
+		'100-0'             => ['TheClick Space 04', 'Top 100px - Bottom 100px', '100px 0'],
 	];
 }
 
@@ -206,7 +206,7 @@ add_filter('ef5systems_gutters','theclick_gutters');
 function theclick_gutters(){
 	return [
 		'20' => [
-			'title' => 'OverCome Gutter 20', 
+			'title' => 'TheClick Gutter 20', 
 			'desc'  => '',
 			'key'   => '20',
 			'value' => '20px'
@@ -221,8 +221,8 @@ add_filter('ef5systems_colors','theclick_colors');
 function theclick_colors(){
 	return [
 		'overlay' => ['Overlay Background', 'rgba(0,0,0,0.5)'],
-		'ababab' => ['OverCome Color 01', '#ababab'],
-		'f5f5f5' => ['OverCome Color 02', '#f5f5f5'],
+		'ababab' => ['TheClick Color 01', '#ababab'],
+		'f5f5f5' => ['TheClick Color 02', '#f5f5f5'],
 	];
 }
 
@@ -232,6 +232,6 @@ function theclick_colors(){
 add_filter('ef5systems_carousel_custom_nav_style', 'theclick_owl_custom_nav_style');
 function theclick_owl_custom_nav_style(){
 	return [
-		esc_html__('Overcome Style 01','theclick') => 'theclick-1'
+		esc_html__('Theclick Style 01','theclick') => 'theclick-1'
 	];
 }

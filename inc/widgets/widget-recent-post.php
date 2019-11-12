@@ -7,18 +7,18 @@ defined( 'ABSPATH' ) or exit( -1 );
  * @version 1.0
  */
 
-add_action('widgets_init', 'OverCome_Recent_Posts_Widget');
-function OverCome_Recent_Posts_Widget() {
-    register_ef5_widget('OverCome_Recent_Posts_Widget');
+add_action('widgets_init', 'TheClick_Recent_Posts_Widget');
+function TheClick_Recent_Posts_Widget() {
+    register_ef5_widget('TheClick_Recent_Posts_Widget');
 }
 
-class OverCome_Recent_Posts_Widget extends WP_Widget
+class TheClick_Recent_Posts_Widget extends WP_Widget
 {
     function __construct()
     {
         parent::__construct(
             'theclick_recent_posts',
-            esc_html__( '[OverCome] Recent Posts', 'theclick' ),
+            esc_html__( '[TheClick] Recent Posts', 'theclick' ),
             array(
                 'description' => __( 'Shows your most recent posts.', 'theclick' ),
                 'customize_selective_refresh' => true,

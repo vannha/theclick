@@ -36,7 +36,7 @@ $nav_menu_args = array(
 	'container_class' => trim(implode(' ', $menu_container_class)),
 	'menu'            => $nav_menu,
 	'menu_class'      => trim(implode(' ', $menu_class)),
-	'walker'          => new OverCome_Menu_Walker()
+	'walker'          => new TheClick_Menu_Walker()
 );
 // Title
 $title = '';

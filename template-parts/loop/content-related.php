@@ -3,7 +3,7 @@
  * Template part for displaying posts in loop
  *
  * @package EF5 Theme
- * @subpackage OverCome
+ * @subpackage TheClick
  */
 ?>
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * OverCome_Page_Walker
+ * TheClick_Page_Walker
  *
  * @version 1.0
  * @package EF5 Theme
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) )
 {
     die();
 }
-class OverCome_Page_Walker extends Walker_Page {
+class TheClick_Page_Walker extends Walker_Page {
 	/**
      * Outputs the beginning of the current element in the tree.
      *

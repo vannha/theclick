@@ -2,7 +2,7 @@
 if(!function_exists('theclick_wp_list_comments_args')){
 	function theclick_wp_list_comments_args($args=[]){
 		$args = wp_parse_args($args, array(
-			'walker'      => new OverCome_Walker_Comment(),
+			'walker'      => new TheClick_Walker_Comment(),
 			'avatar_size' => theclick_get_avatar_size(),
 			'short_ping'  => true,
 			'style'       => 'ol'

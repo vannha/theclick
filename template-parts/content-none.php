@@ -3,7 +3,7 @@
  * The template for displaying no content found
  * 
  * @package EF5 Theme
- * @subpackage OverCome
+ * @subpackage TheClick
  * @since 1.0.0
  * @author EF5 Team
  *

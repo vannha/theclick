@@ -1,8 +1,8 @@
 <?php
 vc_map(array(
-    'name'          => 'OverCome Posts',
+    'name'          => 'TheClick Posts',
     'base'          => 'ef5_posts',
-    'category'      => esc_html__('OverCome', 'unbreak'),
+    'category'      => esc_html__('TheClick', 'unbreak'),
     'description'   => esc_html__('Display your posts with grid layout', 'unbreak'),
     'icon'         => 'icon-wpb-application-icon-large',
     'params'        => array_merge(

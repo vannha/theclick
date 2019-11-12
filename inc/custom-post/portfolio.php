@@ -13,8 +13,8 @@ function theclick_cpts_portfolio($post_types) {
     if($supported_portfolio) {
 	    $post_types['ef5_portfolio'] = array( 
 	    	'status'        => true,
-			'name'          => esc_html__('OverCome Portfolios', 'theclick'),
-			'singular_name' => esc_html__('OverCome Portfolio', 'theclick'),
+			'name'          => esc_html__('TheClick Portfolios', 'theclick'),
+			'singular_name' => esc_html__('TheClick Portfolio', 'theclick'),
 			'args'          => array(
 				'menu_position' => 15,
 				'menu_icon'     => 'dashicons-portfolio',

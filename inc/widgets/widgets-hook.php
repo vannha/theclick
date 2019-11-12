@@ -9,7 +9,7 @@
 if(!function_exists('theclick_widget_categories_args')){
     add_filter('widget_categories_args', 'theclick_widget_categories_args');
     function theclick_widget_categories_args($cat_args){
-        $cat_args['walker'] = new OverCome_Categories_Walker;
+        $cat_args['walker'] = new TheClick_Categories_Walker;
         return $cat_args; 
     }
 }
@@ -55,7 +55,7 @@ if(!function_exists('theclick_archive_count_span')){
 if(!function_exists('theclick_widget_page_args')){
     add_filter('widget_pages_args', 'theclick_widget_page_args');
     function theclick_widget_page_args($page_args){
-        $page_args['walker'] = new OverCome_Page_Walker;
+        $page_args['walker'] = new TheClick_Page_Walker;
         return $page_args; 
     }
 }
@@ -68,7 +68,7 @@ if(!function_exists('theclick_widget_page_args')){
 if(!function_exists('theclick_widget_navigation_menu')){
     add_filter('widget_nav_menu_args', 'theclick_widget_navigation_menu');
     function theclick_widget_navigation_menu($nav_menu_args){
-        $nav_menu_args['walker'] = new OverCome_Menu_Walker();
+        $nav_menu_args['walker'] = new TheClick_Menu_Walker();
         return $nav_menu_args;
     }
 }

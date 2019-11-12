@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class OverCome_Widget_Extends
+class TheClick_Widget_Extends
 {
     /**
      * Construction
@@ -170,4 +170,4 @@ class OverCome_Widget_Extends
     }
 }
 
-new OverCome_Widget_Extends();
+new TheClick_Widget_Extends();

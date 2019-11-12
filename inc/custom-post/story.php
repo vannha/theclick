@@ -13,8 +13,8 @@ function theclick_cpts_stories($post_types) {
     if($supported_stories) {
 	    $post_types['ef5_stories'] = array( 
 	    	'status'        => true,
-			'name'          => esc_html__('OverCome Stories', 'theclick'),
-			'singular_name' => esc_html__('OverCome Story', 'theclick'),
+			'name'          => esc_html__('TheClick Stories', 'theclick'),
+			'singular_name' => esc_html__('TheClick Story', 'theclick'),
 			'args'          => array(
 				'menu_position' => 15,
 				'menu_icon'     => 'dashicons-universal-access-alt',

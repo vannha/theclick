@@ -13,8 +13,8 @@ function theclick_cpts_header_top($post_types)
     if($header_top) {
         $post_types['ef5_header_top'] = array(
             'status'        => true,
-            'name'          => esc_html__('OverCome Header Top', 'theclick'),
-            'singular_name' => esc_html__('OverCome Headers Top', 'theclick'),
+            'name'          => esc_html__('TheClick Header Top', 'theclick'),
+            'singular_name' => esc_html__('TheClick Headers Top', 'theclick'),
             'args'          => array(
                 'description'         => 'Add custom Header Top Layout ',
                 'public'              => true,
@@ -54,8 +54,8 @@ function theclick_cpts_footer($post_types) {
     if($enable_footer) {
         $post_types['ef5_footer'] = array(
             'status'        => true,
-            'name'          => esc_html__('OverCome Footer', 'theclick'),
-            'singular_name' => esc_html__('OverCome Footers', 'theclick'),
+            'name'          => esc_html__('TheClick Footer', 'theclick'),
+            'singular_name' => esc_html__('TheClick Footers', 'theclick'),
             'args'          => array(
                 'description'         => 'Add custom Footer Layout ',
                 'public'              => true,

@@ -12,7 +12,7 @@ if(!function_exists('theclick_service_menu')){
 			'title'          => esc_html__('Service Menu','theclick'),
 			'menu'			 => $menu,		
 			'theme_location' => 'ef5-primary',
-			'walker'         => new OverCome_Menu_Walker(),
+			'walker'         => new TheClick_Menu_Walker(),
 			'fallback_cb'    => ''
 		]);
 	?>

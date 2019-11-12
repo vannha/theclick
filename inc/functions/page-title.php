@@ -32,7 +32,7 @@ function theclick_ptitle_inner_class($class=''){
  */
 function theclick_breadcrumb($args = [])
 {
-    if ( ! class_exists( 'OverCome_Breadcrumb' ) )
+    if ( ! class_exists( 'TheClick_Breadcrumb' ) )
     {
         return;
     }
@@ -40,7 +40,7 @@ function theclick_breadcrumb($args = [])
         'class'     => '',
         'separator' => ''
     ]);
-    $breadcrumb = new OverCome_Breadcrumb();
+    $breadcrumb = new TheClick_Breadcrumb();
     $entries = $breadcrumb->get_entries();
 
     if ( empty( $entries ) )

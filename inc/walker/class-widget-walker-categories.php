@@ -1,6 +1,6 @@
 <?php
 /**
- * OverCome_Categories_Walker
+ * TheClick_Categories_Walker
  *
  * @version 1.0
  * @package EF5 Theme
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) )
 {
     die();
 }
-class OverCome_Categories_Walker extends Walker_Category {
+class TheClick_Categories_Walker extends Walker_Category {
     /**
      * Starts the element output.
      *

@@ -1,8 +1,8 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome Custom Menu',
+    'name'        => 'TheClick Custom Menu',
     'base'        => 'ef5_wp_menu',
-    'category'    => esc_html__('OverCome', 'theclick'),
+    'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Use this element to add one of your custom menus', 'theclick'),
     'icon'        => 'icon-wpb-wp',
     'params'      => array_merge(

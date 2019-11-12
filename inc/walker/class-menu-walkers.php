@@ -1,8 +1,8 @@
 <?php
 /**
- * OverCome_Main_Menu_Walker
- * OverCome_Side_Main_Menu_Walker
- * OverCome_Mega_Menu_Walker
+ * TheClick_Main_Menu_Walker
+ * TheClick_Side_Main_Menu_Walker
+ * TheClick_Mega_Menu_Walker
  *
  * @package EF5 Theme
  *
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class OverCome_Main_Menu_Walker extends Walker_Nav_Menu{
+class TheClick_Main_Menu_Walker extends Walker_Nav_Menu{
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
         $header_layout = theclick_get_opts('header_layout');
@@ -100,7 +100,7 @@ class OverCome_Main_Menu_Walker extends Walker_Nav_Menu{
     }
 } 
 
-class OverCome_Side_Main_Menu_Walker extends Walker_Nav_Menu{
+class TheClick_Side_Main_Menu_Walker extends Walker_Nav_Menu{
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<ul class=\"ef5-submenu ef5-toggle-menu ef5-side-submenu ef5-side-submenu-base\">\n";

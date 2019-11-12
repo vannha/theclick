@@ -13,8 +13,8 @@ function theclick_cpts_event($post_types) {
     if($supported_event) {
 	    $post_types['ef5_event'] = array( 
 	    	'status'        => true,
-			'name'          => esc_html__('OverCome Events', 'theclick'),
-			'singular_name' => esc_html__('OverCome Event', 'theclick'),
+			'name'          => esc_html__('TheClick Events', 'theclick'),
+			'singular_name' => esc_html__('TheClick Event', 'theclick'),
 			'args'          => array(
 				'menu_position' => 15,
 				'menu_icon'     => 'dashicons-universal-access-alt',

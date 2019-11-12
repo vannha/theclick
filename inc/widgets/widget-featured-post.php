@@ -7,18 +7,18 @@ defined( 'ABSPATH' ) or exit( -1 );
  * @version 1.0
  */
 
-add_action('widgets_init', 'OverCome_Featured_Posts_Widget');
-function OverCome_Featured_Posts_Widget() {
-    register_ef5_widget('OverCome_Featured_Posts_Widget');
+add_action('widgets_init', 'TheClick_Featured_Posts_Widget');
+function TheClick_Featured_Posts_Widget() {
+    register_ef5_widget('TheClick_Featured_Posts_Widget');
 }
 
-class OverCome_Featured_Posts_Widget extends WP_Widget
+class TheClick_Featured_Posts_Widget extends WP_Widget
 {
     function __construct()
     {
         parent::__construct(
             'theclick_featured_posts',
-            esc_html__( '[OverCome] Featured Posts', 'theclick' ),
+            esc_html__( '[TheClick] Featured Posts', 'theclick' ),
             array(
                 'description' => __( 'Shows your most Featured posts.', 'theclick' ),
                 'customize_selective_refresh' => true,

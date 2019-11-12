@@ -1,8 +1,8 @@
 <?php
 vc_map(array(
-    'name'          => 'OverCome Posts Carousel',
+    'name'          => 'TheClick Posts Carousel',
     'base'          => 'ef5_posts_carousel',
-    'category'      => esc_html__('OverCome', 'unbreak'),
+    'category'      => esc_html__('TheClick', 'unbreak'),
     'description'   => esc_html__('Display your posts with carousel layout', 'unbreak'),
     'icon'         => 'icon-wpb-application-icon-large',
     'params'        => array_merge(

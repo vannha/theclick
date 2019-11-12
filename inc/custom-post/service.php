@@ -13,8 +13,8 @@ function theclick_cpts_service($post_types) {
     if($supported_service) {
         $post_types['ef5_service'] = array( 
         	'status'        => true,
-    		'name'          => esc_html__('OverCome Services', 'theclick'),
-    		'singular_name' => esc_html__('OverCome Service', 'theclick'),
+    		'name'          => esc_html__('TheClick Services', 'theclick'),
+    		'singular_name' => esc_html__('TheClick Service', 'theclick'),
     		'args'          => array(
     			'menu_position' => 15,
     			'menu_icon'     => 'dashicons-image-filter',

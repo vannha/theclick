@@ -1,9 +1,9 @@
 <?php
 vc_map(array(
-    'name'        => 'OverCome List',
+    'name'        => 'TheClick List',
     'base'        => 'ef5_list',
     'icon'        => '',
-    'category'    => esc_html__('OverCome', 'theclick'),
+    'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Add list with icon', 'theclick'),
     'params'      => array_merge(
         array(
