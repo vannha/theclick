@@ -305,17 +305,7 @@ function theclick_widgets_init()
             'after_title'   => '</div>',
         ));
     }
-    if ( class_exists( 'FlexUser' ) ) {
-        register_sidebar(array(
-            'name'          => esc_html__('User Login', 'theclick'),
-            'id'            => 'user-login',
-            'description'   => esc_html__('Add widgets here to appear on header top', 'theclick'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<div class="ef5-heading h3 widgettitle">',
-            'after_title'   => '</div>',
-        ));
-    }
+     
 }
 add_action('widgets_init', 'theclick_widgets_init');
 /**
