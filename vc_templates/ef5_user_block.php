@@ -25,7 +25,7 @@ $wrapper_class = array('ef5-user-block', $el_class);
         	echo 'abbbb';
             //echo fsUser()->get_template_file__('logout', array('atts' => $config), '', 'flex-login');
 
-            return;
+            //return;
         }
         /*wp_enqueue_style('fs-user-form.css', fsUser()->plugin_url . 'assets/css/fs-user-form.css', array(), '', 'all');
         wp_enqueue_script('jquery.validate.js', fsUser()->plugin_url . 'assets/vendor/jquery.validate.js', array(), '', true);
