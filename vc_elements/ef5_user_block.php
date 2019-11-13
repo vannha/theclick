@@ -1,4 +1,5 @@
 <?php
+if ( !class_exists( 'FlexUser' ) ) return;
 vc_map(array(
     'name'        => 'TheClick User Block',
     'base'        => 'ef5_user_block',
@@ -19,7 +20,6 @@ class WPBakeryShortCode_ef5_user_icon extends WPBakeryShortCode
 {
     protected function content($atts, $content = null)
     {
-         
         return parent::content($atts, $content);
     }
 }
