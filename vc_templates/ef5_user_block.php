@@ -14,6 +14,6 @@ $wrapper_class = array('ef5-user-block', $el_class);
 ?>
 <div class="<?php echo trim(implode(' ',$wrapper_class)); ?>"> 
 	<?php
-	theclick_user_register_render();
+	$this->theclick_user_register_render();
     ?>
 </div>
