@@ -27,7 +27,6 @@ $wrapper_class = array('ef5-user-block', $el_class);
 
             return;
         }
-
         wp_enqueue_style('fs-user-form.css', fsUser()->plugin_url . 'assets/css/fs-user-form.css', array(), '', 'all');
         wp_enqueue_script('jquery.validate.js', fsUser()->plugin_url . 'assets/vendor/jquery.validate.js', array(), '', true);
         wp_enqueue_script('fs-login.js', fsUser()->plugin_url . 'assets/js/fs-login.js', array(), '', true);
