@@ -19,6 +19,9 @@
 	}
 	a{
 		color: inherit;
+		>*{
+			line-height: inherit;
+		}
 		&:hover{
 			color: $lightent_accent_accent;
 		}
