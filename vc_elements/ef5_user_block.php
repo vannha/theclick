@@ -16,7 +16,7 @@ vc_map(array(
         )
     )
 ));
-class WPBakeryShortCode_ef5_user_icon extends WPBakeryShortCode
+class WPBakeryShortCode_ef5_user_block extends WPBakeryShortCode
 {
     protected function content($atts, $content = null)
     {
