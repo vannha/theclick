@@ -29,7 +29,7 @@ class WPBakeryShortCode_ef5_user_block extends WPBakeryShortCode
             'title_register'       => 'Register',
             'type'     => 'both',
             'num_link' => '2',
-        ));
+        );
 
         if (is_user_logged_in()) {
             echo fsUser()->get_template_file__('logout', array('atts' => $config), '', 'flex-login');
