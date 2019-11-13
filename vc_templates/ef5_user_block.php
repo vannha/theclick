@@ -19,6 +19,8 @@ $wrapper_class = array('ef5-user-block', $el_class);
             'title'                => 'Login Register',
             'title_login'          => 'Login',
             'title_register'       => 'Register',
+            'type'     => 'both',
+			'num_link' => '2',
         ));
 
         if (is_user_logged_in()) {
