@@ -8,6 +8,18 @@ vc_map(array(
     'icon'        => 'icon-wpb-ui-icon',
     'params'      => array(
         array(
+            'type'       => 'dropdown',
+            'param_name' => 'type',
+            'heading'    => esc_html__('Type','theclick'),
+            'value'      => array(
+                esc_html__('Login','theclick')    => 'login',
+                esc_html__('Register','theclick') => 'register',
+                esc_html__('Both','theclick')     => 'both'
+            ),
+            'std'        => 'both',
+        ),
+         
+        array(
             'type'       => 'textfield',
             'heading'    => esc_html__('Element Class','theclick'),
             'param_name' => 'el_class',
@@ -22,7 +34,8 @@ class WPBakeryShortCode_ef5_user_block extends WPBakeryShortCode
     {
         return parent::content($atts, $content);
     }
-    protected function theclick_user_register_render(){
+    protected function theclick_user_register_render($atts){
+        extract($atts);
         $config =  array(
             'title'                => 'Login Register',
             'title_login'          => 'Login',

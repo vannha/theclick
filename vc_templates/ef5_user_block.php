@@ -13,7 +13,5 @@ extract( $atts );
 $wrapper_class = array('ef5-user-block', $el_class);
 ?>
 <div class="<?php echo trim(implode(' ',$wrapper_class)); ?>"> 
-	<?php
-	$this->theclick_user_register_render();
-    ?>
+	<?php $this->theclick_user_register_render($atts); ?>
 </div>
