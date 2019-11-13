@@ -23,7 +23,7 @@ $wrapper_class = array('ef5-user-block', $el_class);
 
         if (is_user_logged_in()) {
         	echo 'abbbb';
-            //echo fsUser()->get_template_file__('logout', array('atts' => $config), '', 'flex-login');
+            echo fsUser()->get_template_file__('logout', array('atts' => $config), '', 'flex-login');
 
             //return;
         }
