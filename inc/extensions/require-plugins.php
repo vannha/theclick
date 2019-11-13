@@ -46,6 +46,12 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'required'           => true,
             ),
             array(
+                'name'               => esc_html__('Flex Login','theclick'),
+                'slug'               => 'flex-user',
+                'source'             => 'flex-user.zip', 
+                'required'           => false,
+            ),
+            array(
                 'name'               => esc_html__('WooCommerce','theclick'),
                 'slug'               => 'woocommerce',
                 'required'           => false,
@@ -70,12 +76,7 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'slug'               => 'contact-form-7',
                 'required'           => false,
             ),
-            array(
-                'name'               => esc_html__('Flex Login','theclick'),
-                'slug'               => 'flex-user',
-                'source'             => 'flex-user.zip', 
-                'required'           => false,
-            ),
+            
             array(
                 'name'               => esc_html__('Newsletter','theclick'),
                 'slug'               => 'newsletter',
