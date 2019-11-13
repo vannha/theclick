@@ -9,6 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_ef5_heading
  */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
+var_dump($atts);
 extract( $atts );
 ?>
 <div class="">
