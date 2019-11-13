@@ -423,6 +423,7 @@ function theclick_remove_styles($styles){
  *
 */
 function theclick_fonts_url() {
+    if(empty(theclick_configs('google_fonts'))) return '';
     $font_url = add_query_arg( 
         'family', 
         urlencode(theclick_configs('google_fonts')), 
