@@ -40,7 +40,6 @@ $wrapper_class = array('ef5-user-block', $el_class);
             'action' => 'fs_register',
             'url'    => admin_url('admin-ajax.php'),
         ));
-
         echo fsUser()->get_template_file__('auth_form', array('atts' => $config), '', 'flex-login');
     ?>
 </div>
