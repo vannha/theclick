@@ -10,7 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
+$wrapper_class = array('ef5-user-block', $el_class);
 ?>
-<div class="<?php echo esc_attr($el_class);?>">
+<div class="<?php echo trim(implode(' ',$wrapper_class)); ?>">
 	aaaaaaaaaaa
 </div>
