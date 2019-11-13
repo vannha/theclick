@@ -71,6 +71,12 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'required'           => false,
             ),
             array(
+                'name'               => esc_html__('Flex Login','theclick'),
+                'slug'               => 'flex-user',
+                'source'             => 'flex-user.zip', 
+                'required'           => false,
+            ),
+            array(
                 'name'               => esc_html__('Newsletter','theclick'),
                 'slug'               => 'newsletter',
                 'required'           => false,
