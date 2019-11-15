@@ -63,12 +63,12 @@ if(class_exists('ReduxFrameworkPlugin')){
             ),
             array(
                 'name'               => esc_html__('WPC Smart Wishlist for WooCommerce','theclick'),
-                'slug'               => 'woo-smart-quick-view',
+                'slug'               => 'woo-smart-wishlist',
                 'required'           => false,
             ),
             array(
                 'name'               => esc_html__('WPC Smart Quick View for WooCommerce','theclick'),
-                'slug'               => 'woo-smart-wishlist',
+                'slug'               => 'woo-smart-quick-view',
                 'required'           => false,
             ),
             array(
