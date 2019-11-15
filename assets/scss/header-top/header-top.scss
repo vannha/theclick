@@ -49,4 +49,17 @@
 			}
 		}
 	}
+	.widget li{
+	    border-bottom: 0;
+	    padding: 0;
+	    display: inline-flex;
+	}
+	ul.menu{
+		li{
+			a{
+				text-transform: uppercase;
+				font-size: 11px;
+			}
+		}
+	}
 }
