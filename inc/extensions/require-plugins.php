@@ -72,6 +72,11 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'required'           => false,
             ),
             array(
+                'name'               => esc_html__('WooCommerce Currency Switcher','theclick'),
+                'slug'               => 'woocommerce-currency-switcher',
+                'required'           => false,
+            ),
+            array(
                 'name'               => esc_html__('Contact Form 7','theclick'),
                 'slug'               => 'contact-form-7',
                 'required'           => false,
