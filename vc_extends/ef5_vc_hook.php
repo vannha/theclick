@@ -59,8 +59,8 @@ vc_add_params('vc_column',array(
     )
 ));
 
-add_filter( 'vc_shortcodes_css_class', 'theclick_css_classes_for_vc_row_and_vc_column', 10, 2 );
-function theclick_css_classes_for_vc_row_and_vc_column( $class_string, $tag, $atts = [] ) {
+add_filter( 'vc_shortcodes_css_class', 'theclick_css_classes_for_vc_row_and_vc_column', 10, 3 );
+function theclick_css_classes_for_vc_row_and_vc_column( $class_string, $tag, $atts = '' ) {
     $custom_class = array();
     extract($atts);
     if (isset($content_sm_alignment)) {
