@@ -1,3 +1,17 @@
 .flex_authenticate{
-	display: none;
+	.fs-link{
+		span{
+			margin: 0 -5px;
+			a{
+				padding: 0 5px;
+				position: relative;
+				+a:before{
+					content: "/";
+					position: absolute;
+					left: -1px;
+					top: 0;
+				}
+			}
+		}
+	}
 }
