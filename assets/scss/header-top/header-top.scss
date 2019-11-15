@@ -29,18 +29,23 @@
 	.ht-separate{
 		display: inline-block;
     	margin: 0 -10px;
+    	@media (max-width: 767px){
+    		text-align: center;
+    	}
 		span{
 			padding: 0 10px;
 			position: relative;
-			+span:before{
-				content: "";
-				height: 14px;
-				width: 1px;
-				background-color: rgba(255,255,255,0.4);
-				position: absolute;
-				top: 50%;
-				left: -1px;
-				margin-top: -7px;
+			@media (min-width: 768px){
+				+span:before{
+					content: "";
+					height: 14px;
+					width: 1px;
+					background-color: rgba(255,255,255,0.4);
+					position: absolute;
+					top: 50%;
+					left: -1px;
+					margin-top: -7px;
+				}
 			}
 		}
 	}
