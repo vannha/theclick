@@ -26,4 +26,21 @@
 			color: $lightent_accent_accent;
 		}
 	}
+	.tp-separate{
+		display: inline-block;
+    	margin: 0 -8px;
+		span{
+			padding: 0 8px;
+			position: relative;
+			+span:before{
+				content: "";
+				height: 14px;
+				width: 1px;
+				background-color: #444;
+				position: absolute;
+				top: 50%;
+				margin-top: -7px;
+			}
+		}
+	}
 }
