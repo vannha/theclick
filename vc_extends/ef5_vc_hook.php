@@ -58,3 +58,24 @@ vc_add_params('vc_column',array(
         'group'        => esc_html__('Theme Custom','theclick'),
     )
 ));
+
+add_filter( 'vc_shortcodes_css_class', 'theclick_css_classes_for_vc_row_and_vc_column', 10, 2 );
+function ef5systems_css_classes_for_vc_row_and_vc_column( $class_string, $tag, $atts = '' ) {
+    $custom_class = array();
+    extract($atts);
+
+    if (isset($content_sm_alignment)) {
+        $custom_class[] = $content_sm_alignment;
+    }
+    if (isset($content_md_alignment)) {
+        $custom_class[] = $content_md_alignment;
+    }
+    if (isset($content_lg_alignment)) {
+        $custom_class[] = $content_lg_alignment;
+    }
+    if (isset($content_xl_alignment)) {
+        $custom_class[] = $content_xl_alignment;
+    }
+    $class_string .= ' ' . trim(implode(' ', $custom_class));
+    return $class_string;
+}
