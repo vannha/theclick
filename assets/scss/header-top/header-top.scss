@@ -52,6 +52,10 @@
 	    border-bottom: 0;
 	    padding: 0;
 	    display: inline-flex;
+	    a{
+	    	padding: 0;
+	    	color: inherit;
+	    }
 	}
 	ul.menu{
 		li{
@@ -61,4 +65,5 @@
 			}
 		}
 	}
+
 }
