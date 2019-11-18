@@ -345,6 +345,10 @@ function theclick_scripts()
         'filter_clear_text'   => esc_html__('Clear All', 'theclick'),
         'is_rtl'              => is_rtl() ? 'true' : 'false'
     );
+    if(class_exists('Woocommerce')) {
+        wp_enqueue_script( 'selectWoo' );
+        wp_enqueue_style( 'select2' );
+    }
     // Scripts
     wp_enqueue_script('theclick', get_template_directory_uri() . '/assets/js/theme'.$min.'.js', array('jquery'), '', true);
     wp_localize_script( 'theclick', 'theclick_ajax_opts', $theclick_ajax_opts);
