@@ -90,7 +90,21 @@
 		    padding: 0 17px 0 0;
 		    font-size: 14px;
 		}
-		
 	}
-
+	.select2.select2-container--default .select2-selection--single{
+	    border: 0;
+	    height: auto;
+	    padding: 0 17px 0 0;
+	    margin: 0;
+	    background-color: transparent;
+	    border-radius: 0;
+	}
+	.select2.select2-container--default .select2-selection--single .select2-selection__rendered{
+	    padding: 0;
+	    color: inherit;
+   		line-height: 22px;
+	}
+	.select2.select2-container--default .select2-selection--single .select2-selection__arrow{
+		display: none;
+	}
 }
