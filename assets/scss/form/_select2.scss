@@ -38,7 +38,12 @@
 .select2-search--dropdown{
 	display: none;
 }
+.select2-container--default .select2-results__options li +li{
+	border-top: 1px solid $FF_BorderColor;
+}
 .select2-container--default .select2-results__option[aria-selected=true], 
 .select2-container--default .select2-results__option[data-selected=true]{
-	background-color: $primary_color;
+	background-color: #fff;
+	color: $lightent_accent_accent;
+	@include transition(all .3s linear 0s);
 }
