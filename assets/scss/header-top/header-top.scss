@@ -55,6 +55,9 @@
 	    a{
 	    	padding: 0;
 	    	color: inherit;
+	    	&:hover{
+				color: $lightent_accent_accent;
+			}
 	    }
 	}
 	ul.menu{
