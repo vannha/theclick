@@ -3,6 +3,7 @@
 	var resizeTimer;
     // Fire on document ready.
     $( document ).ready( function() {
+        theclick_select2();
         theclick_StickyHeader();
         theclick_toggle_menu();
         theclick_touched_side();
@@ -72,6 +73,14 @@
 		'use strict';
 		$("#ef5-loading").fadeOut("slow");
 	}
+
+    /**
+     * Add select 2
+    **/
+    function theclick_select2(){
+        $('.woocommerce-currency-switcher').select2();
+    }
+
     /**
      * Sticky Header 
     */
