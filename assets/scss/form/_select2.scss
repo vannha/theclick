@@ -24,6 +24,7 @@
 	.select2-dropdown{
 		border-color: $FF_BorderColor;
 		@include border-radius($FF_BorderRadius);
+		min-width: 75px;
 	}
 	.select2-dropdown--below {
 	    border-top-left-radius: 0;
