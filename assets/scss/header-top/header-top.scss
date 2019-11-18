@@ -72,22 +72,23 @@
 	}
 	.woocommerce-currency-switcher-form{
 		position: relative;
-		select{
-			background-image: none;
-			
-			background-color: transparent;
-		    border: 0;
-		    color: inherit;
-			
-		}
-		&:after{
+		&:before{
 			content: "\f107";
 			font-family: $FontAwesome;
 			font-size: 12px;
 			font-weight: 400;
 			position: absolute;
-			right: 10px;
+			right: 0px;
+			color: inherit;
 		}
+		select{
+			background-image: none;
+			background-color: transparent;
+		    border: 0;
+		    color: inherit;
+		    padding: 0 20px 0 0;
+		}
+		
 	}
 
 }
