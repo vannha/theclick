@@ -110,5 +110,9 @@
 
 	.wpml-ls-legacy-dropdown{
 		width: auto;
+		a{
+			background-color: transparent;
+			border: 0;
+		}
 	}
 }
