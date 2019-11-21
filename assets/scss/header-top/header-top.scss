@@ -79,7 +79,8 @@
 			font-weight: 400;
 			position: absolute;
 			right: 0px;
-			bottom: 1px;
+			bottom: 4px;
+			line-height: 1;
 			color: inherit;
 		}
 		select{
@@ -113,6 +114,27 @@
 		a{
 			background-color: transparent;
 			border: 0;
+		    padding: 0 20px 0 0;
+    		line-height: 22px;
+			&.wpml-ls-item-toggle{
+				&:after{
+				    vertical-align: middle;
+				    display: inline-block;
+				    border: 0;
+				    border-top: 0;
+				    content: "\f107";
+				    font-family: 'Font Awesome 5 Pro';
+				    font-size: 12px;
+				    font-weight: 400;
+				    position: absolute;
+				    top: 8px;
+				    right: 0px;
+				    bottom: 1px;
+				    line-height: 1;
+				    color: inherit;
+				}
+			}
 		}
+		 
 	}
 }
