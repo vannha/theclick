@@ -92,6 +92,12 @@
 		    font-size: 14px;
 		}
 	}
+	.select2-container{
+		@include transition(all .3s linear 0s);
+		&:hover{
+			color: $lightent_accent_accent;
+		}
+	}
 	.select2.select2-container--default .select2-selection--single{
 	    border: 0;
 	    height: auto;
