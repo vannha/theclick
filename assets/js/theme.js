@@ -78,7 +78,10 @@
      * Add select 2
     **/
     function theclick_select2(){
-        $('.woocommerce-currency-switcher').select2();
+        $('#ef5-header-top .woocommerce-currency-switcher').select2({
+            customClass: "ht-select-container"
+            }
+        );
     }
 
     /**
