@@ -154,6 +154,7 @@
 			background: #111;
 		    min-width: 100px;
 		    padding: 10px 15px;
+		    top: calc(100% + 30px);
 		    .wpml-ls-item{
 				padding: 3px 0;
 				line-height: 24px;
@@ -161,6 +162,10 @@
 					display: none;
 				}
 			}
+		}
+		.wpml-ls-legacy-dropdown .wpml-ls-current-language:hover .wpml-ls-sub-menu, 
+		.wpml-ls-legacy-dropdown .wpml-ls-current-language:focus .wpml-ls-sub-menu{
+			top: 100%;
 		}
 
 	}
