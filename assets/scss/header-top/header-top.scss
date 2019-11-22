@@ -134,7 +134,22 @@
 				    color: inherit;
 				}
 			}
+			&:hover,&:focus{
+				color: $lightent_accent_accent;
+				background-color: transparent;
+			}
 		}
-		 
+		.wpml-ls-current-language:hover>a{
+			color: $lightent_accent_accent;
+			background-color: transparent;
+		}
+		.wpml-ls-sub-menu{
+			background: #111;
+		    min-width: 100px;
+		    padding: 20px 15px;
+		}
+		.wpml-ls-item{
+			padding: 5px 0;
+		}
 	}
 }
