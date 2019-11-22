@@ -20,7 +20,7 @@
 		}
 	}
 }
-.select2-container.select2-container--open {
+.select2-container {
 	.select2-dropdown{
 		border-color: $FF_BorderColor;
 		@include border-radius($FF_BorderRadius);
@@ -51,4 +51,10 @@
 .select2-container--default .select2-results__option[data-selected=true]{
 	background-color: #fff;
 	color: $primary_color;
+}
+.select2-container.select2-container--headertop{
+	.select2-dropdown{
+		background-color: $primary_color;
+		border-color: $primary_color;
+	}
 }
