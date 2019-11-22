@@ -82,6 +82,10 @@
 			bottom: 4px;
 			line-height: 1;
 			color: inherit;
+			@include transition(all .3s linear 0s);
+			&:hover{
+				color: $lightent_accent_accent;
+			}
 		}
 		select{
 			background-image: none;
