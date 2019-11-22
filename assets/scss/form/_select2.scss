@@ -24,7 +24,7 @@
 	.select2-dropdown{
 		border-color: $FF_BorderColor;
 		@include border-radius($FF_BorderRadius);
-		min-width: 75px;
+		min-width: 65px;
 	}
 	.select2-dropdown--below {
 	    border-top-left-radius: 0;
@@ -35,7 +35,7 @@
 	    border-bottom-right-radius: 0;
 	}
 }
- 
+
 .select2-search--dropdown{
 	display: none;
 }
