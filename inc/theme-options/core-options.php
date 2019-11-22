@@ -170,10 +170,15 @@ if(!function_exists('theclick_header_layout')){
         }
         $layouts['1'] = get_template_directory_uri() . '/assets/images/header/header-1.png';
         $layouts['2'] = get_template_directory_uri() . '/assets/images/header/header-2.png';
+        $layouts['3'] = get_template_directory_uri() . '/assets/images/header/header-3.png';
+        $layouts['4'] = get_template_directory_uri() . '/assets/images/header/header-4.png';
         $layouts['5'] = get_template_directory_uri() . '/assets/images/header/header-5.png';
         $layouts['6'] = get_template_directory_uri() . '/assets/images/header/header-6.png';
         $layouts['7'] = get_template_directory_uri() . '/assets/images/header/header-7.png';
         $layouts['8'] = get_template_directory_uri() . '/assets/images/header/header-8.png';
+        $layouts['9'] = get_template_directory_uri() . '/assets/images/header/header-9.png';
+        $layouts['10'] = get_template_directory_uri() . '/assets/images/header/header-10.png';
+        $layouts['11'] = get_template_directory_uri() . '/assets/images/header/header-11.png';
         
         return $layouts;
     }
