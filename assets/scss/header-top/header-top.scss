@@ -109,7 +109,7 @@
 	.select2.select2-container .select2-selection--single .select2-selection__rendered{
 	    padding: 0;
 	    color: inherit;
-   		line-height: 22px;
+   		line-height: 18px;
 	}
 	.select2.select2-container .select2-selection--single .select2-selection__arrow{
 		display: none;
@@ -123,6 +123,7 @@
 		    padding: 0 17px 0 0;
     		line-height: 20px;
 			&.wpml-ls-item-toggle{
+				position: relative;
 				&:after{
 				    vertical-align: middle;
 				    display: inline-block;
