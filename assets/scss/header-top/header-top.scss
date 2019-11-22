@@ -104,10 +104,6 @@
 			bottom: 4px;
 			line-height: 1;
 			color: inherit;
-			@include transition(all .3s linear 0s);
-			&:hover{
-				color: $lightent_accent_accent;
-			}
 		}
 	}
 	.select2.select2-container .select2-selection--single .select2-selection__rendered{
