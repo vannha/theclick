@@ -148,12 +148,13 @@
 			background: #111;
 		    min-width: 100px;
 		    padding: 20px 15px;
-		}
-		.wpml-ls-item{
-			padding: 5px 0;
-			.wpml-ls-display{
-				display: none;
+		    .wpml-ls-item{
+				padding: 5px 0;
+				.wpml-ls-display{
+					display: none;
+				}
 			}
 		}
+
 	}
 }
