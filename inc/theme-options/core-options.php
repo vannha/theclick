@@ -279,7 +279,7 @@ if(!function_exists('theclick_header_opts')){
                 'title' => esc_html__('Link colors', 'theclick'),
             ),
             array(
-                'title'    => esc_html__('Menu Parent Icon After', 'theclick'),
+                'title'    => esc_html__('After Icon of Menu Parent', 'theclick'),
                 'id'       => 'menu_parent_icon_after',
                 'type'     => 'button_set',
                 'options'  => array(
