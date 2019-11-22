@@ -236,10 +236,7 @@ if(!function_exists('theclick_header_opts')){
                 'id'       => 'header_fullwidth',
                 'type'     => 'button_set',
                 'options'  => $options_width,
-                'default'  => $default_width_value,
-                'required' => array(
-                    array('header_layout' ,'!=', '3')
-                )
+                'default'  => $default_width_value
             ),
             array(
                 'title'    => esc_html__('Menu Height', 'theclick'),
@@ -249,9 +246,6 @@ if(!function_exists('theclick_header_opts')){
                 'width'    => false,
                 'units'    => array('px'),
                 'default'  => array(),
-                'required' => array(
-                    array('header_layout' ,'!=', '3')
-                ),
                 'force_output' => true
             ),
             array(
@@ -262,7 +256,7 @@ if(!function_exists('theclick_header_opts')){
                 'height'   => false,
                 'units'     => array('px'),
                 'required' => array(
-                    array('header_layout' ,'=', '3')
+                    array('header_layout' ,'=', '6')
                 ),
                 'force_output' => true
             ),
