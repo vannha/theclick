@@ -249,14 +249,14 @@ if(!function_exists('theclick_header_opts')){
                 'force_output' => true
             ),
             array(
-                'title'    => esc_html__('Header Width', 'theclick'),
-                'subtitle' => esc_html__('Enter the width for side navigation header', 'theclick'),
+                'title'    => esc_html__('Hidden Side Width', 'theclick'),
+                'subtitle' => esc_html__('Enter the width for hidden side', 'theclick'),
                 'id'       => 'header_sidewidth',
                 'type'     => 'dimensions',
                 'height'   => false,
                 'units'     => array('px'),
                 'required' => array(
-                    array('header_layout' ,'=', '6')
+                    array('header_layout' ,'=', array('1','2','6','7','8','10','11'))
                 ),
                 'force_output' => true
             ),
@@ -279,9 +279,8 @@ if(!function_exists('theclick_header_opts')){
                 'title' => esc_html__('Link colors', 'theclick'),
             ),
             array(
-                'title'    => esc_html__('Menu Parent After Icon', 'theclick'),
-                'subtitle' => esc_html__('Show or hide menu has children icon after', 'theclick'),
-                'id'       => 'menu_parent_after_icon',
+                'title'    => esc_html__('Menu Parent Icon After', 'theclick'),
+                'id'       => 'menu_parent_icon_after',
                 'type'     => 'button_set',
                 'options'  => array(
                     '1'  => esc_html__('Show','theclick'),
