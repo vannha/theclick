@@ -279,9 +279,9 @@ if(!function_exists('theclick_header_opts')){
                 'title' => esc_html__('Link colors', 'theclick'),
             ),
             array(
-                'title'    => esc_html__('Menu Parent Toggle Icon', 'theclick'),
-                'subtitle' => esc_html__('Show or hide menu has children toggle icon', 'theclick'),
-                'id'       => 'menu_parent_toggle_icon',
+                'title'    => esc_html__('Menu Parent After Icon', 'theclick'),
+                'subtitle' => esc_html__('Show or hide menu has children icon after', 'theclick'),
+                'id'       => 'menu_parent_after_icon',
                 'type'     => 'button_set',
                 'options'  => array(
                     '1'  => esc_html__('Show','theclick'),
