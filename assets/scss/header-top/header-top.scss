@@ -71,22 +71,6 @@
 		}
 	}
 	.woocommerce-currency-switcher-form{
-		position: relative;
-		&:before{
-			content: "\f107";
-			font-family: $FontAwesome;
-			font-size: 12px;
-			font-weight: 400;
-			position: absolute;
-			right: 0px;
-			bottom: 4px;
-			line-height: 1;
-			color: inherit;
-			@include transition(all .3s linear 0s);
-			&:hover{
-				color: $lightent_accent_accent;
-			}
-		}
 		select{
 			background-image: none;
 			background-color: transparent;
@@ -109,6 +93,22 @@
 	    margin: 0;
 	    background-color: transparent;
 	    border-radius: 0;
+	    position: relative;
+	    &:before{
+			content: "\f107";
+			font-family: $FontAwesome;
+			font-size: 12px;
+			font-weight: 400;
+			position: absolute;
+			right: 0px;
+			bottom: 4px;
+			line-height: 1;
+			color: inherit;
+			@include transition(all .3s linear 0s);
+			&:hover{
+				color: $lightent_accent_accent;
+			}
+		}
 	}
 	.select2.select2-container .select2-selection--single .select2-selection__rendered{
 	    padding: 0;
