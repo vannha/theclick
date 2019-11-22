@@ -79,7 +79,7 @@
     **/
     function theclick_select2(){
         $('#ef5-header-top .woocommerce-currency-switcher').select2({
-            customClass: "ht-select-container"
+            containerCssClass: "ht-select-container"
             }
         );
     }
