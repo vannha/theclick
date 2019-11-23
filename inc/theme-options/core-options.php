@@ -751,25 +751,8 @@ if(!function_exists('theclick_header_signin_signup_opts')){
  *
 */
 if(!function_exists('theclick_header_user')){
-    function theclick_header_user($args = []){
+    function theclick_header_user($options, $default_value){
         if(!class_exists('FlexUser')) return array();
-        $args = wp_parse_args($args,[
-            'default' => false
-        ]);
-        if($args['default']){
-            $options = array(
-                '-1' => esc_html__('Default','theclick'),
-                '1'  => esc_html__('Yes','theclick'),
-                '0'  => esc_html__('No','theclick'),
-            );
-            $default_value = '-1';
-        } else {
-            $options = array(
-                '1'  => esc_html__('Yes','theclick'),
-                '0'  => esc_html__('No','theclick'),
-            );
-            $default_value = '0';
-        }
         return array (
             array(
                 'title'    => esc_html__('Show User Login', 'theclick'),
