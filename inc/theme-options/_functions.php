@@ -69,6 +69,7 @@ if(!function_exists('theclick_get_nav_menu')){
         $menus = array(
             '0' => esc_html__('Primary Menu','theclick')
         );
+        $menus =array();
         $obj_menus = wp_get_nav_menus();
         if($args['default']) $menus['-1'] = esc_html__('Default','theclick');
         if($args['none']) $menus['none'] = esc_html__('None','theclick');
