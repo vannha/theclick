@@ -276,6 +276,7 @@ class TheClick_CSS_Generator
         $menu_parent_icon_after = theclick_get_theme_opt('menu_parent_icon_after', '0'); 
         $menu_arrow_icon = 'none';
         $menu_arrow_icon_rtl = 'none';
+        var_dump($menu_parent_icon_after);
         if($menu_parent_icon_after == '1'){ 
             $menu_arrow_icon = '\00a0\00a0\00a0\f107';
             $menu_arrow_icon_rtl = '\f107\00a0\00a0\00a0';
