@@ -409,7 +409,7 @@ if(!function_exists('theclick_header_atts')){
                 )
             ),
             theclick_header_wc_attrs($options, $default_value),
-            theclick_header_donate(),
+            theclick_header_user(),
             theclick_header_contact_attrs($options, $default, $default_value),
             theclick_header_contact_plain_text_attrs($options, $default_value),
             array(
@@ -750,9 +750,9 @@ if(!function_exists('theclick_header_signin_signup_opts')){
  * Require CSH Login Plugin
  *
 */
-if(!function_exists('theclick_header_donate')){
-    function theclick_header_donate($args = []){
-        if(!class_exists('EF5Payments')) return array();
+if(!function_exists('theclick_header_user')){
+    function theclick_header_user($args = []){
+        if(!class_exists('FlexUser')) return array();
         $args = wp_parse_args($args,[
             'default' => false
         ]);
@@ -772,28 +772,12 @@ if(!function_exists('theclick_header_donate')){
         }
         return array (
             array(
-                'title'    => esc_html__('Show Donate', 'theclick'),
-                'subtitle' => esc_html__('Show/Hide Donate Button', 'theclick'),
-                'id'       => 'header_donate',
+                'title'    => esc_html__('Show User Login', 'theclick'),
+                'subtitle' => esc_html__('Show/Hide User Login', 'theclick'),
+                'id'       => 'header_user',
                 'type'     => 'button_set',
                 'options'  => $options,
                 'default'  => $default_value,
-            ),
-            array(
-                'title'    => esc_html__('Button Label', 'theclick'),
-                'id'       => 'header_donate_label',
-                'type'     => 'text',
-                'default'  => esc_html__('Donate Now','theclick'),
-                'required' => array('header_donate', '!=', '0')
-            ),
-            array(
-                'title'    => esc_html__('Donate for?', 'theclick'),
-                'subtitle' => esc_html__('Choose default item for donate, if not, the first item will choose','theclick'),
-                'id'       => 'header_donate_item',
-                'type'     => 'select',
-                'options'  => theclick_list_post('ef5_donation'),
-                'default'  => '',
-                'required' => array('header_donate', '!=', '0')
             )
         );
     }

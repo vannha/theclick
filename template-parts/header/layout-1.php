@@ -30,7 +30,6 @@
                                     theclick_header_cart();
                                     theclick_header_signin_signup();
                                     theclick_header_contact();
-                                    theclick_header_donate_button();
                                     theclick_header_popup_nav_icon();
                                     theclick_header_mobile_menu_icon();
                                     theclick_header_side_nav_icon();
