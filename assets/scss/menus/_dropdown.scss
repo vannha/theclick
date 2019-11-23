@@ -47,6 +47,11 @@
                     &:after{
                         font-family: $FontAwesome;
                         font-weight: 400;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        line-height: 1;
+                        margin-top: -7.5px;
                     }
                     &:after{
                         content: '\f105';
@@ -58,6 +63,8 @@
                         }
                         &:before{
                             content: '\f104';
+                            right: auto;
+                            left: 0;
                         }
                     }
                 }
