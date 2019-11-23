@@ -409,7 +409,7 @@ if(!function_exists('theclick_header_atts')){
                 )
             ),
             theclick_header_wc_attrs($options, $default_value),
-            theclick_header_user(),
+            theclick_header_user($options, $default_value),
             theclick_header_contact_attrs($options, $default, $default_value),
             theclick_header_contact_plain_text_attrs($options, $default_value),
             array(
