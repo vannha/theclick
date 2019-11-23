@@ -409,7 +409,7 @@ if(!function_exists('theclick_header_atts')){
                 )
             ),
             theclick_header_wc_attrs($options, $default_value),
-            theclick_header_user($options, $default_value),
+            theclick_header_signin_signup_opts($options, $default_value),
             array(
                 array(
                     'title'    => esc_html__('Show Nav Widget', 'theclick'),
@@ -456,7 +456,6 @@ if(!function_exists('theclick_header_atts')){
                     'subtitle' => esc_html__('Choose a menu to show', 'theclick'),
                 )
             ),
-            theclick_header_signin_signup_opts(['default' => $default]),
             array(
                 array(
                     'id'       => 'header_side_copyright',
@@ -520,68 +519,7 @@ function theclick_header_wc_attrs($options, $default_value){
  *
 */
 if(!function_exists('theclick_header_signin_signup_opts')){
-    function theclick_header_signin_signup_opts($args = []){
-        if(!function_exists('cshlg_add_login_form')) return array();
-        $args = wp_parse_args($args,[
-            'default' => false
-        ]);
-        if($args['default']){
-            $options = array(
-                '-1' => esc_html__('Default','theclick'),
-                '1'  => esc_html__('Yes','theclick'),
-                '0'  => esc_html__('No','theclick'),
-            );
-            $default_value = '-1';
-        } else {
-            $options = array(
-                '1'  => esc_html__('Yes','theclick'),
-                '0'  => esc_html__('No','theclick'),
-            );
-            $default_value = '0';
-        }
-        return array (
-            array(
-                'title'    => esc_html__('Show SignIn', 'theclick'),
-                'subtitle' => esc_html__('Show/Hide SignIn Button', 'theclick'),
-                'id'       => 'header_signin',
-                'type'     => 'button_set',
-                'options'  => $options,
-                'default'  => $default_value,
-            ),
-            array(
-                'title'    => esc_html__('SignIn Label', 'theclick'),
-                'id'       => 'header_signin_label',
-                'type'     => 'text',
-                'default'  => esc_html__('Sign In','theclick'),
-                'required' => array('header_signin', '!=', '0')
-            ),
-            array(
-                'title'    => esc_html__('Show SignUp', 'theclick'),
-                'subtitle' => esc_html__('Show/Hide SignUp Button', 'theclick'),
-                'id'       => 'header_signup',
-                'type'     => 'button_set',
-                'options'  => $options,
-                'default'  => $default_value,
-            ),
-            array(
-                'title'    => esc_html__('SignUp Label', 'theclick'),
-                'id'       => 'header_signup_label',
-                'type'     => 'text',
-                'default'  => esc_html__('Sign Up','theclick'),
-                'required' => array('header_signup', '!=', '0')
-            )
-        );
-    }
-}
-
-/**
- * Theme Options 
- * Show SingIn / SingUp button
- * Require CSH Login Plugin
- *
-*/
-if(!function_exists('theclick_header_user')){
-    function theclick_header_user($options, $default_value){
+    function theclick_header_signin_signup_opts($options, $default_value){
         if(!class_exists('FlexUser')) return array();
         return array (
             array(
@@ -595,6 +533,8 @@ if(!function_exists('theclick_header_user')){
         );
     }
 }
+
+ 
 
 /**
  * Main Logo
