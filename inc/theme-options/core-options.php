@@ -303,8 +303,8 @@ if(!function_exists('theclick_header_theme_opts')){
     function theclick_header_theme_opts(){
         return array(
             array(
-                'title'    => esc_html__('After Icon of Menu Parent', 'theclick'),
-                'id'       => 'menu_parent_icon_after',
+                'title'    => esc_html__('Menu parent arrow icon', 'theclick'),
+                'id'       => 'menu_parent_arrow_icon',
                 'type'     => 'button_set',
                 'options'  => array(
                     '1'  => esc_html__('Show','theclick'),

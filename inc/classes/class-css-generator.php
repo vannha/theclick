@@ -273,11 +273,11 @@ class TheClick_CSS_Generator
         printf('$header_sidewidth: %s;', esc_attr($header_sidewidth['width']));
 
         /* menu parent arrow icon after */
-        $menu_parent_icon_after = theclick_get_theme_opt('menu_parent_icon_after', '0'); 
+        $menu_parent_arrow_icon = theclick_get_theme_opt('menu_parent_arrow_icon', '0'); 
         $menu_arrow_icon = 'none';
         $menu_arrow_icon_rtl = 'none';
         $menu_arrow_dd_icon = 'none';
-        if($menu_parent_icon_after == '1'){ 
+        if($menu_parent_arrow_icon == '1'){ 
             $menu_arrow_icon = '\'\00a0\00a0\00a0\f107\'';
             $menu_arrow_icon_rtl = '\'\f107\00a0\00a0\00a0\'';
             $menu_arrow_dd_icon = '\'\f105\'';
