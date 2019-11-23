@@ -67,7 +67,7 @@
                     font-weight: 400;
                 }
                 &:after{
-                    content: "\00a0\00a0\00a0\f107";
+                    content: $menu_arrow_icon;
                 }
                 [dir="rtl"] &{
                     &:after{
@@ -75,7 +75,7 @@
                         display: none;
                     }
                     &:before{
-                        content: "\f107\00a0\00a0\00a0";
+                        content: $menu_arrow_icon_rtl;
                     }
                 }
             }
