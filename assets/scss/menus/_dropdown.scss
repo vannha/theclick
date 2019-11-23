@@ -41,6 +41,27 @@
                     color: $dropdown_color_active;
                 }
             }
+            &.menu-item-has-children{
+                > a{
+                    &:before,
+                    &:after{
+                        font-family: $FontAwesome;
+                        font-weight: 400;
+                    }
+                    &:after{
+                        content: $menu_arrow_icon;
+                    }
+                    [dir="rtl"] &{
+                        &:after{
+                            content: '';
+                            display: none;
+                        }
+                        &:before{
+                            content: $menu_arrow_icon_rtl;
+                        }
+                    }
+                }
+            }
         }
         a{
             font-size: $dropdown_font_size;
