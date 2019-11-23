@@ -64,7 +64,7 @@ if(!function_exists('theclick_header_attr_class')){
         $header_menu    = theclick_get_opts('header_menu','0');
         $show_search    = theclick_get_opts('header_search', '0');
         $show_cart      = theclick_get_opts('header_cart', '0');
-
+        $classes[] = $header_menu;
         //if($header_menu === '0' || $header_menu === '0') $classes[] = 'no-menu';
         if($show_search == '0' && $show_cart == '0') $classes[] = 'no-icon';
          
