@@ -192,7 +192,8 @@ add_filter('theclick_cpts_footer', function(){ return true;});
 add_filter('ef5systems_spacings','theclick_spacings');
 function theclick_spacings(){
 	return [
-		'custom1 pl-xl-60 pr-xl-60' => ['TheClick Space 01', 'Left 60px - Right 60px','0 60px'],
+		'custom1 pl-xl-45 pr-xl-45' => ['TheClick Space 01', 'Left 45px - Right 45px','0 45px'],
+		'custom1 pl-xl-60 pr-xl-60' => ['TheClick Space 02', 'Left 60px - Right 60px','0 60px'],
 		'custom2 pt-8 pb-8' => ['TheClick Space 01', 'Top 8px - Bottom 8px'],
 		'87-0-92'          	=> ['TheClick Space 02', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
 		'93-0-100'          => ['TheClick Space 03', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
