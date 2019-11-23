@@ -272,6 +272,17 @@ class TheClick_CSS_Generator
         $header_sidewidth = theclick_get_theme_opt('header_sidewidth',['width' => apply_filters('theclick_header_sidewidth',theclick_configs('header_sidewidth'))]);
         printf('$header_sidewidth: %s;', esc_attr($header_sidewidth['width']));
 
+        /* menu parent arrow icon after */
+        $menu_parent_icon_after = theclick_get_theme_opt('menu_parent_icon_after', '0'); 
+        $menu_arrow_icon = 'none';
+        $menu_arrow_icon_rtl = 'none';
+        if($menu_parent_icon_after == '1'){ 
+            $menu_arrow_icon = '\00a0\00a0\00a0\f107';
+            $menu_arrow_icon_rtl = '\f107\00a0\00a0\00a0';
+        }
+        printf('$menu_arrow_icon: %s;', esc_attr($menu_arrow_icon));
+        printf('$menu_arrow_icon_rtl: %s;', esc_attr($menu_arrow_icon_rtl));
+
         /* Default Header Color */
         $header_link_color = theclick_get_theme_opt('header_link_colors',apply_filters('theclick_header_link_color', ['regular' => theclick_configs('menu_link_color_regular'), 'hover' => theclick_configs('menu_link_color_hover'), 'active' => theclick_configs('menu_link_color_active')]) );
         printf( '$header_regular: %s;', esc_attr( $header_link_color['regular'] ) );
@@ -297,9 +308,7 @@ class TheClick_CSS_Generator
         printf( '$dropdown_regular: %s;', esc_attr( $dropdown_link_colors['regular'] ) );
         printf( '$dropdown_hover: %s;', esc_attr( $dropdown_link_colors['hover'] ) );
         printf( '$dropdown_active: %s;', esc_attr( $dropdown_link_colors['active'] ) );
-
-        /* Side Header Width */
-
+  
         /* WooCommerce */
         printf( '$theclick_product_single_image_w: %s;', theclick_configs('theclick_product_single_image_w') );
         printf( '$theclick_product_single_image_h: %s;', theclick_configs('theclick_product_single_image_h') );
