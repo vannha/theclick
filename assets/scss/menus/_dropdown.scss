@@ -49,7 +49,7 @@
                         font-weight: 400;
                     }
                     &:after{
-                        content: $menu_arrow_icon;
+                        content: '\f105';
                     }
                     [dir="rtl"] &{
                         &:after{
@@ -57,7 +57,7 @@
                             display: none;
                         }
                         &:before{
-                            content: $menu_arrow_icon_rtl;
+                            content: '\f104';
                         }
                     }
                 }
