@@ -144,6 +144,7 @@ Redux::setSection($opt_name, array(
     'icon'   => 'el-icon-website',
     'fields' => array_merge(
         theclick_header_opts(),
+        theclick_header_theme_opts(),
         theclick_header_atts()
     )
 ));
