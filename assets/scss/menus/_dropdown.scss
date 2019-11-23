@@ -55,7 +55,7 @@
                         margin-top: -7.5px;
                     }
                     &:after{
-                        content: $menu_arrow_icon;
+                        content: $menu_arrow_dd_icon;
                     }
                     [dir="rtl"] &{
                         &:after{
@@ -63,7 +63,7 @@
                             display: none;
                         }
                         &:before{
-                            content: $menu_arrow_icon;
+                            content: $menu_arrow_dd_icon;
                             right: auto;
                             left: 0;
                         }

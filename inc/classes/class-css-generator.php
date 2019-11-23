@@ -276,12 +276,15 @@ class TheClick_CSS_Generator
         $menu_parent_icon_after = theclick_get_theme_opt('menu_parent_icon_after', '0'); 
         $menu_arrow_icon = 'none';
         $menu_arrow_icon_rtl = 'none';
+        $menu_arrow_dd_icon = 'none';
         if($menu_parent_icon_after == '1'){ 
             $menu_arrow_icon = '\'\00a0\00a0\00a0\f107\'';
             $menu_arrow_icon_rtl = '\'\f107\00a0\00a0\00a0\'';
+            $menu_arrow_dd_icon = '\'\f105\'';
         }
         printf('$menu_arrow_icon: %s;', $menu_arrow_icon);
         printf('$menu_arrow_icon_rtl: %s;', $menu_arrow_icon_rtl);
+        printf('$menu_arrow_dd_icon: %s;', $menu_arrow_dd_icon);
 
         /* Default Header Color */
         $header_link_color = theclick_get_theme_opt('header_link_colors',apply_filters('theclick_header_link_color', ['regular' => theclick_configs('menu_link_color_regular'), 'hover' => theclick_configs('menu_link_color_hover'), 'active' => theclick_configs('menu_link_color_active')]) );
