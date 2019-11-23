@@ -1,5 +1,5 @@
 .header-layout-1{
-	@media (min-width: 1366px){
+	/*@media (min-width: 1366px){
 		&.header-ontop{
 			left: 50%;
 			right: auto;
@@ -7,10 +7,6 @@
 			min-width: 1300px;
 			max-width: 1300px;
 			@include border-radius(10px);
-		}
-		.header-inner.no-container{
-			padding-left: 110px;
-			padding-right: 110px;
 		}
 	}
 	@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max){
@@ -23,14 +19,14 @@
 		}
 	}
 	#ef5-navigation{
-		/* @media (min-width: $screen-xl-min){
+		@media (min-width: $screen-xl-min){
 			padding-right: 60px;
 			[dir="rtl"] &{
 				padding-right: 15px;
 				padding-left: 60px;
 			}
-		} */
-	}
+		} 
+	}*/
 	@media (min-width: $screen-xl-min){
 		.ef5-menu {
 			margin-left: -22.5px;
