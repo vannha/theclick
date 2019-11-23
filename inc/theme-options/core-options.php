@@ -332,9 +332,6 @@ if(!function_exists('theclick_header_atts')){
             'icon' => esc_html__('Icon','theclick'),
             'text' => esc_html__('Text','theclick'),
         );
-        $header_atts_icon_style = array(
-            'icon' => esc_html__('Icon','theclick')
-        );
         if($default){
             $options = array(
                 '-1' => esc_html__('Default','theclick'),
@@ -349,7 +346,6 @@ if(!function_exists('theclick_header_atts')){
             $header_mobile_nav_icon_type['-1'] = esc_html__('Default','theclick');
             $header_side_nav_icon_type['-1']   = esc_html__('Default','theclick');
             $header_popup_nav_icon_type['-1']  = esc_html__('Default','theclick');
-            $header_atts_icon_style['-1']      = esc_html__('Default','theclick');
         } else {
             $options = array(
                 '1'  => esc_html__('Yes','theclick'),
@@ -363,7 +359,6 @@ if(!function_exists('theclick_header_atts')){
             $header_mobile_nav_icon_type_value = 'icon';
             $header_side_nav_icon_type_value = 'icon';
             $header_popup_nav_icon_type_value = 'text';
-            $header_atts_icon_style_value = 'icon';
         }
         return array_merge(
             array(
@@ -389,14 +384,6 @@ if(!function_exists('theclick_header_atts')){
                     'type'     => 'select',
                     'options'  => theclick_get_nav_menu($default_helper_menu),
                     'default'  => $default_helper_menu_value
-                ),
-                array(
-                    'title'    => esc_html__('Icon Style', 'theclick'),
-                    'subtitle' => esc_html__('Choose style attributes icon', 'theclick'),
-                    'id'       => 'header_atts_icon_style',
-                    'type'     => 'select',
-                    'options'  => $header_atts_icon_style,
-                    'default'  => $header_atts_icon_style_value,
                 ),
                 array(
                     'title'    => esc_html__('Show Social', 'theclick'),

@@ -7,8 +7,7 @@ $show_search    = theclick_get_opts('header_search', '0');
 $show_cart      = theclick_get_opts('header_cart', '0');
 
 $nav_extra_class = [
-    'nav-extra',
-    theclick_get_opts('header_atts_icon_style','icon')
+    'nav-extra'
 ];
 if($header_menu === 'none') $nav_extra_class[] = 'no-menu';
 if($show_search == '0' && $show_cart === '0') $nav_extra_class[] = 'no-icon';

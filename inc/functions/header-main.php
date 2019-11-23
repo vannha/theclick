@@ -58,8 +58,7 @@ if(!function_exists('theclick_header_attr_class')){
     function theclick_header_attr_class($class = ''){
         $classes = [
             $class,
-            'nav-extra',
-            theclick_get_opts('header_atts_icon_style','icon')
+            'nav-extra'
         ];
 
         $header_menu    = theclick_get_opts('header_menu','0');
