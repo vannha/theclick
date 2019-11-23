@@ -3,7 +3,7 @@
  * TheClick
  */
 $header_social = theclick_get_opts( 'header_social', '0' );
-
+var_dump($header_social);
 if($header_social === '0') return;
 
 $header_layout = theclick_get_opts('header_layout', '1');
