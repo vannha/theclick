@@ -529,18 +529,18 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'type'     => 'button_set',
                 'options'  => $options,
                 'default'  => $default_value,
-            ),
-            array(
+            )
+            /*array(
                 'title'    => esc_html__('Nav Widget Icon Style', 'theclick'),
                 'subtitle' => esc_html__('Choose style of side menu icon', 'theclick'),
                 'id'       => 'header_side_nav_icon_type',
                 'type'     => 'select',
                 'options'  => array(
-                    
+
                 ),
                 'default'  => $header_side_nav_icon_type_value,
                 'required' => array('header_user', '=', '1'),
-            ),
+            ),*/
         );
     }
 }
