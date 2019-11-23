@@ -23,13 +23,13 @@
 		}
 	}
 	#ef5-navigation{
-		@media (min-width: $screen-xl-min){
+		/* @media (min-width: $screen-xl-min){
 			padding-right: 60px;
 			[dir="rtl"] &{
 				padding-right: 15px;
 				padding-left: 60px;
 			}
-		}
+		} */
 	}
 	@media (min-width: $screen-xl-min){
 		.ef5-menu {
