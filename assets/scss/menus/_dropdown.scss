@@ -55,7 +55,7 @@
                         margin-top: -7.5px;
                     }
                     &:after{
-                        content: '\f105';
+                        content: $menu_arrow_icon;
                     }
                     [dir="rtl"] &{
                         &:after{
@@ -63,7 +63,7 @@
                             display: none;
                         }
                         &:before{
-                            content: '\f104';
+                            content: $menu_arrow_icon;
                             right: auto;
                             left: 0;
                         }
@@ -111,9 +111,9 @@
             &:before{
                 font-family: $FontAwesome;
                 font-size: 60%;
-                content: $menu_arrow_icon;
+                content: "\f054";
                 [dir="rtl"] &{
-                    content: $menu_arrow_icon;
+                    content: "\f053";
                 }
             }
             &:after{
