@@ -18,18 +18,10 @@
                             <div class="header-attr-wrap">
                                 <?php 
                                     get_template_part('template-parts/header/header-social');
-                                    theclick_header_contact_plain_text([
-                                        'layout'      => '5',
-                                        'class'       => 'd-none d-xl-flex',
-                                        'inner_class' => 'row gutters-10 align-items-center',
-                                        'page_only'   => true,
-                                    ]);
-                                    theclick_header_contact_plain_icon();
                                     theclick_header_search(['type' => 'popup']);
                                     theclick_header_wishlist();
                                     theclick_header_cart();
                                     theclick_header_signin_signup();
-                                    theclick_header_contact();
                                     theclick_header_popup_nav_icon();
                                     theclick_header_mobile_menu_icon();
                                     theclick_header_side_nav_icon();
