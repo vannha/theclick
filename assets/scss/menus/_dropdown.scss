@@ -18,6 +18,7 @@
         [dir="rtl"] &{
             right: 0;
             left: auto;
+            padding: $dropdown_space;
         }
         .menu-item{
             border-bottom: $dropdown_border;
