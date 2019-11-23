@@ -66,6 +66,7 @@
                             content: $menu_arrow_dd_icon;
                             right: auto;
                             left: 0;
+                            @include transform(rotate(180deg));
                         }
                     }
                 }
