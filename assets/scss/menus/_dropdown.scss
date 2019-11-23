@@ -111,9 +111,9 @@
             &:before{
                 font-family: $FontAwesome;
                 font-size: 60%;
-                content: "\f054";
+                content: $menu_arrow_icon;
                 [dir="rtl"] &{
-                    content: "\f053";
+                    content: $menu_arrow_icon;
                 }
             }
             &:after{
