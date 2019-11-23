@@ -189,7 +189,7 @@ if(!function_exists('theclick_header_opts')){
         $args = wp_parse_args($args, [
             'default' => false
         ]);
-        $default_value = '8';
+        $default_value = '1';
         $default_menu = '0';
         if($args['default'] === true){
             $options_width = array(

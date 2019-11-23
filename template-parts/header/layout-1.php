@@ -2,15 +2,6 @@
 /**
  * Template part for displaying default header layout
  */
-$header_menu    = theclick_get_opts('header_menu','');
-$show_search    = theclick_get_opts('header_search', '0');
-$show_cart      = theclick_get_opts('header_cart', '0');
-
-$nav_extra_class = [
-    'nav-extra'
-];
-if($header_menu === 'none') $nav_extra_class[] = 'no-menu';
-if($show_search == '0' && $show_cart === '0') $nav_extra_class[] = 'no-icon';
 ?>
 <header id="ef5-header" <?php theclick_header_class(); ?>>
     <div id="ef5-headroom" class="main-header">
@@ -23,8 +14,8 @@ if($show_search == '0' && $show_cart === '0') $nav_extra_class[] = 'no-icon';
                     <?php theclick_header_helper_menu(); ?>
                     <div class="row align-items-center justify-content-end">
                         <?php theclick_header_menu(['class' => 'col-lg-12 col-xl-auto']); ?>
-                        <div class="col-auto">
-                            <div class="<?php echo trim(implode(' ', $nav_extra_class)); ?>">
+                        <div class="<?php theclick_header_attr_class('col-auto'); ?>">
+                            <div class="header-attr-wrap">
                                 <?php 
                                     get_template_part('template-parts/header/header-social');
                                     theclick_header_contact_plain_text([
@@ -52,3 +43,4 @@ if($show_search == '0' && $show_cart === '0') $nav_extra_class[] = 'no-icon';
         </div>
     </div>
 </header>
+ 

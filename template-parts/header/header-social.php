@@ -3,10 +3,9 @@
  * TheClick
  */
 $header_social = theclick_get_opts( 'header_social', '0' );
-var_dump($header_social);
+ 
 if($header_social === '0') return;
 
-$header_layout = theclick_get_opts('header_layout', '1');
 $classes = ['header-socials col-auto'];
 
 if(!empty(theclick_get_theme_opt('social_facebook_url')) || !empty(theclick_get_theme_opt('social_twitter_url')) || !empty(theclick_get_theme_opt('social_inkedin_url')) || !empty(theclick_get_theme_opt('social_instagram_url')) || !empty(theclick_get_theme_opt('social_google_url')) || !empty(theclick_get_theme_opt('social_pinterest_url')) || !empty(theclick_get_theme_opt('social_skype_url')) || !empty(theclick_get_theme_opt('social_vimeo_url')) || !empty(theclick_get_theme_opt('social_youtube_url')) || !empty(theclick_get_theme_opt('social_yelp_url')) || !empty(theclick_get_theme_opt('social_tumblr_url')) || !empty(theclick_get_theme_opt('social_tripadvisor_url')) ) :
