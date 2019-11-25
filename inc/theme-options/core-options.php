@@ -551,7 +551,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
     }
 }
 
-function flex_user_sc_params(){
+function theclick_flex_user_sc_params(){
     $can_register = get_option('users_can_register');
     if ($can_register) {
         return array(
