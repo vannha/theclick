@@ -546,8 +546,8 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'required' => array('header_user', '=', '1')
             );
             $opts[] = array(
-                'type'    => 'select',
                 'id'      => 'num_link',
+                'type'    => 'select',
                 'title'   => esc_html__('Number link', 'theclick'),
                 'options' => array(
                     '1' => esc_html__('One', 'theclick'),
