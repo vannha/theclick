@@ -13,7 +13,7 @@
                 </div>
                 <div class="ef5-navigation-wrap col">
                     <?php theclick_header_helper_menu(); ?>
-                    <div class="ef5-row-flex align-items-center justify-content-end">
+                    <div class="d-flex align-items-center justify-content-end">
                         <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
                         <div class="header-attrs">
                             <div class="header-attr-wrap nav-extra">
