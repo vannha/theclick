@@ -537,10 +537,10 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'type'       => 'select',
                 'param_name' => 'type',
                 'heading'    => esc_html__('Type', 'theclick'),
-                'options'      => array(
-                    esc_html__('Both login and register', 'theclick')          => 'both',
-                    esc_html__('Only login', 'theclick')    => 'login',
-                    esc_html__('Only register', 'theclick')   => 'register'
+                'options'    => array(
+                    esc_html__('Both login and register', 'theclick') => 'both',
+                    esc_html__('Only login', 'theclick')              => 'login',
+                    esc_html__('Only register', 'theclick')           => 'register'
                 ),
                 'default'        => 'both'
             );
