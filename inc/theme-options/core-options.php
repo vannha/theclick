@@ -522,17 +522,14 @@ if(!function_exists('theclick_header_signin_signup_opts')){
     function theclick_header_signin_signup_opts($options, $default_value){
         if(!class_exists('FlexUser')) return array();
         
-        return array_merge (
-            array(
-                array(
-                    'title'    => esc_html__('Show User Login', 'theclick'),
-                    'subtitle' => esc_html__('Show/Hide User Login', 'theclick'),
-                    'id'       => 'header_user',
-                    'type'     => 'button_set',
-                    'options'  => $options,
-                    'default'  => $default_value,
-                )
-            )
+        return array(
+            'title'    => esc_html__('Show User Login', 'theclick'),
+            'subtitle' => esc_html__('Show/Hide User Login', 'theclick'),
+            'id'       => 'header_user',
+            'type'     => 'button_set',
+            'options'  => $options,
+            'default'  => $default_value,
+        );
             /* flex_user_sc_params(),
             array(
                 array(
@@ -543,7 +540,6 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'required' => array('type', '=', array('both', 'login'))
                 )
             ) */
-        );
     }
 }
 
