@@ -544,8 +544,8 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                         'element' => 'type',
                         'value'   => array('both', 'login')
                     )
-                ),
-            ),
+                )
+            )
         );
     }
 }
