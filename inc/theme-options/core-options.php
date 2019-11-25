@@ -545,6 +545,17 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'        => 'both',
                 'required' => array('header_user', '=', '1')
             );
+            $opts[] = array(
+                'type'    => 'select',
+                'id'      => 'num_link',
+                'title'   => esc_html__('Number link', 'theclick'),
+                'options' => array(
+                    '1' => esc_html__('One', 'theclick'),
+                    '2' => esc_html__('Two', 'theclick') 
+                ),
+                'default'  => '2',
+                'required' => array('display_type', '=', 'both')
+            );
         }
         return $opts;
          
