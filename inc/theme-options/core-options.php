@@ -532,6 +532,24 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'  => $default_value,
             )
         ];
+        $opts[] = array(
+            'id' => 'login_description',
+            'type' => 'textarea',
+            'title' => esc_html__('Login Description', 'theclick'),
+            'validate' => 'html_custom',
+            'default' => '',
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            ),
+            'required' => array('type', '=', array('both', 'login'))
+        );
+         
         if ($can_register) {
             $opts[] = array(
                 'id'      => 'display_type',
@@ -587,67 +605,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
             );
         }
         return $opts;
-         
-            /* flex_user_sc_params(),
-            array(
-                array(
-                    'type'          => 'textarea',
-                    'heading'       => esc_html__('Login Description', 'theclick'),
-                    'param_name'    => 'login_description',
-                    'default'      => '',
-                    'required' => array('type', '=', array('both', 'login'))
-                )
-            ) */
-    }
-}
-
-function theclick_flex_user_sc_params(){
-    $can_register = get_option('users_can_register');
-    if ($can_register) {
-        return array(
-            array(
-                'type'       => 'select',
-                'param_name' => 'type',
-                'heading'    => esc_html__('Type', 'theclick'),
-                'options'      => array(
-                    esc_html__('Both login and register', 'theclick')          => 'both',
-                    esc_html__('Only login', 'theclick')    => 'login',
-                    esc_html__('Only register', 'theclick')   => 'register'
-                ),
-                'default'        => 'both'
-            ),
-            array(
-                'type'       => 'select',
-                'param_name' => 'num_link',
-                'heading'    => esc_html__('Number link', 'theclick'),
-                'options'      => array(
-                    esc_html__('One', 'theclick')          => '1',
-                    esc_html__('Two', 'theclick')    => '2'
-                ),
-                'default'        => '2',
-                'required' => array('type', '=', 'both')
-            ),
-            array(
-                'type'       => 'select',
-                'param_name' => 'active',
-                'heading'    => esc_html__('Active Form', 'theclick'),
-                'options'      => array(
-                    esc_html__('Both login and register', 'theclick') => 'all',
-                    esc_html__('Only login', 'theclick')              => 'login',
-                    esc_html__('Only register', 'theclick')           => 'register'
-                ),
-                'default'        => 'login',
-                'required' => array('num_link', '=', '1')
-            ),
-            array(
-                'type'          => 'textarea',
-                'heading'       => esc_html__('Register Description', 'theclick'),
-                'param_name'    => 'register_description',
-                'required' => array('type', '=', array('both', 'register'))
-            ),
-        );
-    } else {
-        return array();
+          
     }
 }
  
