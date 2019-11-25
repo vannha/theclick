@@ -544,7 +544,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'register' => esc_html__('Only register', 'theclick')          
                 ),
                 'default'        => 'both',
-                'required' => array('header_user', '=', '1')
+                'required' => array('login_register', '=', '1')
             );
             $opts[] = array(
                 'id'      => 'login_regis_num_link',
@@ -555,7 +555,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     '2' => esc_html__('Two', 'theclick') 
                 ),
                 'default'  => '2',
-                'required' => array('display_type', '=', 'both')
+                'required' => array('login_regis_type', '=', 'both')
             );
             $opts[] = array(
                 'id'      => 'login_regis_active',
@@ -567,7 +567,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'register' => esc_html__('Only register', 'theclick')
                 ),
                 'default'  => 'login',
-                'required' => array('num_link', '=', '1')
+                'required' => array('login_regis_num_link', '=', '1')
             );
             
         }
@@ -586,7 +586,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'em' => array(),
                 'strong' => array()
             ),
-            'required' => array('display_type', '=', array('both', 'login'))
+            'required' => array('login_regis_type', '=', array('both', 'login'))
         );
         if ($can_register) {
             $opts[] = array(
@@ -604,7 +604,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'em' => array(),
                     'strong' => array()
                 ),
-                'required' => array('display_type', '=', array('both', 'register'))
+                'required' => array('login_regis_type', '=', array('both', 'register'))
             );
         }
         return $opts;
