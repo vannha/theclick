@@ -538,9 +538,9 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'param_name' => 'display_type',
                 'heading'    => esc_html__('Type', 'theclick'),
                 'options'    => array(
-                    esc_html__('Both login and register', 'theclick') => 'both',
-                    esc_html__('Only login', 'theclick')              => 'login',
-                    esc_html__('Only register', 'theclick')           => 'register'
+                    'both'     => esc_html__('Both login and register', 'theclick'),
+                    'login'    => esc_html__('Only login', 'theclick'),             
+                    'register' => esc_html__('Only register', 'theclick')          
                 ),
                 'default'        => 'both'
             );
