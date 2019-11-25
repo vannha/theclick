@@ -526,7 +526,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
             array(
                 'title'    => esc_html__('Show User Login', 'theclick'),
                 'subtitle' => esc_html__('Show/Hide User Login', 'theclick'),
-                'id'       => 'header_user',
+                'id'       => 'login_register',
                 'type'     => 'button_set',
                 'options'  => $options,
                 'default'  => $default_value,
@@ -535,7 +535,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
          
         if ($can_register) {
             $opts[] = array(
-                'id'      => 'display_type',
+                'id'      => 'login_regis_type',
                 'type'    => 'select',
                 'title'   => esc_html__('Type', 'theclick'),
                 'options' => array(
@@ -547,7 +547,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'required' => array('header_user', '=', '1')
             );
             $opts[] = array(
-                'id'      => 'num_link',
+                'id'      => 'login_regis_num_link',
                 'type'    => 'select',
                 'title'   => esc_html__('Number link', 'theclick'),
                 'options' => array(
@@ -558,7 +558,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'required' => array('display_type', '=', 'both')
             );
             $opts[] = array(
-                'id'      => 'active',
+                'id'      => 'login_regis_active',
                 'type'    => 'select',
                 'title'   => esc_html__('Active Form', 'theclick'),
                 'options' => array(
