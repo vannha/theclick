@@ -532,19 +532,19 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'  => $default_value,
             )
         ];
-        //if ($can_register) {
+        if ($can_register) {
             $opts[] = array(
-                'type'       => 'select',
-                'param_name' => 'display_type',
-                'heading'    => esc_html__('Type', 'theclick'),
-                'options'    => array(
+                'id'      => 'display_type',
+                'type'    => 'select',
+                'title'   => esc_html__('Type', 'theclick'),
+                'options' => array(
                     'both'     => esc_html__('Both login and register', 'theclick'),
                     'login'    => esc_html__('Only login', 'theclick'),             
                     'register' => esc_html__('Only register', 'theclick')          
                 ),
                 'default'        => 'both'
             );
-       // }
+        }
         return $opts;
          
             /* flex_user_sc_params(),
