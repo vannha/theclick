@@ -535,7 +535,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
         if ($can_register) {
             $opts[] = array(
                 'type'       => 'select',
-                'param_name' => 'type',
+                'param_name' => 'display_type',
                 'heading'    => esc_html__('Type', 'theclick'),
                 'options'    => array(
                     esc_html__('Both login and register', 'theclick') => 'both',
