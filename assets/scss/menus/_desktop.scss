@@ -67,7 +67,7 @@
                     font-weight: 400;
                 }
                 &:after{
-                    content: '\00a0\00a0\00a0\f107'; //$menu_arrow_icon;
+                    content: $menu_arrow_icon;
                     display: block;
                 }
                 [dir="rtl"] &{
