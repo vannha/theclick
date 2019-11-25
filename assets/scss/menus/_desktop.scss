@@ -68,6 +68,7 @@
                 }
                 &:after{
                     content: '\00a0\00a0\00a0\f107'; //$menu_arrow_icon;
+                    display: block;
                 }
                 [dir="rtl"] &{
                     &:after{
