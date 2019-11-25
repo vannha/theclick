@@ -532,7 +532,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'  => $default_value,
             )
         ];
-        if ($can_register) {
+        //if ($can_register) {
             $opts[] = array(
                 'type'       => 'select',
                 'param_name' => 'display_type',
@@ -544,7 +544,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 ),
                 'default'        => 'both'
             );
-        }
+       // }
         return $opts;
          
             /* flex_user_sc_params(),
