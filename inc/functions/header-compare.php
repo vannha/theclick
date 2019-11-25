@@ -12,7 +12,7 @@ if(!function_exists('theclick_header_compare')){
 			'after'  => '', 
 			'icon'	 => 'fal fa-random'
 		]);
-		$show_compare = theclick_get_opts('header_wishlist', '0');
+		$show_compare = theclick_get_opts('header_compare', '0');
 		if(!class_exists( 'WooCommerce' ) || !class_exists('WPcleverWooscp') || '0' === $show_compare) return;
 		$_wooscp_open_button = str_replace(array('.','#'),'',get_option('_wooscp_open_button','ef5-header-compare-icon'));
 		echo wp_kses_post($args['before']);

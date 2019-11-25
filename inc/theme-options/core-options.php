@@ -397,8 +397,7 @@ if(!function_exists('theclick_header_atts')){
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
-                ),
-
+                ), 
                 array(
                     'title'    => esc_html__('Show Search', 'theclick'),
                     'subtitle' => esc_html__('Show/Hide search icon', 'theclick'),
