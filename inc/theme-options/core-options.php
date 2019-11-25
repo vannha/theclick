@@ -586,7 +586,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'em' => array(),
                 'strong' => array()
             ),
-            //'required' => array('type', '=', array('both', 'login'))
+            'required' => array('display_type', '=', array('both', 'login'))
         );
         if ($can_register) {
             $opts[] = array(
@@ -604,7 +604,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'em' => array(),
                     'strong' => array()
                 ),
-                //'required' => array('type', '=', array('both', 'register'))
+                'required' => array('display_type', '=', array('both', 'register'))
             );
         }
         return $opts;
