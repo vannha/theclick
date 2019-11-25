@@ -521,6 +521,7 @@ function theclick_header_wc_attrs($options, $default_value){
 if(!function_exists('theclick_header_signin_signup_opts')){
     function theclick_header_signin_signup_opts($options, $default_value){
         if(!class_exists('FlexUser')) return array();
+        $can_register = get_option('users_can_register');
         $opts = [
             array(
                 'title'    => esc_html__('Show User Login', 'theclick'),
@@ -531,6 +532,19 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'  => $default_value,
             )
         ];
+        if ($can_register) {
+            $opts[] = array(
+                'type'       => 'select',
+                'param_name' => 'type',
+                'heading'    => esc_html__('Type', 'theclick'),
+                'options'      => array(
+                    esc_html__('Both login and register', 'theclick')          => 'both',
+                    esc_html__('Only login', 'theclick')    => 'login',
+                    esc_html__('Only register', 'theclick')   => 'register'
+                ),
+                'default'        => 'both'
+            );
+        }
         return $opts;
          
             /* flex_user_sc_params(),
