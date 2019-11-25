@@ -556,6 +556,35 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'  => '2',
                 'required' => array('display_type', '=', 'both')
             );
+            $opts[] = array(
+                'id'      => 'active',
+                'type'    => 'select',
+                'title'   => esc_html__('Active Form', 'theclick'),
+                'options' => array(
+                    'all' => esc_html__('Both login and register', 'theclick'),
+                    'login' => esc_html__('Only login', 'theclick'),
+                    'register' => esc_html__('Only register', 'theclick')
+                ),
+                'default'  => 'login',
+                'required' => array('num_link', '=', '1')
+            );
+            $opts[] = array(
+                'id' => 'register_description',
+                'type' => 'textarea',
+                'title' => esc_html__('Register Description', 'theclick'),
+                'validate' => 'html_custom',
+                'default' => '',
+                'allowed_html' => array(
+                    'a' => array(
+                        'href' => array(),
+                        'title' => array()
+                    ),
+                    'br' => array(),
+                    'em' => array(),
+                    'strong' => array()
+                ),
+                'required' => array('type', '=', array('both', 'register'))
+            );
         }
         return $opts;
          
