@@ -68,7 +68,6 @@
                 }
                 &:after{
                     content: $menu_arrow_icon;
-                    display: block;
                 }
                 [dir="rtl"] &{
                     &:after{
