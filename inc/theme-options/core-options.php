@@ -532,7 +532,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'options'  => $options,
                     'default'  => $default_value,
                 )
-            ),
+            )
             /* flex_user_sc_params(),
             array(
                 array(
