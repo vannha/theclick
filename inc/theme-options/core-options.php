@@ -542,7 +542,8 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'login'    => esc_html__('Only login', 'theclick'),             
                     'register' => esc_html__('Only register', 'theclick')          
                 ),
-                'default'        => 'both'
+                'default'        => 'both',
+                'required' => array('header_user', '=', '1')
             );
         }
         return $opts;
