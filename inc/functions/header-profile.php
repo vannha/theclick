@@ -14,6 +14,6 @@ if(!function_exists('theclick_header_signin_signup')){
 		$login_description    = theclick_get_opts('login_description','');
 		$register_description = theclick_get_opts('register_description', '');
 		$authid = rand(4,9999);
-		echo do_shortcode( '[fu_auth el_id="'.$authid. '" type="both" num_link="1" active="register" login_description="desc1" register_description="desc2"]' );
+		echo do_shortcode( '[fu_auth el_id="'.$authid. '" type="both" num_link="1" active="login" login_description="desc1" register_description="desc2"]' );
 	}
 }
