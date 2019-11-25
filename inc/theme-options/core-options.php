@@ -521,30 +521,89 @@ function theclick_header_wc_attrs($options, $default_value){
 if(!function_exists('theclick_header_signin_signup_opts')){
     function theclick_header_signin_signup_opts($options, $default_value){
         if(!class_exists('FlexUser')) return array();
-        return array (
+        
+        return array_merge (
             array(
+                array(
                 'title'    => esc_html__('Show User Login', 'theclick'),
                 'subtitle' => esc_html__('Show/Hide User Login', 'theclick'),
                 'id'       => 'header_user',
                 'type'     => 'button_set',
                 'options'  => $options,
                 'default'  => $default_value,
-            )
-            /*array(
-                'title'    => esc_html__('Nav Widget Icon Style', 'theclick'),
-                'subtitle' => esc_html__('Choose style of side menu icon', 'theclick'),
-                'id'       => 'header_side_nav_icon_type',
-                'type'     => 'select',
-                'options'  => array(
-
+            )),
+            flex_user_sc_params(),
+            array(
+                array(
+                    'type'          => 'textarea',
+                    'heading'       => esc_html__('Login Description', 'theclick'),
+                    'param_name'    => 'login_description',
+                    'value'      => '',
+                    'holder'     => 'div',
+                    'dependency' => array(
+                        'element' => 'type',
+                        'value'   => array('both', 'login')
+                    )
                 ),
-                'default'  => $header_side_nav_icon_type_value,
-                'required' => array('header_user', '=', '1'),
-            ),*/
+            ),
         );
     }
 }
 
+function flex_user_sc_params(){
+    $can_register = get_option('users_can_register');
+    if ($can_register) {
+        return array(
+            array(
+                'type'       => 'select',
+                'param_name' => 'type',
+                'heading'    => esc_html__('Type', 'theclick'),
+                'value'      => array(
+                    esc_html__('Both login and register', 'theclick')          => 'both',
+                    esc_html__('Only login', 'theclick')    => 'login',
+                    esc_html__('Only register', 'theclick')   => 'register'
+                ),
+                'std'        => 'both'
+            ),
+            array(
+                'type'       => 'select',
+                'param_name' => 'num_link',
+                'heading'    => esc_html__('Number link', 'theclick'),
+                'value'      => array(
+                    esc_html__('One', 'theclick')          => '1',
+                    esc_html__('Two', 'theclick')    => '2'
+                ),
+                'std'        => '2',
+                'required' => array('type', '=', 'both')
+            ),
+            array(
+                'type'       => 'select',
+                'param_name' => 'active',
+                'heading'    => esc_html__('Active Form', 'theclick'),
+                'value'      => array(
+                    esc_html__('Both login and register', 'theclick') => 'all',
+                    esc_html__('Only login', 'theclick')              => 'login',
+                    esc_html__('Only register', 'theclick')           => 'register'
+                ),
+                'std'        => 'login',
+                'required' => array('num_link', '=', '1')
+            ),
+            array(
+                'type'          => 'textarea',
+                'heading'       => esc_html__('Register Description', 'theclick'),
+                'param_name'    => 'register_description',
+                'value'      => '',
+                'holder'     => 'div',
+                'dependency' => array(
+                    'element' => 'type',
+                    'value'   => array('both', 'register')
+                )
+            ),
+        );
+    } else {
+        return array();
+    }
+}
  
 
 /**
