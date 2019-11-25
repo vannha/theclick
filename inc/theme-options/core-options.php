@@ -533,7 +533,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'default'  => $default_value,
                 )
             ),
-            flex_user_sc_params(),
+            /* flex_user_sc_params(),
             array(
                 array(
                     'type'          => 'textarea',
@@ -542,7 +542,7 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                     'default'      => '',
                     'required' => array('type', '=', array('both', 'login'))
                 )
-            )
+            ) */
         );
     }
 }
