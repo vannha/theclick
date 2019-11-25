@@ -532,23 +532,6 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'  => $default_value,
             )
         ];
-        $opts[] = array(
-            'id' => 'login_description',
-            'type' => 'textarea',
-            'title' => esc_html__('Login Description', 'theclick'),
-            'validate' => 'html_custom',
-            'default' => '',
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            ),
-            'required' => array('type', '=', array('both', 'login'))
-        );
          
         if ($can_register) {
             $opts[] = array(
@@ -586,6 +569,26 @@ if(!function_exists('theclick_header_signin_signup_opts')){
                 'default'  => 'login',
                 'required' => array('num_link', '=', '1')
             );
+            
+        }
+        $opts[] = array(
+            'id' => 'login_description',
+            'type' => 'textarea',
+            'title' => esc_html__('Login Description', 'theclick'),
+            'validate' => 'html_custom',
+            'default' => '',
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            ),
+            'required' => array('type', '=', array('both', 'login'))
+        );
+        if ($can_register) {
             $opts[] = array(
                 'id' => 'register_description',
                 'type' => 'textarea',
