@@ -179,7 +179,9 @@ if(!function_exists('theclick_header_layout')){
         $layouts['9'] = get_template_directory_uri() . '/assets/images/header/header-9.png';
         $layouts['10'] = get_template_directory_uri() . '/assets/images/header/header-10.png';
         $layouts['11'] = get_template_directory_uri() . '/assets/images/header/header-11.png';
-        
+        $layouts['12'] = get_template_directory_uri() . '/assets/images/header/header-12.png';
+        $layouts['13'] = get_template_directory_uri() . '/assets/images/header/header-13.png';
+        $layouts['14'] = get_template_directory_uri() . '/assets/images/header/header-14.png';
         return $layouts;
     }
 }
