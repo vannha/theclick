@@ -34,6 +34,7 @@
 // svg color
 .ef5-svg path{
 	fill: $primary_color;
+	@include transition();
 }
 .ef5-svg:hover path{
 	fill: red;
