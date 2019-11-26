@@ -16,7 +16,7 @@ if (!function_exists('theclick_header_wishlist')) {
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
-			'icon'	 => '<img src="' . esc_url(get_template_directory_uri() . '/assets/images/svg/wishlist.svg') . '">'
+			'icon'	 => '<img class="ef5-svg" src="' . esc_url(get_template_directory_uri() . '/assets/images/svg/wishlist.svg') . '">'
 		]);
 		$show_wishlist = theclick_get_opts('header_wishlist', '0');
 		if (!class_exists('WooCommerce') || !class_exists('WPcleverWoosw') || '0' === $show_wishlist) return;
