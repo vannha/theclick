@@ -224,17 +224,9 @@ if (!function_exists('theclick_get_svg')) {
         if (!is_dir($dir)) {
             return;
         }
-        $files = array_diff(scandir($dir), array('..', '.'));
-        var_dump($files);
-        die;
-        foreach ($files as $file) {
-            $patch = $dir . DIRECTORY_SEPARATOR . $file;
-            
-            if (file_exists($patch) && strpos($file, ".svg") !== false && $filename === $file) {
-                return '<img class="ef5-svg" src="' . esc_url($patch) . '">';
-            }else{
-                return 'xxx';
-            }
-        }
+        $patch = $dir . DIRECTORY_SEPARATOR . $filename;
+        if(file_exists($patch))
+            return '<img class="ef5-svg" src="' . esc_url($patch) . '">';
+        else return;
     }
 }

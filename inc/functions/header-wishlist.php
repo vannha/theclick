@@ -16,7 +16,7 @@ if (!function_exists('theclick_header_wishlist')) {
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
-			'icon'	 => theclick_get_svg('wishlist'),
+			'icon'	 => theclick_get_svg('wishlist.svg'),
 		]);
 		var_dump($args['icon']); die;
 		$show_wishlist = theclick_get_opts('header_wishlist', '0');
