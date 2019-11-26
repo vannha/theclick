@@ -16,7 +16,7 @@ if (!function_exists('theclick_header_wishlist')) {
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
-			'icon'	 => theclick_get_svg('wishlist.svg'),
+			'icon'	 => theclick_get_svg('wishlist'),
 		]);
 		$show_wishlist = theclick_get_opts('header_wishlist', '0');
 		if (!class_exists('WooCommerce') || !class_exists('WPcleverWoosw') || '0' === $show_wishlist) return;

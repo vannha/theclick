@@ -220,8 +220,8 @@ function theclick_sidebar_css_class($class=''){
 if (!function_exists('theclick_get_svg')) {
     function theclick_get_svg($filename)
     {
-        if(file_exists(get_template_directory() . '/assets/images/svg/' . $filename))
-            return '<img class="ef5-svg" src="' . esc_url(get_template_directory_uri() . '/assets/images/svg/' . $filename) . '">';
+        if(file_exists(get_template_directory() . '/assets/images/svg/' . $filename.'.svg'))
+            return '<img class="ef5-svg" src="' . esc_url(get_template_directory_uri() . '/assets/images/svg/' . $filename . '.svg') . '">';
         else return; 
     }
 }
