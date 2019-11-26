@@ -25,6 +25,9 @@
 			color: $lightent_accent_accent;
 		}
 	}
+	.flex_authenticate .fs-link span a +a:before{
+		top: calc(50% - 7px);
+	}
 	.ht-separate{
 		display: inline-block;
     	margin: 0 -10px;

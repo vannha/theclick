@@ -10,7 +10,8 @@
 					content: "/";
 					position: absolute;
 					left: -5px;
-					top: -2px;
+					top: calc(50% - 8px);
+    				line-height: 1;
 				}
 			}
 		}
