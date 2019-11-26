@@ -74,6 +74,19 @@
             float: left;
         }
     }
+    .flex_authenticate,.flex_logout{
+        padding: 5px 15px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        @media (max-width: $screen-sm-max){
+            padding: 0 8px;
+        }
+    }
 }
 .header-extra-icon{
     margin: $grid-gutter-width / 6;
