@@ -27,16 +27,7 @@
 			}
 		} 
 	}*/
-	@media (min-width: $screen-xl-min){
-		.ef5-menu {
-			margin-left: -22.5px;
-			margin-right: -22.5px;
-			> li {
-				padding-left: 22.5px;
-				padding-right: 22.5px;
-			}
-		}
-	}
+
 	.nav-extra{
 		.header-icon{
 			&:first-child{
