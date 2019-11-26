@@ -73,6 +73,24 @@
         svg{
             float: left;
         }
+        .fa,.fal{
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+    .wooscp-menu-item .wooscp-menu-item-inner:after{
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: 400;
+        width: 18px;
+        height: 18px;
+        line-height: inherit;
+        text-align: center;
+        border-radius: 9px;
+        position: relative;
+        top: 0;
+        right: 0;
     }
     .flex_authenticate,.flex_logout{
         padding: 5px 15px;
