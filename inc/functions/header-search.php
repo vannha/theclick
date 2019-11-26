@@ -24,7 +24,7 @@ if(!function_exists('theclick_header_search')){
 		}
 		echo wp_kses_post($args['before']);
 	?>
-		<a href="#ef5-header-search" class="<?php echo trim(implode(' ', $link_classes));?>"><?php echo theclick_html($args['icon']);?>"></a>
+		<a href="#ef5-header-search" class="<?php echo trim(implode(' ', $link_classes));?>"><?php echo theclick_html($args['icon']);?></a>
 	<?php
 		echo wp_kses_post($args['after']);
 	}
