@@ -1,21 +1,17 @@
 .header-icon{
-    position: relative;
     .header-count{
-        position: absolute;
-        top: -8px;
-        right: 5px;
-        min-width: 15px;
-        height: 15px;
-        line-height: 15px;
-        font-size: 10px;
-        font-weight: 500;
+        min-width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 11px;
         padding: 0;
         color: $white;
-        background: $accent_color;
+        background: $primary_color;
+        display: inline-block;
+        margin-left: 9px;
         @include border-radius(50%);
         [dir="rtl"] &{
-            right: auto;
-            left: 5px;
+            margin-right: 9px;
         }
     }
 }
@@ -46,6 +42,7 @@
     margin: 0 -10px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 	.header-icon{
 	    padding: 5px 10px;
         text-align: center;
@@ -76,9 +73,6 @@
         img{
             max-width: 18px;
         }
-    }
-    .search-icon{
-        
     }
 }
 .header-extra-icon{
