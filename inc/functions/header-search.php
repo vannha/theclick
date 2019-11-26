@@ -14,7 +14,7 @@ if(!function_exists('theclick_header_search')){
 		$show_search = theclick_get_opts('header_search', '0');
 		if('0' === $show_search) return;
 
-		$link_classes = ['header-icon'];
+		$link_classes = ['header-icon search-icon'];
 		
 		if($args['type'] === 'popup'){
 			$link_classes[] = 'ef5-header-popup ';
