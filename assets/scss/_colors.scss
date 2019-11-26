@@ -37,5 +37,5 @@
 	@include transition();
 }
 .ef5-svg:hover path{
-	fill: red;
+	fill: $accent-color;
 }
