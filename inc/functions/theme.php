@@ -227,6 +227,7 @@ if (!function_exists('theclick_get_svg')) {
         $files = array_diff(scandir($dir), array('..', '.'));
         foreach ($files as $file) {
             $patch = $dir . DIRECTORY_SEPARATOR . $file;
+            var_dump($patch);
             if (file_exists($patch) && strpos($file, ".svg") !== false && $filename === $file) {
                 return '<img class="ef5-svg" src="' . esc_url($patch) . '">';
             }else{
