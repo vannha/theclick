@@ -19,11 +19,11 @@
                             <div class="header-attr-wrap nav-extra">
                                 <?php
                                 get_template_part('template-parts/header/header-social');
+                                theclick_header_signin_signup();
                                 theclick_header_search(['type' => 'popup']);
                                 theclick_header_wishlist();
                                 theclick_header_compare();
                                 theclick_header_cart();
-                                theclick_header_signin_signup();
                                 theclick_header_popup_nav_icon();
                                 theclick_header_mobile_menu_icon();
                                 theclick_header_side_nav_icon();
