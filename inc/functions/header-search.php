@@ -8,7 +8,7 @@ if(!function_exists('theclick_header_search')){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
-			'icon'	 => 'flaticon-magnifying-glass',
+			'icon'	 => '<img src="'. esc_url(get_template_directory_uri() . '/assets/images/svg/search-1.svg').'">',
 			'type'	 => ''
 		]);
 		$show_search = theclick_get_opts('header_search', '0');
@@ -24,7 +24,7 @@ if(!function_exists('theclick_header_search')){
 		}
 		echo wp_kses_post($args['before']);
 	?>
-		<a href="#ef5-header-search" class="<?php echo trim(implode(' ', $link_classes));?>"><span class="icon <?php echo esc_attr($args['icon']);?>"></span></a>
+		<a href="#ef5-header-search" class="<?php echo trim(implode(' ', $link_classes));?>"><?php echo theclick_html($args['icon']);?>"></a>
 	<?php
 		echo wp_kses_post($args['after']);
 	}
