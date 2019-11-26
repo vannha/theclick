@@ -18,13 +18,12 @@ if (!function_exists('theclick_header_wishlist')) {
 			'after'  => '',
 			'icon'	 => theclick_get_svg('wishlist.svg'),
 		]);
-		var_dump($args['icon']); die;
 		$show_wishlist = theclick_get_opts('header_wishlist', '0');
 		if (!class_exists('WooCommerce') || !class_exists('WPcleverWoosw') || '0' === $show_wishlist) return;
 		echo wp_kses_post($args['before']);
 		?>
 		<a href="<?php echo WPcleverWoosw::get_url(); ?>" class="ef5-header-wishlist-icon header-icon has-badge"><?php echo theclick_html($args['icon']); ?><span class="header-count wishlist-count" data-count="0"><?php echo WPcleverWoosw::get_count(); ?></span></a>
-<?php
+		<?php
 		echo wp_kses_post($args['after']);
 	}
 }
