@@ -31,7 +31,17 @@
 	.nav-extra{
 		.header-icon{
 			&:first-child{
-				margin-left: 30px;
+				margin-left: 60px;
+				position: relative;
+				&:before{
+					content: "";
+					width: 1px;
+					height: 30px;
+					background: $main_border_color;
+					position: absolute;
+					left: -30px;
+					top: calc(50% - 15px);
+				}
 			}
 		}
 	}
