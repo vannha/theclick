@@ -211,3 +211,25 @@ function theclick_sidebar_css_class($class=''){
 
     echo theclick_optimize_css_class(implode(' ', $classes));
 }
+
+/**
+ * Scan svg directory
+ * @param $filename
+ * @return $image
+ */
+if (!function_exists('theclick_scan_svg')) {
+    function theclick_get_svg($filename)
+    {
+        $dir = get_template_directory().'/assets/images/svg';
+        if (!is_dir($dir)) {
+            return;
+        }
+        $files = array_diff(scandir($dir), array('..', '.'));
+        foreach ($files as $file) {
+            $patch = $dir . DIRECTORY_SEPARATOR . $file;
+            if (file_exists($patch) && strpos($file, ".svg") !== false && $filename === $file) {
+                return '<img class="ef5-svg" src="' . esc_url($patch) . '">';
+            }
+        }
+    }
+}
