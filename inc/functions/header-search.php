@@ -8,7 +8,7 @@ if(!function_exists('theclick_header_search')){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
-			'icon'	 => '<img class="ef5-svg" src="'. esc_url(get_template_directory_uri() . '/assets/images/svg/search-1.svg').'">',
+			'icon'	 => theclick_get_svg('search-1'),
 			'type'	 => ''
 		]);
 		$show_search = theclick_get_opts('header_search', '0');
