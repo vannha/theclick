@@ -18,6 +18,7 @@ if (!function_exists('theclick_header_wishlist')) {
 			'after'  => '',
 			'icon'	 => theclick_get_svg('wishlist'),
 		]);
+		var_dump($args['icon']); die;
 		$show_wishlist = theclick_get_opts('header_wishlist', '0');
 		if (!class_exists('WooCommerce') || !class_exists('WPcleverWoosw') || '0' === $show_wishlist) return;
 		echo wp_kses_post($args['before']);
