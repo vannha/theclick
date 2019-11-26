@@ -229,6 +229,8 @@ if (!function_exists('theclick_get_svg')) {
             $patch = $dir . DIRECTORY_SEPARATOR . $file;
             if (file_exists($patch) && strpos($file, ".svg") !== false && $filename === $file) {
                 return '<img class="ef5-svg" src="' . esc_url($patch) . '">';
+            }else{
+                return 'xxx';
             }
         }
     }
