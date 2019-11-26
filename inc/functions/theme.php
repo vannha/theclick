@@ -221,7 +221,7 @@ if (!function_exists('theclick_get_svg')) {
     function theclick_get_svg($filename)
     {
         $file = get_template_directory_uri(). '/assets/images/svg/'. $filename;
-       // var_dump(file_exists($file)) ; die;
+        var_dump(file_exists($file)) ; 
          //$patch = $dir . DIRECTORY_SEPARATOR . $filename;
         if(file_exists($file))
             return '<img class="ef5-svg" src="' . esc_url($file) . '">';
