@@ -34,12 +34,12 @@
 
     &.opened{
         &:before {
-            top: 15px;
+            top: 13px;
             width: 20px;
             @include rotate(45);
         }
         &:after {
-            top: 15px;
+            top: 13px;
             width: 20px;
             @include rotate(-45);
         }
