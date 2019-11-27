@@ -18,7 +18,7 @@
 #ef5-sidenav{
 	position: fixed;
 	top: 0; 
-	right: 0;
+	left: -100%;
 	height: 100vh;
 	width: 100%;
 	max-width: 370px;
@@ -26,12 +26,12 @@
 	background: $white;
 	padding: 30px 15px;
 	@include opacity(0);
-	@include transform(translateX(100%));
+	//@include transform(translateX(100%));
 	@include transition();
 	&.open{
 		visibility: visible;
 		@include opacity(1);
-		@include transform(translateX(0));
+		@include transform(translateX(100%));
 	}
 	@media (min-width: $screen-xl-min){
 		padding: 75px 50px;
@@ -40,6 +40,13 @@
 		right: auto;
 		left: 0;
 		@include transform(translateX(-100%));
+		&.open{
+			@include transform(translateX(0));
+		}
+	}
+	&.pos-right{
+		left: auto;
+		right: 0;
 		&.open{
 			@include transform(translateX(0));
 		}
