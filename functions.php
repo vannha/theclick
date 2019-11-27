@@ -73,13 +73,13 @@ if(!function_exists('theclick_configs')){
             'menu_link_color_hover' => 'var(--accent-color)',
             'menu_link_color_active' => 'var(--accent-color)',
             // Menu Ontop Color
-            'ontop_link_color_regular' => 'var(--primary-color)',
-            'ontop_link_color_hover' => 'var(--accent-color)',
-            'ontop_link_color_active' => 'var(--accent-color)',
+            'ontop_link_color_regular' => '#ffffff',
+            'ontop_link_color_hover' => rgba(255,255,255,0.8),
+            'ontop_link_color_active' => rgba(255, 255, 255, 0.8),
             // Menu Sticky Color
-            'sticky_link_color_regular' => 'var(--primary-color)',
-            'sticky_link_color_hover' => 'var(--accent-color)',
-            'sticky_link_color_active' => 'var(--accent-color)',
+            'sticky_link_color_regular' => '#ffffff',
+            'sticky_link_color_hover' => rgba(255, 255, 255, 0.8),
+            'sticky_link_color_active' => rgba(255, 255, 255, 0.8),
             // Dropdown
             'dropdown_bg'      => 'rgba(#000000, 1)',
             'dropdown_regular' => '#c0c0c0',
