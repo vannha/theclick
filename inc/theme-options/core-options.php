@@ -206,7 +206,7 @@ if(!function_exists('theclick_header_opts')){
                 '1'  => esc_html__('Yes','theclick'),
                 '0'  => esc_html__('No','theclick'),
             );
-            $default_width_value = '1';
+            $default_width_value = '0';
         }
         return array(
             array(
