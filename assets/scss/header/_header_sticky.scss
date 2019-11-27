@@ -5,7 +5,7 @@
 		left: 0;
 		right: 0;
 		z-index: 3;
-		background-color: red; /* rgba('#000', 0.9); */
+		background-color:  rgba(#000, 0.9);
  	}
  	&.scrollDown{
  		@include transform(translateY(-100px));
