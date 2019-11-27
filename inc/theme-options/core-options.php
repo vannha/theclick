@@ -324,10 +324,9 @@ if(!function_exists('theclick_header_theme_opts')){
 */
 if(!function_exists('theclick_header_atts')){
     function theclick_header_atts($default = false){
-        $header_side_nav_icon_type = array(
-            'icon'            => esc_html__('Icon Only','theclick'),
-            'separator-left'  => esc_html__('Icon with separator left','theclick'),
-            'separator-right' => esc_html__('Icon with separator right','theclick'),
+        $header_side_nav_pos = array(
+            'pos-left'            => esc_html__('Position left','theclick'),
+            'pos-right' => esc_html__('Position right','theclick'),
         );
         $header_popup_nav_icon_type = array(
             'text'            => esc_html__('Text','theclick'),
@@ -345,13 +344,13 @@ if(!function_exists('theclick_header_atts')){
                 '1'  => esc_html__('Yes','theclick'),
                 '0'  => esc_html__('No','theclick'),
             );
-            $default_value = $default_helper_menu_value = $default_popup_menu = $header_mobile_nav_icon_type_value = $header_side_nav_icon_type_value = $header_popup_nav_icon_type_value = $header_atts_icon_style_value = '-1';
+            $default_value = $default_helper_menu_value = $default_popup_menu = $header_mobile_nav_icon_type_value = $header_side_nav_pos_value = $header_popup_nav_icon_type_value = $header_atts_icon_style_value = '-1';
             $default_helper_menu = [
                 'default' => true,
                 'none'    => true
             ];
             $header_mobile_nav_icon_type['-1'] = esc_html__('Default','theclick');
-            $header_side_nav_icon_type['-1']   = esc_html__('Default','theclick');
+            $header_side_nav_pos['-1']   = esc_html__('Default','theclick');
             $header_popup_nav_icon_type['-1']  = esc_html__('Default','theclick');
         } else {
             $options = array(
@@ -364,7 +363,7 @@ if(!function_exists('theclick_header_atts')){
             $default_helper_menu  = [];
             $default_popup_menu = '0';
             $header_mobile_nav_icon_type_value = 'icon';
-            $header_side_nav_icon_type_value = 'icon';
+            $header_side_nav_pos_value = 'pos-left';
             $header_popup_nav_icon_type_value = 'text';
         }
         return array_merge(
@@ -406,12 +405,12 @@ if(!function_exists('theclick_header_atts')){
                     'default'  => $default_value,
                 ),
                 array(
-                    'title'    => esc_html__('Nav Widget Icon Style', 'theclick'),
-                    'subtitle' => esc_html__('Choose style of side menu icon', 'theclick'),
-                    'id'       => 'header_side_nav_icon_type',
+                    'title'    => esc_html__('Nav Widget Position Style', 'theclick'),
+                    'subtitle' => esc_html__('Choose style of side menu position', 'theclick'),
+                    'id'       => 'header_side_nav_pos',
                     'type'     => 'select',
-                    'options'  => $header_side_nav_icon_type,
-                    'default'  => $header_side_nav_icon_type_value,
+                    'options'  => $header_side_nav_pos,
+                    'default'  => $header_side_nav_pos_value,
                     'required' => array('header_side_nav', '=', '1'),
                 ),
                 array(

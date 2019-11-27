@@ -9,17 +9,17 @@ if(!function_exists('theclick_header_side_nav_icon')){
 		if('0' === $show_sidenav || !is_active_sidebar('sidebar-nav')) return;
 
 		if('-1' === $show_sidenav)
-			$icon_type = theclick_get_theme_opt('header_side_nav_icon_type','icon');
+			$side_pos = theclick_get_theme_opt('header_side_nav_pos','pos-left');
 		else
-			$icon_type = theclick_get_opts('header_side_nav_icon_type','icon');
+			$side_pos = theclick_get_opts('header_side_nav_pos','pos-left');
 
 		$args = wp_parse_args($args, [
 			'before'    => '<span id="ef5-main-sidenav" class="header-extra-icon">',
 			'after'     => '</span>',
-			'icon_type' => $icon_type
+			'side_pos' => $side_pos
 		]);
 		echo wp_kses_post($args['before']);
-			theclick_header_mobile_nav_icon(['title' => esc_html__('Show Widget','theclick'), 'class' => $args['icon_type']]);
+			theclick_header_mobile_nav_icon(['title' => esc_html__('Show Widget','theclick'), 'class' => $args['side_pos']]);
 		echo wp_kses_post($args['after']);
 	}
 }
