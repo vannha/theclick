@@ -59,8 +59,9 @@
 #ef5-close-sidenav{
 	position: absolute;
 	top: 20px;
-	right: 15px;
-	cursor: auto;
+	right: 20px;
+	left: auto;
+	cursor: pointer;
 	&:before,&:after{
 		content: "";
 	    background-color: $primary_color;
@@ -84,4 +85,5 @@
 .pos-left #ef5-close-sidenav{
 	top: 20px;
 	left: 20px;
+	right: auto;
 }
