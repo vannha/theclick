@@ -14,7 +14,7 @@ if(!function_exists('theclick_header_mobile_menu_icon')){
 
 		switch ($icon_style) {
 			case 'text':
-				echo '<span id="ef5-main-menu-mobile" class="text d-inline d-xl-none"><span class="btn-nav-mobile open-menu">'.esc_html__('Menu','theclick').'</span></span>';
+				echo '<span id="ef5-main-menu-mobile" class="header-icon text d-inline d-xl-none"><span class="btn-nav-mobile open-menu">'.esc_html__('Menu','theclick').'</span></span>';
 				break;
 			default:
 				theclick_header_mobile_nav_icon(['id' => 'ef5-main-menu-mobile','class' => 'header-icon d-inline d-xl-none']);
@@ -40,8 +40,8 @@ if(!function_exists('theclick_header_mobile_nav_icon')){
 		$wrap_classes = ['btn-nav-mobile-wrap', $args['class']];
 		$classes = ['btn-nav-mobile open-menu'];
 	?>
-		<span <?php if(!empty($args['id'])) : ?> id="<?php echo esc_attr($args['id']);?>" <?php endif; ?> class="<?php echo trim(implode(' ', $wrap_classes)); ?>">
-	        <span class="<?php echo trim(implode(' ', $classes)); ?>" title="<?php echo esc_attr($args['title']);?>">
+		<span <?php if(!empty($args['id'])) : ?> id="<?php echo esc_attr($args['id']);?>" <?php endif; ?> class="<?php echo trim(implode(' ', $wrap_classes)); ?>" title="<?php echo esc_attr($args['title']);?>">
+	        <span class="<?php echo trim(implode(' ', $classes)); ?>">
 	            <span></span>
 	        </span>
 	    </span>
