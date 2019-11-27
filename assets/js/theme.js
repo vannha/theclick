@@ -339,6 +339,7 @@
         $('body').on('click',function (e) {
             var target = $(e.target);
             var check = '#ef5-sidenav';
+            console.log($('#ef5-sidenav').hasClass('open'));
             if($('#ef5-sidenav').hasClass('open')){
                 if(!(target.is(check) || target.closest(check).length > 0)){
                     $('#ef5-page').removeClass('sidenav-open','pos-left','pos-right');
