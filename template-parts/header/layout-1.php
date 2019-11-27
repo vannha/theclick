@@ -9,6 +9,7 @@
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="row justify-content-between align-items-center">
                 <div class="ef5-logo col-auto">
+                    <?php theclick_header_side_nav_icon(); ?>
                     <?php get_template_part('template-parts/header/header-logo'); ?>
                 </div>
                 <div class="ef5-navigation-wrap col">
@@ -26,7 +27,6 @@
                                 theclick_header_cart();
                                 theclick_header_popup_nav_icon();
                                 theclick_header_mobile_menu_icon();
-                                theclick_header_side_nav_icon();
                                 ?>
                             </div>
                         </div>
