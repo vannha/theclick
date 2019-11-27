@@ -44,6 +44,25 @@
     .nav-link{
         color: $sticky_regular;
     }
+    .ef5-svg path{
+        fill: $sticky_regular;
+        @include transition();
+    }
+    .ef5-svg:hover path{
+        fill: $sticky_hover;
+    }
+    .flex_logout a{
+        color: $sticky_regular;
+        &:hover{
+            color: $sticky_hover;
+        }
+    }
+    .flex_authenticate .fs-link span a{
+        color: $sticky_regular;
+        &:hover{
+            color: $sticky_hover;
+        }
+    }
     .btn-nav-mobile{
         color: $sticky_regular;
         &:before,

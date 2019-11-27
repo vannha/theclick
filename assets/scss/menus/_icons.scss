@@ -10,7 +10,6 @@
     cursor: pointer;
     position: relative;
     @include transition();
-
     &:before, &:after, span {
         content: "";
         background-color: $lv1_color;
