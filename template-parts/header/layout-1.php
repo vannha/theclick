@@ -8,8 +8,8 @@
     <div id="ef5-headroom" class="main-header">
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="row justify-content-between align-items-center">
+                <?php theclick_header_side_nav_icon(); ?>
                 <div class="ef5-logo col-auto">
-                    <?php theclick_header_side_nav_icon(); ?>
                     <?php get_template_part('template-parts/header/header-logo'); ?>
                 </div>
                 <div class="ef5-navigation-wrap col">
