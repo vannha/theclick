@@ -21,7 +21,7 @@
                                 <?php
                                 get_template_part('template-parts/header/header-social');
                                 theclick_header_signin_signup(['class' => 'd-none d-sm-block']);
-                                theclick_header_search(['type' => 'popup']);
+                                theclick_header_search(['type' => 'popup', 'class' => 'd-none d-sm-block']);
                                 theclick_header_wishlist(['class' => 'd-none d-sm-block']);
                                 theclick_header_compare(['class' => 'd-none d-sm-block']);
                                 theclick_header_cart(['class' => 'd-none d-sm-block']);
