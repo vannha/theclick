@@ -9,12 +9,13 @@ if(!function_exists('theclick_header_search')){
 			'before' => '',
 			'after'  => '',
 			'icon'	 => theclick_get_svg('search'),
-			'type'	 => ''
+			'type'	 => '',
+			'class'  => ''
 		]);
 		$show_search = theclick_get_opts('header_search', '0');
 		if('0' === $show_search) return;
 
-		$link_classes = ['header-icon search-icon'];
+		$link_classes = ['header-icon search-icon',$args['class']];
 		
 		if($args['type'] === 'popup'){
 			$link_classes[] = 'ef5-header-popup ';

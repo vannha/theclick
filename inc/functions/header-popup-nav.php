@@ -17,19 +17,21 @@ if(!function_exists('theclick_header_popup_nav_icon')){
 		$args = wp_parse_args($args, [
 			'before' => '<span id="ef5-main-popup-nav" class="header-extra-icon">',
 			'after'  => '</span>',
-			'type'	 => $icon_type
+			'type'	 => $icon_type,
+			'class'	 => ''
 		]);
 
 		echo wp_kses_post($args['before']);
 		switch ($args['type'] ) {
 			case 'text':
-				echo sprintf('<a href="#ef5-popupnav" class="ef5-header-popup tooltip nav-link" title="%s">%s</a>',
+				echo sprintf('<a href="#ef5-popupnav" class="ef5-header-popup tooltip nav-link %s" title="%s">%s</a>',
+					$args['class'],
 					esc_attr__('Open Menu','theclick'),
 					esc_html__('Menu','theclick')
 				);
 				break;
 			default:
-				echo '<a href="#ef5-popupnav" class="ef5-header-popup tooltip nav-link">';
+				echo '<a href="#ef5-popupnav" class="ef5-header-popup tooltip nav-link '.$args['class'].'">';
 					theclick_header_mobile_nav_icon(['title' => esc_html__('Show Menu','theclick'), 'class' => $args['type']]);
 				echo '</a>';
 				break;

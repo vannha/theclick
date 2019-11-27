@@ -12,11 +12,12 @@ function theclick_header_cart($args = [])
 		'before' => '',
 		'after'  => '',
 		'icon'	 => theclick_get_svg('cart'),
-		'style'	 => '1'
+		'style'	 => '1',
+		'class'	 => ''
 	]);
 	$show_cart = theclick_get_opts('header_cart', '0');
 	if ('0' === $show_cart) return;
-	$cart_classes = ['ef5-header-popup', 'ef5-header-cart-icon', 'header-icon', 'style-' . $args['style']];
+	$cart_classes = ['ef5-header-popup', 'ef5-header-cart-icon', 'header-icon', 'style-' . $args['style'], $args['class']];
 	switch ($args['style']) {
 		case '2':
 			# code...
