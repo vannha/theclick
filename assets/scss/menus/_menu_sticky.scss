@@ -63,6 +63,10 @@
             color: $sticky_hover;
         }
     }
+    .header-icon .header-count{
+        background: $white;
+        color: $header_regular;
+    }
     .btn-nav-mobile{
         color: $sticky_regular;
         &:before,
