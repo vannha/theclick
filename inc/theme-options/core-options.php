@@ -331,8 +331,6 @@ if(!function_exists('theclick_header_atts')){
         $header_popup_nav_icon_type = array(
             'text'            => esc_html__('Text','theclick'),
             'icon'            => esc_html__('Icon Only','theclick'),
-            'separator-left'  => esc_html__('Icon with separator left','theclick'),
-            'separator-right' => esc_html__('Icon with separator right','theclick'),
         );
         $header_mobile_nav_icon_type = array(
             'icon' => esc_html__('Icon','theclick'),
