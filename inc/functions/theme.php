@@ -63,6 +63,16 @@ function theclick_page_css_class($class = ''){
     if(theclick_get_opts('header_ontop', '0') === '1' || theclick_get_opts('header_sticky', '0') === '1'){
        $classes[] = 'page-header-ontop';
     }
+
+    $show_sidenav = theclick_get_opts('header_side_nav', '0');
+    if('0' !== $show_sidenav && is_active_sidebar('sidebar-nav')){
+        if('-1' === $show_sidenav)
+            $side_pos = theclick_get_theme_opt('header_side_nav_pos','pos-left');
+        else
+            $side_pos = theclick_get_opts('header_side_nav_pos','pos-left');
+    }
+    $classes[] = 'sidenav-'.$side_pos;
+    
     echo trim(implode(' ', $classes));
 }
 
