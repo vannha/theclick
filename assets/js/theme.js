@@ -330,13 +330,25 @@
                 $('#ef5-page').addClass($(this).attr('data-pos'));
                 $('#ef5-sidenav').addClass($(this).attr('data-pos'));
             }
-        })
+        });
         $('#ef5-close-sidenav').on('click',function(){
             $('#ef5-page').removeClass('sidenav-open','pos-left','pos-right');
             $('#ef5-sidenav').removeClass('open','pos-left','pos-right');
             $('#ef5-main-sidenav .btn-nav-mobile').removeClass('opened');
-        })
+        });
+        $('body').on('click',function (e) {
+            var target = $(e.target);
+            var check = '#ef5-sidenav';
+            if($('#ef5-sidenav').hasClass('open')){
+                if(!(target.is(check) || target.closest(check).length > 0)){
+                    $('#ef5-page').removeClass('sidenav-open','pos-left','pos-right');
+                    $('#ef5-sidenav').removeClass('open','pos-left','pos-right');
+                    $('#ef5-main-sidenav .btn-nav-mobile').removeClass('opened');
+                }
+            }
+        });
     }
+
 	/**
      * Media Embed dimensions
      * 
@@ -859,16 +871,16 @@
     $('.hover-dir').EF5HoverDir();
  })(jQuery);
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
     "use strict";
     theclick_btt_start();
-    jQuery(window).scroll(function(e) {
+    $(window).scroll(function(e) {
         "use strict";
         theclick_btt_start();
     });
-    jQuery('#ef5-btt-circle').on('click', function() {
+    $('#ef5-btt-circle').on('click', function() {
         "use strict";
-        jQuery('html, body').animate({
+        $('html, body').animate({
             scrollTop: 0
         }, 'slow');
     });
