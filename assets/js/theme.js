@@ -326,14 +326,11 @@
             $(this).toggleClass('opened');
             $('#ef5-page').toggleClass('sidenav-open');
             $('#ef5-sidenav').toggleClass('open');
-            if($(this).attr('data-pos') !=''){
-                $('#ef5-page').addClass($(this).attr('data-pos'));
-                $('#ef5-sidenav').addClass($(this).attr('data-pos'));
-            }
+            
         });
         $('#ef5-close-sidenav').on('click',function(){
-            $('#ef5-page').removeClass('sidenav-open','pos-left','pos-right');
-            $('#ef5-sidenav').removeClass('open','pos-left','pos-right');
+            $('#ef5-page').removeClass('sidenav-open');
+            $('#ef5-sidenav').removeClass('open');
             $('#ef5-main-sidenav .btn-nav-mobile').removeClass('opened');
         });
         /*$(document).on('click',function (e) {
