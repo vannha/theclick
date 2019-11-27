@@ -44,7 +44,7 @@
 			@include transform(translateX(0));
 		}
 	}
-	&.pos-right{
+	&.pos-left{
 		left: -100%;
 		right: auto;
 		&.open{
