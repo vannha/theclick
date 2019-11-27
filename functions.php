@@ -74,17 +74,17 @@ if(!function_exists('theclick_configs')){
             'menu_link_color_active' => 'var(--accent-color)',
             // Menu Ontop Color
             'ontop_link_color_regular' => '#ffffff',
-            'ontop_link_color_hover' => rgba(255,255,255,0.8),
-            'ontop_link_color_active' => rgba(255, 255, 255, 0.8),
+            'ontop_link_color_hover' => 'rgba(255,255,255,0.8)',
+            'ontop_link_color_active' => 'rgba(255, 255, 255, 0.8)',
             // Menu Sticky Color
             'sticky_link_color_regular' => '#ffffff',
-            'sticky_link_color_hover' => rgba(255, 255, 255, 0.8),
-            'sticky_link_color_active' => rgba(255, 255, 255, 0.8),
+            'sticky_link_color_hover' => 'rgba(255, 255, 255, 0.8)',
+            'sticky_link_color_active' => 'rgba(255, 255, 255, 0.8)',
             // Dropdown
-            'dropdown_bg'      => 'rgba(#000000, 1)',
-            'dropdown_regular' => '#c0c0c0',
-            'dropdown_hover'   => 'var(--accent-color)',
-            'dropdown_active'  => 'var(--accent-color)',
+            'dropdown_bg'      => 'var(--primary-color)',
+            'dropdown_regular' => '#ffffff',
+            'dropdown_hover'   => 'rgba(255, 255, 255, 0.8)',
+            'dropdown_active'  => 'rgba(255, 255, 255, 0.8)',
             // Comments 
             'cmt_avatar_size'  => 100,
             'cmt_border'       => '1px solid #DDDDDD',
