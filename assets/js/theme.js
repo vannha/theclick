@@ -336,9 +336,9 @@
         $(document).on('click',function (e) {
             var target = $(e.target);
             var check = '#ef5-sidenav';
-            console.log($('#ef5-sidenav').hasClass('open'));
-            if($('#ef5-sidenav').hasClass('open')){
-                if(!(target.is(check) || target.closest(check).length > 0)){
+
+            if( !(target.is(check) || target.closest(check).length > 0)){
+                if($('#ef5-sidenav').hasClass('open')){
                     $('#ef5-page').removeClass('sidenav-open');
                     $('#ef5-sidenav').removeClass('open');
                     $('#ef5-main-sidenav .btn-nav-mobile').removeClass('opened');
