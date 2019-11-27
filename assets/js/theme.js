@@ -338,7 +338,6 @@
             var check = '#ef5-sidenav';
 
             if( !(target.is(check) || target.closest(check).length > 0 || target.is('#ef5-main-sidenav .open-menu'))){
-                console.log(target.is('#ef5-main-sidenav .open-menu'));
                 if($('#ef5-sidenav').hasClass('open')){
                     $('#ef5-page').removeClass('sidenav-open');
                     $('#ef5-sidenav').removeClass('open');
