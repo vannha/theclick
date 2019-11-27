@@ -64,4 +64,23 @@
 		top: 45px;
 		right: 50px;
 	}
+	&:before,&:after{
+		content: "";
+	    background-color: $primary_color;
+	    display: block;
+	    height: 2px;
+	    left: 0;
+	    margin: auto;
+	    position: absolute;
+	    right: 0;
+	    width: 20px;
+	    top: 13px;
+	    @include transition();
+	}
+	&:before{
+		@include transform(rotate(45deg));
+	}
+	&:after{
+		@include transform(rotate(-45deg));
+	}
 }
