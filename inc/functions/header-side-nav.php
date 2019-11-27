@@ -8,12 +8,12 @@ if(!function_exists('theclick_header_side_nav_icon')){
 		$show_sidenav = theclick_get_opts('header_side_nav', '0');
 		if ('0' === $show_sidenav || !is_active_sidebar('sidebar-nav')) return;
 		$args = wp_parse_args($args, [
-			'before'    => '<span id="ef5-main-sidenav" class="header-extra-icon">',
+			'before'    => '<span id="ef5-main-sidenav" class="header-extra-icon '. $args['class'].'">',
 			'after'     => '</span>',
 			'class'		=> ''
 		]);
 		echo wp_kses_post($args['before']);
-			theclick_header_mobile_nav_icon(['title' => esc_html__('Show Widget','theclick'), 'class' => $args['class']]);
+			theclick_header_mobile_nav_icon(['title' => esc_html__('Show Widget','theclick'), 'class' => '']);
 		echo wp_kses_post($args['after']);
 	}
 }
