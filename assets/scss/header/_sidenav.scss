@@ -21,7 +21,7 @@
 	right: 0;
 	height: 100vh;
 	width: 100%;
-	max-width: 370px;
+	max-width: $header_sidewidth;;
 	visibility: hidden;
 	background: $white;
 	padding: 30px 15px;
@@ -45,7 +45,7 @@
 		}
 	}
 	&.pos-left{
-		left: -370px;
+		left: ($header_sidewidth * -1);
 		right: auto;
 		&.open{
 			@include transform(translateX(100%));
