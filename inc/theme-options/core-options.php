@@ -377,30 +377,6 @@ if(!function_exists('theclick_header_atts')){
                     'subtitle' => esc_html__('Choose header attributes to show', 'theclick'),
                 ),
                 array(
-                    'title'    => esc_html__('Mobile Menu Icon Style', 'theclick'),
-                    'subtitle' => esc_html__('Choose style of mobile menu icon', 'theclick'),
-                    'id'       => 'header_mobile_nav_icon_type',
-                    'type'     => 'select',
-                    'options'  => $header_mobile_nav_icon_type,
-                    'default'  => $header_mobile_nav_icon_type_value,
-                ),
-                array(
-                    'title'    => esc_html__('Helper Menu', 'theclick'),
-                    'subtitle' => esc_html__('Show/Hide helper menu', 'theclick'),
-                    'id'       => 'header_helper_menu',
-                    'type'     => 'select',
-                    'options'  => theclick_get_nav_menu($default_helper_menu),
-                    'default'  => $default_helper_menu_value
-                ),
-                array(
-                    'title'    => esc_html__('Show Social', 'theclick'),
-                    'subtitle' => esc_html__('Show/Hide social icon', 'theclick'),
-                    'id'       => 'header_social',
-                    'type'     => 'button_set',
-                    'options'  => $options,
-                    'default'  => $default_value,
-                ), 
-                array(
                     'title'    => esc_html__('Show Search', 'theclick'),
                     'subtitle' => esc_html__('Show/Hide search icon', 'theclick'),
                     'id'       => 'header_search',
@@ -412,6 +388,14 @@ if(!function_exists('theclick_header_atts')){
             theclick_header_wc_attrs($options, $default_value),
             theclick_header_signin_signup_opts($options, $default_value),
             array(
+                array(
+                    'title'    => esc_html__('Show Social', 'theclick'),
+                    'subtitle' => esc_html__('Show/Hide social icon', 'theclick'),
+                    'id'       => 'header_social',
+                    'type'     => 'button_set',
+                    'options'  => $options,
+                    'default'  => $default_value,
+                ),
                 array(
                     'title'    => esc_html__('Show Nav Widget', 'theclick'),
                     'subtitle' => esc_html__('Show/Hide side menu', 'theclick'),
@@ -455,6 +439,22 @@ if(!function_exists('theclick_header_atts')){
                     'required' => array('header_popup_nav', '=', '1'),
                     'title'    => esc_html__('Popup Menu', 'theclick'),
                     'subtitle' => esc_html__('Choose a menu to show', 'theclick'),
+                ),
+                array(
+                    'title'    => esc_html__('Mobile Menu Icon Style', 'theclick'),
+                    'subtitle' => esc_html__('Choose style of mobile menu icon', 'theclick'),
+                    'id'       => 'header_mobile_nav_icon_type',
+                    'type'     => 'select',
+                    'options'  => $header_mobile_nav_icon_type,
+                    'default'  => $header_mobile_nav_icon_type_value,
+                ),
+                array(
+                    'title'    => esc_html__('Helper Menu', 'theclick'),
+                    'subtitle' => esc_html__('Show/Hide helper menu', 'theclick'),
+                    'id'       => 'header_helper_menu',
+                    'type'     => 'select',
+                    'options'  => theclick_get_nav_menu($default_helper_menu),
+                    'default'  => $default_helper_menu_value
                 )
             ),
             array(
