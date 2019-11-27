@@ -70,8 +70,10 @@ function theclick_page_css_class($class = ''){
             $side_pos = theclick_get_theme_opt('header_side_nav_pos','pos-left');
         else
             $side_pos = theclick_get_opts('header_side_nav_pos','pos-left');
+            
+        $classes[] = 'sidenav-' . $side_pos;
     }
-    $classes[] = 'sidenav-'.$side_pos;
+    
     
     echo trim(implode(' ', $classes));
 }
