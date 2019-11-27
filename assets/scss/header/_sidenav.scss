@@ -2,14 +2,14 @@
 #ef5-page{
 	@include transition();
 	&.sidenav-open{
-		@include transform(translateX(370px));
+		@include transform(translateX(-370px));
 		[dir='rtl'] &{
-			@include transform(translateX(-370px));
+			@include transform(translateX(370px));
 		}
-		&.pos-right{
-			@include transform(translateX(-370px));
+		&.pos-left{
+			@include transform(translateX(370px));
 			[dir='rtl'] &{
-				@include transform(translateX(370px));
+				@include transform(translateX(-370px));
 			}
 		}
 	}
@@ -18,7 +18,7 @@
 #ef5-sidenav{
 	position: fixed;
 	top: 0; 
-	left: -100%;
+	right: 0;
 	height: 100vh;
 	width: 100%;
 	max-width: 370px;
@@ -26,12 +26,12 @@
 	background: $white;
 	padding: 30px 15px;
 	@include opacity(0);
-	//@include transform(translateX(100%));
+	@include transform(translateX(100%));
 	@include transition();
 	&.open{
 		visibility: visible;
 		@include opacity(1);
-		@include transform(translateX(100%));
+		@include transform(translateX(0));
 	}
 	@media (min-width: $screen-xl-min){
 		padding: 75px 50px;
@@ -45,10 +45,10 @@
 		}
 	}
 	&.pos-right{
-		left: auto;
-		right: 0;
+		left: -100%;
+		right: auto;
 		&.open{
-			@include transform(translateX(0));
+			@include transform(translateX(100%));
 		}
 	}
 }
