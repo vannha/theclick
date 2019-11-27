@@ -322,7 +322,8 @@
     function theclick_side_nav(){
         "use strict";
     	/* Widget Nav */
-        $("#ef5-main-sidenav .open-menu").on('click',function(){
+        $("#ef5-main-sidenav .open-menu").on('click',function(e){
+            e.stopPropagation();
             $(this).toggleClass('opened');
             $('#ef5-page').toggleClass('sidenav-open');
             $('#ef5-sidenav').toggleClass('open');
