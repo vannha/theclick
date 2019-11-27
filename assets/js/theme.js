@@ -336,7 +336,7 @@
             $('#ef5-sidenav').removeClass('open','pos-left','pos-right');
             $('#ef5-main-sidenav .btn-nav-mobile').removeClass('opened');
         });
-        $('body').on('click',function (e) {
+        $(document).on('click',function (e) {
             var target = $(e.target);
             var check = '#ef5-sidenav';
             console.log($('#ef5-sidenav').hasClass('open'));
