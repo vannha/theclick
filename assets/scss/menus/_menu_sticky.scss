@@ -43,6 +43,9 @@
     .header-icon,
     .nav-link{
         color: $sticky_regular;
+        &:hover{
+            color: $sticky_hover;
+        }
     }
     .ef5-svg path{
         fill: $sticky_regular;
