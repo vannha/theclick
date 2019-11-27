@@ -2,9 +2,15 @@
 #ef5-page{
 	@include transition();
 	&.sidenav-open{
-		@include transform(translateX(-370px));
+		@include transform(translateX(370px));
 		[dir='rtl'] &{
-			@include transform(translateX(370px));
+			@include transform(translateX(-370px));
+		}
+		&.pos-right{
+			@include transform(translateX(-370px));
+			[dir='rtl'] &{
+				@include transform(translateX(370px));
+			}
 		}
 	}
 
