@@ -65,6 +65,9 @@
 	height: 20px;
 	display: inline-block;
 	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	@include transition();
 	&:before,&:after{
 		content: "";
 	    background-color: $primary_color;
@@ -75,7 +78,7 @@
 	    position: absolute;
 	    right: 0;
 	    width: 20px;
-	    top: 13px;
+	    top: 9px;
 	    @include transition();
 	}
 	&:before{
@@ -89,4 +92,8 @@
 	top: 20px;
 	left: 20px;
 	right: auto;
+}
+#ef5-sidenav:hover #ef5-close-sidenav{
+	opacity: 1;
+	visibility: visible;
 }
