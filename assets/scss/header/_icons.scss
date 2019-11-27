@@ -43,6 +43,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @media (max-width: $screen-sm-max){
+        padding: 0 -8px;
+    }
 	.header-icon{
 	    padding: 5px 15px;
         text-align: center;
