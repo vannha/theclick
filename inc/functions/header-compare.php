@@ -15,13 +15,13 @@ if (!function_exists('theclick_header_compare')) {
 			'icon'	 => 'fal fa-random',
 			'class'	 => ''
 		]);
-		 
+
 		$show_compare = theclick_get_opts('header_compare', '0');
 		if (!class_exists('WooCommerce') || !class_exists('WPcleverWooscp') || '0' === $show_compare) return;
 		$_wooscp_open_button = str_replace(array('.', '#'), '', get_option('_wooscp_open_button', 'ef5-header-compare-icon'));
 		echo wp_kses_post($args['before']);
 		?>
-		<span class="wooscp-menu-item menu-item-type-wooscp <?php echo esc_attr($args['class']); ?>"><a href="javascript:void(0);" class="<?php echo esc_attr($_wooscp_open_button); ?>  header-icon has-badge"><span class="<?php echo esc_attr($args['icon']); ?>"></span><span class="header-count wooscp-menu-item-inner" data-count="0"></span></a></span>
+		<span class="wooscp-menu-item menu-item-type-wooscp header-icon <?php echo esc_attr($args['class']); ?>"><a href="javascript:void(0);" class="<?php echo esc_attr($_wooscp_open_button); ?>  has-badge"><span class="<?php echo esc_attr($args['icon']); ?>"></span><span class="header-count wooscp-menu-item-inner" data-count="0"></span></a></span>
 <?php
 		echo wp_kses_post($args['after']);
 	}
