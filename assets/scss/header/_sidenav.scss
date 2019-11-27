@@ -60,10 +60,7 @@
 	position: absolute;
 	top: 20px;
 	right: 15px;
-	@media (min-width: $screen-xl-min){
-		top: 45px;
-		right: 50px;
-	}
+	cursor: auto;
 	&:before,&:after{
 		content: "";
 	    background-color: $primary_color;
@@ -83,4 +80,8 @@
 	&:after{
 		@include transform(rotate(-45deg));
 	}
+}
+.pos-left #ef5-close-sidenav{
+	top: 20px;
+	left: 20px;
 }
