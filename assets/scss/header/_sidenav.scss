@@ -44,7 +44,7 @@
 			@include transform(translateX(0));
 		}
 	}
-	&.sidenav-pos-left{
+	&.pos-left{
 		left: ($header_sidewidth * -1);
 		right: auto;
 		&.open{
