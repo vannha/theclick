@@ -2,14 +2,14 @@
 #ef5-page{
 	@include transition();
 	&.sidenav-open{
-		@include transform(translateX(-370px));
+		@include transform(translateX($header_sidewidth * -1));
 		[dir='rtl'] &{
-			@include transform(translateX(370px));
+			@include transform(translateX($header_sidewidth));
 		}
 		&.pos-left{
-			@include transform(translateX(370px));
+			@include transform(translateX($header_sidewidth));
 			[dir='rtl'] &{
-				@include transform(translateX(-370px));
+				@include transform(translateX($header_sidewidth * -1));
 			}
 		}
 	}

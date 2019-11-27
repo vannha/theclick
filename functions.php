@@ -67,7 +67,7 @@ if(!function_exists('theclick_configs')){
             'logo_height'      => '42',
             'logo_units'       => 'px',
             'main_menu_height' => '102px',
-            'header_sidewidth' => '320px',
+            'header_sidewidth' => '370px',
             // Menu Color
             'menu_link_color_regular' => 'var(--primary-color)',
             'menu_link_color_hover' => 'var(--accent-color)',
