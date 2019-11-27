@@ -37,11 +37,11 @@ if(!function_exists('theclick_header_mobile_nav_icon')){
 			'title'     => esc_html__('Show menu','theclick')
 		]);
 		echo wp_kses_post($args['before']);
-		$wrap_classes = ['btn-nav-mobile-wrap', $args['class']];
-		$classes = ['btn-nav-mobile open-menu'];
+		$wrap_classes = ['btn-nav-mobile-wrap'];
+		$classes = ['btn-nav-mobile open-menu', $args['class']];
 	?>
 		<span <?php if(!empty($args['id'])) : ?> id="<?php echo esc_attr($args['id']);?>" <?php endif; ?> class="<?php echo trim(implode(' ', $wrap_classes)); ?>" title="<?php echo esc_attr($args['title']);?>">
-	        <span class="<?php echo trim(implode(' ', $classes)); ?>">
+	        <span class="<?php echo trim(implode(' ', $classes)); ?>" data-pos="<?php echo esc_attr($args['class']);?>">
 	            <span></span>
 	        </span>
 	    </span>
