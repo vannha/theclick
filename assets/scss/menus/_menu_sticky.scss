@@ -67,6 +67,9 @@
         background: $white;
         color: $header_regular;
     }
+    .nav-extra .wooscp-menu-item .wooscp-menu-item-inner:after{
+        color: $header_regular;
+    }
     .btn-nav-mobile{
         color: $sticky_regular;
         &:before,
