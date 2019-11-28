@@ -16,7 +16,7 @@ function theclick_header_social($args = [])
         <?php
                 if (!empty(theclick_get_theme_opt('social_facebook_url'))) { ?>
             <a class="header-icon hint--bottom hint--bounce" data-hint="<?php esc_attr_e('Follow us on: Facebook', 'theclick'); ?>" href="<?php echo esc_url(theclick_get_theme_opt('social_facebook_url')); ?>" target="_blank">
-                <i class="fab fa-facebook"></i>
+                <i class="fa fa-facebook"></i>
             </a>
         <?php }
                 if (!empty(theclick_get_theme_opt('social_twitter_url'))) { ?>
