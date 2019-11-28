@@ -26,15 +26,10 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
         'vc-pie-icon' => ''
     ];
     switch ($shortcode_name) {
-        //case for $shortcode_modify element
-        
         case 'vc_row':
-            $container_class = [];
-         
             // Stretch row style 2
             if(!isset($full_width) || $full_width === ''){
-                $container_class[] = 'container-wide';
-                $modify['before'] = '<div class="'.implode(' ', $container_class).'">';
+                $modify['before'] = '<div class="container-wide">';
                 $modify['after']  = '</div>';
             }
             break;
