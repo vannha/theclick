@@ -3,6 +3,7 @@ add_action('vc_after_init', 'theclick_vc_row');
 function theclick_vc_row() {   
     $param = WPBMap::getParam('vc_row', 'full_width');
     $param['value'][esc_html__('Stretch row and content 2','theclick')] = 'stretch_row_content2';
+    $param['std'] = 'stretch_row_content2';
     vc_update_shortcode_param('vc_row', $param);
 }
 
@@ -32,7 +33,7 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
             $container_class = [];
          
             // Stretch row style 2
-            if(isset($full_width) && $full_width === 'stretch_row_content2'){
+            if(!isset($full_width)){
                 $container_class[] = 'container-wide';
                 $modify['first-child'] .= '<div class="'.implode(' ', $container_class).'"><div class="row">';
                 $modify['last-child']  .= '</div></div>';
