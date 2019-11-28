@@ -20,6 +20,7 @@
                             <div class="header-attr-wrap nav-extra">
                                 <?php
                                 get_template_part('template-parts/header/header-social');
+                                theclick_header_social(['class' => 'd-none d-sm-block']);
                                 theclick_header_signin_signup(['class' => 'd-none d-sm-block']);
                                 theclick_header_search(['type' => 'popup', 'class' => 'd-none d-sm-block']);
                                 theclick_header_wishlist(['class' => 'd-none d-sm-block']);
