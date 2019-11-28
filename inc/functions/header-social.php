@@ -3,8 +3,8 @@
 /**
  * TheClick
  */
-function theclick_header_social($args)
-{
+function theclick_header_social($args = [])
+{ die('xxx');
     $header_social = theclick_get_opts('header_social', '0');
 
     if ($header_social === '0') return;
