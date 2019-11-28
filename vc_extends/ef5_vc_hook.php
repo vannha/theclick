@@ -32,7 +32,7 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
             $container_class = [];
           
             // Stretch row style 2
-            if(isset($full_width) && $full_width === 'container-wide'){
+            if(isset($full_width) && $full_width === 'stretch_row_content2'){
                 $container_class[] = 'container-wide';
                 $modify['first-child'] .= '<div class="'.implode(' ', $container_class).'"><div class="row">';
                 $modify['last-child']  .= '</div></div>';
