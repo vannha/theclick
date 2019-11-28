@@ -85,7 +85,7 @@ $container-wide-max-widths: (
   }
 }
 @if $enable-grid-classes {
-  .container-wide {
+  .page-template-page-builder .ef5-content-area .container {
     @include make-container();
     @include make-container-wide-max-widths();
   }
