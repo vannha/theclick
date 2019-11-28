@@ -31,7 +31,7 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
         
         case 'vc_row':
             $container_class = [];
-          var_dump($full_width);  
+         
             // Stretch row style 2
             if(isset($full_width) && $full_width === 'stretch_row_content2'){
                 $container_class[] = 'container-wide';
