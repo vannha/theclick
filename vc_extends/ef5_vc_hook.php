@@ -34,8 +34,8 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
             // Stretch row style 2
             if(!isset($full_width)){
                 $container_class[] = 'container-wide';
-                $modify['before'] .= '<div class="'.implode(' ', $container_class).'">';
-                $modify['after']  .= '</div>';
+                $modify['before'] = '<div class="'.implode(' ', $container_class).'">';
+                $modify['after']  = '</div>';
             }
             break;
         default:
