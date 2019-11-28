@@ -1,5 +1,5 @@
 <?php
-add_action('vc_after_init', 'theclick_vc_row');
+/*add_action('vc_after_init', 'theclick_vc_row');
 function theclick_vc_row() {   
     $param = WPBMap::getParam('vc_row', 'full_width');
     $param['value'][esc_html__('Stretch row and content 2','theclick')] = 'stretch_row_content2';
@@ -11,14 +11,12 @@ add_filter('vc_shortcode_output', 'unbreak_vc_shortcode_output', 10, 3);
 function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
 {
     extract($atts);
-    //modify shortcode use div as container
     $shortcode_modify = ['vc_row'];
     $shortcode_name = $sc_obj->getShortcode();
     if (!in_array($shortcode_name, $shortcode_modify))
         return $html;
-    //
     $modify = [
-        'attrs'       => [], // for add attrs can use string or array
+        'attrs'       => [], 
         'before'      => '',
         'after'       => '',
         'first-child' => '',
@@ -27,7 +25,7 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
     ];
     switch ($shortcode_name) {
         case 'vc_row':
-            // Stretch row style 2
+
             if(!isset($full_width) || $full_width === ''){
                 $modify['before'] = '<div class="container-wide">';
                 $modify['after']  = '</div>';
@@ -37,7 +35,7 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
             return $html;
             break;
     }
-    //begin modify
+
     if (!empty($modify['attrs'])) {
         if (is_array($modify['attrs']))
         {
@@ -76,4 +74,4 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
  
     return $html;
 }
-   
+   */
