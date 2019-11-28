@@ -10,6 +10,12 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1170px
 ) !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+) !default;
 
 @import 'bootstrap/bootstrap-grid';
 @import 'bootstrap-theme/bootstrap-theme';
