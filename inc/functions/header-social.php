@@ -81,7 +81,7 @@ function theclick_header_social($args = [])
             <a class="header-icon hint--bottom hint--bounce <?php echo esc_attr($args['class']) ?>" data-hint="<?php esc_attr_e('Follow us on: Tripadvisor', 'theclick'); ?>" href="<?php echo esc_url(theclick_get_theme_opt('social_tripadvisor_url')); ?>" target="_blank">
                 <i class="fab fa-tripadvisor"></i>
             </a>
-        <?php}
+        <?php }
         echo wp_kses_post($args['before']);
     endif;
 }
