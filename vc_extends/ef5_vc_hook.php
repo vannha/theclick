@@ -10,7 +10,6 @@ function theclick_vc_row() {
 add_filter('vc_shortcode_output', 'unbreak_vc_shortcode_output', 10, 3);
 function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
 {
-	var_dump($atts);  
     extract($atts);
     //modify shortcode use div as container
     $shortcode_modify = ['vc_row'];
