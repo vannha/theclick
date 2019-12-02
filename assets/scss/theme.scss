@@ -60,7 +60,7 @@ $grid-breakpoints: (
 @import 'gutenberg';
 
 $grid-wide-breakpoints: (
-  xxs: 0,
+  xxs: 100%,
   xs: 480px,
   sm: 576px,
   md: 768px,
@@ -69,7 +69,7 @@ $grid-wide-breakpoints: (
 ) !default;
 
 $container-wide-max-widths: (
-  xxs: 0,
+  xxs: 100%,
   xs: 480px,
   sm: 576px,
   md: 768px,
