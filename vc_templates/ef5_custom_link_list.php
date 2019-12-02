@@ -1,7 +1,7 @@
 <?php
 $atts = vc_map_get_attributes($this->getShortcode(), $atts);
 extract($atts);
-$wrap_css_class = array('ef5-custom-link-list', $el_class);
+$wrap_css_class = array('ef5-custom-link-list widget', $el_class);
 $cl_lists = (array) vc_param_group_parse_atts($cl_list);
 ?>
 <?php if (count($cl_lists) > 0) : ?>
