@@ -1,9 +1,9 @@
 // Default 
-$btn-inner-space   : 9px 30px;
+$btn-inner-space   : 12px 22px 13px 22px;
 $btn-font-size     : 14px;
 $btn-line-height   : 15px;
 $btn-font-style    : inherit;
-$btn-font-weight   : 500;
+$btn-font-weight   : 400;
 $btn-text-style    : uppercase;
 $btn-letter-spacing: unset;
 $btn-color         : $white;
@@ -12,4 +12,4 @@ $btn-bg-color      : $primary_color;
 $btn-bg-color-hover: $accent_color;
 
 // Button Default 
-$btn-border   : 2px solid transparent;
+$btn-border   : 1px solid transparent;
