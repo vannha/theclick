@@ -33,7 +33,8 @@ vc_map(array(
             'heading'    => esc_html__('Layout Template','theclick'),
             'param_name' => 'layout_template',
             'value'      =>  array(
-                '1' => get_template_directory_uri().'/vc_elements/layouts/newsletter-1.png',
+				'1' => get_template_directory_uri().'/vc_elements/layouts/newsletter-1.png',
+				'2' => get_template_directory_uri() . '/vc_elements/layouts/newsletter-2.png',
             ),
             'std'        => '1',
             'admin_label'=> true
@@ -50,7 +51,7 @@ vc_map(array(
 				'element'   => 'layout_mode',
 				'value'     => 'default',
 			),
-    	),
+		),
     	array(
 			'type'        => 'textfield',
 			'heading'     => esc_html__( 'Name Text', 'theclick' ),
