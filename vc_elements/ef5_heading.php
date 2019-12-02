@@ -13,8 +13,8 @@ vc_map(array(
                 'param_name' => 'layout_template',
                 'value'      =>  array(
                     '1'  => get_template_directory_uri().'/vc_elements/layouts/heading-1.png',
-                    '2'  => get_template_directory_uri().'/vc_elements/layouts/heading-2.png',
-                    '3'  => get_template_directory_uri().'/vc_elements/layouts/heading-3.png',
+                    //'2'  => get_template_directory_uri().'/vc_elements/layouts/heading-2.png',
+                    //'3'  => get_template_directory_uri().'/vc_elements/layouts/heading-3.png',
                 ),
                 'std'              => '1',
                 'admin_label'      => true,
