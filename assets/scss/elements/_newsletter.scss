@@ -32,5 +32,9 @@
 		line-height: 21px;
 		padding: 10px 0;
 		background-color: transparent;
+		text-transform: capitalize;
+		&:hover{
+	        background: transparent;
+	    }
 	}
 }
