@@ -484,6 +484,7 @@ if(class_exists('WooCommerce')){
 theclick_require_folder('inc/extensions', get_template_directory());
 
 function my_edit_widget_func($params) {
+    var_dump($params); die;
     $params[0]['before_title'] = '<div class="' . $params[0]['widget_name'] . '">' ;
     $params[0]['after_title'] = '</div>' ;
     return $params;
