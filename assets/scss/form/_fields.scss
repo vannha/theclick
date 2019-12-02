@@ -94,28 +94,28 @@ form {
 }
 *:hover::-webkit-input-placeholder,
 *:focus::-webkit-input-placeholder {
-    color: $accent_color;
+    color: $primary_color;
 }
 :-moz-placeholder { /* Firefox 18- */
     color: $FF_placeholder_color;
 }
 *:hover:-moz-placeholder,
 *:focus:-moz-placeholder{
-    color: $accent_color;
+    color: $primary_color;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
     color: $FF_placeholder_color;
 }
 *:hover::-moz-placeholder,
 *:focus::-moz-placeholder{
-    color: $accent_color;
+    color: $primary_color;
 }
 :-ms-input-placeholder {
     color: $FF_placeholder_color;
 }
 *:hover:-ms-input-placeholder ,
 *:focus:-ms-input-placeholder {
-    color: $accent_color;
+    color: $primary_color;
 }
 // Background Colored Form 
 .ef5-bg-dark{
