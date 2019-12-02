@@ -492,18 +492,13 @@ function my_edit_widget_func($params) {
 add_filter('dynamic_sidebar_params', 'my_edit_widget_func');
 */
 
-add_filter( 'dynamic_sidebar_params', function( $args ){ var_dump($args); die;
-    $option    = get_option( 'smk_sidebar_generator', array() );
-    $generated = !empty( $option['sidebars'] ) ? $option['sidebars'] :array();
-
-    if( ! array_key_exists( $args[0]['id'], $generated ) )
-        return $args;
+add_filter( 'dynamic_sidebar_params', function( $args ){  
 
     $new_args = array(
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>'
+        'before_title'  => '<div class="widget-title">',
+        'after_title'   => '</div>'
     );
 
     $new_args = wp_parse_args( $new_args, $args[0] );
