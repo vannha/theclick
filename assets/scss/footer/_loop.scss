@@ -11,17 +11,10 @@
 }
 
 .ef5-footer-area {
-	.ef5-el-title{
-		color: $white;
-		font-size: 22px;
-		margin-bottom: 40px;
-		font-weight: 500;
+	ul, ol{
+		list-style: none;
 	}
-	.ef5-wp-menu{
-		.ef5-el-title{
-			margin-bottom: 30px;
-		}
-	}
+	  
 	.widgettitle{
 		margin-top: 0;
 		margin-bottom: 20px;
