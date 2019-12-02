@@ -1,3 +1,39 @@
+$grid-wide-breakpoints: (
+  xxs: 100%,
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1430px
+) !default;
+
+$container-wide-max-widths: (
+  xxs: 100%,
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1430px
+) !default;
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-wide-max-widths($max-widths: $container-wide-max-widths, $breakpoints: $grid-wide-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+@if $enable-grid-classes {
+  .page-template-page-builder .ef5-content-area .container {
+    @include make-container();
+    @include make-container-wide-max-widths();
+  }
+  .ef5-footer-area .container {
+    @include make-container();
+    @include make-container-wide-max-widths();
+  }
+}
+
 // Return CSS Variables
 @function theclick_scss_css_variable($var, $fallback: null) {
   @if($fallback) {
@@ -48,3 +84,4 @@
 
   @return $number;
 }
+
