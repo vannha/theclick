@@ -491,7 +491,7 @@ function my_edit_widget_func($params) {
 }
 add_filter('dynamic_sidebar_params', 'my_edit_widget_func');
 */
-die;
+
 add_filter( 'dynamic_sidebar_params', function( $args ){ var_dump($args); die;
     $option    = get_option( 'smk_sidebar_generator', array() );
     $generated = !empty( $option['sidebars'] ) ? $option['sidebars'] :array();
