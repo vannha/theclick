@@ -25,7 +25,6 @@ form [type="submit"],
     border: $btn-border;
     text-align: center;
     white-space: nowrap;
-    @include border-radius(18.5px);
     &:hover{
         color: $btn-color-hover;
         background: $btn-bg-color-hover;
