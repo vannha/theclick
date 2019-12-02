@@ -1,4 +1,7 @@
 .ef5-newsletter-1{
+	form{
+		position: relative;
+	}
 	label{
 		display: none;
 	}
@@ -12,6 +15,9 @@
 	}
 	.tnp-submit,
 	.tnp-button{
+		position: absolute;
+		top: 0;
+		right: 0;
 		background-color: $accent_color;
 	}
 }
