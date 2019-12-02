@@ -482,7 +482,7 @@ if(class_exists('WooCommerce')){
  *
 */
 theclick_require_folder('inc/extensions', get_template_directory());
-
+/*
 function my_edit_widget_func($params) {
     var_dump($params); die;
     $params[0]['before_title'] = '<div class="' . $params[0]['widget_name'] . '">' ;
@@ -490,3 +490,24 @@ function my_edit_widget_func($params) {
     return $params;
 }
 add_filter('dynamic_sidebar_params', 'my_edit_widget_func');
+*/
+add_filter( 'dynamic_sidebar_params', function( $args ){ var_dump($args); die;
+    $option    = get_option( 'smk_sidebar_generator', array() );
+    $generated = !empty( $option['sidebars'] ) ? $option['sidebars'] :array();
+
+    if( ! array_key_exists( $args[0]['id'], $generated ) )
+        return $args;
+
+    $new_args = array(
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>'
+    );
+
+    $new_args = wp_parse_args( $new_args, $args[0] );
+
+    $args[0] = $new_args;
+
+    return $args;
+}, 99);
