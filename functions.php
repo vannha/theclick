@@ -35,7 +35,7 @@ if(!function_exists('theclick_configs')){
             'content_width'         => 1170,
             'h1_size'               => '36px',
             'h2_size'               => '30px',
-            'h3_size'               => '22px',
+            'h3_size'               => '20px',
             'h4_size'               => '18px',
             'h5_size'               => '16px',
             'h6_size'               => '14px',
@@ -482,3 +482,10 @@ if(class_exists('WooCommerce')){
  *
 */
 theclick_require_folder('inc/extensions', get_template_directory());
+
+function my_edit_widget_func($params) {
+    $params[0]['before_title'] = '<div class="' . $params[0]['widget_name'] . '">' ;
+    $params[0]['after_title'] = '</div>' ;
+    return $params;
+}
+add_filter('dynamic_sidebar_params', 'my_edit_widget_func');

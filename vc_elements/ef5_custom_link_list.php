@@ -7,6 +7,12 @@ vc_map(array(
     'description' => esc_html__('Add title and title link with custom link', 'theclick'),
     'params'      => array(
         array(
+            "type"          => "textfield",
+            "heading"       => esc_html__("Widget Title", 'theclick'),
+            "param_name"    => "wgtitle",
+            "value"         => ''
+        ),
+        array(
             'type'       => 'param_group',
             'heading'    => esc_html__('Add link', 'theclick'),
             'param_name' => 'cl_list',
