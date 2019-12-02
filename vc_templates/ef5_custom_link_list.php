@@ -1,12 +1,13 @@
 <?php
 $atts = vc_map_get_attributes($this->getShortcode(), $atts);
 extract($atts);
-$wrap_css_class = array('ef5-custom-link-list-wrap', $el_class);
+$wrap_css_class = array('ef5-custom-link-list', $el_class);
 $cl_lists = (array) vc_param_group_parse_atts($cl_list);
 ?>
 <?php if (count($cl_lists) > 0) : ?>
-    <?php if ( !empty($wgtitle)) echo '<div class="widgettitle">'. $wgtitle.'</div>'; ?>
-        <div class="<?php echo trim(implode(' ', $wrap_css_class)); ?>">
+    <div class="<?php echo trim(implode(' ', $wrap_css_class)); ?>">
+        <?php if (!empty($wgtitle)) echo '<div class="widgettitle">' . $wgtitle . '</div>'; ?>
+        <div class="custom-link-wrap">
             <ul>
                 <?php
                     foreach ($cl_lists as $value) {
@@ -31,4 +32,5 @@ $cl_lists = (array) vc_param_group_parse_atts($cl_list);
 
             </ul>
         </div>
-    <?php endif; ?>
+    </div>
+<?php endif; ?>
