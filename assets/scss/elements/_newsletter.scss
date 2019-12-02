@@ -5,12 +5,13 @@
 	.tnp-name{
 		margin-bottom: 10px;
 	}
+	.tnp-email{
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+	}
 	.tnp-submit,
 	.tnp-button{
 		background-color: $accent_color;
-		padding-top: 10.5px;
-		padding-bottom: 10.5px;
-		margin-top: 20px;
-		@include border-radius(20px);
 	}
 }
