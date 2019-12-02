@@ -89,4 +89,8 @@ $container-wide-max-widths: (
     @include make-container();
     @include make-container-wide-max-widths();
   }
+  .ef5-footer-area .container {
+    @include make-container();
+    @include make-container-wide-max-widths();
+  }
 }
