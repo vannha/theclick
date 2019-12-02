@@ -7,9 +7,9 @@ $btn-font-weight   : 400;
 $btn-text-style    : uppercase;
 $btn-letter-spacing: unset;
 $btn-color         : $primary_color;
-$btn-color-hover   : $primary_color;
-$btn-bg-color      : $primary_color;
-$btn-bg-color-hover: $accent_color;
+$btn-color-hover   : $accent_color;
+$btn-bg-color      : transparent;
+$btn-bg-color-hover: transparent;
 
 // Button Default 
 $btn-border   : 1px solid transparent;

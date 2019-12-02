@@ -1,4 +1,8 @@
 .ef5-newsletter-1{
+	@media (min-width: $screen_lg_min){
+		max-width: 690px;
+		margin: 0 auto;
+	}
 	form{
 		position: relative;
 		::-webkit-input-placeholder {
