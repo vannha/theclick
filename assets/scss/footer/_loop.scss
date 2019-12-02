@@ -28,6 +28,12 @@
 		font-size: 20px;
 		font-family: $futura-pt-medium;
 	}
+	.widget li{
+		border-bottom: 0;
+		>a{
+		    padding: 5.5px 0;
+		}
+	}
 }
 
 .footer-default{
