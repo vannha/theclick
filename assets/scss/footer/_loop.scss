@@ -59,7 +59,7 @@
 		vertical-align: top;
 		@include transition(all .3s linear 0s);
 		&:hover{
-			color: $accent_accent;
+			color: $accent_color;
 		}
 	}
 	.select2.select2-container .select2-selection--single{
@@ -118,7 +118,7 @@
 				}
 			}
 			&:hover,&:focus{
-				color: $accent_accent;
+				color: $accent_color;
 				background-color: transparent;
 			}
 			span {
@@ -129,7 +129,7 @@
 			&:hover,
 			&:focus{
 				>a{
-					color: $accent_accent;
+					color: $accent_color;
 					background-color: transparent;
 				}
 				.wpml-ls-sub-menu{
