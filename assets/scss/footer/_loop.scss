@@ -199,11 +199,12 @@
 		    	width: 0;
 		    	background-color: $primary_color;
 		    	position: absolute;
-		    	top: 100%;
+		    	bottom: 9px;
 		    	left: 0;
 		    	@include transition(width .3s linear 0s);
 		    }
 		    &:hover,&:active{
+		    	color: inherit;
 		    	&:after{
 		    		width: 100%;
 		    	}
