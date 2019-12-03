@@ -148,7 +148,7 @@
 		    bottom: calc(100% + 10px);
 		    visibility: hidden;
 		    opacity: 0;
-		    @include box-shadow(1px -3px 7px 0 $accent_color);
+		    @include box-shadow(1px -3px 7px 0 rgba($accent_color,0.6));
 		    @include transition(all .3s linear 0s);
 		    .wpml-ls-item{
 				padding: 3px 0;
