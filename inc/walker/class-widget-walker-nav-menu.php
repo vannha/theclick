@@ -77,7 +77,7 @@ class TheClick_Menu_Walker extends Walker_Nav_Menu {
 		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$classes[] = 'ef5-menu-item';
+		$classes[] = 'ef5-menu-item aaa';
 		if(in_array('menu-item-has-children', $classes)) $classes[] = 'has-toggle parent';
 		$classes[] = 'menu-item-' . $item->ID;
 

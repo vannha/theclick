@@ -35,7 +35,7 @@ function theclick_get_the_password_form( $post = 0 ) {
  * Expander parent item
 */
 if(!function_exists('theclick_widget_expander')){
-    //add_filter('ef5systems_megamenu_expander', 'theclick_widget_expander'); // add expander for megamenu
+    add_filter('ef5systems_megamenu_expander', 'theclick_widget_expander'); // add expander for megamenu
     function theclick_widget_expander($args = []){
         $args = wp_parse_args($args, [
             'class' => '',
