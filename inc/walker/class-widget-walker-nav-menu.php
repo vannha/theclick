@@ -177,7 +177,7 @@ class TheClick_Menu_Walker extends Walker_Nav_Menu {
 		$item_expander = $item_no_link_expander = '';
 		if($item->url === '#') $item_no_link_expander = theclick_widget_expander(['class'=>'ef5-toggle-overlay']);
 		
-		$is_parent = in_array('menu-item-has-children', $classes); var_dump($is_parent);
+		$is_parent = in_array('menu-item-has-children', $classes);  
 		if($is_parent === true) { 
 			$item_expander = theclick_widget_expander();
 		}
@@ -185,7 +185,7 @@ class TheClick_Menu_Walker extends Walker_Nav_Menu {
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
 		$item_output .= $args->link_before . $title . $args->link_after;
-		$item_output .= $item_expander;
+		//$item_output .= $item_expander;
 		$item_output .= $item_no_link_expander;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
