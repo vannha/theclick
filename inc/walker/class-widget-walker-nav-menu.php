@@ -176,9 +176,9 @@ class TheClick_Menu_Walker extends Walker_Nav_Menu {
 		/* add expander */
 		$item_expander = $item_no_link_expander = '';
 		if($item->url === '#') $item_no_link_expander = theclick_widget_expander(['class'=>'ef5-toggle-overlay']);
-		var_dump($classes);
-		$is_parent = in_array('menu-item-has-children', $classes);
-		if($is_parent === true) {
+		
+		$is_parent = in_array('menu-item-has-children', $classes); var_dump($is_parent);
+		if($is_parent === true) { 
 			$item_expander = theclick_widget_expander();
 		}
 
