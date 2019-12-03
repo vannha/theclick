@@ -174,19 +174,17 @@ class TheClick_Menu_Walker extends Walker_Nav_Menu {
 		if(empty($title)) $title = sprintf( esc_html__( '#%d (no title)', 'theclick' ), $item->ID );
 		$title = '<span class="title">'.$title.'</span>';
 		/* add expander */
-		$item_expander = $item_no_link_expander = '';
-		if($item->url === '#') $item_no_link_expander = theclick_widget_expander(['class'=>'ef5-toggle-overlay']);
-		
+		$item_expander = '';
 		$is_parent = in_array('menu-item-has-children', $classes);  
 		if($is_parent === true) { 
-			$item_expander = theclick_widget_expander();
+			if($item->url === '#') $item_expander = theclick_widget_expander(['class'=>'ef5-toggle-overlay']);
+			else $item_expander = theclick_widget_expander();
 		}
 
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
 		$item_output .= $args->link_before . $title . $args->link_after;
-		//$item_output .= $item_expander;
-		//$item_output .= $item_no_link_expander;
+		$item_output .= $item_expander;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
