@@ -70,3 +70,24 @@
 		}
 	}  
 }
+.select2-container.select2-container--footer{
+	.select2-dropdown{
+		background-color: $primary_color;
+		border-color: $primary_color;
+	}
+	.select2-results__options{
+		padding: 9px 15px 6px 15px;
+		li{
+			padding: 3px 0;
+			background-color: $primary_color;
+			color: #fff;
+			line-height: 24px;
+			&:hover{
+				color: $lightent_accent_accent;
+			}
+			+li{
+				border-top: 0;
+			}
+		}
+	}  
+}
