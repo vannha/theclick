@@ -54,6 +54,9 @@
 		background-color: $primary_color;
 		border-color: $primary_color;
 	}
+	.select2-search--dropdown .select2-search__field{
+		display: none;
+	}
 	.select2-results__options{
 		padding: 9px 15px 6px 15px;
 		li{
@@ -74,6 +77,9 @@
 	.select2-dropdown{
 		background-color: $primary_color;
 		border-color: $primary_color;
+	}
+	.select2-search--dropdown .select2-search__field{
+		display: none;
 	}
 	.select2-results__options{
 		padding: 9px 15px 6px 15px;
