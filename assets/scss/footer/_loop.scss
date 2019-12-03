@@ -75,11 +75,11 @@
 	    &:before{
 			content: "\f107";
 			font-family: $FontAwesome;
-			font-size: 12px;
-			font-weight: 400;
+			font-size: 14px;
+			font-weight: 700;
 			position: absolute;
 			right: 0px;
-			bottom: 4px;
+			bottom: 3px;
 			line-height: 1;
 			color: inherit;
 		}
@@ -95,6 +95,8 @@
 
 	.wpml-ls-legacy-dropdown{
 		width: auto;
+		font-family: $futura-pt-medium;
+		font-size: 14px;
 		a{
 			background-color: transparent;
 			border: 0;
@@ -109,7 +111,7 @@
 				    border-top: 0;
 				    content: "\f107";
 				    font-family: 'Font Awesome 5 Pro';
-				    font-size: 12px;
+				    font-size: 14px;
 				    font-weight: 400;
 				    position: absolute;
 				    top: 6px;
