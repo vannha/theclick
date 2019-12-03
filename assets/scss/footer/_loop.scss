@@ -1,4 +1,4 @@
-.ef5-footer-area {
+#ef5-footer{
 	ul, ol{
 		list-style: none;
 	}
@@ -159,6 +159,12 @@
 			}
 		}
 		 
+	}
+	&.footer-3{
+		.wpml-ls-legacy-dropdown .wpml-ls-sub-menu{
+			left: auto;
+			right: 0;
+		}
 	}
 }
 .ef5-footer-default{
