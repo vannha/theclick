@@ -55,71 +55,10 @@ vc_map(array(
                 'std'        => 'This is TheClick custom heading element',
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','theclick')   
-            )
-        ),
-        ef5systems_icon_libs([
-            'dependency'        => 'heading_text',
-            'dependency_option' => 'not_empty',
-            'dependency_value'  => true,
-            'group'             => esc_html__('Heading','theclick') 
-        ]),
-        ef5systems_icon_libs_icon([
-            'group'             => esc_html__('Heading','theclick') 
-        ]),
-        array(
-            // Heading part 2 
-            array(
-                'type'       => 'checkbox',
-                'param_name' => 'show_heading2',
-                'value'      => array(
-                    esc_html__('Show Heading Part 2','theclick') => '1',
-                ),
-                'std'        => '0',
-                'group'      => esc_html__('Heading','theclick'),
-                'dependency' => array(
-                    'element'   => 'heading_text',
-                    'not_empty' => true
-                ),
-            ),
-            array(
-                'type'       => 'textarea',
-                'heading'    => esc_html__('Text','theclick'),
-                'param_name' => 'heading2_text',
-                'dependency' => array(
-                    'element' => 'show_heading2',
-                    'value'   => array('1')
-                ),
-                'holder'     => 'h4',
-                'group'      => esc_html__('Heading','theclick')   
-            ),
-            // Heading Part 3
-            array(
-                'type'       => 'checkbox',
-                'param_name' => 'show_heading3',
-                'value'      => array(
-                    esc_html__('Show Heading Part 3','theclick') => '1',
-                ),
-                'std'        => '0',
-                'group'      => esc_html__('Heading','theclick'),
-                'dependency' => array(
-                    'element'   => 'heading_text',
-                    'not_empty' => true
-                ),
-            ),
-            array(
-                'type'       => 'textarea',
-                'heading'    => esc_html__('Text','theclick'),
-                'param_name' => 'heading3_text',
-                'dependency' => array(
-                    'element' => 'show_heading3',
-                    'value'   => array('1')
-                ),
-                'holder'     => 'h4',
-                'group'      => esc_html__('Heading','theclick')   
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'heading_css_animation',
-                'group'      => esc_html__('Heading','theclick'),
+                'group'      => esc_html__('Heading', 'theclick'),
                 'dependency' => array(
                     'element'   => 'heading_text',
                     'not_empty' => true
@@ -128,16 +67,16 @@ vc_map(array(
             // Sub Heading 
             array(
                 'type'       => 'textfield',
-                'heading'    => esc_html__('Text','theclick'),
+                'heading'    => esc_html__('Text', 'theclick'),
                 'param_name' => 'subheading_text',
                 'value'      => 'Sub Heading',
                 'std'        => 'Sub Heading',
                 'holder'     => 'h3',
-                'group'      => esc_html__('Sub Heading','theclick')
+                'group'      => esc_html__('Sub Heading', 'theclick')
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'subheading_text_css_animation',
-                'group'      => esc_html__('Sub Heading','theclick'),
+                'group'      => esc_html__('Sub Heading', 'theclick'),
                 'dependency' => array(
                     'element'   => 'subheading_text',
                     'not_empty' => true
@@ -146,15 +85,15 @@ vc_map(array(
             // Description 
             array(
                 'type'       => 'textarea',
-                'heading'    => esc_html__('Text','theclick'),
+                'heading'    => esc_html__('Text', 'theclick'),
                 'param_name' => 'desc_text',
                 'value'      => 'This is TheClick custom description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo.',
                 'holder'     => 'div',
-                'group'      => esc_html__('Description','theclick'),
+                'group'      => esc_html__('Description', 'theclick'),
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'desc_text_css_animation',
-                'group'      => esc_html__('Description','theclick'),
+                'group'      => esc_html__('Description', 'theclick'),
                 'dependency' => array(
                     'element'   => 'desc_text',
                     'not_empty' => true
@@ -163,14 +102,14 @@ vc_map(array(
             // Link 
             array(
                 'type'       => 'vc_link',
-                'heading'    => esc_html__('Link','theclick'),
-                'description'=> esc_html__('Add your custom link','theclick'),
+                'heading'    => esc_html__('Link', 'theclick'),
+                'description' => esc_html__('Add your custom link', 'theclick'),
                 'param_name' => 'button_link',
-                'group'      => esc_html__('Link','theclick')
+                'group'      => esc_html__('Link', 'theclick')
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'button_link_css_animation',
-                'group'      => esc_html__('Link','theclick')
+                'group'      => esc_html__('Link', 'theclick')
             ]),
         )
     )
@@ -211,10 +150,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             'class' => ''
         ]);
         extract( $atts );
-        if(!empty($heading2_text)) $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
-        if(!empty($heading3_text)) $heading3_text = '<span class="part3">'.$heading3_text.'</span>';
-
-        $heading_string = trim(implode(' ',[$heading_text, $heading2_text, $heading3_text]));
+         
         // Heading 
         $heading_attrs = [];
 
@@ -226,26 +162,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $heading_attrs[] = 'class="'.trim(implode(' ', $heading_css_class)).'"';
         ?>
             <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
-                echo theclick_html($heading_string); 
+                echo theclick_html($heading_text); 
             ?></div>
         <?php 
-    }
-    protected function ef5_heading_main_heading_icon($atts, $args=[]){
-        extract($atts);
-        if(empty($atts['heading_text']) || $atts['layout_template'] !== '3') return;
-        $args = wp_parse_args($args,[
-            'class' => ''
-        ]);
-        $css_classes = ['ef5-heading-icon', $args['class']];
-        $icon_name = "i_icon_" . $i_type;
-        $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
-        if(empty($iconClass)) return;
-        vc_icon_element_fonts_enqueue($i_type);
-        ?>
-            <div class="<?php echo trim(implode(' ', $css_classes));?>">
-                <span class="<?php echo esc_attr($iconClass); ?>"></span>
-            </div>
-        <?php
     }
     protected function ef5_heading_sub_heading($atts,$args = []){
         if(empty($atts['subheading_text'])) return;
