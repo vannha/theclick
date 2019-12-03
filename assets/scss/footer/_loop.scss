@@ -37,7 +37,16 @@
 		    padding: 0 14px;
 		}
 	}
-	 
+	.footer-bottom{
+		ul.menu{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -14px;
+			>li{
+				padding: 0 14px;
+			}
+		}
+	} 
 }
 
 .footer-default{
