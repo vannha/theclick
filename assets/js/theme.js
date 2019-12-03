@@ -81,6 +81,9 @@
         $('#ef5-header-top .woocommerce-currency-switcher').select2({
             theme: "headertop"
         });
+        $('#ef5-footer .woocommerce-currency-switcher').select2({
+            theme: "footer"
+        });
     }
 
     /**
