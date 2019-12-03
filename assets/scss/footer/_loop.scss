@@ -45,6 +45,16 @@
 			padding: 0;
 		}
 	} 
+	.woocommerce-currency-switcher-form{
+		select{
+			background-image: none;
+			background-color: transparent;
+		    border: 0;
+		    color: inherit;
+		    padding: 0 17px 0 0;
+		    font-size: 14px;
+		}
+	}
 	.select2-container{
 		vertical-align: top;
 		@include transition(all .3s linear 0s);
