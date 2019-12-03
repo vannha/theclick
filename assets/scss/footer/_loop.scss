@@ -1,15 +1,3 @@
-.ef5-footer-default{
-	background: $primary_color;
-	padding: 50px 0;
-	color: $white;
-	a{
-		color: $accent_color;
-		&:hover{
-			color: $white;
-		}
-	}
-}
-
 .ef5-footer-area {
 	ul, ol{
 		list-style: none;
@@ -57,8 +45,121 @@
 			padding: 0;
 		}
 	} 
-}
+	.select2-container{
+		vertical-align: top;
+		@include transition(all .3s linear 0s);
+		&:hover{
+			color: $lightent_accent_accent;
+		}
+	}
+	.select2.select2-container .select2-selection--single{
+	    border: 0;
+	    height: auto;
+	    padding: 0 17px 0 0;
+	    margin: 0;
+	    background-color: transparent;
+	    border-radius: 0;
+	    position: relative;
+	    &:before{
+			content: "\f107";
+			font-family: $FontAwesome;
+			font-size: 12px;
+			font-weight: 400;
+			position: absolute;
+			right: 0px;
+			bottom: 4px;
+			line-height: 1;
+			color: inherit;
+		}
+	}
+	.select2.select2-container .select2-selection--single .select2-selection__rendered{
+	    padding: 0;
+	    color: inherit;
+   		line-height: 22px;
+	}
+	.select2.select2-container .select2-selection--single .select2-selection__arrow{
+		display: none;
+	}
 
+	.wpml-ls-legacy-dropdown{
+		width: auto;
+		a{
+			background-color: transparent;
+			border: 0;
+		    padding: 0 17px 0 0;
+    		line-height: 22px;
+			&.wpml-ls-item-toggle{
+				position: relative;
+				&:after{
+				    vertical-align: middle;
+				    display: inline-block;
+				    border: 0;
+				    border-top: 0;
+				    content: "\f107";
+				    font-family: 'Font Awesome 5 Pro';
+				    font-size: 12px;
+				    font-weight: 400;
+				    position: absolute;
+				    top: 6px;
+				    right: 0px;
+				    bottom: 1px;
+				    line-height: 1;
+				    color: inherit;
+				}
+			}
+			&:hover,&:focus{
+				color: $lightent_accent_accent;
+				background-color: transparent;
+			}
+			span {
+			    vertical-align: inherit;
+			} 
+		}
+		.wpml-ls-current-language{
+			&:hover,
+			&:focus{
+				>a{
+					color: $lightent_accent_accent;
+					background-color: transparent;
+				}
+				.wpml-ls-sub-menu{
+					top: 100%;
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+		.wpml-ls-sub-menu{
+			border-top: 0;
+			background: #111;
+		    min-width: 100px;
+		    padding: 10px 15px;
+		    top: calc(100% + 10px);
+		    visibility: hidden;
+		    opacity: 0;
+		    @include transition(all .3s linear 0s);
+		    .wpml-ls-item{
+				padding: 3px 0;
+				line-height: 24px;
+				.wpml-ls-display{
+					display: none;
+				}
+			}
+		}
+		 
+	}
+}
+.ef5-footer-default{
+	background: $primary_color;
+	padding: 50px 0;
+	color: $white;
+	a{
+		color: $accent_color;
+		&:hover{
+			color: $white;
+		}
+	}
+}
 .footer-default{
 	color: #eee8d9;
 	a{
