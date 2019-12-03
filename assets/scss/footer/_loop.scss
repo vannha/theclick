@@ -1,3 +1,23 @@
+.ef5-footer-default{
+	background: $primary_color;
+	padding: 50px 0;
+	color: $white;
+	a{
+		color: $accent_color;
+		&:hover{
+			color: $white;
+		}
+	}
+}
+.footer-default{
+	color: #eee8d9;
+	a{
+		color: #eee8d9;
+		&:hover{
+			color: $accent_color;
+		}
+	}
+}
 #ef5-footer{
 	ul, ol{
 		list-style: none;
@@ -183,92 +203,73 @@
 			}
 		} 
 	}
-}
-.ef5-footer-default{
-	background: $primary_color;
-	padding: 50px 0;
-	color: $white;
-	a{
-		color: $accent_color;
-		&:hover{
-			color: $white;
+	&.footer-1{
+		.footer-info{
+			.fi-add{
+				font-size: 30px;
+				font-family: $futura-pt-medium;
+				line-height: 48px;
+				margin-bottom: 29px;
+			}
+			.fi-email{
+				font-size: 20px;
+				line-height: 29px;
+			}
+			.fi-phone{
+				font-size: 20px;
+				line-height: 29px;
+			}
 		}
 	}
-}
-.footer-default{
-	color: #eee8d9;
-	a{
-		color: #eee8d9;
-		&:hover{
-			color: $accent_color;
+	&.footer-2{
+		.footer-bottom{
+			ul.menu{
+				justify-content: center;
+			}
+		}
+	}
+	&.footer-3{
+		margin: 0 10px 10px 10px;
+		background-color: #f5f5f5;
+		.widget li > a {
+		    padding: 13px 0;
+		    position: relative;
+		    width: auto;
+		    display: inline-flex;
+		    flex-grow: inherit;
+		    &:after{
+		    	content: "";
+		    	height: 1px;
+		    	width: 0;
+		    	background-color: $primary_color;
+		    	position: absolute;
+		    	bottom: 9px;
+		    	left: 0;
+		    	@include transition(width .3s linear 0s);
+		    }
+		    &:hover,&:active{
+		    	color: inherit;
+		    	&:after{
+		    		width: 100%;
+		    	}
+		    }
+		}
+		.footer-info{
+			.fi-phone{
+
+			}
+			.fi-email{
+
+			}
+			.fi-hour{
+
+			}
+		}
+		.wpml-ls-legacy-dropdown .wpml-ls-sub-menu{
+			left: auto;
+			right: 0;
 		}
 	}
 }
 
-.footer-1{
-	.footer-info{
-		.fi-add{
-			font-size: 30px;
-			font-family: $futura-pt-medium;
-			line-height: 48px;
-			margin-bottom: 29px;
-		}
-		.fi-email{
-			font-size: 20px;
-			line-height: 29px;
-		}
-		.fi-phone{
-			font-size: 20px;
-			line-height: 29px;
-		}
-	}
-}
-.footer-2{
-	.footer-bottom{
-		ul.menu{
-			justify-content: center;
-		}
-	}
-}
-.footer-3{
-	margin: 0 10px 10px 10px;
-	background-color: #f5f5f5;
-	.widget li > a {
-	    padding: 13px 0;
-	    position: relative;
-	    width: auto;
-	    display: inline-flex;
-	    flex-grow: inherit;
-	    &:after{
-	    	content: "";
-	    	height: 1px;
-	    	width: 0;
-	    	background-color: $primary_color;
-	    	position: absolute;
-	    	bottom: 9px;
-	    	left: 0;
-	    	@include transition(width .3s linear 0s);
-	    }
-	    &:hover,&:active{
-	    	color: inherit;
-	    	&:after{
-	    		width: 100%;
-	    	}
-	    }
-	}
-	.footer-info{
-		.fi-phone{
 
-		}
-		.fi-email{
-
-		}
-		.fi-hour{
-
-		}
-	}
-	.wpml-ls-legacy-dropdown .wpml-ls-sub-menu{
-		left: auto;
-		right: 0;
-	}
-}
