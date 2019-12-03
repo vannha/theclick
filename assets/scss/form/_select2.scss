@@ -76,7 +76,8 @@
 .select2-container.select2-container--footer{
 	.select2-dropdown{
 		background-color: #fff;
-		border-color: $primary_color;
+		border-color: transparent;
+		@include box-shadow(1px -3px 7px 0 $MainBorderColor);
 	}
 	.select2-search--dropdown .select2-search__field{
 		display: none;
