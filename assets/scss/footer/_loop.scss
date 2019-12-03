@@ -87,7 +87,7 @@
 			content: "";
 			position: absolute;
 			left: 0;
-			bottom: -4px;
+			bottom: -5px;
 			width: 100%;
 			height: 1px;
 			background-color: $MainBorderColor;
@@ -129,6 +129,16 @@
 				    bottom: 1px;
 				    line-height: 1;
 				    color: inherit;
+				}
+				&:before{
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: -5px;
+					width: 100%;
+					height: 1px;
+					background-color: $MainBorderColor;
+					display: block;
 				}
 			}
 			&:hover,&:focus{
