@@ -43,8 +43,14 @@
 			flex-wrap: wrap;
 			margin: 0 -14px;
 			font-size: 14px;
+			@media (max-width: 400px){
+				margin: 0 -10px;
+			}
 			>li{
 				padding: 0 14px;
+				@media (max-width: 400px){
+					padding: 0 10px;
+				}
 			}
 		}
 		.widget li > a{
