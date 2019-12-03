@@ -186,7 +186,7 @@ class TheClick_Menu_Walker extends Walker_Nav_Menu {
 		$item_output .= '<a'. $attributes .'>';
 		$item_output .= $args->link_before . $title . $args->link_after;
 		//$item_output .= $item_expander;
-		$item_output .= $item_no_link_expander;
+		//$item_output .= $item_no_link_expander;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
