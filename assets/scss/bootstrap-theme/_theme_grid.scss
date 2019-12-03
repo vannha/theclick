@@ -71,6 +71,15 @@ $customs_gutters: (
 					padding-right: ($gutters-value / 2);
 				}
 			}
+			.vc_row.gutter#{$infix}-#{$gutters}{
+				margin-left: ($gutters-value / -2);
+				margin-right: ($gutters-value / -2);
+				> [class*='col'],
+				> *{
+					padding-left: ($gutters-value / 2);
+					padding-right: ($gutters-value / 2);
+				}
+			}
 			.ef5-element-horizontal {
 				&.gutter#{$infix}-#{$gutters}{
 					> .vc_column-inner > .wpb_wrapper {
