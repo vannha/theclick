@@ -278,12 +278,20 @@
 				max-width: 108px;
 			}
 		}
+		.widget li > a {
+		    padding: 16px 0;
+		    font-size: 14px;
+		    &:hover{
+		    	color: $lightent_accent_color;
+		    }
+		}
 		.ef5-heading-1{
 			.desc{
 				font-size: 14px;
 				line-height: 22px;
 			}
 		}
+
 	}
 }
 
