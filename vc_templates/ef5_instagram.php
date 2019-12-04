@@ -33,7 +33,7 @@ if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
     return;
 }
-$media_array = array_slice($media_array, 0, $limit);
+$media_array = array_slice($media_array, 0, $number);
 
 $wrap_css_classes = array(
     'ef5-instagram',
