@@ -219,7 +219,7 @@ function theclick_gutters(){
 /**
  * Add your theme Color
 */
-add_filter('ef5systems_colors','theclick_colors');
+//add_filter('ef5systems_colors','theclick_colors');
 function theclick_colors(){
 	return [
 		'overlay' => ['Overlay Background', 'rgba(0,0,0,0.5)'],
