@@ -225,7 +225,7 @@ function theclick_colors(){
 		'overlay' => ['Overlay Background', 'rgba(0,0,0,0.5)'],
 		'ababab' => ['TheClick Color 01', '#ababab'],
 		'f5f5f5' => ['TheClick Color 02', '#f5f5f5'],
-		'161618' => ['TheClick Color 03', '#161618'],
+		'161618' => ['TheClick Color 03', '#161618']
 	];
 }
 
