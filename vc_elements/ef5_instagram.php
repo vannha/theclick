@@ -58,7 +58,7 @@ vc_map(array(
             array(
                 'type'          => 'textfield',
                 'heading'       => esc_html__('Author Text', 'theclick'),
-                'param_name'    => 'el_author_text',
+                'param_name'    => 'author_text',
                 'value'         => esc_html__('Follow Us Now', 'theclick'),
                 'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'theclick'),
                 'dependency'    => array(
@@ -68,11 +68,11 @@ vc_map(array(
             ),
             array(
                 'type'          => 'dropdown',
-                'heading'       => esc_html__('Open Link in?', 'melokids'),
+                'heading'       => esc_html__('Open Link in?', 'theclick'),
                 'param_name'    => 'target',
                 'value'         => array(
-                    esc_html__('Current window', 'melokids')       => '_self',
-                    esc_html__('New Window ', 'melokids')      => '_blank',
+                    esc_html__('Current window', 'theclick')       => '_self',
+                    esc_html__('New Window ', 'theclick')      => '_blank',
                 ),
                 'std'           => '_self',
                 'dependency'    => array(
