@@ -295,6 +295,14 @@
 				}
 			}
 		}
+		.tnp-email{
+			background-color: transparent;
+			border-bottom-color: $MainBorderColor;
+			color: inherit;
+		}
+		.tnp-submit{
+			color: inherit;
+		}
 
 	}
 }
