@@ -28,24 +28,6 @@ vc_map(array(
                 'value'      => '',
                 'std'        => ''
             ),
-            // Small Heading 
-            array(
-                'type'       => 'textarea',
-                'heading'    => esc_html__('Text','theclick'),
-                'param_name' => 'small_heading_text',
-                'value'      => 'Small Heading',
-                'std'        => 'Small Heading',
-                'holder'     => 'div',
-                'group'      => esc_html__('Small Heading','theclick'),
-            ),
-            ef5systems_vc_map_add_css_animation([
-                'param_name' => 'small_css_animation',
-                'group'      => esc_html__('Small Heading','theclick'),
-                'dependency' => array(
-                    'element'   => 'small_heading_text',
-                    'not_empty' => true
-                ),
-            ]),
             // Heading 
             array(
                 'type'       => 'textarea',
@@ -55,6 +37,16 @@ vc_map(array(
                 'std'        => 'This is TheClick custom heading element',
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','theclick')   
+            ),
+            array(
+                'type'          => 'colorpicker',
+                'heading'       => esc_html__('Choose color of heading', 'theclick'),
+                'param_name'    => 'heading_color',
+                'value'         => '',
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'heading_css_animation',
@@ -126,24 +118,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $wrap_css_class = ['ef5-heading-wrap','ef5-heading-'.$layout_template, $content_align, $class, $el_class];
         echo trim(implode(' ', $wrap_css_class));
     }
-    protected function ef5_heading_small_heading($atts,$args = []){
-        if(empty($atts['small_heading_text'])) return;
-        $args = wp_parse_args($args, [
-            'class' => ''
-        ]);
-        extract( $atts );
-        $small_heading_attrs = $small_heading_css = [];
-        $small_heading_css_class = [
-            'small-heading',
-            $args['class']
-        ];
-        $small_heading_attrs[] = 'class="'.trim(implode(' ', $small_heading_css_class)).'"';
-    ?>
-        <div <?php echo trim(implode(' ', $small_heading_attrs));?>><?php 
-            echo theclick_html($small_heading_text); 
-        ?></div>
-    <?php
-    }
+    
     protected function ef5_heading_main_heading($atts,$args = []){
         if(empty($atts['heading_text'])) return;
         $args = wp_parse_args($args, [
@@ -160,6 +135,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         ];
         
         $heading_attrs[] = 'class="'.trim(implode(' ', $heading_css_class)).'"';
+        $heading_attrs[] = (!empty($heading_color)) ? 'style="color:'.$heading_color.';"' : '';
         ?>
             <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
                 echo theclick_html($heading_text); 
