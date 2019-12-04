@@ -28,12 +28,12 @@ switch ($columns) {
         $span = "col-4";
 }
 
-var_dump($number);
 $media_array = ef5systems_instagram_data($username);
 if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
     return;
 }
+var_dump($media_array);
 $media_array = array_slice($media_array, 0, $number);
 
 $wrap_css_classes = array(
