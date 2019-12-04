@@ -1,4 +1,5 @@
 <?php
+if (!class_exists('EF5Systems')) return;
 vc_map(array(
     'name'          => 'TheClick Instagram',
     'base'          => 'ef5_instagram',
