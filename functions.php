@@ -293,6 +293,15 @@ function theclick_widgets_init()
             'before_title'  => '<div class="ef5-heading h3 widgettitle">',
             'after_title'   => '</div>',
         ));
+        register_sidebar(array(
+            'name'          => esc_html__('Instagram', 'theclick'),
+            'id'            => 'sidebar-instagram',
+            'description'   => esc_html__('Add widgets here to appear when click on Hidden Navigation Icon.', 'theclick'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<div class="ef5-heading h3 widgettitle">',
+            'after_title'   => '</div>',
+        ));
     }
     if(class_exists('WooCommerce')){
         register_sidebar(array(
