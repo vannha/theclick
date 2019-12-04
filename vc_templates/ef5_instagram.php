@@ -18,16 +18,17 @@ switch ($columns) {
     case 6:
         $span = "col-2";
         break;
-    case 12:
-        $span = "col-1";
-        break;
     case 8:
         $span = "col-auto";
+        break;    
+    case 12:
+        $span = "col-1";
         break;
     default:
         $span = "col-4";
 }
 
+var_dump($number);
 $media_array = ef5systems_instagram_data($username);
 if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
