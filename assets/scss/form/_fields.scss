@@ -143,3 +143,22 @@ form {
 		color: $white;
 	}
 }
+.ef5-bg-161618{
+	*:hover::-webkit-input-placeholder,
+	*:focus::-webkit-input-placeholder {
+	    color: $white;
+	}
+	*:hover:-moz-placeholder,
+	*:focus:-moz-placeholder{
+	    color: $white;
+	}
+
+	*:hover::-moz-placeholder,
+	*:focus::-moz-placeholder{
+	    color: $white;
+	}
+	*:hover:-ms-input-placeholder ,
+	*:focus:-ms-input-placeholder {
+	    color: $white;
+	}
+}
