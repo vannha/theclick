@@ -50,8 +50,12 @@
 			border-bottom-color: $MainBorderColor;
 			color: #fff;
 		}
-		.tnp-submit{
+		.tnp-submit,
+		.tnp-button{
 			color: #fff;
+			&:hover{
+		    	color: $lightent_accent_accent;
+		    }
 		}
 	}
 }
