@@ -47,6 +47,7 @@ vc_map(array(
                     'element' => 'heading_text',
                     'not_empty' => true
                 ),
+                'group'      => esc_html__('Heading', 'theclick')   
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'heading_css_animation',
