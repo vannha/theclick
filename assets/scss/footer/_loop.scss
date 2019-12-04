@@ -290,6 +290,9 @@
 				font-size: 14px;
 				line-height: 22px;
 				margin-top: 30px;
+				@media (min-width: 1200px){
+					max-width: 325px;
+				}
 			}
 		}
 
