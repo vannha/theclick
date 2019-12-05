@@ -10,7 +10,15 @@ if(!function_exists('enable_instagram_widget')){
 if(!function_exists('theclick_instagram_api_username')){
     add_filter('ef5_instagram_api_username', 'theclick_instagram_api_username');
     function theclick_instagram_api_username(){
-        return theclick_get_opts('instagram_api_username','zooka.studio');
+        return theclick_get_opts('instagram_api_username','theclick.studio');
+    }
+}
+
+// Update Instagrame api key from theme options to widget
+if (!function_exists('theclick_instagram_api_key')) {
+    add_filter('ef5systems_instagram_api_key', 'theclick_instagram_api_key');
+    function theclick_instagram_api_key(){
+        return theclick_get_opts('instagram_api_key', '8585929404.1677ed0.a939878ff8604187a68e1b72b1ce5f2d');
     }
 }
 /**
