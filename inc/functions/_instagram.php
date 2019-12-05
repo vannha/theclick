@@ -10,7 +10,7 @@ if(!function_exists('enable_instagram_widget')){
 if(!function_exists('theclick_instagram_api_username')){
     add_filter('ef5_instagram_api_username', 'theclick_instagram_api_username');
     function theclick_instagram_api_username(){
-        return theclick_get_theme_opt('instagram_api_username','theclick.studio');
+        return theclick_get_theme_opt('instagram_api_username','');
     }
 }
 
