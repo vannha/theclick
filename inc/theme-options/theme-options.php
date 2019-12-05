@@ -721,7 +721,7 @@ Redux::setSection($opt_name, array(
             'desc'      => esc_html__('Copy and Paste YOUR Instagram Access Token here!','theclick'),
             'id'        => 'instagram_api_key',
             'type'      => 'text',
-            'default'   => '6500395100.1677ed0.96ebe958c36346fca373fd4ed7016e47'
+            'default'   => '25613480134.1677ed0.6f0e0cf4d9934d19bd05c2d8398d2973'
         )
     )
 ));
