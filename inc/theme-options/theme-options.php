@@ -710,10 +710,18 @@ Redux::setSection($opt_name, array(
     'fields'     => array(
         array(
             'title'     => esc_html__('User ID', 'theclick'),
-            'desc'      => esc_html__('Ex: https://www.instagram.com/zooka.studio/. Get zooka.studio','theclick'),
+            'desc'      => esc_html__('Ex: https://www.instagram.com/theclick.studio/. Get theclick.studio','theclick'),
             'id'        => 'instagram_api_username',
             'type'      => 'text',
-            'default'   => 'zooka.studio'
+            'default'   => 'theclick.studio'
+        ),
+        array(
+            'title'     => esc_html__('API Key', 'theclick'),
+            'subtitle'      => sprintf(__('Generate YOUR Instagram Access Token <a href="%s" target="_blank">Click Here</a>','theclick'), 'http://instagram.pixelunion.net/'),
+            'desc'      => esc_html__('Copy and Paste YOUR Instagram Access Token here!','theclick'),
+            'id'        => 'instagram_api_key',
+            'type'      => 'text',
+            'default'   => '6500395100.1677ed0.96ebe958c36346fca373fd4ed7016e47'
         )
     )
 ));
