@@ -34,7 +34,7 @@ if (is_wp_error($media_array)) {
     return;
 }
  
-$media_array = array_slice($media_array, 0, 24);
+$media_array = array_slice($media_array, 0, $number);
 
 $wrap_css_classes = array(
     'ef5-instagram',
