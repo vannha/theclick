@@ -18,7 +18,7 @@ if(!function_exists('theclick_instagram_api_username')){
 if (!function_exists('theclick_instagram_api_key')) {
     add_filter('ef5systems_instagram_api_key', 'theclick_instagram_api_key');
     function theclick_instagram_api_key(){
-        return theclick_get_theme_opt('instagram_api_key', '25613480134.1677ed0.6f0e0cf4d9934d19bd05c2d8398d2973');
+        return theclick_get_theme_opt('instagram_api_key', '');
     }
 }
 /**
