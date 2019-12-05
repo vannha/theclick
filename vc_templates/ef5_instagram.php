@@ -1,7 +1,7 @@
 <?php
 $atts = vc_map_get_attributes($this->getShortcode(), $atts);
 extract($atts);
-$username = theclick_get_theme_opt('instagram_api_username', 'theclick.studio');
+$username = theclick_get_theme_opt('instagram_api_username', '');
 switch ($columns) {
     case 1:
         $span = "col-12";
