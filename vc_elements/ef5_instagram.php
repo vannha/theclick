@@ -95,23 +95,7 @@ vc_map(array(
                 'element'   => 'show_author',
                 'value'     => 'true',
             ),
-        ),
-        array(
-            'type'             => 'el_id',
-            'settings'         => array(
-                'auto_generate' => true,
-            ),
-            'heading'          => esc_html__('Element ID', 'theclick'),
-            'param_name'       => 'el_id',
-            'description'      => sprintf(__('Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'theclick'), 'http://www.w3schools.com/tags/att_global_id.asp'),
-        ),
-        array(
-            'type'          => 'textfield',
-            'heading'       => esc_html__('Extra Class', 'theclick'),
-            'param_name'    => 'el_class',
-            'value'         => '',
-            'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'theclick'),
-        ),
+        )
     )
 ));
 class WPBakeryShortCode_ef5_instagram extends WPBakeryShortCode

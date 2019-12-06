@@ -38,6 +38,7 @@ if(!function_exists('theclick_instagram_custom_layout')){
 if(!function_exists('theclick_instagram_html_output')){
     add_filter('ef5systems_instagram_output_html','theclick_instagram_html_output', 10, 12);
     function theclick_instagram_html_output($layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $username){
+        ob_start();
         switch ($layout_mode) {
             default:
                 echo '<div class="ef5-instagram layout'.$layout_mode.'">'; 
@@ -72,5 +73,6 @@ if(!function_exists('theclick_instagram_html_output')){
                 break;
                 
         }
+        ob_get_clean();
     }
 }
