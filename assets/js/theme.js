@@ -18,6 +18,7 @@
         theclick_woo_filters();
         theclick_wc_single_product_gallery();
         theclick_wooscp_change_text();
+        theclick_custom_owl();
         // WooCommerce
         theclick_quantity_plus_minus();
         theclick_quantity_plus_minus_action();
@@ -25,17 +26,6 @@
 
         theclick_svg_color();
         theclick_smooth_scroll();
-        $('.ef5-instagram.layout-mobile-carousel .ef5-instagram-wrap').each(function () {
-            $(this).owlCarousel({
-                items: 3,
-                autoplay: false,
-                responsiveClass: true,
-                loop: false,
-                nav: false,
-                dots: false,
-                margin: 0,
-            });
-        });
     });
 	// On Load 
 	$(window).load(function() {
@@ -763,6 +753,20 @@
 
             e.preventDefault();
         } );
+    }
+    //custom owl carousel
+    function theclick_custom_owl(){
+        $('.ef5-instagram.layout-mobile-carousel .ef5-instagram-wrap').each(function () {
+            $(this).owlCarousel({
+                items: 3,
+                autoplay: false,
+                responsiveClass: true,
+                loop: false,
+                nav: false,
+                dots: false,
+                margin: 0,
+            });
+        });
     }
     /* Masonry */
     function theclick_masonry_filter(){
