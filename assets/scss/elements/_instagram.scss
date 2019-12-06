@@ -22,8 +22,8 @@
     }
     .user{
         position: absolute;
-        top: 30%;
-        left: 46%;
+        top: calc(50% - 113px);
+        left: calc(50% - 113px);
         width: 126px;
         height: 126px;
         background: #fff;
