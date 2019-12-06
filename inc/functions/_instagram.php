@@ -56,7 +56,7 @@ if(!function_exists('theclick_instagram_html_output')){
          
         switch ($layout_mode) {
             default:
-                echo '<div class="ef5-instagram layout'.$layout_mode.' num-'.$number.'">'; 
+                echo '<div class="ef5-instagram layout-'.$layout_mode.' num-'.$number.'">'; 
                     ?>
                     <div class="row grid-gutters-<?php echo esc_attr($columns_space);?> clearfix">
                     <?php
