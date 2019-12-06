@@ -12,9 +12,9 @@ vc_map(array(
             'heading'       => esc_html__('Layout', 'theclick'),
             'param_name'    => 'layout_mode',
             'value'         => array(
-                esc_html__('Default', 'theclick')       => 'layout-default',
+                esc_html__('Default', 'theclick')       => 'default',
             ),
-            'std'           => 'layout-default'
+            'std'           => 'default'
         ),
         array(
             'type'          => 'textfield',
