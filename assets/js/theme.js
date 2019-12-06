@@ -25,7 +25,7 @@
 
         theclick_svg_color();
         theclick_smooth_scroll();
-        $('.ef5-instagram.layout-mobile-carousel').each(function () {
+        $('.ef5-instagram.layout-mobile-carousel .ef5-instagram-wrap').each(function () {
             $(this).owlCarousel({
                 items: 3,
                 autoplay: false,
