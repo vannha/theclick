@@ -38,7 +38,7 @@ if(!function_exists('theclick_configs')){
             'h3_size'               => '20px',
             'h4_size'               => '18px',
             'h5_size'               => '16px',
-            'h6_size'               => '14px',
+            'h6_size'               => '15px',
             'heading_font'          => '\'futura-pt-book\'',
             'heading_color'         => 'var(--primary-color)',
             'heading_color_hover'   => 'var(--accent-color)',
