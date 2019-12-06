@@ -83,16 +83,6 @@ vc_map(array(
             ),
         ),
         array(
-            'type'          => 'checkbox',
-            'heading'       => esc_html__('Author Name', 'theclick'),
-            'param_name'    => 'show_author_name',
-            'std'           => 'true',
-            'dependency'    => array(
-                'element'   => 'show_author',
-                'value'     => 'true',
-            ),
-        ),
-        array(
             'type'          => 'dropdown',
             'heading'       => esc_html__('Open Link in?', 'theclick'),
             'param_name'    => 'target',
