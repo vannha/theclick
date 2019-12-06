@@ -756,7 +756,7 @@
     }
     //custom owl carousel
     function theclick_custom_owl(){
-        $('.ef5-instagram.layout-mobile-carousel .ef5-instagram-wrap').each(function () {
+        /* $('.ef5-instagram.layout-mobile-carousel .ef5-instagram-wrap').each(function () {
             $(this).owlCarousel({
                 items: 3,
                 autoplay: false,
@@ -766,7 +766,7 @@
                 dots: false,
                 margin: 0,
             });
-        });
+        }); */
     }
     /* Masonry */
     function theclick_masonry_filter(){
