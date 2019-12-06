@@ -33,8 +33,21 @@ if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
     return;
 }
+$args = [
+    'layout_mode'   => $layout_mode,
+    'span'          => $span,
+    'columns_space' => $columns_space,
+    'media_array'   => $media_array,
+    'size'          => $size,
+    'target'        => $target,
+    'show_like'     => $show_like,
+    'show_cmt'      => $show_cmt,
+    'show_author'   => $show_author,
+    'author_text'   => $author_text,
+    'username'      => $username
+];
  
 $media_array = array_slice($media_array, 0, $number);
  
-$html = apply_filters('ef5systems_instagram_output_html', $layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $username);
+$html = apply_filters('ef5systems_instagram_output_html', $args);
 echo $html;

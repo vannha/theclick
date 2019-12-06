@@ -36,9 +36,26 @@ if(!function_exists('theclick_instagram_custom_layout')){
 }
 // Output HTML 
 if(!function_exists('theclick_instagram_html_output')){
-    add_filter('ef5systems_instagram_output_html','theclick_instagram_html_output', 10, 12);
-    function theclick_instagram_html_output($layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $username){
-        ob_start();
+    add_filter('ef5systems_instagram_output_html','theclick_instagram_html_output', 10, 1);
+    function theclick_instagram_html_output($args=[]){
+        extract($args);
+        $args = wp_parse_args($args,[
+            'layout_mode'   => 'default',
+            'span'          => '4',
+            'columns_space' => '0',
+            'media_array'   => [],
+            'size'          => 'small',
+            'target'        => '_sefl',
+            'show_like'     => '1',
+            'show_cmt'      => '1',
+            'show_author'   => '1',
+            'author_text'   => '',
+            'username'      => ''
+        ]);
+        
+        
+        //$html = '';
+         
         switch ($layout_mode) {
             default:
                 echo '<div class="ef5-instagram layout'.$layout_mode.'">'; 
@@ -73,6 +90,6 @@ if(!function_exists('theclick_instagram_html_output')){
                 break;
                 
         }
-        return ob_get_clean();
+         
     }
 }
