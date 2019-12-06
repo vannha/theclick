@@ -20,7 +20,7 @@ vc_map(array(
             'type'          => 'textfield',
             'heading'       => esc_html__('Number Image', 'theclick'),
             'param_name'    => 'number',
-            'std'           => '8',
+            'std'           => '4',
         ),
         array(
             'type'          => 'dropdown',

@@ -33,8 +33,10 @@ if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
     return;
 }
+$media_array = array_slice($media_array, 0, $number);
 $args = [
     'layout_mode'   => $layout_mode,
+    'number'        => $number,
     'span'          => $span,
     'columns_space' => $columns_space,
     'media_array'   => $media_array,
@@ -46,8 +48,6 @@ $args = [
     'author_text'   => $author_text,
     'username'      => $username
 ];
- 
-$media_array = array_slice($media_array, 0, $number);
  
 $html = apply_filters('ef5systems_instagram_output_html', $args);
 echo theclick_html($html);
