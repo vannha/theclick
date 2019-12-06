@@ -55,7 +55,7 @@ if(!function_exists('theclick_configs')){
             'large_size_w'                   => 810,
             'large_size_h'                   => 500,
             'medium_size_w'                  => 370,
-            'medium_size_h'                  => 250,
+            'medium_size_h'                  => 370,
             'thumbnail_size_w'               => 86,
             'thumbnail_size_h'               => 80,
             'post_thumbnail_size_w'          => 1170,
