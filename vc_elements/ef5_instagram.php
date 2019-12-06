@@ -13,7 +13,7 @@ vc_map(array(
             'param_name'    => 'layout_mode',
             'value'         => array(
                 esc_html__('Default', 'theclick')       => 'default',
-                esc_html__('Default & mobile carousel', 'theclick')       => 'mobile-carousel',
+                esc_html__('Mobile carousel', 'theclick')       => 'mobile-carousel',
             ),
             'std'           => 'default'
         ),
