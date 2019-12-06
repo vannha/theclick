@@ -52,7 +52,7 @@ if(!function_exists('theclick_instagram_html_output')){
                             </a>
                             <div class="overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">
                                 <div class="overlay-inner col-12 text-center">
-                                    <a class="d-block" href="<?php echo esc_url( $item['link'] );?>" target="<?php echo esc_attr( $target );?>"><span class="fa fa-instagram"></span></a>
+                                    <a class="ins-icon" href="<?php echo esc_url( $item['link'] );?>" target="<?php echo esc_attr( $target );?>"><span class="fa fa-instagram"></span></a>
                                     <?php if( $show_like):?><a class="like" href="<?php echo esc_url( $item['link'] );?>" target="<?php echo esc_attr( $target );?>"><span class="fa fa-heart-o"></span>&nbsp;<?php echo esc_html($item['likes']);?></a><?php endif; ?>
                                     <?php if( $show_cmt):?><a class="comments" href="<?php echo esc_url( $item['link'] );?>" target="<?php echo esc_attr( $target ) ;?>"><span class="fa fa-comments-o"></span>&nbsp;<?php echo esc_html($item['comments']);?></a><?php endif; ?>
                                 </div>
