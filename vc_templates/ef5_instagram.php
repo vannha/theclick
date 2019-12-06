@@ -19,7 +19,7 @@ switch ($columns) {
         $span = "col-2";
         break;
     case 8:
-        $span = "col-auto";
+        $span = "col-15";
         break;    
     case 12:
         $span = "col-1";
