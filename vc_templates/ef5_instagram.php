@@ -41,5 +41,6 @@ $wrap_css_classes = array(
     'ef5-instagram-' . $layout_mode,
     $el_class
 );
-ef5systems_instagram_output_html($layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $show_author_name, $username);
  
+$html = apply_filters('ef5systems_instagram_output_html', $layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $show_author_name, $username);
+echo $html;
