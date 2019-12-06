@@ -34,7 +34,7 @@
         font-size: 20px;
         z-index: 9;
         @include transform(scale(1));
-        @include transition(scale 0.3s ease 0s);
+        @include transition(all 0.3s ease 0s);
     }
     &:hover .user{
         @include transform(scale(0.8));
