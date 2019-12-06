@@ -52,9 +52,6 @@ if(!function_exists('theclick_instagram_html_output')){
             'author_text'   => '',
             'username'      => ''
         ]);
-        
-        
-        //$html = '';
          
         switch ($layout_mode) {
             default:

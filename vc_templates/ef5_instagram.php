@@ -50,4 +50,4 @@ $args = [
 $media_array = array_slice($media_array, 0, $number);
  
 $html = apply_filters('ef5systems_instagram_output_html', $args);
-echo $html;
+echo theclick_html($html);
