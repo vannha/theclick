@@ -19,7 +19,7 @@ switch ($columns) {
         $span = "col-2";
         break;
     case 8:
-        $span = "col-xs-6 col-sm-3 col-lg-2 col-xl-1/8";
+        $span = "col-xs-6 col-sm-3 col-lg-3 col-xl-1/8";
         break;    
     case 12:
         $span = "col-1";
