@@ -51,6 +51,22 @@ vc_map(array(
         ),
         array(
             'type'          => 'checkbox',
+            'param_name'    => 'show_like',
+            'value'         => array(
+                esc_html__('Show like count?', 'theclick') => true
+            ),
+            'std'           => false,
+        ),
+        array(
+            'type'          => 'checkbox',
+            'param_name'    => 'show_cmt',
+            'value'         => array(
+                esc_html__('Show comment count?', 'theclick') => true
+            ),
+            'std'           => false,
+        ),
+        array(
+            'type'          => 'checkbox',
             'heading'       => esc_html__('Show Author', 'theclick'),
             'param_name'    => 'show_author',
             'std'           => 'true'
@@ -89,22 +105,6 @@ vc_map(array(
                 'element'   => 'show_author',
                 'value'     => 'true',
             ),
-        ),
-        array(
-            'type'          => 'checkbox',
-            'param_name'    => 'show_like',
-            'value'         => array(
-                esc_html__('Show like count?', 'theclick') => true
-            ),
-            'std'           => false,
-        ),
-        array(
-            'type'          => 'checkbox',
-            'param_name'    => 'show_cmt',
-            'value'         => array(
-                esc_html__('Show comment count?', 'theclick') => true
-            ),
-            'std'           => false,
         ),
         array(
             'type'             => 'el_id',
