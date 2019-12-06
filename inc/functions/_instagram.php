@@ -46,7 +46,6 @@ if (!function_exists('theclick_instagram_html_output')) {
         extract($args);
         $args = wp_parse_args($args, [
             'layout_mode'   => 'default',
-            'number'        => '4',
             'span'          => '4',
             'columns_space' => '0',
             'media_array'   => [],
@@ -61,7 +60,7 @@ if (!function_exists('theclick_instagram_html_output')) {
 
         switch ($layout_mode) {
             default:
-                echo '<div class="ef5-instagram layout-' . $layout_mode . ' num-' . $number . '">';
+                echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
                 ?>
                 <div class="ef5-instagram-wrap row grid-gutters-<?php echo esc_attr($columns_space); ?> clearfix">
                     <?php

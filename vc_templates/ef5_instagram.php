@@ -36,7 +36,6 @@ if (is_wp_error($media_array)) {
 $media_array = array_slice($media_array, 0, $number);
 $args = [
     'layout_mode'   => $layout_mode,
-    'number'        => $number,
     'span'          => $span,
     'columns_space' => $columns_space,
     'media_array'   => $media_array,
@@ -48,6 +47,6 @@ $args = [
     'author_text'   => $author_text,
     'username'      => $username
 ];
-wp_enqueue_script('owl-carousel');
+
 $html = apply_filters('ef5systems_instagram_output_html', $args);
 echo theclick_html($html);
