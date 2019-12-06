@@ -73,6 +73,6 @@ if(!function_exists('theclick_instagram_html_output')){
                 break;
                 
         }
-        ob_get_clean();
+        return ob_get_clean();
     }
 }
