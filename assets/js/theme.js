@@ -25,6 +25,17 @@
 
         theclick_svg_color();
         theclick_smooth_scroll();
+        $('.ef5-instagram.layout-mobile-carousel').each(function () {
+            $(this).owlCarousel({
+                items: 3,
+                autoplay: false,
+                responsiveClass: true,
+                loop: false,
+                nav: false,
+                dots: false,
+                margin: 0,
+            });
+        });
     });
 	// On Load 
 	$(window).load(function() {

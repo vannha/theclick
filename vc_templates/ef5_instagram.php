@@ -48,6 +48,6 @@ $args = [
     'author_text'   => $author_text,
     'username'      => $username
 ];
- 
+wp_enqueue_script('owl-carousel');
 $html = apply_filters('ef5systems_instagram_output_html', $args);
 echo theclick_html($html);
