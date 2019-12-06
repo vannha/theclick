@@ -21,6 +21,7 @@ $grid-x-columns : (
 			.col#{$infix}-#{$column}{
 				flex: 0 0 $column-value;
 				max-width: $column-value;
+				position: relative;
 			}
 		}
 		// Offset
