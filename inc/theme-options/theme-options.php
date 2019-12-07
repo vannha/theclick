@@ -305,6 +305,23 @@ Redux::setSection($opt_name, array(
             'default'  => theclick_post_sidebar_position()
         ),
         array(
+            'id'       => 'post_single_title_layout',
+            'type'     => 'image_select',
+            'title'    => esc_html__('Post Title Layout', 'theclick'),
+            'subtitle' => esc_html__('Select a layout for Post title.', 'theclick'),
+            'options'  => array(
+                '1' => get_template_directory_uri() . '/assets/images/page-title/01.png',
+                '2' => get_template_directory_uri() . '/assets/images/page-title/02.png',
+            ),
+            'default'  => '2'
+        ),
+        array(
+            'id'       => 'post_title_parallax',
+            'type'     => 'media',
+            'title'    => esc_html__('Post Title Parallax Image', 'theclick'),
+            'subtitle' => esc_html__('Choose your image', 'theclick'),
+        ),
+        array(
             'id'       => 'post_date_on',
             'title'    => esc_html__('Date', 'theclick'),
             'subtitle' => esc_html__('Show date posted.', 'theclick'),
