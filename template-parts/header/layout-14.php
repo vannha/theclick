@@ -18,7 +18,7 @@
                 <div class="ef5-navigation-wrap col-auto">
                     <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
                 </div>
-                <div class="header-attrs">
+                <div class="header-attrs ">
                     <div class="header-attr-wrap nav-extra">
                         <?php
                         theclick_header_signin_signup(['class' => 'd-none d-sm-block']);
