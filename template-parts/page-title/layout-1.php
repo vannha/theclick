@@ -25,7 +25,7 @@ if(!$show_breadcrumb) {
 ob_start();
     if ( $titles['title'] )
     {
-        printf( '<div class="page-title h1 the-red-light-free-font">%s</div>', $titles['title']);
+        printf( '<div class="page-title h1">%s</div>', $titles['title']);
     }
 
     if ( $titles['desc'] )
