@@ -944,7 +944,7 @@ if(!function_exists('theclick_page_title_opts')){
         $custom_title = $custom_desc = '';
 
         $ptitle_layout = [
-            '1' => get_template_directory_uri() . '/assets/images/page-title/01.png',
+            '1' => get_template_directory_uri() . '/assets/images/page-title/01.',
             '2' => get_template_directory_uri() . '/assets/images/page-title/02.png',
         ];
         $breadcrumb_on_opts = array(
