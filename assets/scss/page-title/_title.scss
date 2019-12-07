@@ -4,7 +4,9 @@
 }
 .page-title{
 	font-family: $the-red-light-free;
+	line-height: 1.17;
+	font-size: 48px;
 	@media (min-width: $screen-xl-min){
-		font-size: 48px;
+		font-size: 90px;
 	}
 }
