@@ -8,10 +8,12 @@
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="row justify-content-between align-items-center">
                 <div class="ef5-header-left col">
-                    <?php 
-                    theclick_header_side_nav_icon(['class' => '']);
-                    theclick_header_search(['type' => 'popup', 'class' => '']); 
-                    ?>
+                    <div class="d-flex align-items-center">
+                        <?php 
+                        theclick_header_side_nav_icon(['class' => '']);
+                        theclick_header_search(['type' => 'popup', 'class' => '']); 
+                        ?>
+                    </div>
                 </div>
                 <div class="ef5-navigation-wrap col-auto">
                     <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
