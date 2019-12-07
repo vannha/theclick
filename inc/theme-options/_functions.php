@@ -44,8 +44,8 @@ function theclick_list_post_thumbnail($post_type = 'post', $default = false){
     $layouts = [];
     if($default){
         $layouts['-1'] = get_template_directory_uri() . '/assets/images/default.png';
-        $layouts['none'] = get_template_directory_uri() . '/assets/images/none.png';
     }
+    $layouts['none'] = get_template_directory_uri() . '/assets/images/none.png';
     $posts = get_posts(array('post_type' => $post_type,'posts_per_page' => '-1','orderby' => 'date', 'order' => 'ASC'));
     foreach($posts as $post){
         $layouts[$post->post_name] = [
