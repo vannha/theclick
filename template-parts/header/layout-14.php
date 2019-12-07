@@ -8,7 +8,7 @@
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="row justify-content-between align-items-center">
                 <div class="ef5-header-left col">
-                    <div class="d-flex align-items-center nav-extra">
+                    <div class="nav-extra align-items-center">
                         <?php 
                         theclick_header_side_nav_icon(['class' => '']);
                         theclick_header_search(['type' => 'popup', 'class' => '']); 
