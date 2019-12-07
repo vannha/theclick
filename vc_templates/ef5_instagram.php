@@ -10,13 +10,13 @@ switch ($columns) {
         $span = "col-6";
         break;
     case 3:
-        $span = "col-4";
+        $span = "col-1 col-xs-4";
         break;
     case 4:
-        $span = "col-3";
+        $span = "col-6 col-sm-3";
         break;
     case 6:
-        $span = "col-2";
+        $span = "col-6 col-sm-3 col-lg-2";
         break;
     case 8:
         $span = "col-6 col-sm-3 col-lg-3 col-xl-1/8";
@@ -25,7 +25,7 @@ switch ($columns) {
         $span = "col-1";
         break;
     default:
-        $span = "col-4";
+        $span = "col-6 col-sm-3";
 }
 
 $media_array = ef5systems_instagram_data($username);
