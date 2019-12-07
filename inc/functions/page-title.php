@@ -93,7 +93,7 @@ function theclick_breadcrumb($args = [])
 */
 function theclick_ptitle_parallax_image(){
     $parallax_url = theclick_get_opts('ptitle_parallax',['url'=> '']);
-     if(empty($parallax_url['url'])) return;
+    if(empty($parallax_url['url'])) return;
     $titles = theclick_get_page_titles();
     echo '<div class="parallax"><img src="'.esc_url($parallax_url['url']).'" alt="'.esc_attr($titles['title']).'" /></div>';
 }
