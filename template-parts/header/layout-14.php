@@ -11,7 +11,7 @@
                     <div class="nav-extra align-items-center">
                         <?php 
                         theclick_header_side_nav_icon(['class' => '']);
-                        theclick_header_search(['type' => 'popup', 'class' => '']); 
+                        theclick_header_search(['type' => '', 'class' => '']); 
                         ?>
                     </div>
                 </div>
