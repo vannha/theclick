@@ -382,7 +382,7 @@ if(!function_exists('theclick_header_atts')){
                     'default'  => $default_value,
                 ), 
                 array(
-                    'title'    => esc_html__('Form Popup', 'theclick'),
+                    'title'    => esc_html__('Search Popup', 'theclick'),
                     'subtitle' => esc_html__('Popup/toggle display', 'theclick'),
                     'id'       => 'search_display',
                     'type'     => 'button_set',
