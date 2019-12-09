@@ -778,9 +778,9 @@
             var target = $(e.target);
             var check = '.link-search-toggle';
             if (!(target.is(check) )) {
-                if ($('.link-search-toggle').hasClass('clicked')) {
+                //if ($('.link-search-toggle').hasClass('clicked')) {
                     $('.link-search-toggle').removeClass('clicked');
-                }
+                //}
             }
         }); 
     }
