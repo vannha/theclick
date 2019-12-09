@@ -62,13 +62,15 @@
 		&.clicked{
 			+.search-form{
 				display: block;
+				width: 100%;
 			}
 		}
 	}
 	.search-form{
 		position: absolute;
 		top: 0;
-		display: none;
+		width: 0;
+		@include transition();
 	}
 	.searchform-wrap{
 		position: relative;
