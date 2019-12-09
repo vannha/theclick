@@ -3,8 +3,7 @@
 /**
  * Change search form
  **/
-function theclick_my_search_form($form)
-{
+function theclick_my_search_form($form){
 	$post_type = get_post_type();
 	switch ($post_type) {
 		case 'product':
@@ -15,15 +14,14 @@ function theclick_my_search_form($form)
 			break;
 	}
 	$form = '<form method="get" action="' . esc_url(home_url('/')) . '" class="search-form">
-        <label>
+		<div class="searchform-wrap">
         <input type="text" value="' . get_search_query() . '" name="s" class="search-field" placeholder="' . esc_attr__("Search here...", 'theclick') . '" >';
 	$form .= wp_kses_post($search_query);
-	$form .= '</label>';
-	$form .= '<button type="submit" value="Search" class="search-submit"></button>';
-	$form .= '</form>';
+	$form .= '<button type="submit" value="Search" class="search-submit">'. theclick_get_svg('search').'</button>';
+	$form .= '</div></form>';
 	return $form;
 }
-//add_filter('get_search_form', 'theclick_my_search_form');
+add_filter('get_search_form', 'theclick_my_search_form');
 /**
  * Header Search Icon
  * @since 1.0.0 

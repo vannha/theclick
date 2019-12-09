@@ -49,7 +49,16 @@
 }
 /* Search Form Custom */
 .ef5-search-toggle{
-	
+	position: relative;
+	.link-search-toggle.clicked{
+		+.search-form{
+			left: 0;
+		}
+	}
+	.search-form{
+		position: absolute;
+
+	}
 }
 /* Search Form In Popup */
 .mfp-contentx{
