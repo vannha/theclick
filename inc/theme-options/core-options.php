@@ -388,6 +388,7 @@ if(!function_exists('theclick_header_atts')){
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
+                    'required' => array('header_search', '=', '1'),
                 )
             ),
             theclick_header_wc_attrs($options, $default_value),
