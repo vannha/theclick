@@ -20,7 +20,7 @@
                             <div class="header-attr-wrap nav-extra">
                                 <?php
                                 theclick_header_signin_signup(['class' => 'd-none d-sm-block']);
-                                theclick_header_search(['type' => 'popup', 'class' => 'd-none d-sm-block']);
+                                theclick_header_search(['class' => 'd-none d-sm-block']);
                                 theclick_header_wishlist(['class' => 'd-none d-sm-block']);
                                 theclick_header_compare(['class' => 'd-none d-sm-block']);
                                 theclick_header_cart(['class' => 'd-none d-sm-block']);

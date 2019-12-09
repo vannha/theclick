@@ -34,16 +34,16 @@ if(!function_exists('theclick_header_search')){
 			'before' => '',
 			'after'  => '',
 			'icon'	 => theclick_get_svg('search'),
-			'type'	 => '',
 			'label'  => '',
 			'class'  => ''
 		]);
 		$show_search = theclick_get_opts('header_search', '0');
+		$search_display = theclick_get_opts('search_display', '0');
 		if('0' === $show_search) return;
 
 		$link_classes = ['header-icon search-icon',$args['class']];
 		
-		if($args['type'] === 'popup'){
+		if($search_display == '1'){
 			$link_classes[] = 'ef5-header-popup ';
 			$form_classes[] = 'mfp-hide container';
 		} else {
