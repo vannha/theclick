@@ -1,4 +1,29 @@
 <?php
+
+/**
+ * Change search form
+ **/
+function theclick_my_search_form($form)
+{
+	$post_type = get_post_type();
+	switch ($post_type) {
+		case 'product':
+			$search_query = '<input type="hidden" name="post_type" value="product" />';
+			break;
+		default:
+			$search_query = '';
+			break;
+	}
+	$form = '<form method="get" action="' . esc_url(home_url('/')) . '" class="red-search-form search-form">
+        <label>
+        <input type="search" value="' . get_search_query() . '" name="s" class="red-search-field" placeholder="' . esc_attr__("Search here...", 'theclick') . '" >';
+	$form .= wp_kses_post($search_query);
+	$form .= '</label>';
+	$form .= '<input type="submit" value="Search" class="search-submit"/>';
+	$form .= '</form>';
+	return $form;
+}
+add_filter('get_search_form', 'theclick_my_search_form');
 /**
  * Header Search Icon
  * @since 1.0.0 
