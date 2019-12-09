@@ -775,8 +775,8 @@
                 $(this).addClass('clicked'); 
         }); 
         $(document).on('click', function (e) {
-            e.preventDefault();
-            var target = $(e.target);
+            
+            var target = $(e.target); console.log(target);
             var check = '.link-search-toggle';
             if (!(target.is(check) )) {
                 //if ($('.link-search-toggle').hasClass('clicked')) {
