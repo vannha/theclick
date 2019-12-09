@@ -772,7 +772,7 @@
         }); 
         $(document).on('click', function (e) {
             e.stopPropagation();
-            var target = $(e.target); console.log(target);
+            var target = $(e.target);  
             var check = '.link-search-toggle';
             if (!(target.is(check) )) {
                 if ($('.link-search-toggle').hasClass('clicked')) {
