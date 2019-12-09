@@ -770,14 +770,14 @@
         }); */
     }
     function theclick_link_search_toggle(){
-        $('.link-search-toggle').on('click',function(e){
+        /* $('.link-search-toggle').on('click',function(e){
             e.preventDefault();
             $(this).toggleClass('clicked');
-            /* if($(this).hasClass('clicked'))
+            if($(this).hasClass('clicked'))
                 $(this).removeClass('clicked');
             else
-                $(this).addClass('clicked'); */
-        });
+                $(this).addClass('clicked'); 
+        }); */
         /* $(document).on('click', function (e) {
             var target = $(e.target);
             var check = '.link-search-toggle';
