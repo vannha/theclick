@@ -14,12 +14,12 @@ function theclick_my_search_form($form)
 			$search_query = '';
 			break;
 	}
-	$form = '<form method="get" action="' . esc_url(home_url('/')) . '" class="red-search-form search-form">
+	$form = '<form method="get" action="' . esc_url(home_url('/')) . '" class="search-form">
         <label>
-        <input type="search" value="' . get_search_query() . '" name="s" class="red-search-field" placeholder="' . esc_attr__("Search here...", 'theclick') . '" >';
+        <input type="text" value="' . get_search_query() . '" name="s" class="search-field" placeholder="' . esc_attr__("Search here...", 'theclick') . '" >';
 	$form .= wp_kses_post($search_query);
 	$form .= '</label>';
-	$form .= '<input type="submit" value="Search" class="search-submit"/>';
+	$form .= '<button type="submit" value="Search" class="search-submit"></button>';
 	$form .= '</form>';
 	return $form;
 }
