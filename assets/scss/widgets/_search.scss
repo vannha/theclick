@@ -59,7 +59,7 @@
 			position: relative;
 			bottom: 2px;
 		}
-		&:hover,&:focus,&:active{
+		&.clicked{
 			+.search-form{
 				display: block;
 			}
