@@ -23,15 +23,14 @@
 	[type="submit"]{
 		position: absolute;
 		right: 0;
-		width: 108px;
+		width: 50px;
 		height: 50px;
 		line-height: 50px;
 		text-align: center;
 		border: none;
 		padding: 0;
 		min-width: inherit;
-		background-color: $accent_color;
-		color: $white;
+		background-color: transparent;
 		font-size: 13px;
 		cursor: pointer;
 		z-index: 1;
@@ -39,29 +38,41 @@
 			right: auto;
 			left: 0;
 		}
+		svg{
+			height: 50px;
+		}
 		&:hover,
 		&:focus{
 			outline: none;
-			background: $primary_color;
-			color: $white;
+			background: transparent;
 		}
 	}
 }
 /* Search Form Custom */
 .ef5-search-toggle{
 	position: relative;
-	.link-search-toggle.clicked{
-		+.search-form{
-			left: 0;
-		}
+	padding: 6px 0;
+	.link-search-toggle{
 		span{
 			font-size: 12px;
 			margin-left: 12px;
 		}
-	}
+		.clicked{
+			+.search-form{
+				right:auto;
+			}
+		}
 	.search-form{
 		position: absolute;
+		right: 100%;
+	}
+	.searchform-wrap{
+		.search-field{
 
+		}
+		.search-submit{
+
+		}
 	}
 }
 /* Search Form In Popup */
