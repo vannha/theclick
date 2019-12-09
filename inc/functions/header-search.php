@@ -42,18 +42,23 @@ if(!function_exists('theclick_header_search')){
 		if('0' === $show_search) return;
 
 		$link_classes = ['header-icon search-icon',$args['class']];
-		
+
+		echo wp_kses_post($args['before']);
 		if($search_display == '1'){
 			$link_classes[] = 'ef5-header-popup ';
-			$form_classes[] = 'mfp-hide container';
+			add_action('wp_footer', 'theclick_header_search_popup_html');
+			echo '<a href="#ef5-header-search" class="'. trim(implode(' ', $link_classes)).'">'.theclick_html($args['icon']).'</a>';
 		} else {
-			$link_classes[] = 'ef5-search-toggle';
+			echo '<div class="' . trim(implode(' ', $link_classes)) . '">';
+				echo '<div class="ef5-search-toggle">';
+					echo '<a href="#ef5-header-search" class="link-search-toggle">' . theclick_html($args['icon']) . '</a>';
+					get_search_form();
+				echo '</div>';
+			echo '</div>';
+			
 		}
-		echo wp_kses_post($args['before']);
-	?>
-		<a href="#ef5-header-search" class="<?php echo trim(implode(' ', $link_classes));?>"><?php echo theclick_html($args['icon']);?></a>
-	<?php
 		echo wp_kses_post($args['after']);
+		 
 	}
 }
 
@@ -81,4 +86,3 @@ if(!function_exists('theclick_header_search_popup_html')){
 	<?php
 	}
 }
-add_action('wp_footer','theclick_header_search_popup_html');
