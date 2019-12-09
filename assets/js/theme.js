@@ -775,7 +775,7 @@
             //e.preventDefault();
             //e.stopPropagation();
             var target = $(e.target);  
-            var check = '.link-search-toggle';
+            var check = '.link-search-toggle'; console.log(target.is(check));
             if (!(target.is(check)) && target.closest('.search-form').length < 0 ) {
                 $('.link-search-toggle').removeClass('clicked');
             }
