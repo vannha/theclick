@@ -9,7 +9,7 @@
         theclick_touched_side();
         theclick_open_mobile_menu();
         theclick_popup();
-        //theclick_toggle();
+        theclick_toggle();
         theclick_side_nav();
         theclick_video_size();
         theclick_vcRow();
@@ -300,11 +300,11 @@
     	/* ===================
          Search Toggle
          ===================== */
-        $('.ef5-search-toggle').on('click',function(e){
+        /* $('.ef5-search-toggle').on('click',function(e){
             e.preventDefault();
             $('.ef5-cartform').removeClass('active');
             $('.ef5-searchform').toggleClass('active').find('.ef5-search-field').focus();
-        });
+        }); */
         $('.ef5-search-submit').on('click',function(e){
             if( $(this).parent().find('.ef5-search-field').val() == '' ) {
                 e.preventDefault();
