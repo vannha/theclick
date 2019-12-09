@@ -56,8 +56,6 @@
 		span{
 			font-size: 12px;
 			margin-left: 12px;
-			position: relative;
-			bottom: 2px;
 		}
 		&.clicked{
 			+.search-form{
@@ -76,18 +74,23 @@
 		    height: 32px;
 		    border: 0;
 		    min-width: 250px;
+		    font-size: 12px;
+		    @include placeholder(){
+				font-size: 12px;
+			};
 		}
 		.search-submit{
 			position: absolute;
 			left: 0;
     		right: auto;
     		width: 20px;
-    		height: 32px;
+    		height: 30px;
     		svg{
     			height: 32px;
     		}
 		}
 	}
+
 }
 /* Search Form In Popup */
 .mfp-contentx{

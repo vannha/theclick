@@ -568,3 +568,32 @@ $social-colors: (
         padding-left: 15px;
     }
 }
+@mixin placeholder( $elem: 08121991 ) {
+    @if ( $elem == 08121991 ) {
+        &::-webkit-input-placeholder {
+            @content;
+        }
+        &:-moz-placeholder {
+            @content;
+        }
+        &::-moz-placeholder {
+            @content;
+        }
+        &:-ms-input-placeholder {
+            @content;
+        }
+    } @else {
+        #{$elem}::-webkit-input-placeholder {
+            @content;
+        }
+        #{$elem}:-moz-placeholder {
+            @content;
+        }
+        #{$elem}::-moz-placeholder {
+            @content;
+        }
+        #{$elem}:-ms-input-placeholder {
+            @content;
+        }
+    }
+}
