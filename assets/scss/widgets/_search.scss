@@ -5,10 +5,6 @@
 .search-form,
 .woocommerce-product-search{
 	position: relative;
-	input[name="s"],
-	[type="submit"]{
-		@include border-radius(23px);
-	}
 	input[name="s"]{
 		padding-right: 118px;
 		[dir="rtl"] &{
@@ -29,7 +25,7 @@
 		right: 0;
 		bottom: 0;
 		width: 108px;
-		line-height: 46px;
+		line-height: 50px;
 		text-align: center;
 		border: none;
 		padding: 0;
