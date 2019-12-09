@@ -19,6 +19,7 @@
         theclick_wc_single_product_gallery();
         theclick_wooscp_change_text();
         theclick_custom_owl();
+        theclick_link_search_toggle();
         // WooCommerce
         theclick_quantity_plus_minus();
         theclick_quantity_plus_minus_action();
@@ -768,12 +769,14 @@
             });
         }); */
     }
-    function theclick_link_search_toggle{
-        $('.link-search-toggle').on('click',function(){
-            if($(this).hasClass('clicked'))
+    function theclick_link_search_toggle(){
+        $('.link-search-toggle').on('click',function(e){
+            e.preventDefault();
+            $(this).toggleClass('clicked');
+            /* if($(this).hasClass('clicked'))
                 $(this).removeClass('clicked');
             else
-                $(this).addClass('clicked');
+                $(this).addClass('clicked'); */
         });
     }
     /* Masonry */
