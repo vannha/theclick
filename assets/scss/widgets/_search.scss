@@ -62,19 +62,16 @@
 		&.clicked{
 			+.search-form{
 				display: block;
-				opacity: 1;
-				visibility: visible;
-				width: 100%;
+				.searchform-wrap .search-field{
+					width: 250px;
+				}
 			}
 		}
 	}
 	.search-form{
 		position: absolute;
 		top: 0;
-		width: 0;
-		opacity: 0;
-		visibility: hidden;
-		@include transition();
+		display: none;
 	}
 	.searchform-wrap{
 		position: relative;
@@ -83,7 +80,7 @@
 			padding: 10px 10px 10px 30px;
 		    height: 32px;
 		    border-width: 0 0 1px 0;
-		    min-width: 250px;
+		    width: 0;
 		    font-size: 12px;
 		    @include placeholder(){
 				font-size: 12px;
