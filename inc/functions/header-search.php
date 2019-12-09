@@ -17,7 +17,7 @@ function theclick_my_search_form($form){
 		<div class="searchform-wrap">
         <input type="text" value="' . get_search_query() . '" name="s" class="search-field" placeholder="' . esc_attr__("Search here...", 'theclick') . '" >';
 	$form .= wp_kses_post($search_query);
-	$form .= '<button type="submit" value="Search" class="search-submit">'. theclick_get_svg('search').'</button>';
+	$form .= '<button type="submit" value="Search" class="search-submit">search</button>';
 	$form .= '</div></form>';
 	return $form;
 }
