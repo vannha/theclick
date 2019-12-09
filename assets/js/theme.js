@@ -768,21 +768,16 @@
     function theclick_link_search_toggle(){
          $('.link-search-toggle').on('click',function(e){
             e.preventDefault();
-            e.stopPropagation();
             $(this).toggleClass('clicked');
-           /*  if($(this).hasClass('clicked'))
-                $(this).removeClass('clicked');
-            else
-                $(this).addClass('clicked');  */
         }); 
         $(document).on('click', function (e) {
             e.stopPropagation();
             var target = $(e.target); console.log(target);
             var check = '.link-search-toggle';
             if (!(target.is(check) )) {
-                //if ($('.link-search-toggle').hasClass('clicked')) {
+                if ($('.link-search-toggle').hasClass('clicked')) {
                     $('.link-search-toggle').removeClass('clicked');
-                //}
+                }
             }
         }); 
     }
