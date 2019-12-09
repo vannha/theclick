@@ -39,3 +39,6 @@
 .ef5-svg:hover path{
 	fill: $accent-color;
 }
+a:hover >.ef5-svg:hover path{
+	fill: $accent-color;
+}
