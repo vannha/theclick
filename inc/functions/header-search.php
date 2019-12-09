@@ -23,7 +23,7 @@ function theclick_my_search_form($form)
 	$form .= '</form>';
 	return $form;
 }
-add_filter('get_search_form', 'theclick_my_search_form');
+//add_filter('get_search_form', 'theclick_my_search_form');
 /**
  * Header Search Icon
  * @since 1.0.0 
@@ -35,6 +35,7 @@ if(!function_exists('theclick_header_search')){
 			'after'  => '',
 			'icon'	 => theclick_get_svg('search'),
 			'type'	 => '',
+			'label'  => '',
 			'class'  => ''
 		]);
 		$show_search = theclick_get_opts('header_search', '0');

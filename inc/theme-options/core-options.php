@@ -380,6 +380,14 @@ if(!function_exists('theclick_header_atts')){
                     'type'     => 'button_set',
                     'options'  => $options,
                     'default'  => $default_value,
+                ), 
+                array(
+                    'title'    => esc_html__('Form Popup', 'theclick'),
+                    'subtitle' => esc_html__('Popup/toggle display', 'theclick'),
+                    'id'       => 'search_display',
+                    'type'     => 'button_set',
+                    'options'  => $options,
+                    'default'  => $default_value,
                 )
             ),
             theclick_header_wc_attrs($options, $default_value),
