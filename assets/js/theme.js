@@ -768,6 +768,14 @@
             });
         }); */
     }
+    function theclick_link_search_toggle{
+        $('.link-search-toggle').on('click',function(){
+            if($(this).hasClass('clicked'))
+                $(this).removeClass('clicked');
+            else
+                $(this).addClass('clicked');
+        });
+    }
     /* Masonry */
     function theclick_masonry_filter(){
         "use strict";
