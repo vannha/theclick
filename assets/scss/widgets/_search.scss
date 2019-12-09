@@ -71,10 +71,12 @@
 		display: none;
 	}
 	.searchform-wrap{
+		position: relative;
+    	z-index: 9;
 		.search-field{
 			padding: 10px 10px 10px 30px;
 		    height: 32px;
-		    border: 0;
+		    border-width: 0 0 1px 0;
 		    min-width: 250px;
 		    font-size: 12px;
 		    @include placeholder(){
