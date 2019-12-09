@@ -62,8 +62,8 @@
 		&.clicked{
 			+.search-form{
 				display: block;
-				.searchform-wrap .search-field{
-					width: 250px;
+				.searchform-wrap{
+					width: 270px;
 				}
 			}
 		}
@@ -76,13 +76,14 @@
 	.searchform-wrap{
 		position: relative;
     	z-index: 9;
+    	width: 0;
+    	@include transition();
 		.search-field{
 			padding: 10px 10px 10px 30px;
 		    height: 32px;
 		    border-width: 0 0 1px 0;
-		    width: 0;
+		    width: 100%;
 		    font-size: 12px;
-		    @include transition();
 		    @include placeholder(){
 				font-size: 12px;
 			};
