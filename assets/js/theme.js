@@ -778,7 +778,7 @@
             else
                 $(this).addClass('clicked'); */
         });
-        $(document).on('click', function (e) {
+        /* $(document).on('click', function (e) {
             var target = $(e.target);
             var check = '.link-search-toggle';
             if (!(target.is(check) )) {
@@ -786,7 +786,7 @@
                     $('.link-search-toggle').removeClass('clicked');
                 }
             }
-        });
+        }); */
     }
     /* Masonry */
     function theclick_masonry_filter(){
