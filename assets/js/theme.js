@@ -9,7 +9,7 @@
         theclick_touched_side();
         theclick_open_mobile_menu();
         theclick_popup();
-        theclick_toggle();
+        //theclick_toggle();
         theclick_side_nav();
         theclick_video_size();
         theclick_vcRow();
