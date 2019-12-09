@@ -59,19 +59,20 @@
 			position: relative;
 			bottom: 2px;
 		}
-		.clicked{
+		&:hover,&:focus,&:active{
 			+.search-form{
-				right:auto;
+				display: block;
 			}
 		}
 	}
 	.search-form{
 		position: absolute;
 		top: 0;
+		display: none;
 	}
 	.searchform-wrap{
 		.search-field{
-			padding: 10px 10px 10px 20px;
+			padding: 10px 10px 10px 30px;
 		    height: 32px;
 		    border: 0;
 		    min-width: 250px;
