@@ -40,16 +40,16 @@ if(!function_exists('theclick_header_search')){
 		if('0' === $show_search) return;
 
 		$link_classes = ['header-icon search-icon',$args['class']];
-
+		$label_html = !empty($args['label']) ? '<span>'.$args['label'].'</span>' : '';
 		echo wp_kses_post($args['before']);
 		if($search_display == '1'){
 			$link_classes[] = 'ef5-header-popup ';
 			add_action('wp_footer', 'theclick_header_search_popup_html');
-			echo '<a href="#ef5-header-search" class="'. trim(implode(' ', $link_classes)).'">'.theclick_html($args['icon']).'</a>';
+			echo '<a href="#ef5-header-search" class="'. trim(implode(' ', $link_classes)).'">'.theclick_html($args['icon'] . $label_html).'</a>';
 		} else {
 			echo '<div class="' . trim(implode(' ', $link_classes)) . '">';
 				echo '<div class="ef5-search-toggle">';
-					echo '<a href="#ef5-header-search" class="link-search-toggle">' . theclick_html($args['icon']) . '</a>';
+					echo '<a href="#ef5-header-search" class="link-search-toggle">' . theclick_html($args['icon'] . $label_html) . '</a>';
 					get_search_form();
 				echo '</div>';
 			echo '</div>';
