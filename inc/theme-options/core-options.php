@@ -393,6 +393,7 @@ if(!function_exists('theclick_header_atts')){
             ),
             theclick_header_wc_attrs($options, $default_value),
             theclick_header_signin_signup_opts($options, $default_value),
+            theclick_header_social_counter($options, $default_value),
             array(
                 array(
                     'title'    => esc_html__('Show Social', 'theclick'),
@@ -463,7 +464,6 @@ if(!function_exists('theclick_header_atts')){
                     'default'  => $default_helper_menu_value
                 )
             ),
-            theclick_header_social_counter($options, $default_value),
             array(
                 array(
                     'id'       => 'header_side_copyright',
