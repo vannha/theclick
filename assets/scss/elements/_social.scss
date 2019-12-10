@@ -11,3 +11,27 @@
 		}
 	}
 }
+
+.apsc-icons-wrapper{
+	&.apsc-theme-1{
+		.apsc-each-profile{
+		    min-height: 70px;
+    		width: 70px;
+    		font-family: $futura-pt-book;
+    		a{
+    			padding: 20px 5px;
+    			color: $primary_color;
+    			background-color: #fff;
+		    	border: $main_border;
+		    	@include box-shadow('none');
+    		}
+		}
+		/* .apsc-facebook-icon {
+		    background-color: #fff;
+		    border: $main_border;
+		    a{
+		    	color: $primary_color;
+		    }
+		} */
+	} 
+}
