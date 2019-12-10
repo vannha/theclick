@@ -631,7 +631,7 @@ if (!function_exists('theclick_header_social_counter')) {
                 'type'     => 'button_set',
                 'options'  => $options,
                 'default'  => $default_value,
-            )
+            ),
         );
     }
 }
