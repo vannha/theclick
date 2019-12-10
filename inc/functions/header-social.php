@@ -93,6 +93,7 @@ function theclick_header_social_counter_render($args=[]){
         'class'  => ''
     ]);
     $header_social_counter = theclick_get_opts('header_social_counter', '0');
+    var_dump($header_social_counter);
     if ($header_social_counter === '0') return;
     the_widget(
         'APSC_Widget',
