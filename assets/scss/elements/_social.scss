@@ -26,12 +26,14 @@
 		    	@include box-shadow('none');
     		}
 		}
-		/* .apsc-facebook-icon {
-		    background-color: #fff;
-		    border: $main_border;
-		    a{
-		    	color: $primary_color;
-		    }
-		} */
+		.social-icon .fa,.social-icon i{
+			font-size: 16px;
+			line-height: 24px;
+		}
+		.apsc-count{
+			font-size: 10px;
+			line-height: 13px;
+			padding: 0;
+		}
 	} 
 }
