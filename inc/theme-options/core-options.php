@@ -623,14 +623,16 @@ if (!function_exists('theclick_header_social_counter')) {
     function theclick_header_social_counter($options, $default_value)
     {
         if (!class_exists('SC_Class')) return array();
-        return [array(
+        return array(
+            array(
                 'title'    => esc_html__('Show Social Counter', 'theclick'),
                 'subtitle' => esc_html__('Show/Hide social counter', 'theclick'),
                 'id'       => 'header_social_counter',
                 'type'     => 'button_set',
                 'options'  => $options,
-                'default'  => $default_value,
-            )];
+                'default'  => $default_value
+            )
+        );
     }
 }
 
