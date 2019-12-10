@@ -1,0 +1,16 @@
+.apsc-icons-wrapper{
+	&.apsc-theme-1{
+		margin: 0 -7.5px;
+		.apsc-each-profile{
+			padding: 0 7.5px;
+			min-height: auto;
+    		width: auto;
+    		a{
+    			padding: 0;
+    			color: inherit !important;
+    			border: 0;
+    			background-color: transparent;
+    		}
+		}
+	}
+}

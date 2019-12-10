@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying default header layout
  */
@@ -9,9 +10,9 @@
             <div class="row justify-content-between align-items-center">
                 <div class="ef5-header-left col">
                     <div class="nav-extra align-items-center">
-                        <?php 
+                        <?php
                         theclick_header_side_nav_icon(['class' => '']);
-                        theclick_header_search(['class' => '','label' => esc_html__('Search Blog','theclick')]); 
+                        theclick_header_search(['class' => '', 'label' => esc_html__('Search Blog', 'theclick')]);
                         ?>
                     </div>
                 </div>
@@ -19,7 +20,7 @@
                     <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
                 </div>
                 <div class="header-attrs col">
-                    <div class="header-attr-wrap nav-extra">
+                    <div class="header-attr-wrap nav-extra justify-content-end">
                         <?php
                         theclick_header_signin_signup(['class' => 'd-none d-sm-block']);
                         theclick_header_wishlist(['class' => 'd-none d-sm-block']);
