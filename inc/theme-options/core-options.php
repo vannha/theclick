@@ -463,6 +463,7 @@ if(!function_exists('theclick_header_atts')){
                     'default'  => $default_helper_menu_value
                 )
             ),
+            theclick_header_social_counter($options, $default_value),
             array(
                 array(
                     'id'       => 'header_side_copyright',
