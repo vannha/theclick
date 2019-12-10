@@ -20,7 +20,7 @@
     		font-family: $futura-pt-book;
     		a{
     			padding: 20px 5px;
-    			color: $primary_color;
+    			color: $primary_color !important;
     			background-color: #fff;
 		    	border: $MainBorder;
 		    	@include box-shadow('none');
