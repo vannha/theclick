@@ -629,8 +629,8 @@ if (!function_exists('theclick_header_social_counter')) {
                 'subtitle' => esc_html__('Show/Hide social counter', 'theclick'),
                 'id'       => 'header_social_counter',
                 'type'     => 'button_set',
-                'options'  => $options,
-                'default'  => $default_value,
+                'options'  => array(),
+                'default'  => '',
             )
         );
     }
