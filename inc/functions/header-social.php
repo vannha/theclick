@@ -96,7 +96,7 @@ function theclick_header_social_counter_render($args=[]){
     if ($header_social_counter === '0') return;
     //echo do_shortcode( '[aps-get-count social_media="facebook"]', false );
     the_widget(
-        'apsc_widget',
+        'APSC_Widget',
         array(
             'title' => '',
             'theme' => ''
