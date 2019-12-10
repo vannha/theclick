@@ -86,7 +86,7 @@ function theclick_header_social($args = [])
     endif;
 }
 
-function theclick_header_social_counter($args=[]){ die('aaa');
+function theclick_header_social_counter($args=[]){ 
     $args = wp_parse_args($args, [
         'before' => '',
         'after'  => '',
@@ -94,5 +94,5 @@ function theclick_header_social_counter($args=[]){ die('aaa');
     ]);
     $header_social_counter = theclick_get_opts('header_social_counter', '0');
     if ($header_social_counter === '0') return;
-    //echo do_shortcode( '[aps-get-count social_media="facebook"]', false );
+    echo do_shortcode( '[aps-get-count social_media="facebook"]', false );
 }
