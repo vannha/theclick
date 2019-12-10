@@ -86,7 +86,7 @@ function theclick_header_social($args = [])
     endif;
 }
 
-function theclick_header_social_counter($args=[]){
+function theclick_header_social_counter($args=[]){ die('aaa');
     $args = wp_parse_args($args, [
         'before' => '',
         'after'  => '',
