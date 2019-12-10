@@ -86,14 +86,16 @@ function theclick_header_social($args = [])
     endif;
 }
 
-function theclick_header_social_counter_render($args=[]){ 
+function theclick_header_social_counter_render($args=[]){
+    if (!class_exists('SC_Class')) return;
+
     $args = wp_parse_args($args, [
         'before' => '',
         'after'  => '',
         'class'  => ''
     ]);
     $header_social_counter = theclick_get_opts('header_social_counter', '0');
-    var_dump($header_social_counter);
+  
     if ($header_social_counter === '0') return;
     the_widget(
         'APSC_Widget',
