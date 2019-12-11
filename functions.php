@@ -110,6 +110,12 @@ if(!function_exists('theclick_configs')){
             'google_api_key' => apply_filters('ef5systems-google-api-key', false)
 
         ];
+        $header_layout = theclick_get_opts('header_layout', '1');
+        switch ($header_layout) {
+            case '14':
+                $configs['main_menu_height'] = '66px';
+                break;
+        }
         return $configs[$value];
     }
 }
