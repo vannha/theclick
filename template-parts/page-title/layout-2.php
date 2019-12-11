@@ -38,7 +38,7 @@ if ( ! $titles_html )
 <div class="ef5-pagetitle-wrap">
     <div class="<?php echo implode(' ', $pt_cls);?>">
         <?php theclick_ptitle_parallax_image(); ?>
-        <?php get_template_part('template-parts/header/header-logo'); ?>
+        <?php theclick_ptitle_logo(); ?>
         <div class="<?php theclick_ptitle_inner_class();?>">
             <div class="row align-items-center">
                 <div class="<?php echo trim(implode(' ', $title_css_class));?>">

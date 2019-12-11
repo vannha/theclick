@@ -97,3 +97,15 @@ function theclick_ptitle_parallax_image(){
     $titles = theclick_get_page_titles();
     echo '<div class="parallax"><img src="'.esc_url($parallax_url['url']).'" alt="'.esc_attr($titles['title']).'" /></div>';
 }
+
+function theclick_ptitle_logo(){
+    $ptitle_logo = theclick_get_theme_opt('ptitle_logo', ['url' => '']);
+    if (empty($ptitle_logo['url'])) return;
+    printf(
+        '<a class="ptitle-logo" href="%1$s" title="%2$s" rel="home"><img src="%3$s" alt="%4$s"/></a>',
+        esc_url(home_url('/')),
+        esc_attr(get_bloginfo('name')),
+        esc_url($ptitle_logo),
+        esc_attr(get_bloginfo('name'))
+    );
+}
