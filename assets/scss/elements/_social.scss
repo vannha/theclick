@@ -27,6 +27,9 @@
     			background-color: #fff;
 		    	border: $MainBorder;
 		    	@include box-shadow('none');
+		    	&:before{
+		    		content: none !important;
+		    	}
     		}
 		}
 		.social-icon .fa,.social-icon i{
