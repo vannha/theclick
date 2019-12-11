@@ -1,17 +1,7 @@
 <?php
-if(isset($args)){
-    $titles = [
-        'title' => $args['title'],
-        'desc'  => $args['desc']
-    ];
-    $show_breadcrumb = $args['show_breadcrumb'];
-    $ptitle_layout = $args['ptitle_layout'];
-} else {
-   $titles = theclick_get_page_titles();
-   $show_breadcrumb = theclick_get_opts( 'breadcrumb_on', '1' );
-   $ptitle_layout = theclick_get_opts('ptitle_layout','1');
-}
-
+$titles = theclick_get_page_titles();
+$show_breadcrumb = theclick_get_opts('breadcrumb_on', '1');
+$ptitle_layout = theclick_get_opts('ptitle_layout', '1');
 
 $pt_cls = array(
     'ef5-pagetitle',
@@ -48,13 +38,14 @@ if ( ! $titles_html )
 <div class="ef5-pagetitle-wrap">
     <div class="<?php echo implode(' ', $pt_cls);?>">
         <?php theclick_ptitle_parallax_image(); ?>
+        <?php get_template_part('template-parts/header/header-logo'); ?>
         <div class="<?php theclick_ptitle_inner_class();?>">
             <div class="row align-items-center">
                 <div class="<?php echo trim(implode(' ', $title_css_class));?>">
                     <?php printf( '%s', $titles_html); ?>
                 </div>
                 <?php if($show_breadcrumb && (!is_home() || !is_front_page())) { ?>
-                <div class="ef5-breadcrumb col-lg-6 text-lg-end">
+                <div class="ef5-breadcrumb">
                     <?php theclick_breadcrumb(['class'=>'h5']); ?>
                 </div>
                 <?php } ?>
