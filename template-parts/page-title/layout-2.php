@@ -1,11 +1,10 @@
 <?php
 $titles = theclick_get_page_titles();
 $show_breadcrumb = theclick_get_opts('breadcrumb_on', '1');
-$ptitle_layout = theclick_get_opts('ptitle_layout', '1');
 $ptitle_align = theclick_get_theme_opt('ptitle_align', 'text-center');
 $pt_cls = array(
     'ef5-pagetitle',
-    'ptitle-layout-' . $ptitle_layout
+    'ptitle-layout-2'
 );
 $title_css_class = ['col-12'];
 
