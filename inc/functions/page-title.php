@@ -105,7 +105,7 @@ function theclick_ptitle_logo(){
         '<a class="ptitle-logo" href="%1$s" title="%2$s" rel="home"><img src="%3$s" alt="%4$s"/></a>',
         esc_url(home_url('/')),
         esc_attr(get_bloginfo('name')),
-        esc_url($ptitle_logo),
+        esc_url($ptitle_logo['url']),
         esc_attr(get_bloginfo('name'))
     );
 }
