@@ -5,7 +5,7 @@
  */
 ?>
 <header id="ef5-header" <?php theclick_header_class(); ?>>
-    <div id="ef5-headroom" class="main-header">
+    <div class="main-header">
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="row justify-content-between align-items-center">
                 <?php theclick_header_side_nav_icon(['class' => 'd-none d-sm-block']); ?>
