@@ -23,7 +23,13 @@
     <?php theclick_header_top(); ?>
     <div id="ef5-header-wrap">
         <?php
+        $ptitle_ontop = theclick_get_opts('ptitle_ontop','0');
+        if($ptitle_ontop == '1')
+            theclick_page_title();
+
             theclick_header_main(); 
+            
+        if($ptitle_ontop != '1')
             theclick_page_title();
         ?>
     </div>
