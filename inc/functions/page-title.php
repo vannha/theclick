@@ -8,6 +8,9 @@
 */
 function theclick_page_title(){
     $ptitle_layout = theclick_get_opts('ptitle_layout', '1');
+    if (is_singular('post')) 
+    $ptitle_layout = theclick_get_theme_opt('psingle_ptitle_layout', '1');
+
     if($ptitle_layout === 'none' || is_404() ) return;
     get_template_part('template-parts/page-title/layout', $ptitle_layout);
 }

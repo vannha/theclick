@@ -305,6 +305,17 @@ Redux::setSection($opt_name, array(
             'default'  => theclick_post_sidebar_position()
         ),
         array(
+            'id'       => 'psingle_ptitle_layout',
+            'type'     => 'image_select',
+            'title'    => esc_html__('Layout', 'theclick'),
+            'subtitle' => esc_html__('Select a layout for page title.', 'theclick'),
+            'options'  => array(
+                '1' => get_template_directory_uri() . '/assets/images/page-title/01.png',
+                '2' => get_template_directory_uri() . '/assets/images/page-title/02.png',
+            ),
+            'default'  => '1'
+        ),
+        array(
             'id'      => 'psingle_ptitle_ontop',
             'type'    => 'button_set',
             'options' => array(
