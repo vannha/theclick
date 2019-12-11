@@ -99,7 +99,7 @@ function theclick_header_social_counter_render($args=[]){
     if ($header_social_counter === '0') return;
     $classes = ['header-social-counter', $args['class']];
     echo wp_kses_post($args['before']);
-    echo '<div class="' . trim(implode(' ', $args['class'])) . '">';
+    echo '<div class="' . trim(implode(' ', $classes)) . '">';
     the_widget(
         'APSC_Widget',
         array(
