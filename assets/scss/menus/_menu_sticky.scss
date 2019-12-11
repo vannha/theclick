@@ -55,6 +55,9 @@
     .ef5-svg:hover path{
         fill: $sticky_hover;
     }
+    a:hover > .ef5-svg path{
+        fill: $sticky_hover;
+    }
     .flex_logout a{
         color: $sticky_regular;
         &:hover{
