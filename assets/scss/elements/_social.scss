@@ -23,7 +23,7 @@
     		font-family: $futura-pt-book;
     		a{
     			padding: 22px 5px;
-    			color: $primary_color !important;
+    			color: $link_color !important;
     			background-color: #fff;
 		    	border: $MainBorder;
 		    	@include box-shadow('none');
@@ -31,6 +31,7 @@
 		    		content: none !important;
 		    	}
 		    	&:hover{
+		    		color: $link_color_hover;
 		    		@include transform(translateY(0));
 		    	}
     		}
