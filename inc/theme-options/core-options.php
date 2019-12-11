@@ -994,11 +994,12 @@ if(!function_exists('theclick_page_title_opts')){
             'id'      => 'ptitle_align',
             'type'    => 'button_set',
             'options' => array(
-                ''  => esc_html__('Left', 'theclick'),
-                'center'  => esc_html__('Center', 'theclick'),
-                'end'  => esc_html__('Right', 'theclick'),
+                ''  => esc_html__('Default', 'theclick'),
+                'text-start'  => esc_html__('Start', 'theclick'),
+                'text-center'  => esc_html__('Center', 'theclick'),
+                'text-end'  => esc_html__('End', 'theclick'),
             ),
-            'title'   => esc_html__('Alignment', 'theclick'),
+            'title'   => esc_html__('Page Title Alignment', 'theclick'),
             'default' => 'center'
         );
         if($args['default']){

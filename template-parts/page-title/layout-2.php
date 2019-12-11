@@ -2,7 +2,7 @@
 $titles = theclick_get_page_titles();
 $show_breadcrumb = theclick_get_opts('breadcrumb_on', '1');
 $ptitle_layout = theclick_get_opts('ptitle_layout', '1');
-
+$ptitle_align = theclick_get_theme_opt('ptitle_align', 'text-center');
 $pt_cls = array(
     'ef5-pagetitle',
     'ptitle-layout-' . $ptitle_layout
@@ -16,6 +16,7 @@ if (!$show_breadcrumb) {
 if ($show_breadcrumb && (!is_home() || !is_front_page())) {
     $title_css_class[] = 'col-lg-6';
 }
+$title_css_class[] = $ptitle_align;
 
 ob_start();
 if ($titles['title']) {
