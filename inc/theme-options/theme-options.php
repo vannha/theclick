@@ -305,6 +305,17 @@ Redux::setSection($opt_name, array(
             'default'  => theclick_post_sidebar_position()
         ),
         array(
+            'id'      => 'psingle_ptitle_ontop',
+            'type'    => 'button_set',
+            'options' => array(
+                '-1'  => esc_html__('Default', 'theclick'),
+                '1'  => esc_html__('Yes', 'theclick'),
+                '0'  => esc_html__('No', 'theclick'), 
+            ),
+            'title'   => esc_html__('Show On Top', 'theclick'),
+            'default' => '-1'
+        ),
+        array(
             'id'       => 'post_date_on',
             'title'    => esc_html__('Date', 'theclick'),
             'subtitle' => esc_html__('Show date posted.', 'theclick'),
