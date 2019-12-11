@@ -162,3 +162,34 @@ form {
 	    color: $white;
 	}
 }
+.header-sticky{
+	// Place holder text
+	::-webkit-input-placeholder {
+	    color: $sticky_regular;
+	}
+	*:hover::-webkit-input-placeholder,
+	*:focus::-webkit-input-placeholder {
+	    color: $sticky_hover;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	    color: $sticky_regular;
+	}
+	*:hover:-moz-placeholder,
+	*:focus:-moz-placeholder{
+	    color: $sticky_hover;
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	    color: $sticky_regular;
+	}
+	*:hover::-moz-placeholder,
+	*:focus::-moz-placeholder{
+	    color: $sticky_hover;
+	}
+	:-ms-input-placeholder {
+	    color: $sticky_regular;
+	}
+	*:hover:-ms-input-placeholder ,
+	*:focus:-ms-input-placeholder {
+	    color: $sticky_hover;
+	}
+}
