@@ -31,7 +31,7 @@
 		    		content: none !important;
 		    	}
 		    	&:hover{
-		    		@include transform(translateY(-6px));
+		    		@include transform(translateY(0));
 		    	}
     		}
 		}
