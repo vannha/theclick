@@ -326,6 +326,12 @@ Redux::setSection($opt_name, array(
             'default' => '0'
         ),
         array(
+            'id'       => 'post_single_custom_title',
+            'title'    => esc_html__('Custom the post single title text', 'theclick'),
+            'type'     => 'text',
+            'default'  => ''
+        ),
+        array(
             'id'       => 'post_date_on',
             'title'    => esc_html__('Date', 'theclick'),
             'subtitle' => esc_html__('Show date posted.', 'theclick'),

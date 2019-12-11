@@ -38,9 +38,13 @@ function theclick_get_page_titles()
         }
         // Single page view
         elseif (is_singular()) {
+            $post_single_custom_title = theclick_get_theme_opt('post_single_custom_title', '');
             $title = get_post_meta(get_the_ID(), 'custom_title', true);
             if (!$title) {
                 $title = get_the_title();
+                if(is_singular('post') && !empty($post_single_custom_title)){
+                    $title = $post_single_custom_title;
+                }
             }
             $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
         } 
