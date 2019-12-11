@@ -322,7 +322,7 @@ Redux::setSection($opt_name, array(
                 '1'  => esc_html__('Yes', 'theclick'),
                 '0'  => esc_html__('No', 'theclick'), 
             ),
-            'title'   => esc_html__('Show On Top', 'theclick'),
+            'title'   => esc_html__('Post Title On Top', 'theclick'),
             'default' => '0'
         ),
         array(
