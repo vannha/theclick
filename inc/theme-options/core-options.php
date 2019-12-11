@@ -974,7 +974,12 @@ if(!function_exists('theclick_page_title_opts')){
         $breadcrumb_on_opts = array(
             '1'  => esc_html__('Show','theclick'), 
             '0'  => esc_html__('Hide','theclick'), 
-         );
+        );
+        $ptitle_ontops = array(
+            '1'  => esc_html__('Yes','theclick'), 
+            '0'  => esc_html__('No','theclick'), 
+        );
+
         if($args['default']){
             $default_value = '-1';
             $ptitle_layout = [
@@ -999,6 +1004,9 @@ if(!function_exists('theclick_page_title_opts')){
             $breadcrumb_on_opts = [
                 '-1'  => esc_html__('Default','theclick')
             ] + $breadcrumb_on_opts;
+            $ptitle_ontops = [
+                '-1'  => esc_html__('Default','theclick')
+            ] + $ptitle_ontops;
         }
         return array(
             array(
@@ -1008,6 +1016,13 @@ if(!function_exists('theclick_page_title_opts')){
                 'subtitle' => esc_html__('Select a layout for page title.', 'theclick'),
                 'options'  => $ptitle_layout,
                 'default'  => $default_value
+            ),
+            array(
+                'id'      => 'ptitle_ontop',
+                'type'    => 'button_set',
+                'options' => $ptitle_ontops,
+                'title'   => esc_html__('Show On Top', 'theclick'),
+                'default' => $default_value
             ),
             $custom_title,
             $custom_desc,
