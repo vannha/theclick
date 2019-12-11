@@ -27,7 +27,7 @@
                         theclick_header_compare(['class' => 'd-none d-sm-block']);
                         theclick_header_cart(['class' => 'd-none d-sm-block']);
                         theclick_header_social(['class' => 'd-none d-sm-block']);
-                        theclick_header_social_counter_render(['class' => 'd-none d-sm-block']);
+                        theclick_header_social_counter_render(['class' => 'd-none d-xs-block']);
                         theclick_header_popup_nav_icon(['class' => 'd-none d-sm-block']);
                         theclick_header_mobile_menu_icon();
                         ?>
