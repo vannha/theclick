@@ -30,6 +30,9 @@
 		    	&:before{
 		    		content: none !important;
 		    	}
+		    	&:hover{
+		    		@include transform(translateY(-6px));
+		    	}
     		}
 		}
 		.social-icon .fa,.social-icon i{
