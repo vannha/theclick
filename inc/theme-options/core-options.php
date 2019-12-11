@@ -975,7 +975,11 @@ if(!function_exists('theclick_page_title_opts')){
             '1'  => esc_html__('Show','theclick'), 
             '0'  => esc_html__('Hide','theclick'), 
         );
-        $ptitle_ontops = array(
+        $ptitle_ontop = array(
+            '1'  => esc_html__('Yes','theclick'), 
+            '0'  => esc_html__('No','theclick'), 
+        );
+        $ptitle_full_width = array(
             '1'  => esc_html__('Yes','theclick'), 
             '0'  => esc_html__('No','theclick'), 
         );
@@ -1004,9 +1008,12 @@ if(!function_exists('theclick_page_title_opts')){
             $breadcrumb_on_opts = [
                 '-1'  => esc_html__('Default','theclick')
             ] + $breadcrumb_on_opts;
-            $ptitle_ontops = [
+            $ptitle_ontop = [
                 '-1'  => esc_html__('Default','theclick')
-            ] + $ptitle_ontops;
+            ] + $ptitle_ontop;
+            $ptitle_full_width = [
+                '-1'  => esc_html__('Default','theclick')
+            ] + $ptitle_full_width;
         }
         return array(
             array(
@@ -1020,7 +1027,14 @@ if(!function_exists('theclick_page_title_opts')){
             array(
                 'id'      => 'ptitle_ontop',
                 'type'    => 'button_set',
-                'options' => $ptitle_ontops,
+                'options' => $ptitle_ontop,
+                'title'   => esc_html__('Show On Top', 'theclick'),
+                'default' => $default_value
+            ),
+            array(
+                'id'      => 'ptitle_full_width',
+                'type'    => 'button_set',
+                'options' => $ptitle_full_width,
                 'title'   => esc_html__('Show On Top', 'theclick'),
                 'default' => $default_value
             ),
