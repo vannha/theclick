@@ -31,7 +31,7 @@
 		    		content: none !important;
 		    	}
 		    	&:hover{
-		    		color: $link_color_hover;
+		    		color: $link_color_hover !important;
 		    		@include transform(translateY(0));
 		    	}
     		}
