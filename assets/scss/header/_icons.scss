@@ -126,7 +126,6 @@
                 width: auto;
                 a{
                     padding: 0;
-                    color: inherit !important;
                     border: 0;
                     background-color: transparent;
                 }
@@ -142,6 +141,14 @@
             }
             .apsc-count{
                 margin-left: 5px;
+            }
+        }
+    }
+    &.header-sticky{
+        .apsc-icons-wrapper.apsc-theme-1 .apsc-each-profile a{
+            color: $sticky_regular !important;
+            &:hover{
+                color: $sticky_hover !important;
             }
         }
     }
