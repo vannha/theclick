@@ -1000,7 +1000,7 @@ if(!function_exists('theclick_page_title_opts')){
                 'text-end'  => esc_html__('End', 'theclick'),
             ),
             'title'   => esc_html__('Page Title Alignment', 'theclick'),
-            'default' => 'center'
+            'default' => 'text-center'
         );
         if($args['default']){
             $default_value = '-1';
