@@ -983,7 +983,13 @@ if(!function_exists('theclick_page_title_opts')){
             '1'  => esc_html__('Yes','theclick'), 
             '0'  => esc_html__('No','theclick'), 
         );
-
+        $custom_ptitle_logo = array(
+            'id'       => 'ptitle_logo',
+            'type'     => 'media',
+            'title'    => esc_html__('Logo Image', 'theclick'),
+            'subtitle' => esc_html__('Choose your image', 'theclick'),
+            'required'    => array('ptitle_layout', '=', '2')
+        );
         if($args['default']){
             $default_value = '-1';
             $ptitle_layout = [
@@ -1014,6 +1020,8 @@ if(!function_exists('theclick_page_title_opts')){
             $ptitle_full_width = [
                 '-1'  => esc_html__('Default','theclick')
             ] + $ptitle_full_width;
+
+            $custom_ptitle_logo = '';
         }
         return array(
             array(
@@ -1035,7 +1043,7 @@ if(!function_exists('theclick_page_title_opts')){
                 'id'      => 'ptitle_full_width',
                 'type'    => 'button_set',
                 'options' => $ptitle_full_width,
-                'title'   => esc_html__('Show On Top', 'theclick'),
+                'title'   => esc_html__('Full Width', 'theclick'),
                 'default' => $default_value
             ),
             $custom_title,
@@ -1068,6 +1076,7 @@ if(!function_exists('theclick_page_title_opts')){
                 'force_output' => $force_output,
                 'default'      => ''
             ),
+            $custom_ptitle_logo,
             array(
                 'id'           => 'ptitle_paddings',
                 'type'         => 'spacing',
