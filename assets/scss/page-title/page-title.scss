@@ -35,5 +35,7 @@
 	}
 }
 .ef5-pagetitle-wrap +.ef5-header{
-	
+	.header-inner-wrap{
+		border-bottom: 1px solid $MainBorderColor;
+	}
 }
