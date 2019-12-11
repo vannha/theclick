@@ -166,6 +166,7 @@ form {
 	input[type="text"]{
 		background-color: transparent;
 		color: $sticky_regular;
+		border-color: $sticky_regular;
 	}
 	// Place holder text
 	::-webkit-input-placeholder {
