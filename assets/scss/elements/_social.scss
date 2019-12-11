@@ -36,10 +36,13 @@
 		    	}
     		}
 		}
-		.social-icon .fa,.social-icon i{
-			font-size: 16px;
-			line-height: 24px;
-		}
+		.social-icon{
+			line-height: 1;
+			.fa,i{
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}  
 		.apsc-count{
 			font-size: 10px;
 			line-height: 14px;
