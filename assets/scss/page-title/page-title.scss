@@ -40,5 +40,5 @@
 	}
 }
 .ef5-pagetitle-wrap +.sticky-on.scrollDown{
-	@include transform(translateY(-10px));
+	@include transform(translateY(0));
 }
