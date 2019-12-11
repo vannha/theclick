@@ -13,9 +13,7 @@ $title_css_class = ['col-12'];
 if (!$show_breadcrumb) {
     $pt_cls[] = 'no-breadcrumb';
 }
-if ($show_breadcrumb && (!is_home() || !is_front_page())) {
-    $title_css_class[] = 'col-lg-6';
-}
+
 $title_css_class[] = $ptitle_align;
 
 ob_start();
