@@ -141,7 +141,7 @@ if ( ! function_exists( 'theclick_posted_in' ) ) :
         $args = wp_parse_args($args, [
             'class'           => '',
             'hint'            => esc_html__( 'Posted in', 'theclick' ),
-            'icon'            => 'fa fa-folder',
+            'icon'            => '', //'fa fa-folder',
             'before'          => '',
             'after'           => '',
             'before_category' => '',
