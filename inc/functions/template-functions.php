@@ -251,6 +251,8 @@ if(!function_exists('theclick_loop_pagination')){
 */
 if(!function_exists('theclick_post_author')){
     function theclick_post_author($args = array()){
+        global $authordata;
+        var_dump($authordata);
         $args = wp_parse_args($args, array('layout' => '1'));
         extract( $args );
         $show_author = theclick_get_opts('post_author_info', '0');

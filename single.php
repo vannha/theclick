@@ -24,10 +24,10 @@ get_header();
                     while ( have_posts() ) :
                         the_post();
                         get_template_part( 'template-parts/single/content', get_post_format() );
+                        // About Author
+                        theclick_post_author(); 
                         // Post Navigation
                         theclick_post_navigation();
-                        // About Author
-                        theclick_post_author();        
                         // Comment
                         theclick_comment();
                     endwhile; // End of the loop.
