@@ -415,7 +415,7 @@ if(!function_exists('theclick_post_media')){
     function theclick_post_media($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
-            'thumbnail_size' => is_single() ? 'post_thumbnail' : 'medium',
+            'thumbnail_size' => is_single() ? 'post-thumbnail' : 'medium',
             'echo'           => true,
             'default_thumb'  => apply_filters('theclick_default_post_thumbnail', false),
             'class'          => '',
