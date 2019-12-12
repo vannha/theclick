@@ -124,6 +124,7 @@ if ( ! function_exists( 'theclick_post_meta' ) ) {
             $metas[] = theclick_post_count_view(['show_view' => $args['show_view'], 'echo' => false]);
         if($args['show_like']) 
             $metas[] = theclick_post_count_like(['show_like' => $args['show_like'], 'echo' => false]);
+        $metas[] = '<div class="social_sharing_count">'.get_transient('apsc_facebook').'</div>';
         if($args['show_edit']) 
             $metas[] = theclick_edit_link(['show_edit' => $args['show_edit'], 'echo' => false]);
 
