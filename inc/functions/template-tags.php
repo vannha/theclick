@@ -16,7 +16,7 @@ if ( ! function_exists( 'theclick_posted_by' ) ) :
         $args = wp_parse_args($args, [
             'class'              => '',
             'hint'               => esc_html__( 'Posted by', 'theclick' ),
-            'icon'               => 'fa fa-user',
+            'icon'               => '',//'fa fa-user',
             'author_avatar'      => true,
             'before_author_name' => '',
             'after_author_name'  => '',
@@ -73,7 +73,7 @@ if ( ! function_exists( 'theclick_posted_on' ) ) :
             'class'       => '',
             'hint'        => esc_html__( 'Published on', 'theclick' ),
             'hint_update' => esc_html__( 'Updated on', 'theclick' ),
-            'icon'        => 'fa fa-calendar',
+            'icon'        => '', //'fa fa-calendar',
             'icon_update' => '',
             'before_date' => '',
             'after_date'  => '',
@@ -237,7 +237,7 @@ if ( ! function_exists( 'theclick_comments_popup_link' ) ) {
             'class'     => '',
             'before'    => '',
             'after'     => '',
-            'icon'      => 'fa fa-comment-alt',
+            'icon'      => '', //'fa fa-comment-alt',
             'echo'      => true,
             'show_text' => true,
             'show_cmt'  => '1'
