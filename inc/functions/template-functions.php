@@ -51,31 +51,61 @@ if(!function_exists('theclick_post_title')){
  * Post Meta
  * Prints HTML with meta information for the current post.
 */
+if ( ! function_exists( 'theclick_post_meta_category' ) ) {
+    add_action('theclick_before_loop_title','theclick_post_meta_category');
+    function theclick_post_meta_category($args = [])
+    {
+        if ( is_singular() ) {            
+            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : theclick_get_theme_opt( 'post_categories_on', '0' );
+        }  else {
+            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : theclick_get_theme_opt( 'archive_categories_on', '0' );
+        }
+
+        $args = wp_parse_args($args, [
+            'class'           => '',
+            'show_cat'        => $cats_on,
+            'show_edit'       => false,
+            'stretch_content' => false,
+            'sep'             => '',
+        ]);
+        $metas = [];
+        if($args['show_cat']) 
+            $metas[] = theclick_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
+        if($args['show_edit']) 
+            $metas[] = theclick_edit_link(['show_edit' => $args['show_edit'], 'echo' => false]);
+
+        $output = implode($args['sep'], $metas);
+        $css_classes = ['ef5-meta', $args['class'], 'd-flex', 'align-items-center'];
+        if($args['stretch_content']) $css_classes[] = 'justify-content-between';
+        $classes = trim(implode(' ',$css_classes ));
+        if ( $output )
+        {
+            printf( '<div class="%s">%s</div>', $classes ,$output);
+        }
+    }
+}
 if ( ! function_exists( 'theclick_post_meta' ) ) {
-    add_action('theclick_before_loop_title','theclick_post_meta');
+    add_action('theclick_after_loop_title','theclick_post_meta');
     function theclick_post_meta($args = [])
     {
         if ( is_singular() ) {
             $author_on   = !empty($args['show_author']) ? $args['show_author'] : theclick_get_theme_opt( 'post_author_on', '1' );
             $date_on     = !empty($args['show_date']) ? $args['show_date'] : theclick_get_theme_opt( 'post_date_on', '1' );
-            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : theclick_get_theme_opt( 'post_categories_on', '0' );
             $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : theclick_get_theme_opt( 'post_comments_on', '1' );
-            $show_view = !empty($args['show_view']) ? $args['show_view'] : theclick_get_theme_opt( 'post_view_on', '0' );
-            $show_like = !empty($args['show_like']) ? $args['show_like'] : theclick_get_theme_opt( 'post_like_on', '0' );
+            $show_view   = !empty($args['show_view']) ? $args['show_view'] : theclick_get_theme_opt( 'post_view_on', '0' );
+            $show_like   = !empty($args['show_like']) ? $args['show_like'] : theclick_get_theme_opt( 'post_like_on', '0' );
         }  else {
             $author_on   = !empty($args['show_author']) ? $args['show_author'] : theclick_get_theme_opt( 'archive_author_on', '1' );
             $date_on     = !empty($args['show_date']) ? $args['show_date'] : theclick_get_theme_opt( 'archive_date_on', '1' );
-            $cats_on     = !empty($args['show_cat']) ? $args['show_cat'] : theclick_get_theme_opt( 'archive_categories_on', '0' );
             $comments_on = !empty($args['show_cmt']) ? $args['show_cmt'] : theclick_get_theme_opt( 'archive_comments_on', '1' );
-            $show_view = !empty($args['show_view']) ? $args['show_view'] : theclick_get_theme_opt( 'archive_view_on', '0' );
-            $show_like = !empty($args['show_like']) ? $args['show_like'] : theclick_get_theme_opt( 'archive_like_on', '0' );
+            $show_view   = !empty($args['show_view']) ? $args['show_view'] : theclick_get_theme_opt( 'archive_view_on', '0' );
+            $show_like   = !empty($args['show_like']) ? $args['show_like'] : theclick_get_theme_opt( 'archive_like_on', '0' );
         }
 
         $args = wp_parse_args($args, [
             'class'           => '',
             'show_author'     => $author_on,
             'show_date'       => $date_on,
-            'show_cat'        => $cats_on,
             'show_cmt'        => $comments_on,
             'show_view'       => $show_view,
             'show_like'       => $show_like,
@@ -90,8 +120,6 @@ if ( ! function_exists( 'theclick_post_meta' ) ) {
             $metas[] = theclick_posted_by(['show_author' => $args['show_author'], 'echo' => false, 'author_avatar' => false]);
         if($args['show_cmt'] && comments_open()) 
             $metas[] = theclick_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false]);
-        if($args['show_cat']) 
-            $metas[] = theclick_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
         if($args['show_view']) 
             $metas[] = theclick_post_count_view(['show_view' => $args['show_view'], 'echo' => false]);
         if($args['show_like']) 
@@ -109,7 +137,6 @@ if ( ! function_exists( 'theclick_post_meta' ) ) {
         }
     }
 }
-
 /**
  * Post Excerpt
 */

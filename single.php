@@ -27,9 +27,7 @@ get_header();
                         // Post Navigation
                         theclick_post_navigation();
                         // About Author
-                        theclick_post_author();
-                        // Related
-                        theclick_post_related();
+                        theclick_post_author();        
                         // Comment
                         theclick_comment();
                     endwhile; // End of the loop.
