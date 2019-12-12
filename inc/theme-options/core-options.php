@@ -1334,3 +1334,15 @@ if(!function_exists('theclick_footer_opts')){
         );
     }
 }
+if (!function_exists('theclick_single_post_sharing_count_opt')) {
+    function theclick_single_post_sharing_count_opt(){
+        if (!class_exists('SC_Class')) return;
+        return array(
+            'id'       => 'post_count_sharing_on',
+            'title'    => esc_html__('Sharing Count', 'theclick'),
+            'subtitle' => esc_html__('Show sharing count.', 'theclick'),
+            'type'     => 'switch',
+            'default'  => '0'
+        );
+    }
+}
