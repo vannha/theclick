@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying single post
  *
@@ -15,27 +16,28 @@
  */
 get_header();
 ?>
-    <div class="container">
-        <div class="row">
-            <div id="ef5-content-area" class="<?php theclick_content_css_class();?>">
-                <div class="ef5-blogs">
+<div class="container">
+    <div class="row">
+        <div id="ef5-content-area" class="<?php theclick_content_css_class(); ?>">
+            <div class="ef5-blogs">
                 <?php
-                    /* Start the Loop */
-                    while ( have_posts() ) :
-                        the_post();
-                        get_template_part( 'template-parts/single/content', get_post_format() );
-                        // About Author
-                        theclick_post_author(); 
-                        // Post Navigation
-                        theclick_post_navigation();
-                        // Comment
-                        theclick_comment();
-                    endwhile; // End of the loop.
+                /* Start the Loop */
+                while (have_posts()) :
+                    the_post();
+                    get_template_part('template-parts/single/content', get_post_format());
+                    // About Author
+                    theclick_post_author();
+                    // Post Navigation
+                    theclick_post_navigation();
+                    // Comment
+                    theclick_comment();
+                endwhile; // End of the loop.
                 ?>
-                </div>
             </div>
-            <?php theclick_sidebar(); ?>
         </div>
+        <?php theclick_sidebar(); ?>
     </div>
+    <?php theclick_post_related(); ?>
+</div>
 <?php
 get_footer();

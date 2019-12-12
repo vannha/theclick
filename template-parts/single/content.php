@@ -13,7 +13,6 @@
 <div <?php post_class('ef5-single clearfix'); ?>>
     <?php 
         theclick_post_header(['class' => 'ef5-single-header']);
-        theclick_post_related();
         theclick_post_media(); 
         theclick_post_content(['class' => 'ef5-single-content']);
         theclick_link_pages(['class' => 'ef5-single-page-links']);
