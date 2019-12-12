@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) )
 function theclick_get_page_titles()
 {
     $title = $desc = '';
+    $post_single_custom_title = theclick_get_theme_opt('post_single_custom_title', '');
     // Default titles
     if (!is_archive()) {
         // Posts / page view
@@ -38,7 +39,6 @@ function theclick_get_page_titles()
         }
         // Single page view
         elseif (is_singular()) {
-            $post_single_custom_title = theclick_get_theme_opt('post_single_custom_title', '');
             $title = get_post_meta(get_the_ID(), 'custom_title', true);
             if (!$title) {
                 $title = get_the_title();
