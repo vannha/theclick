@@ -37,9 +37,7 @@ get_header();
         </div>
         <?php theclick_sidebar(); ?>
     </div>
-    <?php
-    echo get_the_id();
-    theclick_post_related(); ?>
+    <?php theclick_post_related(); ?>
 </div>
 <?php
 get_footer();
