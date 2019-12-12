@@ -251,12 +251,11 @@ if(!function_exists('theclick_loop_pagination')){
 */
 if(!function_exists('theclick_post_author')){
     function theclick_post_author($args = array()){
-        $args = wp_parse_args($args, array('layout' => '1','role' => false, 'date' => false));
+        $args = wp_parse_args($args, array('layout' => '1','role' => false));
         extract( $args );
         $show_author = theclick_get_opts('post_author_info', '0');
         if('0' === $show_author || empty(get_the_author_meta('description'))) return;
         $user_info = get_userdata(get_the_author_meta('ID'));
-        var_dump($user_info);
     ?>
     <div class="author-box text-center text-md-<?php echo theclick_align();?>">
         <div class="row">
@@ -268,9 +267,6 @@ if(!function_exists('theclick_post_author')){
                     <div class="h4"><?php the_author(); ?></div>
                     <?php if($role):?>
                         <small class="author-roles d-block"><?php echo implode(' / ', $user_info->roles); ?></small>
-                    <?php endif;?>
-                    <?php if($date):?>
-                        <small class="author-date d-block"><?php echo implode(' / ', $user_info->roles); ?></small>
                     <?php endif;?>
                 </div>
                 <div class="author-bio"><?php the_author_meta('description'); ?></div>
