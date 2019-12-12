@@ -366,7 +366,6 @@ Redux::setSection($opt_name, array(
             'type'     => 'switch',
             'default'  => '0'
         ),
-        theclick_single_post_sharing_count_opt(),
         array(
             'id'       => 'post_share_on',
             'title'    => esc_html__('Share', 'theclick'),
