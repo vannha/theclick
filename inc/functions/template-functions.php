@@ -243,7 +243,6 @@ if(!function_exists('theclick_loop_pagination')){
     }
 }
 
-
 /**
  * Single post Author
  *

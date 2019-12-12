@@ -8,7 +8,7 @@
  */
 function theclick_get_image_sizes() {
     global $_wp_additional_image_sizes;
-    $sizes = array();
+    $sizes = array(); 
     foreach ( get_intermediate_image_sizes() as $_size ) {
         if ( in_array( $_size, array('thumbnail', 'medium', 'medium_large', 'large','post-thumbnail','post-thumbnails') ) ) {
             $sizes[ $_size ]['width']  = get_option( "{$_size}_size_w" );
