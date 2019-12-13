@@ -349,6 +349,7 @@ function theclick_scripts()
         'shop_url'            => function_exists('wc_get_page_id') ? get_permalink( wc_get_page_id( 'shop' )) : '',
         'filter_reset'        => ( strpos($filter_reset,'filter_') !== false || strpos($filter_reset,'min_price') !== false || strpos($filter_reset,'max_price') || strpos($filter_reset, 'rating_filter')) ? 'true' : 'false',
         'filter_clear_text'   => esc_html__('Clear All', 'theclick'),
+        'has_select2'         => class_exists('Woocommerce') ? true : false;
         'is_rtl'              => is_rtl() ? 'true' : 'false'
     );
     if(class_exists('Woocommerce')) {

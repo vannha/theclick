@@ -80,12 +80,15 @@
      * Add select 2
     **/
     function theclick_select2(){
-        $('#ef5-header-top .woocommerce-currency-switcher').select2({
-            theme: "headertop"
-        });
-        $('#ef5-footer .woocommerce-currency-switcher').select2({
-            theme: "footer"
-        });
+        'use strict';
+        if(theclick_ajax_opts.has_select2 == true){
+            $('#ef5-header-top .woocommerce-currency-switcher').select2({
+                theme: "headertop"
+            });
+            $('#ef5-footer .woocommerce-currency-switcher').select2({
+                theme: "footer"
+            });
+        }
     }
 
     /**
