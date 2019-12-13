@@ -30,9 +30,8 @@
 
 // Archive list
 .ef5-archive{
-	background-color: #f9f9f9;
 	overflow: hidden;
-	@include border-radius(10px);
+	@include border-radius(0);
 }
 .ef5-loop-info{
 	padding: 0;
