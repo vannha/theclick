@@ -53,9 +53,9 @@ if(!function_exists('theclick_configs')){
             'main_border_color'     => '#D8D8D8', 
             // Thumbnail Size
             'large_size_w'                    => 810,
-            'large_size_h'                    => 650,
-            'medium_size_w'                   => 370,
-            'medium_size_h'                   => 370,
+            'large_size_h'                    => 500,
+            'medium_size_w'                   => 570,
+            'medium_size_h'                   => 570,
             'thumbnail_size_w'                => 86,
             'thumbnail_size_h'                => 80,
             'post_thumbnail_size_w'           => 1170,
