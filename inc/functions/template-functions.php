@@ -52,16 +52,30 @@ if(!function_exists('theclick_post_extra_link')){
             </div>
         <?php
         }else{
-            $custom_posts = get_posts(['include' => $pids]);
-            if ($custom_posts) {
+            //$custom_posts = get_posts(['include' => $pids]);
+            $args = array(
+                'post__in' => $pids
+            );
+            $custom_posts = new WP_Query($args);
+            if ($custom_posts->have_posts()) {
+
+                while ($custom_posts->have_posts()) {
+
+                    $custom_posts->the_post();
+
+                    // Post data goes here.
+
+                }
+            }
+            if ($custom_posts->have_posts()) {
                 ?>
                 <div class="ef5-post-extra-link">
                 <ul>
-                <?php 
-                foreach ($custom_posts as $post):
-                    setup_postdata($post);
+                <?php
+                while ($custom_posts->have_posts()){
+                    $custom_posts->the_post();
                     printf('<li><a href="%1$s">%2$s</a></li>',get_the_permalink(),get_the_title());
-                endforeach;
+                }
                 wp_reset_postdata();
                 ?>
                 </ul>	
