@@ -37,21 +37,22 @@ if(!function_exists('theclick_post_extra_link')){
             $extra_posts = wp_get_recent_posts(['numberposts'=> $post_number_extra_link]);
         else
             $extra_posts = get_posts(['include' => $pids]);
-
-            var_dump($extra_posts); die;
+        if ($extra_posts) {
         ?>
-        <div class="ef5-post-extra-link">
-        <ul>
-        <?php foreach ($extra_posts as $extra) {
-            printf(
-                '<li><a href="%1$s">%2$s</a></li>',
-                esc_url(get_permalink($extra['ID'])),
-                apply_filters('the_title', $extra['post_title'], $extra['ID'])
-            );
-        }
-	    ?>
-        </ul>	
-	    </div>
+            <div class="ef5-post-extra-link">
+            <ul>
+            <?php 
+            foreach ($extra_posts as $extra) {
+                printf(
+                    '<li><a href="%1$s">%2$s</a></li>',
+                    esc_url(get_permalink($extra['ID'])),
+                    apply_filters('the_title', $extra['post_title'], $extra['ID'])
+                );
+            }
+            ?>
+            </ul>	
+            </div>
+        <?php } ?>
 	<?php
 	}
 }
