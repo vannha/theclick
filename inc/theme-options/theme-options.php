@@ -230,7 +230,7 @@ Redux::setSection($opt_name, array(
                 '4' => esc_html__('Next / Preview', 'theclick'),
                 //'5' => esc_html__('Next / Preview', 'theclick')
             ),
-            'default'  => apply_filters('theclick_loop_pagination', '3')
+            'default'  => apply_filters('theclick_loop_pagination', '4')
         ),
         array(
             'id'       => 'archive_author_on',

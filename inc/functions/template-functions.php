@@ -242,7 +242,7 @@ if(!function_exists('theclick_loop_pagination')){
     function theclick_loop_pagination($args=[]){
         $args = wp_parse_args($args, [
             'show_pagination' => '1',
-            'style'           => theclick_get_theme_opt('archive_nav_type', apply_filters('theclick_loop_pagination', '3')),
+            'style'           => theclick_get_theme_opt('archive_nav_type', apply_filters('theclick_loop_pagination', '4')),
             'class'           => ''
         ]);
         if($args['show_pagination'] !== '1'){
