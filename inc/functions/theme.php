@@ -217,7 +217,8 @@ function theclick_sidebar_css_class($class=''){
         $classes[] = 'col-12 has-gtb';
     } else {  
         $archive_grid_col = theclick_archive_grid_col();
-        if(strpos($archive_grid_col, '/') === true){
+        var_dump(strpos($archive_grid_col, '/'));
+        if(strpos($archive_grid_col, '/') == true){
             $classes[] = ''; 
         }else{
             $content_grid_class = (int)theclick_archive_grid_col();
