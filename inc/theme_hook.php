@@ -87,6 +87,7 @@ add_filter('theclick_archive_sidebar_position', function(){ return 'bottom';});
  * @return string 1 - 12
  * @example add_filter('theclick_archive_grid_col', function(){ return '8';});
 */
+add_filter('theclick_archive_grid_col', function(){ return '70/491';});
 
 /**
  * Default Archive Pagination

@@ -94,7 +94,7 @@ function theclick_page_sidebar_position(){
  * Archive content  grid column
 */
 function theclick_archive_grid_col(){
-    return apply_filters('theclick_archive_grid_col', '70/491');
+    return apply_filters('theclick_archive_grid_col', '8');
 }
 /*
  * Single Post sidebar position 
@@ -169,7 +169,7 @@ function theclick_content_css_class($class=''){
     ];
     $sidebar            = theclick_get_sidebar();
     $sidebar_position   = theclick_sidebar_position();
-    $content_grid_class = theclick_get_opts('archive_grid_col', theclick_archive_grid_col());
+    $content_grid_class = theclick_archive_grid_col();
     
     if( $sidebar_position === 'bottom' ){
         $classes[] = 'col-12 has-gtb';
@@ -195,7 +195,7 @@ function theclick_sidebar(){
     if($sidebar_position === 'none' || $sidebar_position === 'center') return;
     if( is_active_sidebar( $sidebar ) ) {
     ?>
-        <div id="ef5-sidebar-area" class="col-lg-29/509<?php //theclick_sidebar_css_class(); ?>">
+        <div id="ef5-sidebar-area" class="<?php theclick_sidebar_css_class('col-lg-29/509'); ?>">
             <div class="sidebar-inner">
                 <?php get_sidebar(); ?>
             </div>
@@ -216,9 +216,14 @@ function theclick_sidebar_css_class($class=''){
     if( $sidebar_position === 'bottom' ){
         $classes[] = 'col-12 has-gtb';
     } else {  
-        $content_grid_class = (int) theclick_get_opts('archive_grid_col', theclick_archive_grid_col());
-        $sidebar_grid_class = 12 - $content_grid_class;
-        $classes[] = 'col-lg-'.$sidebar_grid_class; 
+        $archive_grid_col = theclick_archive_grid_col();
+        if(strpos($archive_grid_col, '/') === true){
+            $classes[] = 'col-lg-4'; 
+        }else{
+            $content_grid_class = (int)theclick_archive_grid_col();
+            $sidebar_grid_class = 12 - $content_grid_class;
+            $classes[] = 'col-lg-'.$sidebar_grid_class; 
+        }
     }
 
     echo theclick_optimize_css_class(implode(' ', $classes));
