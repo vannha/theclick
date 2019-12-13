@@ -32,13 +32,20 @@ if(!function_exists('theclick_post_extra_link')){
         $post_number_extra_link = theclick_get_theme_opt('post_number_extra_link', '2');
         $post_extra_post_id     = theclick_get_theme_opt('post_extra_post_id', '');
         if(empty($post_extra_link)) return;
-        $recent_post = wp_get_recent_posts(['numberposts'=> $post_number_extra_link]);
-        var_dump($recent_post); die;
-	?>
-		<div class="ef5-post-extra-link">
-            <div class="ef5-before-title empty-none"><?php do_action('theclick_before_loop_title'); ?></div>
-	        <?php the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>'); ?>
-            <div class="ef5-after-title empty-none"><?php do_action('theclick_after_loop_title'); ?></div>
+        $recent_posts = wp_get_recent_posts(['numberposts'=> $post_number_extra_link]);
+         
+        ?>
+        <div class="ef5-post-extra-link">
+        <ul>
+        <?php foreach ($recent_posts as $recent) {
+            printf(
+                '<li><a href="%1$s">%2$s</a></li>',
+                esc_url(get_permalink($recent['ID'])),
+                apply_filters('the_title', $recent['post_title'], $recent['ID'])
+            );
+        }
+	    ?>
+        </ul>	
 	    </div>
 	<?php
 	}
