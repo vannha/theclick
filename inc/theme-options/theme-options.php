@@ -386,7 +386,33 @@ Redux::setSection($opt_name, array(
             'subtitle' => esc_html__('Show related post by post tag.', 'theclick'),
             'type'     => 'switch',
             'default'  => '0'
-        )
+        ),
+        array(
+            'id'       => 'post_extra_link',
+            'type'     => 'button_set',
+            'title'    => esc_html__('Extra post link', 'theclick'),
+            'subtitle' => esc_html__('Show extra post link', 'theclick'),
+            'options'  => array(
+                ''        => esc_html__('Default', 'theclick'),
+                'recent'  => esc_html__('Recent', 'theclick'),
+                'custom'  => esc_html__('Custom', 'theclick'),
+            ),
+            'default'  => 'recent'
+        ),
+        array(
+            'id'       => 'post_number_extra_link',
+            'title'    => esc_html__('Enter the number of recent post for extra link', 'theclick'),
+            'type'     => 'text',
+            'default'  => '',
+            'required' => array('post_extra_link', '=', 'recent')
+        ),
+        array(
+            'id'       => 'post_extra_post_id',
+            'title'    => esc_html__('Enter the id for posts to show, separate by comma (230,231,233...)', 'theclick'),
+            'type'     => 'text',
+            'default'  => '',
+            'required' => array('post_extra_link', '=', 'custom')
+        ),
     )
 ));
 

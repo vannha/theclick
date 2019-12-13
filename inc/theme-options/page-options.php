@@ -95,6 +95,7 @@ function theclick_page_options_register($metabox)
             )
         )
     ));
+     
     $metabox->add_section('post', array(
         'title'  => esc_html__('Post Title', 'theclick'),
         'desc'   => esc_html__('Settings for page header area.', 'theclick'),
