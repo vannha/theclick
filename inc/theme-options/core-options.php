@@ -1049,7 +1049,7 @@ if(!function_exists('theclick_page_title_opts')){
                 'type'    => 'button_set',
                 'options' => $ptitle_ontop,
                 'title'   => esc_html__('Show On Top', 'theclick'),
-                'default' => $default_value
+                'default' => $pt_default_value
             ),
             array(
                 'id'      => 'ptitle_full_width',
