@@ -258,7 +258,7 @@ Redux::setSection($opt_name, array(
             'title'    => esc_html__('Tags', 'theclick'),
             'subtitle' => esc_html__('Show tag names on each post.', 'theclick'),
             'type'     => 'switch',
-            'default'  => '1',
+            'default'  => '0',
         ),
         array(
             'id'       => 'archive_comments_on',
@@ -279,7 +279,7 @@ Redux::setSection($opt_name, array(
             'title'    => esc_html__('Read more', 'theclick'),
             'subtitle' => esc_html__('Show readmore button on archive page.', 'theclick'),
             'type'     => 'switch',
-            'default'  => '1',
+            'default'  => '0',
         )
     )
 ));
