@@ -218,10 +218,7 @@ function theclick_sidebar_css_class($class=''){
     } else {  
         $archive_grid_col = theclick_archive_grid_col();
         $has_dash = explode('/',$archive_grid_col);
-        
-        if(count($has_dash)>1){
-            $classes[] = ''; 
-        }else{
+        if(count($has_dash)<=1){
             $content_grid_class = (int)theclick_archive_grid_col();
             $sidebar_grid_class = 12 - $content_grid_class;
             $classes[] = 'col-lg-'.$sidebar_grid_class; 
