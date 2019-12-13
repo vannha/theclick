@@ -195,7 +195,7 @@ function theclick_sidebar(){
     if($sidebar_position === 'none' || $sidebar_position === 'center') return;
     if( is_active_sidebar( $sidebar ) ) {
     ?>
-        <div id="ef5-sidebar-area" class="<?php theclick_sidebar_css_class(); ?>">
+        <div id="ef5-sidebar-area" class="col-lg-29/509<?php //theclick_sidebar_css_class(); ?>">
             <div class="sidebar-inner">
                 <?php get_sidebar(); ?>
             </div>
@@ -215,7 +215,7 @@ function theclick_sidebar_css_class($class=''){
     $sidebar_position   = theclick_sidebar_position();
     if( $sidebar_position === 'bottom' ){
         $classes[] = 'col-12 has-gtb';
-    } else {
+    } else {  
         $content_grid_class = (int) theclick_get_opts('archive_grid_col', theclick_archive_grid_col());
         $sidebar_grid_class = 12 - $content_grid_class;
         $classes[] = 'col-lg-'.$sidebar_grid_class; 
