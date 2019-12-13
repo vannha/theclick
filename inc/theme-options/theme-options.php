@@ -412,7 +412,7 @@ Redux::setSection($opt_name, array(
             'type'     => 'text',
             'default'  => '',
             'required' => array('post_extra_link', '=', 'custom')
-        ),
+        )
     )
 ));
 
