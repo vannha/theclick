@@ -403,7 +403,7 @@ Redux::setSection($opt_name, array(
             'id'       => 'post_number_extra_link',
             'title'    => esc_html__('Enter the number of recent post for extra link', 'theclick'),
             'type'     => 'text',
-            'default'  => '',
+            'default'  => '2',
             'required' => array('post_extra_link', '=', 'recent')
         ),
         array(
