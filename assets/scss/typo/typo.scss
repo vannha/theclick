@@ -36,6 +36,7 @@ body{
     margin: 0;
     word-break: break-word;
     @include font-smoothing();
+    display: block;
 }
 ::-moz-selection {
     background-color: $accent_color;
