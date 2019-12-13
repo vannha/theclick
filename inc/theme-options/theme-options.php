@@ -397,7 +397,7 @@ Redux::setSection($opt_name, array(
                 'recent'  => esc_html__('Recent', 'theclick'),
                 'custom'  => esc_html__('Custom', 'theclick'),
             ),
-            'default'  => 'recent'
+            'default'  => ''
         ),
         array(
             'id'       => 'post_number_extra_link',
