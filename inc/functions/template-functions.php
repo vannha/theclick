@@ -52,21 +52,10 @@ if(!function_exists('theclick_post_extra_link')){
             </div>
         <?php
         }else{
-            //$custom_posts = get_posts(['include' => $pids]);
             $args = array(
                 'post__in' => $pids
             );
             $custom_posts = new WP_Query($args);
-            if ($custom_posts->have_posts()) {
-
-                while ($custom_posts->have_posts()) {
-
-                    $custom_posts->the_post();
-
-                    // Post data goes here.
-
-                }
-            }
             if ($custom_posts->have_posts()) {
                 ?>
                 <div class="ef5-post-extra-link">
