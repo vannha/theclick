@@ -33,16 +33,14 @@ if(!function_exists('theclick_post_extra_link')){
         $post_extra_post_id     = theclick_get_theme_opt('post_extra_post_id', '');
         $pids = explode(',',$post_extra_post_id);
         if(empty($post_extra_link)) return;
-        if($post_extra_link == 'recent')
-            $extra_posts = wp_get_recent_posts(['numberposts'=> $post_number_extra_link]);
-        else
-            $extra_posts = get_posts(['include' => $pids]);
-        if ($extra_posts) {
-        ?>
+        $recent_posts = $custom_posts = [];
+        if($post_extra_link == 'recent'){
+            $recent_posts = wp_get_recent_posts(['numberposts'=> $post_number_extra_link]);
+            ?>
             <div class="ef5-post-extra-link">
             <ul>
             <?php 
-            foreach ($extra_posts as $extra) {
+            foreach ($recent_posts as $extra) {
                 printf(
                     '<li><a href="%1$s">%2$s</a></li>',
                     esc_url(get_permalink($extra['ID'])),
@@ -52,8 +50,24 @@ if(!function_exists('theclick_post_extra_link')){
             ?>
             </ul>	
             </div>
-        <?php } ?>
-	<?php
+        <?php
+        }else{
+            $custom_posts = get_posts(['include' => $pids]);
+            if ($custom_posts) {
+                ?>
+                <div class="ef5-post-extra-link">
+                <ul>
+                <?php 
+                foreach ($custom_posts as $post) {
+                    setup_postdata($post);
+                    printf('<li><a href="%1$s">%2$s</a></li>',get_the_permalink(),get_the_title());
+                }
+                ?>
+                </ul>	
+                </div>
+                <?php 
+            }
+        }
 	}
 }
 
