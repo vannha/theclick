@@ -964,6 +964,7 @@ if(!function_exists('theclick_page_title_opts')){
         ]);
         $force_output = $args['default'] ? true : false;
         $default_value = '1';
+        $pt_default_value = '0';
 
         $custom_title = $custom_desc = '';
 
@@ -1002,7 +1003,7 @@ if(!function_exists('theclick_page_title_opts')){
             'default' => 'text-center'
         );
         if($args['default']){
-            $default_value = '-1';
+            $default_value = $pt_default_value = '-1';
             $ptitle_layout = [
                 '-1'   => get_template_directory_uri() . '/assets/images/default.png',
                 'none' => get_template_directory_uri() . '/assets/images/none.png'
