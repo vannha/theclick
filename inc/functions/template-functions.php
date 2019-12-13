@@ -35,7 +35,7 @@ if(!function_exists('theclick_post_extra_link')){
         if(empty($post_extra_link)) return;
         $recent_posts = $custom_posts = [];
         if($post_extra_link == 'recent'){
-            $recent_posts = wp_get_recent_posts(['numberposts'=> $post_number_extra_link]);
+            $recent_posts = wp_get_recent_posts(['numberposts'=> $post_number_extra_link,'exclude' => get_the_ID()]);
             ?>
             <div class="ef5-post-extra-link">
             <ul>
