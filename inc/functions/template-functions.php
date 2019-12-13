@@ -58,10 +58,11 @@ if(!function_exists('theclick_post_extra_link')){
                 <div class="ef5-post-extra-link">
                 <ul>
                 <?php 
-                foreach ($custom_posts as $post) {
+                foreach ($custom_posts as $post):
                     setup_postdata($post);
                     printf('<li><a href="%1$s">%2$s</a></li>',get_the_permalink(),get_the_title());
-                }
+                endforeach;
+                wp_reset_postdata();
                 ?>
                 </ul>	
                 </div>
