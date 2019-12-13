@@ -94,7 +94,7 @@ function theclick_page_sidebar_position(){
  * Archive content  grid column
 */
 function theclick_archive_grid_col(){
-    return apply_filters('theclick_archive_grid_col','8');
+    return apply_filters('theclick_archive_grid_col','71/100');
 }
 /*
  * Single Post sidebar position 
