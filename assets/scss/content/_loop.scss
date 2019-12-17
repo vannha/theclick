@@ -16,16 +16,7 @@
 		padding-left: 18.5px;
 		padding-right: 18.5px;
 	}
-	.ef5-meta{
-		.ef5-posted-in{
-			a{
-				font-size: 12px;
-				line-height: 14px;
-				text-transform: uppercase;
-				color: $accent_color;
-			}
-		}
-	}
+	 
 	.ef5-heading{
 		font-size: 30px;
 		line-height: 38px;
@@ -58,6 +49,21 @@
 }
 .ef5-before-title{
 	margin-bottom: 20px;
+	font-family: $futura-pt-medium;
+	a{
+		font-size: 12px;
+		line-height: 14px;
+		text-transform: uppercase;
+		color: $accent_color;
+	}
+}
+.ef5-after-title{
+	a{
+		font-size: 10px;
+		line-height: 13px;
+		text-transform: uppercase;
+		font-family: $futura-pt-light
+	}
 }
 .ef5-loop-header{
 	margin-bottom: 12px;
