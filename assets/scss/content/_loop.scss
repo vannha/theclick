@@ -21,6 +21,7 @@
 		position: relative;
 		font-size: 30px;
 		line-height: 38px;
+		margin-bottom: 17px;
 		font-family: $futura-pt-medium;
 	}
 }
@@ -57,11 +58,11 @@
 	@include border-radius(0);
 }
 .ef5-loop-info{
-	padding-top: 30px;
+	padding-top: 17px;
 	padding-bottom: 30px;
 }
 .ef5-before-title{
-	margin-bottom: 20px;
+	margin-bottom: 13px;
 	font-family: $futura-pt-demi;
 	a{
 		font-size: 12px;
