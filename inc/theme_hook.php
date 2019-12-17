@@ -102,6 +102,7 @@ add_filter('theclick_archive_grid_col', function(){ return '70/491';});
  * @return string 
  * @example: add_filter('theclick_loop_pagination_prev_text', function(){ return esc_html__('Previous', 'theclick');});
 */
+add_filter('theclick_loop_pagination_prev_text', function(){ return esc_html__('Prev Articles', 'theclick');});
 
 /**
  * Default Archive Pagination Next Text
@@ -109,6 +110,7 @@ add_filter('theclick_archive_grid_col', function(){ return '70/491';});
  * @return string 
  * @example: add_filter('theclick_loop_pagination_next_text', function(){ return esc_html__('Next', 'theclick');});
 */
+add_filter('theclick_loop_pagination_next_text', function(){ return esc_html__('Next Articles', 'theclick');});
 
 /**
  * Default Archive Pagination Sep Text
