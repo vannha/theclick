@@ -3,7 +3,8 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-    font-family: $futura-pt-medium;
+    font-family: $futura-pt;
+    font-weight: 450;
 }
 // Main Navigation
 //--------------------------------------------------
@@ -87,6 +88,6 @@
         font-size: $lv1_font_size;
         font-weight: $lv1_font_weight;
         color: $lv1_color;
-        font-family: $futura-pt-medium;
+        font-family: $futura-pt;
     }
 }

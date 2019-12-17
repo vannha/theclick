@@ -55,7 +55,8 @@
         width: auto;
         height: auto;
         text-transform: uppercase;
-        font-family: $futura-pt-medium;
+        font-family: $futura-pt;
+        font-weight: 450;
         &:before,
         &:after{
             display: none;
