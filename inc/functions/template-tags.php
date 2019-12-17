@@ -24,7 +24,8 @@ if ( ! function_exists( 'theclick_posted_by' ) ) :
             'echo'               => true   
         ]);
         if($args['show_author'] !== '1') return;
-        $classes = ['ef5-posted-by', 'hint--top', $args['class']];
+        $classes = ['ef5-posted-by', $args['class']];
+        if(!empty($args['hint'])) $classes[] = 'hint--top';
         if($args['author_avatar']) $classes[] = 'd-flex align-items-center';
         if ( ! get_the_author() )
         {
