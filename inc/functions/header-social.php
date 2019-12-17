@@ -100,17 +100,17 @@ function theclick_header_social_counter_render($args=[]){
     $classes = ['header-social-counter', $args['class']];
     echo wp_kses_post($args['before']);
     echo '<div class="' . trim(implode(' ', $classes)) . '">';
-    /*the_widget(
+    the_widget(
         'APSC_Widget',
         array(
             'title' => '',
-            'theme' => ''
+            'theme' => 'theme-1'
         ),
         array(
             'before_widget' => '',
             'after_widget'  => ''
         )
-    );*/
+    );
     echo '</div>';
     echo wp_kses_post($args['after']);
 }
