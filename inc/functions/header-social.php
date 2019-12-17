@@ -104,7 +104,7 @@ function theclick_header_social_counter_render($args=[]){
         'APSC_Widget',
         array(
             'title' => '',
-            'theme' => 'theme-1'
+            'theme' => ''
         ),
         array(
             'before_widget' => '',
