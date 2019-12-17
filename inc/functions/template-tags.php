@@ -163,7 +163,7 @@ if ( ! function_exists( 'theclick_posted_in' ) ) :
             if ( !empty($terms))
             {
                 printf(
-                    '%1$s<div class="%2$s" data-hint="%3$s">
+                    '%1$s<div class="%2$s" %3$s>
                         %4$s %5$s %6$s %7$s
                     </div>%8$s',
                     $args['before'],
