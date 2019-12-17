@@ -16,6 +16,20 @@
 		padding-left: 18.5px;
 		padding-right: 18.5px;
 	}
+	.ef5-meta{
+		.ef5-posted-in{
+			a{
+				font-size: 12px;
+				line-height: 14px;
+				text-transform: uppercase;
+			}
+		}
+	}
+	.ef5-heading{
+		font-size: 30px;
+		line-height: 38px;
+		font-family: $futura-pt-medium;
+	}
 }
 .sticky-post{
 	display: block;
