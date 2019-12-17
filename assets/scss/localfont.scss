@@ -1,53 +1,49 @@
 @font-face{
-    font-family:"futura-pt-bold";
-    src:url("../fonts/FuturaPTBold.otf") format("woff"),
-    url("../fonts/FuturaPTBold.otf") format("opentype"),
-    url("../fonts/FuturaPTBold.otf") format("truetype");
+    font-family:"futura-pt";
+    src:url("../fonts/FuturaPTBold.otf") format("woff"),url("../fonts/FuturaPTBold.otf") format("opentype"),url("../fonts/FuturaPTBold.otf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
 }
 @font-face {
-	font-family:"futura-pt-book";
-    src:url("../fonts/FuturaPTBook.otf") format("woff"),
-    url("../fonts/FuturaPTBook.otf") format("opentype"),
-    url("../fonts/FuturaPTBook.otf") format("truetype");
+	font-family:"futura-pt";
+    src:url("../fonts/FuturaPTBook.otf") format("woff"),url("../fonts/FuturaPTBook.otf") format("opentype"),url("../fonts/FuturaPTBook.otf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
 }
 @font-face {
-	font-family:"futura-pt-demi";
-    src:url("../fonts/FuturaPTDemi.otf") format("woff"),
-    url("../fonts/FuturaPTDemi.otf") format("opentype"),
-    url("../fonts/FuturaPTDemi.otf") format("truetype");
+	font-family:"futura-pt";
+    src:url("../fonts/FuturaPTDemi.otf") format("woff"),url("../fonts/FuturaPTDemi.otf") format("opentype"),url("../fonts/FuturaPTDemi.otf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
 }
 @font-face {
-	font-family:"futura-pt-extra-bold";
-    src:url("../fonts/FuturaPTExtraBold.otf") format("woff"),
-    url("../fonts/FuturaPTExtraBold.otf") format("opentype"),
-    url("../fonts/FuturaPTExtraBold.otf") format("truetype");
+	font-family:"futura-pt";
+    src:url("../fonts/FuturaPTExtraBold.otf") format("woff"),url("../fonts/FuturaPTExtraBold.otf") format("opentype"),url("../fonts/FuturaPTExtraBold.otf") format("truetype");
+    font-style: normal;
+    font-weight: 800;
 }
 @font-face {
-	font-family:"futura-pt-heavy";
-    src:url("../fonts/FuturaPTHeavy.otf") format("woff"),
-    url("../fonts/FuturaPTHeavy.otf") format("opentype"),
-    url("../fonts/FuturaPTHeavy.otf") format("truetype");
+	font-family:"futura-pt";
+    src:url("../fonts/FuturaPTHeavy.otf") format("woff"),url("../fonts/FuturaPTHeavy.otf") format("opentype"),url("../fonts/FuturaPTHeavy.otf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
 }
 @font-face {
-	font-family:"futura-pt-light";
-    src:url("../fonts/FuturaPTLight.otf") format("woff"),
-    url("../fonts/FuturaPTLight.otf") format("opentype"),
-    url("../fonts/FuturaPTLight.otf") format("truetype");
+	font-family:"futura-pt";
+    src:url("../fonts/FuturaPTLight.otf") format("woff"),url("../fonts/FuturaPTLight.otf") format("opentype"),url("../fonts/FuturaPTLight.otf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
 }
 @font-face {
-	font-family:"futura-pt-medium";
-    src:url("../fonts/FuturaPTMedium.otf") format("woff"),
-    url("../fonts/FuturaPTMedium.otf") format("opentype"),
-    url("../fonts/FuturaPTMedium.otf") format("truetype");
+	font-family:"futura-pt";
+    src:url("../fonts/FuturaPTMedium.otf") format("woff"),url("../fonts/FuturaPTMedium.otf") format("opentype"),url("../fonts/FuturaPTMedium.otf") format("truetype");
+    font-style: normal;
+    font-weight: 450;
 }
 @font-face {
 	font-family:"the-red-light-free";
-    src:url("../fonts/TheRedlightFree.otf") format("woff"),
-    url("../fonts/TheRedlightFree.ttf") format("ttf"),
-    url("../fonts/TheRedlightFree.otf") format("truetype");
-}
-
-
+    src:url("../fonts/TheRedlightFree.otf") format("woff"),url("../fonts/TheRedlightFree.ttf") format("ttf"),url("../fonts/TheRedlightFree.otf") format("truetype");
+} 
 .futura-pt-book-font{
 	font-family: 'futura-pt-book';
 }
