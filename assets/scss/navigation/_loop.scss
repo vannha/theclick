@@ -62,12 +62,16 @@
 		&:after{
 			content: "";
 			position: absolute;
-			left: 0;
+			right: 0;
 			bottom: 0;
-			width: calc(100% - 14px);
+			width: calc(100% - 13px);
 			height: 1px;
 			background-color: $MainBorderColor;
 		}
+	}
+	.d-none + a:after{
+		right: auto;
+		left: 0;
 	}
 	// Layout type
 	&.layout-type-1 .nav-links,
@@ -91,7 +95,6 @@
 			background: $color;
 		}
 		&.hv-#{$name} .nav-links .page-numbers{
-			//border-color: #727272;
 			&:hover,
 			&.current{
 				border-color: $color;
