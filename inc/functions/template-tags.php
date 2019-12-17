@@ -260,15 +260,15 @@ if ( ! function_exists( 'theclick_comments_popup_link' ) ) {
             if(!$args['show_text']){
                  
                 comments_popup_link(
-                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Be the first to comment','theclick').'"':'', $args['icon'], $number),
-                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number),
-                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number)
+                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?' class="hint--top" data-hint="'.esc_html__('Be the first to comment','theclick').'"':'', $args['icon'], $number),
+                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?' class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number),
+                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?' class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number)
                 );
             } else {
                 comments_popup_link(
-                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Be the first to comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comments','theclick')),
-                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comment','theclick')),
-                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comments','theclick'))
+                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?' class="hint--top" data-hint="'.esc_html__('Be the first to comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comments','theclick')),
+                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?' class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comment','theclick')),
+                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?' class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comments','theclick'))
                 );
             }
             printf ('%s' , $args['after']);
