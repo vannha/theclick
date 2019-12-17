@@ -382,11 +382,16 @@ function theclick_edit_link($args = [])
         'show_edit' => false,
         'echo'      => true
     ]);
-    $classes = ['ef5-edit-link', 'hint--top', $args['class']];
-    $args['icon'] = !empty($args['icon']) ? '<span class="'.esc_attr($args['icon']).'">&nbsp;&nbsp;</span>' : '';
+    $classes = ['ef5-edit-link', $args['class']];
+    $dthint = '';
+    if(!empty($args['hint'])){
+        $classes[] = 'hint--top';
+        $dthint = 'data-hint="'.esc_attr($args['hint']).'"';
+    }
+    $args['icon'] = !empty($args['icon']) ? '<span class="'.esc_attr($args['icon']).'" '.$dthint.'>&nbsp;&nbsp;</span>' : '';
     if(!$args['show_edit']) return;
 
-    $before = $args['before'].'<div class="'.trim(implode(' ', $classes)).'" data-hint="'.esc_attr($args['hint']).'">'.$args['icon'];
+    $before = $args['before'].'<div class="'.trim(implode(' ', $classes)).'" >'.$args['icon'];
     $after = '</div>'.$args['after'];
     ob_start();
         edit_post_link($args['title'], $before, $after );
