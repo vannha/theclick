@@ -2,8 +2,18 @@
 	margin: 0 -10px;
 	font-size: 14px;
 	line-height: 20px;
-	> * {
+	> div {
 		padding: 0 10px;
+		position: relative;
+		+div{
+			position: absolute;
+			left: 0;
+			top: 10px;
+			width: 2px;
+			height: 2px;
+			background-color: $accent_color;
+			border-radius: 50%;
+		}
 	}
 	.avatar{
 		margin-right: 10px;
