@@ -90,15 +90,16 @@ if ( ! function_exists( 'theclick_posted_on' ) ) :
             esc_attr( get_the_date( 'c' ) ),
             date_i18n($args['date_format'], strtotime(get_the_date()))
         );
-        $classes = ['ef5-date', 'ef5-posted-on', 'hint--top', $args['class']];
+        $classes = ['ef5-date', 'ef5-posted-on', $args['class']];
+        if(!empty($args['hint'])) $classes[] = 'hint--top';
         if($args['show_update']) $classes[] = 'ef5-updated-on';
         ob_start();
             printf(
-                '<div class="%1$s" data-hint="%2$s">
+                '<div class="%1$s" %2$s>
                     %3$s%4$s<a href="%5$s" rel="bookmark">%6$s</a>%7$s
                 </div>',
                 trim(implode(' ', $classes)),
-                esc_html($args['hint']),
+                !empty($args['hint']) ? 'data-hint="'.esc_html($args['hint']).'"' : '',
                 !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
                 $args['before_date'],
                 !is_single() ? esc_url( get_permalink()) : '',
@@ -113,11 +114,11 @@ if ( ! function_exists( 'theclick_posted_on' ) ) :
                     esc_html( get_the_modified_date() )
                 );
                 printf(
-                    '<div class="%1$s" data-hint="%2$s">
+                    '<div class="%1$s" %2$s>
                         %3$s%4$s<a href="%5$s" rel="bookmark">%6$s</a>%7$s
                     </div>',
                     trim(implode(' ', $classes)),
-                    esc_html($args['hint_update']),
+                    !empty($args['hint_update']) ? 'data-hint="'.esc_html($args['hint_update']).'"' : '',
                     !empty($args['icon_update']) ? '<span class="meta-icon '.$args['icon_update'].'">&nbsp;&nbsp;</span>' : '',
                     $args['before_date'],
                     !is_single() ? esc_url( get_permalink()) : '',
@@ -154,7 +155,8 @@ if ( ! function_exists( 'theclick_posted_in' ) ) :
         ]);
         if($args['show_cat'] !== '1') return;
 
-        $classes = ['ef5-posted-in', 'hint--top', $args['class']];
+        $classes = ['ef5-posted-in', $args['class']];
+        if(!empty($args['hint'])) $classes[] = 'hint--top';
         $taxo = theclick_get_post_taxonomies();
         $terms = get_the_term_list( get_the_ID(), $taxo, '', $args['sep'], '' );
         ob_start();
@@ -166,7 +168,7 @@ if ( ! function_exists( 'theclick_posted_in' ) ) :
                     </div>%8$s',
                     $args['before'],
                     trim(implode(' ', $classes)),
-                    esc_html($args['hint']),
+                    !empty($args['hint']) ? 'data-hint="'.esc_html($args['hint']).'"' : '',
                     !empty($args['icon']) ? '<span class="meta-icon '.esc_attr($args['icon']).'">&nbsp;&nbsp;</span>' : '',
                     $args['before_category'],
                     $terms,
@@ -201,18 +203,19 @@ if ( ! function_exists( 'theclick_tagged_in' ) ) :
             'echo'       => true
         ]);
         if('1' !== $args['show_tag']) return;
-        $classes = ['ef5-tagged-in hint--top', $args['class']];
+        $classes = ['ef5-tagged-in', $args['class']];
+        if(!empty($args['hint'])) $classes[] = 'hint--top';
         $tags_list = get_the_term_list( get_the_ID(), theclick_get_post_taxonomies('tag'), '', $args['sep'], '' );
         ob_start();
             if ( $tags_list)
             {
                 printf(
-                    '%1$s<div class="%2$s" data-hint="%3$s">
+                    '%1$s<div class="%2$s" %3$s>
                         %4$s %5$s %6$s %7$s
                     </div>%8$s',
                     $args['before'],
                     trim(implode(' ', $classes)),
-                    esc_html($args['hint']),
+                    !empty($args['hint']) ? 'data-hint="'.esc_html($args['hint']).'"' : '',
                     !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
                     $args['before_tag'],
                     $tags_list,
@@ -236,6 +239,7 @@ if ( ! function_exists( 'theclick_comments_popup_link' ) ) {
     {
         $args = wp_parse_args($args, [
             'class'     => '',
+            'hint'      => '',
             'before'    => '',
             'after'     => '',
             'icon'      => '', //'fa fa-comment-alt',
@@ -254,16 +258,17 @@ if ( ! function_exists( 'theclick_comments_popup_link' ) ) {
             echo '<div class="'.esc_attr($classes).'">';
             printf ('%s' , $args['before']);
             if(!$args['show_text']){
+                 
                 comments_popup_link(
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','theclick'), $args['icon'], $number),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','theclick'), $args['icon'], $number),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','theclick'), $args['icon'], $number)
+                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Be the first to comment','theclick').'"':'', $args['icon'], $number),
+                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number),
+                    sprintf('<span%s>%s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number)
                 );
             } else {
                 comments_popup_link(
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','theclick'), $args['icon'], $number, esc_html__('Comments','theclick')),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','theclick'), $args['icon'], $number, esc_html__('Comment','theclick')),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','theclick'), $args['icon'], $number, esc_html__('Comments','theclick'))
+                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Be the first to comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comments','theclick')),
+                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comment','theclick')),
+                    sprintf('<span%s>%s %s %s</span>',!empty($args['hint'])?'&nbsp;class="hint--top" data-hint="'.esc_html__('Post a comment','theclick').'"':'', $args['icon'], $number, esc_html__('Comments','theclick'))
                 );
             }
             printf ('%s' , $args['after']);
