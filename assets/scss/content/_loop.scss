@@ -58,11 +58,12 @@
 	}
 }
 .ef5-after-title{
+	font-family: $futura-pt-light;
 	a{
 		font-size: 12px;
 		line-height: 14px;
 		text-transform: uppercase;
-		font-family: $futura-pt-light
+		color: $accent_color;
 	}
 }
 .ef5-loop-header{
