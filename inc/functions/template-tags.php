@@ -15,7 +15,7 @@ if ( ! function_exists( 'theclick_posted_by' ) ) :
         $author_id   = $post->post_author;
         $args = wp_parse_args($args, [
             'class'              => '',
-            'hint'               => esc_html__( 'Posted by', 'theclick' ),
+            'hint'               => '', //esc_html__( 'Posted by', 'theclick' ),
             'icon'               => '',//'fa fa-user',
             'author_avatar'      => true,
             'before_author_name' => '',
@@ -71,8 +71,8 @@ if ( ! function_exists( 'theclick_posted_on' ) ) :
     {
         $args = wp_parse_args($args,[
             'class'       => '',
-            'hint'        => esc_html__( 'Published on', 'theclick' ),
-            'hint_update' => esc_html__( 'Updated on', 'theclick' ),
+            'hint'        => '', //esc_html__( 'Published on', 'theclick' ),
+            'hint_update' => '', //esc_html__( 'Updated on', 'theclick' ),
             'icon'        => '', //'fa fa-calendar',
             'icon_update' => '',
             'before_date' => '',
@@ -189,7 +189,7 @@ if ( ! function_exists( 'theclick_tagged_in' ) ) :
     function theclick_tagged_in($args = []){
         $args = wp_parse_args($args, [
             'class'      => '',
-            'hint'       => esc_html__( 'Tagged in', 'theclick' ),
+            'hint'       => '', //esc_html__( 'Tagged in', 'theclick' ),
             'icon'       => '',
             'before'     => '',
             'after'      => '',
@@ -370,7 +370,7 @@ function theclick_edit_link($args = [])
         'class'     => '',
         'icon'      => 'far fa-edit',
         'title'     => esc_html('Edit', 'theclick'),
-        'hint'      => esc_html('Edit', 'theclick'),
+        'hint'      => '', //esc_html('Edit', 'theclick'),
         'before'    => '',
         'after'     => '',
         'show_edit' => false,
