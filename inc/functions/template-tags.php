@@ -239,7 +239,7 @@ if ( ! function_exists( 'theclick_comments_popup_link' ) ) {
     {
         $args = wp_parse_args($args, [
             'class'     => '',
-            'hint'      => 'a',
+            'hint'      => '',
             'before'    => '',
             'after'     => '',
             'icon'      => '', //'fa fa-comment-alt',
