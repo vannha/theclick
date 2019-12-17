@@ -31,7 +31,7 @@
 		font-size: 20px;
 		line-height: 26px;
 		font-family: $futura-pt;
-		font-weight: 450;
+		font-weight: 500;
 	}
 	.widget li{
 		border-bottom: 0;
@@ -79,7 +79,7 @@
 	.select2-container{
 		vertical-align: top;
 		font-family: $futura-pt;
-		font-weight: 450;
+		font-weight: 500;
 		font-size: 14px;
 		@include transition(all .3s linear 0s);
 		&:hover{
@@ -128,7 +128,7 @@
 	.wpml-ls-legacy-dropdown{
 		width: auto;
 		font-family: $futura-pt;
-		font-weight: 450;
+		font-weight: 500;
 		font-size: 14px;
 		a{
 			background-color: transparent;
@@ -211,7 +211,7 @@
 			.fi-add{
 				font-size: 30px;
 				font-family: $futura-pt;
-				font-weight: 450;
+				font-weight: 500;
 				line-height: 48px;
 				margin-bottom: 29px;
 			}
@@ -260,7 +260,7 @@
 		}
 		.footer-info{
 			font-family: $futura-pt;
-			font-weight: 450;
+			font-weight: 500;
 			>*{
 				padding: 13px 0;
 			}

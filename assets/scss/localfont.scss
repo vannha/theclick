@@ -7,12 +7,14 @@
 @font-face {
     font-family:"futura-pt";
     src:url("../fonts/FuturaPTBook.otf") format("woff"),url("../fonts/FuturaPTBook.otf") format("opentype"),url("../fonts/FuturaPTBook.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 @font-face {
     font-family:"futura-pt";
     src:url("../fonts/FuturaPTMedium.otf") format("woff"),url("../fonts/FuturaPTMedium.otf") format("opentype"),url("../fonts/FuturaPTMedium.otf") format("truetype");
     font-style: normal;
-    font-weight: 450;
+    font-weight: 500;
 }
 @font-face {
     font-family:"futura-pt";
@@ -20,23 +22,24 @@
     font-style: normal;
     font-weight: 600;
 }
+@font-face {
+    font-family:"futura-pt";
+    src:url("../fonts/FuturaPTHeavy.otf") format("woff"),url("../fonts/FuturaPTHeavy.otf") format("opentype"),url("../fonts/FuturaPTHeavy.otf") format("truetype");
+    font-style: normal;
+    font-weight: 650;
+}
 @font-face{
     font-family:"futura-pt";
     src:url("../fonts/FuturaPTBold.otf") format("woff"),url("../fonts/FuturaPTBold.otf") format("opentype"),url("../fonts/FuturaPTBold.otf") format("truetype");
     font-style: normal;
     font-weight: 700;
 }
-@font-face {
-    font-family:"futura-pt";
-    src:url("../fonts/FuturaPTHeavy.otf") format("woff"),url("../fonts/FuturaPTHeavy.otf") format("opentype"),url("../fonts/FuturaPTHeavy.otf") format("truetype");
-    font-style: normal;
-    font-weight: 800;
-}
+
 @font-face {
     font-family:"futura-pt";
     src:url("../fonts/FuturaPTExtraBold.otf") format("woff"),url("../fonts/FuturaPTExtraBold.otf") format("opentype"),url("../fonts/FuturaPTExtraBold.otf") format("truetype");
     font-style: normal;
-    font-weight: 900;
+    font-weight: 800;
 }
 @font-face {
 	font-family:"the-red-light-free";
