@@ -5,7 +5,7 @@
 	> div {
 		padding: 0 10px;
 		position: relative;
-		+div:before{
+		&+div:before{
 			content: "";
 			position: absolute;
 			left: 0;
