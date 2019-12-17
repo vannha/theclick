@@ -44,11 +44,10 @@ if ( ! function_exists( 'theclick_posted_by' ) ) :
         $author_avatar = $args['author_avatar'] ? get_avatar($author_id, 40, '', $author_name, array('class' => 'circle')) : '';
         ob_start();
             printf(
-                '<div class="%1$s" data-hint="%2$s">
+                '<div class="%1$s">
                     %3$s %4$s %5$s <a class="author-url" href="%6$s">%7$s</a>%8$s
                 </div>',
                 trim(implode(' ', $classes)),
-                esc_html($args['hint']),
                 $author_avatar,
                 !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
                 $args['before_author_name'],
