@@ -49,22 +49,21 @@
 }
 .ef5-before-title{
 	margin-bottom: 20px;
-	color: $accent_color;
 	//font-family: $futura-pt-medium;
 	a{
 		font-size: 12px;
 		line-height: 14px;
 		text-transform: uppercase;
-		
+		color: $accent_color;
 	}
 }
 .ef5-after-title{
 	//font-family: $futura-pt-light;
-	color: $accent_color;
 	a{
 		font-size: 10px;
 		line-height: 14px;
 		text-transform: uppercase;
+		color: $accent_color;
 	}
 }
 .ef5-loop-header{
