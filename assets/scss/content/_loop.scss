@@ -18,20 +18,37 @@
 	}
 	 
 	.ef5-heading{
+		position: relative;
 		font-size: 30px;
 		line-height: 38px;
 		font-family: $futura-pt-medium;
 	}
 }
 .sticky-post{
-	display: block;
-	margin-bottom: 10px;
+	display: inline-block;
+    position: absolute;
+    top: -40px;
+    right: 0;
 }
 .sticky-post-inner{
 	background: $accent_color;
 	color: $white;
 	padding: 5px 10px;
 	font-size: 50%;
+	position: relative;
+    display: block;
+    line-height: 1.5;
+    &:before{
+    	content: "";
+    	position: absolute;
+    	left: 0;
+    	bottom: 0;
+    	width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid #f00;
+    }
 }
 
 // Archive list
