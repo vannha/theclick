@@ -16,7 +16,6 @@ if(is_archive() || is_home() || is_front_page() || is_search()) $classes[] = 'ef
     <?php theclick_post_media(['thumbnail_size' => 'medium']); ?>
     <div class="ef5-loop-info"><?php
             theclick_post_header(['class' => 'loop ef5-loop-header']);
-            theclick_post_excerpt();
             theclick_link_pages();
         ?>
         <div class="ef5-loop-footer row justify-content-between align-items-center empty-none"><?php 
