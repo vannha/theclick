@@ -41,6 +41,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
             'thumbnail_size'=> '80x80',
             'number'        => 4,
             'layout'        => 1,
+            'showtype'        => 1,
             'show_author'   => true,
             'show_date'     => true,
             'show_comments' => true,
@@ -61,6 +62,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
         }
 
         $layout         = absint($instance['layout']);
+        $showtype       = absint($instance['showtype']);
         $post_type      = $instance['post_type'];
         $thumbnail_size = $instance['thumbnail_size'];
         $show_author    = (bool)$instance['show_author'];
@@ -157,6 +159,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
         $instance['thumbnail_size'] = sanitize_text_field( $new_instance['thumbnail_size'] );
         $instance['number']         = absint( $new_instance['number'] );
         $instance['layout']         = absint($new_instance['layout']) ;
+        $instance['showtype']       = absint($new_instance['showtype']) ;
         $instance['show_author']    = (bool)$new_instance['show_author'] ;
         $instance['show_date']      = (bool)$new_instance['show_date'] ;
         $instance['show_comments']  = (bool)$new_instance['show_comments'];
@@ -178,6 +181,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
             'thumbnail_size' => '80x80',
             'number'         => 4,
             'layout'         => 1,
+            'showtype'       => 1,
             'show_author'    => true,
             'show_date'      => true,
             'show_comments'  => true,
@@ -189,6 +193,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
         $thumbnail_size = $instance['thumbnail_size'] ? $instance['thumbnail_size']  : '80x80';
         $number         = absint( $instance['number'] );
         $layout         = absint($instance['layout']);
+        $showtype       = absint($instance['showtype']);
         $show_author    = (bool) $instance['show_author'];
         $show_date      = (bool) $instance['show_date'];
         $show_comments  = (bool) $instance['show_comments'];
@@ -212,6 +217,13 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                 <option value="1" <?php if( $layout == '1' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 1', 'theclick');?></option>
                 <option value="2" <?php if( $layout == '2' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 2', 'theclick');?></option>
                 <option value="3" <?php if( $layout == '3' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 3', 'theclick');?></option>
+            </select>
+        </p>
+
+        <p>
+            <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'showtype' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'showtype' ) ); ?>">
+                <option value="1" <?php if( $showtype == '1' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Recent Post', 'theclick');?></option>
+                <option value="2" <?php if( $showtype == '2' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Popular', 'theclick');?></option>
             </select>
         </p>
 
