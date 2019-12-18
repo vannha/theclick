@@ -62,7 +62,7 @@ class TheClick_Categories_Walker extends Walker_Category {
             $link .= '</span>';
             $link .= theclick_widget_expander();
         } else {
-            $image_url = esc_url(get_template_directory_uri().'/assets/images/placeholder/no-image-770x353.jpg');
+            $image_url = '';
             if(class_exists('Taxonomy_Images_Term')){
                 $t = new Taxonomy_Images_Term( $category->term_id );
                 $img_id = $t->get_image_id();
@@ -71,13 +71,14 @@ class TheClick_Categories_Walker extends Walker_Category {
                     $image_url = $src[0];
                 }
             }
-            $link .= '<img src="'.$image_url.'"/>';
-            $link .= '<div class="title-count">';
+
+            $link .= !empty($image_url) ? '<img src="'.$image_url.'"/>' : '';
+            $link .= !empty($image_url) ? '<div class="title-count">' : '';
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
                 $link .= ' <span class="count">(' . number_format_i18n( $category->count ) . ')</span>';
             }
-            $link .= '</div>';
+            $link .= !empty($image_url) ? '</div>' : '';
         }
 
         $link .= '</a>';
