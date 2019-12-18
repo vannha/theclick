@@ -62,7 +62,7 @@ class TheClick_Categories_Walker extends Walker_Category {
             $link .= '</span>';
             $link .= theclick_widget_expander();
         } else {
-            if(class_exists('Taxonomy_Images_Supported')){
+            if(class_exists('Taxonomy_Images_Term')){
                 //$image_ids = array();
                 //$terms_with_images = array();
                  
@@ -70,6 +70,7 @@ class TheClick_Categories_Walker extends Walker_Category {
                 $img_id = $t->get_image_id();
                 if ( $img_id ) {
                     $data = image_get_intermediate_size( $img_id, 'full' );
+                    var_dump($data['url']);
                 }
                 /*if ( $img ) {
                     $terms[ $key ]->image_id = $img;
@@ -80,7 +81,7 @@ class TheClick_Categories_Walker extends Walker_Category {
                 }*/
  
                 //$image_ids = array_unique( $image_ids );
-                var_dump($data['url']);
+                
             }
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
