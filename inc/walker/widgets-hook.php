@@ -10,7 +10,7 @@
 if(!function_exists('theclick_widget_categories_args')){
     add_filter('widget_categories_args', 'theclick_widget_categories_args');
     function theclick_widget_categories_args($cat_args){  
-        $top_cat_number = theclick_get_theme_opt('top_cat_number','3');
+        $top_cat_number = theclick_get_theme_opt('top_cat_number','');
         $cat_args['number']  = $top_cat_number;
         $cat_args['walker']  = new TheClick_Categories_Walker;
         $cat_args['orderby'] = 'count';
