@@ -213,6 +213,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'thumbnail_size' ) ); ?>" type="text" value="<?php echo esc_attr( $thumbnail_size ); ?>" />
         </p>
         <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>"><?php esc_html_e( 'Layout', 'theclick' ); ?></label>
             <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'layout' ) ); ?>">
                 <option value="1" <?php if( $layout == '1' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 1', 'theclick');?></option>
                 <option value="2" <?php if( $layout == '2' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 2', 'theclick');?></option>
@@ -221,6 +222,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
         </p>
 
         <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'showtype' ) ); ?>"><?php esc_html_e( 'Type', 'theclick' ); ?></label>
             <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'showtype' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'showtype' ) ); ?>">
                 <option value="1" <?php if( $showtype == '1' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Recent Post', 'theclick');?></option>
                 <option value="2" <?php if( $showtype == '2' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Popular', 'theclick');?></option>
