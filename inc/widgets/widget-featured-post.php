@@ -38,6 +38,7 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
         $instance = wp_parse_args( (array) $instance, array(
             'title'         => esc_html__( 'Featured Posts', 'theclick' ),
             'post_type'     => 'post',
+            'ids'           => '',
             'number'        => 6,
         ) );
 
@@ -111,9 +112,10 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
     function update( $new_instance, $old_instance )
     {
         $instance = $old_instance;
-        $instance['title']         = sanitize_text_field( $new_instance['title'] );
-        $instance['post_type']     = sanitize_text_field( $new_instance['post_type'] );
-        $instance['number']        = absint( $new_instance['number'] );
+        $instance['title']     = sanitize_text_field( $new_instance['title'] );
+        $instance['post_type'] = sanitize_text_field( $new_instance['post_type'] );
+        $instance['ids']       = sanitize_text_field( $new_instance['ids'] );
+        $instance['number']    = absint( $new_instance['number'] );
         return $instance;
     }
 
@@ -128,12 +130,14 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
         $instance = wp_parse_args( (array) $instance, array(
             'title'         => esc_html__( 'Featured Posts', 'theclick' ),
             'post_type'     => 'post',
+            'ids'           => '',
             'number'        => 6,
         ) );
 
-        $title         = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'theclick' );
-        $post_type         = $instance['post_type'] ? esc_attr( $instance['post_type'] ) : 'post';
-        $number        = absint( $instance['number'] );
+        $title     = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'theclick' );
+        $post_type = $instance['post_type'] ? esc_attr( $instance['post_type'] ) : 'post';
+        $ids       = $instance['ids'] ? esc_attr( $instance['ids'] ) : '';
+        $number    = absint( $instance['number'] );
 
         ?>
         <p>
