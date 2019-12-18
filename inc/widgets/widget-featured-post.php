@@ -87,7 +87,7 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
 
                 printf('<img src="%1$s" alt="%2$s" />',esc_url( $thumbnail_url ),esc_attr( get_the_title() ));
 
-                printf('<div class="fea-item">%1$s <a href="%2$s" class="fea-item-title">%3$s</a></div>',$terms,esc_url( get_permalink() ), esc_attr( get_the_title() )); 
+                printf('<div class="fea-item"><div class="cat-item">%1$s</div><a href="%2$s" class="fea-item-title">%3$s</a></div>',$terms,esc_url( get_permalink() ), esc_attr( get_the_title() )); 
                 echo '</div>';
             } // while
 
