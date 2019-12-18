@@ -82,7 +82,7 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
                 printf('<div class="col-4 %s">',( has_post_thumbnail() ? 'has-post-thumbnail' : '' ));
                 var_dump(implode('x', $thumbnail_size));
                 if(has_post_thumbnail())
-                	$thumbnail_url = theclick_get_image_url_by_size( null, implode('x', $thumbnail_size), true );
+                	$thumbnail_url = theclick_get_image_url_by_size( ['size'=>implode('x', $thumbnail_size)] );
                 else 
                 	$thumbnail_url = theclick_default_image_thumbnail_url(['size'=>implode('x', $thumbnail_size)]);
                 printf(
