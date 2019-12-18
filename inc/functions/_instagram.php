@@ -86,7 +86,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                 <?php
                 }
                 echo '</div>';
-                break;
+            break;
         }
     }
 }
