@@ -423,7 +423,7 @@ Redux::setSection($opt_name, array(
     'fields'     => array(
         array(
             'id'       => 'top_cat_number',
-            'title'    => esc_html__('Enter the display number of top categories ', 'theclick'),
+            'title'    => esc_html__('Enter the display number of top categories widget', 'theclick'),
             'type'     => 'text',
             'default'  => '3'
         )
