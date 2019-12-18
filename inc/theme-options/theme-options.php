@@ -417,13 +417,13 @@ Redux::setSection($opt_name, array(
 ));
 
 Redux::setSection($opt_name, array(
-    'title'      => esc_html__('Side bar', 'theclick'),
+    'title'      => esc_html__('Sidebar widget', 'theclick'),
     'icon'       => 'el-icon-file-edit',
     'subsection' => true,
     'fields'     => array(
         array(
             'id'       => 'top_cat_number',
-            'title'    => esc_html__('Enter the display number of top categories', 'theclick'),
+            'title'    => esc_html__('Enter the display number of top categories ', 'theclick'),
             'type'     => 'text',
             'default'  => '3'
         )
