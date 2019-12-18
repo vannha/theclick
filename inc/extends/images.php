@@ -417,10 +417,10 @@ if(!function_exists('theclick_get_image_url_by_size')){
                     'post-thumbnail',
                     'full',
                 ) ) )
-        ) {
+        ) { var_dump($size.'aaa');
             $p_img = wp_get_attachment_image_src( $id, $size );
             $img_url = $p_img[0];
-        } else {
+        } else { var_dump($size.'bbb');
             if ( is_string( $size ) ) {
                 preg_match_all( '/\d+/', $size, $thumb_matches );
                 if ( isset( $thumb_matches[0] ) ) {
