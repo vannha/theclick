@@ -142,7 +142,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
 
                     if ( $post_meta )
                     {
-                        printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
+                        printf( '<div class="ef5-meta row gutter-20 align-items-center">%s</div>', $post_meta );
                     }
                 }
                 echo '</div>';
