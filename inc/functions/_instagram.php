@@ -78,19 +78,15 @@ if (!function_exists('theclick_instagram_html_output')) {
                                 </div>
                             </div>
                         </div>
-                    <?php
-                                }
-                                ?>
+                    <?php } ?>
                 </div>
+                <?php if ($show_author) { ?>
+                    <div class="user"><a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>"><?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
+                    echo '<span class="author-name">@' . trim($username) . '</span>'; ?></a></div>
                 <?php
-
-                            if ($show_author) {
-                                ?><div class="user">
-                        <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>"><?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
-                                                                                                                                                echo '<span class="author-name">@' . trim($username) . '</span>'; ?></a></div><?php
-                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                        echo '</div>';
-                                                                                                                                                                                                                                                                                                                        break;
-                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                        }
+                }
+                echo '</div>';
+                break;
+        }
+    }
+}
