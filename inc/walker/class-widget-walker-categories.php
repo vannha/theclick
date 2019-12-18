@@ -70,7 +70,7 @@ class TheClick_Categories_Walker extends Walker_Category {
                 $img_id = $t->get_image_id();
                 if ( $img_id ) {
                     $src = wp_get_attachment_image_src( $img_id, 'full' );
-                    var_dump($src['url']);
+                    var_dump($src);
                 }
                 /*if ( $img ) {
                     $terms[ $key ]->image_id = $img;
