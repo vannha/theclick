@@ -58,13 +58,18 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
         }
 
         $thumbnail_size = [118,118];
-        $r = new WP_Query( array(
+        $ids_arr = explode(',', $instance['ids']);
+        $args = array(
             'post_type'           => $post_type,
             'posts_per_page'      => $number,
             'no_found_rows'       => true,
             'post_status'         => 'publish',
             'ignore_sticky_posts' => true
-        ) );
+        );
+        if( count($ids_arr) > 0)
+            $args['post__in'] = $ids_arr;
+        
+        $r = new WP_Query( $args );
 
         if ( $r->have_posts() )
         {
