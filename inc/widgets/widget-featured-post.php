@@ -57,7 +57,7 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
             $number = 4;
         }
 
-        $thumbnail_size = [118,118];
+        $thumbnail_size = [310,205];
         $ids_arr = explode(',', $instance['ids']);
         $query_args = array(
             'post_type'           => $post_type,
