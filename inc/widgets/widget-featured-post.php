@@ -84,14 +84,9 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
                 	$thumbnail_url = theclick_get_image_url_by_size( ['size'=>implode('x', $thumbnail_size)] );
                 else 
                 	$thumbnail_url = theclick_default_image_thumbnail_url(['size'=>implode('x', $thumbnail_size)]);
-                printf(
-                    '<a href="%1$s" class="ef5-thumbnail hint--top" data-hint="%2$s">' .
-                        '<img src="%3$s" alt="%2$s" />' .
-                    '</a>', 
-                    esc_url( get_permalink() ),
-                    esc_attr( get_the_title() ),
-                    esc_url( $thumbnail_url )
-                );
+
+                printf('<img src="%1$s" alt="%2$s" />',esc_url( $thumbnail_url ),esc_attr( get_the_title() ));
+                printf('<a href="%1$s" class="fea-item-title">%2$s</a>', esc_url( get_permalink() ), esc_attr( get_the_title() ));
                 echo '</div>';
             } // while
 
