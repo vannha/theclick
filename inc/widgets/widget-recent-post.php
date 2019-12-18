@@ -122,7 +122,9 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                     );
                 }
                 echo '<div class="ef5-brief col">';
-
+                if ( $show_cat ){
+                    theclick_posted_in();
+                }
                 printf(
                     '<h4 class="ef5-heading"><a href="%1$s" title="%2$s">%3$s</a></h4>',
                     esc_url( get_permalink() ),
@@ -130,13 +132,12 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                     get_the_title()
                 );
 
-                if ( $show_author || $show_comments || $show_date || $show_cat )
+                if ( $show_author || $show_comments || $show_date )
                 {
                     ob_start();
                     if($show_author) theclick_posted_by();
                     if($show_date) theclick_posted_on();
                     if($show_comments) theclick_comments_popup_link(['show_text'=> true]);
-                    if($show_cat) theclick_posted_in();
                     $post_meta = ob_get_clean();
 
                     if ( $post_meta )
