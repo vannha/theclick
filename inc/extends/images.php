@@ -402,7 +402,7 @@ if(!function_exists('theclick_get_image_url_by_size')){
             'size'          => 'thumbnail', 
             'default_thumb' => false,
             'class'         => ''
-        ]); var_dump($args);
+        ]);
         extract($args);
         global $_wp_additional_image_sizes;
         if($id === null) $id = get_post_thumbnail_id();
