@@ -78,7 +78,7 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
             while ( $r->have_posts() )
             {
                 $r->the_post();
-
+                $terms = get_the_term_list( get_the_ID(), 'category', '', ', ', '' );
                 printf('<div class="col-12 %s">',( has_post_thumbnail() ? 'has-post-thumbnail' : '' ));
                 if(has_post_thumbnail())
                 	$thumbnail_url = theclick_get_image_url_by_size( ['size'=>implode('x', $thumbnail_size)] );
@@ -86,7 +86,8 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
                 	$thumbnail_url = theclick_default_image_thumbnail_url(['size'=>implode('x', $thumbnail_size)]);
 
                 printf('<img src="%1$s" alt="%2$s" />',esc_url( $thumbnail_url ),esc_attr( get_the_title() ));
-                printf('<a href="%1$s" class="fea-item-title">%2$s</a>', esc_url( get_permalink() ), esc_attr( get_the_title() ));
+
+                printf('<div class="fea-item">%1$s <a href="%2$s" class="fea-item-title">%3$s</a></div>',$terms,esc_url( get_permalink() ), esc_attr( get_the_title() )); 
                 echo '</div>';
             } // while
 
