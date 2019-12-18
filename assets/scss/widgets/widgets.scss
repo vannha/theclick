@@ -46,6 +46,7 @@
 		li{
 			> a{
 				&:before{
+					display: none;
 					@include wg-list-arrow();
 				}
 			}
