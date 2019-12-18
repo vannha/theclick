@@ -64,9 +64,9 @@ class TheClick_Categories_Walker extends Walker_Category {
         } else {
             if(class_exists('Taxonomy_Images_Supported')){
                 //$obj = get_queried_object();
-                $image_url = apply_filters( 'taxonomy-images-list-the-terms', '' );
-                 
-                var_dump($image_url);
+                //$image_url = apply_filters( 'taxonomy-images-list-the-terms', '' );
+                $abc = get_term_meta( $category->ID, 'image_id-38', false ); 
+                var_dump($abc);
             }
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
