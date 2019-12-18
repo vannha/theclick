@@ -65,8 +65,8 @@ class TheClick_Categories_Walker extends Walker_Category {
             if(class_exists('Taxonomy_Images_Supported')){
                 //$obj = get_queried_object();
                 //$image_url = apply_filters( 'taxonomy-images-list-the-terms', '' );
-                $abc = get_term_meta( $category->ID, 'image_id-38', false ); 
-                var_dump($category->ID);
+                $abc = get_term_meta( $category->ID, 'name', false ); 
+                var_dump($category);
             }
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
