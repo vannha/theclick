@@ -8,11 +8,11 @@
 */
 if(!function_exists('theclick_widget_categories_args')){
     add_filter('widget_categories_args', 'theclick_widget_categories_args');
-    function theclick_widget_categories_args($cat_args){ die('abx');
-        $cat_args['walker'] = new TheClick_Categories_Walker;
+    function theclick_widget_categories_args($cat_args){  
+        //$cat_args['walker'] = new TheClick_Categories_Walker;
         $cat_args['orderby'] = 'count';
         $cat_args['order'] = 'DESC';
-        return ''; //$cat_args; 
+        return $cat_args; 
     }
 }
 
