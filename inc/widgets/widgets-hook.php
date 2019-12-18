@@ -12,7 +12,7 @@ if(!function_exists('theclick_widget_categories_args')){
         $cat_args['walker'] = new TheClick_Categories_Walker;
         $cat_args['orderby'] = 'count';
         $cat_args['order'] = 'DESC';
-        return $cat_args; 
+        return ''; //$cat_args; 
     }
 }
 
