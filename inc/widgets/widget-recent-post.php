@@ -72,7 +72,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                 'post_type' => $post_type,
                 'post_status' => 'publish',
                 'no_found_rows'       => true,
-                'ignore_sticky_posts' => true
+                'ignore_sticky_posts' => true,
                 'orderby' => 'date',
                 'order' => 'DESC',
                 'paged' => 1
