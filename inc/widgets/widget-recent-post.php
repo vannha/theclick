@@ -140,8 +140,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                     if($show_comments) theclick_comments_popup_link(['show_text'=> true]);
                     $post_meta = ob_get_clean();
 
-                    if ( $post_meta )
-                    {
+                    if ( $post_meta ){
                         printf( '<div class="ef5-meta row gutter-20 align-items-center">%s</div>', $post_meta );
                     }
                 }
