@@ -396,6 +396,7 @@ if(!function_exists('theclick_image_by_size')){
 
 if(!function_exists('theclick_get_image_url_by_size')){
     function theclick_get_image_url_by_size($args = []) {
+        var_dump($args);
         $args = wp_parse_args($args,[
             'id'            => null, 
             'size'          => 'thumbnail', 
@@ -417,10 +418,10 @@ if(!function_exists('theclick_get_image_url_by_size')){
                     'post-thumbnail',
                     'full',
                 ) ) )
-        ) { var_dump($size.'aaa');
+        ) {  
             $p_img = wp_get_attachment_image_src( $id, $size );
             $img_url = $p_img[0];
-        } else { var_dump($size.'bbb');
+        } else { 
             if ( is_string( $size ) ) {
                 preg_match_all( '/\d+/', $size, $thumb_matches );
                 if ( isset( $thumb_matches[0] ) ) {
