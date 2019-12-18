@@ -50,15 +50,11 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
 
         $title = empty( $instance['title'] ) ? esc_html__( 'Recent Posts', 'theclick' ) : $instance['title'];
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
-
-        printf('%s', $args['before_widget']);
-
-        printf('%s', $args['before_title'] . $title . $args['after_title']);
-
+ 
         $number = absint( $instance['number'] );
         if ( $number <= 0 || $number > 10)
         {
-            $number = 4;
+            $number = 5;
         }
 
         $layout         = absint($instance['layout']);
@@ -70,14 +66,31 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
         $show_comments  = (bool)$instance['show_comments'];
         $show_cat       = (bool)$instance['show_cat'];
 
-        $r = new WP_Query( array(
-            'post_type'           => $post_type,
-            'posts_per_page'      => $number,
-            'no_found_rows'       => true,
-            'post_status'         => 'publish',
-            'ignore_sticky_posts' => true
-        ) );
+        if($showtype == '1'){
+            $args_sql = array(
+                'posts_per_page' => $number,
+                'post_type' => $post_type,
+                'post_status' => 'publish',
+                'no_found_rows'       => true,
+                'ignore_sticky_posts' => true
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'paged' => 1
+            );
+        }else{
+            $args_sql = array(
+                'post_type' => $post_type,
+                'posts_per_page' => $number,
+                'post_status' => array('publish', 'future'),
+                'orderby'   => 'meta_value_num',
+                'order'     => 'DESC',
+                'meta_key' => 'post_views_count'
+            );
+        }
+        $r = new WP_Query($args_sql);
 
+        printf('%s', $args['before_widget']);
+        printf('%s', $args['before_title'] . $title . $args['after_title']);
         if ( $r->have_posts() )
         {
             echo '<div class="posts-list layout-'.esc_attr($layout).'">';
@@ -96,18 +109,19 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                     'size'          => $thumbnail_size,
                     'default_thumb' => true,
                 ]);
-                printf(
-                    '<div class="ef5-featured col-auto">' .
-                        '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
-                            '<img src="%3$s" alt="%2$s" />' .
-                        '</a>' .
-                    '</div>',
-                    esc_url( get_permalink() ),
-                    esc_attr( get_the_title() ),
-                    esc_url( $thumbnail_url )
-                );
-
-                echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
+                if($layout == '1'){
+                    printf(
+                        '<div class="ef5-featured col-auto">' .
+                            '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
+                                '<img src="%3$s" alt="%2$s" />' .
+                            '</a>' .
+                        '</div>',
+                        esc_url( get_permalink() ),
+                        esc_attr( get_the_title() ),
+                        esc_url( $thumbnail_url )
+                    );
+                }
+                echo '<div class="ef5-brief col">';
 
                 printf(
                     '<h4 class="ef5-heading"><a href="%1$s" title="%2$s">%3$s</a></h4>',
@@ -217,7 +231,6 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
             <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'layout' ) ); ?>">
                 <option value="1" <?php if( $layout == '1' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 1', 'theclick');?></option>
                 <option value="2" <?php if( $layout == '2' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 2', 'theclick');?></option>
-                <option value="3" <?php if( $layout == '3' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 3', 'theclick');?></option>
             </select>
         </p>
 

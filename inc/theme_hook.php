@@ -241,3 +241,33 @@ function theclick_owl_custom_nav_style(){
 		esc_html__('Theclick Style 01','theclick') => 'theclick-1'
 	];
 }
+
+// function display number view of posts.
+function theclick_get_post_viewed($post_id){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($post_id, $count_key, true);
+    if($count==''){
+        delete_post_meta($post_id, $count_key);
+        add_post_meta($post_id, $count_key, '0');
+        return 0;
+    }
+    return $count;
+}
+
+// function to count views.
+add_action( 'wp_head', 'theclick_set_post_view' );
+function theclick_set_post_view(){
+	if( is_single() ){ 
+		$post_id = get_the_ID();
+		$count_key = 'post_views_count';
+		$count = intval(get_post_meta($post_id, $count_key, true));
+		if(!$count){
+			$count = 1;
+			delete_post_meta($post_id, $count_key);
+			add_post_meta($post_id, $count_key, $count);
+		}else{
+			$count++;
+			update_post_meta($post_id, $count_key, $count);
+		}
+	}
+}
