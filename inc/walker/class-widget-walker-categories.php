@@ -63,7 +63,7 @@ class TheClick_Categories_Walker extends Walker_Category {
             $link .= theclick_widget_expander();
         } else {
             if(class_exists('Taxonomy_Images_Supported'))
-            $image_url = apply_filters( 'taxonomy-images-get-terms', '' );
+            $image_url = apply_filters( 'taxonomy-images-queried-term-image-data', '' );
             var_dump($image_url);
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
