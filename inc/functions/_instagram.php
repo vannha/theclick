@@ -57,7 +57,7 @@ if (!function_exists('theclick_instagram_html_output')) {
             'author_text'   => '',
             'username'      => ''
         ]);
-
+        
         switch ($layout_mode) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
