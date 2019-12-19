@@ -417,7 +417,7 @@ add_filter('ef5-google-api-key','theclick_google_api_key');
  * //'font-awesome',
  * //'gglcptch',
 */
-//add_filter('ef5_remove_styles', 'theclick_remove_styles');
+add_filter('ef5_remove_styles', 'theclick_remove_styles');
 function theclick_remove_styles($styles){
     $_styles = [
         'newsletter'
