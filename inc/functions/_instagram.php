@@ -82,8 +82,8 @@ if (!function_exists('theclick_instagram_html_output')) {
                                 ?>
                             </a>
                             <div class="user-follow">
-                                <span class="follower"><?php echo esc_attr($follower)?></span>
-                                <span class="following"><?php echo esc_attr($following)?></span>
+                                <span class="follower"><?php echo esc_attr($follower)?> <?php echo esc_html__('Followers','theclick')?></span>
+                                <span class="following"><?php echo esc_attr($following)?> <?php echo esc_html__('Following','theclick')?></span>
                             </div>
                         </div>
                     </div>
