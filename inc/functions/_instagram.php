@@ -66,14 +66,26 @@ if (!function_exists('theclick_instagram_html_output')) {
                     $follower = $media_array[0]['follower'];
                     $following = $media_array[0]['following'];
                 ?>
-                    <div class="user">
-                        <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
-                            <img src="<?php echo esc_url($avatar_src);?>"/>
-                            <span class="follower"><?php echo esc_attr($follower)?></span>
-                            <span class="following"><?php echo esc_attr($following)?></span>
-                            <?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
-                            echo '<span class="author-name">@' . trim($username) . '</span>'; ?>
-                        </a>
+                    <div class="user row">
+                        <div class="user-avatar col-auto">
+                            <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
+                                <img src="<?php echo esc_url($avatar_src);?>"/>
+                            </a>
+                        </div>
+                        <div class="user-data col">
+                            <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
+                                <?php 
+                                if (!empty($author_text)) 
+                                    echo '<span class="author-text">' . esc_html($author_text) . '</span>';
+                                else
+                                    echo '<span class="author-name">' . trim($username) . '</span>'; 
+                                ?>
+                            </a>
+                            <div class="user-follow">
+                                <span class="follower"><?php echo esc_attr($follower)?></span>
+                                <span class="following"><?php echo esc_attr($following)?></span>
+                            </div>
+                        </div>
                     </div>
                 <?php }
                 ?>
