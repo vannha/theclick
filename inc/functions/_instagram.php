@@ -61,9 +61,16 @@ if (!function_exists('theclick_instagram_html_output')) {
         switch ($layout_mode) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
-                if ($show_author) { ?>
-                    <div class="user"><a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>"><?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
-                    echo '<span class="author-name">@' . trim($username) . '</span>'; ?></a></div>
+                if ($show_author) { 
+                    $avatar_src = $media_array[0]['avatar'];
+                ?>
+                    <div class="user">
+                        <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
+                            <img src="<?php echo esc_url($avatar_src);?>"/>
+                            <?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
+                            echo '<span class="author-name">@' . trim($username) . '</span>'; ?>
+                        </a>
+                    </div>
                 <?php }
                 ?>
                 <div class="ef5-instagram-wrap row grid-gutters-<?php echo esc_attr($columns_space); ?> clearfix">
