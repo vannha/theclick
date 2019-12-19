@@ -67,6 +67,8 @@ if (!function_exists('theclick_instagram_html_output')) {
                     <div class="user">
                         <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
                             <img src="<?php echo esc_url($avatar_src);?>"/>
+                            <span class="follower"><?php echo esc_attr($follower)?></span>
+                            <span class="following"><?php echo esc_attr($following)?></span>
                             <?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
                             echo '<span class="author-name">@' . trim($username) . '</span>'; ?>
                         </a>
