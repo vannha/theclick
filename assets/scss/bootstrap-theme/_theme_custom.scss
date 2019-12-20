@@ -68,6 +68,12 @@ $customs_gutters: (
 		margin: $gutters-value / -2!important;
 		> [class*='col']{
 			padding: $gutters-value / 2;
+			.overlay{
+				top: $gutters-value / 2;
+			    right: $gutters-value / 2;
+			    bottom: $gutters-value / 2;
+			    left: $gutters-value / 2;
+			}
 		}
 	}
 }
