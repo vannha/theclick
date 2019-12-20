@@ -230,8 +230,16 @@
 		.widgettitle{
 			color: #fff;
 		}
-		.ef5-social .ef5-el-title{
-			color: $lightent_accent_accent;
+		.ef5-social{
+			.ef5-el-title{
+				color: $lightent_accent_accent;
+			}
+			a:hover{
+				color: $lightent_accent_accent;
+			}
+		} 
+		.widget li > a:hover{
+			color: #fff;
 		}
 	}
 	&.footer-2{
