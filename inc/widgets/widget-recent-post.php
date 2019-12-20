@@ -123,7 +123,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                         esc_url( $thumbnail_url )
                     );
                 }
-                echo esc_attr($layout)=='1' ? '<div class="ef5-brief col">' : '<div class="ef5-brief">';
+                echo (esc_attr($layout)=='1') ? '<div class="ef5-brief col">' : '<div class="ef5-brief">';
                 if ( $show_cat ){
                     theclick_posted_in();
                 }
@@ -148,8 +148,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                 }
                 echo '</div>';
 
-                if($layout == '1') echo '</div>';
-                echo '</div>';
+                if($layout == '1') echo '</div></div>';
             } // while
 
             echo '</div>';
