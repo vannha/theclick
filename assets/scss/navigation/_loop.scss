@@ -50,7 +50,9 @@
 	}
 }
 .ef5-loop-pagination{
-	margin-top: 40px;
+	padding-top: 40px;
+	margin-top: 35px;
+	border-top: 1px solid $MainBorderColor;
 	&:empty{
 		display: none;
 	}
