@@ -14,7 +14,7 @@
 	}
 	.overlay{
 		@media (min-width: $desktop-screen){
-			@include transform(scale(1.2));
+			@include transform(scale(0.8));
 			opacity: 0;
 			visibility: hidden;
 		}
