@@ -9,6 +9,9 @@
 	a.has-image{
 		position: relative;
 		padding: 0;
+		&:hover .title-count{
+			color: $lightent_accent_accent;
+		}
 	}
 	.title-count{
 		position: absolute;
