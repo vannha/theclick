@@ -1,9 +1,13 @@
 .widget.ef5-wg-taxonomy{
 	li{
 		border-bottom: 0;
+		+li{
+			margin-top: 15px;
+		}
 	}
 	a.has-image{
 		position: relative;
+		padding: 0;
 	}
 	.title-count{
 		position: absolute;
