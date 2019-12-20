@@ -66,7 +66,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                     $follower = $media_array[0]['follower'];
                     $following = $media_array[0]['following'];
                 ?>
-                    <div class="user d-flex gutter-15">
+                    <div class="user d-flex gutter-15 align-items-center">
                         <div class="user-avatar">
                             <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
                                 <img src="<?php echo esc_url($avatar_src);?>"/>

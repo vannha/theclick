@@ -16,6 +16,7 @@
 				font-size: 12px;
 				line-height: 15px;
 				text-transform: uppercase;
+				display: block;
 			}
 			.user-follow{
 				font-weight: 500;
@@ -23,6 +24,10 @@
 				line-height: 13px;
 				text-transform: uppercase;
 				color: $lightent_accent_accent;
+				margin-top: 6px;
+				.following{
+					margin-left: 22px;
+				}
 			}
 		}
 	}
