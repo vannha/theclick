@@ -81,7 +81,11 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'slug'               => 'contact-form-7',
                 'required'           => false,
             ),
-            
+            array(
+                'name'               => esc_html__('Taxonomy Images','theclick'),
+                'slug'               => 'taxonomy-images',
+                'required'           => false,
+            ),
             array(
                 'name'               => esc_html__('Newsletter','theclick'),
                 'slug'               => 'newsletter',
