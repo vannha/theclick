@@ -99,13 +99,10 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
             {
                 $r->the_post();
 
+                printf('<div class="post-list-entry transition %s">',( has_post_thumbnail() ? 'has-post-thumbnail' : '' ));
                 if($layout == '1'){
-                    printf(
-                        '<div class="post-list-entry transition %s"><div class="row gutters-20">',
-                        ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
-                    );
+                    echo '<div class="row gutters-20">';
                 }
-
                 
                 $thumbnail_url = theclick_get_image_url_by_size([
                     'size'          => $thumbnail_size,
@@ -148,7 +145,8 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                 }
                 echo '</div>';
 
-                if($layout == '1') echo '</div></div>';
+                if($layout == '1') echo '</div>';
+                echo '</div>';
             } // while
 
             echo '</div>';
