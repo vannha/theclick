@@ -9,6 +9,9 @@
 	&:last-child{
 		padding-bottom: 0;
 		margin-bottom: 0;
+		&:after{
+			content: none;
+		}
 	}
 	&:after{
 		content: "";
