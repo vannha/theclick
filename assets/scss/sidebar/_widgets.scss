@@ -2,4 +2,18 @@
 	.widget{
 		margin-bottom: 50px;
 	}
+	.widgettitle{
+		position: relative;
+		display: inline-block;
+		&:after{
+			content: "";
+			width: 17px;
+			height: 2px;
+			background-color: $primary_color;
+			position: absolute;
+			left: 100%;
+			bottom: 7px;
+			margin-left: 5px;
+		}
+	}
 }
