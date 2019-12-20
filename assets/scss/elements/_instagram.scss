@@ -14,10 +14,15 @@
                 color: #fff;
                 font-size: 17px;
                 font-family: $futura-pt;
+                display: flex;
+                flex-wrap: wrap;
                 span.fa{
                     font-size: 18px;
                     margin-right: 2px;
                     font-weight: 300;
+                }
+                span +span{
+                    margin-left: 2px;
                 }
             }
         }
