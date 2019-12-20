@@ -67,8 +67,7 @@ class TheClick_Categories_Walker extends Walker_Category {
                 $t = new Taxonomy_Images_Term( $category->term_id );
                 $img_id = $t->get_image_id();
                 if ( $img_id ) {
-                    $image_url = theclick_get_image_url_by_size( ['id' => $img_id, 'size'=>'310x90'] ); //wp_get_attachment_image_src( $img_id, 'full' );
-                    //$image_url = $src[0];
+                    $image_url = theclick_get_image_url_by_size( ['id' => $img_id, 'size'=>'310x90'] );
                 }
             }
 
