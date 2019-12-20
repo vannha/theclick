@@ -66,13 +66,13 @@ if (!function_exists('theclick_instagram_html_output')) {
                     $follower = $media_array[0]['follower'];
                     $following = $media_array[0]['following'];
                 ?>
-                    <div class="user row">
-                        <div class="user-avatar col-auto">
+                    <div class="user d-flex gutter-15">
+                        <div class="user-avatar">
                             <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
                                 <img src="<?php echo esc_url($avatar_src);?>"/>
                             </a>
                         </div>
-                        <div class="user-data col">
+                        <div class="user-data">
                             <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
                                 <?php 
                                 if (!empty($author_text)) 
