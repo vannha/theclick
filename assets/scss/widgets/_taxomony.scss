@@ -2,4 +2,24 @@
 	li{
 		border-bottom: 0;
 	}
+	a.has-img{
+		position: relative;
+	}
+	.title-count{
+		position: absolute;
+		left: 8px;
+		bottom: 8px;
+		font-size: 11px;
+		line-height: 14px;
+		font-weight: 500;
+		color: #fff;
+		.title{
+			padding: 10px 14px;
+			background-color: $primary_color;
+		}
+		.count{
+			padding: 10px 11px;
+			background-color: $darkent_accent_accent;
+		}
+	}
 }

@@ -76,7 +76,7 @@ class TheClick_Categories_Walker extends Walker_Category {
             $link .= !empty($image_url) ? '<div class="title-count">' : '';
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
-                $link .= ' <span class="count">(' . number_format_i18n( $category->count ) . ')</span>';
+                $link .= ' <span class="count">' . number_format_i18n( $category->count ) . '</span>';
             }
             $link .= !empty($image_url) ? '</div>' : '';
         }
