@@ -61,7 +61,7 @@ class TheClick_Categories_Walker extends Walker_Category {
              */
             $link .= 'title="' . esc_attr( strip_tags( apply_filters( 'category_description', $category->description, $category ) ) ) . '"';
         }
-        if(!empty($has_img)) $link .= ' class="has-image"';
+        if(!empty($has_img)) $link .= ' class="has-im"';
         $link .= '>';
 
         if ( $args['has_children'] && $args['hierarchical'] && ( empty( $args['max_depth'] ) || $args['max_depth'] > $depth + 1 ) ) {
