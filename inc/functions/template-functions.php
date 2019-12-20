@@ -241,8 +241,7 @@ if(!function_exists('theclick_post_content')){
 */
 if(!function_exists('theclick_loop_pagination')){
     function theclick_loop_pagination($args=[]){
-        //if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
-            var_dump($GLOBALS['wp_query']->max_num_pages );
+        if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) return;
         $args = wp_parse_args($args, [
             'show_pagination' => '1',
             'style'           => theclick_get_theme_opt('archive_nav_type', apply_filters('theclick_loop_pagination', '4')),
