@@ -1,4 +1,18 @@
 .widget_theclick_recent_posts{
+	.ef5-posted-in a{
+		font-size: 10px;
+		font-weight: 500;
+		line-height: 12px;
+		text-transform: uppercase;
+		color: $lightent_accent_accent;
+		&:hover{
+			color: $primary_color;
+		}
+	}
+	.ef5-heading{
+		font-size: 16px;
+		line-height: 21px;
+	}
 	.layout-2{
 		.post-list-entry{
 
@@ -6,19 +20,6 @@
 		.ef5-brief{
 
 		}
-		.ef5-posted-in a{
-			font-size: 10px;
-			font-weight: 500;
-			line-height: 12px;
-			text-transform: uppercase;
-			color: $lightent_accent_accent;
-			&:hover{
-				color: $primary_color;
-			}
-		}
-		.ef5-heading{
-			font-size: 16px;
-			line-height: 21px;
-		}
+		
 	}
 }
