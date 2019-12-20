@@ -68,7 +68,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                 ?>
                     <div class="user d-flex gutter-15 align-items-center">
                         <div class="user-avatar">
-                            <a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
+                            <a class="ins-img"> href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
                                 <img src="<?php echo esc_url($avatar_src);?>"/>
                             </a>
                         </div>
@@ -118,7 +118,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                     foreach ($media_array as $item) {
                         ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap'))); ?>">
-                            <a href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
+                            <a class="ins-img" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
                                 <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
                             </a>
                             <div class="overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">

@@ -2,6 +2,9 @@
     position: relative;
     .instagram-item{
         overflow: hidden;
+        .ins-img img{
+            width: 100%;
+        }
         .overlay{
             background-color: rgba(#000000,0.3);
         }
@@ -17,16 +20,13 @@
                     margin-right: 2px;
                     font-weight: 300;
                 }
-                &:hover{
-                    color: $lightent_accent_accent;
-                }
             }
         }
         .ins-icon{
             display: none;
         }
     }
-        &.layout-default{
+    &.layout-default{
         .user{
             position: absolute;
             top: calc(50% - 63px);
