@@ -68,7 +68,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                 ?>
                     <div class="user d-flex gutter-15 align-items-center">
                         <div class="user-avatar">
-                            <a class="ins-img"> href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
+                            <a class="ins-img" href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>">
                                 <img src="<?php echo esc_url($avatar_src);?>"/>
                             </a>
                         </div>
