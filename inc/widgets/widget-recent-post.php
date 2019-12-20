@@ -99,10 +99,12 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
             {
                 $r->the_post();
 
-                printf(
-                    '<div class="post-list-entry transition %s"><div class="row gutters-20">',
-                    ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
-                );
+                if($layout == '1'){
+                    printf(
+                        '<div class="post-list-entry transition %s"><div class="row gutters-20">',
+                        ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
+                    );
+                }
 
                 
                 $thumbnail_url = theclick_get_image_url_by_size([
@@ -121,7 +123,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                         esc_url( $thumbnail_url )
                     );
                 }
-                echo '<div class="ef5-brief col">';
+                echo '<div class="ef5-brief'.$layout=='1' ? ' col' : '' .'">';
                 if ( $show_cat ){
                     theclick_posted_in();
                 }
@@ -146,7 +148,8 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                 }
                 echo '</div>';
 
-                echo '</div></div>';
+                if($layout == '1') echo '</div>';
+                echo '</div>';
             } // while
 
             echo '</div>';
