@@ -15,6 +15,10 @@
                 span.fa{
                     font-size: 18px;
                     margin-right: 2px;
+                    font-weight: 300;
+                }
+                &:hover{
+                    color: $lightent_accent_accent;
                 }
             }
         }
