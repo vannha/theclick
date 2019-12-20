@@ -14,18 +14,15 @@ get_header();
         <div class="row gutter-lg-50">
             <div id="ef5-content-area" class="<?php theclick_content_css_class();?>">
                 <div id="ef5-posts" class="ef5-posts ef5-blogs">
-                    <?php
-                    if ( have_posts() )
-                    {
-                        while ( have_posts() )
-                        {
+                    <?php if ( have_posts() ) { ?>
+                        <div class="ef5-blog-wrap">
+                        <?php while ( have_posts() ){
                             the_post();
                             get_template_part( 'template-parts/loop/content', get_post_format() );
-                        }
-                        theclick_loop_pagination(['class' => 'justify-content-center']);
-                    }
-                    else
-                    {
+                        }?>
+                        </div>
+                        <?php theclick_loop_pagination(['class' => 'justify-content-center']);
+                    }else{
                         get_template_part( 'template-parts/content', 'none' );
                     }
                     ?>
