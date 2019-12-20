@@ -1,6 +1,7 @@
 .widget.ef5-wg-taxonomy{
 	li{
 		border-bottom: 0;
+		overflow: hidden;
 		+li{
 			margin-top: 15px;
 		}
