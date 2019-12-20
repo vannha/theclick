@@ -73,13 +73,13 @@ class TheClick_Featured_Posts_Widget extends WP_Widget
 
         if ( $r->have_posts() )
         {
-            echo '<div class="featured-list row gutters-12">';
+            echo '<div class="featured-list">';
 
             while ( $r->have_posts() )
             {
                 $r->the_post();
                 $terms = get_the_term_list( get_the_ID(), 'category', '', ', ', '' );
-                printf('<div class="col-12 %s">',( has_post_thumbnail() ? 'has-post-thumbnail' : '' ));
+                printf('<div class="%s">',( has_post_thumbnail() ? 'has-post-thumbnail' : '' ));
                 if(has_post_thumbnail())
                 	$thumbnail_url = theclick_get_image_url_by_size( ['size'=>implode('x', $thumbnail_size)] );
                 else 

@@ -7,15 +7,19 @@
 		left: 0;
 		bottom: 0;
 		background-color: #fff;
+		padding: 21px 25px 2px 0;
 		.ef5-posted-in{
 			font-size: 10px;
-			line-height: 12px;
+			line-height: 13px;
 			text-transform: uppercase;
 			color: $primary_color;
+			font-weight: 500;
+    		margin-bottom: 10px;
 		}
 		.fea-item-title{
 			font-size: 15px;
 			line-height: 19px;
+			display: block;
 		}
 	}
 }
