@@ -38,7 +38,17 @@ class TheClick_Categories_Walker extends Walker_Category {
         if ( ! $cat_name ) {
             return;
         }
-        
+
+        $image_url = $has_img = '';
+        if(class_exists('Taxonomy_Images_Term')){
+            $t = new Taxonomy_Images_Term( $category->term_id );
+            $img_id = $t->get_image_id();
+            if ( $img_id ) {
+                $image_url = theclick_get_image_url_by_size( ['id' => $img_id, 'size'=>'310x90'] );
+                $has_img = 'has-image';
+            }
+        }
+
         $link = '<a href="' . esc_url( get_term_link( $category ) ) . '" ';
         if ( $args['use_desc_for_title'] && ! empty( $category->description ) ) {
             /**
@@ -51,7 +61,7 @@ class TheClick_Categories_Walker extends Walker_Category {
              */
             $link .= 'title="' . esc_attr( strip_tags( apply_filters( 'category_description', $category->description, $category ) ) ) . '"';
         }
- 
+        if(!empty($has_img)) $link .= ' class="has-image"';
         $link .= '>';
 
         if ( $args['has_children'] && $args['hierarchical'] && ( empty( $args['max_depth'] ) || $args['max_depth'] > $depth + 1 ) ) {
@@ -62,15 +72,6 @@ class TheClick_Categories_Walker extends Walker_Category {
             $link .= '</span>';
             $link .= theclick_widget_expander();
         } else {
-            $image_url = '';
-            if(class_exists('Taxonomy_Images_Term')){
-                $t = new Taxonomy_Images_Term( $category->term_id );
-                $img_id = $t->get_image_id();
-                if ( $img_id ) {
-                    $image_url = theclick_get_image_url_by_size( ['id' => $img_id, 'size'=>'310x90'] );
-                }
-            }
-
             $link .= !empty($image_url) ? '<img src="'.$image_url.'"/>' : '';
             $link .= !empty($image_url) ? '<div class="title-count">' : '';
             $link .= '<span class="title">'.$cat_name.'</span>';
