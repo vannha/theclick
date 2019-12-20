@@ -125,7 +125,7 @@ class TheClick_Recent_Posts_Widget extends WP_Widget
                     theclick_posted_in();
                 }
                 printf(
-                    '<h4 class="ef5-heading"><a href="%1$s" title="%2$s">%3$s</a></h4>',
+                    '<h4 class="title-post"><a href="%1$s" title="%2$s">%3$s</a></h4>',
                     esc_url( get_permalink() ),
                     esc_attr( get_the_title() ),
                     get_the_title()
