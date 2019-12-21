@@ -1,4 +1,9 @@
 .ef5-sidebar-area {
+	@media (max-width: 991px){
+		.ef5-blogs{
+			padding-top: 0;
+		}
+	}
 	.widget{
 		margin-bottom: 50px;
 	}
