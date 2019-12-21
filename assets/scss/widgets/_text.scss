@@ -2,6 +2,7 @@
 	.textwidget{
 		background: $white;
 		p {
+			font-size: 14px;
 			&:empty{
 				display: none;
 			}

@@ -16,4 +16,39 @@
 			margin-left: 5px;
 		}
 	}
+	.tnp-field{
+		position: relative;
+		::-webkit-input-placeholder {
+		    color: $primary_color;
+		}
+		*:hover::-webkit-input-placeholder,
+		*:focus::-webkit-input-placeholder {
+		    color: $primary_color;
+		}
+		:-moz-placeholder { /* Firefox 18- */
+		    color: $primary_color;
+		}
+		*:hover:-moz-placeholder,
+		*:focus:-moz-placeholder{
+		    color: $primary_color;
+		}
+		::-moz-placeholder {  /* Firefox 19+ */
+		    color: $primary_color;
+		}
+		*:hover::-moz-placeholder,
+		*:focus::-moz-placeholder{
+		    color: $primary_color;
+		}
+		:-ms-input-placeholder {
+		    color: $primary_color;
+		}
+		*:hover:-ms-input-placeholder ,
+		*:focus:-ms-input-placeholder {
+		    color: $primary_color;
+		}
+	}
+	.tnp-email{
+		border-color: $primary_color;
+
+	}
 }
