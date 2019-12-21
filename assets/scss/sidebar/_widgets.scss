@@ -32,7 +32,7 @@
 	}
 	.wg-newsleter{
 		position: relative;
-		&:after{
+		&:before{
 			content: "";
 			position: absolute;
 			top: 50%;
