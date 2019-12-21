@@ -11,7 +11,7 @@
 get_header();
 ?>
     <div class="container">
-        <div class="row gutter-lg-50">
+        <div class="row gutter-30 gutter-lg-50">
             <div id="ef5-content-area" class="<?php theclick_content_css_class();?>">
                 <div id="ef5-posts" class="ef5-posts ef5-blogs">
                     <?php if ( have_posts() ) { ?>
