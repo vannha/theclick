@@ -35,10 +35,11 @@
 		&:after{
 			content: "";
 			position: absolute;
-			top: 0;
-			right: 0;
+			top: 50%;
+			right: 15px;
+			margin-top: -7px;
 			width: 14px;
-			height: 12px;
+			height: 14px;
 			background: url(../images/icons/newsletter-button.png) no-repeat 0 0;
 		}
 		.tnp-email{
@@ -49,6 +50,7 @@
 			top: 0;
 			right: 0;
 			font-size: 0;
+			padding: 16px 24px 17px 24px;
 		}
 	}
 
