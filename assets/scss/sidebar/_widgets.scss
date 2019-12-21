@@ -17,16 +17,6 @@
 		}
 	}
 	.tnp-field{
-		position: relative;
-		&:after{
-			content: "";
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 14px;
-			height: 12px;
-			background: url(../images/icons/newsletter-button.png) no-repeat 0 0;
-		}
 		::-webkit-input-placeholder {
 		    color: $primary_color;
 		}
@@ -40,7 +30,26 @@
 		    color: $primary_color;
 		}
 	}
-	.tnp-email{
-		border-color: $primary_color;
+	.wg-newsleter{
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 14px;
+			height: 12px;
+			background: url(../images/icons/newsletter-button.png) no-repeat 0 0;
+		}
+		.tnp-email{
+			border-color: $primary_color;
+		}
+		.tnp-button{
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 0;
+		}
 	}
+
 }
