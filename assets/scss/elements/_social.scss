@@ -26,6 +26,7 @@
     			color: $link_color !important;
     			background-color: #fff;
 		    	border: $MainBorder;
+		    	border-radius: 0;
 		    	@include box-shadow('none');
 		    	&:before{
 		    		content: none !important;
