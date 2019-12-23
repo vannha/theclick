@@ -132,7 +132,7 @@ if (!function_exists('theclick_instagram_html_output')) {
             'author_text'   => '',
             'username'      => ''
         ]);
-
+var_dump($media_array);
         switch ($layout_mode) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
