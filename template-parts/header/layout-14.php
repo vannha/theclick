@@ -23,13 +23,13 @@
                     <div class="header-attrs col">
                         <div class="header-attr-wrap nav-extra justify-content-end">
                             <?php
-                            theclick_header_signin_signup(['class' => 'd-none d-sm-block']);
-                            theclick_header_wishlist(['class' => 'd-none d-sm-block']);
-                            theclick_header_compare(['class' => 'd-none d-sm-block']);
-                            theclick_header_cart(['class' => 'd-none d-sm-block']);
-                            theclick_header_social(['class' => 'd-none d-sm-block']);
-                            theclick_header_social_counter_render(['class' => 'd-none d-sm-block']);
-                            theclick_header_popup_nav_icon(['class' => 'd-none d-sm-block']);
+                            theclick_header_signin_signup(['class' => 'd-none d-md-block']);
+                            theclick_header_wishlist(['class' => 'd-none d-md-block']);
+                            theclick_header_compare(['class' => 'd-none d-md-block']);
+                            theclick_header_cart(['class' => 'd-none d-md-block']);
+                            theclick_header_social(['class' => 'd-none d-md-block']);
+                            theclick_header_social_counter_render(['class' => 'd-none d-md-block']);
+                            theclick_header_popup_nav_icon(['class' => 'd-none d-md-block']);
                             theclick_header_mobile_menu_icon();
                             ?>
                         </div>
