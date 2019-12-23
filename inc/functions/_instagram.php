@@ -137,9 +137,9 @@ if (!function_exists('theclick_instagram_html_output')) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
                 if ($show_author) { 
-                    $avatar_src = $media_array[0]['avatar'];
-                    $follower = $media_array[0]['follower'];
-                    $following = $media_array[0]['following'];
+                    $avatar_src = $media_array['user']['avatar'];
+                    $follower = $media_array['user']['follower'];
+                    $following = $media_array['user']['following'];
                 ?>
                     <div class="user d-flex gutter-15 align-items-center">
                         <div class="user-avatar">
