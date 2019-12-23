@@ -2,10 +2,15 @@
 .ef5-single-page-links{
 	margin-bottom: $grid-gutter-width;
 }
+
 .ef5-single-header{
 	margin-bottom: 25px;
+	.ef5-before-title{
+		margin-bottom: 12px;
+	}
 	.ef5-heading{
 		font-size: 40px;
+		margin-bottom: 10px;
 		@media (max-width: 767px){
 			font-size: 30px;
 		}
