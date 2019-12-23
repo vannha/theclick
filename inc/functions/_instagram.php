@@ -132,16 +132,16 @@ if (!function_exists('theclick_instagram_html_output')) {
             'author_text'   => ''
         ]);
         extract($args);
-        if ($show_author) { 
-            $username     = $media_array['user']['username'];  
-            $display_name = $media_array['user']['display_name'];  
-            $avatar_src   = $media_array['user']['avatar'];
-            $follower     = $media_array['user']['follower'];
-            $following    = $media_array['user']['following'];
-        }
+        $username     = $media_array['user']['username'];  
+        $display_name = $media_array['user']['display_name'];  
+        $avatar_src   = $media_array['user']['avatar'];
+        $follower     = $media_array['user']['follower'];
+        $following    = $media_array['user']['following'];
+         
         switch ($layout_mode) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
+                if ($show_author) { 
                 ?>
                     <div class="user d-flex gutter-15 align-items-center">
                         <div class="user-avatar">
@@ -164,8 +164,8 @@ if (!function_exists('theclick_instagram_html_output')) {
                             </div>
                         </div>
                     </div>
-                <?php }
-                ?>
+                <?php 
+                } ?>
                 <div class="ef5-instagram-wrap row grid-gutters-<?php echo esc_attr($columns_space); ?> clearfix">
                     <?php
                     foreach ($media_array['images'] as $item) {
