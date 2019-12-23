@@ -34,9 +34,9 @@ if(!function_exists('theclick_default_ins_data')){
     function theclick_default_ins_data(){
         $default = [
             'user' => [
-                'username'    => 'overcome',
-                'display_name' => 'OverCome',
-                'avatar'       => get_template_directory_uri().'/assets/images/map-marker.png',
+                'username'    => 'theclick.studio',
+                'display_name' => esc_html('The Click','theclick'),
+                'avatar'       => get_template_directory_uri().'/assets/images/instagram/avatar.png',
                 'follower'     => '100',
                 'following'    => '10'
             ],
@@ -47,10 +47,10 @@ if(!function_exists('theclick_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
-                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
-                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
-                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpg',
                     'type'          => 'image'
                 ],
                 '2' => [
@@ -59,10 +59,10 @@ if(!function_exists('theclick_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
-                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
-                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
-                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/2_thumb.jpg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/2_small.jpg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/2_large.jpg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/2_original.jpg',
                     'type'          => 'image'
                 ],
                 '3' => [
@@ -71,10 +71,10 @@ if(!function_exists('theclick_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
-                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
-                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
-                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/3_thumb.jpg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/3_small.jpg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/3_large.jpg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/3_original.jpg',
                     'type'          => 'image'
                 ],
                 '4' => [
@@ -83,18 +83,39 @@ if(!function_exists('theclick_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
-                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
-                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
-                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/4_thumb.jpg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/4_small.jpg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/4_large.jpg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/4_original.jpg',
+                    'type'          => 'image'
+                ],
+                '5' => [
+                    'description'   => '',
+                    'link'          => '#',
+                    'time'          => '',
+                    'comments'      => '0',
+                    'likes'         => '0',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/5_thumb.jpg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/5_small.jpg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/5_large.jpg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/5_original.jpg',
+                    'type'          => 'image'
+                ],
+                '6' => [
+                    'description'   => '',
+                    'link'          => '#',
+                    'time'          => '',
+                    'comments'      => '0',
+                    'likes'         => '0',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/6_thumb.jpg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/6_small.jpg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/6_large.jpg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/6_original.jpg',
                     'type'          => 'image'
                 ]
             ]
         ];
-        foreach ($default['images'] as $key => $value) {
-            $images[$key] = $value; 
-        }
-        return $images;
+        return $default;
     }
 }
 
