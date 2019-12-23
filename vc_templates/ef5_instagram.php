@@ -44,8 +44,7 @@ $args = [
     'show_like'     => $show_like,
     'show_cmt'      => $show_cmt,
     'show_author'   => $show_author,
-    'author_text'   => $author_text,
-    'username'      => $username
+    'author_text'   => $author_text
 ];
 
 $html = apply_filters('ef5systems_instagram_output_html', $args);
