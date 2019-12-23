@@ -131,6 +131,7 @@ if (!function_exists('theclick_instagram_html_output')) {
             'show_author'   => '1',
             'author_text'   => ''
         ]);
+        extract($args);
         if ($show_author) { 
             $username     = $media_array['user']['username'];  
             $display_name = $media_array['user']['display_name'];  
