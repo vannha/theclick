@@ -33,7 +33,7 @@ if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
     return;
 }
-$media_array = array_slice($media_array, 0, $number);
+$media_array = array_slice($media_array['images'], 0, $number);
 $args = [
     'layout_mode'   => $layout_mode,
     'span'          => $span,
