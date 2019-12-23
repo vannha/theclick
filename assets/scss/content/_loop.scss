@@ -27,6 +27,9 @@
 		position: absolute;
 		bottom: 0;
 		left: 18.5px;
+		@media (max-width: 767px){
+			width: 100%;
+		}
 	}
 	.ef5-featured{
 		@media (min-width: 768px){
