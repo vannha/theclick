@@ -166,7 +166,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                 ?>
                 <div class="ef5-instagram-wrap row grid-gutters-<?php echo esc_attr($columns_space); ?> clearfix">
                     <?php
-                    foreach ($media_array as $item) {
+                    foreach ($media_array['images'] as $item) {
                         ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap'))); ?>">
                             <a class="ins-img" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
@@ -190,7 +190,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                 ?>
                 <div class="ef5-instagram-wrap row grid-gutters-<?php echo esc_attr($columns_space); ?> clearfix">
                     <?php
-                    foreach ($media_array as $item) {
+                    foreach ($media_array['images'] as $item) {
                         ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap'))); ?>">
                             <a class="ins-img" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
