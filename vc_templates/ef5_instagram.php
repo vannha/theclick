@@ -29,7 +29,7 @@ switch ($columns) {
 }
 
 $media_array = ef5systems_instagram_data();
-var_dump($media_array);
+
 if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
     return;
