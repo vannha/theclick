@@ -34,7 +34,7 @@ if(!function_exists('theclick_default_ins_data')){
     function theclick_default_ins_data(){
         $default = [
             'user' => [
-                'user_name'    => 'overcome',
+                'username'    => 'overcome',
                 'display_name' => 'OverCome',
                 'avatar'       => get_template_directory_uri().'/assets/images/map-marker.png',
                 'follower'     => '100',
@@ -132,7 +132,6 @@ if (!function_exists('theclick_instagram_html_output')) {
             'author_text'   => '',
             'username'      => ''
         ]);
-var_dump($media_array);
         switch ($layout_mode) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';

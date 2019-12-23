@@ -28,7 +28,7 @@ switch ($columns) {
         $span = "col-6 col-sm-3";
 }
 
-$media_array = ef5systems_instagram_data($username);
+$media_array = ef5systems_instagram_data();
 if (is_wp_error($media_array)) {
     echo esc_html($media_array->get_error_message());
     return;
