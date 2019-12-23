@@ -29,6 +29,7 @@
 		left: 18.5px;
 		@media (max-width: 767px){
 			width: 100%;
+			left: 0;
 		}
 	}
 	.ef5-featured{
@@ -100,6 +101,9 @@
 .ef5-loop-info{
 	padding-top: 17px;
 	padding-bottom: 30px;
+	@media (max-width: 767px){
+		padding-bottom: 0;
+	}
 }
 .ef5-before-title{
 	margin-bottom: 13px;
