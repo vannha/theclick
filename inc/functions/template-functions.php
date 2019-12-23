@@ -21,7 +21,7 @@ if(!function_exists('theclick_post_header')){
 		<div class="<?php echo trim(implode(' ', $classes));?>">
             <div class="ef5-before-title empty-none"><?php do_action('theclick_before_loop_title'); ?></div>
 	        <?php the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>'); ?>
-            <?php theclick_post_excerpt(); ?>
+            <?php if(!is_singular()) theclick_post_excerpt(); ?>
             <div class="ef5-after-title empty-none"><?php do_action('theclick_after_loop_title'); ?></div>
 	    </div>
 	<?php

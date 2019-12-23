@@ -5,6 +5,9 @@
 .ef5-single-header{
 	.ef5-heading{
 		font-size: 40px;
+		@media (max-width: 767px){
+			font-size: 30px;
+		}
 	}
 }
 .ef5-single-content{
