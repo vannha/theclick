@@ -118,7 +118,7 @@ if (!function_exists('theclick_instagram_html_output')) {
     add_filter('ef5systems_instagram_output_html', 'theclick_instagram_html_output', 10, 1);
     function theclick_instagram_html_output($args = [])
     {
-        extract($args);
+        //extract($args);
         $args = wp_parse_args($args, [
             'layout_mode'   => 'default',
             'span'          => '4',
