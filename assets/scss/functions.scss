@@ -4,17 +4,21 @@ $grid-wide-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1430px
+  xl: 1200px
+  xxl: 1430px
 ) !default;
 
 $container-wide-max-widths: (
   xxs: 100%,
   xs: 480px,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1430px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+  xxl: 1430px
 ) !default;
+ 
+
 // For each breakpoint, define the maximum width of the container in a media query
 @mixin make-container-wide-max-widths($max-widths: $container-wide-max-widths, $breakpoints: $grid-wide-breakpoints) {
   @each $breakpoint, $container-max-width in $max-widths {
