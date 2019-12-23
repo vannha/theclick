@@ -12,7 +12,7 @@
                     <div class="ef5-header-left col">
                         <div class="nav-extra align-items-center">
                             <?php
-                            theclick_header_side_nav_icon(['class' => '']);
+                            theclick_header_side_nav_icon(['class' => 'd-none d-xl-block']);
                             theclick_header_search(['class' => '', 'label' => esc_html__('Search Blog', 'theclick')]);
                             ?>
                         </div>
