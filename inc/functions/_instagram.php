@@ -135,7 +135,7 @@ if (!function_exists('theclick_instagram_html_output')) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
                 if ($show_author) { 
-                    $username    => $media_array['user']['username'];  
+                    $username     => $media_array['user']['username'];  
                     $display_name => $media_array['user']['display_name'];  
                     $avatar_src = $media_array['user']['avatar'];
                     $follower = $media_array['user']['follower'];
