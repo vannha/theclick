@@ -65,8 +65,39 @@
 		font-size: 30px;
 		line-height: 38px;
 		margin-bottom: 17px;
-		font-family: $futura-pt;
+	}
+	.ef5-before-title{
+		margin-bottom: 13px;
+		a{
+			color: $link_color_hover;
+			&:hover{
+				color: $link_color;
+			}
+		}
+	}
+	.ef5-after-title{
 		font-weight: 500;
+		a{
+			color: $link_color_hover;
+			&:hover{
+				color: $link_color;
+			}
+		}
+	}
+}
+.ef5-before-title{
+	font-weight: 500;
+	text-transform: uppercase;
+	a{
+		font-size: 11px;
+	}
+}
+.ef5-after-title{
+	font-weight: 500;
+	text-transform: uppercase;
+	a{
+		font-size: 10px;
+		
 	}
 }
 .sticky-post{
@@ -108,31 +139,7 @@
 		padding-bottom: 0;
 	}
 }
-.ef5-before-title{
-	margin-bottom: 13px;
-	font-family: $futura-pt;
-	font-weight: 500;
-	a{
-		font-size: 11px;
-		text-transform: uppercase;
-		color: $link_color_hover;
-		&:hover{
-			color: $link_color;
-		}
-	}
-}
-.ef5-after-title{
-	font-family: $futura-pt;
-	font-weight: 500;
-	a{
-		font-size: 10px;
-		text-transform: uppercase;
-		color: $link_color_hover;
-		&:hover{
-			color: $link_color;
-		}
-	}
-}
+
 .ef5-excerpt{
 	font-size: 14px;
 	color: $primary_color;
