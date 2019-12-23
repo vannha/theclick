@@ -24,6 +24,80 @@ if (!function_exists('theclick_instagram_api_key')) {
         return theclick_get_theme_opt('instagram_api_key', '');
     }
 }
+
+/**
+ * Add data sample
+ * add_filter('ef5systems_default_ins_data','theclick_instagram_custom_layout');
+ */
+if(!function_exists('theclick_default_ins_data')){
+    add_filter('ef5systems_default_ins_data', 'theclick_default_ins_data');
+    function theclick_default_ins_data(){
+        $default = [
+            'user' => [
+                'user_name'    => 'overcome',
+                'display_name' => 'OverCome',
+                'avatar'       => get_template_directory_uri().'/assets/images/map-marker.png',
+                'follower'     => '100',
+                'following'    => '10'
+            ],
+            'images' => [
+                '1' => [
+                    'description'   => '',
+                    'link'          => '#',
+                    'time'          => '',
+                    'comments'      => '0',
+                    'likes'         => '0',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'type'          => 'image'
+                ],
+                '2' => [
+                    'description'   => '',
+                    'link'          => '#',
+                    'time'          => '',
+                    'comments'      => '0',
+                    'likes'         => '0',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'type'          => 'image'
+                ],
+                '3' => [
+                    'description'   => '',
+                    'link'          => '#',
+                    'time'          => '',
+                    'comments'      => '0',
+                    'likes'         => '0',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'type'          => 'image'
+                ],
+                '4' => [
+                    'description'   => '',
+                    'link'          => '#',
+                    'time'          => '',
+                    'comments'      => '0',
+                    'likes'         => '0',
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
+                    'type'          => 'image'
+                ]
+            ]
+        ];
+        foreach ($default['images'] as $key => $value) {
+            $images[$key] = $value; 
+        }
+        return $images;
+    }
+}
+
 /**
  * Custom layout 
  * add_filter('ef5systems_instagram_custom_layout','theclick_instagram_custom_layout');
@@ -38,6 +112,7 @@ if (!function_exists('theclick_instagram_custom_layout')) {
         ];
     }
 }
+
 // Output HTML 
 if (!function_exists('theclick_instagram_html_output')) {
     add_filter('ef5systems_instagram_output_html', 'theclick_instagram_html_output', 10, 1);
