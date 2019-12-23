@@ -116,9 +116,7 @@ if (!function_exists('theclick_instagram_custom_layout')) {
 // Output HTML 
 if (!function_exists('theclick_instagram_html_output')) {
     add_filter('ef5systems_instagram_output_html', 'theclick_instagram_html_output', 10, 1);
-    function theclick_instagram_html_output($args = [])
-    {
-        //extract($args);
+    function theclick_instagram_html_output($args = []){
         $args = wp_parse_args($args, [
             'layout_mode'   => 'default',
             'span'          => '4',
