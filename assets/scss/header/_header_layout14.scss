@@ -3,7 +3,9 @@
 		font-size: 13px;
 		text-transform: uppercase;
 	}
-	.ef5-header-menu > li{
-	    padding: 0px 18px;
+	@media (min-width: 768px){
+		.ef5-header-menu > li{
+		    padding: 0px 18px;
+		}
 	}
 }
