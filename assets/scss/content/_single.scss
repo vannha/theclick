@@ -10,6 +10,32 @@
 		}
 	}
 }
+.ef5-post-extra-link{
+	ul{
+		list-style: none;
+		li{
+			position: relative;
+			padding-left: 24px;
+			&:before{
+				content: "";
+				width: 12px;
+				height: 6px;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -3px;
+				background-image: url('images/icons/list-item-arrow.png') no-repeat;
+			}
+			a{
+				font-size: 16px;
+				line-height: 21px;
+			}
+			+li{
+				margin-top: 5px;
+			}
+		}
+	}
+}
 .ef5-single-content{
 	blockquote{
 		margin-top: 50px;
