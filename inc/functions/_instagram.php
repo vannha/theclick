@@ -131,15 +131,16 @@ if (!function_exists('theclick_instagram_html_output')) {
             'show_author'   => '1',
             'author_text'   => ''
         ]);
+        if ($show_author) { 
+            $username     = $media_array['user']['username'];  
+            $display_name = $media_array['user']['display_name'];  
+            $avatar_src   = $media_array['user']['avatar'];
+            $follower     = $media_array['user']['follower'];
+            $following    = $media_array['user']['following'];
+        }
         switch ($layout_mode) {
             case '0':
                 echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
-                if ($show_author) { 
-                    $username     = $media_array['user']['username'];  
-                    $display_name = $media_array['user']['display_name'];  
-                    $avatar_src   = $media_array['user']['avatar'];
-                    $follower     = $media_array['user']['follower'];
-                    $following    = $media_array['user']['following'];
                 ?>
                     <div class="user d-flex gutter-15 align-items-center">
                         <div class="user-avatar">
@@ -208,7 +209,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                 </div>
                 <?php if ($show_author) { ?>
                     <div class="user"><a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>"><?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
-                        else echo '<span class="author-text">' . $media_array['user']['display_name'] . '</span>';
+                        else echo '<span class="author-text">' . $display_name . '</span>';
                     echo '<span class="author-name">@' . trim($username) . '</span>'; ?></a></div>
                 <?php
                 }
