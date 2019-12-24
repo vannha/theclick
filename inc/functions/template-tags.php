@@ -430,7 +430,8 @@ if(!function_exists('theclick_post_share')){
             'title'       => esc_html__('Share','theclick'),
             'social_args' => [],
             'echo'        => true,
-            'show_all'    => ''
+            'show_all'    => '',
+            'hint_pos'    => 'hint--top'  
         );
         $args = wp_parse_args($args, $defaults);
         extract($args);
@@ -459,8 +460,7 @@ if(!function_exists('theclick_post_share')){
         }
         ob_start();
         if($show_fb == '1' || $show_tw == '1' || $show_gplus == '1' || $show_pin == '1' || $show_all == '1') {
-
-        $hint_class = is_singular() ? 'hint-right' : 'hint--top';    
+  
         ?>
         <div class="<?php echo trim(implode(' ', $classes)); ?>">
             <?php if($show_title): ?>
@@ -470,19 +470,19 @@ if(!function_exists('theclick_post_share')){
             <?php endif; ?>
                     <div class="<?php echo esc_attr($social_classes);?>">
                         <?php if($show_fb == '1'): ?>
-                        <a data-hint="<?php esc_attr_e('Share this post to Facebook','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_class)?> hint--bounce facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
+                        <a data-hint="<?php esc_attr_e('Share this post to Facebook','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_pos)?> hint--bounce facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
                         <?php endif;
                         if($show_tw == '1'): ?>
-                        <a data-hint="<?php esc_attr_e('Share this post to Twitter','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_class)?> hint--bounce twitter st-custom-button"><span class="fab fa-twitter"></span></a>
+                        <a data-hint="<?php esc_attr_e('Share this post to Twitter','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_pos)?> hint--bounce twitter st-custom-button"><span class="fab fa-twitter"></span></a>
                         <?php endif;
                         if($show_gplus == '1'): ?>
-                        <a data-hint="<?php esc_attr_e('Share this post to Google Plus','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_class)?> hint--bounce googleplus st-custom-button"><span class="fab fa-google-plus"></span></a>
+                        <a data-hint="<?php esc_attr_e('Share this post to Google Plus','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="googleplus" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_pos)?> hint--bounce googleplus st-custom-button"><span class="fab fa-google-plus"></span></a>
                         <?php endif;
                         if($show_pin == '1'): ?>
-                        <a data-hint="<?php esc_attr_e('Share this post to Pinterest','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_class)?> hint--bounce pinterest st-custom-button"><span class="fab fa-pinterest"></span></a>
+                        <a data-hint="<?php esc_attr_e('Share this post to Pinterest','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="pinterest" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_pos)?> hint--bounce pinterest st-custom-button"><span class="fab fa-pinterest"></span></a>
                         <?php endif;
                         if($show_all == '1'): ?>
-                        <a data-hint="<?php esc_attr_e('Share this post to','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_class)?> hint--bounce sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
+                        <a data-hint="<?php esc_attr_e('Share this post to','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="sharethis" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="<?php echo esc_attr($hint_pos)?> hint--bounce sharethis st-custom-button"><span class="fa fa-share-alt"></span></a>
                         <?php endif; ?>
                     </div>
             <?php if($show_title): ?>

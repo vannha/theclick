@@ -232,7 +232,7 @@ if(!function_exists('theclick_post_content')){
     ?>
         <div class="<?php echo trim(implode(' ', $classes));?>">
             <?php if(is_singular() && $show_share == '1'):?>
-                <?php theclick_post_share(['class' => 'single-col-left d-none d-md-block']); ?>
+                <?php theclick_post_share(['class' => 'single-col-left d-none d-md-block','hint_pos' => 'hint--right']); ?>
                 <div class="single-col-right">
             <?php endif; ?>
             <?php the_content(); ?>
