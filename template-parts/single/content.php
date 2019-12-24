@@ -26,11 +26,12 @@ $show_share = theclick_get_theme_opt( 'post_share_on', '0' );
         theclick_single_post_content(['class' => 'ef5-single-content']);
         theclick_link_pages(['class' => 'ef5-single-page-links']);
     ?>
-    <div class="ef5-single-footer row justify-content-between align-items-center empty-none"><?php 
-        do_action('theclick_single_post_footer');
+    <div class="ef5-single-footer empty-none">
+        <div class="row justify-content-between align-items-center">
+        <?php 
         theclick_tagged_in(['class' => 'col-auto']);
         theclick_post_share(['class' => 'col-auto d-md-none d-lg-none d-xl-none','hint_pos' => 'hint--top']);
-    ?></div>
+    ?></div></div>
     <?php 
         theclick_post_author();
         theclick_post_navigation();
