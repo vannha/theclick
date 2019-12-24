@@ -431,7 +431,7 @@ if(!function_exists('theclick_post_media')){
             'ef5-'.$post_format,
         ];
         $classes[] = theclick_is_loop() ? 'loop' : 'single';
-        $default_thumb   => theclick_configs('theclick_default_post_thumbnail');
+        $default_thumb = theclick_configs('theclick_default_post_thumbnail');
         if($default_thumb) $classes[] = 'default-thumb';
         if(!empty($args['class'])) $classes[] = $args['class'];
     ?>
