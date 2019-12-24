@@ -88,9 +88,9 @@
 			border-radius: 50%;
 			font-size: 16px;
 			text-align: center;
-			color: attr(data-color);
+			color: attr('data-color');
 			&:hover{
-				color: attr(data-color);
+				color: attr('data-color');
 			}
 		}
 	}
