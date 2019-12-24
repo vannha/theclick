@@ -244,6 +244,24 @@ if(!function_exists('theclick_post_content')){
     <?php
     }
 }
+if(!function_exists('theclick_single_post_content')){
+    function theclick_single_post_content($args = []){
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $classes = [
+            'ef5-content',
+            'ef5-content-'.get_post_type(),
+            $args['class']
+        ];
+        ?>
+        <div class="<?php echo trim(implode(' ', $classes));?>">
+            <?php the_content(); ?> 
+        </div>
+        <?php
+   }
+}
+
  
 
 /**
