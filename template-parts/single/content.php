@@ -21,7 +21,7 @@ $show_share = theclick_get_theme_opt( 'post_share_on', '0' );
     if($show_share == '1'):
         echo '<div class="ef5-single-content-wrap d-flex">';
         theclick_post_share(['class' => 'single-col-left d-none d-md-block','hint_pos' => 'hint--right']);
-        echo '<div class="single-col-right d-flex">';
+        echo '<div class="single-col-right">';
     endif;  
         theclick_single_post_content(['class' => 'ef5-single-content']);
         theclick_link_pages(['class' => 'ef5-single-page-links']);
