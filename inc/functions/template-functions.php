@@ -339,7 +339,7 @@ if(!function_exists('theclick_post_author')){
                     echo get_avatar(get_the_author_meta('ID'));
             ?></div>
             <div class="author-info col">
-                <div class="author-name text-capitalize">
+                <div class="author-name">
                     <div class="h4"><?php the_author(); ?></div>
                     <?php if($role):?>
                         <small class="author-roles d-block"><?php echo implode(' / ', $user_info->roles); ?></small>

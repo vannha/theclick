@@ -11,5 +11,11 @@
 	}
 	.author-info {
 		margin-bottom: 20px;
+		.author-name .h4{
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 15px;
+			text-transform: uppercase;
+		}
 	}
 }
