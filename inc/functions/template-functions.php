@@ -456,8 +456,8 @@ if(!function_exists('theclick_post_navigation')){
         $prevthumbnail = $nextthumbnail = $prev_thumb = $next_thumb = '';
         $prevPost = get_previous_post(false);
         $nextPost = get_next_post(false);
-        if($prevPost) $prevthumbnail = get_the_post_thumbnail($prevPost->ID);
-        if($nextPost) $nextthumbnail = get_the_post_thumbnail($nextPost->ID);
+        if($prevPost) $prevthumbnail = get_the_post_thumbnail($prevPost->ID,'thumbnail');
+        if($nextPost) $nextthumbnail = get_the_post_thumbnail($nextPost->ID,'thumbnail');
         if(!$prevPost && !$nextPost) return;
         if(!empty($prevthumbnail)) {
             $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
