@@ -88,7 +88,7 @@
 			border-radius: 50%;
 			font-size: 16px;
 			text-align: center;
-			color: attr('data-color');
+			@include theclick_social_color();
 			&:hover{
 				color: attr('data-color');
 			}
@@ -121,6 +121,7 @@
 			}
 		}
 	}
+ 
 }
 .ef5-pwbox-inner{
 	position: relative;
