@@ -66,7 +66,14 @@
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
-
+	.single-col-left{
+		flex: 0 0 80px;
+		max-width: 80px;
+	}
+	.single-col-right{
+		flex: 0 0 calc(100% - 80px);
+		max-width: calc(100% - 80px);
+	}
 }
 .ef5-pwbox-inner{
 	position: relative;
