@@ -30,7 +30,7 @@ $show_share = theclick_get_theme_opt( 'post_share_on', '0' );
         <div class="row justify-content-between align-items-center">
         <?php 
         theclick_tagged_in(['class' => 'col-auto']);
-        theclick_post_share(['class' => 'col-auto d-md-none d-lg-none d-xl-none','hint_pos' => 'hint--top']);
+        theclick_post_share(['class' => 'col-12 col-sm-auto d-md-none d-lg-none d-xl-none','hint_pos' => 'hint--top']);
     ?></div></div>
     <?php 
         theclick_post_author();
