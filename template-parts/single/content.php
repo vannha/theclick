@@ -21,5 +21,6 @@
     <div class="ef5-single-footer row justify-content-between align-items-center empty-none"><?php 
         do_action('theclick_single_post_footer');
         theclick_tagged_in(['class' => 'col-auto']);
+        theclick_post_share(['class' => 'col-auto d-md-none d-lg-none d-xl-none']);
     ?></div>
 </div>
