@@ -452,15 +452,27 @@ if(!function_exists('theclick_post_navigation')){
         $args = wp_parse_args($args, [
             'layout' => '1'
         ]);
-        $navigation = get_the_post_navigation();
+        //$navigation = get_the_post_navigation();
+        $prevthumbnail = $nextthumbnail = $prev_thumb = $next_thumb = '';
+        $prevPost = get_previous_post(false);
+        $nextPost = get_next_post(false);
+        if($prevPost) $prevthumbnail = get_the_post_thumbnail($prevPost->ID);
+        if($nextPost) $nextthumbnail = get_the_post_thumbnail($nextPost->ID);
+        if(!$prevPost && !$nextPost) return;
+        if(!empty($prevthumbnail)) {
+            $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
+        }
+        if(!empty($nextthumbnail)) {
+            $next_thumb = '<div class="nav-thub-img">'.$nextthumbnail.'</div>';
+        }
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
-            '<div class="nav-prev-wrap"><div class="nav-thub-img">aaaa</div><div class="nav-title"><div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-title h4">%title</div></div></div>'
+            '<div class="nav-prev-wrap">'.$prev_thumb.'<div class="nav-title"><div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-title h4">%title</div></div></div>'
         );
      
         $next = get_next_post_link(
             '<div class="nav-next">%link</div>',
-            '<div class="nav-prev-wrap"><div class="nav-thub-img">bbb</div><div class="nav-title"><div class="meta-nav">'.esc_html__('Next Post','theclick').'</div><div class="post-title h4">%title</div></div></div>'
+            '<div class="nav-prev-wrap">'.$next_thumb.'<div class="nav-title"><div class="meta-nav">'.esc_html__('Next Post','theclick').'</div><div class="post-title h4">%title</div></div></div>'
         );
         $nav_links = ['nav-links'];
         if(empty($previous)) $nav_links[] = 'justify-content-end';
