@@ -219,6 +219,7 @@ if(!function_exists('theclick_post_excerpt')){
 */
 if(!function_exists('theclick_post_content')){
     function theclick_post_content($args = []){
+        $show_share = theclick_get_theme_opt( 'post_share_on', '0' )
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
@@ -230,20 +231,21 @@ if(!function_exists('theclick_post_content')){
         $classes[] = 'clearfix';
     ?>
         <div class="<?php echo trim(implode(' ', $classes));?>">
-            <?php if(is_singular()):?>
+            <?php if(is_singular() && $show_share == '1'):?>
                 <div class="single-col-left">
                 <?php theclick_post_share(['class' => 'col-auto']); ?>
                 </div>
                 <div class="single-col-right">
             <?php endif; ?>
             <?php the_content(); ?>
-            <?php if(is_singular()):?>
+            <?php if(is_singular() && $show_share == '1'):?>
                 </div>
             <?php endif; ?>
         </div>
     <?php
     }
 }
+ 
 
 /**
  * Loop Pagination 
