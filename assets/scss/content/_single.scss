@@ -93,6 +93,11 @@
 			 	@include theclick_social_color('background');
 			 	color: #fff;
 			}
+			@media (max-width: 1199px){
+				&:before,&:after{
+					content: none;
+				}
+			}
 		}
 	}
 	.single-col-left{
