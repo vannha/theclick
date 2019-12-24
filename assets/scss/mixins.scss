@@ -408,7 +408,7 @@ $social-colors: (
 //'sharethis'  : $accent_color
 // loop, to style social media links
 @mixin theclick_social_color($tag : color, $priority : ''){
-    @each $name, $color in $social {
+    @each $name, $color in $social-colors {
         &[class*='#{$name}']{
             @if $priority != '' {
                 #{$tag}: $color $priority;
