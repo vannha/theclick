@@ -455,12 +455,12 @@ if(!function_exists('theclick_post_navigation')){
         $navigation = get_the_post_navigation();
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
-            '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-title h4">%title</div>'
+            '<div class="nav-prev-wrap"><div class="nav-thub-img">aaaa</div><div class="nav-title"><div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-title h4">%title</div></div></div>'
         );
      
         $next = get_next_post_link(
             '<div class="nav-next">%link</div>',
-            '<div class="meta-nav">'.esc_html__('Next Post','theclick').'</div><div class="post-title h4">%title</div>'
+            '<div class="nav-prev-wrap"><div class="nav-thub-img">bbb</div><div class="nav-title"><div class="meta-nav">'.esc_html__('Next Post','theclick').'</div><div class="post-title h4">%title</div></div></div>'
         );
         $nav_links = ['nav-links'];
         if(empty($previous)) $nav_links[] = 'justify-content-end';
