@@ -38,6 +38,11 @@
 		text-transform: uppercase;
 		padding-bottom: 10px;
 		font-weight: 500;
+		&:before{
+			font-family: $FontAwesome;
+			color: $HeadingColor;
+			position: absolute;
+		}
 	}
 	.nav-links{
 		@include d-flex();
@@ -59,20 +64,18 @@
 		a{
 			display: block;
 		}
-		&:before{
-			font-family: $FontAwesome;
-			color: $HeadingColor;
-			position: absolute;
-		}
+		
 		&:hover .post-title{
 			color: $accent_color;
 		}
 	}
 	.nav-previous{
 		padding-left: 45px;
-		&:before{
-			content: '\f060';
-			left: 15px;
+		.meta-nav{
+			&:before{
+				content: '\f060';
+				left: 15px;
+			}
 		}
 		[dir="rtl"] &{
 			padding-left: 15px;
@@ -87,9 +90,11 @@
 	.nav-next{
 		text-align: right;
 		padding-right: 45px;
-		&:before{
-			content: '\f061';
-			right: 15px;
+		.meta-nav{
+			&:before{
+				content: '\f061';
+				right: 15px;
+			}
 		}
 		[dir="rtl"] &{
 			text-align: left;
