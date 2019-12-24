@@ -16,9 +16,9 @@
 		}
 	}
 	a{
-		color: $accent_color;
-		&:hover{
-			color: $primary_color;
+		margin-left: 26px;
+		&:first-child{
+			margin-left: 15px;
 		}
 	}
 }
