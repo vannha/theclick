@@ -90,7 +90,8 @@
 			text-align: center;
 			@include theclick_social_color();
 			&:hover{
-				color: attr('data-color');
+			 	@include theclick_social_color('background');
+			 	color: #fff;
 			}
 		}
 	}
