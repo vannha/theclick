@@ -149,7 +149,10 @@
 }
 .ef5-loop-footer{
 	margin-top: 10px;
-	margin-bottom: 25px;
+	>div{
+		margin-bottom: 10px;
+	}
+	margin-bottom: 15px;
 }
 
 .view-all-wrap{
