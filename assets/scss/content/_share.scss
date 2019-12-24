@@ -1,0 +1,28 @@
+.ef5-shares{
+	.share-title{
+		font-size: 10px;
+		text-transform: uppercase;
+		color: $accent_color;	
+	}
+	.ef5-social{
+		a{
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid $MainBorderColor;
+			border-radius: 50%;
+			font-size: 16px;
+			text-align: center;
+			@include theclick_social_color();
+			&:hover{
+			 	@include theclick_social_color('background');
+			 	color: #fff;
+			}
+			@media (max-width: 1199px){
+				&:before,&:after{
+					content: none;
+				}
+			}
+		}
+	}
+}
