@@ -336,7 +336,7 @@ if(!function_exists('theclick_post_author')){
     <div class="author-box text-center text-md-<?php echo theclick_align();?>">
         <div class="row">
             <div class="author-avatar col-12 col-md-2 col-lg-auto"><?php 
-                    echo get_avatar(get_the_author_meta('ID'));
+                echo get_avatar(get_the_author_meta('ID'));
             ?></div>
             <div class="author-info col">
                 <div class="author-name">
