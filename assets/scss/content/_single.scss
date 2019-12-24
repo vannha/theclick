@@ -74,13 +74,13 @@
 		flex: 0 0 calc(100% - 80px);
 		max-width: calc(100% - 80px);
 	}
-	.ef5-shares{
-		.share-title{
-			font-size: 10px;
-			font-weight: 500;
-			text-transform: uppercase;
-			color: $accent_color;	
-		}
+	.share-title{
+		font-size: 10px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $accent_color;	
+	}
+	.ef5-social{
 		a{
 			width: 40px;
 			height: 40px;
@@ -90,28 +90,28 @@
 			font-size: 16px;
 			text-align: center;
 			&:hover{
-				
+
 			}
 		}
 	}
 	.single-col-left{
-		.ef5-shares{
-			margin: 0;
-			.share-title{
-				position: relative;
-				margin-bottom: 10px;
-				padding-bottom: 10px;	
-				&:after{
-					content: "";
-					width: 20px;
-					height: 1px;
-					background: $MainBorderColor;
-					position: absolute;
-					bottom: 0;
-					left: 50%;
-					margin-left: -10px;
-				}
+		.share-title{
+			position: relative;
+			margin-bottom: 10px;
+			padding-bottom: 10px;	
+			&:after{
+				content: "";
+				width: 20px;
+				height: 1px;
+				background: $MainBorderColor;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: -10px;
 			}
+		}
+		.ef5-social{
+			margin: 0;
 			a{
 				display: block;
 				padding: 0;
