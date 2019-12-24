@@ -198,7 +198,7 @@ if ( ! function_exists( 'theclick_tagged_in' ) ) :
             'after'      => '',
             'before_tag' => '<span class="ef5-heading-tags text-uppercase">'.esc_html__('Tags:','theclick').'</span>',
             'after_tag'  => '',
-            'sep'        => ', ',
+            'sep'        => '',
             'show_tag'   => is_single() ? theclick_get_theme_opt( 'post_tags_on', '1' ) : theclick_get_theme_opt( 'archive_tags_on', '1' ),
             'echo'       => true
         ]);

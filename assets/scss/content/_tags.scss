@@ -1,5 +1,20 @@
-.ef5-post-footer .ef5-tagged-in{
-	color: $accent_color;
+.ef5-tagged-in{
+	.ef5-heading-tags{
+		font-size: 11px;
+		line-height: 14px;
+		color: $accent_color;
+		padding-right: 33px;
+		position: absolute;
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 18px;
+			height: 1px;
+			background: $lightent_accent_accent;
+		}
+	}
 	a{
 		color: $accent_color;
 		&:hover{
