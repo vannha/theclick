@@ -1,16 +1,15 @@
 .author-box{
 	border-top: 1px solid $MainBorderColor;
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	.author-avatar{
+		margin-bottom: 20px;
 		img{
 			max-width: 86px;
-		}
-		@media (max-width: $screen-md-min){
-			margin-bottom: $grid-gutter-width;
+			border-radius: 50%;
 		}
 	}
 	.author-info {
-		margin: 0 0 $grid-gutter-width / 2;
+		margin-bottom: 20px;
 	}
 }
