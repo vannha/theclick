@@ -16,10 +16,7 @@ $show_share = theclick_get_theme_opt( 'post_share_on', '0' );
         theclick_post_header(['class' => 'ef5-single-header']);
         theclick_post_extra_link();
         theclick_post_media(); 
-        theclick_post_content(['class' => 'ef5-single-content']);
-        theclick_link_pages(['class' => 'ef5-single-page-links']);
     ?>
-
     <?php 
     if($show_share == '1'):
         echo '<div class="ef5-single-content-wrap d-flex">';
