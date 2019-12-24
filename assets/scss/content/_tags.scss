@@ -1,6 +1,7 @@
 .ef5-tagged-in{
 	.ef5-heading-tags{
-		font-size: 11px;
+		font-size: 10px;
+	    font-weight: 500;
 		line-height: 14px;
 		color: $accent_color;
 		padding-right: 33px;
@@ -17,6 +18,9 @@
 		}
 	}
 	a{
+		font-size: 10px;
+		font-weight: 500;
+		text-transform: uppercase;
 		+a{
 			margin-left: 26px;
 		}
