@@ -427,7 +427,7 @@ if(!function_exists('theclick_post_share')){
             'show_share'  => is_single() ? theclick_get_theme_opt( 'post_share_on', '0' ) : theclick_get_theme_opt( 'archive_share_on', '0' ),
             'class'       => '',
             'show_title'  => true,
-            'title'       => esc_html__('Share this article','theclick'),
+            'title'       => esc_html__('Share','theclick'),
             'social_args' => [],
             'echo'        => true,
             'show_all'    => ''
@@ -459,14 +459,16 @@ if(!function_exists('theclick_post_share')){
         }
         ob_start();
         if($show_fb == '1' || $show_tw == '1' || $show_gplus == '1' || $show_pin == '1' || $show_all == '1') {
+
+
         ?>
         <div class="<?php echo trim(implode(' ', $classes)); ?>">
             <?php if($show_title): ?>
-                <div class="row align-items-center">
-                    <div class="col-auto share-title">
+                <div class="<?php if(!is_singular()) echo 'row align-items-center'; ?>">
+                    <div class="share-title <?php if(!is_singular()) echo 'col-auto'; ?>">
                         <?php echo esc_html($args['title']); ?>
                     </div>
-                    <div class="col-auto">
+                    <div class="<?php if(!is_singular()) echo 'col-auto'; ?>">
             <?php endif; ?>
                     <div class="<?php echo esc_attr($social_classes);?>">
                         <?php if($show_fb == '1'): ?>
