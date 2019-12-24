@@ -1,12 +1,16 @@
 .author-box{
 	border-top: 1px solid $MainBorderColor;
-	padding: $grid-gutter-width /2;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	.author-avatar{
+		img{
+			max-width: 86px;
+		}
 		@media (max-width: $screen-md-min){
 			margin-bottom: $grid-gutter-width;
 		}
 	}
-	.author-name {
+	.author-info {
 		margin: 0 0 $grid-gutter-width / 2;
 	}
 }
