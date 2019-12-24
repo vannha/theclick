@@ -132,7 +132,7 @@
 .ef5-archive{
 	@include border-radius(0);
 }
-.ef5-loop-info{
+.default-thumb +.ef5-loop-info{
 	padding-top: 17px;
 	padding-bottom: 30px;
 	@media (max-width: 767px){
