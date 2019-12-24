@@ -74,16 +74,27 @@
 		flex: 0 0 calc(100% - 80px);
 		max-width: calc(100% - 80px);
 	}
+	.ef5-social{
+		.share-title{
+			font-size: 10px;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: $accent_color;
+		}
+		a{
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid $MainBorderColor;
+			border-radius: 50%;
+			font-size: 16px;
+		}
+	}
 	.single-col-left{
 		.ef5-social{
 			a{
 				display: block;
-				width: 40px;
-				height: 40px;
-				line-height: 40px;
-				border: 1px solid $MainBorderColor;
-				border-radius: 50%;
-				font-size: 16px;
+				margin-bottom: 10px;
 			}
 		}
 	}
