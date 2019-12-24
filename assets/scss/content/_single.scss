@@ -74,6 +74,14 @@
 		flex: 0 0 calc(100% - 80px);
 		max-width: calc(100% - 80px);
 	}
+	.single-col-left{
+		.ef5-social{
+			a{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
 }
 .ef5-pwbox-inner{
 	position: relative;
