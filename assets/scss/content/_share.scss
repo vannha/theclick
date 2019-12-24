@@ -21,7 +21,7 @@
 			@include theclick_social_color();
 			&:hover{
 			 	@include theclick_social_color('background');
-			 	@include theclick_social_color('background');
+			 	@include theclick_social_color('border-color');
 			 	color: #fff;
 			}
 		}
