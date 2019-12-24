@@ -122,6 +122,16 @@
 	.ef5-tagged-in{
 	
 	}
+	.ef5-share-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		>div{
+			flex: 0 0 auto;
+			width: auto;
+			max-width: 100%;
+		}
+	}
 }
 
 .ef5-pwbox-inner{
