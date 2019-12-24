@@ -464,11 +464,9 @@ if(!function_exists('theclick_post_share')){
         ?>
         <div class="<?php echo trim(implode(' ', $classes)); ?>">
             <?php if($show_title): ?>
-                <div class="<?php if(!is_singular()) echo 'row align-items-center'; ?>">
-                    <div class="share-title <?php if(!is_singular()) echo 'col-auto'; ?>">
-                        <?php echo esc_html($args['title']); ?>
-                    </div>
-                    <div class="<?php if(!is_singular()) echo 'col-auto'; ?>">
+                <div class="ef5-share-wrap <?php if(!is_singular()) echo 'row align-items-center'; ?>">
+                    <div class="share-title <?php if(!is_singular()) echo 'col-auto'; ?>"><?php echo esc_html($args['title']); ?></div>
+                    <div class="share-content <?php if(!is_singular()) echo 'col-auto'; ?>">
             <?php endif; ?>
                     <div class="<?php echo esc_attr($social_classes);?>">
                         <?php if($show_fb == '1'): ?>
