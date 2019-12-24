@@ -219,7 +219,7 @@ if(!function_exists('theclick_post_excerpt')){
 */
 if(!function_exists('theclick_post_content')){
     function theclick_post_content($args = []){
-        $show_share = theclick_get_theme_opt( 'post_share_on', '0' )
+        $show_share = theclick_get_theme_opt( 'post_share_on', '0' );
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
@@ -235,7 +235,7 @@ if(!function_exists('theclick_post_content')){
                 <div class="single-col-left col-auto">
                 <?php theclick_post_share(['class' => 'col-auto']); ?>
                 </div>
-                <div class="single-col-right ">
+                <div class="single-col-right col">
             <?php endif; ?>
             <?php the_content(); ?>
             <?php if(is_singular() && $show_share == '1'):?>
