@@ -226,11 +226,20 @@ if(!function_exists('theclick_post_content')){
             'ef5-content',
             'ef5-content-'.get_post_type(),
         ];
-        if(is_singular()) $classes[] = 'ef5-single-content';
+        if(is_singular()) $classes[] = 'row ef5-single-content';
         $classes[] = 'clearfix';
     ?>
         <div class="<?php echo trim(implode(' ', $classes));?>">
+            <?php if(is_singular()):?>
+                <div class="single-col-left">
+                <?php theclick_post_share(['class' => 'col-auto']); ?>
+                </div>
+                <div class="single-col-right">
+            <?php endif; ?>
             <?php the_content(); ?>
+            <?php if(is_singular()):?>
+                </div>
+            <?php endif; ?>
         </div>
     <?php
     }
