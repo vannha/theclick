@@ -1,5 +1,5 @@
 .author-box{
-	border: $MainBorder;
+	border-top: 1px solid $MainBorderColor;
 	padding: $grid-gutter-width /2;
 	.author-avatar{
 		@media (max-width: $screen-md-min){
