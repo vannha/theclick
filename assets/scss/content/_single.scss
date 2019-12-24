@@ -103,11 +103,16 @@
 				}
 			}
 		}
+		
 	}
-	figure{
-		margin-top: 30px;
+	.single-col-right{
+		.wp-caption-text{
+			background: transparent;
+		}
+		figure{
+			margin-top: 30px;
+		}
 	}
- 
 }
 .ef5-pwbox-inner{
 	position: relative;
