@@ -33,15 +33,15 @@ if ( post_password_required() ) {
 						$comments_number = get_comments_number();
 						printf(
 							_nx(
-								'%1$s %2$s',
-								'%1$s %3$s',
+								'%1$s (%3$s)',
+								'%2$s (%3$s)',
 								$comments_number,
 								'comments title',
 								'theclick'
 							),
-							number_format_i18n( $comments_number ),
-							esc_html__('Comment','theclick'),
-							esc_html__('Comments','theclick')
+							esc_html__('View Comment','theclick'),
+							esc_html__('View Comments','theclick'),
+							number_format_i18n( $comments_number )
 						);
 					?></div>
 					<ol class="commentlist">
