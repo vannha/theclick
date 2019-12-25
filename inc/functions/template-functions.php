@@ -453,7 +453,7 @@ if(!function_exists('theclick_post_navigation')){
             'layout' => '1'
         ]);
         //$navigation = get_the_post_navigation();
-        $previous = $next = $prevthumbnail = $nextthumbnail = $prev_thumb = $next_thumb = $prev_cat = $next_cat = '';
+        $prevthumbnail = $nextthumbnail = $prev_thumb = $next_thumb = $pr_cats = $ne_cats = '';
         $prevPost = get_previous_post(false);
         $nextPost = get_next_post(false);
         if($prevPost) $prevthumbnail = get_the_post_thumbnail($prevPost->ID,'thumbnail');
@@ -461,10 +461,27 @@ if(!function_exists('theclick_post_navigation')){
         if(!$prevPost && !$nextPost) return;
 
         $taxo = theclick_get_post_taxonomies();
+        $prev_cats = get_the_terms($prevPost->ID, $taxo);
+        $next_cats  = get_the_terms( $nextPost->ID, $taxo);
+        if ( $prev_cats && ! is_wp_error( $prev_cats ) ){
+            $p_cats = array();
+            foreach ( $prev_cats as $p_cat ) {
+                $p_cats[] = $p_cat->name;
+            }                
+            $pr_cats = join( ", ", $p_cats );
+        }
+        if ( $next_cats && ! is_wp_error( $next_cats ) ){
+            $n_cats = array();
+            foreach ( $next_cats as $n_cat ) {
+                $n_cats[] = $n_cat->name;
+            }                
+            $ne_cats = join( ", ", $n_cats );
+        }
 
         if(!empty($prevthumbnail)) {
             $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
-            $prev_cat = get_the_term_list( $prevPost->ID, $taxo, '', ', ', '' );
+                
+
             /*$previous .= '<div class="nav-previous">';
             $previous .= previous_post_link('%link', '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div>', true);
             $previous .= '<div class="post-nav-wrap">'.previous_post_link('%link', $prev_thumb, true).'<div class="nav-title"><div class="nav-post-cat">'.$prev_cat.'</div>'.previous_post_link('%link', '<div class="post-title h4">%title</div>', true).'</div></div>';
@@ -472,22 +489,21 @@ if(!function_exists('theclick_post_navigation')){
         }
         if(!empty($nextthumbnail)) {
             $next_thumb = '<div class="nav-thub-img">'.$nextthumbnail.'</div>';
-            $next_cat = get_the_term_list( $nextPost->ID, $taxo, '', ', ', '' );
+            
             /*$next .= '<div class="nav-next">';
             $next .= next_post_link('%link', '<div class="meta-nav">'.esc_html__('Next Post','theclick').'</div>', true);
             $next .= '<div class="post-nav-wrap">'.next_post_link('%link', $next_thumb, true).'<div class="nav-title"><div class="nav-post-cat">'.$next_cat.'</div>'.next_post_link('%link', '<div class="post-title h4">%title</div>', true).'</div></div>';
             $next .= '</div>';*/
         }
-        $cats = get_the_terms($prevPost->ID, $taxo);
-        var_dump($cats);
+        
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
-            '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-nav-wrap">'.$next_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$next_cat.'</div><div class="post-title h4">%title</div></div></div>'
+            '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-nav-wrap">'.$prev_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$pr_cats.'</div><div class="post-title h4">%title</div></div></div>'
         );
      
         $next = get_next_post_link(
             '<div class="nav-next">%link</div>',
-            '<div class="meta-nav">'.esc_html__('Next Post','theclick').'</div><div class="post-nav-wrap"><div class="nav-title"><div class="nav-post-cat">'.$next_cat.'</div><div class="post-title h4">%title</div></div>'.$next_thumb.'</div>'
+            '<div class="meta-nav">'.esc_html__('Next Post','theclick').'</div><div class="post-nav-wrap"><div class="nav-title"><div class="nav-post-cat">'.$ne_cats.'</div><div class="post-title h4">%title</div></div>'.$next_thumb.'</div>'
         );
         $nav_links = ['nav-links'];
         if(empty($previous)) $nav_links[] = 'justify-content-end';
