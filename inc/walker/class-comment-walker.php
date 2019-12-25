@@ -109,10 +109,9 @@ class TheClick_Walker_Comment extends Walker_Comment {
 				 * fill color to the inner check shape when in circle form.
 				*/
 				$author_badge = '';
-				if ( theclick_is_comment_by_post_author( $comment ) ) {
-					/* translators: %s: SVG Icon */
+				/*if ( theclick_is_comment_by_post_author( $comment ) ) {
 					$author_badge = sprintf( '<span class="post-author-badge">%s</span>', '<span class="far fa-user"></span>' );
-				}
+				}*/
 
 				printf(
 					/* translators: %s: comment author link */
