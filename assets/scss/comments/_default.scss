@@ -1,7 +1,8 @@
 .comments-section{
 	border-top: 1px solid $MainBorderColor;
 }
-.commentlist-wrap{
+.commentlist-wrap,
+.woocommerce-Reviews #comments{
 	margin-top: 75px;
 }
 .comments-title,
