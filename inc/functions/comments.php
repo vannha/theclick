@@ -159,6 +159,7 @@ if(!function_exists('theclick_comment_field_to_bottom')){
 	/**
 	 * add_filter( 'comment_form_fields', 'theclick_comment_field_to_bottom' ); 
 	*/
+	add_filter( 'comment_form_fields', 'theclick_comment_field_to_bottom' ); 
 	function theclick_comment_field_to_bottom( $fields ) {
 	    $comment_field = $fields['comment'];
 	    unset( $fields['comment'] );
