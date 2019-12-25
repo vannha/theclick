@@ -65,9 +65,15 @@
 		}
 	}
 	.comment-metadata{
-		font-size: $BodyFontSizeXXS;
-		font-weight: 500;
-		padding-top: 18px;
+	    font-size: 10px;
+	    font-weight: 500;
+	    padding-top: 18px;
+	    text-transform: uppercase;
+	    img{
+	    	max-width: 9px;
+		    margin-top: 3px;
+		    margin-right: 5px;
+	    }
 	}
 	.children{
 		padding: 0;
