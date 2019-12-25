@@ -1,54 +1,3 @@
-.nav-links{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	font-size: 13px;
-	font-weight: 500;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-	.page-numbers{
-		min-width: $page-link-w;
-		padding: $page-link-inner-space;
-		margin: $page-link-outer-space;
-		line-height: $page-link-lh;
-		text-align: center;
-		color: $page-link-color;
-		@include page-link-border();
-		background: $page-link-bg;
-		@include transition();
-		&:hover,
-		&.current{
-			background: $page-link-bg-hover;
-			color: $page-link-color-hover;
-			font-weight: 600;
-			position: relative;
-			//text-decoration: underline;
-			&:after{
-				content: '';
-				display: block;
-				height: 1px;
-				background: $page-link-color-hover;
-				position: absolute;
-				left: 8px;
-				right: 8px;
-				@include transform(translate(0, -5px));
-			}
-		}
-		&.next,
-		&.prev{
-			&:after{
-				display: none;
-			}
-		}
-	}
-	> .current{
-		cursor: not-allowed;
-		background: $page-link-bg-hover;
-		color: $page-link-color-hover;
-		border-color:$page-link-border-color-hover;
-	}
-}
 .ef5-loop-pagination{
 	padding-top: 40px;
 	margin-top: 35px;
@@ -59,6 +8,56 @@
 	i{
 		font-size: 12px;
 	}
+	.nav-links{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		font-size: 11px;
+		font-weight: 500;
+		text-transform: uppercase;
+		.page-numbers{
+			min-width: $page-link-w;
+			padding: $page-link-inner-space;
+			margin: $page-link-outer-space;
+			line-height: $page-link-lh;
+			text-align: center;
+			color: $page-link-color;
+			@include page-link-border();
+			background: $page-link-bg;
+			@include transition();
+			&:hover,
+			&.current{
+				background: $page-link-bg-hover;
+				color: $page-link-color-hover;
+				font-weight: 600;
+				position: relative;
+				//text-decoration: underline;
+				&:after{
+					content: '';
+					display: block;
+					height: 1px;
+					background: $page-link-color-hover;
+					position: absolute;
+					left: 8px;
+					right: 8px;
+					@include transform(translate(0, -5px));
+				}
+			}
+			&.next,
+			&.prev{
+				&:after{
+					display: none;
+				}
+			}
+		}
+		> .current{
+			cursor: not-allowed;
+			background: $page-link-bg-hover;
+			color: $page-link-color-hover;
+			border-color:$page-link-border-color-hover;
+		}
+	} 
 	.prev-title{
 		font-size: 11px;
 		font-weight: 500;
