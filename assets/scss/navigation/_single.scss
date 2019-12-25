@@ -109,8 +109,6 @@
 			}
 		}
 		[dir="rtl"] &{
-			padding-left: 15px;
-			padding-right: 45px;
 			&:before{
 				content: '\f101';
 				left: auto;
@@ -129,8 +127,6 @@
 		}
 		[dir="rtl"] &{
 			text-align: left;
-			padding-right: 15px;
-			padding-left: 45px;
 			&:before{
 				content: '\f100';
 				right: auto;
