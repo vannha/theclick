@@ -498,7 +498,10 @@ if(!function_exists('theclick_post_navigation')){
             '<div class="meta-nav">'.esc_html__('Next Post','theclick').'</div><div class="post-nav-wrap"><div class="nav-title"><div class="nav-post-cat">'.$ne_cats.'</div><div class="post-title">%title</div></div>'.$next_thumb.'</div>'
         );
         $nav_links = ['nav-links'];
+
         if(empty($previous)) $nav_links[] = 'justify-content-end';
+        if(empty($previous) && empty($next)) $nav_links[] = 'both-nav';
+
         if ( is_singular( 'attachment' ) ) {
             // Parent post navigation.
             the_post_navigation(
