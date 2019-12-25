@@ -60,11 +60,6 @@ class TheClick_Walker_Comment extends Walker_Comment {
 						<?php comment_text(); ?>
 					</div>
 					<div class="comment-metadata">
-						<span class="comment-time meta-color"><?php
-								/* translators: 1: comment date, 2: comment time */
-								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'theclick' ), get_comment_date( '', $comment ), get_comment_time() );
-							echo theclick_html($comment_timestamp); 
-						?></span>
 						<?php
 							comment_reply_link(
 								array_merge(
@@ -122,8 +117,14 @@ class TheClick_Walker_Comment extends Walker_Comment {
 				printf(
 					/* translators: %s: comment author link */
 					esc_html__( '%s', 'theclick' ),
-					sprintf( '<div class="author-name h5">%1$s %2$s</div>',$author_badge, $comment_author )
+					sprintf( '<span class="author-name">%1$s %2$s</span>',$author_badge, $comment_author )
 				);
+				?>
+				<span class="comment-time meta-color"><?php
+								/* translators: 1: comment date, 2: comment time */
+						$comment_timestamp = sprintf( esc_html__( '%1$s at %2$s', 'theclick' ), get_comment_date( 'M d, Y', $comment ), get_comment_time() );
+					echo theclick_html($comment_timestamp); 
+				?></span>
 			?>
 		</div>
 	<?php
