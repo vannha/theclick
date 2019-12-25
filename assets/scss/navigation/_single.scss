@@ -85,9 +85,15 @@
 			padding-right: 7.5px;
 		}
 	}
-	.nav-thub-img,
+	.nav-thub-img{
+		flex: 0 0 auto;
+		width: auto;
+		max-width: 100%;
+	}
 	.nav-title{
-
+		flex-basis: 0;
+	    flex-grow: 1;
+	    max-width: 100%;
 	}
 	.nav-previous{
 		.meta-nav{
