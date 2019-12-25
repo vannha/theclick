@@ -137,7 +137,7 @@ function theclick_comment_reply_link($link, $args, $comment, $post){
  * Move comment field to above comment text
 */
 if(!function_exists('theclick_comment_form_fields')){
-	add_filter( 'comment_form_fields', 'theclick_comment_form_fields');
+	//add_filter( 'comment_form_fields', 'theclick_comment_form_fields');
     function theclick_comment_form_fields( $fields ) {
         //author, email, url 
         $fields_first = ['rating','open','author','email','url','close'];
