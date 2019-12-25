@@ -482,7 +482,7 @@ if(!function_exists('theclick_post_navigation')){
         var_dump($cats);
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
-            '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-nav-wrap">'.$next_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$next_cat.'</div><div class="post-title h4">'.get_the_title($nextPost->ID);.'</div></div></div>'
+            '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div><div class="post-nav-wrap">'.$next_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$next_cat.'</div><div class="post-title h4">%title</div></div></div>'
         );
      
         $next = get_next_post_link(
