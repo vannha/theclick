@@ -68,7 +68,7 @@ class TheClick_Walker_Comment extends Walker_Comment {
 										'add_below' => 'div-comment',
 										'depth'     => $depth,
 										'max_depth' => $args['max_depth'],
-										'before'    => theclick_get_svg(''),
+										'before'    => '<image src="'.get_template_directory_uri().'/assets/images/icons/reply.png">',
 										'after'     => '',
 									)
 								)
