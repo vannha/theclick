@@ -461,12 +461,12 @@ if(!function_exists('theclick_post_navigation')){
         if(!$prevPost && !$nextPost) return;
         if(!empty($prevthumbnail)) {
             $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
-            $prev_cat = get_the_term_list( $prevPost->ID, 'post', '', ', ', '' );
+            $prev_cat = get_the_term_list( $prevPost->ID, 'cat', '', ', ', '' );
             var_dump($prev_cat);
         }
         if(!empty($nextthumbnail)) {
             $next_thumb = '<div class="nav-thub-img">'.$nextthumbnail.'</div>';
-            $next_cat = get_the_term_list( $nextPost->ID, 'post', '', ', ', '' );
+            $next_cat = get_the_term_list( $nextPost->ID, 'cat', '', ', ', '' );
         }
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
