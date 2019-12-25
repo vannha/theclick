@@ -23,7 +23,8 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div class="row">
+<div class="comments-section">
+<div class="row ">
     <div class="col-12 col-xl-8 offset-xl-2">
 		<div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?> clearfix">
 			<?php if ( have_comments() ) : ?>
@@ -75,4 +76,5 @@ if ( post_password_required() ) {
 			?>
 		</div>
 	</div>
+</div>
 </div>
