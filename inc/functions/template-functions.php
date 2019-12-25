@@ -466,13 +466,13 @@ if(!function_exists('theclick_post_navigation')){
             $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
             $prev_cat = get_the_term_list( $prevPost->ID, $taxo, '', ', ', '' );
             $previous .= '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div>';
-            $previous .= '<div class="post-nav-wrap">'.$prev_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$prev_cat.'</div><div class="post-title h4">'.get_the_title($prevPost->ID);.'</div></div></div>';
+            $previous .= '<div class="post-nav-wrap">'.$prev_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$prev_cat.'</div><div class="post-title h4">'.get_the_title($prevPost->ID).'</div></div></div>';
         }
         if(!empty($nextthumbnail)) {
             $next_thumb = '<div class="nav-thub-img">'.$nextthumbnail.'</div>';
             $next_cat = get_the_term_list( $nextPost->ID, $taxo, '', ', ', '' );
             $next .= '<div class="meta-nav">'.esc_html__('Next Post','theclick').'</div>';
-            $next .= '<div class="post-nav-wrap">'.$prev_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$prev_cat.'</div><div class="post-title h4">'.get_the_title($prevPost->ID);.'</div></div></div>';
+            $next .= '<div class="post-nav-wrap">'.$prev_thumb.'<div class="nav-title"><div class="nav-post-cat">'.$prev_cat.'</div><div class="post-title h4">'.get_the_title($prevPost->ID).'</div></div></div>';
         }
         /*$previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
