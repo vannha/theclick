@@ -95,8 +95,9 @@
 	}
 	.nav-previous{
 		.meta-nav{
+			padding-left: 13px;
 			&:before{
-				content: '\f060';
+				content: "\f100";
 				left: 15px;
 			}
 		}
@@ -104,7 +105,7 @@
 			padding-left: 15px;
 			padding-right: 45px;
 			&:before{
-				content: '\f061';
+				content: '\f101';
 				left: auto;
 				right: 15px;
 			}
@@ -113,8 +114,9 @@
 	.nav-next{
 		text-align: right;
 		.meta-nav{
+			padding-right: 13px;
 			&:before{
-				content: '\f061';
+				content: '\f101';
 				right: 15px;
 			}
 		}
@@ -123,7 +125,7 @@
 			padding-right: 15px;
 			padding-left: 45px;
 			&:before{
-				content: '\f060';
+				content: '\f100';
 				right: auto;
 				left: 15px;
 			}
