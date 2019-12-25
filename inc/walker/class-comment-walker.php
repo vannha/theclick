@@ -68,7 +68,7 @@ class TheClick_Walker_Comment extends Walker_Comment {
 										'add_below' => 'div-comment',
 										'depth'     => $depth,
 										'max_depth' => $args['max_depth'],
-										'before'    => '',
+										'before'    => '<i class="fas fa-reply"></i>',
 										'after'     => '',
 									)
 								)
