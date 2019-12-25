@@ -35,8 +35,10 @@
 	.meta-nav{
 		font-size: 11px;
 		text-transform: uppercase;
-		margin-bottom: 18px;
 		font-weight: 500;
+		@media(min-width: 768px){
+			margin-bottom: 18px;
+		}
 		&:before{
 			font-family: $FontAwesome;
 			color: $HeadingColor;
