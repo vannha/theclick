@@ -31,11 +31,9 @@ get_header();
         </div>
         <?php theclick_sidebar(); ?>
     </div>
-    <div class="row">
-        <div class="col-12 col-xl-8 offset-xl-2">
-        <?php theclick_comment(); ?>
-        </div>
-    </div>
+    
+    <?php theclick_comment(); ?>
+        
     <?php theclick_post_related(); ?>
 </div>
 <?php
