@@ -52,6 +52,21 @@
 			padding-left: 15px;
 			padding-right: 15px;
 		}
+		&.both-nav{
+			.nav-next{
+				.post-nav-wrap{
+					&:before{
+						content: "";
+						width: 1px;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: -8.5px;
+						background-color: $MainBorderColor;
+					}
+				}
+			}
+		}
 	}
 	.nav-previous,
 	.nav-next{
@@ -74,6 +89,7 @@
 		align-items: center;
 		margin-left: -7.5px;
 		margin-right: -7.5px;
+		position: relative;
 		>div{
 			padding-left: 7.5px;
 			padding-right: 7.5px;
