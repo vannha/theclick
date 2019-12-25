@@ -62,13 +62,15 @@
 	}
 }
 .ef5-single-content-wrap{
-	.single-col-left{
-		flex: 0 0 80px;
-		max-width: 80px;
-	}
-	.single-col-right{
-		flex: 0 0 calc(100% - 80px);
-		max-width: calc(100% - 80px);
+	@media(min-width: 768px){
+		.single-col-left{
+			flex: 0 0 80px;
+			max-width: 80px;
+		}
+		.single-col-right{
+			flex: 0 0 calc(100% - 80px);
+			max-width: calc(100% - 80px);
+		}
 	}
 	.single-col-left{
 		&.ef5-shares{
