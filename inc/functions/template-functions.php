@@ -453,7 +453,7 @@ if(!function_exists('theclick_post_navigation')){
             'layout' => '1'
         ]);
         //$navigation = get_the_post_navigation();
-        $prevthumbnail = $nextthumbnail = $prev_thumb = $next_thumb = $prev_cat = $next_cat'';
+        $prevthumbnail = $nextthumbnail = $prev_thumb = $next_thumb = $prev_cat = $next_cat = '';
         $prevPost = get_previous_post(false);
         $nextPost = get_next_post(false);
         if($prevPost) $prevthumbnail = get_the_post_thumbnail($prevPost->ID,'thumbnail');
