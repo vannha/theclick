@@ -459,14 +459,17 @@ if(!function_exists('theclick_post_navigation')){
         if($prevPost) $prevthumbnail = get_the_post_thumbnail($prevPost->ID,'thumbnail');
         if($nextPost) $nextthumbnail = get_the_post_thumbnail($nextPost->ID,'thumbnail');
         if(!$prevPost && !$nextPost) return;
+
+        $taxo = theclick_get_post_taxonomies();
+        
         if(!empty($prevthumbnail)) {
             $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
-            $prev_cat = get_the_term_list( $prevPost->ID, 'cat', '', ', ', '' );
+            $prev_cat = get_the_term_list( $prevPost->ID, $taxo, '', ', ', '' );
             var_dump($prev_cat);
         }
         if(!empty($nextthumbnail)) {
             $next_thumb = '<div class="nav-thub-img">'.$nextthumbnail.'</div>';
-            $next_cat = get_the_term_list( $nextPost->ID, 'cat', '', ', ', '' );
+            $next_cat = get_the_term_list( $nextPost->ID, $taxo, '', ', ', '' );
         }
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
