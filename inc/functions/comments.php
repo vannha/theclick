@@ -180,7 +180,7 @@ if ( ! function_exists( 'theclick_comment_form' ) ) :
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 			comment_form(
 				array(
-					'title_reply'	=> esc_html__('Write a Comment', 'theclick'),
+					'title_reply'	=> esc_html__('Leave a Comment', 'theclick'),
 					'label_submit'  => esc_html__( 'Post Your Comment','theclick' ),
 					'class_submit'  => 'btn btn-pri',
 					'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s"><span>%4$s</span></button>',
