@@ -15,7 +15,7 @@
 		}
 	}
 	.comment-body{
-		padding: 30px 0;
+		padding: 28px 0;
 	}
 	.comment-avatar{
 		margin-bottom: 20px;
@@ -33,7 +33,7 @@
 	}
 	.comment-info {
 		.author-info{
-			padding-bottom: 10px;
+			padding-bottom: 7px;
 			@media (max-width: $screen-sm-max){
 				display: none;
 			}
@@ -67,7 +67,7 @@
 	.comment-metadata{
 	    font-size: 10px;
 	    font-weight: 500;
-	    padding-top: 18px;
+	    padding-top: 14px;
 	    text-transform: uppercase;
 	    img{
 	    	max-width: 9px;
