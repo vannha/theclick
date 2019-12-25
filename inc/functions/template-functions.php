@@ -480,20 +480,9 @@ if(!function_exists('theclick_post_navigation')){
 
         if(!empty($prevthumbnail)) {
             $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
-                
-
-            /*$previous .= '<div class="nav-previous">';
-            $previous .= previous_post_link('%link', '<div class="meta-nav">'.esc_html__('Previous Post','theclick').'</div>', true);
-            $previous .= '<div class="post-nav-wrap">'.previous_post_link('%link', $prev_thumb, true).'<div class="nav-title"><div class="nav-post-cat">'.$prev_cat.'</div>'.previous_post_link('%link', '<div class="post-title h4">%title</div>', true).'</div></div>';
-            $previous .= '</div>';*/
         }
         if(!empty($nextthumbnail)) {
             $next_thumb = '<div class="nav-thub-img">'.$nextthumbnail.'</div>';
-            
-            /*$next .= '<div class="nav-next">';
-            $next .= next_post_link('%link', '<div class="meta-nav">'.esc_html__('Next Post','theclick').'</div>', true);
-            $next .= '<div class="post-nav-wrap">'.next_post_link('%link', $next_thumb, true).'<div class="nav-title"><div class="nav-post-cat">'.$next_cat.'</div>'.next_post_link('%link', '<div class="post-title h4">%title</div>', true).'</div></div>';
-            $next .= '</div>';*/
         }
         
         $previous = get_previous_post_link(
