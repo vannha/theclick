@@ -462,6 +462,7 @@ if(!function_exists('theclick_post_navigation')){
         if(!empty($prevthumbnail)) {
             $prev_thumb = '<div class="nav-thub-img">'.$prevthumbnail.'</div>';
             $prev_cat = get_the_term_list( $prevPost->ID, 'post', '', ', ', '' );
+            var_dump($prev_cat);
         }
         if(!empty($nextthumbnail)) {
             $next_thumb = '<div class="nav-thub-img">'.$nextthumbnail.'</div>';
