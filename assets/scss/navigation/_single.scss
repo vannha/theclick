@@ -67,10 +67,6 @@
 		a{
 			display: block;
 		}
-		.nav-post-cat{
-			color: $accent_color;
-		}
-		
 	}
 	.post-nav-wrap{
 		display: flex;
@@ -92,6 +88,17 @@
 		flex-basis: 0;
 	    flex-grow: 1;
 	    max-width: 100%;
+	}
+	.nav-post-cat{
+		color: $accent_color;
+		font-size: 11px;
+		line-height: 13px;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	.post-title{
+		font-size: 16px;
+		line-height: 21px;
 	}
 	.nav-previous{
 		.meta-nav{
