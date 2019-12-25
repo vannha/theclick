@@ -34,7 +34,7 @@ class TheClick_Walker_Comment extends Walker_Comment {
 		$avatar              = get_avatar( $comment, $args['avatar_size'], '', $comment_author, ['class'=>'cmt-avatar circle'] );
 		?>
 		<<?php echo esc_attr($tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
-			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body row">
+			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body row gutters-15">
 				<?php if ( 0 != $args['avatar_size'] ) { ?>
 				<div class="comment-avatar col-12 col-md-auto">
 					<div class="row align-items-center">
