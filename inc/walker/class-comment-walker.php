@@ -120,12 +120,9 @@ class TheClick_Walker_Comment extends Walker_Comment {
 					sprintf( '<span class="author-name">%1$s %2$s</span>',$author_badge, $comment_author )
 				);
 				?>
-				<span class="comment-time meta-color"><?php
-								/* translators: 1: comment date, 2: comment time */
-						$comment_timestamp = sprintf( esc_html__( '%1$s at %2$s', 'theclick' ), get_comment_date( 'M d, Y', $comment ), get_comment_time() );
+				<span class="comment-time meta-color"><?php $comment_timestamp = sprintf( esc_html__( '%1$s at %2$s', 'theclick' ), get_comment_date( 'M d, Y', $comment ), get_comment_time() );
 					echo theclick_html($comment_timestamp); 
 				?></span>
-			?>
 		</div>
 	<?php
 		}
