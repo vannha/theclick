@@ -87,7 +87,7 @@ if(!function_exists('theclick_configs')){
             'dropdown_active'  => 'rgba(255, 255, 255, 0.8)',
             // Comments 
             'cmt_avatar_size'  => 64,
-            'cmt_border'       => '1px solid #DDDDDD',
+            'cmt_border'       => '1px solid #D8D8D8',
             // WooCommerce,
             'theclick_product_single_image_w' => '455',
             'theclick_product_single_image_h' => '605',
