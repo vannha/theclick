@@ -43,14 +43,6 @@
 		font-size: $BodyFontSizeXXS;
 		font-weight: 500;
 		padding-top: 18px;
-		margin: -10px;
-		@include d-flex();
-		> * {
-			flex: 0 0 auto;
-		    width: auto;
-		    max-width: 100%;
-			padding: 10px;
-		}
 	}
 	.children{
 		padding: 0;
