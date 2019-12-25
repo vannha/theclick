@@ -500,7 +500,7 @@ if(!function_exists('theclick_post_navigation')){
         $nav_links = ['nav-links'];
 
         if(empty($previous)) $nav_links[] = 'justify-content-end';
-        if(empty($previous) && empty($next)) $nav_links[] = 'both-nav';
+        if(!empty($previous) && !empty($next)) $nav_links[] = 'both-nav';
 
         if ( is_singular( 'attachment' ) ) {
             // Parent post navigation.
