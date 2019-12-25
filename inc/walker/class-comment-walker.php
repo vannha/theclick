@@ -37,7 +37,7 @@ class TheClick_Walker_Comment extends Walker_Comment {
 			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body row gutters-15">
 				<?php if ( 0 != $args['avatar_size'] ) { ?>
 				<div class="comment-avatar col-12 col-md-auto">
-					<div class="row align-items-center">
+					<div class="row align-items-center gutters-15">
 						<div class="col-auto">
 							<?php 
 								if ( empty( $comment_author_url ) ) {
