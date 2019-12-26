@@ -390,7 +390,7 @@ if(!function_exists('theclick_post_related')){
         $args = wp_parse_args($args, array(
             'title'          => esc_html__('Related Posts','theclick'), 
             'posts_per_page' => '2', 
-            'columns'        => '2', 
+            'columns'        => '6', 
             'carousel'       => apply_filters('theclick_post_related_carousel', false)
         ));
         extract($args);
@@ -402,7 +402,7 @@ if(!function_exists('theclick_post_related')){
         if($carousel) {
             $col = '';
         } else {
-            $col = 'col-md-'.round(12 / $columns);
+            $col = 'col-6 col-md-3 col-xl-'.round(12 / $columns);
         }
 
         //for use in the loop, list 2 posts related to first tag on current post
