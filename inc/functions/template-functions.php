@@ -389,7 +389,7 @@ if(!function_exists('theclick_post_related')){
          */ 
         $args = wp_parse_args($args, array(
             'title'          => esc_html__('Related Posts','theclick'), 
-            'posts_per_page' => '2', 
+            'posts_per_page' => '6', 
             'columns'        => '6', 
             'carousel'       => apply_filters('theclick_post_related_carousel', false)
         ));
