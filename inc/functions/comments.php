@@ -182,7 +182,7 @@ if ( ! function_exists( 'theclick_comment_form' ) ) :
 				array(
 					'title_reply'	=> esc_html__('Leave a Comment', 'theclick'),
 					'label_submit'  => esc_html__( 'Submit Comment','theclick' ),
-					'class_submit'  => 'btn btn-pri',
+					'class_submit'  => 'btn ef5-btn primary fill transition ef5-scroll',
 					'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s"><span>%4$s</span></button>',
 					'submit_field'  => '<div class="form-submit">%1$s %2$s</div>'
 				)
