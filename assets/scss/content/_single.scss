@@ -1,6 +1,9 @@
 .single-post .ef5-blogs{
 	padding-top: 94px;
 	padding-bottom: 0;
+	@media (max-width: 991px){
+		padding-bottom: 75px;
+	}
 }
 .ef5-single-content,
 .ef5-single-page-links{
