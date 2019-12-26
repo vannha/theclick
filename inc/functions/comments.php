@@ -208,8 +208,8 @@ if(!function_exists('theclick_comment_form_default_fields')){
 		$html_req        = ( $req ? " required='required'" : '' );
 		$html_req_markup = ( $req ? '*' : '' );
 		$html5           = true;
-		$name_pladeholder  = esc_html__('Name *','theclick');
-		$email_pladeholder = esc_html__('Email *','theclick');
+		$name_pladeholder  = esc_html__('Name','theclick');
+		$email_pladeholder = esc_html__('Email','theclick');
 		$url_pladeholder   = esc_html__('Website','theclick');
 		
 		$fields    = [
@@ -235,7 +235,7 @@ if(!function_exists('theclick_comment_form_default_fields')){
 if(!function_exists('theclick_comment_form_defaults')){
 	add_filter('comment_form_defaults', 'theclick_comment_form_defaults');
 	function theclick_comment_form_defaults($fields){
-		$msg_placeholder   = esc_html__( 'Your Comment *', 'theclick' );
+		$msg_placeholder   = esc_html__( 'Your Comment', 'theclick' );
 		$fields['comment_field'] = '<div class="comment-form-comment">'.
 									'<textarea id="comment" name="comment" placeholder="'.esc_attr($msg_placeholder).'" required="required"></textarea>'.
 								'</div>';
