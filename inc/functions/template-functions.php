@@ -10,6 +10,8 @@ if(!function_exists('theclick_post_header')){
 		$args = wp_parse_args($args, [
             'heading_tag' => 'h3',
             'class'       => '',
+            'before_title'=> true,
+            'after_title' => true
 		]);
         $classes = ['ef5-post-header',$args['class']];
         $title_classes = ['ef5-heading',$args['heading_tag']];
@@ -19,10 +21,14 @@ if(!function_exists('theclick_post_header')){
 
 	?>
 		<div class="<?php echo trim(implode(' ', $classes));?>">
+            <?php if($args['before_title']): ?>
             <div class="ef5-before-title empty-none"><?php do_action('theclick_before_loop_title'); ?></div>
+            <?php endif; ?>
 	        <?php the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>'); ?>
             <?php if(!is_singular()) theclick_post_excerpt(); ?>
+            <?php if($args['after_title']): ?>
             <div class="ef5-after-title empty-none"><?php do_action('theclick_after_loop_title'); ?></div>
+            <?php endif; ?>
 	    </div>
 	<?php
 	}
