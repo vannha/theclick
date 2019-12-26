@@ -215,9 +215,11 @@ if(!function_exists('theclick_comment_form_default_fields')){
 		$fields    = [
 			'open'	  		=> 	'<div class="row ef5-form-fields">',
 			'author'  		=>	'<div class="comment-form-author col-12 col-md-6">'.
+									'<label for="author">'. esc_html__('Your Name*','theclick') . '</label>'.
 							 		'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" maxlength="245"' . $html_req . ' placeholder="'.esc_attr($name_pladeholder).'" />'.
 							 	'</div>',
 			'email'   		=>	'<div class="comment-form-email col-12 col-md-6">' .
+									'<label for="email">'. esc_html__('Your Email*','theclick') . '</label>'.
 								 	'<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_email'] ) . '" aria-describedby="email-notes"' . $html_req . ' placeholder="'.esc_attr($email_pladeholder).'" />'.
 								'</div>',
 			'close'	  		=>  '</div>',
