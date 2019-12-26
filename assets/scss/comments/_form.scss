@@ -11,10 +11,10 @@
 /* Comment Form */
 .comment-form{
 	.ef5-form-fields{
-		margin-bottom: $grid-gutter-width / -3;
+		margin-top: -5px;
 	}
 	[class*="comment-form-"]{
-		margin-bottom: $grid-gutter-width;
+	    margin-bottom: 20px;
 	}
 	.ef5-form-fields input,
 	textarea[name="comment"]{
