@@ -113,9 +113,11 @@ function theclick_portfolio_sidebar_position(){
 */
 function theclick_get_sidebar($check = true){
     $sidebar = 'none';
-    if(is_post_type_archive('post') || is_singular('post') || is_home()){
+    if(is_post_type_archive('post') || is_home()){
         $sidebar = 'sidebar-main';
-    } elseif (is_post_type_archive('portfolio') || is_singular('ef5_portfolio')) {
+    }elseif (is_singular('post')) {
+        $sidebar = 'sidebar-single';
+    }elseif (is_post_type_archive('portfolio') || is_singular('ef5_portfolio')) {
         $sidebar = 'sidebar-portfolio';
     } elseif (is_page()) {
         if (class_exists('WooCommerce') && (is_checkout() || is_cart())) {
