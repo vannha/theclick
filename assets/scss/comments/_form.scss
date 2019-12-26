@@ -10,8 +10,10 @@
 }
 /* Comment Form */
 .comment-form{
-	.ef5-form-fields{
-		margin-top: -5px;
+	@media (min-width: 768px){
+		.ef5-form-fields{
+			margin-top: -5px;
+		}
 	}
 	[class*="comment-form-"]{
 	    margin-bottom: 20px;
