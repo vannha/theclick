@@ -291,15 +291,6 @@ function theclick_widgets_init()
     ));
     if(class_exists('EF5Systems')){
         register_sidebar(array(
-            'name'          => esc_html__('Hidden Navigation Menu', 'theclick'),
-            'id'            => 'sidebar-nav',
-            'description'   => esc_html__('Add widgets here to appear when click on Hidden Navigation Icon.', 'theclick'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<div class="ef5-heading h3 widgettitle">',
-            'after_title'   => '</div>',
-        ));
-        register_sidebar(array(
             'name'          => esc_html__('Blog Single Widgets', 'theclick'),
             'id'            => 'sidebar-single',
             'description'   => esc_html__('Add widgets here to appear below Blog Single content.', 'theclick'),
@@ -308,6 +299,16 @@ function theclick_widgets_init()
             'before_title'  => '<div class="ef5-heading h3 widgettitle">',
             'after_title'   => '</div>',
         ));
+        register_sidebar(array(
+            'name'          => esc_html__('Hidden Navigation Menu', 'theclick'),
+            'id'            => 'sidebar-nav',
+            'description'   => esc_html__('Add widgets here to appear when click on Hidden Navigation Icon.', 'theclick'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<div class="ef5-heading h3 widgettitle">',
+            'after_title'   => '</div>',
+        ));
+        
     }
     if(class_exists('WooCommerce')){
         register_sidebar(array(
