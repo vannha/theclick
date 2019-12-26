@@ -411,7 +411,7 @@ if(!function_exists('theclick_post_related')){
         if($carousel) {
             $col = '';
         } else {
-            $col = 'col-6 col-md-3 col-xl-'.round(12 / $columns);
+            $col = 'col-6 col-md-4 col-xl-'.round(12 / $columns);
         }
 
         //for use in the loop, list 2 posts related to first tag on current post
