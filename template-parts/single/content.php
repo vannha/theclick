@@ -13,7 +13,7 @@ $show_share = theclick_get_theme_opt( 'post_share_on', '0' );
 
 <div <?php post_class('ef5-single clearfix'); ?>>
     <?php 
-        theclick_post_header(['class' => 'ef5-single-header','title_link' => false ]);
+        theclick_post_header(['class' => 'ef5-single-header','title_link' => false]);
         theclick_post_extra_link();
         theclick_post_media(); 
     ?>
