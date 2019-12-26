@@ -1,6 +1,10 @@
 .ef5-related{
 	padding-top: 80px;
 	border-top: 1px solid $MainBorderColor;
+	margin-bottom: 140px;
+	@media (max-width: 1199px){
+		margin-bottom: 76px;
+	}
 	.ef5-featured{
 		margin-bottom: 20px;
 	}
