@@ -307,7 +307,7 @@ Redux::setSection($opt_name, array(
         array(
             'id'       => 'psingle_ptitle_layout',
             'type'     => 'image_select',
-            'title'    => esc_html__('Layout', 'theclick'),
+            'title'    => esc_html__('Post Title Layout', 'theclick'),
             'subtitle' => esc_html__('Select a layout for page title.', 'theclick'),
             'options'  => array(
                 '1' => get_template_directory_uri() . '/assets/images/page-title/01.png',
