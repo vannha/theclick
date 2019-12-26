@@ -1,5 +1,9 @@
 .comments-section{
 	border-top: 1px solid $MainBorderColor;
+	margin-bottom: 136px;
+	@media (max-width: 1199px){
+		margin-bottom: 75px;
+	}
 }
 .commentlist-wrap,
 .woocommerce-Reviews #comments{
