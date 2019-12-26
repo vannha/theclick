@@ -208,8 +208,8 @@ if(!function_exists('theclick_comment_form_default_fields')){
 		$html_req        = ( $req ? " required='required'" : '' );
 		$html_req_markup = ( $req ? '*' : '' );
 		$html5           = true;
-		$name_pladeholder  = esc_html__('Name','theclick');
-		$email_pladeholder = esc_html__('Email','theclick');
+		$name_pladeholder  = esc_html__('Your Name','theclick');
+		$email_pladeholder = esc_html__('Your Email','theclick');
 		$url_pladeholder   = esc_html__('Website','theclick');
 		
 		$fields    = [
