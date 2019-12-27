@@ -115,6 +115,10 @@
 .ef5-share-wrap{
     position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
     top: 100px;
     /*left: 10px;*/
     /*right: 20px;*/
