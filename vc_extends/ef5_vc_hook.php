@@ -6,4 +6,10 @@ function theclick_update_vc_grid_column_width(){
 		esc_html__( '70.491%', 'theclick' ) => '70/491',
 		esc_html__( '29.509%', 'theclick' ) => '29/509'
 	];
+}add_filter('ef5systems_vc_column_width_offset','theclick_update_vc_grid_column_offset_width');
+function theclick_update_vc_grid_column_offset_width(){
+	return [
+		esc_html__( '70.491%', 'theclick' ) => '70/491',
+		esc_html__( '29.509%', 'theclick' ) => '29/509'
+	];
 }
