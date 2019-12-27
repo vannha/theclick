@@ -2,6 +2,9 @@
 	/**
 	 * if has gutenberg move sidebar to bottom of content
 	*/
+	.sidebar-inner{
+		height: 100%;
+	}
 	&.has-gtb {
 		.sidebar-inner{
 			margin-left: -15px;
