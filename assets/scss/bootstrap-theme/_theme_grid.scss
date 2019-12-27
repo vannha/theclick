@@ -61,6 +61,15 @@ $customs_gutters: (
 	120 : 120px,
 	150 : 150px,
 );
+.vc_row{
+	margin-left: -15px;
+	margin-right: -15px;
+	> [class*='col'],
+	> *{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
@@ -72,15 +81,6 @@ $customs_gutters: (
 				> *{
 					padding-left: ($gutters-value / 2);
 					padding-right: ($gutters-value / 2);
-				}
-			}
-			.vc_row{
-				margin-left: -15px;
-				margin-right: -15px;
-				> [class*='col'],
-				> *{
-					padding-left: 15px;
-					padding-right: 15px;
 				}
 			}
 			.vc_row.gutter#{$infix}-#{$gutters}{
