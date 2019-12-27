@@ -5,5 +5,5 @@ function testfix(){
 	return [
 		esc_html__( '43%', 'theclick' ) => '29/509',
 		esc_html__( '57%', 'theclick' ) => '70/491'
-	]
+	];
 }
