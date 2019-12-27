@@ -120,9 +120,6 @@
     position: -o-sticky;
     position: -ms-sticky;
     top: 100px;
-    /*left: 10px;*/
-    /*right: 20px;*/
-    /*bottom: 10px;*/
 }
 .ef5-single-content{
 	blockquote{
@@ -186,4 +183,7 @@
 			padding-left: 130px;
 		}
 	}
+}
+body.single #ef5-page{
+	overflow-x: unset;
 }
