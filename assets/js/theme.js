@@ -294,6 +294,7 @@
                 return false;
             }
         });
+        $('.single-col-left .ef5-share-wrap').scrollTop();
     }
     /**
 	 * Toggle
