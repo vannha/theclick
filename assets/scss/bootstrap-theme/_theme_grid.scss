@@ -74,6 +74,15 @@ $customs_gutters: (
 					padding-right: ($gutters-value / 2);
 				}
 			}
+			.vc_row{
+				margin-left: -15px;
+				margin-right: -15px;
+				> [class*='col'],
+				> *{
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
 			.vc_row.gutter#{$infix}-#{$gutters}{
 				margin-left: ($gutters-value / -2);
 				margin-right: ($gutters-value / -2);
