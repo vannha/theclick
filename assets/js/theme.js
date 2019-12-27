@@ -294,8 +294,8 @@
                 return false;
             }
         });
-        console.log('aaa');
-        $('.single-col-left .ef5-share-wrap').scrollTop(300);
+        /*console.log('aaa');
+        $('.single-col-left .ef5-share-wrap').scrollTop(300);*/
     }
     /**
 	 * Toggle
