@@ -294,9 +294,6 @@
                 return false;
             }
         });
-        /*console.log('aaa');
-        $('.single-col-left .ef5-share-wrap').scrollTop(300);*/
-        $('.single-col-left .ef5-share-wrap').animate({scrollTop: '100px'}, 300);
     }
     /**
 	 * Toggle
