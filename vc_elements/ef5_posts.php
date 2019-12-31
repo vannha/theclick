@@ -207,7 +207,6 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         extract($atts);
         /* get value for Design Tab */
         $css_classes = array(
-            'ef5-posts',
             'ef5-posts-'.$layout_template,
             'ef5-grid-wrap',
             'justify-content-center',
