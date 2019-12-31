@@ -223,7 +223,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $css_class = ['ef5-post-item-featured', $args['class']];
         ?>
             <div class="<?php echo trim(implode(' ', $css_class));?>">
-                <?php  ?>
+                <?php theclick_post_meta_category(); ?>
                 <?php 
                     theclick_post_media([
                         'thumbnail_size' => 'large', 
