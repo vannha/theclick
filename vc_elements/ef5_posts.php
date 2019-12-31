@@ -236,7 +236,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $overlay_content .= '</div></div>';
 
         $css_class = ['ef5-post-item-featured','col-lg-6', $args['class'],'mb-30 mb-lg-0'];*/
-        $overlay_content '<div class="feature-content"><div class="aaa">'; 
+        $overlay_content = '<div class="feature-content"><div class="aaa">'; 
         $overlay_content .= theclick_post_title(['echo' => false, 'class'=>'test']);
         $overlay_content .= '</div></div>';
         $css_class = ['ef5-post-item-featured','col-12', $args['class'],'mb-30 mb-lg-0'];
