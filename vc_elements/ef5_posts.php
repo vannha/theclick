@@ -219,24 +219,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
-
-        /*$overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
-        $overlay_content .= theclick_post_title(['echo' => false, 'class'=>'text-22 text-md-36 text-lg-22 text-xl-36 lh-xl-46 text-white pb-15 pb-xl-58']);
-        $overlay_content .= theclick_post_excerpt([
-            'show_excerpt' => '1', 
-            'length'       => '15', 
-            'more'         => '',
-            'class'        => 'text-white d-none d-md-block',
-            'echo'         => false 
-        ]);
-        $overlay_content .= theclick_tribe_events_info(['echo' => false, 'class'=>'text-white mb-13 pb-15 pb-lg-45']);
-        $overlay_content .= get_post_type() === 'tribe_events'?  theclick_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','theclick'),'class'=>'ef5-btn ef5-btn-md accent outline']) :  theclick_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
-        $overlay_content .= '</div></div>';
-
-        $css_class = ['ef5-post-item-featured','col-lg-6', $args['class'],'mb-30 mb-lg-0'];*/
-        $overlay_content = '<div class="feature-content"><div class="aaa">'; 
-        $overlay_content .= theclick_post_title(['echo' => false, 'class'=>'test']);
-        $overlay_content .= '</div></div>';
+ 
         $css_class = ['ef5-post-item-featured', $args['class']];
         ?>
             <div class="<?php echo trim(implode(' ', $css_class));?>">
@@ -248,6 +231,11 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         'img_class' => ''
                     ]);   
                 ?>
+                <div class="feature-content">
+                    <div class="aaa">
+                        <?php the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );?>
+                    </div>
+                </div>        
             </div>
         <?php
     }
