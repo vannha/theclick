@@ -98,7 +98,7 @@ vc_map(array(
         /* Grid settings */
         ef5systems_grid_settings(
             [
-                'group'                  => esc_html__('Layouts','theclick'), 
+                'group'                  => esc_html__('Layouts','theclick')
                 //'dependency_element'     => 'layout_template', 
                 //'dependency_value'       => 'value_not_equal_to',
                 //'dependency_value_value' => ['1']
