@@ -184,8 +184,7 @@ vc_map(array(
     )
 ));
 
-class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
-{
+class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
     protected function content($atts, $content = null)
     {
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
@@ -198,9 +197,9 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         ]);
         $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
         ?>
-            <div class="<?php echo trim(implode(' ', $classes));?>">
-                <?php echo esc_html($atts['el_title']); ?>
-            </div>
+        <div class="<?php echo trim(implode(' ', $classes));?>">
+            <?php echo esc_html($atts['el_title']); ?>
+        </div>
         <?php
     }
     protected function theclick_posts_wrap_css_class($atts){
@@ -219,26 +218,33 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
- 
         $css_class = ['ef5-post-item-featured', $args['class']];
         ?>
-            <div class="<?php echo trim(implode(' ', $css_class));?>">
+        <div class="<?php echo trim(implode(' ', $css_class));?>">
+            <?php 
+                theclick_post_media([
+                    'thumbnail_size' => 'large', 
+                    'default_thumb'  => true,
+                    'after' => '',
+                    'img_class' => ''
+                ]);   
+            ?>
+            
+            <div class="feature-content">
                 <?php theclick_post_meta_category(); ?>
+                <div class="aaa">
+                <?php the_title( '<div class="ef5-heading h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );?>
+                </div>
                 <?php 
-                    theclick_post_media([
-                        'thumbnail_size' => 'large', 
-                        'default_thumb'  => true,
-                        'after' => '',
-                        'img_class' => ''
-                    ]);   
+                theclick_post_meta([
+                    'class'           => '',
+                    'show_author'     => '1',
+                    'show_date'       => '1',
+                    'show_cmt'        => '1'
+                ]);
                 ?>
-                
-                <div class="feature-content">
-                    <div class="aaa">
-                        <?php the_title( '<div class="ef5-heading h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );?>
-                    </div>
-                </div>        
-            </div>
+            </div>        
+        </div>
         <?php
     }
     protected function theclick_posts_item($atts, $args = []){
