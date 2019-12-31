@@ -44,7 +44,7 @@
             }
             wp_reset_postdata();
         ?>
-            <div class="col-lg-6">
+            <div class="ef5-blog-wrap">
                 <?php
                     while($posts->have_posts()){
                         $post_count2++;

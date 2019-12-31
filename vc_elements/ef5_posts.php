@@ -255,33 +255,25 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
-        $css_class = ['ef5-post-item-inner', 'row', $args['class'], 'ml-0 mr-0'];
-        $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
         ?>
-        <div class="ef5-post-item ef5-rounded-10 ef5-hover-shadow-1 transition">
-            <div class="<?php echo trim(implode(' ', $css_class));?>">
-                <?php 
-                    theclick_post_media([
-                        'thumbnail_size' => theclick_default_value($atts['thumbnail_size'], '170x170'), 
-                        'default_thumb'  => true,
-                        'class'          => 'col-xs-auto p-0',
-                        'before'         => '<div class="relative h-100">',
-                        'after'          => $after.'</div>',
-                        'img_class'      => 'h-100'
-                    ]);   
+        <div class="ef5-list ef5-post-item">
+            <?php theclick_post_media(['thumbnail_size' => 'medium']); ?>
+            <div class="ef5-loop-info"><?php
+                theclick_post_meta_category();
+                theclick_post_title(['class'=>'text-30']);
+                theclick_post_excerpt([
+                    'show_excerpt' => '1', 
+                    'length'       => '38', 
+                    'more'         => '',
+                    'class'        => 'text-12' 
+                ]);
+                theclick_post_meta([
+                    'class'           => '',
+                    'show_author'     => '1',
+                    'show_date'       => '1',
+                    'show_cmt'        => '1'
+                ]);
                 ?>
-                <div class="col pt-17 p-15 pb-xs-0">
-                    <?php 
-                        theclick_post_title(['class'=>'text-22 pb-5']);
-                        theclick_post_excerpt([
-                            'show_excerpt' => '1', 
-                            'length'       => '15', 
-                            'more'         => '',
-                            'class'        => 'text-13 mb-17' 
-                        ]);
-                        //theclick_tribe_events_info_hori(['class' => 'text-13']);
-                    ?>
-                </div>
             </div>
         </div>
         <?php
