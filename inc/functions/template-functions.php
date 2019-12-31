@@ -281,7 +281,7 @@ if(!function_exists('theclick_loop_pagination')){
         if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) return;
         $args = wp_parse_args($args, [
             'show_pagination' => '1',
-            'style'           => theclick_get_theme_opt('archive_nav_type', apply_filters('theclick_loop_pagination', '4')),
+            'style'           => theclick_get_theme_opt('archive_nav_type', apply_filters('theclick_loop_pagination', '3')),
             'class'           => ''
         ]);
         if($args['show_pagination'] !== '1'){

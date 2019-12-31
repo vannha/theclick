@@ -225,12 +225,10 @@ Redux::setSection($opt_name, array(
             'subtitle' => esc_html__('Set posts navigation type on all archive pages', 'theclick'),
             'options'  => array(
                 '1' => esc_html__('Older / Newer', 'theclick'),
-                //'2' => esc_html__('Paged', 'theclick'),
-                '3' => esc_html__('Paged', 'theclick'),
-                '4' => esc_html__('Next / Preview', 'theclick'),
-                //'5' => esc_html__('Next / Preview', 'theclick')
+                '2' => esc_html__('Paged', 'theclick'),
+                '3' => esc_html__('Next / Preview', 'theclick')
             ),
-            'default'  => apply_filters('theclick_loop_pagination', '4')
+            'default'  => apply_filters('theclick_loop_pagination', '3')
         ),
         array(
             'id'       => 'archive_author_on',

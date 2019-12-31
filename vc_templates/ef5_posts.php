@@ -78,7 +78,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
     ?>
     </div>
 <?php
-theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']);
+theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
 ?>
 </div>

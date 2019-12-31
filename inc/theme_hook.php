@@ -92,7 +92,7 @@ add_filter('theclick_archive_grid_col', function(){ return '70/491';});
 /**
  * Default Archive Pagination
  * use filter: theclick_loop_pagination
- * @return string 1 - 5
+ * @return string 1 - 3
  * @example: add_filter('theclick_loop_pagination', function(){ return '3';});
 */
 
