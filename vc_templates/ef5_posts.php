@@ -32,85 +32,50 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
     <?php $this->title($atts);?>
     <div class="<?php $this->theclick_posts_wrap_css_class($atts);?>">
     <?php
-switch ($layout_template) {
-case '1':
-	$post_count = $post_count2 = 0;
-	while ($posts->have_posts()) {
-		$post_count++;
-		$posts->the_post();
-		if ($post_count === 1) {
-			$this->theclick_posts_featured_item($atts);
-		}
-	}
-	wp_reset_postdata();
-	?>
-            <div class="ef5-blog-wrap">
-                <?php
-while ($posts->have_posts()) {
-		$post_count2++;
-		$posts->the_post();
-		if ($post_count2 != 1) {
-			$this->theclick_posts_item($atts, ['class' => 'overlay-wrap']);
-		}
-	}
-	wp_reset_postdata();
-	?>
+    switch ($layout_template) {
+    case '1':
+    	$post_count = $post_count2 = 0;
+    	while ($posts->have_posts()) {
+    		$post_count++;
+    		$posts->the_post();
+    		if ($post_count === 1) {
+    			$this->theclick_posts_featured_item($atts);
+    		}
+    	}
+    	wp_reset_postdata();
+    	?>
+        <div class="ef5-blog-wrap">
+            <?php
+            while ($posts->have_posts()) {
+        		$post_count2++;
+        		$posts->the_post();
+        		if ($post_count2 != 1) {
+        			$this->theclick_posts_item($atts, ['class' => 'overlay-wrap']);
+        		}
+        	}
+        	wp_reset_postdata();
+        	?>
+        </div>
+    <?php
+    break;
+    case '2':
+    	$item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
+    	$d = 0;
+    	while ($posts->have_posts()) {
+    		$d++;
+    		$posts->the_post();
+    		?>
+            <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                    <?php theclick_vc_post_layout2($atts);?>
+                </div>
             </div>
         <?php
-break;
-case '2':
-	$item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
-	$d = 0;
-	while ($posts->have_posts()) {
-		$d++;
-		$posts->the_post();
-		?>
-                <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
-                	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <?php theclick_vc_post_layout2($atts);?>
-                    </div>
-                </div>
-                <?php
-} // end while
+        } // end while
 	wp_reset_postdata();
 	break;
-case '5':
-	$d = 0;
-	while ($posts->have_posts()) {
-		$d++;
-		$posts->the_post();
-		?>
-                <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
-                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <div class="row gutter-12">
-                            <div class="col-auto">
-                                <?php theclick_post_media([
-			'thumbnail_size' => theclick_default_value($atts['thumbnail_size'], '48'),
-			'default_thumb' => true,
-			'img_class' => 'ef5-rounded-5',
-		]);?>
-                            </div>
-                            <div class="col ef5-content-info">
-                                <?php
-theclick_posted_on([
-			'class' => 'text-13 ef5-text-accent',
-			'icon' => '',
-		]);
-		theclick_post_title([
-			'heading_tag' => 'text-13 lh-18 text-white font-style-400',
-		]);
-		?>
-                            </div>
-                        </div>
-                        <?php ?>
-                    </div>
-                </div>
-                <?php
-} // end while
-	wp_reset_postdata();
-	break;
-}
-?>
+    }
+    ?>
     </div>
 <?php
 theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']);
