@@ -226,7 +226,7 @@ Redux::setSection($opt_name, array(
             'options'  => array(
                 '1' => esc_html__('Older / Newer', 'theclick'),
                 '2' => esc_html__('Paged', 'theclick'),
-                '3' => esc_html__('Next / Preview', 'theclick')
+                '3' => esc_html__('Next / Previous', 'theclick')
             ),
             'default'  => apply_filters('theclick_loop_pagination', '3')
         ),
