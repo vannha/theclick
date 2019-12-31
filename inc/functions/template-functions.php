@@ -291,22 +291,22 @@ if(!function_exists('theclick_loop_pagination')){
         $paginate_links = ['nav-links','layout-'.$args['style'],$args['class']];
         printf('%s','<div class="ef5-loop-pagination layout-type-'.esc_attr($args['style']).'">');
         switch ($args['style']) {
-            case '5':
+            /*case '5':
                 previous_posts_link(
                     apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick'))
                 );
                 next_posts_link(
                     apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick'))
                 );
-                break;
-            case '4':
+                break;*/
+            case '3':
                 posts_nav_link(
                     apply_filters('theclick_loop_pagination_sep_text', '<span class="d-none"></span>'),
                     apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')),
                     apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick'))
                 );
                 break;
-            case '3':
+            case '2':
                 echo '<div class="'.trim(implode(' ', $paginate_links)).'">';
                     echo paginate_links([
                         'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')).'"><span class="flaticon-arrow-pointing-to-left"></span></span>',
@@ -314,7 +314,7 @@ if(!function_exists('theclick_loop_pagination')){
                     ]); 
                 echo '</div>';
                 break;
-            case '2':
+            case '1':
                 the_posts_pagination([
                     'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')).'"><span>'.apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')).'</span></span>',
                     'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick')).'"><span>'.apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick')).'</span></span>'
