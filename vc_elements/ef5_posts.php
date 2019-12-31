@@ -227,13 +227,14 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                     theclick_post_media([
                         'thumbnail_size' => 'large', 
                         'default_thumb'  => true,
-                        'after' => $overlay_content,
+                        'after' => '',
                         'img_class' => ''
                     ]);   
                 ?>
+                
                 <div class="feature-content">
                     <div class="aaa">
-                        <?php the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );?>
+                        <?php the_title( '<div class="ef5-heading h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );?>
                     </div>
                 </div>        
             </div>
