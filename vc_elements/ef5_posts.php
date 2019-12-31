@@ -281,7 +281,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                             'more'         => '',
                             'class'        => 'text-13 mb-17' 
                         ]);
-                        theclick_tribe_events_info_hori(['class' => 'text-13']);
+                        //theclick_tribe_events_info_hori(['class' => 'text-13']);
                     ?>
                 </div>
             </div>
