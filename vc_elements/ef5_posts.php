@@ -221,15 +221,15 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
         $css_class = ['ef5-post-item-featured', $args['class']];
         ?>
         <div class="<?php echo trim(implode(' ', $css_class));?>">
-            <div class="post-feature-wrap">
             <?php theclick_post_media(['thumbnail_size' => 'large', 'default_thumb' => true,'after' => '','img_class' => '']);?>
             <div class="feature-content">
+                <div class="post-feature-wrap">
                 <?php 
                 theclick_post_meta_category(['class' => 'meta-category justify-content-center']);
                 the_title( '<div class="ef5-heading h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
                 theclick_post_meta(['class' => 'justify-content-center','show_author' => '1','show_date' => '1','show_cmt' => '1']);
                 ?>
-            </div>   
+                </div>   
             </div>    
         </div>
         <?php
