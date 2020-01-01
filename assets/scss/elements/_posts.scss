@@ -1,25 +1,25 @@
 .ef5-posts-1{
 	.feature-content{
-		.meta-category{
-			font-size: 11px;
-			line-height: 13px;
-			font-weight: 600;
-			text-transform: uppercase;
-			justify-content: center;
-		}
 		.ef5-heading{
 			line-height: 38px;
 			text-align: center;
 		}
 		.ef5-meta{
-			font-weight: 500;
 			text-transform: uppercase;
+			&.meta-category{
+				font-size: 11px;
+				line-height: 13px;
+				font-weight: 600;
+				text-transform: uppercase;
+				a{
+					color: $link_color;
+					&:hover{
+						color: $link_color_hover;
+					}
+				}
+			}
 			a{
 				font-size: 10px;	
-				color: $link_color_hover;
-				&:hover{
-					color: $link_color;
-				}
 			}
 		}
 	}
