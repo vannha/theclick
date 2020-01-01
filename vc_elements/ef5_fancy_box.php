@@ -186,7 +186,7 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
             if ( strlen( $button_link['url'] ) > 0 ) {
                 $use_link = true; 
                 $a_href = $button_link['url'];
-                $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read more','unbreak') ;
+                $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read more','theclick') ;
                 $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
             }
         }

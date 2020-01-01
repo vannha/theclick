@@ -9,7 +9,7 @@ vc_map(array(
         array(
             array(
                 'type'       => 'img',
-                'heading'    => esc_html__('Layout Template','unbreak'),
+                'heading'    => esc_html__('Layout Template','theclick'),
                 'param_name' => 'layout_template',
                 'value'      =>  array(
                     '1' => get_template_directory_uri().'/vc_elements/layouts/list-1.png',

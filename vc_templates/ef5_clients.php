@@ -18,7 +18,7 @@ $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
 $clients = vc_map_get_attributes( $this->getShortcode(), $atts );
 $values = (array) vc_param_group_parse_atts( $clients['values'] );
 if(empty($values[0])) {
-    echo '<p class="require required">'.esc_html__('Please add a client logo!','unbreak').'</p>';
+    echo '<p class="require required">'.esc_html__('Please add a client logo!','theclick').'</p>';
     return;
 }
 $count = count($values);
