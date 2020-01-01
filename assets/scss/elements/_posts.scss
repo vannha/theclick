@@ -54,7 +54,16 @@
 				}
 			}
 		}
-		 
+		.ef5-meta{
+		    font-weight: 500;
+    		text-transform: uppercase;
+    		a{
+				color: $link_color_hover;
+				&:hover{
+					color: $link_color;
+				}
+			}
+		}  
 	}
 }
 .ef5-posts-2{
