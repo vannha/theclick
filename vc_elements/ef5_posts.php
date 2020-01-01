@@ -221,27 +221,12 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
         $css_class = ['ef5-post-item-featured', $args['class']];
         ?>
         <div class="<?php echo trim(implode(' ', $css_class));?>">
-            <?php 
-                theclick_post_media([
-                    'thumbnail_size' => 'large', 
-                    'default_thumb'  => true,
-                    'after' => '',
-                    'img_class' => ''
-                ]);   
-            ?>
-            
+            <?php theclick_post_media(['thumbnail_size' => 'large', 'default_thumb' => true,'after' => '','img_class' => '']);?>
             <div class="feature-content">
-                <?php theclick_post_meta_category(); ?>
-                <div class="aaa">
-                <?php the_title( '<div class="ef5-heading h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );?>
-                </div>
                 <?php 
-                theclick_post_meta([
-                    'class'           => '',
-                    'show_author'     => '1',
-                    'show_date'       => '1',
-                    'show_cmt'        => '1'
-                ]);
+                theclick_post_meta_category();
+                the_title( '<div class="ef5-heading h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
+                theclick_post_meta(['class' => '','show_author' => '1','show_date' => '1','show_cmt' => '1']);
                 ?>
             </div>        
         </div>
@@ -257,18 +242,8 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
             <div class="ef5-loop-info"><?php
                 theclick_post_meta_category();
                 theclick_post_title(['class'=>'text-30']);
-                theclick_post_excerpt([
-                    'show_excerpt' => '1', 
-                    'length'       => '38', 
-                    'more'         => '',
-                    'class'        => 'text-12' 
-                ]);
-                theclick_post_meta([
-                    'class'           => '',
-                    'show_author'     => '1',
-                    'show_date'       => '1',
-                    'show_cmt'        => '1'
-                ]);
+                theclick_post_excerpt(['show_excerpt' => '1', 'length' => '38', 'more' => '','class' => 'text-12' ]);
+                theclick_post_meta(['class' => '','show_author' => '1','show_date' => '1','show_cmt' => '1']);
                 ?>
             </div>
         </div>
