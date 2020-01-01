@@ -153,9 +153,9 @@
                     </div>
                 <?php
                     break;
-                case '2':
+                case '1':
                 ?>	
-            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
+            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                     <?php 
                         theclick_post_media([
                             'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
