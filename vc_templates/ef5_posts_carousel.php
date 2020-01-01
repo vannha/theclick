@@ -101,10 +101,7 @@
                                             'icon'  => '',
                                             'date_format' => 'd M, Y'
                                         ]);
-
-                                        theclick_post_title([
-                                            'heading_tag' => $heading_class .' text-white font-style-500'
-                                        ]);
+                                        the_title( '<div class="ef5-heading h2 text-white"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
                                         if($thumbnail_size_index === 0){
                                             theclick_post_read_more([
                                                 'readmore_class' => 'text-14 ef5-text-accent font-style-500',

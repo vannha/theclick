@@ -79,10 +79,9 @@ vc_map(array(
                 'heading'    => esc_html__('Layout Template','unbreak'),
                 'param_name' => 'layout_template',
                 'value' =>  array(
-                    //'1' => get_template_directory_uri().'/vc_elements/layouts/post-1.png',
-                    '2' => get_template_directory_uri().'/vc_elements/layouts/post-2.png',
-                    '3' => get_template_directory_uri().'/vc_elements/layouts/post-3.png',
-                    '4' => get_template_directory_uri().'/vc_elements/layouts/post-4.png',
+                    '1' => get_template_directory_uri().'/vc_elements/layouts/post-carousel-1.png',
+                    '2' => get_template_directory_uri().'/vc_elements/layouts/post-carousel-2.png',
+                    '3' => get_template_directory_uri().'/vc_elements/layouts/post-carousel-3.png'
                 ),
                 'std'   => '2',
                 'group' => esc_html__('Layouts','unbreak'),
