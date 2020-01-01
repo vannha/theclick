@@ -164,17 +164,16 @@
                         </div>
                     </div>
                 <?php
-                        break;
-                    case '2':
-                    $overlay = theclick_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
-            ?>	
+                    break;
+                case '2':
+                ?>	
             	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
                     <?php 
                         theclick_post_media([
                             'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                             'default_thumb'  => true,
                             'img_class'      => 'w-auto',   
-                            'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
+                            'after'          => ''
                         ]);
                     ?>
                     <div class="ef5-post-info">
@@ -187,15 +186,6 @@
                                 'length'       => '16', 
                                 'more'         => ''
                             ]);
-                            if(class_exists('EF5Payments')) {
-                                ef5systems_donation_progress_donors([
-                                    'donor_icon' => '<span class="flaticon-like"></span>'
-                                ]);
-                                ef5payments_donation_donate_amount([
-                                    'goal_label' => esc_html__('Goal:','theclick'),
-                                    'raised_label' => esc_html__('Raised:','theclick')
-                                ]);
-                            }
                         ?>
                     </div>
                 </div>
