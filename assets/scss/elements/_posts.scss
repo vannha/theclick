@@ -7,10 +7,16 @@
 	.feature-content{
 		margin-top: -66px;
 		padding: 0 90px 0 90px;
+		@media (max-width: 1199px){
+			padding: 0 50px 0 50px;
+		}
 		.post-feature-wrap{
 			position: relative;
 			background-color: $white;
 			padding: 30px 62px 26px 62px;
+			@media (max-width: 1199px){
+				padding: 30px 30px 26px 30px;
+			}
 		}
 		.ef5-heading{
 			line-height: 38px;
