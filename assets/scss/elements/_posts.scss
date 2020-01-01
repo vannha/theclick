@@ -42,6 +42,24 @@
 		&:last-child{
 			margin-bottom: 0;
 		}
+		.meta-category{
+			font-weight: 500;
+    		text-transform: uppercase;
+    		margin-bottom: 13px;
+    		font-size: 12px;	
+    		a{
+				color: $link_color_hover;
+				&:hover{
+					color: $link_color;
+				}
+			}
+		}
+		.ef5-heading{
+			position: relative;
+		    font-size: 30px;
+		    line-height: 38px;
+		    margin-bottom: 17px;
+		}
 	}
 }
 .ef5-posts-2{

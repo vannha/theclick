@@ -88,7 +88,7 @@ if(!function_exists('theclick_post_extra_link')){
 if(!function_exists('theclick_post_title')){
     function theclick_post_title($args=[]){
         $args = wp_parse_args($args, [
-            'heading_tag' => 'h4',
+            'heading_tag' => 'h2',
             'class'       => '',
             'echo'        => true  
         ]);
