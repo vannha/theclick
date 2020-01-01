@@ -17,21 +17,21 @@
 			text-align: center;
 		    margin-bottom: 15px;
 		}
-		.ef5-meta{
+		.meta-category{
+			font-size: 11px;
+			line-height: 13px;
+			font-weight: 600;
 			text-transform: uppercase;
-			&.meta-category{
-				font-size: 11px;
-				line-height: 13px;
-				font-weight: 600;
-				text-transform: uppercase;
-			    margin-bottom: 10px;
-				a{
-					color: $link_color;
-					&:hover{
-						color: $link_color_hover;
-					}
+		    margin-bottom: 10px;
+			a{
+				color: $link_color;
+				&:hover{
+					color: $link_color_hover;
 				}
 			}
+		}
+		.ef5-meta{
+			text-transform: uppercase;
 			a{
 				font-size: 10px;	
 			}
