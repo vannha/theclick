@@ -1,9 +1,10 @@
 .ef5-posts-1{
 	.feature-content{
-		padding: 20px 150px 30px 150px;
 		margin-top: -66px;
 		.post-feature-wrap{
+			position: relative;
 			background-color: $white;
+			padding: 20px 150px 30px 150px;
 		}
 		.ef5-heading{
 			line-height: 38px;
