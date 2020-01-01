@@ -117,8 +117,8 @@
                         </div>
                     </div>
                 <?php
-                        break;
-                    case '3':
+                    break;
+                case '3':
                 ?>
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <?php 
@@ -126,7 +126,7 @@
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                 'default_thumb'  => true,
                                 'img_class'      => 'w-auto',   
-                                'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
+                                'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"></div></div>'
                             ]);
                         ?>
                         <div class="overlay ef5-bg-gradient-1 ef5-post-info">
@@ -149,15 +149,6 @@
                                             'length'       => '16', 
                                             'more'         => ''
                                         ]);
-                                        if(class_exists('EF5Payments')) {
-                                            ef5systems_donation_progress_donors([
-                                                'donor_icon' => '<span class="flaticon-like"></span>'
-                                            ]);
-                                            ef5payments_donation_donate_amount([
-                                                'goal_label' => esc_html__('Goal:','theclick'),
-                                                'raised_label' => esc_html__('Raised:','theclick')
-                                            ]);
-                                        }
                                     ?>
                                 </div>
                             </div>
