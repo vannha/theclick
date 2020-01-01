@@ -132,7 +132,7 @@ if ( ! function_exists( 'theclick_post_meta_category' ) ) {
             $metas[] = theclick_edit_link(['show_edit' => $args['show_edit'], 'echo' => false]);
 
         $output = implode($args['sep'], $metas);
-        $css_classes = ['ef5-meta', $args['class'], 'd-flex', 'align-items-center'];
+        $css_classes = [$args['class'], 'd-flex', 'align-items-center'];
         if($args['stretch_content']) $css_classes[] = 'justify-content-between';
         $classes = trim(implode(' ',$css_classes ));
         if ( $output )

@@ -244,7 +244,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
             <div class="ef5-loop-info"><?php
                 theclick_post_meta_category(['class' => 'meta-category']);
                 theclick_post_title();
-                theclick_post_excerpt(['show_excerpt' => '1', 'length' => '38', 'more' => '','class' => 'text-12' ]);
+                theclick_post_excerpt(['show_excerpt' => '1', 'length' => '38', 'more' => '' ]);
                 theclick_post_meta(['class' => '','show_author' => '1','show_date' => '1','show_cmt' => '1']);
                 ?>
             </div>
