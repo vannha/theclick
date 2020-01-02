@@ -114,7 +114,7 @@
                             theclick_post_media([
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                 'default_thumb'  => true,
-                                'img_class'      => 'w-auto',   
+                                'img_class'      => 'w-auto max-width-90',   
                             ]);
                         ?>
                         </div>
@@ -122,7 +122,7 @@
                         <?php 
                             theclick_posted_in([
                                 'show_cat' => '1',
-                                'class'    => 'max-width-90',
+                                'class'    => '',
                                 'icon'     => '' 
                             ]);
                             the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
