@@ -40,9 +40,9 @@ vc_map(array(
             ),
             array(
                 'param_name'  => 'heading_font_sizes',
-                'type'        => 'custom_markup',
-                'value'       => '<strong>'.esc_html__('Font Size (ex:24,24px)','theclick').'</strong>',
-                'std'         => '<strong>'.esc_html__('Font Size (ex:24,24px)','theclick').'</strong>',
+                'type'        => 'caption_heading',
+                'value'       => esc_html__('Font Size (ex:24 or 24px)','theclick'),
+                'std'         => esc_html__('Font Size (ex:24 or 24px)','theclick'),
                 'dependency' => array(
                     'element' => 'heading_text',
                     'not_empty' => true
