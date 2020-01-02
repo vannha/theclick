@@ -140,7 +140,7 @@ vc_map(array(
                     esc_html__('Black Bold','overcome')        => '900',
                     esc_html__('Black Bold Italic','overcome') => '900i'
                 ),
-                'std'        => 500,
+                'std'        => '500',
                 'dependency' => array(
                     'element' => 'heading_text',
                     'not_empty' => true
