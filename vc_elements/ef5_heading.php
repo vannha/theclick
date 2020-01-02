@@ -33,8 +33,8 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','theclick'),
                 'param_name' => 'heading_text',
-                'value'      => 'This is TheClick custom heading element',
-                'std'        => 'This is TheClick custom heading element',
+                'value'      => '',
+                'std'        => '',
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','theclick')   
             ),
@@ -98,6 +98,19 @@ vc_map(array(
                 'group'      => esc_html__('Heading','theclick')   
             ),
             array(
+                'type'             => 'textfield',
+                'description'      => esc_html__('Line height (ex: 1 or 1.2 or 36px','theclick'),
+                'param_name'       => 'heading_lh',
+                'edit_field_class' => 'vc_col-sm-3',
+                'value'            => '',
+                'std'              => '',
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
+                'group'      => esc_html__('Heading','theclick')   
+            ),
+            array(
                 'type'          => 'colorpicker',
                 'heading'       => esc_html__('Choose color of heading', 'theclick'),
                 'param_name'    => 'heading_color',
@@ -116,6 +129,7 @@ vc_map(array(
                     'not_empty' => true
                 ),
             ]),
+            
             // Sub Heading 
             array(
                 'type'       => 'textfield',
