@@ -1,6 +1,13 @@
 .ef5-posts-carousel-1{
 	.ef5-post-item-inner{
 		position: relative;
+		&:hover{
+			.ef5-featured{
+				&:before{
+					background-color: rgba(#e1e1e1,0.5);
+				}
+			}
+		}
 	}
 	.ef5-featured{
 		position: relative;
@@ -31,6 +38,9 @@
 		margin-bottom: 15px;
 		a{
 			color: #fff;
+			&:hover{
+				color: $lightent_accent_accent;
+			}
 		}
 	}
 	.ef5-heading{
@@ -39,6 +49,9 @@
 		margin-bottom: 30px;
 		a{
 			color: #fff;
+			&:hover{
+				color: $lightent_accent_accent;
+			}
 		}
 	}
 	.ef5-meta{
@@ -47,6 +60,9 @@
 		text-transform: uppercase;
 		a{
 			color: #fff;
+			&:hover{
+				color: $lightent_accent_accent;
+			}
 		}
 	}
 }
