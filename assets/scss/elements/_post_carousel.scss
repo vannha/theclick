@@ -11,17 +11,23 @@
 	.meta-category{
 		font-size: 12px;
 		line-height: 14px;
+		text-transform: uppercase;
 		a{
 			color: #fff;
-			&:hover{
-				color: $lightent_accent_accent;
-			}
 		}
 	}
 	.ef5-heading{
-
+		font-size: 20px;
+		line-height: 26px;
+		a{
+			color: #fff;
+		}
 	}
 	.ef5-meta{
-
+		font-size: 10px;
+		line-height: 13px;
+		a{
+			color: #fff;
+		}
 	}
 }
