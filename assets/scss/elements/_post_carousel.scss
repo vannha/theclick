@@ -66,6 +66,7 @@
 		> div + div:before{
 			top: 6px;
 			background-color: #fff;
+			@include transition(all .3s linear 0s);
 		}
 	}
 }
