@@ -9,7 +9,14 @@
 		@include transform(translateY(-50%));
 	}	
 	.meta-category{
-
+		font-size: 12px;
+		line-height: 14px;
+		a{
+			color: #fff;
+			&:hover{
+				color: $lightent_accent_accent;
+			}
+		}
 	}
 	.ef5-heading{
 
