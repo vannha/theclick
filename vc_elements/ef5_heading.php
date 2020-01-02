@@ -42,11 +42,6 @@ vc_map(array(
                 'param_name'  => 'heading_font_sizes',
                 'type'        => 'caption_heading',
                 'value'       => esc_html__('Font Size (ex:24 or 24px)','theclick'),
-                'std'         => esc_html__('Font Size (ex:24 or 24px)','theclick'),
-                'dependency' => array(
-                    'element' => 'heading_text',
-                    'not_empty' => true
-                ),
                 'group'      => esc_html__('Heading','theclick')    
             ),
             array(
