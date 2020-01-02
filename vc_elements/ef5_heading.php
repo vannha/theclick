@@ -40,7 +40,7 @@ vc_map(array(
             ),
             array(
                 'param_name' => 'heading_font_sizes',
-                'type'       => 'caption_heading',
+                'type'       => 'custom_markup',
                 'holder'     => 'div',
                 'class'      => '',
                 'heading'    =>esc_html__('Font Size (ex:24 or 24px)','theclick'),
