@@ -6,7 +6,7 @@
     /* get value for Design Tab */
     $css_classes = array(
         'ef5-posts-carousel',
-        'ef5-posts-'.$layout_template,
+        'ef5-posts-carousel-'.$layout_template,
         'ef5-owl',
         'owl-carousel',
         vc_shortcode_custom_css_class( $css ),
