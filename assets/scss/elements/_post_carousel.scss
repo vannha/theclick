@@ -13,7 +13,9 @@
 					color: $link_color;
 				}
 			}
-			
+			.ef5-meta > div + div:before{
+				background-color: $darkent_accent_accent;
+			}
 		}
 	}
 	.ef5-featured{
