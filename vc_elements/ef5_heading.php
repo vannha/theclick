@@ -41,14 +41,14 @@ vc_map(array(
             array(
                 'param_name'  => 'heading_font_sizes',
                 'type'        => 'custom_markup',
-                'value'       => '<strong>'.esc_html__('Font Size','theclick').'</strong>',
-                'std'         => '<strong>'.esc_html__('Font Size','theclick').'</strong>',
+                'value'       => '<strong>'.esc_html__('Font Size (Enter the number in px)','theclick').'</strong>',
+                'std'         => '<strong>'.esc_html__('Font Size (Enter the number in px)','theclick').'</strong>',
                 'group'      => esc_html__('Heading','theclick')    
             ),
             array(
                 'type'             => 'textfield',
                 'description'      => esc_html__('Small Devices','theclick'),
-                'param_name'       => 'heading_text_sm',
+                'param_name'       => 'text_sm',
                 'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
@@ -61,7 +61,7 @@ vc_map(array(
             array(
                 'type'             => 'textfield',
                 'description'      => esc_html__('Medium Devices','theclick'),
-                'param_name'       => 'heading_text_md',
+                'param_name'       => 'text_md',
                 'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
@@ -74,7 +74,7 @@ vc_map(array(
             array(
                 'type'             => 'textfield',
                 'description'      => esc_html__('Large Devices','theclick'),
-                'param_name'       => 'heading_text_lg',
+                'param_name'       => 'text_lg',
                 'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
@@ -87,7 +87,7 @@ vc_map(array(
             array(
                 'type'             => 'textfield',
                 'description'      => esc_html__('Extra Large Devices','theclick'),
-                'param_name'       => 'heading_text_xl',
+                'param_name'       => 'text_xl',
                 'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
