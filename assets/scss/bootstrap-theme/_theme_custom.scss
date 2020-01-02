@@ -46,6 +46,14 @@ $customs_gutters: (
 	90 : 90px,
 	100 : 100px
 );
+$max_width:(
+    25: 25px,
+    50: 50px,
+    75: 75px,
+    90: 90px,
+    100: 100px,
+    auto: auto
+);
 // Row gutters
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
@@ -90,15 +98,9 @@ $customs_gutters: (
 	}
 }
 
-$max_width:(
-    25: 25px,
-    50: 50px,
-    75: 75px,
-    90: 90px,
-    100: 100px,
-    auto: auto
-);
-
+/**
+ custom width 
+*/
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
