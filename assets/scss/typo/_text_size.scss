@@ -29,11 +29,7 @@ $line-heights: (
 	'32' : '32px',
 	'46': '46px'
 );
-@for $lhpx from 0 through 200 {
-	.lh-px-#{$lhpx}{
-		line-height: #{$lhpx}px;
-	}
-}
+
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
