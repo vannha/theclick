@@ -63,7 +63,7 @@ vc_map(array(
                 'description'      => esc_html__('Medium Devices','theclick'),
                 'param_name'       => 'text_md',
                 'edit_field_class' => 'vc_col-sm-3',
-                'value'            => theclick_text_size(),
+                'value'            => '',
                 'std'              => '',
                 'dependency' => array(
                     'element' => 'heading_text',
@@ -76,7 +76,7 @@ vc_map(array(
                 'description'      => esc_html__('Large Devices','theclick'),
                 'param_name'       => 'text_lg',
                 'edit_field_class' => 'vc_col-sm-3',
-                'value'            => theclick_text_size(),
+                'value'            => '',
                 'std'              => '',
                 'dependency' => array(
                     'element' => 'heading_text',
@@ -89,7 +89,7 @@ vc_map(array(
                 'description'      => esc_html__('Extra Large Devices','theclick'),
                 'param_name'       => 'text_xl',
                 'edit_field_class' => 'vc_col-sm-3',
-                'value'            => theclick_text_size(),
+                'value'            => '',
                 'std'              => '',
                 'dependency' => array(
                     'element' => 'heading_text',
