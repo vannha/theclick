@@ -16,7 +16,9 @@ if(!empty($heading_text_md)) $heading_text_clss[] = 'text-md-'.$heading_text_md;
 if(!empty($heading_text_lg)) $heading_text_clss[] = 'text-lg-'.$heading_text_lg;
 if(!empty($heading_text_xl)) $heading_text_clss[] = 'text-xl-'.$heading_text_xl;
 if(!empty($heading_lh)){
-	var_dump(strpos($heading_lh,'px'));
+	if(strpos($heading_lh,'px') !== false)
+	$heading_text_clss[] = 'lh-px-'.str_replace('px', '', $heading_lh );
+	else
 	$heading_text_clss[] = 'lh-'.str_replace('.', '/', $heading_lh );
 } 
 $heading_text_cls = implode(' ', $heading_text_clss);
