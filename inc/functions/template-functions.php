@@ -211,12 +211,11 @@ if(!function_exists('theclick_post_excerpt')){
         $content      = get_the_excerpt();
         $excerpt_more = apply_filters('theclick_excerpt_more', $args['more']);
         $excerpt      = wp_trim_words($content, $args['length'], $excerpt_more);
+        
         if($args['echo']){
-	?>
-	<div class="<?php echo trim(implode(' ', $classes));?>">
-		<?php printf('%s', $excerpt); ?>
-	</div>
-	<?php
+    	?>
+    	<div class="<?php echo trim(implode(' ', $classes));?>"><?php printf('%s', $excerpt); ?></div>
+    	<?php
         } else {
             return '<div class="'.trim(implode(' ', $classes)).'">'. $excerpt .'</div>';
         }
