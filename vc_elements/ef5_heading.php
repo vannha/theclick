@@ -41,8 +41,8 @@ vc_map(array(
             array(
                 'param_name'  => 'heading_font_sizes',
                 'type'        => 'custom_markup',
-                'value'       => '<strong>'.esc_html__('Font Size (ex:24)','theclick').'</strong>',
-                'std'         => '<strong>'.esc_html__('Font Size (ex:24)','theclick').'</strong>',
+                'value'       => '<strong>'.esc_html__('Font Size (ex:24,24px)','theclick').'</strong>',
+                'std'         => '<strong>'.esc_html__('Font Size (ex:24,24px)','theclick').'</strong>',
                 'group'      => esc_html__('Heading','theclick')    
             ),
             array(
