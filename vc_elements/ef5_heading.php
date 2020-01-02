@@ -39,10 +39,17 @@ vc_map(array(
                 'group'      => esc_html__('Heading','theclick')   
             ),
             array(
+                'param_name'  => 'heading_font_sizes',
+                'type'        => 'custom_markup',
+                'value'       => '<strong>'.esc_html__('Font Size (ex:24)','theclick').'</strong>',
+                'std'         => '<strong>'.esc_html__('Font Size (ex:24)','theclick').'</strong>',
+                'group'      => esc_html__('Heading','theclick')    
+            ),
+            array(
                 'type'             => 'textfield',
-                'heading'          => esc_html__('Font Size Small Devices (ex:18)','theclick'),
+                'description'      => esc_html__('Small Devices','theclick'),
                 'param_name'       => 'heading_text_sm',
-                'edit_field_class' => 'vc_col-sm-6',
+                'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
@@ -53,9 +60,9 @@ vc_map(array(
             ),
             array(
                 'type'             => 'textfield',
-                'heading'          => esc_html__('Font Size Medium Devices (ex:24)','theclick'),
+                'description'      => esc_html__('Medium Devices','theclick'),
                 'param_name'       => 'heading_text_md',
-                'edit_field_class' => 'vc_col-sm-6',
+                'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
@@ -66,9 +73,9 @@ vc_map(array(
             ),
             array(
                 'type'             => 'textfield',
-                'heading'          => esc_html__('Font Size Large Devices (ex:32)','theclick'),
+                'description'      => esc_html__('Large Devices','theclick'),
                 'param_name'       => 'heading_text_lg',
-                'edit_field_class' => 'vc_col-sm-6',
+                'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
@@ -79,9 +86,9 @@ vc_map(array(
             ),
             array(
                 'type'             => 'textfield',
-                'heading'          => esc_html__('Font Size Extra Large Devices (ex:36)','theclick'),
+                'description'      => esc_html__('Extra Large Devices','theclick'),
                 'param_name'       => 'heading_text_xl',
-                'edit_field_class' => 'vc_col-sm-6',
+                'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
