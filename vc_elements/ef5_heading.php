@@ -45,6 +45,10 @@ vc_map(array(
                 'class'      => '',
                 'heading'    =>esc_html__('Font Size (ex:24 or 24px)','theclick'),
                 'value'      => '',
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
                 'group'      => esc_html__('Heading','theclick')    
             ),
             array(
