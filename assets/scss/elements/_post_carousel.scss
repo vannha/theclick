@@ -1,3 +1,20 @@
 .ef5-posts-carousel-1{
-	
+	.ef5-post-item-inner{
+		position: relative;
+	}
+	.ef5-post-info{
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}	
+	.meta-category{
+
+	}
+	.ef5-heading{
+
+	}
+	.ef5-meta{
+
+	}
 }
