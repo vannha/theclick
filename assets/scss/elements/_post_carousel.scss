@@ -70,5 +70,19 @@
 	}
 }
 .ef5-posts-carousel-2{
-	
+	.ef5-posted-in{
+		font-size: 11px;
+		line-height: 13px;
+		text-transform: uppercase;
+		a{
+			color: #888;
+			&:hover{
+				color: $link_color;
+			}
+		}
+	}
+	.ef5-heading{
+		font-size: 16px;
+		line-height: 21px;
+	}
 }
