@@ -18,7 +18,6 @@
         theclick_woo_filters();
         theclick_wc_single_product_gallery();
         theclick_wooscp_change_text();
-        theclick_custom_owl();
         theclick_link_search_toggle();
         // WooCommerce
         theclick_quantity_plus_minus();
@@ -754,20 +753,7 @@
             e.preventDefault();
         } );
     }
-    //custom owl carousel
-    function theclick_custom_owl(){
-        /* $('.ef5-instagram.layout-mobile-carousel .ef5-instagram-wrap').each(function () {
-            $(this).owlCarousel({
-                items: 3,
-                autoplay: false,
-                responsiveClass: true,
-                loop: false,
-                nav: false,
-                dots: false,
-                margin: 0,
-            });
-        }); */
-    }
+
     function theclick_link_search_toggle(){
          $('.link-search-toggle').on('click',function(e){
             e.preventDefault();
