@@ -6,7 +6,11 @@
 		position: absolute;
 		width: 100%;
 		top: 50%;
+		padding: 0 23px;
 		@include transform(translateY(-50%));
+		@media (max-width: 767px){
+			padding: 0 15px;
+		}
 	}	
 	.meta-category{
 		font-size: 12px;
