@@ -95,11 +95,13 @@ vc_map(array(
         ),
         array(
             array(
-                'param_name'  => 'grid_settings',
-                'type'        => 'custom_markup',
-                'value'       => '<strong>'.esc_html__('Carousel Settings','theclick').'</strong>',
-                'std'         => '<strong>'.esc_html__('Carousel Settings','theclick').'</strong>',
-                'group'       => esc_html__('Layouts','theclick'),
+                'param_name' => 'grid_settings',
+                'type'       => 'custom_markup',
+                'holder'     => 'div',
+                'class'      => '',
+                'heading'    => esc_html__('Carousel Settings','theclick'),
+                'value'      => '',
+                'group'      => esc_html__('Layouts','theclick')    
             )
         ),
         /* Grid settings */
