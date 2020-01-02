@@ -39,14 +39,8 @@ vc_map(array(
                 'group'      => esc_html__('Heading','theclick')   
             ),
             array(
-                'param_name'  => 'heading_font_sizes',
-                'type'        => 'custom_markup',
-                'value'       => '<strong>'.esc_html__('Font Size (Enter the number in px)','theclick').'</strong>',
-                'std'         => '<strong>'.esc_html__('Font Size (Enter the number in px)','theclick').'</strong>',
-                'group'      => esc_html__('Heading','theclick')    
-            ),
-            array(
                 'type'             => 'textfield',
+                'heading'           => esc_html__('Font Size (ex:24)','theclick'),
                 'description'      => esc_html__('Small Devices','theclick'),
                 'param_name'       => 'heading_text_sm',
                 'edit_field_class' => 'vc_col-sm-3',
