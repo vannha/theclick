@@ -15,7 +15,7 @@ if(!empty($heading_text_sm)) $heading_text_clss[] = 'text-'.str_replace('px', ''
 if(!empty($heading_text_md)) $heading_text_clss[] = 'text-md-'.str_replace('px', '', $heading_text_md);
 if(!empty($heading_text_lg)) $heading_text_clss[] = 'text-lg-'.str_replace('px', '', $heading_text_lg);
 if(!empty($heading_text_xl)) $heading_text_clss[] = 'text-xl-'.str_replace('px', '', $heading_text_xl);
-if(!empty($heading_font_weight)) $heading_text_clss[] = 'font-weight-'.$heading_font_weight;
+if(!empty($heading_font_style)) $heading_text_clss[] = 'font-style-'.$heading_font_style;
 $heading_text_cls = implode(' ', $heading_text_clss);
 ?>
 <div class="<?php $this->theclick_heading_wrap_css_class($atts); ?>">

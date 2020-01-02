@@ -114,15 +114,32 @@ vc_map(array(
                     'not_empty' => true
                 ),
                 'group'      => esc_html__('Heading','theclick')   
-            )
-        ),
-        ef5systems_vc_text_style(),
-        array(
+            ),
             array(
                 'type'       => 'dropdown',
-                'param_name' => 'heading_font_weight',
+                'param_name' => 'heading_font_style',
                 'heading'    => esc_html__('Font Weight','theclick'),   
-                'value'      => array(100,300,400,500,600,700,800,900),
+                'value'      => array(
+                    esc_html__('Default','overcome')           => '',
+                    esc_html__('Thin','overcome')              => '100',
+                    esc_html__('Thin Italic','overcome')       => '100i',
+                    esc_html__('Light','overcome')             => '200',
+                    esc_html__('Light Italic','overcome')      => '200i',
+                    esc_html__('300','overcome')               => '300',
+                    esc_html__('300 Italic','overcome')        => '300i',
+                    esc_html__('Regular','overcome')           => '400',
+                    esc_html__('Regular Italic','overcome')    => '400i',
+                    esc_html__('Medium','overcome')            => '500',
+                    esc_html__('Medium Italic','overcome')     => '500i',
+                    esc_html__('SemiBold','overcome')          => '600',
+                    esc_html__('SemiBold Italic','overcome')   => '600i',
+                    esc_html__('Bold','overcome')              => '700',
+                    esc_html__('Bold Italic','overcome')       => '700i',
+                    esc_html__('Extra Bold','overcome')        => '800',
+                    esc_html__('Extra Bold Italic','overcome') => '800i',
+                    esc_html__('Black Bold','overcome')        => '900',
+                    esc_html__('Black Bold Italic','overcome') => '900i'
+                ),
                 'std'        => 500,
                 'dependency' => array(
                     'element' => 'heading_text',
