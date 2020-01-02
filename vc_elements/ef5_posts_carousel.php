@@ -17,6 +17,17 @@ vc_map(array(
                 'admin_label' => true,
             ),
             array(
+                'type'          => 'textfield',
+                'param_name'    => 'ids',
+                'heading'       => esc_html__( 'Enter ', 'theclick' ),
+                'description'   => esc_html__( 'number of post to show per page', 'theclick' ),
+                'dependency'    => array(
+                    'element'   => 'post_type',
+                    'value'     => 'custom',
+                ),
+                'std'           => '8',
+            ),
+            array(
                 'type'       => 'autocomplete',
                 'heading'    => esc_html__( 'Narrow data source', 'theclick' ),
                 'param_name' => 'taxonomies',

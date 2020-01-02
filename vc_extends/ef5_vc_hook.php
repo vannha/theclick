@@ -8,10 +8,4 @@ function theclick_update_vc_grid_column_width(){
 		esc_html__( '29.509%', 'theclick' ) => '29/509'
 	];
 }
-
-add_filter('ef5systems_include_vc_post_type_list','theclick_vc_include_post_type_list');
-function theclick_vc_include_post_type_list(){
-	return [
-		esc_html__( 'Custom', 'theclick' ) => 'custom'
-	];
-}
+ 
