@@ -19,6 +19,14 @@ $text-sizes: (
 	50 1.28,
 	56
 );
+
+// font weight
+$font_weight: (100,200,300,400,500,600,700,800,900);
+@each $fw in $font_weight{
+	.font-weight-#{$fw}{
+		font-weight: #{$fw}px;
+	}
+}
 // Line Height
 $line-heights: (
 	'1\/175': '1.175',

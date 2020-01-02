@@ -114,12 +114,15 @@ vc_map(array(
                     'not_empty' => true
                 ),
                 'group'      => esc_html__('Heading','theclick')   
-            ),
+            )
+        ),
+        ef5systems_vc_text_style(),
+        array(
             array(
                 'type'       => 'dropdown',
                 'param_name' => 'heading_font_weight',
                 'heading'    => esc_html__('Font Weight','theclick'),   
-                'value'      => array(300,400,500,600,700,800,900),
+                'value'      => array(100,300,400,500,600,700,800,900),
                 'std'        => 500,
                 'dependency' => array(
                     'element' => 'heading_text',
