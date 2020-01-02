@@ -96,7 +96,7 @@ vc_map(array(
                     'not_empty' => true
                 ),
                 'group'      => esc_html__('Heading','theclick')   
-            )
+            ),
             array(
                 'type'          => 'colorpicker',
                 'heading'       => esc_html__('Choose color of heading', 'theclick'),
