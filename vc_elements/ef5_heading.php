@@ -101,7 +101,6 @@ vc_map(array(
                 'type'             => 'textfield',
                 'heading'      => esc_html__('Line height (ex: 1 or 1.2 or 36px','theclick'),
                 'param_name'       => 'heading_lh',
-                'edit_field_class' => 'vc_col-sm-3',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
