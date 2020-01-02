@@ -243,3 +243,38 @@ if (!function_exists('theclick_get_svg')) {
         else return; 
     }
 }
+
+/**
+ * custom text size
+ */
+if (!function_exists('theclick_text_size')) {
+    function theclick_text_size(){
+        $text_sizes = [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            34,
+            36,
+            40,
+            48,
+            50,
+            56
+        ];
+        $result = [];
+        foreach ($text_sizes as $size) {
+            $result['size-'.$size] = $size; 
+        }
+        return $result;
+    }
+}

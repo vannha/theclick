@@ -39,6 +39,65 @@ vc_map(array(
                 'group'      => esc_html__('Heading','theclick')   
             ),
             array(
+                'param_name'  => 'heading_font_sizes',
+                'type'        => 'custom_markup',
+                'value'       => '<strong>'.esc_html__('Font Size','theclick').'</strong>',
+                'std'         => '<strong>'.esc_html__('Font Size','theclick').'</strong>',
+                'group'      => esc_html__('Heading','theclick')    
+            ),
+            array(
+                'type'             => 'dropdown',
+                'description'      => esc_html__('Small Devices','theclick'),
+                'param_name'       => 'text_sm',
+                'edit_field_class' => 'vc_col-sm-3',
+                'value'            => theclick_text_size(),
+                'std'              => '',
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
+                'group'      => esc_html__('Heading','theclick')   
+            ),
+            array(
+                'type'             => 'dropdown',
+                'description'      => esc_html__('Medium Devices','theclick'),
+                'param_name'       => 'text_md',
+                'edit_field_class' => 'vc_col-sm-3',
+                'value'            => theclick_text_size(),
+                'std'              => '',
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
+                'group'      => esc_html__('Heading','theclick')   
+            ),
+            array(
+                'type'             => 'dropdown',
+                'description'      => esc_html__('Large Devices','theclick'),
+                'param_name'       => 'text_lg',
+                'edit_field_class' => 'vc_col-sm-3',
+                'value'            => theclick_text_size(),
+                'std'              => '',
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
+                'group'      => esc_html__('Heading','theclick')   
+            ),
+            array(
+                'type'             => 'dropdown',
+                'description'      => esc_html__('Extra Large Devices','theclick'),
+                'param_name'       => 'text_xl',
+                'edit_field_class' => 'vc_col-sm-3',
+                'value'            => theclick_text_size(),
+                'std'              => '',
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
+                'group'      => esc_html__('Heading','theclick')   
+            )
+            array(
                 'type'          => 'colorpicker',
                 'heading'       => esc_html__('Choose color of heading', 'theclick'),
                 'param_name'    => 'heading_color',
