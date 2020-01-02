@@ -19,13 +19,8 @@ vc_map(array(
             array(
                 'type'          => 'textfield',
                 'param_name'    => 'ids',
-                'heading'       => esc_html__( 'Enter ', 'theclick' ),
-                'description'   => esc_html__( 'number of post to show per page', 'theclick' ),
-                'dependency'    => array(
-                    'element'   => 'post_type',
-                    'value'     => 'custom',
-                ),
-                'std'           => '8',
+                'heading'       => esc_html__( 'Enter the post id (123,124,234...', 'theclick' ),
+                'std'           => '',
             ),
             array(
                 'type'       => 'autocomplete',
