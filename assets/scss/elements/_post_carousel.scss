@@ -1,6 +1,15 @@
 .ef5-posts-carousel-1{
 	.ef5-post-item-inner{
 		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(#303030,0.5);
+		}
 	}
 	.ef5-post-info{
 		position: absolute;
