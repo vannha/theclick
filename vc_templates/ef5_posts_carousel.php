@@ -114,7 +114,7 @@
                             theclick_post_media([
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                 'default_thumb'  => true,
-                                'img_class'      => 'w-auto max-w-xl-90',   
+                                'img_class'      => 'w-auto max-w-90',   
                             ]);
                         ?>
                         </div>
