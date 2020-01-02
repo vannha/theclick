@@ -125,8 +125,10 @@
                                 'class'    => '',
                                 'icon'     => '' 
                             ]);
+                            $title = wp_trim_words(get_the_title(), 8, '...');
                             the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
                         ?>
+                        <div class="ef5-heading"><a href="<?php echo esc_url( get_permalink() ) ?>"><?php printf('%s', $title); ?></a></div>
                         </div>
                     </div>
                 </div>
