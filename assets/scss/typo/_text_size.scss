@@ -53,5 +53,15 @@ $line-heights: (
 				line-height: #{$line-height-value};
 			}
 		}
+		@for $lhpx from 0 through 200 {
+			.lh-px-#{$infix}-#{$lhpx}{
+				font-size: #{$lhpx}px;
+			}
+		}
+		@each $line-height, $line-height-value in $line-heights{
+			.lh#{$infix}-#{$line-height}{
+				line-height: #{$line-height-value};
+			}
+		}
 	}
 }
