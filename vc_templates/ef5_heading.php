@@ -21,7 +21,7 @@ extract( $atts );
 				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent outline ef5-btn-md']);
 				break;
 			default:
-				$this->ef5_heading_main_heading($atts,['class' => 'text-36 text-lg-50 ef5-heading']);
+				$this->ef5_heading_main_heading($atts,['class' => 'text-36 text-lg-50 lh-1/28 ef5-heading']);
 				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22']);
 				$this->ef5_heading_desccription($atts);
 				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent fill ef5-btn-md']);
