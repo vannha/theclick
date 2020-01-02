@@ -4,9 +4,16 @@
 		&:hover{
 			.ef5-featured{
 				&:before{
-					background-color: rgba(#e1e1e1,0.5);
+					background-color: rgba(#e1e1e1,0.7);
 				}
 			}
+			a{
+				color: $darkent_accent_accent;
+				&:hover{
+					color: $link_color;
+				}
+			}
+			
 		}
 	}
 	.ef5-featured{
@@ -32,38 +39,31 @@
 			padding: 0 15px;
 		}
 	}	
+	a{
+		color: #fff;
+		&:hover{
+			color: $link_color;
+		}
+	}
 	.meta-category{
 		font-size: 12px;
 		line-height: 14px;
 		text-transform: uppercase;
 		margin-bottom: 15px;
-		a{
-			color: #fff;
-			&:hover{
-				color: $link_color;
-			}
-		}
+		
 	}
 	.ef5-heading{
 		font-size: 20px;
 		line-height: 26px;
 		margin-bottom: 30px;
-		a{
-			color: #fff;
-			&:hover{
-				color: $link_color;
-			}
-		}
 	}
 	.ef5-meta{
 		font-size: 10px;
 		line-height: 13px;
 		text-transform: uppercase;
-		a{
-			color: #fff;
-			&:hover{
-				color: $link_color;
-			}
+		> div + div:before{
+			top: 6px;
+			background-color: #fff;
 		}
 	}
 }
