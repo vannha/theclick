@@ -40,10 +40,9 @@ vc_map(array(
             ),
             array(
                 'type'             => 'textfield',
-                'heading'           => esc_html__('Font Size (ex:24)','theclick'),
-                'description'      => esc_html__('Small Devices','theclick'),
+                'heading'          => esc_html__('Font Size Small Devices (ex:18)','theclick'),
                 'param_name'       => 'heading_text_sm',
-                'edit_field_class' => 'vc_col-sm-3',
+                'edit_field_class' => 'vc_col-sm-6',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
@@ -54,9 +53,9 @@ vc_map(array(
             ),
             array(
                 'type'             => 'textfield',
-                'description'      => esc_html__('Medium Devices','theclick'),
+                'heading'          => esc_html__('Font Size Medium Devices (ex:24)','theclick'),
                 'param_name'       => 'heading_text_md',
-                'edit_field_class' => 'vc_col-sm-3',
+                'edit_field_class' => 'vc_col-sm-6',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
@@ -67,9 +66,9 @@ vc_map(array(
             ),
             array(
                 'type'             => 'textfield',
-                'description'      => esc_html__('Large Devices','theclick'),
+                'heading'          => esc_html__('Font Size Large Devices (ex:32)','theclick'),
                 'param_name'       => 'heading_text_lg',
-                'edit_field_class' => 'vc_col-sm-3',
+                'edit_field_class' => 'vc_col-sm-6',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
@@ -80,9 +79,9 @@ vc_map(array(
             ),
             array(
                 'type'             => 'textfield',
-                'description'      => esc_html__('Extra Large Devices','theclick'),
+                'heading'          => esc_html__('Font Size Extra Large Devices (ex:36)','theclick'),
                 'param_name'       => 'heading_text_xl',
-                'edit_field_class' => 'vc_col-sm-3',
+                'edit_field_class' => 'vc_col-sm-6',
                 'value'            => '',
                 'std'              => '',
                 'dependency' => array(
