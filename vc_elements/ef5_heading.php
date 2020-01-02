@@ -116,6 +116,18 @@ vc_map(array(
                 'group'      => esc_html__('Heading','theclick')   
             ),
             array(
+                'type'       => 'dropdown',
+                'param_name' => 'heading_font_weight',
+                'heading'    => esc_html__('Font Weight','theclick')   
+                'value'      => array(300,400,500,600,700,800,900),
+                'std'        => 500,
+                'dependency' => array(
+                    'element' => 'heading_text',
+                    'not_empty' => true
+                ),
+                'group'      => esc_html__('Heading','theclick')   
+            );
+            array(
                 'type'          => 'colorpicker',
                 'heading'       => esc_html__('Choose color of heading', 'theclick'),
                 'param_name'    => 'heading_color',
