@@ -1,6 +1,9 @@
 .ef5-posts-carousel-1{
 	.ef5-post-item-inner{
 		position: relative;
+	}
+	.ef5-featured{
+		position: relative;
 		&:before{
 			content: "";
 			position: absolute;
