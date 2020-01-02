@@ -11,10 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 $text_clss = ['ef5-heading'];
-if(!empty($text_sm)) $text_clss[] = 'text-'.$text_sm;
-if(!empty($text_md)) $text_clss[] = 'text-md-'.$text_md;
-if(!empty($text_lg)) $text_clss[] = 'text-lg-'.$text_lg;
-if(!empty($text_xl)) $text_clss[] = 'text-xl-'.$text_xl;
+if(!empty($heading_text_sm)) $text_clss[] = 'text-'.$heading_text_sm;
+if(!empty($heading_text_md)) $text_clss[] = 'text-md-'.$heading_text_md;
+if(!empty($heading_text_lg)) $text_clss[] = 'text-lg-'.$heading_text_lg;
+if(!empty($heading_text_xl)) $text_clss[] = 'text-xl-'.$heading_text_xl;
 $text_cls = implode(' ', $text_clss);
 ?>
 <div class="<?php $this->theclick_heading_wrap_css_class($atts); ?>">
