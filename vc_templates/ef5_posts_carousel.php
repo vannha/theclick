@@ -41,7 +41,6 @@
     // Thumbnail Size
     $d = 0;
     $thumbnail_size_index = -1;
-    $large_item_class = '';
     $thumbnail_size = explode(',', $thumbnail_size);
 ?>
 <div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
@@ -69,50 +68,6 @@
             <?php
             switch ($layout_template) {
                 case '4':
-                $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
-                $heading_class = ($thumbnail_size_index === 0) ? 'text-22 pb-8' : 'text-16';
-                ?>
-                <div class="<?php echo trim(implode(' ', $item_css_class)). ' '.$large_item_class; ?>">
-                    <?php 
-                        theclick_post_media([
-                            'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
-                            'default_thumb'  => true,
-                            'img_class'      => 'w-auto ef5-rounded-10',   
-                        ]);
-                    ?>
-                    <div class="overlay ef5-bg-gradient-1 ef5-post-info ef5-rounded-10">
-                        <div class="row h-100">
-                            <div class="col-12 align-self-start">
-                            <?php 
-                                theclick_posted_in([
-                                    'show_cat' => '1',
-                                    'class'    => '',
-                                    'icon'     => '' 
-                                ]);
-                            ?>
-                            </div>
-                            <div class="col-12 align-self-end">
-                                <?php 
-                                    theclick_posted_on([
-                                        'class' => 'text-white text-13 font-style-400i pb-10',
-                                        'icon'  => '',
-                                        'date_format' => 'd M, Y'
-                                    ]);
-                                    the_title( '<div class="ef5-heading h2 text-white"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
-                                    if($thumbnail_size_index === 0){
-                                        theclick_post_read_more([
-                                            'readmore_class' => 'text-14 ef5-text-accent font-style-500',
-                                            'icon_right'     => is_rtl() ? 'text-12 flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward text-12'
-                                        ]);
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                break;
-                case '3':
                 ?>
                 <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                     <?php 
@@ -145,6 +100,33 @@
                                     ]);
                                 ?>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                break;
+                case '2':
+                ?>
+                <div class="<?php echo trim(implode(' ', $item_css_class)) ?>">
+                    <div class="row gutters-15">
+                        <div class="col-auto align-self-start">
+                        <?php 
+                            theclick_post_media([
+                                'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
+                                'default_thumb'  => true,
+                                'img_class'      => 'w-auto',   
+                            ]);
+                        ?>
+                        </div>
+                        <div class="col">
+                        <?php 
+                            theclick_posted_in([
+                                'show_cat' => '1',
+                                'class'    => 'max-width-90',
+                                'icon'     => '' 
+                            ]);
+                            the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
+                        ?>
                         </div>
                     </div>
                 </div>
