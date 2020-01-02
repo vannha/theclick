@@ -1,7 +1,6 @@
 .ef5-posts-carousel-1{
 	.ef5-post-item-inner{
 		position: relative;
-		@include transition(all .3s linear 0s);
 		&:hover{
 			.ef5-featured{
 				&:before{
@@ -20,6 +19,7 @@
 			right: 0;
 			bottom: 0;
 			background-color: rgba(#303030,0.5);
+			@include transition(all .3s linear 0s);
 		}
 	}
 	.ef5-post-info{
