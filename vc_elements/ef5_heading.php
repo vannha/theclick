@@ -118,7 +118,7 @@ vc_map(array(
             array(
                 'type'       => 'dropdown',
                 'param_name' => 'heading_font_style',
-                'heading'    => esc_html__('Font Weight','theclick'),   
+                'heading'    => esc_html__('Font Style','theclick'),   
                 'value'      => array(
                     esc_html__('Default','overcome')           => '',
                     esc_html__('Thin','overcome')              => '100',
