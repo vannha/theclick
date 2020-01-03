@@ -96,6 +96,12 @@
 		.content-bottom{
 			padding: 30px 50px;
 			border-bottom: 1px solid $MainBorderColor;
+			@media (max-width: 1199px){
+				padding: 30px;
+			}
+			@media (max-width: 767px){
+				padding: 30px 15px;
+			}
 		}
 		.ef5-excerpt{
 			font-size: 15px;
