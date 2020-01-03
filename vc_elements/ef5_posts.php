@@ -248,11 +248,10 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
             <div class="content-bottom">
                 <?php 
                 theclick_post_excerpt(['show_excerpt' => '1', 'length' => '55','class' => 'text-center' ]);
-                printf('<a href="%1$s" title="%2$s" class="%3$s">%4$s</a>',
+                printf('<a href="%1$s" title="%2$s" class="ef5-readmore">%3$s</a>',
                     esc_url( get_the_permalink() ),
                     esc_attr( get_the_title() ),
-                    trim(implode(' ', $classes)),
-                    esc_html__('Continue ','theclick')
+                    esc_html__('Continue Reading','theclick')
                 );
                 theclick_post_meta(['class' => 'justify-content-center','show_author' => '1','show_date' => '1','show_cmt' => '1']);
                 ?> 
