@@ -59,20 +59,34 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
     <?php
     break;
     case '2':
-    	$item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
-    	$d = 0;
-    	while ($posts->have_posts()) {
-    		$d++;
-    		$posts->the_post();
-    		?>
-            <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
-            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                    <?php theclick_vc_post_layout2($atts);?>
+        $post_count = 0;
+        while ($posts->have_posts()) {
+            $post_count++;
+            $posts->the_post();
+            if ($post_count === 1) {
+                $this->theclick_posts_featured_item_two($atts);
+            }
+        }
+        wp_reset_postdata();
+        ?>
+        <div class="ef5-blog-wrap">
+            <?php
+        	$d = 0;
+        	while ($posts->have_posts()) {
+        		$d++;
+        		$posts->the_post();
+        		?>
+                <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php theclick_vc_post_layout2($atts);?>
+                    </div>
                 </div>
-            </div>
-        <?php
-        } // end while
-	wp_reset_postdata();
+            <?php
+            } // end while
+    	    wp_reset_postdata();
+        ?>
+        </div>
+   <?php
 	break;
     }
     ?>

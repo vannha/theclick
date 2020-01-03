@@ -239,7 +239,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
             'class' => ''
         ]);
         ?>
-        <div class="ef5-list ef5-post-item">
+        <div class="ef5-list ef5-post-item <?php echo esc_attr($args['class']);?>">
             <?php theclick_post_media(['thumbnail_size' => 'medium']); ?>
             <div class="ef5-loop-info"><?php
                 theclick_post_meta_category(['class' => 'meta-category']);
