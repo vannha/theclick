@@ -95,6 +95,7 @@
 		position: relative;
 		::-webkit-input-placeholder {
 		    font-size: 16px;
+		    color: $primary_color;
 		}
 	}
 	label{
@@ -114,6 +115,7 @@
 		line-height: 21px;
     	padding: 10px 70px 10px 0;
     	font-size: 16px;
+    	border-color: #000;
 	}
 	.tnp-submit,
 	.tnp-button{
