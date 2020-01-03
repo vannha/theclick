@@ -69,7 +69,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
         }
         wp_reset_postdata();
         ?>
-        <div class="ef5-blog-wrap">
+        <div class="row ef5-blog-wrap">
             <?php
         	$d = 0;
         	while ($posts->have_posts()) {
