@@ -207,7 +207,6 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
         /* get value for Design Tab */
         $css_classes = array(
             'ef5-posts-'.$layout_template,
-            $layout_template == '2' ? 'ef5-grid-wrap justify-content-center': '',
             vc_shortcode_custom_css_class( $css ),
         );
         $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
