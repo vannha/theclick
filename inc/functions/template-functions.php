@@ -221,10 +221,12 @@ if(!function_exists('theclick_post_excerpt')){
         }
 	}
 }
-function theclick_new_excerpt_more( $more ) {
-    return '&hellip;';
+if(!function_exists('theclick_new_excerpt_more')){
+    add_filter('excerpt_more', 'theclick_new_excerpt_more');
+    function theclick_new_excerpt_more( $more ) {
+        return '&hellip;';
+    }
 }
-add_filter('excerpt_more', 'theclick_new_excerpt_more');
 /**
  * Post Content
 */
