@@ -33,8 +33,8 @@
         'paged'          => $paged,
     );
     if(!empty($postin))
-        $posts_args['orderby'] = 'post__in', 
-    
+        $posts_args['orderby'] = 'post__in';
+
     global $wp_query;
     $posts = $wp_query = new WP_Query($posts_args);
     // Grid columns css class
