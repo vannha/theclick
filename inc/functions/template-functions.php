@@ -210,6 +210,7 @@ if(!function_exists('theclick_post_excerpt')){
         $classes   = ['ef5-excerpt', $args['class']];
         $content      = get_the_excerpt();
         $excerpt_more = apply_filters('theclick_excerpt_more', $args['more']);
+        var_dump($excerpt_more);
         $excerpt      = wp_trim_words($content, $args['length'], $excerpt_more);
         
         if($args['echo']){
