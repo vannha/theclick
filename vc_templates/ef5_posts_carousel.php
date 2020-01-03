@@ -118,7 +118,7 @@
                             ]);
                         ?>
                         </div>
-                        <div class="col">
+                        <div class="col col-content">
                         <?php 
                             theclick_posted_in([
                                 'show_cat' => '1',
