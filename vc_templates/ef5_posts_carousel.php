@@ -27,6 +27,7 @@
         'post_type'      => $post_type,
         'posts_per_page' => $posts_per_page,
         'post__in'       => $postin,
+        'post__not_in'   =>get_option("sticky_posts"),
         'post_status'    => 'publish',
         'tax_query'      => $tax_query,
         'paged'          => $paged,
