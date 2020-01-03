@@ -81,7 +81,6 @@
 }
 .ef5-posts-2{
 	.ef5-grid-item-wrap{
-		border-bottom: 1px solid $MainBorderColor;
 		margin-bottom: 50px;
 	}
 	.ef5-post-item-featured{
@@ -128,6 +127,10 @@
 			}
 		}
 	}
+	.post-grid-item{
+		border-bottom: 1px solid $MainBorderColor;
+		padding-bottom: 15px;
+	}
 	.ef5-blog-wrap{
 		.ef5-featured{
 			margin-bottom: 15px;
@@ -151,7 +154,6 @@
 			font-size: 10px;
 			line-height: 13px;
 			text-transform: uppercase;
-			margin-bottom: 15px;
 			> div + div:before{
 				top: 6px;
 			}
