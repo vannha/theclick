@@ -67,7 +67,7 @@
             <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
             <?php
             switch ($layout_template) {
-                case '4':
+                case '3':
                 ?>
                 <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                     <?php 
@@ -75,32 +75,15 @@
                             'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                             'default_thumb'  => true,
                             'img_class'      => 'w-auto',   
-                            'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"></div></div>'
+                            'after'          => ''
                         ]);
                     ?>
-                    <div class="overlay ef5-bg-gradient-1 ef5-post-info">
-                        <div class="row">
-                            <div class="col-12 align-self-start">
-                            <?php 
-                                theclick_posted_in([
-                                    'show_cat' => '1',
-                                    'class'    => '' 
-                                ]);
-                            ?>
-                            </div>
-                            <div class="col-12 align-self-end">
-                                <?php 
-                                    theclick_post_title([
-                                        'heading_tag' => 'text-20'
-                                    ]);
-                                    theclick_post_excerpt([
-                                        'show_excerpt' => '1', 
-                                        'length'       => '16', 
-                                        'more'         => ''
-                                    ]);
-                                ?>
-                            </div>
-                        </div>
+                    <div class="ef5-post-info">
+                    <?php 
+                        theclick_posted_in(['show_cat' => '1','class'    => '','icon'     => '' ]);
+                        the_title( '<div class="ef5-heading text-24 lh-31 text-center"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
+                        theclick_post_meta(['class' => 'justify-content-center','show_author' => '1','show_date' => '1','show_cmt' => '1']);
+                    ?>
                     </div>
                 </div>
                 <?php
@@ -120,11 +103,7 @@
                         </div>
                         <div class="col col-content">
                         <?php 
-                            theclick_posted_in([
-                                'show_cat' => '1',
-                                'class'    => '',
-                                'icon'     => '' 
-                            ]);
+                            theclick_posted_in(['show_cat' => '1','class'    => '','icon'     => '' ]);
                             $title = wp_trim_words(get_the_title(), 7, '...');
                         ?>
                         <div class="ef5-heading"><a href="<?php echo esc_url( get_permalink() ) ?>"><?php printf('%s', $title); ?></a></div>
