@@ -1,10 +1,10 @@
 @each $name, $spacing in $ef5-spacings{
 	@if $spacing != null and $spacing != '' {
 		.ef5-padding-#{$name}{
-			padding: $spacing;
+			padding: $spacing !important;
 		}
 		.ef5-margin-#{$name}{
-			margin: $spacing;
+			margin: $spacing !important;
 		}
 	}
 }
