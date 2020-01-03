@@ -59,3 +59,49 @@
 		}
 	}
 }
+
+.ef5-newsletter-2{
+	@media (min-width: $screen_lg_min){
+		max-width: 690px;
+		margin: 0 auto;
+	}
+	form{
+		position: relative;
+		::-webkit-input-placeholder {
+		    font-size: 16px;
+		}
+	}
+	label{
+		display: none;
+	}
+	.tnp-name{
+		border-width: 0 0 2px 0;
+		border-style: solid;
+		line-height: 21px;
+    	padding: 10px 0;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+	.tnp-email{
+		border-width: 0 0 2px 0;
+		border-style: solid;
+		line-height: 21px;
+    	padding: 10px 70px 10px 0;
+    	font-size: 16px;
+	}
+	.tnp-submit,
+	.tnp-button{
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 16px;
+		line-height: 21px;
+		padding: 10px 0;
+		background-color: transparent;
+		text-transform: capitalize;
+		&:hover{
+			color: $FF_placeholder_color;
+	        background: transparent;
+	    }
+	}
+}
