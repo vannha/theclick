@@ -50,7 +50,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
         		$post_count2++;
         		$posts->the_post();
         		if ($post_count2 != 1) {
-        			$this->theclick_posts_item($atts, ['class' => 'overlay-wrap']);
+        			$this->theclick_posts_item($atts, ['class' => '']);
         		}
         	}
         	wp_reset_postdata();
