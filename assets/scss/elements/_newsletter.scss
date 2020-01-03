@@ -85,17 +85,18 @@
 		}
 	}
 	.tnp-subscription-minimal{ 
-		@media (max-width: 767px){
+		@media (max-width: 991px){
 			flex: 0 0 100%;
 			width: 100%;
 			max-width: 100%;
+			margin-top: 20px;
 		}
 		form{ 
 			width: 100%;
-			@media (min-width: $screen_md_min){
+			@media (min-width: 992px){
 				width: 420px;
 			}
-			@media (min-width: $screen_xl_min){
+			@media (min-width: 1200px){
 				width: 495px;
 			}
 		}
