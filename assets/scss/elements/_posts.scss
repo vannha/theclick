@@ -94,6 +94,7 @@
 		}
 		.content-bottom{
 			padding: 30px 50px;
+			border-bottom: 1px solid $MainBorderColor;
 		}
 		.ef5-excerpt{
 			font-size: 15px;
@@ -103,7 +104,8 @@
 			font-size: 12px;
 			line-height: 14px;
 			text-transform: uppercase;
-			font-weight: 700;
+			font-weight: 600;
+			margin-bottom: 21px;
 		}
 		.ef5-meta{
 			font-size: 10px;
