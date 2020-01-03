@@ -222,7 +222,7 @@ if(!function_exists('theclick_post_excerpt')){
 	}
 }
 function theclick_new_excerpt_more( $more ) {
-    return '';
+    return '&hellip;';
 }
 add_filter('excerpt_more', 'theclick_new_excerpt_more');
 /**
