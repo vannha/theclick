@@ -61,9 +61,33 @@
 }
 
 .ef5-newsletter-2{
-	@media (min-width: $screen_lg_min){
-		max-width: 690px;
-		margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	>div{
+		flex: 0 0 auto;
+		max-width: auto;
+	}
+	.ef5-heading{
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 38px;
+		position: relative;
+		&:after{
+			content: "";
+			width: 19px;
+			height: 2px;
+			background-color: $primary_color;
+			position: absolute;
+			left: 100%;
+			bottom: 7px;
+			margin-left: 10px;
+		}
+	}
+	.tnp-subscription-minimal{ 
+		@media (min-width: $screen_lg_min){
+			max-width: 495px;
+		}
 	}
 	form{
 		position: relative;
