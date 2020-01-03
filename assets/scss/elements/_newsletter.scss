@@ -67,11 +67,6 @@
 	>div{
 		flex: 0 0 auto;
 		width: auto;
-		@media (max-width: 767px){
-			flex: 0 0 100%;
-			width: 100%;
-			max-width: 100%;
-		}
 	}
 	.ef5-heading{
 		font-weight: 500;
@@ -89,13 +84,20 @@
 			margin-left: 10px;
 		}
 	}
-	.tnp-subscription-minimal form{ 
-		width: 100%;
-		@media (min-width: $screen_md_min){
-			width: 420px;
+	.tnp-subscription-minimal{ 
+		@media (max-width: 767px){
+			flex: 0 0 100%;
+			width: 100%;
+			max-width: 100%;
 		}
-		@media (min-width: $screen_xl_min){
-			width: 495px;
+		form{ 
+			width: 100%;
+			@media (min-width: $screen_md_min){
+				width: 420px;
+			}
+			@media (min-width: $screen_xl_min){
+				width: 495px;
+			}
 		}
 	}
 	form{
