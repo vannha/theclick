@@ -248,7 +248,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
             <div class="content-bottom">
                 <?php 
                 theclick_post_excerpt(['show_excerpt' => '1', 'length' => '55','class' => 'text-center' ]);
-                printf('<a href="%1$s" title="%2$s" class="ef5-readmore">%3$s</a>',
+                printf('<div class="ef5-readmore"><a href="%1$s" title="%2$s" class="readmore-link">%3$s</a></div>',
                     esc_url( get_the_permalink() ),
                     esc_attr( get_the_title() ),
                     esc_html__('Continue Reading','theclick')
