@@ -108,7 +108,7 @@
                 case '2':
                 ?>
                 <div class="<?php echo trim(implode(' ', $item_css_class)) ?>">
-                    <div class="row gutters-15">
+                    <div class="row gutters-15 align-items-center">
                         <div class="col-auto align-self-start">
                         <?php 
                             theclick_post_media([
