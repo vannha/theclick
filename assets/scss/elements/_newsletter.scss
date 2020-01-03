@@ -61,14 +61,12 @@
 }
 
 .ef5-newsletter-2{
-	@media (min-width: $screen_lg_min){
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		>div{
-			flex: 0 0 auto;
-			width: auto;
-		}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	>div{
+		flex: 0 0 auto;
+		width: auto;
 	}
 	.ef5-heading{
 		font-weight: 500;
