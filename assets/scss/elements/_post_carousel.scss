@@ -101,10 +101,7 @@
 		margin-left: -80px;
 		width: calc(100% + 160px) !important;
 	}
-	.bg-overlay{
-		background-color: rgba(225, 225, 225,0.6);
-	}
-	.owl-item.active .bg-overlay{
+	.owl-item:not(.active) .bg-overlay{
 		background-color: rgba(225, 225, 225,0.6);
 	}
 }
