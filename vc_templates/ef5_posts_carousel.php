@@ -109,7 +109,7 @@
                 ?>
                 <div class="<?php echo trim(implode(' ', $item_css_class)) ?>">
                     <div class="row gutters-15 align-items-center">
-                        <div class="col-auto align-self-start">
+                        <div class="col-12 col-md-auto align-self-start">
                         <?php 
                             theclick_post_media([
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
