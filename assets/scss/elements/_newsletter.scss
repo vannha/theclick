@@ -67,7 +67,7 @@
 		justify-content: space-between;
 		>div{
 			flex: 0 0 auto;
-			max-width: auto;
+			width: auto;
 		}
 	}
 	.ef5-heading{
@@ -88,6 +88,9 @@
 	}
 	.tnp-subscription-minimal form{ 
 		@media (min-width: $screen_lg_min){
+			width: 420px;
+		}
+		@media (min-width: $screen_xl_min){
 			width: 495px;
 		}
 	}
