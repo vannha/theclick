@@ -201,8 +201,8 @@ if(!function_exists('theclick_post_excerpt')){
 	function theclick_post_excerpt($args =[]){
 		$args = wp_parse_args($args,[
             'show_excerpt' => '1',
-            'class'        => '',
             'length'       => apply_filters('theclick_excerpt_length', 37),
+            'class'        => '',
             'more'         => '&hellip;',
             'echo'         => true 
 		]);
