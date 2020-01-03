@@ -244,7 +244,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
             theclick_post_meta_category(['class' => 'meta-category justify-content-center']);
             the_title( '<div class="ef5-heading h2 text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></div>' );
             theclick_post_media(['thumbnail_size' => 'large', 'default_thumb' => true,'after' => '','img_class' => '']);
-            theclick_post_excerpt(['show_excerpt' => '1', 'length' => '56','class' => 'text-center' ]);
+            theclick_post_excerpt(['show_excerpt' => '1', 'length' => '55','class' => 'text-center' ]);
             theclick_post_meta(['class' => 'justify-content-center','show_author' => '1','show_date' => '1','show_cmt' => '1']);
             ?> 
         </div>
