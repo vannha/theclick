@@ -104,7 +104,7 @@
 	.owl-item:not(.active) .bg-overlay{
 		background-color: rgba(225, 225, 225,0.7);
 	}
-	.owl-item.active:last .bg-overlay{
+	.owl-item.active.last .bg-overlay{
 		background-color: rgba(225, 225, 225,0.7);
 	}
 }
