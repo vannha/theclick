@@ -112,16 +112,27 @@
 	}
 	.ef5-posted-in{
 		font-size: 14px;
-		line-height: 16px;
-		color: #EE9044;
+		line-height: 18px;
 		text-transform: uppercase;
 		margin-bottom: 15px;
+		a{
+			color: #EE9044;
+			&:hover{
+				color: $link_color_hover;
+			}
+		}
 	}
 	.owl-item.center .ef5-posted-in{
-		color: #2E5E02;
+		a{
+			color: #2E5E02;
+			&:hover{
+				color: $link_color_hover;
+			}
+		}
 	}
 	.ef5-heading{
 		margin-bottom: 45px;
+		line-height: 31px;
 	}
 	.ef5-meta{
 		font-size: 10px;

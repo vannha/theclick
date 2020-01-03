@@ -86,7 +86,7 @@
                     <div class="ef5-post-info">
                     <?php 
                         theclick_posted_in(['show_cat' => '1','class'    => 'text-center','icon'     => '' ]);
-                        the_title( '<div class="ef5-heading text-24 lh-31 text-center"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
+                        the_title( '<div class="ef5-heading text-24 text-center"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
                         theclick_post_meta(['class' => 'justify-content-center','show_author' => '1','show_date' => '1','show_cmt' => '1']);
                     ?>
                     </div>
