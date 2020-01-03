@@ -221,7 +221,10 @@ if(!function_exists('theclick_post_excerpt')){
         }
 	}
 }
-
+function theclick_new_excerpt_more( $more ) {
+    return '';
+}
+add_filter('excerpt_more', 'theclick_new_excerpt_more');
 /**
  * Post Content
 */
