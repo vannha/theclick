@@ -101,12 +101,7 @@
 		margin-left: -80px;
 		width: calc(100% + 160px) !important;
 	}
-	.owl-carousel .owl-item{
-		position: relative;
-		&:after{
-			position: absolute;
-			content: "";
-			
-		}
+	.bg-overlay{
+		background-color: #e1e1e1;
 	}
 }
