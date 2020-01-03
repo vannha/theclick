@@ -248,6 +248,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
             <div class="content-bottom">
                 <?php 
                 theclick_post_excerpt(['show_excerpt' => '1', 'length' => '55','class' => 'text-center' ]);
+                theclick_post_read_more();
                 theclick_post_meta(['class' => 'justify-content-center','show_author' => '1','show_date' => '1','show_cmt' => '1']);
                 ?> 
             </div>
