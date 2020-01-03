@@ -125,7 +125,7 @@
                                 'class'    => '',
                                 'icon'     => '' 
                             ]);
-                            $title = wp_trim_words(get_the_title(), 6, '...');
+                            $title = wp_trim_words(get_the_title(), 7, '...');
                         ?>
                         <div class="ef5-heading"><a href="<?php echo esc_url( get_permalink() ) ?>"><?php printf('%s', $title); ?></a></div>
                         </div>
