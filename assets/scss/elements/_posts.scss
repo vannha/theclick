@@ -80,6 +80,10 @@
 	}
 }
 .ef5-posts-2{
+	.ef5-grid-item-wrap{
+		border-bottom: 1px solid $MainBorderColor;
+		margin-bottom: 50px;
+	}
 	.ef5-post-item-featured{
 		margin-bottom: 50px;
 		.ef5-posted-in{
