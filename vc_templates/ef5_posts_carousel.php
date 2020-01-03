@@ -163,7 +163,7 @@
         ?>
         </div>
         <?php 
-            theclick_loading_animation('fading-circle'); 
+            theclick_loading_animation('three-dot-bounce'); 
             ef5systems_owl_dots_container($atts);
             ef5systems_owl_nav_container($atts);
             ef5systems_owl_dots_in_nav_container($atts);
