@@ -107,4 +107,25 @@
 	.owl-item.active.last .bg-overlay{
 		background-color: rgba(225, 225, 225,0.7);
 	}
+	.ef5-post-info{
+
+	}
+	.ef5-posted-in{
+		font-size: 14px;
+		line-height: 16px;
+		color: #EE9044;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	.owl-item.center .ef5-posted-in{
+		color: #2E5E02;
+	}
+	.ef5-heading{
+		margin-bottom: 45px;
+	}
+	.ef5-meta{
+		font-size: 10px;
+		line-height: 13px;
+		text-transform: uppercase;
+	}
 }
