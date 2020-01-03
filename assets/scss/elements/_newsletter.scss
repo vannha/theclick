@@ -69,17 +69,19 @@
 		font-size: 30px;
 		line-height: 38px;
 		position: relative;
-		flex: 0 0 auto;
-		width: auto;
-		&:after{
-			content: "";
-			width: 19px;
-			height: 2px;
-			background-color: $primary_color;
-			position: absolute;
-			left: 100%;
-			bottom: 7px;
-			margin-left: 10px;
+		@media (min-width: 768px){
+			flex: 0 0 auto;
+			width: auto;
+			&:after{
+				content: "";
+				width: 19px;
+				height: 2px;
+				background-color: $primary_color;
+				position: absolute;
+				left: 100%;
+				bottom: 7px;
+				margin-left: 10px;
+			}
 		}
 	}
 	.tnp-subscription-minimal{
