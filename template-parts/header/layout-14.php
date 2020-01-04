@@ -13,7 +13,7 @@
                         <div class="nav-extra align-items-center">
                             <?php
                             theclick_header_side_nav_icon(['class' => 'd-none d-xl-block']);
-                            theclick_header_search(['class' => '', 'label' => esc_html__('Search Blog', 'theclick')]);
+                            theclick_header_search(['class' => '', 'label' => esc_html__('Search Blog', 'theclick'), 'display' => '0']);
                             ?>
                         </div>
                     </div>
