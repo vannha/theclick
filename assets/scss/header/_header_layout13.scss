@@ -50,4 +50,14 @@
 			margin-right: 12px;
 		}
 	}
+	.ef5-search-toggle .search-form{
+		right: 0;
+	}
+	.ef5-search-toggle .link-search-toggle.clicked + .search-form .searchform-wrap .search-field{
+	    padding: 10px 30px 10px 10px;
+	}
+	.ef5-search-toggle .searchform-wrap .search-submit{
+	    left: auto;
+    	right: 0;
+	}
 }
