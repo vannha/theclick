@@ -53,6 +53,9 @@
 	position: relative;
 	padding: 6px 0;
 	.link-search-toggle{
+		svg{
+			margin-top: 1px;
+		}
 		span{
 			font-size: 12px;
 			margin-left: 12px;
