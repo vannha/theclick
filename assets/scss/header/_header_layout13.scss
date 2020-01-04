@@ -50,6 +50,9 @@
 	}
 	.ef5-search-toggle .search-form{
 		right: 0;
+		@media (max-width: 480px){
+			right: -36px;
+		}
 	}
 	.ef5-search-toggle .link-search-toggle.clicked + .search-form .searchform-wrap .search-field{
 	    padding: 10px 30px 10px 10px;
