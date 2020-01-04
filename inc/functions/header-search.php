@@ -37,7 +37,8 @@ if(!function_exists('theclick_header_search')){
 			'display'=> ''
 		]);
 		$show_search = theclick_get_opts('header_search', '0');
-		$search_display = !empty($args['display']) ? $args['display'] : theclick_get_opts('search_display', '0');
+
+		$search_display = ($args['display'] !='') ? $args['display'] : theclick_get_opts('search_display', '0');
 		if('0' === $show_search) return;
 
 		$link_classes = ['header-icon search-icon',$args['class']];
