@@ -60,4 +60,14 @@
 	    left: auto;
     	right: 0;
 	}
+	.nav-extra .header-icon{
+		&:before{
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 1px;
+			height: 30px;
+			background-color: $MainBorderColor;
+		}
+	}
 }
