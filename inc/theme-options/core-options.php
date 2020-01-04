@@ -389,8 +389,8 @@ if(!function_exists('theclick_header_atts')){
                     'options'  => $options,
                     'default'  => $default_value,
                     'required' => array(
-                        array('header_search', '=', '1'),
-                        array('header_layout', '=', array('1','2','3','4','5','6','7'))
+                        array('header_search', '=', '1'),array('header_layout', '=', array('1','2','3','4','5','6','7'))
+                    )
                 )
             ),
             theclick_header_wc_attrs($options, $default_value),
