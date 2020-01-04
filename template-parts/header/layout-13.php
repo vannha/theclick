@@ -27,7 +27,7 @@
                             theclick_header_compare(['class' => 'd-none d-md-block']);
                             theclick_header_cart(['class' => 'd-none d-md-block']);
                             theclick_header_social(['class' => 'd-none d-md-block']);
-                            theclick_header_social_counter_render(['class' => 'd-none d-md-block']);
+                            theclick_header_social_counter_render(['class' => 'd-none d-lg-block']);
                             theclick_header_search(['class' => '', 'label' => esc_html__('Search Blog', 'theclick'), 'display' => '0']);
                             theclick_header_popup_nav_icon(['class' => 'd-none d-md-block']);
                             theclick_header_mobile_menu_icon();

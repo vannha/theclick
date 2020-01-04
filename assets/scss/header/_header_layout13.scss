@@ -82,13 +82,15 @@
 			}
 		}
 		.header-icon{
-			&:before{
-				content: "";
-				position: absolute;
-				left: 0;
-				width: 1px;
-				height: 30px;
-				background-color: $MainBorderColor;
+			@media (min-width: 992px){
+				&:before{
+					content: "";
+					position: absolute;
+					left: 0;
+					width: 1px;
+					height: 30px;
+					background-color: $MainBorderColor;
+				}
 			}
 		}
 	} 
