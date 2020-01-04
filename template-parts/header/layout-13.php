@@ -10,9 +10,10 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="ef5-header-left col">
                         <div class="nav-extra align-items-center">
-                            <?php
-                            theclick_header_side_nav_icon(['class' => 'd-none d-xl-block']);
-                            ?>
+                            <?php theclick_header_side_nav_icon(['class' => 'd-none d-xl-block']);?>
+                            <div class="ef5-logo col-auto">
+                                <?php get_template_part('template-parts/header/header-logo'); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="ef5-navigation-wrap col-auto">
