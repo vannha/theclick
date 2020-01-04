@@ -60,14 +60,25 @@
 	    left: auto;
     	right: 0;
 	}
-	.nav-extra .header-icon{
-		&:before{
-			content: "";
-			position: absolute;
-			left: 0;
-			width: 1px;
-			height: 30px;
-			background-color: $MainBorderColor;
+	.nav-extra{
+		@media (min-width: 1200px){
+			margin: 0 -30px;
+			.header-social-counter {
+			    padding: 0 30px;
+			}
+			.header-icon{
+				padding: 0 30px;
+			}
 		}
-	}
+		.header-icon{
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 1px;
+				height: 30px;
+				background-color: $MainBorderColor;
+			}
+		}
+	} 
 }
