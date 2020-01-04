@@ -2,7 +2,6 @@
 	.ef5-menu > li > a{
 		font-size: 13px;
 		text-transform: uppercase;
-		padding: 0;
 		@media( min-width: $screen-xl-min ) {
 			height: 92px;
 		}
@@ -10,27 +9,29 @@
 			display: block;
 		}
 	}
-	.menu-default{
-        > li {
-			&:hover{
-		    	> a{
-		    		color: $header_regular;
-		        	&:after{
-		        		background-color: $header_regular;
-		        	}
-		        }
-		    }
-		    &.current_page_item,
-		    &.current-menu-item,
-		    &.current_page_ancestor,
-		    &.current-menu-ancestor{
-		       > a{
-		       		color: $header_regular;
-		           	&:after{
-		                background-color: $header_regular;
-		            }
-		        }
-		    }
+	@media( min-width: $screen-xl-min ) {
+		.menu-default{
+	        > li {
+				&:hover{
+			    	> a{
+			    		color: $header_regular;
+			        	&:after{
+			        		background-color: $header_regular;
+			        	}
+			        }
+			    }
+			    &.current_page_item,
+			    &.current-menu-item,
+			    &.current_page_ancestor,
+			    &.current-menu-ancestor{
+			       > a{
+			       		color: $header_regular;
+			           	&:after{
+			                background-color: $header_regular;
+			            }
+			        }
+			    }
+			}
 		}
 	}
 	@media (min-width: 768px){
