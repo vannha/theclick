@@ -60,6 +60,14 @@
 	    left: auto;
     	right: 0;
 	}
+	&.header-sticky{
+		.search-form .searchform-wrap .search-field{
+			background-color: $primary;
+		}
+		.ef5-search-toggle .searchform-wrap .search-submit{
+			right: 10px;
+		}
+	} 
 	.nav-extra{
 		@media (min-width: 1200px){
 			margin: 0 -30px;
