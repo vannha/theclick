@@ -34,6 +34,7 @@
                 height: $lv1_lineheight;
                 &:after{
                     content: '';
+                    display: none;
                     height: 2px;
                     width: 0;
                     position: absolute;
