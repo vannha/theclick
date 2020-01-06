@@ -18,9 +18,13 @@
 	.nav-extra .header-icon .fab{
 		font-size: 14px;
 	}
-	input[type="text"] {
+	/* input[type="text"] {
 	    background-color: transparent;
 	    color: $header_regular;
 	    border-color: $header_regular;
 	}
+	*:hover::-webkit-input-placeholder, 
+	*:focus::-webkit-input-placeholder {
+	    color: var(--primary-color);
+	} */
 }
