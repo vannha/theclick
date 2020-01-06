@@ -246,6 +246,14 @@ if(!function_exists('theclick_header_opts')){
                 'required' => array('header_layout' ,'=', array('8','10'))
             ),
             array(
+                'id'       => 'header_blog_menu',
+                'type'     => 'select',
+                'options'  => theclick_get_nav_menu(['default' => $args['default'],'none' => true]),
+                'default'  => $default_menu,
+                'title'    => esc_html__('Header Blog Menu', 'theclick'),
+                'required' => array('header_layout' ,'=', array('12','13','14'))
+            ),
+            array(
                 'id'       => 'header_design',
                 'type'     => 'info',
                 'style'    => 'success',
