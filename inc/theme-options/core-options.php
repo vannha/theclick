@@ -226,7 +226,10 @@ if(!function_exists('theclick_header_opts')){
                 'subtitle' => esc_html__('Choose a menu to show', 'theclick'),
                 'required'  => array( 
                     array('header_layout', '!=', '8' ),
-                    array('header_layout', '!=', '10' ) 
+                    array('header_layout', '!=', '10' ), 
+                    array('header_layout', '!=', '12' ),
+                    array('header_layout', '!=', '13' ), 
+                    array('header_layout', '!=', '14' )
                 )
             ),
             array(
