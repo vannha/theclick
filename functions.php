@@ -401,8 +401,8 @@ function theclick_inline_styles() {
     ob_start();
     $preset_primary_color = $primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
     $preset_accent_color  = $accent_color= theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
-    $darkent_accent_color  = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
-    $lightent_accent_color  = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
+    $darkent_accent_color = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
+    $lightent_accent_color = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
     $main_menu_height = theclick_get_opts( 'main_menu_height', ['height' => theclick_configs('main_menu_height')]);
  
     // CSS Variable
@@ -478,7 +478,7 @@ function theclick_inline_styles() {
         $ontop_link_color['active']
     );
     /* Sticky Header Color */
-    $sticky_link_color = theclick_get_opts('sticky_link_colors',apply_filters('theclick_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));    
+    $sticky_link_color = theclick_get_opts('sticky_link_colors',apply_filters('theclick_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $lightent_accent_color, 'active' => $lightent_accent_color]));    
     printf(':root{
             --sticky_regular: %1$s;
             --sticky_hover: %2$s;
