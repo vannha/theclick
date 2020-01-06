@@ -399,7 +399,7 @@ function theclick_ef5systems_styles(){
 }
 function theclick_inline_styles() {
     ob_start();
-    $preset_primary_color = $primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
+    $preset_primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
     $preset_accent_color = $accent_color = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
     $darkent_accent_color  = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
     $lightent_accent_color  = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
