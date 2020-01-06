@@ -226,6 +226,22 @@ if(!function_exists('theclick_header_opts')){
                 'subtitle' => esc_html__('Choose a menu to show', 'theclick'),
             ),
             array(
+                'id'       => 'header_menu_left',
+                'type'     => 'select',
+                'options'  => theclick_get_nav_menu(['default' => $args['default'],'none' => true]),
+                'default'  => $default_menu,
+                'title'    => esc_html__('Header Menu Left', 'theclick'),
+                'required' => array('header_layout' ,'=', array('8','10'))
+            ),
+            array(
+                'id'       => 'header_menu_right',
+                'type'     => 'select',
+                'options'  => theclick_get_nav_menu(['default' => $args['default'],'none' => true]),
+                'default'  => $default_menu,
+                'title'    => esc_html__('Header Menu Right', 'theclick'),
+                'required' => array('header_layout' ,'=', array('8','10'))
+            ),
+            array(
                 'id'       => 'header_design',
                 'type'     => 'info',
                 'style'    => 'success',
