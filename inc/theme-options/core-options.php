@@ -224,7 +224,7 @@ if(!function_exists('theclick_header_opts')){
                 'default'  => $default_menu,
                 'title'    => esc_html__('Header Menu', 'theclick'),
                 'subtitle' => esc_html__('Choose a menu to show', 'theclick'),
-                'required' => array('header_layout' ,'!=', array('8','10'))
+                'required' => array('header_layout' ,'not', array('8','10'))
             ),
             array(
                 'id'       => 'header_menu_left',
