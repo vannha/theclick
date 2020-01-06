@@ -232,7 +232,7 @@ if(!function_exists('theclick_header_opts')){
                 'options'  => theclick_get_nav_menu(['default' => $args['default'],'none' => true]),
                 'default'  => $default_menu,
                 'title'    => esc_html__('Header Menu Left', 'theclick'),
-                'required' => array('header_layout' ,'not', array('8','10'))
+                'required' => array('header_layout' ,'=', array('8','10'))
             ),
             array(
                 'id'       => 'header_menu_right',
