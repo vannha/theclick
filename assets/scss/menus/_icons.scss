@@ -28,7 +28,7 @@
     }
     &:hover{
         &:before, &:after, span {
-            color: $lv1_color_hover;
+            background-color: $lv1_color_hover;
         }
     }
     span {
