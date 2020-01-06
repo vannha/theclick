@@ -38,6 +38,6 @@
         </div>
     </div>
 </header>
-<div class="header-logo">
+<div class="ef5-logo header-logo">
     <?php get_template_part('template-parts/header/header-logo'); ?>
 </div>
