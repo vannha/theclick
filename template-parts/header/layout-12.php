@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template part for displaying default header layout
  */
@@ -39,3 +38,6 @@
         </div>
     </div>
 </header>
+<div class="header-logo">
+    <?php get_template_part('template-parts/header/header-logo'); ?>
+</div>
