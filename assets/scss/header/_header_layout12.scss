@@ -3,6 +3,31 @@
 		font-size: 13px;
 		text-transform: uppercase;
 	}
+	@media( min-width: $screen-xl-min ) {
+		.menu-default{
+	        > li {
+				&:hover{
+			    	> a{
+			    		color: $header_regular;
+			        	&:after{
+			        		background-color: $header_regular;
+			        	}
+			        }
+			    }
+			    &.current_page_item,
+			    &.current-menu-item,
+			    &.current_page_ancestor,
+			    &.current-menu-ancestor{
+			       > a{
+			       		color: $header_regular;
+			           	&:after{
+			                background-color: $header_regular;
+			            }
+			        }
+			    }
+			}
+		}
+	}
 	@media (min-width: 768px){
 		.ef5-header-menu > li{
 		    padding: 0px 18px;
