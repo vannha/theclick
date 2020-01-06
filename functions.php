@@ -400,13 +400,11 @@ function theclick_ef5systems_styles(){
 function theclick_inline_styles() {
     ob_start();
     $preset_primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
-    $preset_accent_color = $accent_color = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
+    $preset_accent_color  = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
     $darkent_accent_color  = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
     $lightent_accent_color  = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
-    $preset_secondary_color = theclick_get_opts( 'secondary_color', apply_filters('theclick_secondary_color',theclick_configs('secondary_color') ));
-    $thirdary_color = theclick_get_opts( 'thirdary_color', apply_filters('theclick_thirdary_color',theclick_configs('thirdary_color') ));
-    $fourth_color = theclick_get_opts( 'fourth_color', apply_filters('theclick_fourth_color',theclick_configs('fourth_color') ));
     $main_menu_height = theclick_get_opts( 'main_menu_height', ['height' => theclick_configs('main_menu_height')]);
+ 
     // CSS Variable
     printf(':root{
         --primary-color:%s;
@@ -415,25 +413,13 @@ function theclick_inline_styles() {
         --accent-color-03:%s;
         --darkent-accent-color:%s;
         --lightent-accent-color:%s;
-        --secondary-color:%s;
-        --thirdary-color: %s;
-        --thirdary-color-05: %s;
-        --thirdary-color-03: %s;
-        --fourth-color: %s;
-        --fourth-color-07: %s;
         }', 
         $preset_primary_color,
         $preset_accent_color,
         theclick_hex2rgba($preset_accent_color, 0.5),
         theclick_hex2rgba($preset_accent_color, 0.3),
         $darkent_accent_color,
-        $lightent_accent_color,
-        $preset_secondary_color,
-        $thirdary_color,
-        theclick_hex2rgba($thirdary_color, 0.5),
-        theclick_hex2rgba($thirdary_color, 0.3),
-        $fourth_color,
-        theclick_hex2rgba($fourth_color, 0.7)
+        $lightent_accent_color
     );
     // Header Variable
     $header_bg = theclick_get_opts('header_bg',[
