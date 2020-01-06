@@ -413,13 +413,15 @@ function theclick_inline_styles() {
         --accent-color-03:%s;
         --darkent-accent-color:%s;
         --lightent-accent-color:%s;
+        --main-menu-height:%s;
         }', 
         $preset_primary_color,
         $preset_accent_color,
         theclick_hex2rgba($preset_accent_color, 0.5),
         theclick_hex2rgba($preset_accent_color, 0.3),
         $darkent_accent_color,
-        $lightent_accent_color
+        $lightent_accent_color,
+        $main_menu_height['height']
     );
     // Header Variable
     $header_bg = theclick_get_opts('header_bg',[
