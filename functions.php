@@ -456,6 +456,7 @@ function theclick_inline_styles() {
     );
     /* Default Header Color */
     $header_link_color = theclick_get_opts('header_link_colors',apply_filters('theclick_header_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
+    var_dump($header_link_color); die;
     printf(':root{
             --header_regular: %1$s;
             --header_hover: %2$s;
