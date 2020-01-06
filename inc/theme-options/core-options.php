@@ -265,8 +265,7 @@ if(!function_exists('theclick_header_opts')){
             array(
                 'id'     => 'header_bg',
                 'type'   => 'background',
-                'title'  => esc_html__('Background', 'theclick'),
-                'output' => array('.header-default')
+                'title'  => esc_html__('Background', 'theclick')
             ),
             array(
                 'id'          => 'header_text_color',
