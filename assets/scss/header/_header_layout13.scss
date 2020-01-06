@@ -9,7 +9,7 @@
 			display: block;
 		}
 	}
-	@media( min-width: $screen-xl-min ) {
+	/* @media( min-width: $screen-xl-min ) {
 		.menu-default{
 	        > li {
 				&:hover{
@@ -33,7 +33,7 @@
 			    }
 			}
 		}
-	}
+	} */
 	@media (min-width: 768px){
 		.ef5-header-menu > li{
 		    padding: 0px 18px;
