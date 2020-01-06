@@ -413,15 +413,13 @@ function theclick_inline_styles() {
         --accent-color-03:%s;
         --darkent-accent-color:%s;
         --lightent-accent-color:%s;
-        --main-menu-height:%s;
         }', 
         $preset_primary_color,
         $preset_accent_color,
         theclick_hex2rgba($preset_accent_color, 0.5),
         theclick_hex2rgba($preset_accent_color, 0.3),
         $darkent_accent_color,
-        $lightent_accent_color,
-        $main_menu_height['height']
+        $lightent_accent_color
     );
     // Header Variable
     $header_bg = theclick_get_opts('header_bg',[
@@ -505,25 +503,7 @@ function theclick_inline_styles() {
     );
     return ob_get_clean();
 }
-function theclick_inline_styles_remove() {
-    ob_start();
-    $preset_primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
-    $preset_accent_color  = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
-    $darkent_accent_color  = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
-    $lightent_accent_color  = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
-    $main_menu_height = theclick_get_opts( 'main_menu_height', ['height' => theclick_configs('main_menu_height')]);
-
-    // CSS Variable
-    printf(':root{--primary-color:%s;}', $preset_primary_color);
-    printf(':root{--accent-color:%s;}', $preset_accent_color);
-    printf(':root{--accent-color-05:%s;}', theclick_hex2rgba($preset_accent_color, 0.5));
-    printf(':root{--accent-color-03:%s;}', theclick_hex2rgba($preset_accent_color, 0.3));
-    printf(':root{--darkent-accent-color:%s;}', $darkent_accent_color);
-    printf(':root{--lightent-accent-color:%s;}', $lightent_accent_color);
-    printf(':root{--main-menu-height:%s;}', $main_menu_height['height']);
-    return ob_get_clean();
-}
-
+ 
 function theclick_google_api_key(){
     $api = theclick_get_theme_opt('google_api_key','');
     return $api;
