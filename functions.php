@@ -467,7 +467,7 @@ function theclick_inline_styles() {
         $header_link_color['active']
     );
     /* Ontop Header Color */
-    $ontop_link_color = theclick_get_opts('ontop_link_colors', apply_filters('theclick_ontop_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
+    $ontop_link_color = theclick_get_opts('ontop_link_colors', apply_filters('theclick_ontop_link_color', ['regular' => theclick_configs('ontop_link_color_regular'), 'hover' => theclick_configs('ontop_link_color_hover'), 'active' => theclick_configs('ontop_link_color_active')]) );
     printf(':root{
             --ontop_regular: %1$s;
             --ontop_hover: %2$s;
@@ -478,7 +478,7 @@ function theclick_inline_styles() {
         $ontop_link_color['active']
     );
     /* Sticky Header Color */
-    $sticky_link_color = theclick_get_opts('sticky_link_colors',apply_filters('theclick_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $lightent_accent_color, 'active' => $lightent_accent_color]));    
+    $sticky_link_color = theclick_get_opts('sticky_link_colors',apply_filters('theclick_sticky_link_color',['regular' => theclick_configs('sticky_link_color_regular'), 'hover' => theclick_configs('sticky_link_color_hover'), 'active' => theclick_configs('sticky_link_color_active')]));    
     printf(':root{
             --sticky_regular: %1$s;
             --sticky_hover: %2$s;
