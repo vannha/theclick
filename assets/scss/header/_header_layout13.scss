@@ -33,6 +33,9 @@
 	    left: auto;
     	right: 0;
 	}
+	input[type="text"]{
+		background-color: #fff;
+	}
 	&.header-sticky{
 		.search-form .searchform-wrap .search-field{
 			background-color: $primary;
