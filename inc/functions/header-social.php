@@ -3,8 +3,7 @@
 /**
  * TheClick
  */
-function theclick_header_social($args = [])
-{
+function theclick_header_social($args = []){
     $args = wp_parse_args($args, [
         'before' => '',
         'after'  => '',
