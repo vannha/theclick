@@ -19,6 +19,7 @@
 	position: relative;
 }
 .ef5-header{
+	background-color: $header_bg_color;
 	@include transition(all 0.5s);
 }
 .main-header{

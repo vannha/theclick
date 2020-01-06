@@ -285,6 +285,16 @@ class TheClick_CSS_Generator
         printf('$menu_arrow_icon: %s;', $menu_arrow_icon);
         printf('$menu_arrow_icon_rtl: %s;', $menu_arrow_icon_rtl);
         printf('$menu_arrow_dd_icon: %s;', $menu_arrow_dd_icon);
+        
+        /* Default Header background */
+        printf( '$header_text_color: %s;', 'var(--header-text-color)');
+        printf( '$header_bg_color: %s;', 'var(--header-bg-color)');
+        printf( '$header_bg_image: %s;', 'var(--header-bg-image)' );
+        printf( '$header_bg_size: %s;', 'var(--header-bg-size)' );
+        printf( '$header_bg_size: %s;', 'var(--header-bg-repeat)' );
+        printf( '$header_bg_size: %s;', 'var(--header-bg-attachment)' );
+        printf( '$header_bg_size: %s;', 'var(--header-bg-position)' );
+        printf( '$header_ontop_top_space: %s;', 'var(--header_ontop_top_space)' );
         /* Default Header Color */
         printf( '$header_regular: %s;', 'var(--header_regular)');
         printf( '$header_hover: %s;', 'var(--header_hover)' );
