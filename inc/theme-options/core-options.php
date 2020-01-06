@@ -271,8 +271,7 @@ if(!function_exists('theclick_header_opts')){
                 'id'          => 'header_text_color',
                 'type'        => 'color_rgba',
                 'title'       => esc_html__('Text Color', 'theclick'),
-                'default'     => '',
-                'output'      => array('.header-default')
+                'default'     => ''
             ),
             array(
                 'id'    => 'header_link_colors',

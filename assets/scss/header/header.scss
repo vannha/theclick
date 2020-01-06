@@ -22,6 +22,9 @@
 	background-color: $header_bg_color;
 	@include transition(all 0.5s);
 }
+.header-default{
+	color: $header_text_color;
+}
 .main-header{
 	position: relative;
 	@media (min-width: 1200px){
