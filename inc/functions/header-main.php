@@ -84,6 +84,35 @@ if(!function_exists('theclick_header_menu')){
     }
 }
 
+if(!function_exists('theclick_header_blog_menu')){
+    function theclick_header_blog_menu($args = []){
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        $header_menu = theclick_get_opts('header_blog_menu','ef5-primary');
+        if('none' === $header_menu) return;
+        ?>
+            <nav id="ef5-navigation" class="<?php echo trim(implode(' ', (array)$args['class']));?>">
+                <?php 
+                $megamenu = apply_filters('ef5_enable_megamenu', false);
+                $args =  array(
+                    'theme_location' => 'ef5-primary',
+                    'menu'           => $header_menu,
+                    'container'      => '',
+                    'menu_id'        => 'ef5-header-menu',
+                    'menu_class'     => theclick_header_menu_class(),
+                    'link_before'    => '<span class="menu-title">',
+                    'link_after'     => '</span>',  
+                    'walker'         => ($megamenu && class_exists( 'EF5Systems_MegaMenu_Walker' )) ? new EF5Systems_MegaMenu_Walker : new TheClick_Main_Menu_Walker,
+                    'fallback_cb' =>   'theclick_header_menu_fallback'
+                );
+                wp_nav_menu($args);
+                ?>
+            </nav>
+        <?php
+    }
+}
+
 if(!function_exists('theclick_header_side_menu')){
     function theclick_header_side_menu($args = []){
         $args = wp_parse_args($args,[

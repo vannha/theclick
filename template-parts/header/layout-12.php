@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="ef5-navigation-wrap col-auto">
-                        <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
+                        <?php theclick_header_blog_menu(['class' => 'ef5-navs']); ?>
                     </div>
                     <div class="header-attrs col">
                         <div class="header-attr-wrap nav-extra justify-content-end">
