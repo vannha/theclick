@@ -285,32 +285,25 @@ class TheClick_CSS_Generator
         printf('$menu_arrow_icon: %s;', $menu_arrow_icon);
         printf('$menu_arrow_icon_rtl: %s;', $menu_arrow_icon_rtl);
         printf('$menu_arrow_dd_icon: %s;', $menu_arrow_dd_icon);
-
         /* Default Header Color */
-        $header_link_color = theclick_get_theme_opt('header_link_colors',apply_filters('theclick_header_link_color', ['regular' => theclick_configs('menu_link_color_regular'), 'hover' => theclick_configs('menu_link_color_hover'), 'active' => theclick_configs('menu_link_color_active')]) );
-        printf( '$header_regular: %s;', esc_attr( $header_link_color['regular'] ) );
-        printf( '$header_hover: %s;', esc_attr( $header_link_color['hover'] ) );
-        printf( '$header_active: %s;', esc_attr( $header_link_color['active'] ) );
-
-        /* Ontop Header Color */
-        $ontop_link_color = theclick_get_theme_opt('ontop_link_colors', apply_filters('theclick_ontop_link_color', ['regular' => theclick_configs('ontop_link_color_regular'), 'hover' => theclick_configs('ontop_link_color_hover'), 'active' => theclick_configs('ontop_link_color_active')]) );
-        printf( '$ontop_regular: %s;', esc_attr( $ontop_link_color['regular'] ) );
-        printf( '$ontop_hover: %s;', esc_attr( $ontop_link_color['hover'] ) );
-        printf( '$ontop_active: %s;', esc_attr( $ontop_link_color['active'] ) );
-
+        printf( '$header_regular: %s;', 'var(--header_regular)');
+        printf( '$header_hover: %s;', 'var(--header_hover)' );
+        printf( '$header_active: %s;', 'var(--header_active)' );
+         /* Ontop Header Color */
+        printf( '$ontop_regular: %s;', 'var(--ontop_regular)' );
+        printf( '$ontop_hover: %s;', 'var(--ontop_hover)' );
+        printf( '$ontop_active: %s;', 'var(--ontop_active)' );
+        printf( '$header_ontop_top_space: %s;', 'var(--header_ontop_top_space)' );
         /* Sticky Header Color */
-        $sticky_link_color = theclick_get_theme_opt('sticky_link_colors',apply_filters('theclick_sticky_link_color',['regular' => theclick_configs('sticky_link_color_regular'), 'hover' => theclick_configs('sticky_link_color_hover'), 'active' => theclick_configs('sticky_link_color_active')]));
-        printf( '$sticky_regular: %s;', esc_attr( $sticky_link_color['regular'] ) );
-        printf( '$sticky_hover: %s;', esc_attr( $sticky_link_color['hover'] ) );
-        printf( '$sticky_active: %s;', esc_attr( $sticky_link_color['active'] ) );
-
+        printf( '$sticky_regular: %s;', 'var(--sticky_regular)' );
+        printf( '$sticky_hover: %s;', 'var(--sticky_hover)' );
+        printf( '$sticky_active: %s;', 'var(--sticky_active)' );
         /* Dropdown && Mobile */
-        $dropdown_bg_opt = theclick_get_theme_opt('dropdown_bg',['rgba' => apply_filters('theclick_dropdown_bg', theclick_configs('dropdown_bg'))]);
-        printf('$dropdown_bg: %s;', esc_attr($dropdown_bg_opt['rgba']));
-        $dropdown_link_colors = theclick_get_theme_opt('dropdown_link_colors', apply_filters('theclick_dropdown_link_colors',['regular' => theclick_configs('dropdown_regular'), 'hover' => theclick_configs('dropdown_hover'), 'active' => theclick_configs('dropdown_active')]) );
-        printf( '$dropdown_regular: %s;', esc_attr( $dropdown_link_colors['regular'] ) );
-        printf( '$dropdown_hover: %s;', esc_attr( $dropdown_link_colors['hover'] ) );
-        printf( '$dropdown_active: %s;', esc_attr( $dropdown_link_colors['active'] ) );
+        printf('$dropdown_bg: %s;', 'var(--dropdown_bg)');
+        printf( '$dropdown_regular: %s;', 'var(--dropdown_regular)' );
+        printf( '$dropdown_hover: %s;', 'var(--dropdown_hover)') ;
+        printf( '$dropdown_active: %s;', 'var(--dropdown_active)'  );
+
   
         /* WooCommerce */
         printf( '$theclick_product_single_image_w: %s;', theclick_configs('theclick_product_single_image_w') );

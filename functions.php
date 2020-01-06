@@ -397,14 +397,134 @@ function theclick_ef5systems_styles(){
         wp_enqueue_style('font-theclick', get_template_directory_uri() . '/assets/icon_fonts/theclick/theclick.css', array(), wp_get_theme()->get( 'Version' ));
     }
 }
-
 function theclick_inline_styles() {
+    ob_start();
+    $preset_primary_color = $primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
+    $preset_accent_color = $accent_color = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
+    $darkent_accent_color  = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
+    $lightent_accent_color  = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
+    $preset_secondary_color = theclick_get_opts( 'secondary_color', apply_filters('theclick_secondary_color',theclick_configs('secondary_color') ));
+    $thirdary_color = theclick_get_opts( 'thirdary_color', apply_filters('theclick_thirdary_color',theclick_configs('thirdary_color') ));
+    $fourth_color = theclick_get_opts( 'fourth_color', apply_filters('theclick_fourth_color',theclick_configs('fourth_color') ));
+    $main_menu_height = theclick_get_opts( 'main_menu_height', ['height' => theclick_configs('main_menu_height')]);
+    // CSS Variable
+    printf(':root{
+        --primary-color:%s;
+        --accent-color:%s;
+        --accent-color-05:%s;
+        --accent-color-03:%s;
+        --darkent-accent-color:%s;
+        --lightent-accent-color:%s;
+        --secondary-color:%s;
+        --thirdary-color: %s;
+        --thirdary-color-05: %s;
+        --thirdary-color-03: %s;
+        --fourth-color: %s;
+        --fourth-color-07: %s;
+        }', 
+        $preset_primary_color,
+        $preset_accent_color,
+        theclick_hex2rgba($preset_accent_color, 0.5),
+        theclick_hex2rgba($preset_accent_color, 0.3),
+        $darkent_accent_color,
+        $lightent_accent_color,
+        $preset_secondary_color,
+        $thirdary_color,
+        theclick_hex2rgba($thirdary_color, 0.5),
+        theclick_hex2rgba($thirdary_color, 0.3),
+        $fourth_color,
+        theclick_hex2rgba($fourth_color, 0.7)
+    );
+    // Header Variable
+    $header_bg = theclick_get_opts('header_bg',[
+        'background-color'      => '#fff',
+        'background-image'      => 'inherit',
+        'background-size'       => 'inherit',
+        'background-repeat'     => 'inherit',
+        'background-attachment' => 'inherit', 
+        'background-position'   => 'inherit' 
+    ]);
+    $header_text_color = theclick_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => 'inherit']);
+    $header_ontop_top_space = theclick_get_opts('header_ontop_top_space',['height' => '']);
+    printf(
+        ':root{
+            --main-menu-height:%s;
+            --header-text-color: %s;
+            --header-bg-color: %s;
+            --header-bg-image: %s;
+            --header-bg-size: %s;
+            --header-bg-repeat: %s;
+            --header-bg-attachment: %s;
+            --header-bg-position: %s;
+            --header_ontop_top_space: %s;
+        }',
+        $main_menu_height['height'],
+        $header_text_color['rgba'],
+        $header_bg['background-color'],
+        $header_bg['background-image'],
+        $header_bg['background-size'],
+        $header_bg['background-repeat'],
+        $header_bg['background-attachment'],
+        $header_bg['background-position'],
+        $header_ontop_top_space['height']
+    );
+    /* Default Header Color */
+    $header_link_color = theclick_get_opts('header_link_colors',apply_filters('theclick_header_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
+    printf(':root{
+            --header_regular: %1$s;
+            --header_hover: %2$s;
+            --header_active: %3$s;
+        }', 
+        $header_link_color['regular'],
+        $header_link_color['hover'],
+        $header_link_color['active']
+    );
+    /* Ontop Header Color */
+    $ontop_link_color = theclick_get_opts('ontop_link_colors', apply_filters('theclick_ontop_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
+    printf(':root{
+            --ontop_regular: %1$s;
+            --ontop_hover: %2$s;
+            --ontop_active: %3$s;
+        }', 
+        $ontop_link_color['regular'],
+        $ontop_link_color['hover'],
+        $ontop_link_color['active']
+    );
+    /* Sticky Header Color */
+    $sticky_link_color = theclick_get_opts('sticky_link_colors',apply_filters('theclick_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));    
+    printf(':root{
+            --sticky_regular: %1$s;
+            --sticky_hover: %2$s;
+            --sticky_active: %3$s;
+        }', 
+        $sticky_link_color['regular'],
+        $sticky_link_color['hover'],
+        $sticky_link_color['active']
+    );
+    /* Dropdown && Mobile */
+    $dropdown_bg_opt = theclick_get_opts('dropdown_bg',['rgba' => apply_filters('theclick_dropdown_bg', theclick_configs('dropdown_bg'))]);
+    $dropdown_link_colors = theclick_get_opts('dropdown_link_colors', apply_filters('theclick_dropdown_link_colors',['regular' => theclick_configs('dropdown_regular'), 'hover' => theclick_configs('dropdown_hover'), 'active' => theclick_configs('dropdown_active')]) );
+    printf(':root{
+            --dropdown_regular: %1$s;
+            --dropdown_hover: %2$s;
+            --dropdown_active: %3$s;
+            --dropdown_bg: %4$s;
+        }', 
+        $dropdown_link_colors['regular'],
+        $dropdown_link_colors['hover'],
+        $dropdown_link_colors['active'],
+        $dropdown_bg_opt['rgba']
+    );
+    return ob_get_clean();
+}
+function theclick_inline_styles_remove() {
     ob_start();
     $preset_primary_color = theclick_get_opts( 'primary_color', apply_filters('theclick_primary_color', theclick_configs('primary_color')) );
     $preset_accent_color  = theclick_get_opts( 'accent_color', apply_filters('theclick_accent_color', theclick_configs('accent_color')) );
     $darkent_accent_color  = theclick_get_opts( 'darkent_accent_color', apply_filters('theclick_darkent_accent_color', theclick_configs('darkent_accent_color')) );
     $lightent_accent_color  = theclick_get_opts( 'lightent_accent_color', apply_filters('theclick_lightent_accent_color', theclick_configs('lightent_accent_color')) );
     $main_menu_height = theclick_get_opts( 'main_menu_height', ['height' => theclick_configs('main_menu_height')]);
+
     // CSS Variable
     printf(':root{--primary-color:%s;}', $preset_primary_color);
     printf(':root{--accent-color:%s;}', $preset_accent_color);
