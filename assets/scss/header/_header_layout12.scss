@@ -20,5 +20,7 @@
 	}
 	input[type="text"] {
 	    background-color: transparent;
+	    color: $header_regular;
+	    border-color: $header_regular;
 	}
 }
