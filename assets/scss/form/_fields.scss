@@ -196,6 +196,7 @@ form {
 	*:focus:-ms-input-placeholder {
 	    color: $header_hover;
 	}
+	&.header-ontop,
 	&.header-sticky{
 		input[type="text"]{
 			background-color: transparent;
