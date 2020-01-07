@@ -31,6 +31,7 @@
 	$(window).load(function() {
         "use strict";
 		theclick_page_loading();
+        theclick_join_mobile_menu();
         theclick_vcRow();
         theclick_woo_price_filter_add_data_title();
         theclick_wooscp_change_text();
@@ -45,6 +46,7 @@
 	$( window ).resize( function() {
         "use strict";
 		clearTimeout( resizeTimer );
+        theclick_join_mobile_menu();
 		theclick_touched_side();
         theclick_vcRow();
 	});
@@ -348,6 +350,36 @@
                 }
             }
         });
+    }
+
+    function theclick_join_mobile_menu(){
+        var menu = $('#zk-navigation');
+        if (window_width < 1200) {
+            /* Add mobile menu for Header V2 */
+            var $mainmenu_left = $('#zk-navigation-left .zk-menu-left');
+            var $mainmenu_right = $('#zk-navigation-right .zk-menu-right');
+            var $mobilemenu_1 = $mainmenu_left.clone();
+            var $mobilemenu_2 = $mainmenu_right.clone();
+                $mobilemenu_1.appendTo('#ef5-navigation .zk-main-navigation');
+                $mobilemenu_2.appendTo('#ef5-navigation .zk-main-navigation');
+            $('#zk-navigation-left').addClass('d-none');
+            $('#zk-navigation-right').addClass('d-none');
+            $('#zk-navigation-left ul.zk-menu-left').remove();
+            $('#zk-navigation-right ul.zk-menu-right').remove();
+        } else {
+            /* Callback Menu Left */
+            var $mainmenu_left = $('#zk-navigation .zk-menu-left');
+            var $mobilemenu_1 = $mainmenu_left.clone();
+            $mobilemenu_1.appendTo('#zk-navigation-left div.zk-main-navigation');
+            $('#zk-navigation-left').removeClass('d-none');
+            /* Callback Menu Right */
+            var $mainmenu_right = $('#zk-navigation .zk-menu-right');
+            var $mobilemenu_2 = $mainmenu_right.clone();
+            $('#zk-navigation-right').removeClass('d-none');
+            $mobilemenu_2.appendTo('#zk-navigation-right div.zk-main-navigation');
+            /* Remove joined Left/Right Menu */
+            $('.join-menu .zk-main-navigation').empty();
+        }
     }
 
 	/**
