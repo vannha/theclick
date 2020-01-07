@@ -3,7 +3,6 @@
 	var resizeTimer;
     // Fire on document ready.
     $( document ).ready( function() {
-        var window_width;
         theclick_select2();
         theclick_StickyHeader();
         theclick_toggle_menu();
@@ -31,7 +30,6 @@
 	// On Load 
 	$(window).load(function() {
         "use strict";
-        window_width = window.innerWidth;
 		theclick_page_loading();
         theclick_join_mobile_menu();
         theclick_vcRow();
@@ -47,7 +45,6 @@
 	// On Resize
 	$( window ).resize( function() {
         "use strict";
-        window_width = window.innerWidth;
 		clearTimeout( resizeTimer );
         theclick_join_mobile_menu();
 		theclick_touched_side();
@@ -357,6 +354,7 @@
 
     function theclick_join_mobile_menu(){
         var menu = $('#zk-navigation');
+        var window_width = window.innerWidth;
         if (window_width < 1200) {
             /* Add mobile menu for Header V2 */
             var $mainmenu_left = $('#ef5-menu-left ul.ef5-menu');
