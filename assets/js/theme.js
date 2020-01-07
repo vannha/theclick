@@ -145,8 +145,6 @@
 		'use strict';
 		$('.ef5-toggle').on('click', function(e){
             e.preventDefault();
-            e.stopPropagation();
-            console.log(e);
 			$(this).find('.ef5-toggle-inner').toggleClass('active');
             $(this).prev().find('.ef5-toggle-inner').toggleClass('active');
 			$(this).parent().parent().toggleClass('clicked');
