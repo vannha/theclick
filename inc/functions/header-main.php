@@ -121,7 +121,7 @@ if(!function_exists('theclick_header_menu_left')){
         $header_menu = theclick_get_opts('header_menu_left','ef5-primary');
         if('none' === $header_menu) return;
         ?>
-            <nav id="ef5-navigation" class="<?php echo trim(implode(' ', (array)$args['class']));?>">
+            <nav class="<?php echo trim(implode(' ', (array)$args['class']));?>">
                 <?php 
                 $megamenu = apply_filters('ef5_enable_megamenu', false);
                 $args =  array(
@@ -150,7 +150,7 @@ if(!function_exists('theclick_header_menu_right')){
         $header_menu = theclick_get_opts('header_menu_right','ef5-primary');
         if('none' === $header_menu) return;
         ?>
-            <nav id="ef5-navigation" class="<?php echo trim(implode(' ', (array)$args['class']));?>">
+            <nav class="<?php echo trim(implode(' ', (array)$args['class']));?>">
                 <?php 
                 $megamenu = apply_filters('ef5_enable_megamenu', false);
                 $args =  array(
