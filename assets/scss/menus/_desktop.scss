@@ -24,7 +24,8 @@
     .ef5-header-menu {
         margin-left: ($lv1_space / -2);
         margin-right: ($lv1_space / -2);
-        @include d-flex-auto();
+        display: flex;
+        /* @include d-flex-auto(); */
         /* Level 1 */
         > li {
             vertical-align: middle;
