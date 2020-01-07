@@ -22,7 +22,7 @@
 		                    <?php theclick_header_menu_left(['class' => 'ef5-navs']); ?>
 	                    </div>
 	                </div>
-	                <div class="col-auto">
+	                <div class="col-auto col-logo">
 	                	<div class="d-none d-xl-block">
 	                	<?php get_template_part('template-parts/header/header-logo'); ?>
 	                	</div>
