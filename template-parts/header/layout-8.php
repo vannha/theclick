@@ -19,13 +19,13 @@
 	                </div>
 	                <div class="col-auto">
 		            	<div class="row align-items-center justify-content-between justify-content-xl-center">
-		            		<div class="ef5-header-left col">
+		            		<div class="ef5-header-left col-auto">
 		            			<?php theclick_header_menu_left(['class' => 'ef5-navs']);?>
 							</div>
 							<div class="d-none d-xl-block col-auto">
 								<?php get_template_part('template-parts/header/header-logo'); ?>
 							</div>
-							<div class="ef5-navigation-right col">
+							<div class="ef5-navigation-right col-auto">
 								<?php theclick_header_menu_right(['class' => 'ef5-navs']);?>
 							</div>
 						</div>
