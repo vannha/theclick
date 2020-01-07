@@ -356,16 +356,16 @@
         var menu = $('#zk-navigation');
         if (window_width < 1200) {
             /* Add mobile menu for Header V2 */
-            var $mainmenu_left = $('#zk-navigation-left .zk-menu-left');
-            var $mainmenu_right = $('#zk-navigation-right .zk-menu-right');
+            var $mainmenu_left = $('#ef5-menu-left ul.ef5-menu');
+            var $mainmenu_right = $('#ef5-menu-right ul.ef5-menu');
             var $mobilemenu_1 = $mainmenu_left.clone();
             var $mobilemenu_2 = $mainmenu_right.clone();
-                $mobilemenu_1.appendTo('#ef5-navigation .zk-main-navigation');
-                $mobilemenu_2.appendTo('#ef5-navigation .zk-main-navigation');
-            $('#zk-navigation-left').addClass('d-none');
-            $('#zk-navigation-right').addClass('d-none');
-            $('#zk-navigation-left ul.zk-menu-left').remove();
-            $('#zk-navigation-right ul.zk-menu-right').remove();
+                $mobilemenu_1.appendTo('#ef5-navigation .ef5-main-navigation');
+                $mobilemenu_2.appendTo('#ef5-navigation .ef5-main-navigation');
+            $('#ef5-menu-left').addClass('d-none');
+            $('#ef5-menu-right').addClass('d-none');
+            $('#ef5-menu-left ul.ef5-menu').remove();
+            $('#ef5-menu-right ul.ef5-menu').remove();
         } else {
             /* Callback Menu Left */
             var $mainmenu_left = $('#zk-navigation .zk-menu-left');
