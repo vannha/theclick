@@ -356,7 +356,6 @@
     function theclick_join_mobile_menu(){
         var menu = $('#zk-navigation');
         var window_width = window.innerWidth;
-        console.log(window_width);
         if (window_width < 1200) { 
             /* Add mobile menu for Header V2 */
             var $mainmenu_left = $('#ef5-menu-left ul.ef5-menu');
