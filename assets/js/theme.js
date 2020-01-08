@@ -144,7 +144,7 @@
 	*/
 	function theclick_toggle_menu(){ 
 		'use strict';
-		$('.ef5-toggle').on('click', function(e){ e.stopPropagation(); console.log(e);
+		$('.ef5-toggle').on('click', function(e){  
             e.preventDefault();
 			$(this).find('.ef5-toggle-inner').toggleClass('active');
             $(this).prev().find('.ef5-toggle-inner').toggleClass('active');
