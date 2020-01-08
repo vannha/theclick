@@ -4,4 +4,9 @@
 			padding: 30px 0;
 		}
 	}
+	@media (max-width: 1199px){
+		.col-left .nav-extra{
+			margin-left: 15px;
+		}
+	}
 }
