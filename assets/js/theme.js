@@ -149,7 +149,7 @@
 			$(this).find('.ef5-toggle-inner').toggleClass('active');
             $(this).prev().find('.ef5-toggle-inner').toggleClass('active');
 			//$(this).parent().parent().toggleClass('clicked');
-            $(this).parent().next().slideToggle();
+            //$(this).parent().next().slideToggle();
 		});
         $('.ef5-toggle-block').on('click', function(e){
             e.preventDefault();
