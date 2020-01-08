@@ -58,7 +58,7 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
-        theclick_toggle_menu();
+        theclick_toggle_menu_joined();
         theclick_video_size();
         theclick_popup();
         theclick_init_price_filter();
@@ -162,6 +162,16 @@
             $(this).find('.ef5-toggle-block-content').slideUp();
         });
 	}
+    function theclick_toggle_menu_joined(){
+        'use strict';
+        $('.ef5-toggle').on('click', function(e){  
+            e.preventDefault();
+            $(this).find('.ef5-toggle-inner').toggleClass('active');
+            $(this).prev().find('.ef5-toggle-inner').toggleClass('active');
+            $(this).parent().parent().toggleClass('clicked');
+            $(this).parent().next().slideToggle();
+        });
+    }
 	/**
 	 * Menu Back
 	 * Sub menu touched on side left/right
