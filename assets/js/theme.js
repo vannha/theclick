@@ -151,7 +151,7 @@
 			$(this).parent().parent().toggleClass('clicked');
             $(this).parent().next().slideToggle();
 		});
-        $('.ef5-toggle-block').on('click', function(e){
+        /*$('.ef5-toggle-block').on('click', function(e){
             e.preventDefault();
             $(this).toggleClass('active');
             $(this).parents('.ef5-page').find('.ef5-toggle-block-content').slideUp();
@@ -160,7 +160,7 @@
         });
         $('body').on('click', function(e){
             $(this).find('.ef5-toggle-block-content').slideUp();
-        });
+        });*/
 	}
 	/**
 	 * Menu Back
