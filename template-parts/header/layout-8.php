@@ -17,7 +17,7 @@
 			            		<div class="nav-extra align-items-center">
 			                    <?php
 			                    theclick_header_side_nav_icon(['class' => 'd-none d-xl-block']);
-			                    theclick_header_search(['class' => '', 'label' => esc_html__('Search', 'theclick'), 'display' => '0']);
+			                    theclick_header_search(['class' => 'd-none d-md-block', 'label' => esc_html__('Search', 'theclick'), 'display' => '0']);
 			                    ?>
 			                    </div>
 		                    </div>
@@ -34,6 +34,7 @@
 							<?php theclick_header_menu_right(['class' => 'ef5-navs']);?>
 		                    <div class="header-attr-wrap nav-extra justify-content-end">
 		                        <?php
+		                        theclick_header_search(['class' => 'd-md-none', 'display' => '1']);
 		                        theclick_header_signin_signup(['class' => 'd-none d-md-block']);
 		                        theclick_header_wishlist(['class' => 'd-none d-md-block']);
 		                        theclick_header_compare(['class' => 'd-none d-md-block']);
