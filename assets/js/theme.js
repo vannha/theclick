@@ -354,7 +354,6 @@
     }
 
     function theclick_join_mobile_menu(){
-        var menu = $('#zk-navigation');
         var window_width = window.innerWidth;
         if (window_width < 1200) { 
             /* Add mobile menu for Header V2 */
