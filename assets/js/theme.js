@@ -370,17 +370,17 @@
             $('#ef5-menu-right ul.ef5-menu').remove();
         } else {
             /* Callback Menu Left */
-            var $mainmenu_left = $('#zk-navigation .zk-menu-left');
+            var $mainmenu_left = $('#ef5-navigation .ef5-main-navigation .menu-left-menu');
             var $mobilemenu_1 = $mainmenu_left.clone();
-            $mobilemenu_1.appendTo('#zk-navigation-left div.zk-main-navigation');
-            $('#zk-navigation-left').removeClass('d-none');
+            $mobilemenu_1.appendTo('#ef5-menu-left');
+            $('#ef5-menu-left').removeClass('d-none');
             /* Callback Menu Right */
-            var $mainmenu_right = $('#zk-navigation .zk-menu-right');
+            var $mainmenu_right = $('#ef5-navigation .ef5-main-navigation .menu-right-menu');
             var $mobilemenu_2 = $mainmenu_right.clone();
-            $('#zk-navigation-right').removeClass('d-none');
-            $mobilemenu_2.appendTo('#zk-navigation-right div.zk-main-navigation');
+            $('#ef5-menu-right').removeClass('d-none');
+            $mobilemenu_2.appendTo('#ef5-menu-right');
             /* Remove joined Left/Right Menu */
-            $('.join-menu .zk-main-navigation').empty();
+            $('.join-menu .ef5-main-navigation').empty();
         }
     }
 
