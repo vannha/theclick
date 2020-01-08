@@ -31,7 +31,6 @@
 	$(window).load(function() {
         "use strict";
 		theclick_page_loading();
-        theclick_toggle_menu();
         theclick_join_mobile_menu();
         theclick_vcRow();
         theclick_woo_price_filter_add_data_title();
@@ -59,6 +58,7 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
+        theclick_toggle_menu();
         theclick_video_size();
         theclick_popup();
         theclick_init_price_filter();
