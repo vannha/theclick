@@ -28,7 +28,7 @@
 	                	</div>
 					</div>
 					<div class="header-attrs col">
-						<div class="d-flex align-items-center justify-content-between">
+						<div class="d-flex align-items-center justify-content-end justify-content-xl-between">
 							<?php theclick_header_menu_right(['class' => 'ef5-navs']);?>
 		                    <div class="header-attr-wrap nav-extra justify-content-end">
 		                        <?php
