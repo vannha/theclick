@@ -21,7 +21,7 @@
 			                    ?>
 			                    </div>
 		                    </div>
-		                    <?php theclick_header_menu_left(['class' => 'ef5-navs']); ?>
+		                    <?php theclick_header_menu_left(['class' => 'ef5-navs d-none d-xl-block']); ?>
 	                    </div>
 	                </div>
 	                <div class="col-auto col-logo col-center">
@@ -31,7 +31,7 @@
 					</div>
 					<div class="header-attrs col col-right">
 						<div class="d-flex align-items-center justify-content-end justify-content-xl-between">
-							<?php theclick_header_menu_right(['class' => 'ef5-navs']);?>
+							<?php theclick_header_menu_right(['class' => 'ef5-navs d-none d-xl-block']);?>
 		                    <div class="header-attr-wrap nav-extra justify-content-end">
 		                        <?php
 		                        theclick_header_search(['class' => 'd-md-none', 'display' => '1']);
