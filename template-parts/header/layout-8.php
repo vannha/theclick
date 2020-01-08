@@ -10,14 +10,16 @@
             	<div class="row align-items-center justify-content-between">
 	            	<div class="col">
 	            		<div class="d-flex justify-content-between">
-	            			<div class="nav-extra align-items-center">
+	            			<div class="d-flex align-items-center">
 			            		<div class="d-xl-none">
 			            			<?php get_template_part('template-parts/header/header-logo'); ?>
 			            		</div>
+			            		<div class="nav-extra align-items-center">
 			                    <?php
 			                    theclick_header_side_nav_icon(['class' => 'd-none d-xl-block']);
 			                    theclick_header_search(['class' => '', 'label' => esc_html__('Search', 'theclick'), 'display' => '0']);
 			                    ?>
+			                    </div>
 		                    </div>
 		                    <?php theclick_header_menu_left(['class' => 'ef5-navs']); ?>
 	                    </div>
