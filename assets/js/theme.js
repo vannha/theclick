@@ -369,13 +369,13 @@
             $('#ef5-menu-left ul.ef5-menu').remove();
             $('#ef5-menu-right ul.ef5-menu').remove();
             
-            $('.ef5-toggle').on('click', function(e){  
+            /*$('.ef5-toggle').on('click', function(e){  
                 e.preventDefault();
                 $(this).find('.ef5-toggle-inner').toggleClass('active');
                 $(this).prev().find('.ef5-toggle-inner').toggleClass('active');
                 $(this).parent().parent().toggleClass('clicked');
                 $(this).parent().next().slideToggle();
-            });
+            });*/
         } else {
             /* Callback Menu Left */
             var $mainmenu_left = $('#zk-navigation .zk-menu-left');
