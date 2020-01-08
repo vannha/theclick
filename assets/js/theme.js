@@ -31,6 +31,7 @@
 	$(window).load(function() {
         "use strict";
 		theclick_page_loading();
+        theclick_toggle_menu();
         theclick_join_mobile_menu();
         theclick_vcRow();
         theclick_woo_price_filter_add_data_title();
