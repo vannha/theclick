@@ -356,7 +356,7 @@
     function theclick_join_mobile_menu(){
         var menu = $('#zk-navigation');
         var window_width = window.innerWidth;
-        if (window_width < 1200) {
+        if (window_width < 1200) { console.log('bbb');
             /* Add mobile menu for Header V2 */
             var $mainmenu_left = $('#ef5-menu-left ul.ef5-menu');
             var $mainmenu_right = $('#ef5-menu-right ul.ef5-menu');
@@ -368,15 +368,7 @@
             $('#ef5-menu-right').addClass('d-none');
             $('#ef5-menu-left ul.ef5-menu').remove();
             $('#ef5-menu-right ul.ef5-menu').remove();
-            
-            /*$('.ef5-toggle').on('click', function(e){  
-                e.preventDefault();
-                $(this).find('.ef5-toggle-inner').toggleClass('active');
-                $(this).prev().find('.ef5-toggle-inner').toggleClass('active');
-                $(this).parent().parent().toggleClass('clicked');
-                $(this).parent().next().slideToggle();
-            });*/
-        } else {
+        } else { console.log('bbb');
             /* Callback Menu Left */
             var $mainmenu_left = $('#zk-navigation .zk-menu-left');
             var $mobilemenu_1 = $mainmenu_left.clone();
