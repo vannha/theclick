@@ -11,7 +11,7 @@
 	            	<div class="col col-left">
 	            		<div class="d-flex justify-content-between">
 	            			<div class="d-flex align-items-center">
-			            		<div class="d-xl-none">
+			            		<div class="d-xl-none col-logo">
 			            			<?php get_template_part('template-parts/header/header-logo'); ?>
 			            		</div>
 			            		<div class="nav-extra align-items-center">
