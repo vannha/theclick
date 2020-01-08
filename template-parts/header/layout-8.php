@@ -8,7 +8,7 @@
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="header-inner-wrap">
             	<div class="row align-items-center justify-content-between">
-	            	<div class="col">
+	            	<div class="col col-left">
 	            		<div class="d-flex justify-content-between">
 	            			<div class="d-flex align-items-center">
 			            		<div class="d-xl-none">
@@ -24,12 +24,12 @@
 		                    <?php theclick_header_menu_left(['class' => 'ef5-navs']); ?>
 	                    </div>
 	                </div>
-	                <div class="col-auto col-logo">
+	                <div class="col-auto col-logo col-center">
 	                	<div class="d-none d-xl-block">
 	                	<?php get_template_part('template-parts/header/header-logo'); ?>
 	                	</div>
 					</div>
-					<div class="header-attrs col">
+					<div class="header-attrs col col-right">
 						<div class="d-flex align-items-center justify-content-end justify-content-xl-between">
 							<?php theclick_header_menu_right(['class' => 'ef5-navs']);?>
 		                    <div class="header-attr-wrap nav-extra justify-content-end">
