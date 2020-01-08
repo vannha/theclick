@@ -5,7 +5,6 @@
     $( document ).ready( function() {
         theclick_select2();
         theclick_StickyHeader();
-        theclick_toggle_menu();
         theclick_touched_side();
         theclick_open_mobile_menu();
         theclick_popup();
@@ -32,6 +31,7 @@
         "use strict";
 		theclick_page_loading();
         theclick_join_mobile_menu();
+        theclick_toggle_menu();
         theclick_vcRow();
         theclick_woo_price_filter_add_data_title();
         theclick_wooscp_change_text();
