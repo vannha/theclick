@@ -11,18 +11,23 @@
 			left: 0;
 			bottom: 0;
 			background-color: #fff;
-			@include transition(left .3s linear 0s);
 		}
 		&:before{
+			left: -100%;
+			@include transition(left .3s linear 0s);
+		}
+		&:after{
 			left: -100%;
 			@include transition(left .6s linear 0s);
 		}
 		&:hover{
 			&:before{
 				left: 0;
+				@include transition(left .6s linear 0s);
 			}
 			&:after{
 				left: 100%;
+				@include transition(left .3s linear 0s);
 			}
 		}
 	}
