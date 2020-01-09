@@ -52,3 +52,12 @@
 		left: 5px;
 	}
 } 
+
+#rev_slider_1_1_wrapper .custom.tparrows.tp-leftarrow:before{
+	content: "";
+	background: url(../assests/images/icon/left-arrow.png) no-repeat 0 0;
+}
+#rev_slider_1_1_wrapper .custom.tparrows.tp-rightarrow:before{
+	content: "";
+	background: url(../assests/images/icon/left-arrow.png) no-repeat 0 0;
+}
