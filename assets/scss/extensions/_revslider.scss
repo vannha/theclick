@@ -1,0 +1,19 @@
+.rs-layer{
+	.underline-white{
+		position: relative;
+		&:before,&:after{
+			content: "";
+			width: 100%;
+			height: 2px;
+			left: 0;
+			bottom: 0;
+			background-color: #fff;
+		}
+		&:before{
+			left: -100%;
+		}
+		&:after{
+			
+		}
+	}
+}
