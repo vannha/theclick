@@ -14,8 +14,7 @@
 			@include transition(left .3s linear 0s);
 		}
 		&:before{
-			left: -100%;
-			background-color: red;
+			left: -110%;
 		}
 		&:hover{
 			&:before{
