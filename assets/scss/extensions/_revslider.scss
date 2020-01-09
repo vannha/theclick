@@ -53,11 +53,23 @@
 	}
 } 
 
-#rev_slider_1_1_wrapper .custom.tparrows.tp-leftarrow:before{
-	content: "";
-	background: url(../assets/images/icons/left-arrow.png) no-repeat 0 0;
+body #rev_slider_1_1_wrapper .custom.tparrows{
+	width: 30px;
+	height: 15px;
+	.tp-leftarrow{
+		background: url(../assets/images/icons/left-arrow.png) no-repeat 0 0;
+		&:before{
+			content: "";
+		}
+	}
 }
-#rev_slider_1_1_wrapper .custom.tparrows.tp-rightarrow:before{
-	content: "";
-	background: url(../assets/images/icons/left-arrow.png) no-repeat 0 0;
+body #rev_slider_1_1_wrapper .custom.tparrows{
+	width: 30px;
+	height: 15px;
+	.tp-rightarrow{
+		background: url(../assets/images/icons/left-arrow.png) no-repeat 0 0;
+		&:before{
+			content: "";
+		}
+	}
 }
