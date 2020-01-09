@@ -1,19 +1,28 @@
 .rs-layer{
 	.underline-white{
 		position: relative;
+		display: block;
+		overflow: hidden;
 		&:before,&:after{
 			content: "";
 			width: 100%;
 			height: 2px;
+			position: absolute;
 			left: 0;
 			bottom: 0;
 			background-color: #fff;
+			@include transition(left .3s linear 0s);
 		}
 		&:before{
 			left: -100%;
 		}
-		&:after{
-			
+		&:hover{
+			&:before{
+				left: 0;
+			}
+			&:after{
+				left: 100%;
+			}
 		}
 	}
 }
