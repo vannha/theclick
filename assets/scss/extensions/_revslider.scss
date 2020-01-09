@@ -44,7 +44,7 @@
 		height: 2px;
 		position: absolute;
 		left: 0;
-		top: 50%;
+		top: calc(50% - 2px);
 		background-color: #fff;
 	}
 } 
