@@ -38,6 +38,9 @@
 .rs-layer.scroll-white{
 	padding-left: 28px;
 	position: relative;
+	@media (max-width: 1599px){
+		padding-left: 35px;
+	}
 	&:before{
 		content: "";
 		width: 18px;
