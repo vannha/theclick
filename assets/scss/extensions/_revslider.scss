@@ -41,18 +41,20 @@
 	@media (max-width: 1599px){
 		padding-left: 40px;
 	}
-	&:before{
-		content: "";
-		width: 18px;
-		height: 2px;
-		position: absolute;
-		left: 0;
-		top: calc(50% - 2px);
-		background-color: #fff;
-		@include transition(left .3s linear 0s);
-	}
-	&:hover:before{
-		left: -5px;
+	@media (min-width: 1366px){
+		&:before{
+			content: "";
+			width: 18px;
+			height: 2px;
+			position: absolute;
+			left: 0;
+			top: calc(50% - 2px);
+			background-color: #fff;
+			@include transition(left .3s linear 0s);
+		}
+		&:hover:before{
+			left: -5px;
+		}
 	}
 } 
 
