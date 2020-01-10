@@ -38,13 +38,6 @@
 .rs-layer.scroll-white{
 	padding-left: 28px;
 	position: relative;
-	@media (max-width: 1599px){
-		padding-left: 40px;
-		&:before{
-			width: 10px;
-		}
-	}
-
 	&:before{
 		content: "";
 		width: 18px;
@@ -54,6 +47,9 @@
 		top: calc(50% - 2px);
 		background-color: #fff;
 		@include transition(left .3s linear 0s);
+		@media (max-width: 1599px){
+			width: 15px;
+		}
 	}
 	&:hover:before{
 		left: -5px;
