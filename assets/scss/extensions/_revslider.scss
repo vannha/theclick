@@ -52,7 +52,7 @@
 		@include transition(left .3s linear 0s);
 	}
 	&:hover:before{
-		left: 5px;
+		left: -5px;
 	}
 } 
 
