@@ -43,7 +43,7 @@ vc_map(array(
                 'type'       => 'custom_markup',
                 'holder'     => 'div',
                 'class'      => '',
-                'heading'    =>esc_html__('Font Size (ex:24 or 24px)','theclick'),
+                'heading'    =>esc_html__('Font Size (ex:24 or 24px) max 50px','theclick'),
                 'value'      => '',
                 'dependency' => array(
                     'element' => 'heading_text',
