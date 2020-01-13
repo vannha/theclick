@@ -43,7 +43,7 @@ $line-heights: (
 				}
 			}
 		}*/
-		 @for $size from 1 through 50 {
+		 @for $size from 1 through 70 {
 			.text#{$infix}-#{$size}{
 				font-size: #{$size}px;
 			}
