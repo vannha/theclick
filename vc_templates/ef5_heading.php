@@ -27,6 +27,12 @@ $heading_text_cls = implode(' ', $heading_text_clss);
 				$this->ef5_heading_desccription($atts);
 				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent outline ef5-btn-md']);
 				break;
+			case '3':
+				$this->ef5_heading_main_heading($atts,['class' => $heading_text_cls]);
+				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22 text-white']);
+				$this->ef5_heading_desccription($atts);
+				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent outline ef5-btn-md']);
+				break;
 			default:
 				$this->ef5_heading_main_heading($atts,['class' => $heading_text_cls]);
 				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22']);
