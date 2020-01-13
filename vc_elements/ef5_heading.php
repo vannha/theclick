@@ -246,11 +246,11 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         ];
 
         $heading_style = [];
-        $heading_style[] = (!empty($heading_color)) ? 'color:'.$heading_color : '';
-        $heading_style[] = (!empty($heading_lh)) ? 'line-height:'.$heading_lh : '';
+        $heading_style[] = (!empty($heading_color)) ? 'color:'.$heading_color.';' : '';
+        $heading_style[] = (!empty($heading_lh)) ? 'line-height:'.$heading_lh.';' : '';
           
         $heading_attrs[] = 'class="'.trim(implode(' ', $heading_css_class)).'"';
-        $heading_attrs[] = 'style="'.trim(implode(';', $heading_style)).'"';
+        $heading_attrs[] = 'style="'.trim(implode(' ', $heading_style)).'"';
          
         ?>
         <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
