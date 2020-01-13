@@ -245,12 +245,13 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $args['class']
         ];
 
-        $heading_style = [$heading_color,$heading_lh];
-        
+        $heading_style = [];
+        $heading_style[] = (!empty($heading_color)) ? 'color:'.$heading_color : '';
+        $heading_style[] = (!empty($heading_lh)) ? 'line-height:'.$heading_lh : '';
+          
         $heading_attrs[] = 'class="'.trim(implode(' ', $heading_css_class)).'"';
         $heading_attrs[] = 'style="'.trim(implode(';', $heading_style)).'"';
-        //$heading_attrs[] = (!empty($heading_color)) ? 'style="'.trim(implode(' ', $heading_css_class)).'"' : '';
-        //$heading_attrs[] = (!empty($heading_lh)) ? 'style="line-height:'.$heading_lh.';"' : '';
+         
         ?>
             <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
                 echo theclick_html($heading_text); 
