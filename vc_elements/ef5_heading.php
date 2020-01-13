@@ -253,9 +253,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $heading_attrs[] = 'style="'.trim(implode(';', $heading_style)).'"';
          
         ?>
-            <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
-                echo theclick_html($heading_text); 
-            ?></div>
+        <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
+            echo theclick_html($heading_text); 
+        ?></div>
         <?php 
     }
     protected function ef5_heading_sub_heading($atts,$args = []){
