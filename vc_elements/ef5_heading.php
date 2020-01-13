@@ -35,7 +35,6 @@ vc_map(array(
                 'param_name' => 'heading_text',
                 'value'      => '',
                 'std'        => '',
-                'holder'     => 'h4',
                 'group'      => esc_html__('Heading','theclick')   
             ),
             array(
