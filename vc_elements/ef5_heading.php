@@ -174,7 +174,6 @@ vc_map(array(
                 'param_name' => 'subheading_text',
                 'value'      => '',
                 'std'        => '',
-                'holder'     => 'h3',
                 'group'      => esc_html__('Sub Heading', 'theclick')
             ),
             ef5systems_vc_map_add_css_animation([
@@ -191,7 +190,6 @@ vc_map(array(
                 'heading'    => esc_html__('Text', 'theclick'),
                 'param_name' => 'desc_text',
                 'value'      => '',
-                'holder'     => 'div',
                 'group'      => esc_html__('Description', 'theclick'),
             ),
             ef5systems_vc_map_add_css_animation([
