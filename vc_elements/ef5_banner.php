@@ -422,7 +422,7 @@ vc_map(array(
         )
     )
 ));
-class WPBakeryShortCode_red_banner extends CmsShortCode
+class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
 {
     protected function content($atts, $content = null)
     {
