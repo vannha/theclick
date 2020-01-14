@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     );
     if($ef5_padding !== 'default') $wrap_css_classes[] = 'ef5-padding-'.$ef5_padding;
     if($ef5_margin !== 'default') $wrap_css_classes[]  = 'ef5-padding-'.$ef5_margin;
-    $hint_pos = isset($el_icon_hint_pos) ? $el_icon_hint_pos : '';
+    $hint_pos = isset($el_icon_hint_pos) ? 'hint--'.$el_icon_hint_pos : '';
 
     switch ($layout_template) {
         case '1':
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             $a_title   = isset($link['title']) && !empty($link['title']) ? $link['title'] : esc_html__('Follow Us','theclick');
                             $a_target  = strlen( $link['target'] ) > 0 ? str_replace(' ', '', $link['target']) : '_blank';
 
-                            $link_open = '<a class="hint--'.$hint_pos.'" data-hint="'.esc_attr($a_title).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" '.$styles.'>';
+                            $link_open = '<a class="'.$hint_pos.'" data-hint="'.esc_attr($a_title).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" '.$styles.'>';
                             $link_close = '</a>';
                         }
                     }
