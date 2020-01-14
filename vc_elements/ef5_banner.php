@@ -12,15 +12,13 @@ vc_map(array(
                 '1' => get_template_directory_uri().'/vc_elements/layouts/banner-style1.jpg', 
             ),
             'param_name' => 'banner_style',
-            "admin_label" => true,
-            "group" => esc_html__("Layout", 'theclick'),
+            "admin_label" => true
         ),
         array(
             "type" => "attach_image",
             "heading" => esc_html__("Image Item",'theclick'),
             "param_name" => "bn_image",
         ),
-        
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'banner_css_animation'
         ]), 
@@ -28,9 +26,11 @@ vc_map(array(
             'type' => 'vc_link',
             'heading' => esc_html__( 'URL (Link)', 'theclick' ),
             'param_name' => 'link',
+            'group'      => esc_html__('Link', 'theclick')
         ),
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'button_link_css_animation',
+            'group'      => esc_html__('Link', 'theclick')
         ]), 
         array(
         	"type" => "textfield",
@@ -51,7 +51,6 @@ vc_map(array(
             ),
             "group" => esc_html__("Title 1", 'theclick'),
         ),
-
         array(
             "type"       => "colorpicker",
             "heading"    => esc_html__("Title 1 color", 'theclick'),
@@ -69,7 +68,6 @@ vc_map(array(
             'param_name' => 'title_1_css_animation',
             'group'      => esc_html__('Title 1', 'theclick')
         ]), 
-        
         array(
         	"type" => "textfield",
             "heading" => esc_html__("Title 2",'theclick'),
