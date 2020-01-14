@@ -28,11 +28,9 @@ vc_map(array(
             'type' => 'vc_link',
             'heading' => esc_html__( 'URL (Link)', 'theclick' ),
             'param_name' => 'link',
-            "group" => esc_html__("Link", 'theclick'),
         ),
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'button_link_css_animation',
-            'group'      => esc_html__('Button Link', 'theclick')
         ]), 
         array(
         	"type" => "textfield",
@@ -40,7 +38,6 @@ vc_map(array(
             "param_name" => "el_class",
             "value" => "",
         ), 
-         
         array(
         	"type" => "textfield",
             "heading" => esc_html__("Title 1",'theclick'),
