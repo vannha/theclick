@@ -43,10 +43,11 @@ vc_map(array(
                 'param_name' => 'el_icon_hint_pos',
                 'heading'    => esc_html__( 'Hint Label Position', 'theclick' ),
                 'value'      => array(
+                    esc_html__( 'None', 'theclick' )    => '',
                     esc_html__( 'Top', 'theclick' )    => 'top',
                     esc_html__( 'Bottom', 'theclick' ) => 'bottom',
                 ),
-                'std' => 'top',
+                'std' => '',
             ),
             array(
                 'type'       => 'dropdown',
