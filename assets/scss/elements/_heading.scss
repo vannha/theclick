@@ -10,13 +10,15 @@
 }
 .ef5-heading-3{
 	.main-heading{
-		
-		&:after{
-			content: "";
-			width: 40px;
-			height: 2px;
-			margin-left: 20px;
-			background-color: $HeadingColor;
+		@media (min-width: 768px){
+			&:after{
+				content: "";
+				width: 40px;
+				height: 2px;
+				margin-left: 20px;
+				background-color: $HeadingColor;
+				display: inline-block;
+			}
 		}
 	}
 }
