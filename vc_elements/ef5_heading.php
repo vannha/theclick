@@ -266,6 +266,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $subheading_attrs = [];
         $subheading_css_class = [
             'subheading',
+            $this->getCSSAnimation($atts['subheading_text_css_animation']),
             $args['class']
         ];
         $subheading_attrs[] = 'class="'.trim(implode(' ', $subheading_css_class)).'"';
@@ -285,6 +286,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $desc_attrs = [];
         $desc_css_class = [
             'desc',
+            $this->getCSSAnimation($atts['desc_text_css_animation']),
             $args['class']
         ];
         $desc_attrs[] = 'class="'.trim(implode(' ', $desc_css_class)).'"';
@@ -301,6 +303,11 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             'class'  => ''
         ]);
         extract( $atts );
+        $btn_css_class = [
+            $this->getCSSAnimation($atts['button_link_css_animation']),
+            $args['class']
+        ];
+        
         //  Button Link
         $use_link = false;
         $button_link = vc_build_link( $atts['button_link'] );
@@ -313,7 +320,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         }
         if(!$use_link) return;
             $html = $args['before'];
-                $html .= '<a href="'.esc_url($a_href).'" class="'.$args['class'].'" target="'.esc_attr($a_target).'">'.$a_title.'</a>';
+                $html .= '<a href="'.esc_url($a_href).'" class="'.trim(implode(' ', $btn_css_class)).'" target="'.esc_attr($a_target).'">'.$a_title.'</a>';
             $html .= $args['after'];
             echo theclick_html($html);
     }
