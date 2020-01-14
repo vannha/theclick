@@ -60,6 +60,7 @@ $max_width:(
 	80 : 80px,
 	90 : 90px,
 	100 : 100px,
+	380: 380px,
     auto: auto
 );
 // Row gutters
@@ -112,7 +113,7 @@ $max_width:(
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-		@each $prop, $abbrev in (max-width: max-w, max-height: max-h) {
+		@each $prop, $abbrev in (max-width: mw, max-height: mh) {
 		  @each $size, $length in $max_width {
 		    .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length!important; }
 		  }
