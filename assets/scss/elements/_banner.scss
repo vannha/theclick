@@ -22,8 +22,8 @@
 		top: 0;
 		@include transform(translateX(-100%) rotate(-90deg));
 	    @include transform-origin(top right); 
-	    animation-name: ef5-waves2;
-	    animation: ef5-waves 2.5s linear 1.9s;
+	    animation-name: translat;
+	    animation: translat 2.5s linear 1.9s;
 	}
 	.banner_btn_link{
 		font-weight: 500;
