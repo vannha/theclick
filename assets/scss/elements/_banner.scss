@@ -32,6 +32,9 @@
 		position: relative;
 		&:hover{
 			color: inherit;
+			&:after{
+				width: 100%;
+			}
 		}
 		&:after{
 			content: "";
