@@ -1,6 +1,9 @@
 .ef5-banner-1{
 	position: relative;
 	padding-left: 38px;
+	@media (min-width: 1366px){
+		margin-left: -38px;
+	}
 	.main-banner{
 		margin-bottom: 25px;
 	}
