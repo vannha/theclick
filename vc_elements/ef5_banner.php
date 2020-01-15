@@ -18,9 +18,11 @@ vc_map(array(
             "type" => "attach_image",
             "heading" => esc_html__("Image Item",'theclick'),
             "param_name" => "bn_image",
+            'group'      => esc_html__('Media', 'theclick')
         ),
         ef5systems_vc_map_add_css_animation([
-            'param_name' => 'banner_css_animation'
+            'param_name' => 'banner_css_animation',
+            'group'      => esc_html__('Media', 'theclick')
         ]), 
         array(
             'type' => 'vc_link',
