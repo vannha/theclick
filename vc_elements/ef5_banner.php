@@ -48,7 +48,7 @@ vc_map(array(
             "dependency" => array(
                 "element" => 'banner_style',
                 "value" => array(
-                    "style-1"
+                    "1"
                 ),
             ),
             "group" => esc_html__("Title 1", 'theclick'),
@@ -61,7 +61,7 @@ vc_map(array(
             "dependency" => array(
                 "element" => 'banner_style',
                 "value" => array(
-                    "style-1"
+                    "1"
                 ),
             ),
             "group" => esc_html__("Title 1", 'theclick'),
@@ -78,7 +78,7 @@ vc_map(array(
             "dependency" => array(
                 "element" => 'banner_style',
                 "value" => array(
-                    "style-1"
+                    "1"
                 ),
             ),
             "group" => esc_html__("Title 2", 'theclick'),
@@ -91,7 +91,7 @@ vc_map(array(
             "dependency" => array(
                 "element" => 'banner_style',
                 "value" => array(
-                    "style-1"
+                    "1"
                 ),
             ),
             "group" => esc_html__("Title 2", 'theclick'),
