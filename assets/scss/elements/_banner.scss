@@ -4,8 +4,13 @@
 	@media (min-width: 1366px){
 		margin-left: -38px;
 	}
-	.main-banner{
+	.main-media{
 		margin-bottom: 25px;
+		@media (min-width: 1200px) && (max-width: 1365px){
+			.media-img{
+				max-width: 520px;
+			}
+		}
 	}
 	.main-title{
 		font-size: 36px;

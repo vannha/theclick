@@ -131,7 +131,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         ];
         echo trim(implode(' ', $wrap_css_class));
     }
-    protected function ef5_banner_main_banner($atts,$args = []){ 
+    protected function ef5_banner_main_media($atts,$args = []){ 
         extract( $atts );
         $args = wp_parse_args($args, [
             'class' => ''        
@@ -155,7 +155,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
 
         $banner_attrs = [];
         $banner_css_class = [
-            'main-banner',
+            'main-media',
             $this->getCSSAnimation($atts['media_css_animation']),
             $args['class']
         ];
@@ -164,7 +164,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         ?>
         <div <?php echo trim(implode(' ', $banner_attrs));?>>
             <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'; ?>
-            <img src="<?php echo esc_url($image_url);?>" class="banner-img" alt="<?php echo esc_attr($a_title);?>">
+            <img src="<?php echo esc_url($image_url);?>" class="media-img" alt="<?php echo esc_attr($a_title);?>">
             <?php if($use_link) echo '</a>'; ?>
         </div>
         <?php 
