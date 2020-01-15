@@ -2,7 +2,7 @@
 	position: relative;
 	padding-left: 38px;
 	.main-banner{
-
+		margin-bottom: 25px;
 	}
 	.main-title{
 		font-size: 36px;
@@ -24,6 +24,21 @@
 	    @include transform-origin(top right); 
 	}
 	.banner_btn_link{
-
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 23px;
+		position: relative;
+		&:hover{
+			color: inherit;
+		}
+		&:after{
+			content: "";
+			width: 20px;
+			height: 2px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background-color: $link_color;
+		}
 	}
 }
