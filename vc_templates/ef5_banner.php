@@ -8,13 +8,13 @@ $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
                 $this->ef5_banner_main_banner($atts,['class' => '']);
                 $this->ef5_banner_main_title($atts,['class' => '']);
                 $this->ef5_banner_sub_title($atts,['class' => '']);
-                $this->ef5_banner_button($atts,['class' => 'ef5-btn accent fill ef5-btn-md']);
+                $this->ef5_banner_button($atts,['class' => '']);
                 break;
             default:
                 $this->ef5_banner_main_banner($atts,['class' => '']);
                 $this->ef5_banner_main_title($atts,['class' => '']);
                 $this->ef5_banner_sub_title($atts,['class' => '']);
-                $this->ef5_banner_button($atts,['class' => 'ef5-btn accent fill ef5-btn-md']);
+                $this->ef5_banner_button($atts,['class' => '']);
                 break;
         }
     ?>
