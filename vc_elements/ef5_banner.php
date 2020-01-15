@@ -67,7 +67,7 @@ vc_map(array(
             "group" => esc_html__("Title 1", 'theclick'),
         ),
         ef5systems_vc_map_add_css_animation([
-            'param_name' => 'title_1_css_animation',
+            'param_name' => 'title1_css_animation',
             'group'      => esc_html__('Title 1', 'theclick')
         ]), 
         array(
@@ -97,7 +97,7 @@ vc_map(array(
             "group" => esc_html__("Title 2", 'theclick'),
         ),
         ef5systems_vc_map_add_css_animation([
-            'param_name' => 'title_2_css_animation',
+            'param_name' => 'title2_css_animation',
             'group'      => esc_html__('Title 2', 'theclick')
         ]), 
            
@@ -120,16 +120,17 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $wrap_css_class = ['ef5-banner-wrap','ef5-banner-'.$banner_style, $el_class];
         echo trim(implode(' ', $wrap_css_class));
     }
-    protected function ef5_banner_main_banner($atts,$args = []){
+    protected function ef5_banner_main_banner($atts,$args = []){ 
+        extract( $atts );
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
-        extract( $atts );
         $image_url = '';
         if (!empty($bn_image)) {
             $attachment_image = wp_get_attachment_image_src($bn_image, 'full');
             $image_url = $attachment_image[0];
         }
+        if(empty($image_url)) return;
 
         $link     = (isset($link)) ? $link : '';
         $link     = vc_build_link( $link );
@@ -142,13 +143,11 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         }
 
         $banner_attrs = [];
-
         $banner_css_class = [
             'main-banner',
             $this->getCSSAnimation($atts['banner_css_animation']),
             $args['class']
         ];
- 
         $banner_attrs[] = 'class="'.trim(implode(' ', $banner_css_class)).'"';
          
         ?>
@@ -162,6 +161,23 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
             'class' => ''
         ]);
         extract( $atts );
+        if(empty($title1)) return;
+
+        $title1_attrs = [];
+        $title1_css_class = [
+            'title1',
+            $this->getCSSAnimation($atts['title1_css_animation']),
+            $args['class']
+        ];
+
+        $title1_style = [];
+        $title1_style[] = (!empty($title1_color)) ? 'color:'.$title1_color.';' : '';
+
+        $title1_attrs[] = 'class="'.trim(implode(' ', $title1_css_class)).'"';
+        $title1_attrs[] = 'style="'.trim(implode(' ', $heading_style)).'"';
+        ?>
+        <div <?php echo trim(implode(' ', $title1_attrs));?>><?php echo esc_html($title1); ?></div>
+        <?php 
     }
     protected function ef5_banner_title_2($atts,$args = []){
         $args = wp_parse_args($args, [
