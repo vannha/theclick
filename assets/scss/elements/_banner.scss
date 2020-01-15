@@ -20,9 +20,9 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		@include iconWarning();
 		@include transform(translateX(-100%) rotate(-90deg));
 	    @include transform-origin(top right); 
+	    @include iconWarning();
 	}
 	.banner_btn_link{
 		font-weight: 500;
