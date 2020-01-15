@@ -3,9 +3,17 @@
 
 	}
 	.main-title{
-
+		font-size: 36px;
+		line-height: 46px;
+		color: $HeadingColor;
+		a,a:hover{
+			color: inherit;
+		}
 	}
 	.sub-title{
-		
+
+	}
+	.banner_btn_link{
+
 	}
 }
