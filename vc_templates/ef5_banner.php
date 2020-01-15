@@ -7,13 +7,13 @@ $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         case '1':
             $this->ef5_banner_main_banner($atts,['class' => '']);
             $this->ef5_banner_main_title($atts,['class' => '']);
-            $this->ef5_banner_sub_title($atts,['class' => 'wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animate']);
+            $this->ef5_banner_sub_title($atts,['class' => '']);
             $this->ef5_banner_button($atts,['class' => '']);
             break;
         default:
             $this->ef5_banner_main_banner($atts,['class' => '']);
             $this->ef5_banner_main_title($atts,['class' => '']);
-            $this->ef5_banner_sub_title($atts,['class' => 'wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animate']);
+            $this->ef5_banner_sub_title($atts,['class' => '']);
             $this->ef5_banner_button($atts,['class' => '']);
             break;
     }
