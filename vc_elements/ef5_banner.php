@@ -177,7 +177,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
 
         $main_title_attrs = [];
         $main_title_css_class = [
-            'main_title',
+            'main-title',
             $this->getCSSAnimation($atts['main_title_css_animation']),
             $args['class']
         ];
@@ -203,7 +203,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
 
         $sub_title_attrs = [];
         $sub_title_css_class = [
-            'sub_title',
+            'sub-title',
             $this->getCSSAnimation($atts['sub_title_css_animation']),
             $args['class']
         ];
