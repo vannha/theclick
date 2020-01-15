@@ -44,7 +44,7 @@
 			left: 0;
 			bottom: -6px;
 			background-color: $link_color;
-			@include transition();
+			@include transition(width 0.3s linear 0s);
 		}
 	}
 }
