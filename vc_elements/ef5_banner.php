@@ -42,8 +42,8 @@ vc_map(array(
         ), 
         array(
         	"type" => "textfield",
-            "heading" => esc_html__("Title 1",'theclick'),
-            "param_name" => "title1",
+            "heading" => esc_html__("Main Title",'theclick'),
+            "param_name" => "main_title",
             "value" => "",
             "dependency" => array(
                 "element" => 'banner_style',
@@ -51,12 +51,12 @@ vc_map(array(
                     "1"
                 ),
             ),
-            "group" => esc_html__("Title 1", 'theclick'),
+            "group" => esc_html__("Main Title", 'theclick'),
         ),
         array(
             "type"       => "colorpicker",
             "heading"    => esc_html__("Title 1 color", 'theclick'),
-            "param_name" => "title1_color",
+            "param_name" => "main_title_color",
             "value"      => "",
             "dependency" => array(
                 "element" => 'banner_style',
@@ -64,16 +64,16 @@ vc_map(array(
                     "1"
                 ),
             ),
-            "group" => esc_html__("Title 1", 'theclick'),
+            "group" => esc_html__("Main Title", 'theclick'),
         ),
         ef5systems_vc_map_add_css_animation([
-            'param_name' => 'title1_css_animation',
-            'group'      => esc_html__('Title 1', 'theclick')
+            'param_name' => 'main_title_css_animation',
+            'group'      => esc_html__('Main Title', 'theclick')
         ]), 
         array(
         	"type" => "textfield",
-            "heading" => esc_html__("Title 2",'theclick'),
-            "param_name" => "title2",
+            "heading" => esc_html__("Sub Title",'theclick'),
+            "param_name" => "sub_title",
             "value" => "",
             "dependency" => array(
                 "element" => 'banner_style',
@@ -81,12 +81,12 @@ vc_map(array(
                     "1"
                 ),
             ),
-            "group" => esc_html__("Title 2", 'theclick'),
+            "group" => esc_html__("Sub Title", 'theclick'),
         ),
         array(
             "type"       => "colorpicker",
             "heading"    => esc_html__("Title 2 color", 'theclick'),
-            "param_name" => "title2_color",
+            "param_name" => "sub_title_color",
             "value"      => "", 
             "dependency" => array(
                 "element" => 'banner_style',
@@ -94,11 +94,11 @@ vc_map(array(
                     "1"
                 ),
             ),
-            "group" => esc_html__("Title 2", 'theclick'),
+            "group" => esc_html__("Sub Title", 'theclick'),
         ),
         ef5systems_vc_map_add_css_animation([
-            'param_name' => 'title2_css_animation',
-            'group'      => esc_html__('Title 2', 'theclick')
+            'param_name' => 'sub_title_css_animation',
+            'group'      => esc_html__('Sub Title', 'theclick')
         ]), 
            
         array(
@@ -123,7 +123,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
     protected function ef5_banner_main_banner($atts,$args = []){ 
         extract( $atts );
         $args = wp_parse_args($args, [
-            'class' => ''
+            'class' => ''        
         ]);
         $image_url = '';
         if (!empty($bn_image)) {
@@ -152,44 +152,99 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
          
         ?>
         <div <?php echo trim(implode(' ', $banner_attrs));?>>
+            <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'; ?>
             <img src="<?php echo esc_url($image_url);?>" class="banner-img" alt="<?php echo esc_attr($a_title);?>">
+            <?php if($use_link) echo '</a>'; ?>
         </div>
         <?php 
     }
-    protected function ef5_banner_title_1($atts,$args = []){
+    protected function ef5_banner_main_title($atts,$args = []){
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
         extract( $atts );
-        if(empty($title1)) return;
+        if(empty($main_title)) return;
 
-        $title1_attrs = [];
-        $title1_css_class = [
-            'title1',
-            $this->getCSSAnimation($atts['title1_css_animation']),
+        $link     = (isset($link)) ? $link : '';
+        $link     = vc_build_link( $link );
+        $use_link = false;
+        if ( strlen( $link['url'] ) > 0 ) {
+            $use_link = true;
+            $a_href   = $link['url'];
+            $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
+            $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
+        }
+
+        $main_title_attrs = [];
+        $main_title_css_class = [
+            'main_title',
+            $this->getCSSAnimation($atts['main_title_css_animation']),
             $args['class']
         ];
 
-        $title1_style = [];
-        $title1_style[] = (!empty($title1_color)) ? 'color:'.$title1_color.';' : '';
+        $main_title_style = [];
+        $main_title_style[] = (!empty($main_title_color)) ? 'color:'.$main_title_color.';' : '';
 
-        $title1_attrs[] = 'class="'.trim(implode(' ', $title1_css_class)).'"';
-        $title1_attrs[] = 'style="'.trim(implode(' ', $heading_style)).'"';
+        $main_title_attrs[] = 'class="'.trim(implode(' ', $main_title_css_class)).'"';
+        $main_title_attrs[] = 'style="'.trim(implode(' ', $main_title_style)).'"';
         ?>
-        <div <?php echo trim(implode(' ', $title1_attrs));?>><?php echo esc_html($title1); ?></div>
-        <?php 
+        <div <?php echo trim(implode(' ', $main_title_attrs));?>><?php 
+            if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                echo esc_html($main_title);
+            if($use_link) echo '</a>'; 
+            ?></div><?php 
     }
-    protected function ef5_banner_title_2($atts,$args = []){
+    protected function ef5_banner_sub_title($atts,$args = []){
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
         extract( $atts );
+        if(empty($sub_title)) return;
+
+        $sub_title_attrs = [];
+        $sub_title_css_class = [
+            'sub_title',
+            $this->getCSSAnimation($atts['sub_title_css_animation']),
+            $args['class']
+        ];
+
+        $sub_title_style = [];
+        $sub_title_style[] = (!empty($sub_title_color)) ? 'color:'.$sub_title_color.';' : '';
+
+        $sub_title_attrs[] = 'class="'.trim(implode(' ', $sub_title_css_class)).'"';
+        $sub_title_attrs[] = 'style="'.trim(implode(' ', $sub_title_style)).'"';
+        ?>
+        <span <?php echo trim(implode(' ', $sub_title_attrs));?>><?php echo esc_html($sub_title); ?></span>
+        <?php 
     }
     protected function ef5_banner_button($atts,$args = []){
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
         extract( $atts );
+
+        $link     = (isset($link)) ? $link : '';
+        $link     = vc_build_link( $link );
+        $use_link = false;
+        if ( strlen( $link['url'] ) > 0 ) {
+            $use_link = true;
+            $a_href   = $link['url'];
+            $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
+            $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
+        }
+
+        if(!$use_link) return;
+
+        $banner_btn_link_attrs = [];
+        $banner_btn_link_css_class = [
+            'banner_btn_link',
+            $this->getCSSAnimation($atts['button_link_css_animation']),
+            $args['class']
+        ];
+
+        $banner_btn_link_attrs[] = 'class="'.trim(implode(' ', $banner_btn_link_css_class)).'"';
+
+        echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" class="'.trim(implode(' ', $banner_btn_link_css_class)).'">'.esc_html($a_title).'</a>';
     }
     
 }
