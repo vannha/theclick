@@ -204,7 +204,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $sub_title_attrs = [];
         $sub_title_css_class = [
             'sub-title',
-            $this->getCSSAnimation($atts['sub_title_css_animation']),
+            //$this->getCSSAnimation($atts['sub_title_css_animation']),
             $args['class']
         ];
 
