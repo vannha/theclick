@@ -14,6 +14,15 @@ vc_map(array(
             'param_name' => 'banner_style',
             "admin_label" => true
         ),
+        ef5systems_vc_map_add_css_animation([
+            'param_name' => 'banner_css_animation'
+        ]), 
+        array(
+            "type" => "textfield",
+            "heading" => esc_html__("Class",'theclick'),
+            "param_name" => "el_class",
+            "value" => "",
+        ), 
         array(
             "type" => "attach_image",
             "heading" => esc_html__("Image Item",'theclick'),
@@ -21,7 +30,7 @@ vc_map(array(
             'group'      => esc_html__('Media', 'theclick')
         ),
         ef5systems_vc_map_add_css_animation([
-            'param_name' => 'banner_css_animation',
+            'param_name' => 'media_css_animation',
             'group'      => esc_html__('Media', 'theclick')
         ]), 
         array(
@@ -34,12 +43,8 @@ vc_map(array(
             'param_name' => 'button_link_css_animation',
             'group'      => esc_html__('Link', 'theclick')
         ]), 
-        array(
-        	"type" => "textfield",
-            "heading" => esc_html__("Class",'theclick'),
-            "param_name" => "el_class",
-            "value" => "",
-        ), 
+
+
         array(
         	"type" => "textfield",
             "heading" => esc_html__("Main Title",'theclick'),
@@ -116,8 +121,14 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
     }
     protected function theclick_banner_wrap_css_class($atts){ 
         extract( $atts );
+
         $el_class = $this->getExtraClass( $el_class );
-        $wrap_css_class = ['ef5-banner-wrap','ef5-banner-'.$banner_style, $el_class];
+        $wrap_css_class = [
+            'ef5-banner-wrap',
+            'ef5-banner-'.$banner_style,
+            $this->getCSSAnimation($atts['banner_css_animation']),
+            $el_class
+        ];
         echo trim(implode(' ', $wrap_css_class));
     }
     protected function ef5_banner_main_banner($atts,$args = []){ 
@@ -145,7 +156,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $banner_attrs = [];
         $banner_css_class = [
             'main-banner',
-            $this->getCSSAnimation($atts['banner_css_animation']),
+            $this->getCSSAnimation($atts['media_css_animation']),
             $args['class']
         ];
         $banner_attrs[] = 'class="'.trim(implode(' ', $banner_css_class)).'"';
