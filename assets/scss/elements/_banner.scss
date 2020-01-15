@@ -20,7 +20,7 @@
 		left: 0;
 		top: 0;
 		@include transform(translateX(-100%) rotate(-90deg));
-	    @include transform(transform-origin(top right)); 
+	    @include transform-origin(top right); 
 	}
 	.banner_btn_link{
 
