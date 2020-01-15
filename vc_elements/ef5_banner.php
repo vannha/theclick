@@ -129,17 +129,16 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
             $attachment_image = wp_get_attachment_image_src($bn_image, 'full');
             $image_url = $attachment_image[0];
         }
-        var_dump($link);
-       /* $link     = (isset($link)) ? $link : '';
 
+        $link     = (isset($link)) ? $link : '';
         $link     = vc_build_link( $link );
         $use_link = false;
         if ( strlen( $link['url'] ) > 0 ) {
             $use_link = true;
             $a_href   = $link['url'];
-            $a_title  = !empty($link['title'])?$link['title']: esc_html__('Take a look','theclick');
+            $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
             $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
-        }*/
+        }
 
         $banner_attrs = [];
 
@@ -152,7 +151,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $banner_attrs[] = 'class="'.trim(implode(' ', $banner_css_class)).'"';
          
         ?>
-        <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
+        <div <?php echo trim(implode(' ', $banner_attrs));?>><?php 
             echo 'aaaaaaa';
             //echo theclick_html($heading_text); 
         ?></div>
