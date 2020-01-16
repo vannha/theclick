@@ -5,7 +5,7 @@
 		margin-left: -38px;
 	}
 	@media (max-width: 575px){
-		padding-left: -28px;
+		padding-left: 28px;
 	}
 	.main-media{
 		margin-bottom: 25px;
@@ -19,6 +19,10 @@
 		font-size: 36px;
 		line-height: 46px;
 		color: $HeadingColor;
+		@media (max-width: 575px){
+			font-size: 28px;
+			line-height: 36px;
+		}
 		a,a:hover{
 			color: inherit;
 		}
