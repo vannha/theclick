@@ -177,8 +177,9 @@
 	}
 	.tnp-email{
 		line-height: 21px;
-    	padding: 10px 70px 10px 0;
+    	padding: 18px 100px 19px 25px;
     	font-size: 16px;
+    	border-color: $primary_color;
     	@media (min-width: 1200px){
     		min-width: 508px;
     	}
@@ -189,8 +190,8 @@
 		top: 0;
 		right: 0;
 		font-size: 16px;
-		line-height: 21px;
-		padding: 10px 0;
+		line-height: 22px;
+    	padding: 18px 25px 18px 10px;
 		background-color: transparent;
 		text-transform: capitalize;
 		&:hover{
