@@ -186,18 +186,12 @@
 		margin-bottom: 10px;
 		font-size: 16px;
 		border-color: $primary_color;
-    	&:hover{
-    		border-color: $MainBorderColor;
-    	}
 	}
 	.tnp-email{
 		line-height: 21px;
     	padding: 18px 100px 19px 25px;
     	font-size: 16px;
     	border-color: $primary_color;
-    	&:hover{
-    		border-color: $MainBorderColor;
-    	}
     	@media (min-width: 1200px){
     		min-width: 508px;
     	}
