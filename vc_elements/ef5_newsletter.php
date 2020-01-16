@@ -35,10 +35,23 @@ vc_map(array(
             'value'      =>  array(
 				'1' => get_template_directory_uri().'/vc_elements/layouts/newsletter-1.png',
 				'2' => get_template_directory_uri() . '/vc_elements/layouts/newsletter-2.png',
+				'3' => get_template_directory_uri() . '/vc_elements/layouts/newsletter-3.png',
             ),
             'std'        => '1',
             'admin_label'=> true
         ),
+        array(
+			'type'        => 'textfield',
+			'heading'     => esc_html__( 'Sub Title', 'theclick' ),
+			'description' => esc_html__( 'Enter the text you want to show as sub title', 'theclick' ),
+			'param_name'  => 'el_sub_title',
+			'value'       => '',
+			'std'		  => '',
+			'dependency'    => array(
+				'element'   => 'layout_template',
+				'value'     => '3',
+			),
+    	),
         array(
 			'type'        => 'checkbox',
 			'description' => esc_html__( 'Show field name', 'theclick' ),
@@ -89,6 +102,12 @@ vc_map(array(
 			'std'		  => '',
 			'admin_label' => true,
     	),
+    	array(
+        	'type' => 'css_editor',
+            'heading' => esc_html__( 'CSS box', 'theclick' ),
+            'param_name' => 'css',
+            'group' => esc_html__( 'Design', 'theclick' ),
+        )
     ) 
 ));
 

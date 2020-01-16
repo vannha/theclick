@@ -1,5 +1,6 @@
 <?php 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
+
 ?>
 <div class="<?php $this->theclick_banner_wrap_css_class($atts); ?>">
     <?php 
