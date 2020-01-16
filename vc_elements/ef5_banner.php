@@ -138,6 +138,9 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
             $this->getCSSAnimation($atts['banner_css_animation']),
             $el_class
         ];
+        if(!empty($atts['css'])){
+            $wrap_css_class[]=vc_shortcode_custom_css_class($atts['css']);
+        }
         $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $wrap_css_class ) ), $this->settings['base'], $atts ) );
         //echo trim(implode(' ', $css_class));
         echo esc_attr($css_class);
