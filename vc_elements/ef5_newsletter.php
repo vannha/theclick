@@ -8,27 +8,6 @@ vc_map(array(
 	'description' => esc_html__('Add Newsletter Form.', 'theclick'),
 	'params'      => array(
 		array(
-			'type'        => 'textfield',
-			'heading'     => esc_html__( 'Element Title', 'theclick' ),
-			'description' => esc_html__( 'Enter the text you want to show as title', 'theclick' ),
-			'param_name'  => 'el_title',
-			'value'       => '',
-			'std'		  => '',
-			'admin_label' => true,
-    	),
-		array(
-			'type'        => 'dropdown',
-			'heading'     => esc_html__( 'Layout Mode', 'theclick' ),
-			'description' => esc_html__( 'Choose Layout mode you want to show', 'theclick' ),
-			'param_name'  => 'layout_mode',
-			'value'       => array(
-				esc_html__('Newsletter','theclick')         => 'default',
-				esc_html__('Newsletter Minimal','theclick') => 'minimal',
-			),
-			'std'		  => 'minimal',
-			'admin_label' => true,
-    	),
-    	array(
             'type'       => 'img',
             'heading'    => esc_html__('Layout Template','theclick'),
             'param_name' => 'layout_template',
@@ -40,6 +19,27 @@ vc_map(array(
             'std'        => '1',
             'admin_label'=> true
         ),
+        array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Layout Mode', 'theclick' ),
+			'description' => esc_html__( 'Choose Layout mode you want to show', 'theclick' ),
+			'param_name'  => 'layout_mode',
+			'value'       => array(
+				esc_html__('Newsletter','theclick')         => 'default',
+				esc_html__('Newsletter Minimal','theclick') => 'minimal',
+			),
+			'std'		  => 'minimal',
+			'admin_label' => true,
+    	),
+		array(
+			'type'        => 'textfield',
+			'heading'     => esc_html__( 'Element Title', 'theclick' ),
+			'description' => esc_html__( 'Enter the text you want to show as title', 'theclick' ),
+			'param_name'  => 'el_title',
+			'value'       => '',
+			'std'		  => '',
+			'admin_label' => true,
+    	),
         array(
 			'type'        => 'textfield',
 			'heading'     => esc_html__( 'Sub Title', 'theclick' ),
@@ -93,6 +93,9 @@ vc_map(array(
 			'value'       => 'Subscribe',
 			'std'		  => 'Subscribe',
     	),
+    	ef5systems_vc_map_add_css_animation([
+            'param_name' => 'nsl_css_animation'
+        ]), 
     	array(
 			'type'        => 'textfield',
 			'heading'     => esc_html__( 'Extra Class', 'theclick' ),
@@ -102,6 +105,15 @@ vc_map(array(
 			'std'		  => '',
 			'admin_label' => true,
     	),
+    	array(
+            'type'        => 'el_id',
+            'settings' => array(
+                'auto_generate' => true,
+            ),
+            'heading'     => esc_html__( 'Element ID', 'theclick' ),
+            'param_name'  => 'el_id',
+            'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'theclick' ), '//w3schools.com/tags/att_global_id.asp' ),
+        ),
     	array(
         	'type' => 'css_editor',
             'heading' => esc_html__( 'CSS box', 'theclick' ),
@@ -126,6 +138,16 @@ class WPBakeryShortCode_ef5_newsletter extends WPBakeryShortCode
     	$classes = ['ef5-el-title', 'ef5-heading', $args['class']];
     	?>
 		<div class="<?php echo trim(implode(' ', $classes));?>"><?php echo esc_html($atts['el_title']); ?></div>
+    	<?php
+    }
+    protected function sub_title($atts, $args=[]){
+    	if(empty($atts['el_title'])) return;
+    	$args = wp_parse_args($args, [
+    		'class' => ''
+    	]);
+    	$classes = ['sub-title', $args['class']];
+    	?>
+		<div class="<?php echo trim(implode(' ', $classes));?>"><?php echo esc_html($atts['el_sub_title']); ?></div>
     	<?php
     }
 }
