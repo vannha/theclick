@@ -187,7 +187,7 @@
 		font-size: 16px;
 		border-color: $primary_color;
     	&:hover{
-    		color: $MainBorderColor;
+    		border-color: $MainBorderColor;
     	}
 	}
 	.tnp-email{
@@ -196,7 +196,7 @@
     	font-size: 16px;
     	border-color: $primary_color;
     	&:hover{
-    		color: $MainBorderColor;
+    		border-color: $MainBorderColor;
     	}
     	@media (min-width: 1200px){
     		min-width: 508px;
