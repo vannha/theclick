@@ -22,7 +22,7 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
     $default_form .= '[newsletter_field name="email" label="" placeholder="'.esc_attr($email_text).'"]';
     $default_form .= '[/newsletter_form]';
 
-    $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
+    $el_id = !empty($el_id) ? 'ef5-nsl-' . $el_id : uniqid('ef5-nsl-');
 ?>
 <div id="<?php echo esc_attr($el_id); ?>" class="<?php echo esc_attr( $css_class ) ?>">
     <?php $this->title($atts); ?>
