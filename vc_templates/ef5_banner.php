@@ -1,8 +1,10 @@
 <?php 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
+extract($atts);
 
+$el_id = !empty($el_id) ? 'ef5-posts-' . $el_id : uniqid('ef5-posts-');
 ?>
-<div class="<?php $this->theclick_banner_wrap_css_class($atts); ?>">
+<div id="<?php echo esc_attr($el_id); ?>" class="<?php $this->theclick_banner_wrap_css_class($atts); ?>">
     <?php 
     switch ($atts['banner_style']) {
         case '1':
