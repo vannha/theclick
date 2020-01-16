@@ -150,15 +150,15 @@
 	}
 }
 .ef5-newsletter-3{
-	padding-left: 30px;
-	padding-right: 30px;
+	padding: 50px 30px 40px 30px;
 	@media (min-width: 1200px){
-		padding-left: 60px;
-		padding-right: 60px;
+		
+	}
+	@media (min-width: 1200px){
+		padding: 70px 60px 60px 60px;
 	}
 	@media (max-width: 767px){
-		padding-left: 15px;
-		padding-right: 15px;
+		padding: 40px 15px 30px 15px;
 	}
 	.ef5-el-title{
 		font-weight: 500;
