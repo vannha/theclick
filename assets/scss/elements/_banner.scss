@@ -4,6 +4,9 @@
 	@media (min-width: 1366px){
 		margin-left: -38px;
 	}
+	@media (max-width: 575px){
+		padding-left: -28px;
+	}
 	.main-media{
 		margin-bottom: 25px;
 		@media (min-width: 1200px) and (max-width: 1365px){
