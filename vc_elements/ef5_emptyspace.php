@@ -77,7 +77,7 @@ class WPBakeryShortCode_ef5_emptyspace extends WPBakeryShortCode
         $class = $css_class = $screen_size_min_width = $screen_size_max_width = $min_width = $max_width = $and = $height_screen_size = '';
         $empty_space_css = array();
         foreach($values as $value){
-            $screen_size_min = isset($value['screen_size_min']) ? $value['screen_size_min'] : '320';
+            $screen_size_min = isset($value['screen_size_min']) ? $value['screen_size_min'] : '120';
             $screen_size_max = isset($value['screen_size_max']) ? $value['screen_size_max'] : '4800';
             $screen_size_height = isset($value['height']) ? $value['height'] : '';
             if(!empty($screen_size_min)){
