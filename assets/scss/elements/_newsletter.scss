@@ -177,6 +177,9 @@
 	form{
 		margin-top: 51px;
 		position: relative;
+		@media (max-width: 575px){
+			margin-top: 30px;
+		}
 		::-webkit-input-placeholder {
 		    font-size: 16px;
 		}
