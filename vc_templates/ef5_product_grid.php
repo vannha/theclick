@@ -1,98 +1,117 @@
 <?php 
-    $taxo = 'product_cat';
-    $atts['categories'] = $atts['cat'];
-    if(isset($atts['show_read_more']) && $atts['show_read_more']):  
-        wp_register_script( 'cms-loadmore-js', get_template_directory_uri().'/assets/js/cms_loadmore.js', array('jquery') ,'1.0',true);
-        // What page are we on? And what is the pages limit?
-        global $wp_query;
-        $max = $wp_query->max_num_pages;
-        $limit = $atts['limit'];
-        $paged = ( get_query_var('paged') > 1 ) ? get_query_var('paged') : 1;
-        // Add some parameters for the JS.
-        $current_id =  str_replace('-','_',$atts['html_id']);
-        wp_localize_script(
-            'cms-loadmore-js',
-            'cms_more_obj'.$current_id,
+    $atts = vc_map_get_attributes($this->getShortcode(), $atts);
+    extract($atts);
+
+    $el_id = !empty($el_id) ? 'ef5-products-' . $el_id : uniqid('ef5-products-');
+
+    if (get_query_var('paged')) {
+        $paged = get_query_var('paged');
+    } elseif (get_query_var('page')) {
+        $paged = get_query_var('page');
+    } else {
+        $paged = 1;
+    }
+    
+
+    $tax_query = array();
+    $select_terms = array();
+    if ( ! empty( $atts['taxonomies'] ) ) {
+        $terms = get_terms( array(
+            'taxonomy' => 'product_cat',
+            'hide_empty' => false,
+        ) );
+
+        $elected_taxs = explode(',', str_replace(' ','',$atts['taxonomies'])); 
+        foreach ( $terms as $t ) {  
+            if(in_array($t->slug,$elected_taxs)){
+                $select_terms[] = $t; 
+            }
+        }
+        $tax_query = array(
             array(
-                'startPage' => $paged,
-                'maxPages' => $max,
-                'total' => $wp_query->found_posts,
-                'perpage' => $limit,
-                'nextLink' => next_posts($max, false),
-                'masonry' => $atts['layout'],
-                'loadmore_text' => esc_html__('Load More','theclick')
-            )
+                'taxonomy' => 'product_cat',
+                'field'    => 'slug',
+                'terms'    => $elected_taxs,
+            ),
         );
-        wp_enqueue_script( 'cms-loadmore-js' ); 
-    endif;
-    $layout_mode = !empty($atts['layout_mode']) ? $atts['layout_mode'] : '1';
-    $layout_mode_cls = !empty($atts['layout_mode']) ? 'layout-'.$atts['layout_mode'] : '';
+    } 
+
+    
+
+    $products_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $posts_per_page,
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => $tax_query,
+        'paged' => $paged,
+    );
+    global $wp_query;
+    $products = $wp_query = new WP_Query($products_args);
+    $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
+
+    $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
+
+
+ 
 ?>
-<div class="cms-grid-wraper cms-grid-products <?php echo esc_attr($layout_mode_cls);?>" id="<?php echo esc_attr($atts['html_id']);?>">
-    <?php if($atts['filter']=="true" and $atts['layout']=='masonry'):?>
-        <div class="cms-grid-filter text-center">
-            <ul class="cms-filter-category list-unstyled list-inline">
-                <li><a class="active" href="#" data-group="all"><?php echo esc_html('All'); ?></a></li>
-                <?php 
-                if(is_array($atts['categories']))
-                foreach($atts['categories'] as $category):?>
-                    <?php $term = get_term( $category, $taxo );?>
-                    <?php if(isset($term) && $term):?>
-                    <li><a href="#" data-group="<?php echo esc_attr('category-'.$term->slug);?>">
-                            <?php echo esc_html($term->name);?>
-                        </a>
-                    </li>
-                    <?php endif; ?>
-                <?php endforeach;?>
-            </ul>
-        </div>
-    <?php endif;?>
+<div class="ef5-products" id="<?php echo esc_attr($el_id); ?>">
      
-    <div class="row cms-grid products loop-products <?php echo esc_attr($atts['grid_class']);?>">
-        <?php
-        $posts = $atts['posts'];
-        $size = 'large';
-        while($posts->have_posts()){
-            $posts->the_post();
-            $groups = array();
-            $groups[] = '"all"';
-            foreach(cmsGetCategoriesByPostID(get_the_ID(),$taxo) as $category){
-                $groups[] = '"category-'.$category->slug.'"';
+    <div class="<?php $this->theclick_posts_wrap_css_class($atts);?>">
+        <?php if( $filter=="true" && count($select_terms) > 0 && $layout=='masonry'):?>
+            <div class="ef5-grid-filter">
+                <ul class="ef5-filter-category">
+                    <li><a class="active" href="#" data-group="all"><?php echo esc_html__('All','theclick'); ?></a></li>
+                    <?php 
+                     
+                    foreach($select_terms as $category):?>
+                        <?php $term = get_term( $category, $taxo );?>
+                        <?php if(isset($term) && $term):?>
+                        <li><a href="#" data-group="<?php echo esc_attr('category-'.$term->slug);?>">
+                                <?php echo esc_html($term->name);?>
+                            </a>
+                        </li>
+                        <?php endif; ?>
+                    <?php endforeach;?>
+                </ul>
+            </div>
+        <?php endif;?>
+        <div class="row ef5-products-wrap">
+            <?php
+            switch ($layout_template) {
+                case '1':
+                $d = 0;
+                while ($posts->have_posts()) {
+                    $d++;
+                    $post_count2++;
+                    $posts->the_post();
+                    ?>
+                    <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                        <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php
+                            do_action( 'woocommerce_before_shop_loop_item' );
+                            do_action( 'woocommerce_before_shop_loop_item_title' );
+                            do_action( 'woocommerce_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item' );
+                        ?>
+                        </div>
+                    </div>
+                <?php 
+                }  
+                wp_reset_postdata();
+                break;
+                case '2':
+                       
+                break;
+
             }
             ?>
-            <div class="cms-grid-item product <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
-                <?php 
-                    if($layout_mode == '1'){
-                        do_action( 'woocommerce_before_shop_loop_item' );
-                        do_action( 'woocommerce_before_shop_loop_item_title' );
-                        do_action( 'woocommerce_shop_loop_item_title' );
-                        do_action( 'woocommerce_after_shop_loop_item_title' );
-                        do_action( 'woocommerce_after_shop_loop_item' );
-                    }else{
-                        //$thumb_img = get_the_post_thumbnail( get_the_id(), '400x400', array( 'class' => 'thumb-image' ) );
-                         
-                        $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
-                        $img = wpb_getImageBySize( array(
-                            'attach_id' => $post_thumbnail_id,
-                            'thumb_size' => '400x400',
-                            'class' => 'thumb-image',
-                        ));
-                        $thumbnail = $img['thumbnail'];
-                        //echo wp_kses_post($thumbnail);
-
-                        echo '<a href="' . esc_url( get_permalink() ) . '" class="product-link">';
-                        echo wp_kses_post( $thumbnail );
-                        echo '</a>';
-                    }
-                ?>
-            </div>
-            <?php
-        }
-        ?>
+        </div>
     </div>
-    
-    <?php
-    if(isset($atts['show_read_more']) && $atts['show_read_more'])
-        echo '<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>';
-    ?>
+<?php
+theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
+$this->view_all($atts);
+?>
 </div>
