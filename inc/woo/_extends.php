@@ -66,3 +66,17 @@ function theclick_get_current_page_url() {
 
 	return $link;
 }
+
+function theclick_get_product_categories_for_autocomplete(){
+    $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
+    $result = array();
+    foreach($product_categories as $category)
+    {
+        $result[] = array(
+            'label'=>$category->name,
+            'value'=>$category->slug,
+            'group'=>'Categories'
+        );
+    }
+    return $result;
+}
