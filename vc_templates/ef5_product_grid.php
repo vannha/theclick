@@ -37,7 +37,6 @@
     } 
 
     
-
     $products_args = array(
         'post_type' => 'product',
         'posts_per_page' => $posts_per_page,
@@ -53,8 +52,6 @@
 
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
 
-
- 
 ?>
 <div class="ef5-products" id="<?php echo esc_attr($el_id); ?>">
      
