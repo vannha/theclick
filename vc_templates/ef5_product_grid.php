@@ -55,7 +55,7 @@
 ?>
 <div class="ef5-products" id="<?php echo esc_attr($el_id); ?>">
      
-    <div class="<?php $this->theclick_posts_wrap_css_class($atts);?>">
+    <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
         <?php if( $filter=="true" && count($select_terms) > 0 && $layout=='masonry'):?>
             <div class="ef5-grid-filter">
                 <ul class="ef5-filter-category">
