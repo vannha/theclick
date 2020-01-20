@@ -85,7 +85,6 @@ vc_map(array(
 	                ),
 	                'heading'    => esc_html__('Load More Text','theclick'),
 	            ),
-	            vc_map_add_css_animation(),
 	            array(
 	                'type'       => 'textfield',
 	                'heading'    => esc_html__('Extra Class','theclick'),
