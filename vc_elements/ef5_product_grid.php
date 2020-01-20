@@ -134,7 +134,12 @@ vc_map(array(
 		            	),
 		            "group" => esc_html__("Grid Settings", 'theclick')
 		        ),
+		        ef5systems_vc_map_add_css_animation([
+		            'param_name' => 'css_animation',
+		            "group" => esc_html__("Grid Settings", 'theclick')
+		        ]), 
 	        ),
+
 	        array(
 	            array(
 	                'type'       => 'css_editor',
