@@ -38,7 +38,7 @@
 
     $products_args = array(
         'post_type' => 'product',
-        'posts_per_page' => $posts_per_page,
+        'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
         'orderby' => 'date',
         'order' => 'DESC',
