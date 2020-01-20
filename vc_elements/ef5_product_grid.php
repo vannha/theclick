@@ -151,7 +151,7 @@ class WPBakeryShortCode_ef5_products extends WPBakeryShortCode{
 	}
 	protected function theclick_products_wrap_css_class($atts){
         extract($atts);
-        
+
         $css_classes = array(
             'ef5-products-'.$layout_template,
             vc_shortcode_custom_css_class( $css ),
@@ -159,5 +159,21 @@ class WPBakeryShortCode_ef5_products extends WPBakeryShortCode{
         $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
         echo trim($css_class);
+    }
+    protected function view_all($atts = ''){
+        extract($atts);
+        if($pagination !== 'view_all') return;
+        ?>
+            <div class="view-all-wrap text-center">
+                <a href="<?php echo get_permalink($show_view_all_page);?>" class="ef5-btn ef5-btn-md fill accent <?php echo esc_attr($view_all_style);?>"><?php echo esc_html($show_view_all_text);?></a>
+            </div>
+        <?php
+    }
+    protected function loadmore($atts = ''){
+        extract($atts);
+        if($pagination !== 'loadmore') return;
+        ?>
+        	<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>
+        <?php
     }
 }

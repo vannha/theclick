@@ -36,7 +36,6 @@
         );
     } 
 
-    
     $products_args = array(
         'post_type' => 'product',
         'posts_per_page' => $posts_per_page,
@@ -81,7 +80,6 @@
                 $d = 0;
                 while ($posts->have_posts()) {
                     $d++;
-                    $post_count2++;
                     $posts->the_post();
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
@@ -108,7 +106,9 @@
         </div>
     </div>
 <?php
+$show_pagination = ($pagination == 'pagin') ? '1' : '0';
 theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
+$this->loadmore($atts);
 ?>
 </div>
