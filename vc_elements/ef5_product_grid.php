@@ -11,8 +11,7 @@ vc_map(array(
 	                'heading'    => esc_html__('Layout Mode','theclick'),
 	                'param_name' => 'layout_template',
 	                'value'      =>  array(
-	                    '1'          => get_template_directory_uri().'/vc_elements/layouts/red-grid-product-layout1.jpg',
-	                    '2'          => get_template_directory_uri().'/vc_elements/layouts/red-grid-product-layout2.jpg',
+	                    '1'          => get_template_directory_uri().'/vc_elements/layouts/product-layout1.jpg'
 	                ),
 	                'std'        => '1',
 	            ),
@@ -38,25 +37,61 @@ vc_map(array(
 	                'heading'     => esc_html__( 'Post per page', 'theclick' ),
 	                'param_name'  => 'post_per_page',
 	                'value'       => '',
+	                'std'           => '8',
 	            ),
-		        array(
-	                'type'          => 'checkbox',
-	                'param_name'    => 'show_pagination',
-	                'value'         => array(
-	                    esc_html__( 'Show Pagination', 'theclick' ) => '1'
+	             
+	            array(
+	                'type'       => 'dropdown',
+	                'param_name' => 'pagination',
+	                'value'      => array(
+						esc_html__('None','theclick')              => 'none',
+						esc_html__('Pagination','theclick')        => 'pagin',
+						esc_html__('View all page','theclick') 	   => 'view_all',
+						esc_html__('Load More','theclick')         => 'loadmore',
 	                ),
-	                'std'           => '1',
-	                'group'         => esc_html__('Post Meta','theclick')
+	                'std'        => 'none',
+	                'heading'    => esc_html__('Show View All','theclick'),
 	            ),
-		        array(
-		            'type' => 'checkbox',
-		            'heading' => esc_html__("Alignment Center", 'theclick'),
-		            'param_name' => 'align_center',
-		            'value' => array(
-		                'Yes' => true
-		            ),
-		            'std' => false,
-		        ),
+	            array(
+	                'type'       => 'dropdown',
+	                'param_name' => 'view_all_page',
+	                'value'      => ef5systems_vc_list_page(['default' => false]),
+	                'std'        => '',
+	                'dependency'    => array(
+	                    'element'   => 'pagination',
+	                    'value'     => 'view_all',
+	                ),
+	                'heading'    => esc_html__('Choose a Page for view all!','theclick'),
+	            ),
+	            array(
+	                'type'       => 'textfield',
+	                'param_name' => 'view_all_text',
+	                'value'      => 'View All',
+	                'std'        => 'View All',
+	                'dependency'    => array(
+	                    'element'   => 'pagination',
+	                    'value'     => 'view_all',
+	                ),
+	                'heading'    => esc_html__('View All Text','theclick'),
+	            ),
+	            array(
+	                'type'       => 'textfield',
+	                'param_name' => 'loadmore_text',
+	                'value'      => 'Load More',
+	                'std'        => 'Load More',
+	                'dependency'    => array(
+	                    'element'   => 'pagination',
+	                    'value'     => 'loadmore',
+	                ),
+	                'heading'    => esc_html__('Load More Text','theclick'),
+	            ),
+	            array(
+	                'type'       => 'textfield',
+	                'heading'    => esc_html__('Extra Class','theclick'),
+	                'param_name' => 'el_class',
+	                'value'      => '',
+	                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'theclick'),
+	            ),
 	      		array(
 		            'type'        => 'el_id',
 		            'settings' => array(
@@ -116,7 +151,7 @@ class WPBakeryShortCode_ef5_products extends WPBakeryShortCode{
 	}
 	protected function theclick_products_wrap_css_class($atts){
         extract($atts);
-        /* get value for Design Tab */
+        
         $css_classes = array(
             'ef5-products-'.$layout_template,
             vc_shortcode_custom_css_class( $css ),
