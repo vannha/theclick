@@ -52,7 +52,7 @@
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
 
 ?>
-<div class="ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
+<div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
      
     <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
         <?php if( $filter=="true" && count($select_terms) > 0 && $layout=='masonry'):?>

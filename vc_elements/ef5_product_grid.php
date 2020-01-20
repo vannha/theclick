@@ -156,7 +156,6 @@ class WPBakeryShortCode_ef5_product_grid extends WPBakeryShortCode{
         extract($atts);
 
         $css_classes = array(
-        	'ef5-posts',
             'ef5-product-grid-'.$layout_template,
             vc_shortcode_custom_css_class( $css ),
         );
