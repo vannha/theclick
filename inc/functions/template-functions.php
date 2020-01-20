@@ -294,11 +294,13 @@ if(!function_exists('theclick_loop_pagination')){
                 posts_nav_link();
                 break;
             case '3':
+                echo '<div class="d-flex justify-content-between">';
                 posts_nav_link(
                     apply_filters('theclick_loop_pagination_sep_text', '<span class="d-none"></span>'),
                     apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')),
                     apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick'))
                 );
+                echo '</div>';
                 break;
             case '2':
                 echo '<div class="'.trim(implode(' ', $paginate_links)).'">';

@@ -98,7 +98,9 @@
 		@include d-flex();
 		justify-content: space-between;
 	}
-
+	&.layout-type-3{
+		
+	}
 	// Layout
 	&.layout-2 .nav-links{
 		.page-numbers{
