@@ -1,7 +1,7 @@
 <?php
 vc_map(array(
 		'name' => 'TheClick Product Grid',
-	    'base' => 'ef5_products',
+	    'base' => 'ef5_product_grid',
 	    'icon' => 'icon-wpb-application-icon-large',
 	    'category'      => esc_html__('TheClick', 'theclick'),
 	    "params" => array_merge(
@@ -147,7 +147,7 @@ vc_map(array(
 	    )
 	)
 );
-class WPBakeryShortCode_ef5_products extends WPBakeryShortCode{
+class WPBakeryShortCode_ef5_product_grid extends WPBakeryShortCode{
 	protected function content($atts, $content = null){
 		$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         return parent::content($atts, $content);
@@ -156,7 +156,7 @@ class WPBakeryShortCode_ef5_products extends WPBakeryShortCode{
         extract($atts);
 
         $css_classes = array(
-            'ef5-products-'.$layout_template,
+            'ef5-product-grid-'.$layout_template,
             vc_shortcode_custom_css_class( $css ),
         );
 

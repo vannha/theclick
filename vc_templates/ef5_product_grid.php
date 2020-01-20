@@ -2,7 +2,7 @@
     $atts = vc_map_get_attributes($this->getShortcode(), $atts);
     extract($atts);
 
-    $el_id = !empty($el_id) ? 'ef5-products-' . $el_id : uniqid('ef5-products-');
+    $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
 
     if (get_query_var('paged')) {
         $paged = get_query_var('paged');
@@ -52,7 +52,7 @@
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
 
 ?>
-<div class="ef5-products <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
+<div class="ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
      
     <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
         <?php if( $filter=="true" && count($select_terms) > 0 && $layout=='masonry'):?>
@@ -73,7 +73,7 @@
                 </ul>
             </div>
         <?php endif;?>
-        <div class="row ef5-products-wrap">
+        <div class="row ef5-product-grid-wrap">
             <?php
             switch ($layout_template) {
                 case '1':
