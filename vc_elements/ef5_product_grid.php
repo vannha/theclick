@@ -113,7 +113,14 @@ vc_map(array(
 		            "group" => esc_html__("Grid Settings", 'theclick')
 		        ),
 	        ),
-	        
+			 
+	        ef5systems_grid_settings([
+                'group'                  => esc_html__('Grid Settings','theclick'),
+                'dependency_element'     => '',
+		        'dependency_value'       => 'value',
+		        'dependency_value_value' => ''
+	            ]
+	        ),
 	        array(
 		        array(
 		            "type" => "dropdown",
@@ -154,7 +161,7 @@ class WPBakeryShortCode_ef5_products extends WPBakeryShortCode{
             'ef5-products-'.$layout_template,
             vc_shortcode_custom_css_class( $css ),
         );
-        
+
         $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
         echo trim($css_class);
