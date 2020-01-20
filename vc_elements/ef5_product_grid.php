@@ -113,10 +113,7 @@ vc_map(array(
 		            "group" => esc_html__("Grid Settings", 'theclick')
 		        ),
 	        ),
-	        ef5systems_grid_settings([
-                'group'                  => esc_html__('Grid Settings','theclick')
-	            ]
-	        ),
+	        
 	        array(
 		        array(
 		            "type" => "dropdown",
