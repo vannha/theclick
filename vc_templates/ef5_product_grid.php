@@ -107,7 +107,7 @@
     </div>
 <?php
 $show_pagination = ($pagination == 'pagin') ? '1' : '0';
-theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']);
+theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '1']);
 $this->view_all($atts);
 $this->loadmore($atts);
 ?>
