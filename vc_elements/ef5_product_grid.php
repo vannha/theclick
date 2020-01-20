@@ -85,6 +85,7 @@ vc_map(array(
 	                ),
 	                'heading'    => esc_html__('Load More Text','theclick'),
 	            ),
+	            vc_map_add_css_animation(),
 	            array(
 	                'type'       => 'textfield',
 	                'heading'    => esc_html__('Extra Class','theclick'),
@@ -156,6 +157,7 @@ class WPBakeryShortCode_ef5_products extends WPBakeryShortCode{
             'ef5-products-'.$layout_template,
             vc_shortcode_custom_css_class( $css ),
         );
+        
         $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
         echo trim($css_class);
