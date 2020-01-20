@@ -50,7 +50,7 @@ vc_map(array(
 						esc_html__('Load More','theclick')         => 'loadmore',
 	                ),
 	                'std'        => 'none',
-	                'heading'    => esc_html__('Show View All','theclick'),
+	                'heading'    => esc_html__('Pagination','theclick'),
 	            ),
 	            array(
 	                'type'       => 'dropdown',
