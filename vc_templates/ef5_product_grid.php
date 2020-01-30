@@ -46,6 +46,8 @@
         'paged' => $paged,
     );
     global $wp_query;
+    $temp = $wp_query;
+    $wp_query = null;
     $products = $wp_query = new WP_Query($products_args);
 
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
@@ -94,7 +96,7 @@
                     </div>
                 <?php 
                 }  
-                wp_reset_postdata();
+                //wp_reset_postdata();
                 break;
                 case '2':
                        
@@ -109,5 +111,8 @@ $show_pagination = ($pagination == 'pagin') ? '1' : '0';
 theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']);
 $this->view_all($atts);
 $this->loadmore($atts);
+$wp_query = null;
+$wp_query = $temp;
+wp_reset_query();
 ?>
 </div>
