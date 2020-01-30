@@ -290,9 +290,6 @@ if(!function_exists('theclick_loop_pagination')){
         $paginate_links = ['nav-links','layout-'.$args['style'],$args['class']];
         printf('%s','<div class="ef5-loop-pagination layout-type-'.esc_attr($args['style']).'">');
         switch ($args['style']) {
-            case '4':
-                posts_nav_link();
-                break;
             case '3':
                 echo '<div class="d-flex justify-content-between">';
                 posts_nav_link(
