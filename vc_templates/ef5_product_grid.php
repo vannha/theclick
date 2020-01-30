@@ -94,7 +94,7 @@
                     </div>
                 <?php 
                 }  
-                
+                //wp_reset_postdata();
                 break;
                 case '2':
                        
@@ -109,6 +109,5 @@ $show_pagination = ($pagination == 'pagin') ? '1' : '0';
 theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
 $this->loadmore($atts);
-wp_reset_postdata();
 ?>
 </div>
