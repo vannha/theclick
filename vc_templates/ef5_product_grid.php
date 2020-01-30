@@ -45,9 +45,9 @@
         'tax_query' => $tax_query,
         'paged' => $paged,
     );
-    global $wp_query;
+    //global $wp_query;
     $products = $wp_query = new WP_Query($products_args);
-    var_dump($wp_query->is_front_page());
+    var_dump($wp_query->is_home());
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
