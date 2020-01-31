@@ -54,7 +54,7 @@
         'tax_query' => $tax_query,
         'paged' => $paged,
     );
-    global $wp_query;
+    //global $wp_query;
     var_dump(is_front_page());
     $products = $wp_query = new WP_Query($products_args);
 var_dump(is_front_page());
