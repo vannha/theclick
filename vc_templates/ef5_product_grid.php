@@ -49,7 +49,7 @@
 
     global $wp_query;
 
-    $products = new WP_Query($products_args);
+    $wp_query = new WP_Query($products_args);
 
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
@@ -80,9 +80,9 @@
             switch ($layout_template) {
                 case '1':
                 $d = 0;
-                while ($products->have_posts()) {
+                while ($wp_query->have_posts()) {
                     $d++;
-                    $products->the_post();
+                    $wp_query->the_post();
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
                         <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
