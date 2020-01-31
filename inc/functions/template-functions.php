@@ -592,3 +592,31 @@ if(!function_exists('theclick_portfolio_navigation')){
         }
     }
 }
+/**
+ * Single portfolio navigation 
+ *
+ * @since 1.0.0
+*/
+if(!function_exists('theclick_home_pagination')){
+function theclick_home_pagination($query = null) {
+    /*if ( !$query ) {
+            global $wp_query;
+            $query = $wp_query;
+    } commented out because do I need this? */
+
+    $big = 999999999; // need an unlikely integer
+
+    $pagination = paginate_links( array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var( 'page' ) ),
+            'total' => $query->max_num_pages,
+            'prev_text' => '&laquo; Previous',
+            'next_text' => 'Next &raquo;',
+
+            ) );
+
+    return $pagination;
+
+} 
+}
