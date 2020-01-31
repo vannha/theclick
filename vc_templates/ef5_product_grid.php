@@ -12,15 +12,7 @@
     } else {
         $paged = 1;
     }
-    var_dump(is_front_page());
-    /*if(is_front_page()) {
-        $paged = (get_query_var('page')) ? get_query_var('page') : 1;
-    }else {
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    }*/
-    //preg_match('%/page/([0-9]+)%', $_SERVER['REQUEST_URI'], $matches );
-    //$paged = isset( $matches[1] ) ? $matches[1] : 1;
-    
+    //var_dump(is_front_page());
 
     $tax_query = array();
     $select_terms = array();
@@ -54,10 +46,11 @@
         'tax_query' => $tax_query,
         'paged' => $paged,
     );
+    
     //global $wp_query;
-    var_dump(is_front_page());
+
     $products = $wp_query = new WP_Query($products_args);
-var_dump(is_front_page());
+
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
@@ -104,7 +97,7 @@ var_dump(is_front_page());
                     </div>
                 <?php 
                 }  
-                //wp_reset_postdata();
+                wp_reset_postdata();
                 break;
                 case '2':
                        
@@ -116,10 +109,9 @@ var_dump(is_front_page());
     </div>
 <?php
 $show_pagination = ($pagination == 'pagin') ? '1' : '0';
-var_dump(is_front_page());
-//if(is_front_page()) 
-//    echo '<div id="pagination" class="home-pagination">' . theclick_home_pagination($wp_query) . '</div></div>';
-//else
+if(is_front_page()) 
+    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '0']);
+else
     theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
 $this->loadmore($atts);
