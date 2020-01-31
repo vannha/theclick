@@ -592,19 +592,3 @@ if(!function_exists('theclick_portfolio_navigation')){
         }
     }
 }
-add_action('pre_get_posts','alter_query');
-
-function alter_query($query) {
-    //gets the global query var object
-    global $wp_query;
-
-    //gets the front page id set in options
-    $front_page_id = get_option('page_on_front');
-
-    if ( 'page' != get_option('show_on_front') || $front_page_id != $wp_query->query_vars['page_id'] )
-        return;
-
-    if ( !$query->is_main_query() )
-        return;
- 
-}

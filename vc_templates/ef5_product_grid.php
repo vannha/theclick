@@ -109,10 +109,7 @@
     </div>
 <?php
 $show_pagination = ($pagination == 'pagin') ? '1' : '0';
-if(is_front_page()) 
-    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '0']);
-else
-    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
+theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']);
 $this->view_all($atts);
 $this->loadmore($atts);
 ?>
