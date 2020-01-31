@@ -46,8 +46,8 @@
         'tax_query' => $tax_query,
         'paged' => $paged,
     );
-    
-    //global $wp_query;
+
+    global $wp_query;
 
     $products = $wp_query = new WP_Query($products_args);
 
