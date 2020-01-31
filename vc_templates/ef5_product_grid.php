@@ -44,7 +44,7 @@
             ),
         );
     } 
-var_dump(is_front_page());
+
     $products_args = array(
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
@@ -55,8 +55,9 @@ var_dump(is_front_page());
         'paged' => $paged,
     );
     global $wp_query;
+    var_dump(is_front_page());
     $products = $wp_query = new WP_Query($products_args);
-
+var_dump(is_front_page());
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
