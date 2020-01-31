@@ -96,7 +96,7 @@
 	&.layout-type-4,
 	&.layout-type-5{
 		@include d-flex();
-		justify-content: space-between;
+		justify-content: center;
 	}
 	&.layout-type-3{
 		
