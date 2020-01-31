@@ -12,6 +12,7 @@ global $wp_query;
     } else {
         $paged = 1;
     }
+    var_dump(is_front_page());
     /*if(is_front_page()) {
         $paged = (get_query_var('page')) ? get_query_var('page') : 1;
     }else {
