@@ -592,31 +592,19 @@ if(!function_exists('theclick_portfolio_navigation')){
         }
     }
 }
-/**
- * Single portfolio navigation 
- *
- * @since 1.0.0
-*/
-if(!function_exists('theclick_home_pagination')){
-function theclick_home_pagination($query = null) {
-    /*if ( !$query ) {
-            global $wp_query;
-            $query = $wp_query;
-    } commented out because do I need this? */
+add_action('pre_get_posts','alter_query');
 
-    $big = 999999999; // need an unlikely integer
+function alter_query($query) {
+    //gets the global query var object
+    global $wp_query;
 
-    $pagination = paginate_links( array(
-            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-            'format' => '?paged=%#%',
-            'current' => max( 1, get_query_var( 'page' ) ),
-            'total' => $query->max_num_pages,
-            'prev_text' => '&laquo; Previous',
-            'next_text' => 'Next &raquo;',
+    //gets the front page id set in options
+    $front_page_id = get_option('page_on_front');
 
-            ) );
+    if ( 'page' != get_option('show_on_front') || $front_page_id != $wp_query->query_vars['page_id'] )
+        return;
 
-    return $pagination;
-
-} 
+    if ( !$query->is_main_query() )
+        return;
+ 
 }
