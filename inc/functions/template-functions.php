@@ -277,6 +277,7 @@ if(!function_exists('theclick_single_post_content')){
 */
 if(!function_exists('theclick_loop_pagination')){
     function theclick_loop_pagination($args=[]){
+        var_dump($GLOBALS['wp_query']);
         if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) return;
         $args = wp_parse_args($args, [
             'show_pagination' => '1',
