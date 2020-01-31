@@ -173,7 +173,7 @@ class WPBakeryShortCode_ef5_product_grid extends WPBakeryShortCode{
         if($pagination !== 'view_all') return;
         ?>
             <div class="view-all-wrap text-center">
-                <a href="<?php echo get_permalink($view_all_page);?>" class="ef5-btn"><?php echo esc_html($view_all_text);?></a>
+                <a href="<?php echo get_permalink($view_all_page);?>" class="ef5-btn outline"><?php echo esc_html($view_all_text);?></a>
             </div>
         <?php
     }
