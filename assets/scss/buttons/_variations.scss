@@ -1,6 +1,6 @@
 // Default 
 $btn-inner-space   : 12px 22px 13px 22px;
-$btn-font-size     : 14px;
+$btn-font-size     : 12px;
 $btn-line-height   : 15px;
 $btn-font-style    : inherit;
 $btn-font-weight   : 500;
@@ -12,4 +12,4 @@ $btn-bg-color      : transparent;
 $btn-bg-color-hover: transparent;
 
 // Button Default 
-$btn-border   : 1px solid transparent;
+$btn-border   : 1px solid $primary_color;
