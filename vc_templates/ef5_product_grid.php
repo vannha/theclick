@@ -5,20 +5,20 @@ global $wp_query;
 
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
 
-    /*if (get_query_var('paged')) {
+    if (get_query_var('paged')) {
         $paged = get_query_var('paged');
     } elseif (get_query_var('page')) {
         $paged = get_query_var('page');
     } else {
         $paged = 1;
-    }*/
+    }
     /*if(is_front_page()) {
         $paged = (get_query_var('page')) ? get_query_var('page') : 1;
     }else {
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     }*/
-    preg_match('%/page/([0-9]+)%', $_SERVER['REQUEST_URI'], $matches );
-    $paged = isset( $matches[1] ) ? $matches[1] : 1;
+    //preg_match('%/page/([0-9]+)%', $_SERVER['REQUEST_URI'], $matches );
+    //$paged = isset( $matches[1] ) ? $matches[1] : 1;
     
 
     $tax_query = array();
