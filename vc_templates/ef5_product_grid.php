@@ -49,7 +49,7 @@
 
     global $wp_query;
 
-    $products = $wp_query = new WP_Query($products_args);
+    $products = new WP_Query($products_args);
 
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
