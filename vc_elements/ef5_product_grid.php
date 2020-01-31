@@ -119,6 +119,17 @@ vc_map(array(
                 'dependency_value_value' => ['0']
         	]),
 	        array(
+	        	array(
+		            "type" => "dropdown",
+		            "heading" => esc_html__("Column XL Gutter",'theclick'),
+		            "param_name" => "column_xl_gutter",
+		            "value" => array(
+		            	"30px" => "gutter-xl-30",
+		            	"40px" => "gutter-xl-40"
+	            	),
+	            	'std'        => 'gutter-xl-40',
+		            "group" => esc_html__("Grid Settings", 'theclick')
+		        ),
 		        array(
 		            "type" => "dropdown",
 		            "heading" => esc_html__("Filter on Masonry",'theclick'),
