@@ -114,6 +114,7 @@ global $wp_query;
     </div>
 <?php
 $show_pagination = ($pagination == 'pagin') ? '1' : '0';
+var_dump(is_front_page());
 if(is_front_page()) 
     echo '<div id="pagination" class="home-pagination">' . theclick_home_pagination($wp_query) . '</div></div>';
 else
