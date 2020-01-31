@@ -12,7 +12,6 @@
     } else {
         $paged = 1;
     }
-    //var_dump(is_front_page());
 
     $tax_query = array();
     $select_terms = array();
@@ -47,6 +46,7 @@
         'paged' => $paged,
     );
 
+    $ifp = is_front_page();
     global $wp_query;
 
     $wp_query = new WP_Query($products_args);
@@ -109,7 +109,10 @@
     </div>
 <?php
 $show_pagination = ($pagination == 'pagin') ? '1' : '0';
-theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']);
+if($ifp)
+    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']);
+else
+    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
 $this->loadmore($atts);
 ?>
