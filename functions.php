@@ -95,8 +95,8 @@ if(!function_exists('theclick_configs')){
             'theclick_product_single_image_h' => theclick_get_opts('product_single_image_size',['height' => '582'])['height'],
             'theclick_product_single_gallery_w' => theclick_get_opts('theclick_product_single_gallery_w',['width' => '570px'])['width'],
             // loop product image size
-            'theclick_product_loop_image_w' => theclick_get_opts('product_loop_image_size',['width' => '320'])['width'],
-            'theclick_product_loop_image_h' => theclick_get_opts('product_loop_image_size',['height' => '430'])['height'],
+            'theclick_product_loop_image_w' => theclick_get_opts('product_loop_image_size',['width' => '205'])['width'],
+            'theclick_product_loop_image_h' => theclick_get_opts('product_loop_image_size',['height' => '162'])['height'],
             // product default gallery thumbnail size
             'theclick_product_gallery_thumbnail_w' => theclick_get_opts('product_gallery_thumbnail_size',['width' => '120'])['width'],
             'theclick_product_gallery_thumbnail_h' => theclick_get_opts('product_gallery_thumbnail_size',['height' => '153'])['height'],
