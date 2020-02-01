@@ -1223,36 +1223,59 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
         $default_gallery_layout = 'simple';
         $default_gallery_thumb_position = 'thumb-right';
         if($default){
-            $gallery_layout['-1']         = esc_html__('Default','theclick');
-            $gallery_thumb_position['-1'] = esc_html__('Default','theclick');
+            $gallery_layout['-1']         = esc_html__('Default','overcome');
+            $gallery_thumb_position['-1'] = esc_html__('Default','overcome');
             $default_value                = '-1';
             $default_gallery_layout       = '-1';
             $default_gallery_thumb_position       = '-1';
         }
-        $gallery_layout['simple']     = esc_html__('Simple', 'theclick');
-        $gallery_layout['thumbnail_v'] = esc_html__('Thumbnail Vertical', 'theclick');
-        $gallery_layout['thumbnail_h'] = esc_html__('Thumbnail Horizontal', 'theclick');
+        $gallery_layout['simple']     = esc_html__('Simple', 'overcome');
+        $gallery_layout['thumbnail_v'] = esc_html__('Thumbnail Vertical', 'overcome');
+        $gallery_layout['thumbnail_h'] = esc_html__('Thumbnail Horizontal', 'overcome');
 
-        $gallery_thumb_position['thumb-left'] = esc_html__('Left','theclick');
-        $gallery_thumb_position['thumb-right'] = esc_html__('Right','theclick');
+        $gallery_thumb_position['thumb-left'] = esc_html__('Left','overcome');
+        $gallery_thumb_position['thumb-right'] = esc_html__('Right','overcome');
 
         return array(
-            'title'      => esc_html__('WooCommerce', 'theclick'),
+            'title'      => esc_html__('WooCommerce', 'overcome'),
             'icon'       => 'el el-shopping-cart',
             'subsection' => false,
             'fields'     => array(
                 array(
+                    'id'       => 'loop_product_image',
+                    'type'     => 'info',
+                    'style'    => 'success',
+                    'title'    => esc_html__('Products Images', 'overcome'),
+                    'subtitle' => esc_html__('Custom products image size, ...', 'overcome'),
+                ),
+                array(
+                    'title'    => esc_html__('Main Images', 'overcome'),
+                    'subtitle' => esc_html__('Enter the Main image size', 'overcome'),
+                    'id'       => 'product_single_image_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                ),
+                array(
+                    'title'    => esc_html__('Loop Images', 'overcome'),
+                    'subtitle' => esc_html__('Enter the Loop image size', 'overcome'),
+                    'id'       => 'product_loop_image_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                ),
+                array(
                     'id'       => 'loop_product_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Loop Products Design', 'theclick'),
-                    'subtitle' => esc_html__('Custom products design, ...', 'theclick'),
+                    'title'    => esc_html__('Shop Page', 'overcome'),
+                    'subtitle' => esc_html__('Custom shop page design, ...', 'overcome'),
                 ),
                 array(
                     'id'       => 'products_per_page',
                     'type'     => 'slider',
-                    'title'    => esc_html__('Number Products', 'theclick'),
-                    'subtitle' => esc_html__('Choose number products to show on archive page, ...', 'theclick'),
+                    'title'    => esc_html__('Number Products', 'overcome'),
+                    'subtitle' => esc_html__('Choose number products to show on archive page, ...', 'overcome'),
                     'default'   => 12,
                     'min'       => 1,
                     'step'      => 1,
@@ -1262,8 +1285,8 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                 array(
                     'id'       => 'products_columns',
                     'type'     => 'slider',
-                    'title'    => esc_html__('Products Columns', 'theclick'),
-                    'subtitle' => esc_html__('Choose products columns show on archive page, ...', 'theclick'),
+                    'title'    => esc_html__('Products Columns', 'overcome'),
+                    'subtitle' => esc_html__('Choose products columns show on archive page, ...', 'overcome'),
                     'default'   => 4,
                     'min'       => 1,
                     'step'      => 1,
@@ -1273,8 +1296,8 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                 array(
                     'id'       => 'shop_sidebar_pos',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Layouts', 'theclick'),
-                    'subtitle' => esc_html__('select a layout for products page', 'theclick'),
+                    'title'    => esc_html__('Layouts', 'overcome'),
+                    'subtitle' => esc_html__('select a layout for products page', 'overcome'),
                     'options'  => theclick_sidebar_position_opts(),
                     'default'  => theclick_shop_sidebar_position()
                 ),
@@ -1282,22 +1305,39 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'id'       => 'single_product_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Single Product Design', 'theclick'),
-                    'subtitle' => esc_html__('Custom single product design, ...', 'theclick'),
+                    'title'    => esc_html__('Single Product Design', 'overcome'),
+                    'subtitle' => esc_html__('Custom single product design, ...', 'overcome'),
+                ),
+                array(
+                    'id'       => 'product_sidebar_pos',
+                    'type'     => 'button_set',
+                    'title'    => esc_html__('Layouts', 'overcome'),
+                    'subtitle' => esc_html__('select a layout for single product page', 'overcome'),
+                    'options'  => theclick_sidebar_position_opts(),
+                    'default'  => theclick_product_sidebar_position()
                 ),
                 array(
                     'id'       => 'product_gallery_layout',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Layouts', 'theclick'),
-                    'subtitle' => esc_html__('select a layout for single...', 'theclick'),
+                    'title'    => esc_html__('Gallery Layouts', 'overcome'),
+                    'subtitle' => esc_html__('select a layout for single product image...', 'overcome'),
                     'options'  => $gallery_layout,
                     'default'  => $default_gallery_layout
                 ),
                 array(
+                    'title'    => esc_html__('Gallery Width', 'overcome'),
+                    'subtitle' => esc_html__('Enter the gallery image width', 'overcome'),
+                    'id'       => 'theclick_product_single_gallery_w',
+                    'type'     => 'dimensions',
+                    'height'   => false,
+                    'units'    => array('px'),
+                    'default'  => array()
+                ),
+                array(
                     'id'       => 'product_gallery_thumb_position',
                     'type'     => 'button_set',
-                    'title'    => esc_html__('Thumbnail Position', 'theclick'),
-                    'subtitle' => esc_html__('select a position for gallery thumbnail', 'theclick'),
+                    'title'    => esc_html__('Thumbnail Position', 'overcome'),
+                    'subtitle' => esc_html__('select a position for gallery thumbnail', 'overcome'),
                     'options'  => $gallery_thumb_position,
                     'default'  => $default_gallery_thumb_position,
                     'required' => array(
@@ -1305,19 +1345,62 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     )
                 ),
                 array(
+                    'title'    => esc_html__('Gallery Images Size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the gallery image size', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                    'required' => array(
+                        array('product_gallery_layout', '=', 'simple')
+                    )
+                ),
+                array(
+                    'title'    => esc_html__('Gallery Images Size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the gallery image size', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_v_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                    'required' => array(
+                        array('product_gallery_layout', '=', 'thumbnail_v')
+                    )
+                ),
+                array(
+                    'title'    => esc_html__('Gallery Images Size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the gallery image size', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_h_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                    'required' => array(
+                        array('product_gallery_layout', '=', 'thumbnail_h')
+                    )
+                ),
+                array(
+                    'title'    => esc_html__('Gallery Images Space', 'overcome'),
+                    'subtitle' => esc_html__('Enter space between each image', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_space',
+                    'type'     => 'dimensions',
+                    'height'   => false,
+                    'units'    => array('px'),
+                    'default'  => array()
+                ),
+                array(
                     'id'       => 'product_share_on',
-                    'title'    => esc_html__('Share', 'theclick'),
-                    'subtitle' => esc_html__('Show share product to some socials network on each post.', 'theclick'),
+                    'title'    => esc_html__('Share', 'overcome'),
+                    'subtitle' => esc_html__('Show share product to some socials network on each post.', 'overcome'),
                     'type'     => 'switch',
                     'default'  => '0',
                 ),
+                // cart page
                 array(
-                    'id'       => 'product_sidebar_pos',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__('Layouts', 'theclick'),
-                    'subtitle' => esc_html__('select a layout for single product page', 'theclick'),
-                    'options'  => theclick_sidebar_position_opts(),
-                    'default'  => theclick_product_sidebar_position()
+                    'title'    => esc_html__('Cart item thumbnail size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the image size', 'overcome'),
+                    'id'       => 'theclick_woocommerce_cart_item_thumbnail_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
                 ),
             )
         );

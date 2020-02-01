@@ -88,8 +88,31 @@ if(!function_exists('theclick_configs')){
             // Comments 
             'cmt_avatar_size'  => 64,
             'cmt_border'       => '1px solid #D8D8D8',
+
             // WooCommerce,
-            'theclick_product_single_image_w' => '455',
+            // product single image size
+            'theclick_product_single_image_w' => theclick_get_opts('product_single_image_size',['width' => '435'])['width'],
+            'theclick_product_single_image_h' => theclick_get_opts('product_single_image_size',['height' => '582'])['height'],
+            'theclick_product_single_gallery_w' => theclick_get_opts('theclick_product_single_gallery_w',['width' => '570px'])['width'],
+            // loop product image size
+            'theclick_product_loop_image_w' => theclick_get_opts('product_loop_image_size',['width' => '320'])['width'],
+            'theclick_product_loop_image_h' => theclick_get_opts('product_loop_image_size',['height' => '430'])['height'],
+            // product default gallery thumbnail size
+            'theclick_product_gallery_thumbnail_w' => theclick_get_opts('product_gallery_thumbnail_size',['width' => '120'])['width'],
+            'theclick_product_gallery_thumbnail_h' => theclick_get_opts('product_gallery_thumbnail_size',['height' => '153'])['height'],
+            // product vertical gallery thumbnail size
+            'theclick_product_gallery_thumbnail_v_w' => theclick_get_opts('product_gallery_thumbnail_v_size',['width' => '120'])['width'],
+            'theclick_product_gallery_thumbnail_v_h' => theclick_get_opts('product_gallery_thumbnail_v_size',['height' => '153'])['height'],
+            // product horizontal gallery thumbnail size
+            'theclick_product_gallery_thumbnail_h_w' => theclick_get_opts('product_gallery_thumbnail_h_size',['width' => '120'])['width'],
+            'theclick_product_gallery_thumbnail_h_h' => theclick_get_opts('product_gallery_thumbnail_h_size',['height' => '153'])['height'],
+            // product gallery thumbnail space
+            'theclick_product_gallery_thumbnail_space' => theclick_get_opts('product_gallery_thumbnail_space',['width' => '15px'])['width'],
+            // cart item thumbnail size 
+            'theclick_woocommerce_cart_item_thumbnail_size' => theclick_get_opts('theclick_woocommerce_cart_item_thumbnail_size',['width' => '100px', 'height'=> '115px']),
+
+            // WooCommerce,
+            /*'theclick_product_single_image_w' => '455',
             'theclick_product_single_image_h' => '605',
 
             'theclick_product_loop_image_w' => '205',
@@ -104,7 +127,7 @@ if(!function_exists('theclick_configs')){
             'theclick_product_gallery_thumbnail_h_w' => '115',
             'theclick_product_gallery_thumbnail_h_h' => '140',
 
-            'theclick_product_gallery_thumbnail_space' => '14',
+            'theclick_product_gallery_thumbnail_space' => '14',*/
 
             // API 
             'google_api_key' => apply_filters('ef5systems-google-api-key', false)
