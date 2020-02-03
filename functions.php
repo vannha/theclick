@@ -388,7 +388,7 @@ function theclick_scripts()
     if(class_exists('Woocommerce')) {
         wp_enqueue_script( 'selectWoo' );
         wp_enqueue_style( 'select2' );
-        wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'1.0.0',true);
+        wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
         wp_enqueue_script('theclick-slick-theme',get_template_directory_uri().'/assets/js/slick-theme.js',array('jquery','slick-js'),'',true);
     }
 
