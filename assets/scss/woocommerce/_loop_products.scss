@@ -88,12 +88,14 @@
 		z-index: 1;
 		span{
 			background: url('../images/icons/prev.png') no-repeat center center ;
+			background-size: contain;
 		}
 	} 
 	.slick-next{
 		right: 0;
 		span{
 			background: url('../images/icons/next.png') no-repeat center center ;
+			background-size: contain;
 		}
 	}
 }
