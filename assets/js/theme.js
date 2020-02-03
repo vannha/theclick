@@ -680,7 +680,8 @@
     // WooCommerce Loop Product Gallery 
     function theclick_woo_loop_thumb_gallery(){
         'use strict';
-        if(typeof $.flexslider != 'undefined'){
+        console.log('aaa');
+        if(typeof $.flexslider != 'undefined'){ console.log('bbb');
             $('.ef5-wc-loop-images').each(function() {
                   
                 $(this).flexslider({
