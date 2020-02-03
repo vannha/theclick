@@ -689,10 +689,10 @@
                 items:1,
                 autoplay:false,
                 responsiveClass:true,
-                loop:false,
+                loop:true,
                 nav: true,
                 dots: false,
-                margin: 0,
+                margin: 30,
                 rtl: rtlopt,
             });
         });
