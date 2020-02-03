@@ -70,15 +70,23 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 	}
 }
 /**
+ * Loop Product content wrap open
+*/
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_content_wrap_open',2);
+function woocommerce_template_loop_content_wrap_open(){
+	echo '<div class="wc-loop-content-wrap">';
+}
+
+/**
  * Loop Product Rating
 */
-add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating',2);
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating',3);
 
 /**
  * Change loop Product title
 */
 if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
-	add_action('theclick_woocommerce_shop_loop_products', 'woocommerce_template_loop_product_title', 3);
+	add_action('theclick_woocommerce_shop_loop_products', 'woocommerce_template_loop_product_title', 4);
 	/**
 	 * Show the product title in the product loop. By default this is an H2.
 	 */
@@ -91,7 +99,7 @@ if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
  * Loop Product Price
 */
 if(!function_exists('theclick_woocommerce_template_loop_price')){
-	add_action('theclick_woocommerce_shop_loop_products','theclick_woocommerce_template_loop_price',4);
+	add_action('theclick_woocommerce_shop_loop_products','theclick_woocommerce_template_loop_price',5);
 	function theclick_woocommerce_template_loop_price(){
 	?>
 		<div class="ef5-loop-products-price ef5-heading font-style-700 text-accent"><?php
@@ -107,7 +115,7 @@ if(!function_exists('theclick_woocommerce_template_loop_price')){
  * Loop Product Add to cart
 */
 if(!function_exists('theclick_woocommerce_loop_product_add_to_cart')){
-	add_action('theclick_woocommerce_shop_loop_products','theclick_woocommerce_loop_product_add_to_cart',99);
+	add_action('theclick_woocommerce_shop_loop_products','theclick_woocommerce_loop_product_add_to_cart',98);
 	add_action('theclick_woocommerce_loop_product_add_to_cart', 'woocommerce_template_loop_add_to_cart');
 	function theclick_woocommerce_loop_product_add_to_cart(){
 		?>
@@ -118,6 +126,13 @@ if(!function_exists('theclick_woocommerce_loop_product_add_to_cart')){
 	}
 }
 
+/**
+ * Loop Product content wrap close
+*/
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_content_wrap_close',99);
+function woocommerce_template_loop_content_wrap_close(){
+	echo '</div>';
+}
 /**
  * Change loop add_to_cart button class
  *
