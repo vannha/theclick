@@ -684,8 +684,8 @@
             vertical: false,
             slidesToShow: 1,
             focusOnSelect: true,
-            prevArrow:"<button class='slick-prev'><i class='fal fa-angle-left' aria-hidden='true'></i></button>",
-            nextArrow:"<button class='slick-next'><i class='fal fa-angle-right' aria-hidden='true'></i></button>",
+            prevArrow:"<button class='slick-prev'><span></span></button>",
+            nextArrow:"<button class='slick-next'><span></span></button>",
             infinite: true,
         });
          
