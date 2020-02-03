@@ -5,7 +5,7 @@
  * Use: Product Attributes
 */
 if(!function_exists('theclick_woocommerce_loop_attributes')){
-	add_action('theclick_woocommerce_before_shop_loop_products_inner', 'theclick_woocommerce_loop_attributes', 0);
+	//add_action('theclick_woocommerce_before_shop_loop_products_inner', 'theclick_woocommerce_loop_attributes', 0);
 	function theclick_woocommerce_loop_attributes(){
 		?>
 		<div class="ef5-loop-atts row justify-content-between">
