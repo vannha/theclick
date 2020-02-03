@@ -166,10 +166,8 @@ class WPBakeryShortCode_ef5_product_grid extends WPBakeryShortCode{
 	protected function content($atts, $content = null){
 		$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 		wp_enqueue_script('owl-carousel');
-	    wp_enqueue_script('ef5-owl-carousel');
 	    wp_enqueue_style( 'owl-carousel');
-	    wp_enqueue_style( 'ef5-owl-carousel');
-	     
+
         return parent::content($atts, $content);
 	}
 	protected function theclick_products_wrap_css_class($atts){
