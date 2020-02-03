@@ -165,8 +165,8 @@ vc_map(array(
 class WPBakeryShortCode_ef5_product_grid extends WPBakeryShortCode{
 	protected function content($atts, $content = null){
 		$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-		wp_enqueue_script('owl-carousel');
-	    wp_enqueue_style( 'owl-carousel');
+		/*wp_enqueue_script('owl-carousel');
+	    wp_enqueue_style( 'owl-carousel');*/
 
         return parent::content($atts, $content);
 	}

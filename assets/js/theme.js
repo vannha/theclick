@@ -680,7 +680,7 @@
     // WooCommerce Loop Product Gallery 
     function theclick_woo_loop_thumb_gallery(){
         'use strict';
-        $('.ef5-wc-loop-img').each(function() {
+        /*$('.ef5-wc-loop-img').each(function() {
             $(this).owlCarousel({
                 items:1,
                 autoplay:false,
@@ -690,7 +690,7 @@
                 dots: false,
                 margin: 30,
             });
-        });
+        });*/
     }
     // WooCommerce Single Product Gallery 
     function theclick_wc_single_product_gallery(){
