@@ -685,7 +685,7 @@
                 items:1,
                 autoplay:false,
                 responsiveClass:true,
-                loop:true,
+                loop:false,
                 nav: true,
                 dots: false,
                 margin: 30,
