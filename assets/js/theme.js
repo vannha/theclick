@@ -680,10 +680,6 @@
     // WooCommerce Loop Product Gallery 
     function theclick_woo_loop_thumb_gallery(){
         'use strict';
-        var dic=$('html').attr('dir');   
-        var rtlopt=false;
-        if(dic=='rtl')
-            rtlopt = true;
         $('.ef5-wc-loop-img').each(function() {
             $(this).owlCarousel({
                 items:1,
@@ -693,7 +689,6 @@
                 nav: true,
                 dots: false,
                 margin: 30,
-                rtl: rtlopt,
             });
         });
     }
