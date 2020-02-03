@@ -59,7 +59,7 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 			<div class="ef5-wc-loop-before-img"><?php do_action('theclick_before_woocommerce_loop_product_thumbnail'); ?></div>
 			<div class="ef5-wc-loop-img">
 				
-				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				<div id="carouselExampleControls" class="loop-product-carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<a href="<?php echo esc_url( get_permalink() ) ?>" class="p-thumb-link">
