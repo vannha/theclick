@@ -14,15 +14,17 @@
         theclick_vcRow();
         theclick_inlineCss();
         theclick_ajax_pagination();
-        theclick_woo_filters();
-        theclick_wc_single_product_gallery();
-        theclick_wooscp_change_text();
         theclick_link_search_toggle();
         // WooCommerce
+
+        theclick_woo_filters();
+        theclick_woo_loop_thumb_gallery();
+        theclick_wc_single_product_gallery();
+        theclick_wooscp_change_text();
         theclick_quantity_plus_minus();
         theclick_quantity_plus_minus_action();
         theclick_remove_cart_actions();
-
+        // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
     });
@@ -33,8 +35,10 @@
         theclick_join_mobile_menu();
         theclick_toggle_menu();
         theclick_vcRow();
+        // WooCommerce
         theclick_woo_price_filter_add_data_title();
         theclick_wooscp_change_text();
+        // End WooCommerce
         theclick_masonry_filter();
         theclick_vc_animation_callback();
 	});
@@ -671,6 +675,27 @@
             if(parseInt(input.val()) < min)
                 input.val(min).change();
         });
+    }
+
+    // WooCommerce Loop Product Gallery 
+    function theclick_woo_loop_thumb_gallery(){
+        'use strict';
+        if(typeof $.flexslider != 'undefined'){
+            $('.ef5-wc-loop-images').each(function() {
+                  
+                $(this).flexslider({
+                    animation: "ef5-wc-loop-img", 
+                    slideshow: true,
+                    touch: true,
+                    keyboard: true,
+                    pauseOnHover: true,
+                    after: function(item){
+                        console.log(item);
+                    }
+                });
+                 
+            });
+        }
     }
     // WooCommerce Single Product Gallery 
     function theclick_wc_single_product_gallery(){
