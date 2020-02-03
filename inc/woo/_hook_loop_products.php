@@ -54,7 +54,7 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
                 false,
                 array( 'class' => 'hover-image') );
         }
-	?>
+		?>
 		<div class="ef5-wc-loop-images">
 			<div class="ef5-wc-loop-before-img"><?php do_action('theclick_before_woocommerce_loop_product_thumbnail'); ?></div>
 			<div class="ef5-wc-loop-img">
@@ -70,14 +70,12 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 							echo '</a>';
 						}
 					}
-					//echo '<div class="static-content">'..'</div>';
-					//echo '<div class="hover-content no-padding">'.theclick_html($hover_img).'</div>';
 					
 				?>
 			</div>
 			<div class="ef5-wc-loop-after-img"><?php do_action('theclick_after_woocommerce_loop_product_thumbnail'); ?></div>
 		</div>
-	<?php
+		<?php
 	}
 }
 /**
