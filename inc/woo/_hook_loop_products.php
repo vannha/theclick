@@ -45,7 +45,6 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 		global $product;
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', 'woocommerce_thumbnail' );
         $gallery   = get_post_meta( $product->get_id(), '_product_image_gallery', true );
-         
 		?>
 		<div class="ef5-wc-loop-images">
 			<div class="ef5-wc-loop-before-img"><?php do_action('theclick_before_woocommerce_loop_product_thumbnail'); ?></div>
@@ -73,7 +72,7 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 /**
  * Loop Product Rating
 */
-add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating',2);
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating',6);
 
 /**
  * Change loop Product title
