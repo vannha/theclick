@@ -60,12 +60,10 @@
 }
 
 .ef5-loop-products-inner{
-	border: 1px solid #ABABAB;
-	padding: 0 5px 5px;
+	 
 }
 .ef5-wc-loop-images{
 	min-height:200px;
-	padding:10px;
 	@include d-flex();
 	align-items: center;
 	justify-content: center;
@@ -74,6 +72,19 @@
 .ef5-wc-loop-img{
 	position: relative;
 	overflow: hidden;
+	.slick-arrow{
+		font-size: 20px;
+		background-color: transparent;
+		position: absolute;
+		top: 50%;
+		margin-top: -10px;
+	}
+	.slick-prev{
+		left: 0;
+	} 
+	.slick-next{
+		right: 0;
+	}
 }
 .ef5-loop-product-title{
 	padding: 4px 0 11px;
