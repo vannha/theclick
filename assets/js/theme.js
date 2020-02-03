@@ -680,23 +680,22 @@
     // WooCommerce Loop Product Gallery 
     function theclick_woo_loop_thumb_gallery(){
         'use strict';
-        console.log('aaa');
-        if(typeof $.flexslider != 'undefined'){ console.log('bbb');
-            $('.ef5-wc-loop-images').each(function() {
-                  
-                $(this).flexslider({
-                    animation: "ef5-wc-loop-img", 
-                    slideshow: true,
-                    touch: true,
-                    keyboard: true,
-                    pauseOnHover: true,
-                    after: function(item){
-                        console.log(item);
-                    }
-                });
-                 
+        var dic=$('html').attr('dir');   
+        var rtlopt=false;
+        if(dic=='rtl')
+            rtlopt = true;
+        $('.ef5-wc-loop-img').each(function() {
+            $(this).owlCarousel({
+                items:1,
+                autoplay:false,
+                responsiveClass:true,
+                loop:false,
+                nav: true,
+                dots: false,
+                margin: 0,
+                rtl: rtlopt,
             });
-        }
+        });
     }
     // WooCommerce Single Product Gallery 
     function theclick_wc_single_product_gallery(){
