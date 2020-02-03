@@ -59,8 +59,20 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 			<div class="ef5-wc-loop-before-img"><?php do_action('theclick_before_woocommerce_loop_product_thumbnail'); ?></div>
 			<div class="ef5-wc-loop-img">
 				<?php 
-					echo '<div class="static-content">'.woocommerce_get_product_thumbnail().'</div>';
-					echo '<div class="hover-content no-padding">'.theclick_html($hover_img).'</div>';
+					echo '<a href="' . esc_url( get_permalink() ) . '" class="loop-p-link">';
+					echo woocommerce_get_product_thumbnail();
+					echo '</a>';
+					if ( ! empty( $gallery ) ) {
+						foreach ($gallery as $gal) {
+							$gal_img = wp_get_attachment_image( $gal, $image_size, false, array( 'class' => 'gal-image') );
+							echo '<a href="' . esc_url( get_permalink() ) . '" class="loop-p-link">';
+							echo theclick_html($hover_img);
+							echo '</a>';
+						}
+					}
+					//echo '<div class="static-content">'..'</div>';
+					//echo '<div class="hover-content no-padding">'.theclick_html($hover_img).'</div>';
+					
 				?>
 			</div>
 			<div class="ef5-wc-loop-after-img"><?php do_action('theclick_after_woocommerce_loop_product_thumbnail'); ?></div>
