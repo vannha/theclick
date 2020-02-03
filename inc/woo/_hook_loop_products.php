@@ -58,17 +58,22 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 		<div class="ef5-wc-loop-images">
 			<div class="ef5-wc-loop-before-img"><?php do_action('theclick_before_woocommerce_loop_product_thumbnail'); ?></div>
 			<div class="ef5-wc-loop-img">
+				<a href="<?php echo esc_url( get_permalink() ) ?>" class="p-thumb-link">
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="d-block w-100" src="..." alt="First slide">
+							<?php echo woocommerce_get_product_thumbnail(); ?>
 						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="..." alt="Second slide">
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="..." alt="Third slide">
-						</div>
+						<?php  
+							if ( ! empty( $gallery ) ) {
+								foreach ($gallery as $gal) {
+									$gal_img = wp_get_attachment_image( $gal, $image_size, false, array( 'class' => 'gal-image') );
+									echo '<div class="carousel-item">';
+									echo theclick_html($gal_img);
+									echo '</div>';
+								}
+							}
+						?>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -79,6 +84,7 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
+				</a>
 				<?php 
 					/*echo '<a href="' . esc_url( get_permalink() ) . '" class="loop-p-link">';
 					echo woocommerce_get_product_thumbnail();
