@@ -688,18 +688,7 @@
             nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
             infinite: false,
         });
-        
-        /*$('.ef5-wc-loop-img').each(function() {
-            $(this).owlCarousel({
-                items:1,
-                autoplay:false,
-                responsiveClass:true,
-                loop:false,
-                nav: true,
-                dots: false,
-                margin: 30,
-            });
-        });*/
+         
     }
     // WooCommerce Single Product Gallery 
     function theclick_wc_single_product_gallery(){

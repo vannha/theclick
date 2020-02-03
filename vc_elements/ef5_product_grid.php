@@ -165,9 +165,9 @@ vc_map(array(
 class WPBakeryShortCode_ef5_product_grid extends WPBakeryShortCode{
 	protected function content($atts, $content = null){
 		$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-		/*wp_enqueue_script('owl-carousel');
-	    wp_enqueue_style( 'owl-carousel');*/
-
+	    wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
+        wp_enqueue_script('theclick-slick-theme',get_template_directory_uri().'/assets/js/slick-theme.js',array('jquery','slick-js'),'',true);
+        wp_enqueue_style('slick-css',get_template_directory_uri().'/assets/css/slick.css');
         return parent::content($atts, $content);
 	}
 	protected function theclick_products_wrap_css_class($atts){
