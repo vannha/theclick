@@ -60,7 +60,12 @@
 }
 
 .ef5-loop-products-inner{
-	 
+	&:hover{
+		.ef5-wc-loop-img .slick-arrow{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
 }
 .ef5-wc-loop-images{
 	min-height:200px;
@@ -78,6 +83,9 @@
 		top: 50%;
 		margin-top: -30px;
 		padding: 20px 10px;
+		visibility: hidden;
+		opacity: 0;
+		@include transition();
 		span{
 			width: 10px;
 			height: 20px;

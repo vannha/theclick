@@ -24,7 +24,7 @@ if(!function_exists('theclick_woocommerce_shop_loop_products')){
 	?>
 		<div class="ef5-loop-products ef5-box-shadow transition push text-center">
 			<?php do_action('theclick_woocommerce_before_shop_loop_products_inner') ?>
-			<div class="ef5-loop-products-inner">
+			<div class="ef5-loop-products-inner" onclick="">
 				<?php do_action('theclick_woocommerce_shop_loop_products'); ?>
 			</div>
 			<?php do_action('theclick_woocommerce_after_shop_loop_products_inner') ?>
