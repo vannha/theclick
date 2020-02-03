@@ -45,15 +45,6 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 		global $product;
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', 'woocommerce_thumbnail' );
         $gallery   = get_post_meta( $product->get_id(), '_product_image_gallery', true );
-        $hover_img = woocommerce_get_product_thumbnail();
-        if ( ! empty( $gallery ) ) {
-            $gallery        = explode( ',', $gallery );
-            $first_image_id = $gallery[0];
-            $hover_img      = wp_get_attachment_image( $first_image_id,
-                $image_size,
-                false,
-                array( 'class' => 'hover-image') );
-        }
 		?>
 		<div class="ef5-wc-loop-images">
 			<div class="ef5-wc-loop-before-img"><?php do_action('theclick_before_woocommerce_loop_product_thumbnail'); ?></div>
