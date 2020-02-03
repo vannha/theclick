@@ -35,13 +35,14 @@ $wc-badge: 35px;
   background: $accent_color;
   position: absolute;
   top: 12px;
-  left: -18px;
+  left: 20px;
   text-align: center;
   line-height: 20px;
   color: $white;
   z-index: 10;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  @media (max-width: 1199px){
+    left: 15px;
+  }
 }
 
 /* Custom styles */
@@ -56,32 +57,36 @@ $wc-badge: 35px;
 /* Different positions */
 .ef5-corner-ribbon.top-left{
   top: 12px;
-  left: -18px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  left: 20px;
+  @media (max-width: 1199px){
+    left: 15px;
+  }
 }
 
 .ef5-corner-ribbon.top-right{
   top: 12px;
-  right: -18px;
+  right: 20px;
   left: auto;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  @media (max-width: 1199px){
+    right: 15px;
+  }
 }
 
 .ef5-corner-ribbon.bottom-left{
   top: auto;
   bottom: 12px;
-  left: -18px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  left: 20;
+  @media (max-width: 1199px){
+    left: 15px;
+  }
 }
 
 .ef5-corner-ribbon.bottom-right{
   top: auto;
-  right: -18px;
+  right: 20px;
   bottom: 12px;
   left: auto;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  @media (max-width: 1199px){
+    right: 15px;
+  }
 }

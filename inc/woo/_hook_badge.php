@@ -33,9 +33,7 @@ if(!function_exists('theclick_woocommerce_sale')){
         if(isset($regular_price) && $regular_price > 0 && isset($sales_price)){
             $percentage = round( ( ( $regular_price - $sales_price ) / $regular_price ) * 100 );
         ?>
-        <span class="ef5-badge ef5-corner-ribbon top-left bg-accent shadow font-style-700 text-xxsmall">
-            <?php printf( '- %s', $percentage . '%' ) ?>
-        </span>
+        <span class="ef5-badge ef5-corner-ribbon top-left bg-accent"><?php printf( '- %s', $percentage . '%' ) ?></span>
     <?php 
         }
     }
