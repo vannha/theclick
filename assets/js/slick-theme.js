@@ -1,9 +1,5 @@
 jQuery(document).ready(function ($) {
-    $('.ef5-wc-loop-images').slick({
-        asNavFor: ".ef5-wc-loop-img",
-        accessibility: false,
-        infinite: true,
-    });
+    
     /*$('.col-thumb.left .thumbnails-slider').slick({
         vertical: true,
         slidesToShow: 4,

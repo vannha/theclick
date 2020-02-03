@@ -680,9 +680,11 @@
     // WooCommerce Loop Product Gallery 
     function theclick_woo_loop_thumb_gallery(){
         'use strict';
-        $('.loop-product-carousel').carousel({
-          interval: 2000
-        })
+        $('.ef5-wc-loop-images').slick({
+            asNavFor: ".ef5-wc-loop-img",
+            accessibility: false,
+            infinite: true,
+        });
         /*$('.ef5-wc-loop-img').each(function() {
             $(this).owlCarousel({
                 items:1,
