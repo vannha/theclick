@@ -686,7 +686,7 @@
             rtlopt = true;
         $('.ef5-wc-loop-img').each(function() {
             $(this).owlCarousel({
-                items:5,
+                items:1,
                 autoplay:false,
                 responsiveClass:true,
                 loop:false,
