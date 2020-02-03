@@ -57,7 +57,7 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 		?>
 		<div class="ef5-wc-loop-images">
 			<div class="ef5-wc-loop-before-img"><?php do_action('theclick_before_woocommerce_loop_product_thumbnail'); ?></div>
-			<div id="plg-<?php echo esc_attr($product->get_id())?>" class="ef5-wc-loop-img ef5-owl">
+			<div class="ef5-wc-loop-img">
 				<?php 
 					echo '<a href="' . esc_url( get_permalink() ) . '" class="loop-p-link">';
 					echo woocommerce_get_product_thumbnail();
