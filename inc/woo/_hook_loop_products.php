@@ -121,8 +121,8 @@ add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_
 /**
  * Loop Product rating price wrap close
 */
-add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating_price_wrap_open',8);
-function woocommerce_template_loop_rating_price_wrap_open(){
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating_price_wrap_close',8);
+function woocommerce_template_loop_rating_price_wrap_close(){
 	echo '</div>';
 }
 
