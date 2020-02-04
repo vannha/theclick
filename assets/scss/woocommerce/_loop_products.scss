@@ -136,6 +136,7 @@
     right: 25px;
     opacity: 0;
     visibility: hidden;
+    @include transform(translateY(43px));
     @include transition();
 	.add_to_cart_button,
 	.added_to_cart,
@@ -217,6 +218,7 @@
 		.ef5-loop-product-add-to-cart{
 			visibility: visible;
 			opacity: 1;
+			@include transform(translateY(0));
 			@include transition();
 		}
 	}
