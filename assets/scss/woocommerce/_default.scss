@@ -8,12 +8,12 @@
 }
 
 .ef5-products-price{
-	font-weight: 700;
+	font-weight: 500;
+	font-size: 18px;
 	del{
 		color: $BodyColor;
 	}
 	&.single{
-		font-size: 18px;
 		color: $accent_color;
 		margin-bottom: 30px;
 	}
