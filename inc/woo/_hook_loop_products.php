@@ -102,7 +102,7 @@ if(!function_exists('theclick_woocommerce_template_loop_price')){
 	add_action('theclick_woocommerce_shop_loop_products','theclick_woocommerce_template_loop_price',5);
 	function theclick_woocommerce_template_loop_price(){
 	?>
-		<div class="ef5-loop-products-price ef5-heading font-style-700 text-accent"><?php
+		<div class="ef5-loop-products-price ef5-heading"><?php
 			global $product;
 			$price_html = $product->get_price_html();
 			printf('%1$s', $product->get_price_html());
