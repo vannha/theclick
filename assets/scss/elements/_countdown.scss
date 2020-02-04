@@ -1,0 +1,15 @@
+.ef5-countdown-layout-1{
+	.ef5-countdown-bar{
+		@include d-flex();
+		align-items:center;
+		.item{
+			flex: 0 0 auto;
+		}
+		.amount{
+			
+		}
+		.title{
+			
+		}
+	}
+}
