@@ -116,6 +116,9 @@
 	font-size: 18px;
 	line-height: 24px;
 	margin-bottom: 5px;
+	a:hover{
+		color: $link_color;
+	}
 }
 .wc-loop-rating-price{
 	@include d-flex();
