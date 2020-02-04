@@ -123,12 +123,11 @@
     }
 }
 .ef5-loop-product-add-to-cart{
+	margin-top: 17px;
 	@include d-flex();
 	justify-content: space-between;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
+    @include transform(translateY(37px));
 	.add_to_cart_button,
 	.added_to_cart,
 	.product_type_grouped,
@@ -204,13 +203,10 @@
 			opacity: 1;
 		}
 		.wc-loop-content-wrap{
-			@include transform(translateY(-40px));
+			@include transform(translateY(-37px));
 		}
 		.ef5-loop-product-add-to-cart{
-			margin-top: 17px;
-			visibility: visible;
-		    opacity: 1;
-		    height: auto;
+			@include transform(translateY(0));
 		}
 	}
 }
