@@ -116,6 +116,7 @@
 .ef5-loop-product-add-to-cart{
 	@include d-flex();
 	justify-content: space-between;
+    align-items: center;
 	.add_to_cart_button,
 	.added_to_cart,
 	.product_type_grouped,
@@ -125,8 +126,10 @@
 		text-transform: uppercase;
 		font-size: 12px;
 		font-weight: 500;
+		line-height: 24px;
 		background: transparent;
 		position: relative;
+		color: $link_color;
 		&:after{
 			position: absolute;
 			content: "";
@@ -135,9 +138,13 @@
 			left: 0;
 			bottom: 0;
 			background: $primary_color;
+			@include transition(width .3s ease);
 		}
 		&:hover{
- 
+ 			color: $link_color;
+ 			&:after{
+ 				width: 100%;
+ 			}
 		}
 	}
 	.cqw-wrap{
