@@ -28,6 +28,7 @@ vc_map(array(
             'value'       => array_merge(
                 array(
                     esc_html__('Default','theclick')      => '',
+                    esc_html__('White','theclick')        => 'text-white',
                 )
             ),
             'std'         => '',
