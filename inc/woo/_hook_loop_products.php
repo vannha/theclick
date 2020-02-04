@@ -76,12 +76,7 @@ add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_
 function woocommerce_template_loop_content_wrap_open(){
 	echo '<div class="wc-loop-content-wrap">';
 }
-
-/**
- * Loop Product Rating
-*/
-add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating',3);
-
+ 
 /**
  * Change loop Product title
 */
@@ -96,10 +91,18 @@ if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
 }
 
 /**
+ * Loop Product rating price wrap open
+*/
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating_price_wrap_open',5);
+function woocommerce_template_loop_rating_price_wrap_open(){
+	echo '<div class="wc-loop-rating-price">';
+}
+
+/**
  * Loop Product Price
 */
 if(!function_exists('theclick_woocommerce_template_loop_price')){
-	add_action('theclick_woocommerce_shop_loop_products','theclick_woocommerce_template_loop_price',5);
+	add_action('theclick_woocommerce_shop_loop_products','theclick_woocommerce_template_loop_price',6);
 	function theclick_woocommerce_template_loop_price(){
 	?>
 		<div class="ef5-loop-products-price ef5-heading"><?php
@@ -109,6 +112,18 @@ if(!function_exists('theclick_woocommerce_template_loop_price')){
 		?></div>
 	<?php
 	}
+}
+/**
+ * Loop Product Rating
+*/
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating',7);
+
+/**
+ * Loop Product rating price wrap close
+*/
+add_action('theclick_woocommerce_shop_loop_products','woocommerce_template_loop_rating_price_wrap_open',8);
+function woocommerce_template_loop_rating_price_wrap_open(){
+	echo '</div>';
 }
 
 /**
