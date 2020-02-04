@@ -2,8 +2,10 @@
 	.ef5-countdown-bar{
 		@include d-flex();
 		align-items:center;
+		margin: 0 -30px;
 		.item{
 			flex: 0 0 auto;
+			padding: 0 30px;
 		}
 		.amount{
 			display: block;
