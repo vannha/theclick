@@ -22,7 +22,7 @@ if(!function_exists('theclick_woocommerce_shop_loop_products')){
 	add_action('woocommerce_before_shop_loop_item','theclick_woocommerce_shop_loop_products', 0);
 	function theclick_woocommerce_shop_loop_products(){
 	?>
-		<div class="ef5-loop-products ef5-box-shadow transition push text-center">
+		<div class="ef5-loop-products ef5-box-shadow transition">
 			<?php do_action('theclick_woocommerce_before_shop_loop_products_inner') ?>
 			<div class="ef5-loop-products-inner" onclick="">
 				<?php do_action('theclick_woocommerce_shop_loop_products'); ?>
