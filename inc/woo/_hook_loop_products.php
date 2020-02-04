@@ -22,9 +22,9 @@ if(!function_exists('theclick_woocommerce_shop_loop_products')){
 	add_action('woocommerce_before_shop_loop_item','theclick_woocommerce_shop_loop_products', 0);
 	function theclick_woocommerce_shop_loop_products(){
 	?>
-		<div class="ef5-loop-products box-shadow-hover transition">
+		<div class="ef5-loop-products box-shadow-hover transition" onclick="">
 			<?php do_action('theclick_woocommerce_before_shop_loop_products_inner') ?>
-			<div class="ef5-loop-products-inner" onclick="">
+			<div class="ef5-loop-products-inner">
 				<?php do_action('theclick_woocommerce_shop_loop_products'); ?>
 			</div>
 			<?php do_action('theclick_woocommerce_after_shop_loop_products_inner') ?>
