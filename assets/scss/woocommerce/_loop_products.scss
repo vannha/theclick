@@ -116,7 +116,7 @@
 .ef5-loop-product-add-to-cart{
 	margin: 15px -4px 0; // for check
 	@include d-flex();
-	justify-content: center;
+	justify-content: space-between;
 	> * {
 		margin: 0 4px;
 	}
@@ -132,8 +132,6 @@
 	.product_type_grouped,
 	.product_type_external{
 		flex: 0 0 auto;
-	    flex-grow: 1;
-	    max-width: 100%;
 	    padding: 0;
 		text-transform: uppercase;
 		font-size: 12px;
@@ -141,6 +139,9 @@
 		&:hover{
  
 		}
+	}
+	.cqw-wrap{
+		flex: 0 0 auto;
 	}
 }
 .add_to_cart_button{

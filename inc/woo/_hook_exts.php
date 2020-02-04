@@ -11,7 +11,7 @@
 */
 add_action('theclick_woocommerce_loop_product_add_to_cart','woocommerce_loop_compare_quickview_wishlist_wrap_open',11);
 function woocommerce_loop_compare_quickview_wishlist_wrap_open(){
-    echo '<div class="cqw-wrap">';
+    echo '<div class="cqw-wrap"><div class="cqw-wrap-inner">';
 }
 
 /**
@@ -93,5 +93,5 @@ if(class_exists('WPcleverWoosw')){
 */
 add_action('theclick_woocommerce_loop_product_add_to_cart','woocommerce_loop_compare_quickview_wishlist_wrap_close',15);
 function woocommerce_loop_compare_quickview_wishlist_wrap_close(){
-    echo '</div>';
+    echo '</div></div>';
 }
