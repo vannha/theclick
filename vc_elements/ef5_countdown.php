@@ -8,7 +8,7 @@ vc_map(array(
     'name'        => 'Theclick CountDown',
     'base'        => 'ef5_countdown',
     'icon'        => '',
-    'category'    => esc_html__('Theclick', 'theclick'),
+    'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Choose your time remaining', 'theclick'),
     'params'      => array(
         array(
