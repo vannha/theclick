@@ -6,10 +6,17 @@
 			flex: 0 0 auto;
 		}
 		.amount{
-			
+			display: block;
+			font-weight: 500;
+			font-size: 36px;
+			line-height: 46px;
 		}
 		.title{
-			
+			display: block;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 19px;
+			text-transform: uppercase;
 		}
 	}
 }
