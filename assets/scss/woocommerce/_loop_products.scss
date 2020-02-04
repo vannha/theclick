@@ -104,6 +104,7 @@
 .wc-loop-content-wrap{
 	padding: 20px 25px;
 	background: #fff;
+	overflow: hidden;
 	@include transition();
 }
 .ef5-loop-product-title{
@@ -127,7 +128,7 @@
 	@include d-flex();
 	justify-content: space-between;
     align-items: center;
-    @include transform(translateY(37px));
+    @include transform(translateY(42px));
 	.add_to_cart_button,
 	.added_to_cart,
 	.product_type_grouped,
@@ -203,10 +204,10 @@
 			opacity: 1;
 		}
 		.wc-loop-content-wrap{
-			@include transform(translateY(-37px));
+			@include transform(translateY(-42px));
 		}
 		.ef5-loop-product-add-to-cart{
-			@include transform(translateY(0));
+			
 		}
 	}
 }
