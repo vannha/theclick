@@ -127,9 +127,9 @@
 }
 .ef5-loop-product-add-to-cart{
 	margin-top: 17px;
-	@include d-flex();
 	justify-content: space-between;
     align-items: center;
+    display: none;
 	.add_to_cart_button,
 	.added_to_cart,
 	.product_type_grouped,
@@ -208,7 +208,7 @@
 			@include transform(translateY(-42px));
 		}
 		.ef5-loop-product-add-to-cart{
-			
+			@include d-flex();
 		}
 	}
 }
