@@ -115,8 +115,10 @@
 .ef5-loop-product-title{
 	font-size: 18px;
 	line-height: 24px;
+	margin-bottom: 5px;
 }
 .ef5-loop-product-add-to-cart{
+	margin-top: 17px;
 	@include d-flex();
 	justify-content: space-between;
     align-items: center;
