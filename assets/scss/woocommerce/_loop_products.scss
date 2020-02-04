@@ -106,7 +106,7 @@
 .wc-loop-content-wrap{
 	padding: 20px 25px;
 	background: #fff;
-	@include transform(translateY(-42px));
+	@include transform(translateY(0));
 	@include transition();
 }
 .ef5-loop-product-title{
@@ -205,7 +205,7 @@
 			opacity: 1;
 		}
 		.wc-loop-content-wrap{
-			@include transform(translateY(0));
+			@include transform(translateY(-42px));
 		}
 		.ef5-loop-product-add-to-cart{
 			
