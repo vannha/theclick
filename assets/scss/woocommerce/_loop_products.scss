@@ -117,6 +117,14 @@
 	line-height: 24px;
 	margin-bottom: 5px;
 }
+.wc-loop-rating-price{
+	@include d-flex();
+	justify-content: space-between;
+    align-items: center;
+    >*{
+    	flex: 0 0 auto;
+    }
+}
 .ef5-loop-product-add-to-cart{
 	margin-top: 17px;
 	@include d-flex();
