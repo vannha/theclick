@@ -126,6 +126,16 @@
 		font-size: 12px;
 		font-weight: 500;
 		background: transparent;
+		position: relative;
+		&:after{
+			position: absolute;
+			content: "";
+			width: 18px;
+			height: 1px;
+			left: 0;
+			bottom: 0;
+			background: $primary_color;
+		}
 		&:hover{
  
 		}
