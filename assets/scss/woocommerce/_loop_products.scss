@@ -136,7 +136,7 @@
     right: 25px;
     opacity: 0;
     visibility: hidden;
-    @include transition();
+    @include transition(0.6s);
 	.add_to_cart_button,
 	.added_to_cart,
 	.product_type_grouped,
