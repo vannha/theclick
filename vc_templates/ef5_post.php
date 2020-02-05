@@ -4,7 +4,7 @@
 	if(empty($post_id)) return;
  
 	$terms = get_the_term_list( $post_id , 'cat', '', ' ', '' );
-
+	var_dump($terms);
 	$post   = get_post( $post_id );
 ?>
 <div class="ef5-post <?php echo esc_attr($el_class);?>">
