@@ -59,6 +59,7 @@ vc_map(array(
                     esc_html__('None','theclick')          => 'none',
                     esc_html__('Font Icon?','theclick')    => 'true',
                     esc_html__('Image Icon?','theclick')   => 'image',
+                    esc_html__('Svg Icon?','theclick')     => 'svg',
                     esc_html__('Upload Icon ?','theclick') => 'upload'
                 ),
                 'std'		 => 'true',
@@ -75,6 +76,23 @@ vc_map(array(
                 'dependency' => array(
                     'element' => 'add_icon',
                     'value'   => 'image',
+                ),
+                'group'      => esc_html__('Icon','theclick'),
+                'edit_field_class' => 'ef5-vc-list-icon'
+            ),
+            array(
+                'type'       => 'img',
+                'heading'    => esc_html__('Choose our existing svg','theclick'),
+                'param_name' => 'svg_existing',
+                'value'      =>  array(
+                    'cart'   => get_template_directory_uri().'/assets/images/svg/cart.svg',
+                    'heart'   => get_template_directory_uri().'/assets/images/svg/heart.svg',
+                    'search'   => get_template_directory_uri().'/assets/images/svg/search.svg',
+                ),
+                'std'        => '',
+                'dependency' => array(
+                    'element' => 'add_icon',
+                    'value'   => 'svg',
                 ),
                 'group'      => esc_html__('Icon','theclick'),
                 'edit_field_class' => 'ef5-vc-list-icon'
@@ -131,7 +149,8 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
         if(empty($iconClass)) return;
         ?>
             <div class="<?php echo trim(implode(' ', $css_classes));?>">
-                <?php switch ($add_icon) {
+                <?php 
+                switch ($add_icon) {
                     case 'upload':
                         theclick_image_by_size([
                             'id'    => $icon_upload,
@@ -140,14 +159,17 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
                         ]);
                         break;
                     case 'image':
-                ?>
+                    ?>
                     <img src="<?php echo esc_url(get_template_directory_uri().'/vc_elements/icons/png/'.$icon_existing.'.png');?>" alt="<?php echo esc_attr($heading);?>">
-                <?php
-                        break;
+                    <?php
+                    break;
+                    case 'svg':
+                        echo theclick_get_svg('heart');
+                    break;
                     default:
-                ?>
+                    ?>
                     <span class="<?php echo esc_attr($iconClass); ?>"></span>
-                <?php
+                    <?php
                         break;
                 } 
                 ?>
