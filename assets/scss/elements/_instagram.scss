@@ -57,6 +57,12 @@
                 display: none;
             }
         }
+        &.less .user{
+            top: calc(50% - 53px);
+            left: calc(50% - 53px);
+            width: 106px;
+            height: 106px;
+        }
         &:hover .user{
             @include transform(scale(0.8));
         }
