@@ -10,7 +10,8 @@
 <div class="ef5-post <?php echo esc_attr($el_class);?>">
     <?php 
     if(has_post_thumbnail() ){
-    	theclick_image_by_size(['id' => $post_id,'size' => $thumbnail_size, 'class' => $args['img_class']]);
+    	$id = get_post_thumbnail_id($post_id);
+    	theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => $args['img_class']]);
     }
      
     ?>
