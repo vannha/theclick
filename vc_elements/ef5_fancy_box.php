@@ -39,7 +39,6 @@ vc_map(array(
                 'heading'    => esc_html__('Description','theclick'),
                 'param_name' => 'desc',
                 'value'      => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit sit amet justo Suspendisse et justo.',
-                'holder' 	 => 'div',
                 'group'	     => esc_html__('Content','theclick')	
         	),
         	array(
