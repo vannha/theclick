@@ -83,9 +83,6 @@ vc_map(array(
                 'heading'    => esc_html__('Choose our existing svg','theclick'),
                 'param_name' => 'svg_existing',
                 'value'      =>  array(
-                    'cart'   => get_template_directory_uri().'/assets/images/svg/cart.svg',
-                    'heart'   => get_template_directory_uri().'/assets/images/svg/heart.svg',
-                    'search'   => get_template_directory_uri().'/assets/images/svg/search.svg',
                     'box'   => get_template_directory_uri().'/assets/images/svg/box.svg',
                     'reply'   => get_template_directory_uri().'/assets/images/svg/reply.svg',
                     'credit-card'   => get_template_directory_uri().'/assets/images/svg/credit-card.svg',
