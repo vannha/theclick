@@ -35,9 +35,7 @@ if (is_wp_error($media_array)) {
     return;
 }
 $media_array['images'] = array_slice($media_array['images'], 0, $number);
-var_dump($number);
-var_dump($span);
-$less_more = (int)$number > (int) $span ? 'more' : 'less';
+$less_more = (int)$number > (int) $columns ? 'more' : 'less';
 $args = [
     'layout_mode'   => $layout_mode,
     'span'          => $span,
