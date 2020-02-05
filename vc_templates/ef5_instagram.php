@@ -35,6 +35,7 @@ if (is_wp_error($media_array)) {
     return;
 }
 $media_array['images'] = array_slice($media_array['images'], 0, $number);
+$less_more = (int)$number > (int) $span ? 'more' : 'less';
 $args = [
     'layout_mode'   => $layout_mode,
     'span'          => $span,
@@ -45,7 +46,8 @@ $args = [
     'show_like'     => $show_like,
     'show_cmt'      => $show_cmt,
     'show_author'   => $show_author,
-    'author_text'   => $author_text
+    'author_text'   => $author_text,
+    'less_more'     => $less_more
 ];
 
 $html = apply_filters('ef5systems_instagram_output_html', $args);

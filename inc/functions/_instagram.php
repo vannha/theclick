@@ -148,7 +148,8 @@ if (!function_exists('theclick_instagram_html_output')) {
             'show_like'     => '1',
             'show_cmt'      => '1',
             'show_author'   => '1',
-            'author_text'   => ''
+            'author_text'   => '',
+            'less_more'     => ''   
         ]);
         extract($args);
         $username     = $media_array['user']['username'];  
@@ -159,7 +160,7 @@ if (!function_exists('theclick_instagram_html_output')) {
          
         switch ($layout_mode) {
             case '0':
-                echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
+                echo '<div class="ef5-instagram layout-' . $layout_mode . ' ' . $less_more . '">';
                 if ($show_author) { 
                 ?>
                     <div class="user d-flex gutter-15 align-items-center">
@@ -207,7 +208,7 @@ if (!function_exists('theclick_instagram_html_output')) {
                 echo '</div>';
             break;
             default:
-                echo '<div class="ef5-instagram layout-' . $layout_mode . '">';
+                echo '<div class="ef5-instagram layout-' . $layout_mode . ' ' . $less_more . '">';
                 ?>
                 <div class="ef5-instagram-wrap row grid-gutters-<?php echo esc_attr($columns_space); ?> clearfix">
                     <?php
