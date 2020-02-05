@@ -11,7 +11,7 @@
     <?php 
     if(has_post_thumbnail() ){
     	$id = get_post_thumbnail_id($post_id);
-    	theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => $args['img_class']]);
+    	theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => '']);
     }
      
     ?>
