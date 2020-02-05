@@ -57,7 +57,7 @@ vc_map(array(
                 'value'      => array(
                     esc_html__('None','theclick')          => 'none',
                     esc_html__('Font Icon?','theclick')    => 'true',
-                    esc_html__('Image Icon?','theclick')   => 'image',
+                    //esc_html__('Image Icon?','theclick')   => 'image',
                     esc_html__('Svg Icon?','theclick')     => 'svg',
                     esc_html__('Upload Icon ?','theclick') => 'upload'
                 ),
@@ -87,6 +87,9 @@ vc_map(array(
                     'cart'   => get_template_directory_uri().'/assets/images/svg/cart.svg',
                     'heart'   => get_template_directory_uri().'/assets/images/svg/heart.svg',
                     'search'   => get_template_directory_uri().'/assets/images/svg/search.svg',
+                    'box'   => get_template_directory_uri().'/assets/images/svg/box.svg',
+                    'reply'   => get_template_directory_uri().'/assets/images/svg/reply.svg',
+                    'credit-card'   => get_template_directory_uri().'/assets/images/svg/credit-card.svg',
                 ),
                 'std'        => '',
                 'dependency' => array(
