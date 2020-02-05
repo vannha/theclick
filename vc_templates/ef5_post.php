@@ -24,6 +24,6 @@
         $excerpt      = wp_trim_words($content, '30', $excerpt_more);
         ?>
         <div class="ef5-post-excerpt"><?php echo theclick_html($excerpt); ?></div>
-        <a href="<?php echo get_post_permalink( $post_id, false, false )?>"><?php echo esc_html__('Continue Reading') ?></a>
+        <a href="<?php echo get_post_permalink( $post_id, false, false )?>"><?php echo esc_html__('Continue Reading','theclick') ?></a>
     </div>
 </div>
