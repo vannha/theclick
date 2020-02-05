@@ -13,7 +13,7 @@
     if( $id ){
     	theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => '']);
     }
-     
+    var_dump($post->post_excerpt) ;
     ?>
     <div class="ef5-post-info">
     	<div class="ef5-post-cat"><?php echo theclick_html($terms); ?></div>
