@@ -3,7 +3,7 @@
 	extract($atts);
 	if(empty($post_id)) return;
  
-	$terms = get_the_term_list( $post_id , 'cat', '', ' ', '' );
+	$terms = get_the_term_list( $post_id , 'category', '', ' ', '' );
 	var_dump($terms);
 	$post   = get_post( $post_id );
 ?>
