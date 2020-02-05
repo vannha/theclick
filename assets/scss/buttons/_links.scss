@@ -11,5 +11,12 @@
 		left: 0;
 		bottom: 0;
 		background: $btn-color;
+		@include transition(width .3s ease);
+	}
+	&:hover{
+		color: $btn-color;
+		&:after{
+			width: 100%;
+		}
 	}	
 }
