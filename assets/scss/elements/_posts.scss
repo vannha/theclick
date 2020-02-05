@@ -174,8 +174,11 @@
 		font-size: 14px;
 		line-height: 16px;
 		color: #F39659;
-		a:hover{
+		a{
 			color: inherit;
+			&:hover{
+				color: inherit;
+			}
 		}
 	}
 	.ef5-post-title{
@@ -187,6 +190,6 @@
 		line-height: 26px;
 	}
 	.btn-link{
-		
+
 	}
 }
