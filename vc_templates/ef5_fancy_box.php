@@ -17,10 +17,10 @@ $wrap_css_class = ['ef5-fancybox','ef5-fancybox-'.$layout_template, 'transition'
 <div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
 	<?php switch ($layout_template) {
 		default:
-        	echo theclick_html($this->ef5_fancy_box_icon($atts,['class' => '']));
-        	echo theclick_html($this->ef5_fancy_box_heading($atts,['class'=> '']));
-        	echo theclick_html($this->ef5_fancy_box_desc($atts));
-        	echo theclick_html($this->ef5_fancy_box_link($atts));
-         break;
+        	echo $this->ef5_fancy_box_icon($atts,['class' => '']);
+        	echo $this->ef5_fancy_box_heading($atts,['class'=> '']);
+        	echo $this->ef5_fancy_box_desc($atts);
+        	echo $this->ef5_fancy_box_link($atts);
+     	break;
 	} ?>
 </div>
