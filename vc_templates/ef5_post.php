@@ -13,7 +13,7 @@
     if( $id ){
     	theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => '']);
     }
-    var_dump($post->post_excerpt) ;
+
     ?>
     <div class="ef5-post-info">
     	<div class="ef5-post-cat"><?php echo theclick_html($terms); ?></div>
@@ -21,7 +21,7 @@
     	<?php  
 		$content = !empty($post->post_excerpt) ? $post->post_excerpt : $post->post_content;
         $excerpt_more = apply_filters('theclick_excerpt_more', '&hellip;');
-    	$excerpt      = wp_trim_words($content, '40', $excerpt_more);
+    	$excerpt      = wp_trim_words($content, $number_word, $excerpt_more);
     	
         ?>
         <div class="ef5-post-excerpt"><?php echo theclick_html($excerpt); ?></div>
