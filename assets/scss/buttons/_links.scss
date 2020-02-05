@@ -1,0 +1,15 @@
+.btn-link{
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 23px;	
+	position: relative;
+	color: $btn-color;
+	&:after{
+		content: "";
+		width: 20px;
+		height: 2px;
+		left: 0;
+		bottom: 0;
+		background: $btn-color;
+	}	
+}
