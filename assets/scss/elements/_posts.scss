@@ -168,13 +168,14 @@
 
 .ef5-post{
 	.ef5-post-info{
-
+		padding: 25px 0;
 	}
 	.ef5-post-cat{
 		font-size: 14px;
 		line-height: 16px;
 		color: #F39659;
 		text-transform: uppercase;
+		margin-bottom: 25px;
 		a{
 			color: inherit;
 			&:hover{
@@ -185,12 +186,13 @@
 	.ef5-post-title{
 		font-size: 24px;
 		line-height: 31px;
+		margin-bottom: 18px;
 	}
 	.ef5-post-excerpt{
 		font-size: 16px;
 		line-height: 26px;
 	}
 	.btn-link{
-
+		margin-top: 20px;
 	}
 }
