@@ -154,3 +154,17 @@ $customs_gutters: (
 		padding: 25px 15px;
 	}
 }
+
+@media (min-width: 1600px){
+	.vc_row.gutter-xxl-160,
+	.vc_row.gutters-xxl-160{
+		margin-left: -80px;
+		margin-right: -80px;
+		> [class*='col'],
+		> *{
+			padding-left: 80px;
+	    	padding-right: 80px;
+		} 
+	}
+	 
+}
