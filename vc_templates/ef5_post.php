@@ -18,10 +18,11 @@
     <div class="ef5-post-info">
     	<div class="ef5-post-cat"><?php echo theclick_html($terms); ?></div>
     	<div class="ef5-post-title ef5-heading"><?php echo theclick_html($post->post_title); ?></div>
-    	<?php
-        $content      = $post->post_content;
+    	<?php  
+		$content = !empty($post->post_excerpt) ? $post->post_excerpt : $post->post_content;
         $excerpt_more = apply_filters('theclick_excerpt_more', '&hellip;');
-        $excerpt      = wp_trim_words($content, '40', $excerpt_more);
+    	$excerpt      = wp_trim_words($content, '40', $excerpt_more);
+    	
         ?>
         <div class="ef5-post-excerpt"><?php echo theclick_html($excerpt); ?></div>
         <a class="btn-link" href="<?php echo get_post_permalink( $post_id, false, false )?>"><?php echo esc_html__('Continue Reading','theclick') ?></a>
