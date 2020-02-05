@@ -164,7 +164,7 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
                     <?php
                     break;
                     case 'svg':
-                        echo theclick_get_svg('heart');
+                        echo theclick_get_svg($svg_existing);
                     break;
                     default:
                     ?>
