@@ -8,8 +8,9 @@
 		content: "";
 		width: 20px;
 		height: 2px;
+		position: absolute;
 		left: 0;
-		bottom: 0;
+		bottom: -6px;
 		background: $btn-color;
 		@include transition(width .3s ease);
 	}
