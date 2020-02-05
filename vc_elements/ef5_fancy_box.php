@@ -31,7 +31,6 @@ vc_map(array(
                 'heading'    => esc_html__('Heading','theclick'),
                 'param_name' => 'heading',
                 'value'      => 'CMS Fancy Icon Box',
-                'holder' 	 => 'h3',
                 'group'	     => esc_html__('Content','theclick')	
         	),
         	array(
