@@ -222,6 +222,12 @@ function theclick_gutters(){
 			'desc'  => '',
 			'key'   => '50',
 			'value' => '50px'
+		],
+		'80' => [
+			'title' => 'TheClick Gutter 80', 
+			'desc'  => '',
+			'key'   => '80',
+			'value' => '80px'
 		]
 	];
 }
