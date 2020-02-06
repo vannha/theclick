@@ -111,24 +111,6 @@ if(!function_exists('theclick_configs')){
             // cart item thumbnail size 
             'theclick_woocommerce_cart_item_thumbnail_size' => theclick_get_theme_opt('theclick_woocommerce_cart_item_thumbnail_size',['width' => '100px', 'height'=> '115px']),
 
-            // WooCommerce,
-            /*'theclick_product_single_image_w' => '455',
-            'theclick_product_single_image_h' => '605',
-
-            'theclick_product_loop_image_w' => '205',
-            'theclick_product_loop_image_h' => '162',
-
-            'theclick_product_gallery_thumbnail_w' => '115',
-            'theclick_product_gallery_thumbnail_h' => '140',
-
-            'theclick_product_gallery_thumbnail_v_w' => '115',
-            'theclick_product_gallery_thumbnail_v_h' => '140',
-
-            'theclick_product_gallery_thumbnail_h_w' => '115',
-            'theclick_product_gallery_thumbnail_h_h' => '140',
-
-            'theclick_product_gallery_thumbnail_space' => '14',*/
-
             // API 
             'google_api_key' => apply_filters('ef5systems-google-api-key', false)
 
