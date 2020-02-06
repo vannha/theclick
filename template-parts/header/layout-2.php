@@ -16,8 +16,8 @@
                             ?>
                         </div>
                     </div>
-                    <div class="ef5-navigation-wrap col-auto">
-                        <?php theclick_header_blog_menu(['class' => 'ef5-navs']); ?>
+                    <div class="ef5-logo col-auto">
+                        <?php get_template_part('template-parts/header/header-logo'); ?>
                     </div>
                     <div class="header-attrs col">
                         <div class="header-attr-wrap nav-extra justify-content-end">
