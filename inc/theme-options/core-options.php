@@ -491,7 +491,10 @@ if(!function_exists('theclick_header_atts')){
                     'id'       => 'header_helper_menu',
                     'type'     => 'select',
                     'options'  => theclick_get_nav_menu($default_helper_menu),
-                    'default'  => $default_helper_menu_value
+                    'default'  => $default_helper_menu_value,
+                    'required' => array(
+                        array('header_layout' ,'=', array('0'))
+                    ),
                 )
             ),
             theclick_header_social_counter($options, $default_value),
