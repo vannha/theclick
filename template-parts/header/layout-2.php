@@ -8,11 +8,9 @@
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="header-inner-wrap">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col">
-                        <?php theclick_header_side_nav_icon(['class' => 'd-none d-sm-block']); ?>
-                        <div class="ef5-navigation-wrap">
-                            <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
-                        </div>
+                    <?php theclick_header_side_nav_icon(['class' => 'd-none d-sm-block']); ?>
+                    <div class="ef5-navigation-wrap col">
+                        <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
                     </div>
                     <div class="ef5-logo col-auto">
                         <?php get_template_part('template-parts/header/header-logo'); ?>
