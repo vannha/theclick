@@ -13,7 +13,6 @@
                         <?php get_template_part('template-parts/header/header-logo'); ?>
                     </div>
                     <div class="ef5-navigation-wrap col">
-                        <?php theclick_header_helper_menu(); ?>
                         <div class="d-flex align-items-center justify-content-end">
                             <?php theclick_header_menu(['class' => 'ef5-navs']); ?>
                             <div class="header-attrs">
