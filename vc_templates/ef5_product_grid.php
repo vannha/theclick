@@ -102,7 +102,7 @@
                 $d = 0;
                 ?>
                 <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
-                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                    <div class="title-wrap <?php echo trim(implode(' ', $item_css_class)); ?>">
                         <div class="title"><?php echo theclick_html($title)?></div>
                         <div class="desc"><?php echo theclick_html($desc_text)?></div> 
                     </div>
