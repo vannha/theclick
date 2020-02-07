@@ -11,9 +11,30 @@ vc_map(array(
 	                'heading'    => esc_html__('Layout Mode','theclick'),
 	                'param_name' => 'layout_template',
 	                'value'      =>  array(
-	                    '1'          => get_template_directory_uri().'/vc_elements/layouts/product-layout1.jpg'
+	                    '1'          => get_template_directory_uri().'/vc_elements/layouts/product-layout1.jpg',
+	                    '2'          => get_template_directory_uri().'/vc_elements/layouts/product-layout2.jpg'
 	                ),
 	                'std'        => '1',
+	            ),
+	            array(
+	                'type'        => 'textfield',
+	                'heading'     => esc_html__( 'Title', 'theclick' ),
+	                'param_name'  => 'title',
+	                'value'       => '',
+	                'dependency'    => array(
+	                    'element'   => 'layout_template',
+	                    'value'     => '2',
+	                ),
+	            ),
+	            array(
+	                'type'       => 'textarea',
+	                'heading'    => esc_html__('Text', 'theclick'),
+	                'param_name' => 'desc_text',
+	                'value'      => '',
+	                'dependency'    => array(
+	                    'element'   => 'layout_template',
+	                    'value'     => '2',
+	                ),
 	            ),
 	            array(
 					'type' => 'autocomplete',
