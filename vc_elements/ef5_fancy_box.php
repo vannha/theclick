@@ -28,11 +28,7 @@ vc_map(array(
                 'std'        => ''
             ),
             ef5systems_vc_map_add_css_animation([
-                'param_name' => 'fancy_css_animation',
-                'dependency' => array(
-                    'element'   => 'layout_template',
-                    '!=' => '0'
-                ),
+                'param_name' => 'fancy_css_animation'
             ]),
 	        array(
 				'type'       => 'textfield',
