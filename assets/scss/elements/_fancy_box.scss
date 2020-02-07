@@ -45,9 +45,13 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
+			@include transition(width .3s ease);
 		}
 		&:hover{
 			padding-left: 0;
+			&:before{
+				width: 0;
+			}
 		}
 	}
 }
