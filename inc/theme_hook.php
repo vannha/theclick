@@ -218,7 +218,7 @@ function theclick_gutters(){
 			'value' => '20px'
 		],
 		'45' => [
-			'title' => 'TheClick Gutter 50', 
+			'title' => 'TheClick Gutter 45', 
 			'desc'  => '',
 			'key'   => '45',
 			'value' => '45px'
