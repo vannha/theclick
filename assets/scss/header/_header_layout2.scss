@@ -1,0 +1,9 @@
+.header-layout-1{
+	@media( min-width: $screen-xl-min ) {
+		.ef5-header-left{
+			flex-basis: 0;
+		    flex-grow: 1;
+		    max-width: 100%;
+		}
+	}
+}
