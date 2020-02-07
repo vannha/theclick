@@ -63,7 +63,7 @@
 		height: 2px;
 		position: absolute;
 		left: 0;
-		bottom: 0;
+		bottom: -6px;
 		background-color: $primary_color;
 		@include transition(width .3s linear 0s);
 	}
