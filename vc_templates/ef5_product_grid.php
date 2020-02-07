@@ -97,13 +97,37 @@
                     </div>
                 <?php 
                 }  
-                wp_reset_postdata();
                 break;
                 case '2':
-                       
+                $d = 0;
+                ?>
+                <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <div class="title"><?php echo theclick_html($title)?></div>
+                        <div class="desc"><?php echo theclick_html($desc_text)?></div> 
+                    </div>
+                </div>
+                <?php 
+                while ($wp_query->have_posts()) {
+                    $d++;
+                    $wp_query->the_post();
+                    ?>
+                    <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                        <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php
+                            do_action( 'woocommerce_before_shop_loop_item' );
+                            do_action( 'woocommerce_before_shop_loop_item_title' );
+                            do_action( 'woocommerce_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item' );
+                        ?>
+                        </div>
+                    </div>
+                <?php 
+                }     
                 break;
-
             }
+            wp_reset_postdata();
             ?>
         </div>
     </div>

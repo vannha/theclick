@@ -28,7 +28,7 @@ vc_map(array(
 	            ),
 	            array(
 	                'type'       => 'textarea',
-	                'heading'    => esc_html__('Text', 'theclick'),
+	                'heading'    => esc_html__('Description', 'theclick'),
 	                'param_name' => 'desc_text',
 	                'value'      => '',
 	                'dependency'    => array(
