@@ -55,7 +55,22 @@
 		left: -5px;
 	}
 } 
-
+.rs-layer.underline-off{
+	position: relative;
+	&:after{
+		content: "";
+		width: 20px;
+		height: 2px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: $primary_color;
+		@include transition(width .3s linear 0s);
+	}
+	&:hover:after{
+		width: 100%;
+	}
+}
 body #rev_slider_1_1_wrapper .custom.tparrows{
 	width: 30px;
 	height: 15px;
