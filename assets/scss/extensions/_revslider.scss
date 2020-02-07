@@ -88,11 +88,10 @@ body #rev_slider_1_1_wrapper .custom.tparrows{
 		}
 	}
 }
-body #rev_slider_1_1_wrapper .uranus .tp-bullet,
-body #rev_slider_2_1_wrapper .uranus .tp-bullet{
-	box-shadow: none;
+body .revslider-initialised .uranus .tp-bullet{
+	box-shadow: none !important;
 }
-body #rev_slider_1_1_wrapper .uranus .tp-bullet.selected, 
+/* body #rev_slider_1_1_wrapper .uranus .tp-bullet.selected, 
 body #rev_slider_1_1_wrapper .uranus .tp-bullet:hover{
     width: 20px;
     height: 20px;
@@ -104,7 +103,7 @@ body #rev_slider_1_1_wrapper .uranus .tp-bullet.selected .tp-bullet-inner,
 body #rev_slider_1_1_wrapper .uranus .tp-bullet:hover .tp-bullet-inner {
     transform: scale(0.3);
     -webkit-transform: scale(0.3);
-}
+} */
 
 body .revslider-initialised .uranus .tp-bullet.selected, 
 body .revslider-initialised .uranus .tp-bullet:hover{
