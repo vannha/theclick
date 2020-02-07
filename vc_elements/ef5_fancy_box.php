@@ -217,9 +217,7 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
         $css_classes = ['ef5-fancybox-link', $args['class']];
         ?>
             <div class="<?php echo trim(implode(' ', $css_classes));?>">
-                <a href="<?php echo esc_url($a_href) ?>" target="<?php echo esc_attr($a_target);?>">
-                    <?php echo esc_html($a_title);?>
-                </a>
+                <a href="<?php echo esc_url($a_href) ?>" target="<?php echo esc_attr($a_target);?>"><?php echo esc_html($a_title);?></a>
             </div>
         <?php
     }
