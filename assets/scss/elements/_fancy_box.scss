@@ -34,5 +34,16 @@
 		line-height: 16px;
 		font-weight: 600;
 		text-transform: uppercase;
+		position: relative;
+		padding-left: 28px;
+		&:before{
+			content: "";
+			width: 20px;
+			height: 1px;
+			background: $primary_color;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
 	}
 }
