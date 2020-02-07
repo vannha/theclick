@@ -36,6 +36,7 @@
 		text-transform: uppercase;
 		position: relative;
 		padding-left: 28px;
+		@include transition();
 		&:before{
 			content: "";
 			width: 20px;
@@ -44,6 +45,9 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
+		}
+		&:hover{
+			padding-left: 0;
 		}
 	}
 }
