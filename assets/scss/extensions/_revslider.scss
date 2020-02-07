@@ -88,7 +88,7 @@ body #rev_slider_1_1_wrapper .custom.tparrows{
 		}
 	}
 }
-body .revslider-initialised .uranus .tp-bullet{
+body .revslider-initialised .uranus .tp-bullet:not(.selected){
 	box-shadow: none !important;
 }
 /* body #rev_slider_1_1_wrapper .uranus .tp-bullet.selected, 
