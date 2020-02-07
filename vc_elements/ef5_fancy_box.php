@@ -17,6 +17,23 @@ vc_map(array(
                 ),
                 'std'        => '1'
             ),
+            array(
+                'type'       => 'colorpicker',
+                'heading'    => esc_html__( 'Background color','theclick'),
+                'param_name' => 'bg_color',
+                'dependency' => array(
+                    'element'    => 'layout_template',
+                    'value'      => '2',
+                ),
+                'std'        => ''
+            ),
+            ef5systems_vc_map_add_css_animation([
+                'param_name' => 'fancy_css_animation',
+                'dependency' => array(
+                    'element'   => 'layout_template',
+                    '!=' => '0'
+                ),
+            ]),
 	        array(
 				'type'       => 'textfield',
 				'heading'    => esc_html__('Element Class','theclick'),
