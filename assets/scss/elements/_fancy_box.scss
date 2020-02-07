@@ -15,14 +15,16 @@
 	}
 }
 .ef5-fancybox-2{
+	display: flex;
+	flex-wrap: wrap;
+	align-items:center;
+	justify-content: space-between;
 	.ef5-fancybox-heading{
-		font-weight: 500;
-		font-size: 32px;
-		line-height: 41px;
+		flex: 0 0 auto;
+		width: auto;
 	}
-	.ef5-fancybox-desc{
-		margin-top: 15px;
-		font-size: 15px;
-		line-height: 24px;
+	.ef5-fancybox-link{
+		flex: 0 0 auto;
+		width: auto;
 	}
 }
