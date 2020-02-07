@@ -13,9 +13,9 @@ vc_map(array(
                 'param_name' => 'layout_template',
                 'value'      =>  array(
                     '1' => get_template_directory_uri().'/vc_elements/layouts/fancy-box1.jpg',
+                    '2' => get_template_directory_uri().'/vc_elements/layouts/fancy-box2.jpg',
                 ),
-                'std'        => '1',
-                'admin_label' => true
+                'std'        => '1'
             ),
 	        array(
 				'type'       => 'textfield',
