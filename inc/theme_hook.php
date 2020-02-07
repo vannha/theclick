@@ -205,6 +205,18 @@ function theclick_spacings(){
 	];
 }
 
+add_filter('ef5systems_margin_spacings','theclick_margin_spacings');
+function theclick_margin_spacings(){
+	return [
+		'0'			=> ['TheClick Space 0', 'Left 0 - Right 0','0 0'],
+		'custom1 ml-xl-45 mr-xl-45' => ['TheClick Space 01', 'Left 45px - Right 45px','0 45px'],
+		'custom1 ml-xl-60 mr-xl-60' => ['TheClick Space 02', 'Left 60px - Right 60px','0 60px'],
+		'custom2 mt-8 mb-8' => ['TheClick Space 01', 'Top 8px - Bottom 8px'],
+		'87-0-92'          	=> ['TheClick Space 02', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
+		'93-0-100'          => ['TheClick Space 03', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
+		'100-0'             => ['TheClick Space 04', 'Top 100px - Bottom 100px', '100px 0'],
+	];
+}
 /**
  * Add your theme Gutter
 */
