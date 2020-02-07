@@ -108,14 +108,14 @@ body #rev_slider_1_1_wrapper .uranus .tp-bullet:hover .tp-bullet-inner {
 
 body .revslider-initialised .uranus .tp-bullet.selected, 
 body .revslider-initialised .uranus .tp-bullet:hover{
-    width: 20px;
-    height: 20px;
-    margin-left: -7px;
-    margin-top: -7px;
-    box-shadow: 0 0 0 1px #4c4230;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: -7px !important;
+    margin-top: -7px !important;
+    box-shadow: 0 0 0 1px #4c4230 !important;
 }
 body .revslider-initialised .uranus .tp-bullet.selected .tp-bullet-inner,
 body .revslider-initialised .uranus .tp-bullet:hover .tp-bullet-inner {
-    transform: scale(0.3);
-    -webkit-transform: scale(0.3);
+    transform: scale(0.3) !important;
+    -webkit-transform: scale(0.3) !important;
 }
