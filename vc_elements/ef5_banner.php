@@ -180,7 +180,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         <div <?php echo trim(implode(' ', $banner_attrs));?>>
             <?php if($banner_style == '2'): ?>
                 <img src="<?php echo esc_url($image_url);?>" class="media-img" alt="<?php echo esc_attr($a_title);?>">
-                <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.theclick_get_svg('heart').'</a>'; ?>
+                <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.theclick_get_svg('play').'</a>'; ?>
             <?php else : ?>
                 <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'; ?>
                 <img src="<?php echo esc_url($image_url);?>" class="media-img" alt="<?php echo esc_attr($a_title);?>">
