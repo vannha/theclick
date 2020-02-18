@@ -9,7 +9,7 @@ $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
     switch ($banner_style) {
         case '3': 
             $this->ef5_banner_main_media($atts,['class' => '']);
-            echo '<div class="gradient wpb_animate_when_almost_visible wpb_fadeInUp fadeInUp wpb_start_animation animate"></div><div class="content-wrap">';
+            echo '<div class="gradient"></div><div class="content-wrap">';
             $this->ef5_banner_main_title($atts,['class' => '']);
             $this->ef5_banner_sub_title($atts,['class' => '']);
             $this->ef5_banner_button($atts,['class' => '']);
