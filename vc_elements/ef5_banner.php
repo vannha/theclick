@@ -175,9 +175,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
                 <img src="<?php echo esc_url($image_url);?>" class="media-img" alt="<?php echo esc_attr($a_title);?>">
                 <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'"><span>'.theclick_get_svg('play').'</span></a>'; ?>
             <?php else : ?>
-                <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'; ?>
                 <img src="<?php echo esc_url($image_url);?>" class="media-img" alt="<?php echo esc_attr($a_title);?>">
-                <?php if($use_link) echo '</a>'; ?>
             <?php endif; ?>
         </div>
         <?php 
