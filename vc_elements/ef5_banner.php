@@ -60,25 +60,13 @@ vc_map(array(
             "heading" => esc_html__("Main Title",'theclick'),
             "param_name" => "main_title",
             "value" => "",
-            "dependency" => array(
-                "element" => 'banner_style',
-                "value" => array(
-                    "1"
-                ),
-            ),
             "group" => esc_html__("Main Title", 'theclick'),
         ),
         array(
             "type"       => "colorpicker",
-            "heading"    => esc_html__("Title 1 color", 'theclick'),
+            "heading"    => esc_html__("Main title color", 'theclick'),
             "param_name" => "main_title_color",
             "value"      => "",
-            "dependency" => array(
-                "element" => 'banner_style',
-                "value" => array(
-                    "1"
-                ),
-            ),
             "group" => esc_html__("Main Title", 'theclick'),
         ),
         ef5systems_vc_map_add_css_animation([
@@ -90,25 +78,13 @@ vc_map(array(
             "heading" => esc_html__("Sub Title",'theclick'),
             "param_name" => "sub_title",
             "value" => "",
-            "dependency" => array(
-                "element" => 'banner_style',
-                "value" => array(
-                    "1"
-                ),
-            ),
             "group" => esc_html__("Sub Title", 'theclick'),
         ),
         array(
             "type"       => "colorpicker",
-            "heading"    => esc_html__("Title 2 color", 'theclick'),
+            "heading"    => esc_html__("Sub title color", 'theclick'),
             "param_name" => "sub_title_color",
             "value"      => "", 
-            "dependency" => array(
-                "element" => 'banner_style',
-                "value" => array(
-                    "1"
-                ),
-            ),
             "group" => esc_html__("Sub Title", 'theclick'),
         ),
         ef5systems_vc_map_add_css_animation([
