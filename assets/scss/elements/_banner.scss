@@ -65,13 +65,6 @@
 }
 
 .ef5-banner-2{
-	position: relative;
-	&.left{
-		padding-left: 38px;
-	}
-	&.right{
-		padding-right: 38px;
-	}
 	.main-title{
 		font-weight: 500;
 		font-size: 40px;
@@ -82,17 +75,35 @@
 			color: inherit;
 		}
 	}
+	.main-media{
+		position: relative;
+	}
 	.sub-title{
 		font-size: 14px;
 		line-height: 16px;
 		text-transform: uppercase;
 		position: absolute;
-		left: 0;
 		top: 0;
 		@include transform(translateX(-100%) rotate(-90deg));
 	    @include transform-origin(top right); 
 	}
-	.main-media{
-
+	&.left{
+		padding-left: 38px;
+		.sub-title{
+			left: 0;
+			@include transform(translateX(-100%) rotate(-90deg));
+		    @include transform-origin(top right); 
+		}
+	}
+	&.right{
+		padding-right: 38px;
+		.main-title{
+			text-align: right;
+		}
+		.sub-title{
+			right: 0;
+			@include transform(translateX(100%) rotate(90deg));
+		    @include transform-origin(top l); 
+		}
 	}
 }
