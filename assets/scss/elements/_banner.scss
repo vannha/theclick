@@ -137,7 +137,14 @@
 }
 .ef5-banner-3{
 	position: relative;
-	background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 0%, rgba(0, 0, 0, 0.372842) 61.64%, rgba(0, 0, 0, 0.7444) 99.59%);
+	.gradient{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 0%, rgba(0, 0, 0, 0.372842) 61.64%, rgba(0, 0, 0, 0.7444) 99.59%);
+	}
 	.content-wrap{
 		position: absolute;
 		left: 60px;
