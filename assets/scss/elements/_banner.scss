@@ -90,7 +90,7 @@
 	&.left{
 		padding-left: 38px;
 		.sub-title{
-			left: 0;
+			left: -38px;
 			@include transform(translateX(-100%) rotate(-90deg));
 		    @include transform-origin(top right); 
 		}
@@ -101,9 +101,9 @@
 			text-align: right;
 		}
 		.sub-title{
-			right: 0;
+			right: -38px;
 			@include transform(translateX(100%) rotate(90deg));
-		    @include transform-origin(top l); 
+		    @include transform-origin(top left); 
 		}
 	}
 }
