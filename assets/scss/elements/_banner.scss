@@ -91,9 +91,18 @@
 			height: 60px;
 			line-height: 60px;
 			background: #fff;
+			text-align: center;
+			border-radius: 50%;
 			span{
 				display: inline-block;
 				line-height: 1;	
+			}
+			&:hover{
+				background: rgba(255,255,255,0.6);
+				@include transform(scale(1.2));
+				.ef5-svg path{
+					fill: #fff;
+				}
 			}
 		}
 	}
