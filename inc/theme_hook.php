@@ -223,6 +223,12 @@ function theclick_margin_spacings(){
 add_filter('ef5systems_gutters','theclick_gutters');
 function theclick_gutters(){
 	return [
+		'0' => [
+			'title' => 'TheClick Gutter 0', 
+			'desc'  => '',
+			'key'   => '0',
+			'value' => '0px'
+		],
 		'20' => [
 			'title' => 'TheClick Gutter 20', 
 			'desc'  => '',
@@ -240,13 +246,8 @@ function theclick_gutters(){
 			'desc'  => '',
 			'key'   => '50',
 			'value' => '50px'
-		],
-		'130' => [
-			'title' => 'TheClick Gutter 130', 
-			'desc'  => '',
-			'key'   => '130',
-			'value' => '130px'
 		]
+		
 	];
 }
 
