@@ -65,14 +65,31 @@
 }
 
 .ef5-banner-2{
+	position: relative;
+	&.left{
+		padding-left: 38px;
+	}
+	&.right{
+		padding-right: 38px;
+	}
+	
 	.main-title{
 		font-weight: 500;
 		font-size: 40px;
 		line-height: 46px;
+		a,a:hover{
+			color: inherit;
+		}
 	}
 	.sub-title{
 		font-size: 14px;
 		line-height: 16px;
+		text-transform: uppercase;
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include transform(translateX(-100%) rotate(-90deg));
+	    @include transform-origin(top right); 
 	}
 	.main-media{
 
