@@ -125,6 +125,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $wrap_css_class = [
             'ef5-banner-wrap',
             'ef5-banner-'.$banner_style,
+            $el_content_align,
             $this->getCSSAnimation($atts['banner_css_animation']),
             $el_class
         ];
