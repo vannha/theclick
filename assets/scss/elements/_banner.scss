@@ -136,4 +136,42 @@
 	}
 }
 .ef5-banner-3{
+	position: relative;
+	.main-title{
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 46px;
+		margin-bottom: 8px;
+		a,a:hover{
+			color: inherit;
+		}
+	}
+	.sub-title{
+		font-size: 18px;
+		line-height: 23px;
+	}
+	.banner_btn_link{
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 23px;
+		display: inline-block;
+		margin-top: 30px;
+		position: relative;
+		&:hover{
+			color: inherit;
+			&:after{
+				width: 100%;
+			}
+		}
+		&:after{
+			content: "";
+			width: 20px;
+			height: 2px;
+			position: absolute;
+			left: 0;
+			bottom: -6px;
+			background-color: #fff;
+			@include transition(width 0.4s);
+		}
+	}
 }
