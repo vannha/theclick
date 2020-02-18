@@ -97,9 +97,7 @@
 	}
 	&.right{
 		padding-right: 38px;
-		.main-title{
-			text-align: right;
-		}
+		text-align: right;
 		.sub-title{
 			right: -38px;
 			@include transform(translateX(100%) rotate(90deg));
