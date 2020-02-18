@@ -70,7 +70,10 @@
 		font-size: 40px;
 		line-height: 46px;
 		margin-bottom: 28px;
-		max-width: 245px;
+		a{
+			max-width: 245px;
+			display: inline-block;
+		}
 		a,a:hover{
 			color: inherit;
 		}
