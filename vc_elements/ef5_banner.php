@@ -15,6 +15,20 @@ vc_map(array(
             'param_name' => 'banner_style',
             "admin_label" => true
         ),
+        array(
+            'type'       => 'dropdown',
+            'param_name' => 'el_content_align',
+            'heading'    => esc_html__( 'Content Align', 'theclick' ),
+            'value'      => array(
+                esc_html__('Left','theclick')      => '',
+                esc_html__('Right','theclick')     => 'right'
+            ),
+            'std'        => '',
+            'dependency' => array(
+                'element' => 'banner_style',
+                'value'      => '2',
+            ),
+        ), 
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'banner_css_animation'
         ]), 
@@ -27,6 +41,7 @@ vc_map(array(
             'param_name'  => 'el_id',
             'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'theclick' ), '//w3schools.com/tags/att_global_id.asp' ),
         ),
+
         array(
             "type" => "textfield",
             "heading" => esc_html__("Class",'theclick'),
@@ -52,51 +67,7 @@ vc_map(array(
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'button_link_css_animation',
             'group'      => esc_html__('Link', 'theclick')
-        ]),
-        array(
-            'type'       => 'dropdown',
-            'param_name' => 'el_content_align',
-            'heading'    => esc_html__( 'Content Align', 'theclick' ),
-            'value'      => ef5systems_alignment_option_for_vc(),
-            'std'        => '',
-            'dependency' => array(
-                'element' => 'banner_style',
-                'value'      => '2',
-            ),
-        ), 
-        /*array(
-            'type'       => 'dropdown',
-            'param_name' => 'alignment',
-            'heading'    => esc_html__('Font Style','theclick'),   
-            'value'      => array(
-                esc_html__('Default','overcome')           => '',
-                esc_html__('Thin','overcome')              => '100',
-                esc_html__('Thin Italic','overcome')       => '100i',
-                esc_html__('Light','overcome')             => '200',
-                esc_html__('Light Italic','overcome')      => '200i',
-                esc_html__('300','overcome')               => '300',
-                esc_html__('300 Italic','overcome')        => '300i',
-                esc_html__('Regular','overcome')           => '400',
-                esc_html__('Regular Italic','overcome')    => '400i',
-                esc_html__('Medium','overcome')            => '500',
-                esc_html__('Medium Italic','overcome')     => '500i',
-                esc_html__('SemiBold','overcome')          => '600',
-                esc_html__('SemiBold Italic','overcome')   => '600i',
-                esc_html__('Bold','overcome')              => '700',
-                esc_html__('Bold Italic','overcome')       => '700i',
-                esc_html__('Extra Bold','overcome')        => '800',
-                esc_html__('Extra Bold Italic','overcome') => '800i',
-                esc_html__('Black Bold','overcome')        => '900',
-                esc_html__('Black Bold Italic','overcome') => '900i'
-            ),
-            'std'        => '500',
-            'dependency' => array(
-                'element' => 'heading_text',
-                'not_empty' => true
-            ),
-            'group'      => esc_html__('Heading','theclick')   
-        ),*/
-
+        ]),   
         array(
         	"type" => "textfield",
             "heading" => esc_html__("Main Title",'theclick'),
