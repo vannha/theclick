@@ -20,10 +20,10 @@ vc_map(array(
             'param_name' => 'el_content_align',
             'heading'    => esc_html__( 'Content Align', 'theclick' ),
             'value'      => array(
-                esc_html__('Left','theclick')      => '',
+                esc_html__('Left','theclick')      => 'left',
                 esc_html__('Right','theclick')     => 'right'
             ),
-            'std'        => '',
+            'std'        => 'left',
             'dependency' => array(
                 'element' => 'banner_style',
                 'value'      => '2',
