@@ -139,8 +139,16 @@
 	position: relative;
 	.content-wrap{
 		position: absolute;
-		left: 30px;
-		bottom: 30px;
+		left: 60px;
+		bottom: 60px;
+		@media (max-width: 1600px){
+			left: 50px;
+			bottom: 50px;
+		}
+		@media (max-width: 1430px){
+			left: 30px;
+			bottom: 30px;
+		}
 	}
 	.main-title{
 		font-weight: 500;
