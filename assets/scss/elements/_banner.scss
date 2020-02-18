@@ -137,6 +137,11 @@
 }
 .ef5-banner-3{
 	position: relative;
+	.content-wrap{
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+	}
 	.main-title{
 		font-weight: 500;
 		font-size: 40px;
