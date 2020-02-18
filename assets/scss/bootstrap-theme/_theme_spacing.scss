@@ -21,7 +21,8 @@ $spacers: (
   45 : 45px,
   50 : 50px,
   58 : 58px,
-  75 : 75px
+  75 : 75px,
+  98 : 98px
 );
 
 @each $breakpoint in map-keys($grid-breakpoints) {
