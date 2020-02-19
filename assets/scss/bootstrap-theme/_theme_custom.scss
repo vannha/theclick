@@ -129,7 +129,7 @@ $extra-breakpoints: (
 	xxxxl: 1800px
 ) !default;
 
-$extra-space: (
+$extra-spaces: (
 	0 : 0,
 	5 : 5px,
 	8 : 8px,
@@ -148,31 +148,34 @@ $extra-space: (
 	100 : 100px,
 	130 : 130px
 );
-@each $breakpoint in map-keys($extra-breakpoints) {
-	@include media-breakpoint-up($breakpoint) {
-		$infix: breakpoint-infix($breakpoint, $extra-breakpoints);
-		@each $prop, $abbrev in (margin: m, padding: p) {
-			@each $size, $length in $extra-space {
-				.#{$abbrev}#{$infix}-#{$size} { 
-					#{$prop}: $length !important; 
-				}
-		        .#{$abbrev}t#{$infix}-#{$size},
-		        .#{$abbrev}y#{$infix}-#{$size} {
-		          #{$prop}-top: $length !important;
-		        }
-		        .#{$abbrev}r#{$infix}-#{$size},
-		        .#{$abbrev}x#{$infix}-#{$size} {
-		          #{$prop}-right: $length !important;
-		        }
-		        .#{$abbrev}b#{$infix}-#{$size},
-		        .#{$abbrev}y#{$infix}-#{$size} {
-		          #{$prop}-bottom: $length !important;
-		        }
-		        .#{$abbrev}l#{$infix}-#{$size},
-		        .#{$abbrev}x#{$infix}-#{$size} {
-		          #{$prop}-left: $length !important;
-		        }
-		    }
+@mixin make-extra-space($breakpoints: $extra-breakpoints) {
+	@each $breakpoint in $breakpoints {
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			$infix: breakpoint-infix($breakpoint, $breakpoints);
+			@each $prop, $abbrev in (margin: m, padding: p) {
+				@each $size, $length in $extra-spaces {
+					.#{$abbrev}#{$infix}-#{$size} { 
+						#{$prop}: $length !important; 
+					}
+			        .#{$abbrev}t#{$infix}-#{$size},
+			        .#{$abbrev}y#{$infix}-#{$size} {
+			          #{$prop}-top: $length !important;
+			        }
+			        .#{$abbrev}r#{$infix}-#{$size},
+			        .#{$abbrev}x#{$infix}-#{$size} {
+			          #{$prop}-right: $length !important;
+			        }
+			        .#{$abbrev}b#{$infix}-#{$size},
+			        .#{$abbrev}y#{$infix}-#{$size} {
+			          #{$prop}-bottom: $length !important;
+			        }
+			        .#{$abbrev}l#{$infix}-#{$size},
+			        .#{$abbrev}x#{$infix}-#{$size} {
+			          #{$prop}-left: $length !important;
+			        }
+			    }
+			}
 		}
 	}
 }
+@include make-container-wide-max-widths();
