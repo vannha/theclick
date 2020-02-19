@@ -149,7 +149,6 @@ $extra_spaces: (
 	130 : 130px
 );
 @each $breakpoint in map-keys($extra_breakpoints) {
-	@debug "divider offset: #{$breakpoint}";
 	@include media-breakpoint-up($breakpoint, $extra_breakpoints) {
 		$infix: breakpoint-infix($breakpoint, $extra_breakpoints);
 		@each $prop, $abbrev in (margin: m, padding: p) {
