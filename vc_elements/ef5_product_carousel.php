@@ -131,14 +131,6 @@ vc_map(array(
 	        )), 
 	        array(
 	            array(
-	                'type'          => 'textfield',
-	                'param_name'    => 'thumbnail_size',
-	                'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','theclick'),
-	                'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
-	                'std'           => '',
-	                'group'         => esc_html__('Post Meta','theclick'),
-	            ),
-	            array(
 	                'type'       => 'dropdown',
 	                'param_name' => 'show_shop_more',
 	                'value'      => array(
@@ -193,32 +185,5 @@ class WPBakeryShortCode_ef5_product_carousel extends WPBakeryShortCode{
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
 	}
-	protected function theclick_products_wrap_css_class($atts){
-        extract($atts);
-
-        $css_classes = array(
-            'ef5-product-grid-'.$layout_template,
-            vc_shortcode_custom_css_class( $css ),
-        );
-
-        $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
-
-        echo trim($css_class);
-    }
-    protected function view_all($atts = ''){
-        extract($atts);
-        if($pagination !== 'view_all') return;
-        ?>
-            <div class="view-all-wrap text-center">
-                <a href="<?php echo get_permalink($view_all_page);?>" class="ef5-btn outline"><?php echo esc_html($view_all_text);?></a>
-            </div>
-        <?php
-    }
-    protected function loadmore($atts = ''){
-        extract($atts);
-        if($pagination !== 'loadmore') return;
-        ?>
-        	<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>
-        <?php
-    }
+	 
 }
