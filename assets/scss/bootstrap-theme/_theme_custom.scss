@@ -122,11 +122,18 @@ $max_width:(
 	}
 }
 
+
 $extra-breakpoints: (
+	xxs: 0,
+	xs: 480px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
 	xxl: 1366px,
 	xxxl: 1600px,
 	xxxxl: 1800px
-);
+) !default;
 
 $extra-space: (
 	0 : 0,
