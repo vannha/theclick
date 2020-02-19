@@ -89,3 +89,60 @@ $container-wide-max-widths: (
   @return $number;
 }
 
+
+$extra-breakpoints: (
+  xxl: 1366px,
+  xxxl: 1600px,
+  xxxxl: 1800px
+) !default;
+
+$extra-spaces: (
+  0 : 0,
+  5 : 5px,
+  8 : 8px,
+  10 : 10px,
+  15 : 15px,
+  20 : 20px,
+  25 : 25px,
+  30 : 30px,
+  35 : 35px,
+  40 : 40px,
+  45 : 45px,
+  50 : 50px,
+  58 : 58px,
+  75 : 75px,
+  80 : 80px,
+  100 : 100px,
+  130 : 130px
+);
+@mixin make-extra-space($breakpoints: $extra-breakpoints) {
+  @each $breakpoint in $breakpoints {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      @each $prop, $abbrev in (margin: m, padding: p) {
+        @each $size, $length in $extra-spaces {
+          .#{$abbrev}#{$infix}-#{$size} { 
+            #{$prop}: $length !important; 
+          }
+              .#{$abbrev}t#{$infix}-#{$size},
+              .#{$abbrev}y#{$infix}-#{$size} {
+                #{$prop}-top: $length !important;
+              }
+              .#{$abbrev}r#{$infix}-#{$size},
+              .#{$abbrev}x#{$infix}-#{$size} {
+                #{$prop}-right: $length !important;
+              }
+              .#{$abbrev}b#{$infix}-#{$size},
+              .#{$abbrev}y#{$infix}-#{$size} {
+                #{$prop}-bottom: $length !important;
+              }
+              .#{$abbrev}l#{$infix}-#{$size},
+              .#{$abbrev}x#{$infix}-#{$size} {
+                #{$prop}-left: $length !important;
+              }
+          }
+      }
+    }
+  }
+}
+@include make-extra-space();
