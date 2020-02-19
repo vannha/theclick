@@ -15,6 +15,7 @@
 
   
     if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
+    var_dump([$type,$number,$product_ids,$category,$category_slug]); die;
     $posts = $wp_query = theclick_woocommerce_query($type,$number,$product_ids,$category,$category_slug); 
     $count = $posts->post_count;
    
