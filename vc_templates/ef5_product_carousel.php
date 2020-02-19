@@ -15,7 +15,7 @@
 
   
     if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
-    $posts = $wp_query = bixbang_woocommerce_query($type,$number,$product_ids,$category,$category_slug); 
+    $posts = $wp_query = theclick_woocommerce_query($type,$number,$product_ids,$category,$category_slug); 
     $count = $posts->post_count;
    
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item', $this->getCSSAnimation( $css_animation )];
