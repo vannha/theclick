@@ -147,9 +147,9 @@ $extra-space: (
 	100 : 100px,
 	130 : 130px
 );
-@each $breakpoint in map-keys($extra-breakpoints) {
-	@include media-breakpoint-up($breakpoint) {
-		$infix: breakpoint-infix($breakpoint, $extra-breakpoints);
+@each $breakpoint1 in map-keys($extra-breakpoints) {
+	@include media-breakpoint-up($breakpoint1) {
+		$infix: breakpoint-infix($breakpoint1, $extra-breakpoints);
 		@each $prop, $abbrev in (margin: m, padding: p) {
 			@each $size, $length in $extra-space {
 				.#{$abbrev}#{$infix}-#{$size} { 
