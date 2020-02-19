@@ -86,7 +86,7 @@ $spacers: (
     @include media-breakpoint-up($breakpoint, $extra_breakpoints) {
         $infix: breakpoint-infix($breakpoint, $extra_breakpoints);
         @each $prop, $abbrev in (margin: m, padding: p) {
-            @each $size, $length in $extra_spaces {
+            @each $size, $length in $spacers {
                 .#{$abbrev}#{$infix}-#{$size} { 
                     #{$prop}: $length !important; 
                 }
