@@ -1,6 +1,6 @@
 <?php
 function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
-     
+    global $wp_query; 
 	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
 
     if (get_query_var('paged')){ 
@@ -17,8 +17,8 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
     }
  
 
-    $loop = new WP_Query($args);
-	return $loop;
+    $wp_query = new WP_Query($args);
+	return $wp_query;
 }
  
 function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
