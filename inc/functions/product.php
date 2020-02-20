@@ -16,7 +16,13 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
     	$args['paged'] = $paged;
     }
  
-
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 8,
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
     $wp_query = new WP_Query($args);
 	return $wp_query;
 }
