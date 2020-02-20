@@ -3,7 +3,18 @@ function theclick_woocommerce_query($type,$post_per_page=-1,$product_ids='',$tax
     global $wp_query;
 	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
 
-    
+    if (get_query_var('paged')){ 
+    	$paged = get_query_var('paged'); 
+    }
+    elseif(get_query_var('page')){ 
+    	$paged = get_query_var('page'); 
+    }
+    else{ 
+    	$paged = 1; 
+    }
+    if($paged > 1){
+    	$args['paged'] = $paged;
+    }
 
 
     $wp_query = new WP_Query($args);
