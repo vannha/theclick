@@ -2,6 +2,7 @@
     $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
     extract( $atts );
     $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
+
     /* get value for Design Tab */
     $css_classes = array(
         'ef5-posts-carousel',
@@ -14,12 +15,12 @@
 
     if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
 
-    global $wp_query; 
+    //global $wp_query; 
     $args = array(
         'post_type' => 'product',
         'posts_per_page' => 8
     );
-    $wp_query = new WP_Query($args);
+    $loop = new WP_Query($args);
     //$wp_query = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
     //$count = $wp_query->post_count;
     //var_dump($count);
