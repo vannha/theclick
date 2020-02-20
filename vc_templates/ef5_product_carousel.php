@@ -46,14 +46,15 @@
                 case '1':
                 ?>
                 <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                 
+                 	<?php do_action('theclick_woocommerce_shop_loop_products'); ?>
                 
                     <?php echo woocommerce_get_product_thumbnail(); ?>
                     <div class="ef5-owl-item-title">
-                    <?php do_action( 'woocommerce_shop_loop_item_title' ); ?>
-                    <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
+                     
                     </div> 
-                 
+                 	<div class="ef5-loop-product-add-to-cart">
+						<?php do_action('theclick_woocommerce_loop_product_add_to_cart'); ?>
+					</div>
                 </div>
             <?php
                 break;
