@@ -16,9 +16,9 @@
   
     if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
 
-    $posts = $wp_query = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
-    $count = $posts->post_count;
-   var_dump($count);  
+    //$posts = $wp_query = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
+    //$count = $posts->post_count;
+
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item'];
     
     $item_css_class = ['ef5-post-item-inner','transition'];
