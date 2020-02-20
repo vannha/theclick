@@ -680,7 +680,7 @@
     // WooCommerce Loop Product Gallery 
     function theclick_woo_loop_thumb_gallery(){
         'use strict';
-        $('.ef5-product-grid .ef5-wc-loop-img').slick({
+        $('.ef5-wc-loop-img').slick({
             vertical: false,
             slidesToShow: 1,
             focusOnSelect: true,
