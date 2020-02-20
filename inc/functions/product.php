@@ -2,6 +2,7 @@
 function theclick_woocommerce_query($type,$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
     global $wp_query;
 	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
+    var_dump($args);
     if (get_query_var('paged')){ 
     	$paged = get_query_var('paged'); 
     }
