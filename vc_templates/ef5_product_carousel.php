@@ -1,5 +1,4 @@
 <?php
-    $lists = $icon = '';
     $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
     extract( $atts );
     $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
