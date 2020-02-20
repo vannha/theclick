@@ -28,8 +28,8 @@
     
     $item_css_class = ['ef5-post-item-inner','transition'];
 
-    echo 'aaaaaaaaaaa';
-    
+     
+    $d = 0;
     
 ?>  
 <div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
