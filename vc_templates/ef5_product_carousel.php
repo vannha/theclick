@@ -23,9 +23,13 @@
         'orderby' => 'date',
         'order' => 'DESC',
     );
-    global $wp_query;
-
-    $wp_query = new WP_Query($products_args);
+    //global $wp_query;
+    $args = array(
+            'post_type' => 'product',
+            'posts_per_page' => 12
+            );
+    $loop = new WP_Query( $args );
+    //$wp_query = new WP_Query($products_args);
     //$posts = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
     //$count = $posts->post_count;
 
