@@ -23,26 +23,18 @@
     
     $item_css_class = ['ef5-post-item-inner','transition'];
 
-     
-    $d = 0;
+    
     while($posts->have_posts()){
-        $d++;
-         
-    ?>
-    <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
-    <?php
-    switch ($layout_template) {
-        case '1':
-        ?>	
-    	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-             bbbbbbbbbbbbbbbbbb
-        </div>
-    <?php
-        break;
-    }
-    ?>
-    </div>
-    <?php
+      
+	    switch ($layout_template) {
+	        case '1':
+	        echo 'bbbbbb';
+	        break;
+	        default:
+	        echo 'aaaaaaaa';
+	        break;
+	    }
+    
     } // end while
     wp_reset_postdata();
 ?>  
