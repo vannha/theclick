@@ -15,8 +15,8 @@
 
     if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
  
-    $wp_query = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
-    $count = $wp_query->post_count;
+    $loop = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
+    $count = $loop->post_count;
 
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item'];
     
