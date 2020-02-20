@@ -1,7 +1,7 @@
 <?php
 function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
-    global $wp_query;
-	//$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
+     
+	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
 
     if (get_query_var('paged')){ 
     	$paged = get_query_var('paged'); 
@@ -15,16 +15,10 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
     if($paged > 1){
     	$args['paged'] = $paged;
     }
+ 
 
-    $args = [
-        'post_type'      => 'product',
-        'posts_per_page' => 10,
-        'post_status'    => 'publish',
-        'paged'          => $paged,
-    ];
-
-    $wp_query = new WP_Query($args);
-	return $wp_query;
+    $loop = new WP_Query($args);
+	return $loop;
 }
  
 function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
