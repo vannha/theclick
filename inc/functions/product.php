@@ -1,7 +1,7 @@
 <?php
 function theclick_woocommerce_query($type,$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
     global $wp_query;
-	$args = []; //theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
+	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
 
     if (get_query_var('paged')){ 
     	$paged = get_query_var('paged'); 
@@ -34,14 +34,7 @@ function theclick_woocommerce_query_args($type,$post_per_page=-1,$product_ids=''
 			   'before' => date('Y-m-d H:i:s', current_time( 'timestamp' ))
 			)
 	    ),
-	    'tax_query' => array(
-			array(
-				'taxonomy' => 'product_visibility',
-				'field'    => 'term_taxonomy_id',
-				'terms'    => is_search() ? $product_visibility_term_ids['exclude-from-search'] : $product_visibility_term_ids['exclude-from-catalog'],
-				'operator' => 'NOT IN',
-			)
-	    ),
+	    
 	    'post_parent' => 0
     );
     switch ($type) {
