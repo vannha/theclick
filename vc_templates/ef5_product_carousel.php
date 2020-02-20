@@ -27,42 +27,4 @@
     $d = 0;
     
 ?>
-<div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
-    <?php 
-        ef5systems_owl_nav_top($atts);
-        ef5systems_owl_dots_top($atts); 
-    ?>
-    <div class="ef5-owl-wrap-inner relative">
-        <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
-        <?php 
-            while($posts->have_posts()){
-                $d++;
-                 
-            ?>
-            <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
-            <?php
-            switch ($layout_template) {
-                case '1':
-                ?>	
-            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                     bbbbbbbbbbbbbbbbbb
-                </div>
-            <?php
-                break;
-            }
-            ?>
-            </div>
-            <?php
-            } // end while
-            wp_reset_query();
-        ?>
-        </div>
-        <?php 
-            theclick_loading_animation('three-dot-bounce'); 
-            ef5systems_owl_dots_container($atts);
-            ef5systems_owl_nav_container($atts);
-            ef5systems_owl_dots_in_nav_container($atts);
-        ?>
-    </div>  
-    <?php //echo theclick_html($this->view_all($atts)); ?>
-</div>
+
