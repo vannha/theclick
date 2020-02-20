@@ -1,22 +1,12 @@
 <?php
 function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
-    global $wp_query; 
-	//$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
-
-    $args = array(
-        'post_type' => 'product',
-        'posts_per_page' => 8,
-        'post_status' => 'publish',
-        'orderby' => 'date',
-        'order' => 'DESC'
-    );
-    $wp_query = new WP_Query($args);
-	return $wp_query;
+    
+	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
+    $loop = new WP_Query($args);
+	return $loop;
 }
  
 function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
-	global $woocommerce;
-     
 	$product_visibility_term_ids = wc_get_product_visibility_term_ids();
     $args = array(
         'post_type' => 'product',
