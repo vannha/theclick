@@ -54,7 +54,7 @@
             </div>
             <?php
             } // end while
-            wp_reset_query();
+            wp_reset_postdata();
         ?>
         </div>
         <?php 
