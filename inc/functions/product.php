@@ -1,5 +1,5 @@
 <?php
-function theclick_woocommerce_query($type,$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
+function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
     global $wp_query;
 	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
 
@@ -21,7 +21,7 @@ function theclick_woocommerce_query($type,$post_per_page=-1,$product_ids='',$tax
 	return $wp_query;
 }
  
-function theclick_woocommerce_query_args($type,$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
+function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $taxonomies_exclude='', $product_cat=''){
 	global $woocommerce;
      
 	$product_visibility_term_ids = wc_get_product_visibility_term_ids();
