@@ -53,7 +53,7 @@
                     	<div class="ef5-owl-price-rating">
 	                    	<div class="ef5-owl-products-price ef5-heading"><?php printf('%1$s', $product->get_price_html());?></div> 
 	                    	<?php  
-	                    	if ( wc_review_ratings_enabled() ) {
+	                    	if ( wc_review_ratings_enabled() && $review_ratings == '') {
 	                    		echo wc_get_rating_html( $product->get_average_rating() );
 							}
 	                    	?>

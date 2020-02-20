@@ -147,6 +147,17 @@ vc_map(array(
 	            'value'      => 'carousel'
 	        )), 
 	        array(
+	        	array(
+	                'type'       => 'dropdown',
+	                'param_name' => 'review_ratings',
+	                'value'      => array(
+	                    esc_html__('Default','theclick')    => '',
+	                    esc_html__('Disable','theclick') 	=> 'disable' 
+	                ),
+	                'std'        => '',
+	                'heading'    => esc_html__('Review Ratings','theclick'),
+	                'group'      => esc_html__('Post Meta','theclick'),
+	            ),
 	            array(
 	                'type'       => 'dropdown',
 	                'param_name' => 'show_shop_more',
