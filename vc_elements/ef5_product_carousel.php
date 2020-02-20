@@ -14,7 +14,6 @@ vc_map(array(
 	            ),
 	            array(
 	    			'type' => 'dropdown',
-	    			'holder' => 'div',
 	    			'class' => '',
 	    			'heading' => esc_html__( 'Type', 'theclick' ),
 	    			'param_name' => 'type',
