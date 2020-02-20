@@ -24,7 +24,7 @@
         'order' => 'DESC'
     );
     $wp_query = new WP_Query($args);
-    $wp_query = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
+    //$wp_query = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
     $count = $wp_query->post_count;
     var_dump($count);
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item'];
