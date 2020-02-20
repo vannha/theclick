@@ -16,20 +16,12 @@
   
     if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
 
-    if (get_query_var('paged')) {
-        $paged = get_query_var('paged');
-    } elseif (get_query_var('page')) {
-        $paged = get_query_var('page');
-    } else {
-        $paged = 1;
-    }
     $products_args = array(
         'post_type' => 'product',
-        'posts_per_page' => $number,
+        'posts_per_page' => -1,
         'post_status' => 'publish',
         'orderby' => 'date',
         'order' => 'DESC',
-        'paged' => $paged,
     );
     global $wp_query;
 
