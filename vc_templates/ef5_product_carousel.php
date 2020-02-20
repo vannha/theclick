@@ -18,7 +18,7 @@
 
     $posts = $wp_query = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
     $count = $posts->post_count;
-   
+   var_dump($count);  
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item'];
     
     $item_css_class = ['ef5-post-item-inner','transition'];
@@ -27,7 +27,7 @@
     $d = 0;
     
 ?>
-<div class="ef5-posts <?php //echo ef5systems_owl_css_class($atts);?>">
+<div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
@@ -58,7 +58,7 @@
         ?>
         </div>
         <?php 
-           // theclick_loading_animation('three-dot-bounce'); 
+            theclick_loading_animation('three-dot-bounce'); 
             ef5systems_owl_dots_container($atts);
             ef5systems_owl_nav_container($atts);
             ef5systems_owl_dots_in_nav_container($atts);
