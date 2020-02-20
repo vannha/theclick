@@ -3,19 +3,6 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
     global $wp_query; 
 	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $taxonomies_exclude, $product_cat);
 
-    if (get_query_var('paged')){ 
-    	$paged = get_query_var('paged'); 
-    }
-    elseif(get_query_var('page')){ 
-    	$paged = get_query_var('page'); 
-    }
-    else{ 
-    	$paged = 1; 
-    }
-    if($paged > 1){
-    	$args['paged'] = $paged;
-    }
- 
     $args = array(
         'post_type' => 'product',
         'posts_per_page' => 8,
