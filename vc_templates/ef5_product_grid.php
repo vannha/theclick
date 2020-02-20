@@ -46,4 +46,98 @@
         'paged' => $paged,
     );
 
+    $ifp = is_front_page();
+    global $wp_query;
+
+    $wp_query = new WP_Query($products_args);
+
+    $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
+
+    $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
+
 ?>
+<div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
+    <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
+        <?php if( $filter=="true" && count($select_terms) > 0 && $layout=='masonry'):?>
+            <div class="ef5-grid-filter">
+                <ul class="ef5-filter-category">
+                    <li><a class="active" href="#" data-group="all"><?php echo esc_html__('All','theclick'); ?></a></li>
+                    <?php 
+                    foreach($select_terms as $category):?>
+                        <?php $term = get_term( $category, $taxo );?>
+                        <?php if(isset($term) && $term):?>
+                        <li><a href="#" data-group="<?php echo esc_attr('category-'.$term->slug);?>">
+                                <?php echo esc_html($term->name);?>
+                            </a>
+                        </li>
+                        <?php endif; ?>
+                    <?php endforeach;?>
+                </ul>
+            </div>
+        <?php endif;?>
+        <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
+            <?php
+            switch ($layout_template) {
+                case '1':
+                $d = 0;
+                while ($wp_query->have_posts()) {
+                    $d++;
+                    $wp_query->the_post();
+                    ?>
+                    <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                        <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php
+                            do_action( 'woocommerce_before_shop_loop_item' );
+                            do_action( 'woocommerce_before_shop_loop_item_title' );
+                            do_action( 'woocommerce_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item' );
+                        ?>
+                        </div>
+                    </div>
+                <?php 
+                }  
+                break;
+                case '2':
+                $d = 0;
+                ?>
+                <div class="title-wrap <?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <div class="title"><?php echo theclick_html($title)?></div>
+                        <div class="desc"><?php echo theclick_html($desc_text)?></div> 
+                    </div>
+                </div>
+                <?php 
+                while ($wp_query->have_posts()) {
+                    $d++;
+                    $wp_query->the_post();
+                    ?>
+                    <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                        <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php
+                            do_action( 'woocommerce_before_shop_loop_item' );
+                            do_action( 'woocommerce_before_shop_loop_item_title' );
+                            do_action( 'woocommerce_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item_title' );
+                            do_action( 'woocommerce_after_shop_loop_item' );
+                        ?>
+                        </div>
+                    </div>
+                <?php 
+                }     
+                break;
+            }
+            wp_reset_postdata();
+            ?>
+        </div>
+    </div>
+<?php
+$show_pagination = ($pagination == 'pagin') ? '1' : '0';
+if($ifp)
+    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '1']);
+else
+    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
+$this->view_all($atts);
+$this->loadmore($atts);
+?>
+</div>
