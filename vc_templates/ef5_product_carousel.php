@@ -27,7 +27,7 @@
     $d = 0;
     
 ?>
-<div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
+<div class="ef5-posts <?php //echo ef5systems_owl_css_class($atts);?>">
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
