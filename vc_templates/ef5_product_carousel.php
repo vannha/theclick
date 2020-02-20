@@ -16,7 +16,25 @@
   
     if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
 
-    $posts = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
+    if (get_query_var('paged')) {
+        $paged = get_query_var('paged');
+    } elseif (get_query_var('page')) {
+        $paged = get_query_var('page');
+    } else {
+        $paged = 1;
+    }
+    $products_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $number,
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'paged' => $paged,
+    );
+    global $wp_query;
+
+    $wp_query = new WP_Query($products_args);
+    //$posts = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies, $taxonomies_exclude,$category_slug); 
     //$count = $posts->post_count;
 
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item'];
