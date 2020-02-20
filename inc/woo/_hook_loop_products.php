@@ -194,3 +194,8 @@ function theclick_quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, 
 	}
 	return $html;
 }
+
+add_action('woocommerce_template_loop_rating1','theclick_woocommerce_template_loop_rating',0);
+function theclick_woocommerce_template_loop_rating(){
+	echo 'aaaaaaaa';
+}
