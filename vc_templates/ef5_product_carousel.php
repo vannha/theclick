@@ -27,6 +27,14 @@
     
 ?>  
 <div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
+	<div class="title-shop-more">
+        <div class="title"><?php echo theclick_html($title)?></div>
+        <?php if($show_shop_more != 'none'): ?>
+        <div class="shop-more">
+        	<a href="<?php echo get_permalink($shop_more_page);?>" class="btn-link"><?php echo esc_html($shop_more_text);?></a>
+    	</div> 
+    	<?php endif; ?>
+    </div>
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
