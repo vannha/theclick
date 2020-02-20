@@ -21,7 +21,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
         'posts_per_page' => 10,
         'post_status'    => 'publish',
         'paged'          => $paged,
-    ]
+    ];
 
     $wp_query = new WP_Query($args);
 	return $wp_query;
