@@ -52,7 +52,7 @@
                     	<div class="ef5-heading ef5-owl-product-title"><a href="<?php the_permalink()?>"><?php the_title()?></a></div>
                     	<div class="ef5-owl-price-rating">
 	                    	<div class="ef5-owl-products-price ef5-heading"><?php printf('%1$s', $product->get_price_html());?></div> 
-	                    	<?php add_action('woocommerce_template_loop_rating'); ?>
+	                    	<?php do_action('woocommerce_template_loop_rating'); ?>
                     	</div>
                     </div> 
                  	<div class="ef5-owl-product-add-to-cart">
