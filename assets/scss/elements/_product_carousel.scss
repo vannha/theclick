@@ -17,6 +17,7 @@
 	.ef5-owl-product-add-to-cart{
 		position: absolute;
 		bottom: 0;
+		@include d-flex();
 		justify-content: space-between;
     	align-items: center;
     	width: 100%;
