@@ -2,6 +2,72 @@
 	margin: 0;
 	padding: 0;
 }
+.ef5-owl-nav-style-default{
+	margin: 0 -12px;
+	.ef5-owl-nav-button {
+		background: transparent;
+	    width: 30px;
+	    height: 30px;
+	    line-height: 30px;
+	    display: inline-block;
+	    padding: 0;
+	    margin: 0 12px;
+	    &:hover{
+			background: transparent;
+			color: $accent_color;
+		}
+	}
+	.ef5-owl-next .ef5-owl-nav-icon:before {
+	    content: '';
+	    display: block;
+	    width: 14px;
+	    height: 25px;
+	    background: url(../images/next-icon.png) no-repeat 0 0;
+	}
+	.ef5-owl-prev .ef5-owl-nav-icon:before{
+	    content: '';
+	    display: block;
+	    width: 14px;
+	    height: 25px;
+	    background: url(../images/next-icon.png) no-repeat 0 0;
+	}
+}
+.ef5-owl-nav-style-theclick-1{
+	.ef5-owl-nav-button{
+		background: transparent;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		color: #c5c5c5;
+		font-size: 40px;
+		&:hover{
+			background: transparent;
+			color: $accent_color;
+		}
+	}
+	.ef5-owl-prev .ef5-owl-nav-icon:before{
+		content: "\f103";
+		font-family: $FontTheClick;
+	}
+	.ef5-owl-next .ef5-owl-nav-icon:before{
+		content: "\f104";
+		font-family: $FontTheClick;
+	}
+	&.ef5-owl-nav-pos-vertical.outside{
+		@media (min-width: 1366px){
+			left: -103px;
+			right: -103px;
+		}
+		@media (min-width: 1280px) and (max-width: 1360px){
+			left: -65px;
+			right: -65px;
+		}
+		@media (min-width: 1200px) and (max-width: 1279px){
+			left: 0;
+			right: 0;
+		}
+	}
+}
 .ef5-owl-nav-style-theclick-1{
 	.ef5-owl-nav-button{
 		background: transparent;
