@@ -21,9 +21,6 @@
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item'];
     
     $item_css_class = ['ef5-post-item-inner','transition'];
-
-     
-    $d = 0;
     
 ?>  
 <div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
@@ -45,10 +42,9 @@
             while($loop->have_posts()){
             	$loop->the_post(); 
             	global $product;
-                $d++;
                 $price_html = $product->get_price_html(); 
             ?>
-            <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+            <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>">
             <?php
             switch ($layout_template) {
                 case '1':
