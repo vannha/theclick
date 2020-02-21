@@ -23,7 +23,7 @@
     $item_css_class = ['ef5-post-item-inner','transition'];
     
 ?>  
-<div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
+<div class="ef5-posts <?php //echo ef5systems_owl_css_class($atts);?>">
 	<div class="title-shop-more">
         <div class="title"><?php echo theclick_html($title)?></div>
         <?php if($show_shop_more != 'none'): ?>
