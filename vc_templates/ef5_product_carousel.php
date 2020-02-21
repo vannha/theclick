@@ -80,7 +80,7 @@
             ef5systems_owl_dots_container($atts);
         ?>
         <div class="ef5-owl-nav-total d-flex justify-content-between align-items-center">
-        	<div class="ef5-owl-nav1">
+        	<div class="ef5-owl-navs">
 	        <?php ef5systems_owl_nav_container($atts); ?>
 	        </div>
 	        <div class="ef5-owl-total">
