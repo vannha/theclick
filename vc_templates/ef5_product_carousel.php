@@ -78,7 +78,16 @@
         <?php 
             theclick_loading_animation('three-dot-bounce'); 
             ef5systems_owl_dots_container($atts);
-            ef5systems_owl_nav_container($atts);
+        ?>
+        <div class="ef5-owl-nav-total d-flex justify-content-between align-items-center">
+        	<div class="ef5-owl-nav">
+	        <?php ef5systems_owl_nav_container($atts); ?>
+	        </div>
+	        <div class="ef5-owl-total">
+	        	4/20
+	        </div>
+        </div>
+        <?php 
             ef5systems_owl_dots_in_nav_container($atts);
         ?>
     </div>  
