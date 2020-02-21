@@ -48,12 +48,11 @@
                 case '1':
                 ?>
                 <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                 	 
                     <?php echo woocommerce_get_product_thumbnail(); ?>
-                    <div class="ef5-owl-item-title">
-                    	<div class="ef5-heading ef5-owl-product-title"><a href="<?php the_permalink()?>"><?php the_title()?></a></div>
-                    	<div class="ef5-owl-price-rating">
-	                    	<div class="ef5-owl-products-price ef5-heading"><?php printf('%1$s', $product->get_price_html());?></div> 
+                    <div class="wc-loop-content-wrap">
+                    	<div class="ef5-heading ef5-loop-product-title"><a href="<?php the_permalink()?>"><?php the_title()?></a></div>
+                    	<div class="wc-loop-rating-price">
+	                    	<div class="ef5-loop-products-price ef5-heading"><?php printf('%1$s', $product->get_price_html());?></div> 
 	                    	<?php  
 	                    	if ( wc_review_ratings_enabled() && $review_ratings == '') {
 	                    		echo wc_get_rating_html( $product->get_average_rating() );
