@@ -36,7 +36,7 @@
 		height: 1px;
 		position: absolute;
 		left: 0;
-		bottom: 0;
+		bottom: 4px;
 		background: $btn-color;
 		@include transition(width .3s ease);
 	}
