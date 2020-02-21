@@ -85,7 +85,7 @@
 	        </div>
 	        <div class="ef5-owl-total">
 	        	<div class="owl-num-count">
-        			<span class="current">01</span>
+        			<span class="current">1</span>
         			<span class="total"><?php echo esc_html($count);?></span>	
         		</div>
 	        </div>
