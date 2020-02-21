@@ -21,3 +21,26 @@
 		}
 	}	
 }
+
+.link-shop-more{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;	
+	position: relative;
+	text-transform: uppercase;
+	padding-left: 28px;
+	color: $btn-color;
+	&:after{
+		content: "";
+		width: 20px;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background: $btn-color;
+		@include transition(width .3s ease);
+	}
+	&:hover{
+		color: $btn-color;
+	}	
+}
