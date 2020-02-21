@@ -7,8 +7,6 @@
     $css_classes = array(
         'ef5-product-carousel',
         'ef5-product-carousel-'.$layout_template,
-        'ef5-owl',
-        'owl-carousel',
         vc_shortcode_custom_css_class( $css ),
     );
     $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
@@ -23,7 +21,7 @@
     $item_css_class = ['ef5-post-item-inner','transition'];
     
 ?>  
-<div class="ef5-posts <?php //echo ef5systems_owl_css_class($atts);?>">
+<div class="ef5-posts <?php echo esc_attr(trim($css_class));?>">
 	<div class="title-shop-more">
         <div class="title"><?php echo theclick_html($title)?></div>
         <?php if($show_shop_more != 'none'): ?>
@@ -37,7 +35,7 @@
         ef5systems_owl_dots_top($atts); 
     ?>
     <div class="ef5-owl-wrap-inner relative">
-        <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
+        <div id="<?php echo esc_attr($el_id);?>" class="ef5-owl owl-carousel">
         <?php 
             while($loop->have_posts()){
             	$loop->the_post(); 
