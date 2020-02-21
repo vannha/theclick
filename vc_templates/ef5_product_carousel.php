@@ -84,7 +84,10 @@
 	        <?php ef5systems_owl_nav_container($atts); ?>
 	        </div>
 	        <div class="ef5-owl-total">
-	        	4/20
+	        	<div class="owl-num-count">
+        			<span class="current">01</span>
+        			<span class="total"><?php echo esc_html($count);?></span>	
+        		</div>
 	        </div>
         </div>
         <?php 
