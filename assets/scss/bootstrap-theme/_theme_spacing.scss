@@ -46,7 +46,7 @@ $spacers: (
                 }
                 .#{$abbrev}r#{$infix}-#{$size},
                 .#{$abbrev}x#{$infix}-#{$size},
-                .#{$abbrev}x#{$infix}-#{$size}.ef5-bg-inner:before {
+                .#{$abbrev}r#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-right: $length !important;
                 }
                 .#{$abbrev}b#{$infix}-#{$size},
@@ -55,7 +55,7 @@ $spacers: (
                 }
                 .#{$abbrev}l#{$infix}-#{$size},
                 .#{$abbrev}x#{$infix}-#{$size},
-                .#{$abbrev}x#{$infix}-#{$size}.ef5-bg-inner:before {
+                .#{$abbrev}l#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-left: $length !important;
                 }
             }
