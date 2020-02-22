@@ -1,7 +1,7 @@
 <?php
 function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies=''){
     
-	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $product_cat);
+	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies);
     if (get_query_var('paged')){ 
         $paged = get_query_var('paged'); 
     }elseif(get_query_var('page')){ 
