@@ -20,6 +20,13 @@
 		.ef5-bg-#{$name}{
 			background: $color;
 		}
+		.ef5-bg-#{$name}.ef5-bg-inner{
+			background: transparent;
+			&:before{
+				content: '';
+				background-color: $color;
+			}
+		}
 		.ef5-bg-hover-#{$name}:hover{
 			background: $color;
 		}
