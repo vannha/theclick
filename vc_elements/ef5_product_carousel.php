@@ -43,12 +43,6 @@ vc_map(array(
 	                    'values'         => theclick_get_product_categories_for_autocomplete(),
 	                ),
 	                'description' => esc_html__( 'Enter categories.', 'theclick' ),
-	                'dependency' => array(
-	                    'element' => 'type',
-	                    'value' => array(
-	                        'category',
-	                    ),
-	                ),
 	            ),
 	            array(
 	                'type'       => 'autocomplete',
