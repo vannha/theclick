@@ -1,5 +1,5 @@
 <?php
-function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $product_cat=''){
+function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies=''){
     
 	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies, $product_cat);
     if (get_query_var('paged')){ 
@@ -16,7 +16,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
 	return $loop;
 }
  
-function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='', $product_cat=''){
+function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies=''){
 	$product_visibility_term_ids = wc_get_product_visibility_term_ids();
      
     $args = array(
@@ -38,6 +38,10 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
 	    ),
 	    'post_parent' => 0
     );
+    if(!empty($taxonomies) || !empty($taxonomies_exclude)){
+        $tax_query = ef5systems_tax_query('product', $taxonomies, '');
+        $args['tax_query']= $tax_query;
+    }
     switch ($type) {
         case 'best_selling':
             $args['meta_key']='total_sales';
@@ -100,7 +104,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
     			}
     		}
             break;
-        case 'category':
+        /*case 'category':
             if(!empty($taxonomies) || !empty($taxonomies_exclude)){
                 $tax_query = ef5systems_tax_query('product', $taxonomies, '');
                 $args['tax_query']= $tax_query;
@@ -116,7 +120,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         			)
         		);
             }
-            break;
+            break;*/
     }
     return $args;
 }

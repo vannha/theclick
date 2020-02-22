@@ -26,8 +26,8 @@ vc_map(array(
 							esc_html__( 'Recent Review', 'theclick' )         => 'recent_review',
 							esc_html__( 'Product Deals', 'theclick' )         => 'deals',
 							esc_html__( 'Product separate', 'theclick' )      => 'separate',
-							esc_html__( 'Product category', 'theclick' )      => 'category',
-							esc_html__( 'Product category slug', 'theclick' ) => 'category_slug'
+							//esc_html__( 'Product category', 'theclick' )      => 'category',
+							//esc_html__( 'Product category slug', 'theclick' ) => 'category_slug'
 	    				),
 	    		), 
 	            array(
@@ -52,7 +52,7 @@ vc_map(array(
 	                    ),
 	                ),
 	            ),
-	            array(
+	            /*array(
 	    			'type' => 'textfield',
 	    			'class' => '',
 	    			'heading' => esc_html__( 'Category slug (clothing,digital,food-pasta...)', 'theclick' ),
@@ -65,7 +65,7 @@ vc_map(array(
 	                        'category_slug',
 	                    ),
 	                ),
-	    		), 
+	    		), */
 	    		array(
 	    			'type' => 'textfield',
 	    			'class' => '',

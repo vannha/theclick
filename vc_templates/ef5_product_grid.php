@@ -45,9 +45,9 @@
         'paged' => $paged,
     );
     */
-    if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
+    //if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
  
-    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies,$category_slug);
+    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies);
 
     $ifp = is_front_page();
 
