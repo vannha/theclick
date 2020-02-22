@@ -105,24 +105,33 @@ $spacers: (
                     #{$prop}: $length !important; 
                 }
                 .#{$abbrev}t#{$infix}-#{$size},
-                .#{$abbrev}y#{$infix}-#{$size},
-                .#{$abbrev}t#{$infix}-#{$size}.ef5-bg-inner::before {
+                .#{$abbrev}y#{$infix}-#{$size}{
                     #{$prop}-top: $length !important;
                 }
                 .#{$abbrev}r#{$infix}-#{$size},
-                .#{$abbrev}x#{$infix}-#{$size},
-                .#{$abbrev}r#{$infix}-#{$size}.ef5-bg-inner::before {
+                .#{$abbrev}x#{$infix}-#{$size}{
                     #{$prop}-right: $length !important;
                 }
                 .#{$abbrev}b#{$infix}-#{$size},
-                .#{$abbrev}y#{$infix}-#{$size},
-                .#{$abbrev}b#{$infix}-#{$size}.ef5-bg-inner::before {
+                .#{$abbrev}y#{$infix}-#{$size}{
                     #{$prop}-bottom: $length !important;
                 }
                 .#{$abbrev}l#{$infix}-#{$size},
-                .#{$abbrev}x#{$infix}-#{$size},
-                .#{$abbrev}l#{$infix}-#{$size}.ef5-bg-inner::before {
+                .#{$abbrev}x#{$infix}-#{$size}{
                     #{$prop}-left: $length !important;
+                }
+
+                .#{$abbrev}t#{$infix}-#{$size}.ef5-bg-inner::before {
+                    #{$prop}-top: $length + 15px !important;
+                }
+                .#{$abbrev}r#{$infix}-#{$size}.ef5-bg-inner::before {
+                    #{$prop}-right: $length + 15px !important;
+                }
+                .#{$abbrev}b#{$infix}-#{$size}.ef5-bg-inner::before {
+                    #{$prop}-bottom: $length + 15px !important;
+                }
+                .#{$abbrev}l#{$infix}-#{$size}.ef5-bg-inner::before {
+                    #{$prop}-left: $length + 15px !important;
                 }
             }
         }
