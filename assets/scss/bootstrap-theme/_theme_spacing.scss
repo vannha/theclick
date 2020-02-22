@@ -40,8 +40,10 @@ $spacers: (
         @each $prop, $abbrev in (margin: m, padding: p) {
             @each $size, $length in $spacers {
                 .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+
                 .#{$abbrev}t#{$infix}-#{$size},
-                .#{$abbrev}y#{$infix}-#{$size} {
+                .#{$abbrev}y#{$infix}-#{$size},
+                .#{$abbrev}t#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-top: $length !important;
                 }
                 .#{$abbrev}r#{$infix}-#{$size},
@@ -50,7 +52,8 @@ $spacers: (
                     #{$prop}-right: $length !important;
                 }
                 .#{$abbrev}b#{$infix}-#{$size},
-                .#{$abbrev}y#{$infix}-#{$size} {
+                .#{$abbrev}y#{$infix}-#{$size},
+                .#{$abbrev}b#{$infix}-#{$size}.ef5-bg-inner::before { {
                     #{$prop}-bottom: $length !important;
                 }
                 .#{$abbrev}l#{$infix}-#{$size},
@@ -93,19 +96,23 @@ $spacers: (
                     #{$prop}: $length !important; 
                 }
                 .#{$abbrev}t#{$infix}-#{$size},
-                .#{$abbrev}y#{$infix}-#{$size} {
+                .#{$abbrev}y#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-top: $length !important;
                 }
                 .#{$abbrev}r#{$infix}-#{$size},
-                .#{$abbrev}x#{$infix}-#{$size} {
+                .#{$abbrev}x#{$infix}-#{$size},
+                .#{$abbrev}x#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-right: $length !important;
                 }
                 .#{$abbrev}b#{$infix}-#{$size},
-                .#{$abbrev}y#{$infix}-#{$size} {
+                .#{$abbrev}y#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-bottom: $length !important;
                 }
                 .#{$abbrev}l#{$infix}-#{$size},
-                .#{$abbrev}x#{$infix}-#{$size} {
+                .#{$abbrev}x#{$infix}-#{$size},
+                .#{$abbrev}x#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-left: $length !important;
                 }
             }
