@@ -84,8 +84,8 @@
                 case '1':
                 $d = 0;
                 while ($loop->have_posts()) {
-                    $d++;
                     $loop->the_post();
+                    $d++;
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
                         <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
