@@ -80,13 +80,15 @@
         ?>
         <div class="ef5-owl-nav-total d-flex justify-content-between align-items-center">
         	<div class="ef5-owl-navs">
-	        <?php ef5systems_owl_nav_container($atts); ?>
+	           <?php ef5systems_owl_nav_container($atts); ?>
 	        </div>
-	        <div class="ef5-owl-total">
-	        	<div class="owl-num-count">
-        			<span class="current">1</span> / <span class="total"><?php echo esc_html($count);?></span>	
-        		</div>
-	        </div>
+            <?php if(isset($show_number_total) && $show_number_total == '1'): ?>
+    	        <div class="ef5-owl-total">
+    	        	<div class="owl-num-count">
+            			<span class="current">1</span> / <span class="total"><?php echo esc_html($count);?></span>	
+            		</div>
+    	        </div>
+            <?php endif; ?>
         </div>
         <?php 
             ef5systems_owl_dots_in_nav_container($atts);
