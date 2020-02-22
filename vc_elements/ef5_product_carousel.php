@@ -191,7 +191,16 @@ vc_map(array(
 	                ),
 	                'heading'    => esc_html__('Shop More Text','theclick'),
 	                'group'      => esc_html__('Post Meta','theclick'),
-	            ) 
+	            ),
+	            array(
+			        'type'         => 'checkbox',
+			        'param_name'   => 'show_number_total',
+			        'value'        => array(
+			            esc_html__('Show number total','theclick') => '1'
+			        ),
+			        'std'          => '0',
+			        'group'      => esc_html__('Post Meta','theclick'),
+			    ), 
 	        ),
 	        array(
 	            array(
