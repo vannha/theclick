@@ -53,7 +53,7 @@ $spacers: (
                 }
                 .#{$abbrev}b#{$infix}-#{$size},
                 .#{$abbrev}y#{$infix}-#{$size},
-                .#{$abbrev}b#{$infix}-#{$size}.ef5-bg-inner::before { {
+                .#{$abbrev}b#{$infix}-#{$size}.ef5-bg-inner::before {
                     #{$prop}-bottom: $length !important;
                 }
                 .#{$abbrev}l#{$infix}-#{$size},
