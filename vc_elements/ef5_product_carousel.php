@@ -42,7 +42,7 @@ vc_map(array(
 	                    'display_inline' => true,
 	                    'delay'          => 500,
 	                    'auto_focus'     => true,
-	                    'values'         => ef5systems_taxonomies_for_autocomplete(),
+	                    'values'         => theclick_get_product_categories_for_autocomplete(),
 	                ),
 	                'description' => esc_html__( 'Enter categories.', 'theclick' ),
 	                'dependency' => array(
@@ -51,23 +51,6 @@ vc_map(array(
 	                        'category',
 	                    ),
 	                ),
-	            ),
-	            array(
-	                'type'       => 'autocomplete',
-	                'heading'    => esc_html__( 'Exclude from Content and filter list', 'theclick' ),
-	                'param_name' => 'taxonomies_exclude',
-	                'settings'   => array(
-	                    'multiple'       => true,
-	                    'min_length'     => 1,
-	                    'groups'         => true,
-	                    'unique_values'  => true,
-	                    'display_inline' => true,
-	                    'delay'          => 500,
-	                    'auto_focus'     => true,
-	                    'values'         => ef5systems_taxonomies_for_autocomplete(),
-	                ),
-	                'description' => esc_html__( 'Enter categories won\'t be shown in the content and filters list', 'theclick' ),
-	                'admin_label' => true
 	            ),
 	            array(
 	    			'type' => 'textfield',

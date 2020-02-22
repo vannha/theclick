@@ -37,6 +37,74 @@ vc_map(array(
 	                ),
 	            ),
 	            array(
+	    			'type' => 'dropdown',
+	    			'class' => '',
+	    			'heading' => esc_html__( 'Type', 'theclick' ),
+	    			'param_name' => 'type',
+	    			'value' => array(
+							esc_html__( 'Best Selling', 'theclick' )          => 'best_selling',
+							esc_html__( 'Featured Products', 'theclick' )     => 'featured_product',
+							esc_html__( 'Top Rate', 'theclick' )              => 'top_rate',
+							esc_html__( 'Recent Products', 'theclick' )       => 'recent_product',
+							esc_html__( 'On Sale', 'theclick' )               => 'on_sale',
+							esc_html__( 'Recent Review', 'theclick' )         => 'recent_review',
+							esc_html__( 'Product Deals', 'theclick' )         => 'deals',
+							esc_html__( 'Product separate', 'theclick' )      => 'separate',
+							esc_html__( 'Product category', 'theclick' )      => 'category',
+							esc_html__( 'Product category slug', 'theclick' ) => 'category_slug'
+	    				),
+	    		), 
+	            array(
+					'type' => 'autocomplete',
+					'heading' => esc_html__( 'Narrow data source', 'theclick' ),
+					'param_name' => 'taxonomies',
+					'settings' => array(
+						'multiple'       => true,
+						'min_length'     => 2,
+						'groups'         => true,
+						'unique_values'  => true,
+						'display_inline' => true,
+						'delay'          => 500,
+						'auto_focus'     => true,
+						'values'   =>  theclick_get_product_categories_for_autocomplete(),
+					),
+					'description' => esc_html__( 'Enter categories.', 'theclick' ),
+					'dependency' => array(
+	                    'element' => 'type',
+	                    'value' => array(
+	                        'category',
+	                    ),
+	                ),
+				),
+	            array(
+	    			'type' => 'textfield',
+	    			'class' => '',
+	    			'heading' => esc_html__( 'Category slug (clothing,digital,food-pasta...)', 'theclick' ),
+	                'description' => esc_html__( 'Enter the category slug separated by commas', 'theclick' ),
+	    			'param_name' => 'category_slug',
+	    			'value' => '',
+	                'dependency' => array(
+	                    'element' => 'type',
+	                    'value' => array(
+	                        'category_slug',
+	                    ),
+	                ),
+	    		), 
+	    		array(
+	    			'type' => 'textfield',
+	    			'class' => '',
+	    			'heading' => esc_html__( 'Product id (123,124,135...)', 'theclick' ),
+	                'description' => esc_html__( 'Enter the product id separated by commas', 'theclick' ),
+	    			'param_name' => 'product_ids',
+	    			'value' => '',
+	                'dependency' => array(
+	                    'element' => 'type',
+	                    'value' => array(
+	                        'separate',
+	                    ),
+	                ),
+	    		),
+	            array(
 					'type' => 'autocomplete',
 					'heading' => esc_html__( 'Narrow data source', 'theclick' ),
 					'param_name' => 'taxonomies',

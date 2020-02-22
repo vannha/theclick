@@ -4,15 +4,15 @@
 
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
 
-    if (get_query_var('paged')) {
+    /*if (get_query_var('paged')) {
         $paged = get_query_var('paged');
     } elseif (get_query_var('page')) {
         $paged = get_query_var('page');
     } else {
         $paged = 1;
-    }
+    }*/
 
-    $tax_query = array();
+    //$tax_query = array();
     $select_terms = array();
     if ( ! empty( $atts['taxonomies'] ) ) {
         $terms = get_terms( array(
@@ -26,16 +26,16 @@
                 $select_terms[] = $t; 
             }
         }
-        $tax_query = array(
+        /*$tax_query = array(
             array(
                 'taxonomy' => 'product_cat',
                 'field'    => 'slug',
                 'terms'    => $elected_taxs,
             ),
-        );
+        );*/
     } 
 
-    $products_args = array(
+    /*$products_args = array(
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
@@ -44,11 +44,15 @@
         'tax_query' => $tax_query,
         'paged' => $paged,
     );
+    */
+    if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
+ 
+    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies,$category_slug);
 
     $ifp = is_front_page();
-    global $wp_query;
 
-    $wp_query = new WP_Query($products_args);
+    /*global $wp_query;
+    $wp_query = new WP_Query($products_args);*/
 
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
@@ -79,9 +83,9 @@
             switch ($layout_template) {
                 case '1':
                 $d = 0;
-                while ($wp_query->have_posts()) {
+                while ($loop->have_posts()) {
                     $d++;
-                    $wp_query->the_post();
+                    $loop->the_post();
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
                         <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
@@ -107,9 +111,9 @@
                     </div>
                 </div>
                 <?php 
-                while ($wp_query->have_posts()) {
+                while ($loop->have_posts()) {
+                    $loop->the_post();
                     $d++;
-                    $wp_query->the_post();
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
                         <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
