@@ -50,8 +50,6 @@ vc_map(array(
 							esc_html__( 'Recent Review', 'theclick' )         => 'recent_review',
 							esc_html__( 'Product Deals', 'theclick' )         => 'deals',
 							esc_html__( 'Product separate', 'theclick' )      => 'separate',
-							//esc_html__( 'Product category', 'theclick' )      => 'category',
-							//esc_html__( 'Product category slug', 'theclick' ) => 'category_slug'
 	    				),
 	    		), 
 	            array(
@@ -70,20 +68,22 @@ vc_map(array(
 					),
 					'description' => esc_html__( 'Enter categories.', 'theclick' ),
 				),
-	            /*array(
-	    			'type' => 'textfield',
-	    			'class' => '',
-	    			'heading' => esc_html__( 'Category slug (clothing,digital,food-pasta...)', 'theclick' ),
-	                'description' => esc_html__( 'Enter the category slug separated by commas', 'theclick' ),
-	    			'param_name' => 'category_slug',
-	    			'value' => '',
-	                'dependency' => array(
-	                    'element' => 'type',
-	                    'value' => array(
-	                        'category_slug',
-	                    ),
+	            array(
+	                'type'       => 'autocomplete',
+	                'heading'    => esc_html__( 'Exclude from Content and filter list', 'theclick' ),
+	                'param_name' => 'taxonomies_exclude',
+	                'settings'   => array(
+	                    'multiple'       => true,
+	                    'min_length'     => 2,
+	                    'groups'         => true,
+	                    'unique_values'  => true,
+	                    'display_inline' => true,
+	                    'delay'          => 500,
+	                    'auto_focus'     => true,
+	                    'values'         => theclick_get_product_categories_for_autocomplete(),
 	                ),
-	    		), */
+	                'description' => esc_html__( 'Enter categories won\'t be shown in the content and filters list', 'theclick' ),
+	            ),
 	    		array(
 	    			'type' => 'textfield',
 	    			'class' => '',

@@ -47,7 +47,7 @@
     */
     //if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
  
-    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies);
+    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
 
     $ifp = is_front_page();
 

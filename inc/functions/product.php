@@ -1,7 +1,7 @@
 <?php
-function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies=''){
+function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude=''){
     
-	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies);
+	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
     if (get_query_var('paged')){ 
         $paged = get_query_var('paged'); 
     }elseif(get_query_var('page')){ 
@@ -16,7 +16,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
 	return $loop;
 }
  
-function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies=''){
+function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude=''){
 	$product_visibility_term_ids = wc_get_product_visibility_term_ids();
      
     $args = array(
@@ -39,7 +39,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
 	    'post_parent' => 0
     );
     if(!empty($taxonomies) || !empty($taxonomies_exclude)){
-        $tax_query = ef5systems_tax_query('product', $taxonomies, '');
+        $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
         $args['tax_query']= $tax_query;
     }
     switch ($type) {
