@@ -105,23 +105,6 @@ vc_map(array(
 	                ),
 	    		),
 	            array(
-					'type' => 'autocomplete',
-					'heading' => esc_html__( 'Narrow data source', 'theclick' ),
-					'param_name' => 'taxonomies',
-					'settings' => array(
-						'multiple' => true,
-						'min_length' => 2,
-						'groups' => true,
-						'unique_values' => true,
-						'display_inline' => true,
-						'delay' => 500,
-						'auto_focus' => true,
-						'values'   =>  theclick_get_product_categories_for_autocomplete(),
-					),
-					'param_holder_class' => 'vc_not-for-custom',
-					'description' => esc_html__( 'Enter categories.', 'theclick' ),
-				),
-	            array(
 	                'type'        => 'textfield',
 	                'heading'     => esc_html__( 'Post per page', 'theclick' ),
 	                'param_name'  => 'post_per_page',
