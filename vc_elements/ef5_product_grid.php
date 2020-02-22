@@ -83,6 +83,7 @@ vc_map(array(
 	                    'values'         => theclick_get_product_categories_for_autocomplete(),
 	                ),
 	                'description' => esc_html__( 'Enter categories won\'t be shown in the content and filters list', 'theclick' ),
+	                'admin_label' => true
 	            ),
 	    		array(
 	    			'type' => 'textfield',
