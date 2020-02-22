@@ -85,6 +85,7 @@
                 $d = 0;
                 while ($loop->have_posts()) {
                     $loop->the_post();
+                    global $product;
                     $d++;
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
@@ -113,6 +114,7 @@
                 <?php 
                 while ($loop->have_posts()) {
                     $loop->the_post();
+                    global $product;
                     $d++;
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
