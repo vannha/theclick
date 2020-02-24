@@ -167,7 +167,7 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
                                         // position
                                        // $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
                                         // star rating
-                                        $this->overcome_tm_rate($testimonial, $atts);
+                                        //$this->overcome_tm_rate($testimonial, $atts);
                             		break;
                             	}
                             echo '</div>';
