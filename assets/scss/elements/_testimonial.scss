@@ -28,3 +28,11 @@
 		letter-spacing: 1px;
 	}
 }
+.ef5-testimonial-layout-1{
+	.ttmn-text{
+		padding: 35px 40px 65px;
+		@media (max-width: 1199px){
+			padding: 30px 15px 50px; 
+		}
+	}
+}
