@@ -51,7 +51,7 @@ $ttmn_wrap_classes = ['ef5-testimonials', ef5systems_owl_css_class($atts)];
 
 if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5','6'])) $ttmn_wrap_classes[] = 'text-center';
 ?>
-<div class="<?php echo overcome_optimize_css_class(implode(' ', $ttmn_wrap_classes));?>">
+<div class="<?php //echo overcome_optimize_css_class(implode(' ', $ttmn_wrap_classes));?>">
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
