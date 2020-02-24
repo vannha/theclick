@@ -80,13 +80,13 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
                             echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
                             	switch ($layout_template) {
                             		default:
-                                        $this->theclick_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
+                                        $this->theclick_tm_text($testimonial, $atts,['class' => 'text-16 lh-26']);
 
-                            			$this->theclick_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
+                            			$this->theclick_tm_avatar($testimonial,$atts,['size' => '70', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
 
-                                        $this->theclick_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
+                                        $this->theclick_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block text-16 lh-26 mb-5']);
 
-                                        $this->theclick_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
+                                        $this->theclick_tm_position($testimonial,['class' => 'text-16 lh-26 ef5-text-accent d-block']);
 
                                         $this->theclick_tm_rate($testimonial, $atts);
                             		break;
