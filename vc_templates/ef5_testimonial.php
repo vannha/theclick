@@ -79,94 +79,15 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
                             endif;
                             echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
                             	switch ($layout_template) {
-                                    case '6':
-                                        // text 
-                                        $this->theclick_tm_text($testimonial, $atts,['class' => 'text-13 ef5-text-777777 font-style-400 pb-18']);
-                                        // name
-                                        $this->theclick_tm_name($testimonial, $atts,['class' => 'font-style-500 ef5-text-accent d-block']);
-                                        // position
-                                        $this->theclick_tm_position($testimonial,['class' => 'text-13 ef5-text-777777 d-block']);
-                                        // star rating
-                                        $this->theclick_tm_rate($testimonial, $atts);
-                                        //avatar
-                                        $this->theclick_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']);
-                                    break;
-                                    case '5':
-                                    ?>
-                                        <div class="row getters-20 align-items-center">
-                                            <div class="col-auto">
-                                            <?php //avatar
-                                                $this->theclick_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']); ?>
-                                            </div>
-                                            <div class="col">
-                                                <?php // name
-                                                $this->theclick_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
-                                                // position
-                                                $this->theclick_tm_position($testimonial,['class' => 'text-13 d-block ef5-text-777777']);
-                                                // star rating
-                                                $this->theclick_tm_rate($testimonial, $atts); ?>
-                                            </div>
-                                        </div>
-                                    <?php
-                                        // text 
-                                        $this->theclick_tm_text($testimonial, $atts,['class' => 'ef5-text-777777 font-style-300 pt-25 pl-30 pb-18']);
-                                    break;
-                                    case '4':
-                                        //avatar
-                                        $this->theclick_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
-                                        // name
-                                        $this->theclick_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
-                                        // position
-                                        $this->theclick_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
-                                        // star rating
-                                        $this->theclick_tm_rate($testimonial, $atts);
-                                        // text 
-                                        $this->theclick_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pt-35']);
-                                    break;
-                                    case '3':
-                                        // text 
-                                        $this->theclick_tm_text($testimonial, $atts,['class' => 'text-20 font-style-300 pb-40']);
-                                        //avatar
-                                        $this->theclick_tm_avatar($testimonial,$atts,['size' => '80', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
-                                        // name
-                                        $this->theclick_tm_name($testimonial, $atts,['class' => 'text-22 font-style-400 d-block']);
-                                        // position
-                                        $this->theclick_tm_position($testimonial,['class' => 'text-12 text-uppercase d-block text-'. $atts['text_color_opts']]);
-                                        // star rating
-                                        $this->theclick_tm_rate($testimonial, $atts);
-                                    break;
-                                    case '2' :
-                                        echo '<div class="ef5-bg-white ef5-rounded-10 p-25">';
-                                            echo '<div class="ttmn-header row gutters-20 align-items-center pb-25">';
-                                                echo '<div class="col-auto">';
-                                                    $this->theclick_tm_avatar($testimonial,$atts,[
-                                                        'size'      => '65', 
-                                                        'img_class' => 'circle'
-                                                    ]);
-                                                echo '</div>';
-                                                echo '<div class="col">';
-                                                    // name
-                                                    $this->theclick_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
-                                                    // position
-                                                    $this->theclick_tm_position($testimonial,['class' => 'text-13 ef5-text-787878 d-block']);
-                                                    // star rating
-                                                    $this->theclick_tm_rate($testimonial, $atts);
-                                                echo '</div>';
-                                            echo '</div>';
-                                            // text 
-                                            $this->theclick_tm_text($testimonial, $atts,['class' => 'pb-17 pl-lg-25 pr-lg-25 ef5-text-787878']);
-                                        echo '</div>';
-                                    break;
                             		default:
-                            			// text 
                                         $this->theclick_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
-                            			//avatar
+
                             			$this->theclick_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
-                                        // name
+
                                         $this->theclick_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
-                                        // position
+
                                         $this->theclick_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
-                                        // star rating
+
                                         $this->theclick_tm_rate($testimonial, $atts);
                             		break;
                             	}
