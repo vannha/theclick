@@ -85,21 +85,24 @@ vc_map(array(
                         'author_position'      => 'CEO & Founder',
                         'author_url'           => '#',
                         'author_avatar'        => '',
-                        'text'                 => ''
+                        'text'                 => '',
+                        'text_bg'              => '' 
                     ),
                     array(
                         'author_name'          => 'Conrad Smith',
                         'author_position'      => 'Volunteer',
                         'author_url'           => '#',
                         'author_avatar'        => '',
-                        'text'                 => ''
+                        'text'                 => '',
+                        'text_bg'              => ''
                     ),
                     array(
                         'author_name'          => 'Belle Hill',
                         'author_position'      => 'Volunteer',
                         'author_url'           => '#',
                         'author_avatar'        => '',
-                        'text'                 => ''
+                        'text'                 => '',
+                        'text_bg'              => ''
                     )
                 ) ) ),
                 'params' => array(
@@ -142,6 +145,12 @@ vc_map(array(
                         'description'   => esc_html__('Press double ENTER to get line-break','theclick'),
                         'param_name'    => 'text',
                         'std'           => 'Donec euismod sem ac urna finibus, sit amet efficitur erat tem pus. Ut dapibus dictum turpis, vel faucibus erat posuere vitae icitur erat tem puna'
+                    ),
+                    array(
+                        'type'       => 'colorpicker',
+                        'heading'    => esc_html__( 'Background text color','theclick'),
+                        'param_name' => 'text_bg',
+                        'std'        => ''
                     ),
                 ),
                 'group' => esc_html__('Testimonial Item','theclick')
