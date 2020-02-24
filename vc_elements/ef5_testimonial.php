@@ -85,7 +85,6 @@ vc_map(array(
                         'author_position'      => 'CEO & Founder',
                         'author_url'           => '#',
                         'author_avatar'        => '',
-                        'author_signature_img' => '',
                         'text'                 => ''
                     ),
                     array(
@@ -93,7 +92,6 @@ vc_map(array(
                         'author_position'      => 'Volunteer',
                         'author_url'           => '#',
                         'author_avatar'        => '',
-                        'author_signature_img' => '',
                         'text'                 => ''
                     ),
                     array(
@@ -101,7 +99,6 @@ vc_map(array(
                         'author_position'      => 'Volunteer',
                         'author_url'           => '#',
                         'author_avatar'        => '',
-                        'author_signature_img' => '',
                         'text'                 => ''
                     )
                 ) ) ),
@@ -129,13 +126,6 @@ vc_map(array(
                         'type'          => 'attach_image',
                         'heading'       => esc_html__( 'Author Image', 'theclick' ),
                         'param_name'    => 'author_avatar',
-                        'value'         => '',
-                        'edit_field_class' => 'vc_col-sm-6'
-                    ),
-                    array(
-                        'type'          => 'attach_image',
-                        'heading'       => esc_html__( 'Author signature image', 'theclick' ),
-                        'param_name'    => 'author_signature_img',
                         'value'         => '',
                         'edit_field_class' => 'vc_col-sm-6'
                     ),
