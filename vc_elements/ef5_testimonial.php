@@ -213,7 +213,9 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $ttmn_text_style[] = (!empty($text_bg)) ? 'background-color:'.$text_bg.';' : '';
         $ttmn_text_style[] = (!empty($text_color_opts) && !empty($text_color)) ? 'color:'.$text_color.';' : '';
           
+
         $ttmn_text_attrs = 'style="'.trim(implode(' ', $ttmn_text_style)).'"';
+        var_dump($ttmn_text_attrs);
 
         $classes = ['ttmn-text', 'text-'.$text_color_opts, $args['class']];
         ?>
