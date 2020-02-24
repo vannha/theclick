@@ -103,14 +103,6 @@ vc_map(array(
                         'author_avatar'        => '',
                         'author_signature_img' => '',
                         'text'                 => ''
-                    ),
-                    array(
-                        'author_name'          => 'Alison Becker',
-                        'author_position'      => 'Manager',
-                        'author_url'           => '#',
-                        'author_avatar'        => '',
-                        'author_signature_img' => '',
-                        'text'                 => ''
                     )
                 ) ) ),
                 'params' => array(
