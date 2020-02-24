@@ -193,30 +193,30 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
-    protected function overcome_tm_text_color($atts, $args = []){
+    protected function theclick_tm_text_color($atts, $args = []){
         extract($atts);
         $args = wp_parse_args($args, [
             'echo' => true
         ]);
         $color = (!empty($text_color_opts) && !empty($text_color)) ? 'style="color:'.$text_color.'"' : '';
         if($args['echo'])
-            echo overcome_html($color);
+            echo theclick_html($color);
         else 
             return $color;
     }
-    protected function overcome_tm_text($testimonial, $atts, $args=[]){
+    protected function theclick_tm_text($testimonial, $atts, $args=[]){
         if(empty($testimonial['text'])) return;
         $args = wp_parse_args($args,[
             'class' => ''
         ]);
         $classes = ['ttmn-text', 'text-'.$atts['text_color_opts'], $args['class']];
         ?>
-            <div class="<?php echo trim(implode(' ', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
-                <?php echo overcome_html($testimonial['text']);?>
+            <div class="<?php echo trim(implode(' ', $classes));?>" <?php $this->theclick_tm_text_color($atts);?>>
+                <?php echo theclick_html($testimonial['text']);?>
             </div>
         <?php
     }
-    protected function overcome_tm_name($testimonial, $atts, $args=[]){
+    protected function theclick_tm_name($testimonial, $atts, $args=[]){
         if(empty($testimonial['author_name'])) return;
         $args = wp_parse_args($args,[
             'class' => ''
@@ -228,12 +228,12 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
             $author_link_close = '</a>';
         }
         ?>
-            <span class="<?php echo trim(implode(' ', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
-                <?php echo overcome_html($author_link_open.$testimonial['author_name'].$author_link_close);?>
+            <span class="<?php echo trim(implode(' ', $classes));?>" <?php $this->theclick_tm_text_color($atts);?>>
+                <?php echo theclick_html($author_link_open.$testimonial['author_name'].$author_link_close);?>
             </span>
         <?php
     }
-    protected function overcome_tm_position($testimonial, $args=[]){
+    protected function theclick_tm_position($testimonial, $args=[]){
         if(empty($testimonial['author_position'])) return;
         $args = wp_parse_args($args,[
             'class' => 'ef5-text-accent'
@@ -241,11 +241,11 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $classes = ['ttmn-position', $args['class']];
         ?>
             <span class="<?php echo trim(implode(' ', $classes));?>">
-                <?php echo overcome_html($testimonial['author_position']);?>
+                <?php echo theclick_html($testimonial['author_position']);?>
             </span>
         <?php
     }
-    protected function overcome_tm_rate($testimonial,$atts, $args=[]){
+    protected function theclick_tm_rate($testimonial,$atts, $args=[]){
         if(empty($testimonial['author_rate'])) return;
         $args = wp_parse_args($args,[
             'class' => ''
@@ -256,7 +256,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
             <div class="<?php echo trim(implode('', $classes));?>"><span class="ttmn-rated" style="width:<?php echo esc_attr($author_rate);?>%"></span></div>
         <?php
     }
-    protected function overcome_tm_avatar($testimonial,$atts, $args=[]){
+    protected function theclick_tm_avatar($testimonial,$atts, $args=[]){
         $testimonial['author_avatar'] = isset($testimonial['author_avatar']) ? $testimonial['author_avatar'] : null;
         $args = wp_parse_args($args,[
             'img_class' => '',
@@ -266,7 +266,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         ]);
         $classes = ['avatar w-auto', $args['img_class']];
 
-        overcome_image_by_size([
+        theclick_image_by_size([
             'id'      => $testimonial['author_avatar'],
             'size'    => $args['size'],
             'class'   => trim(implode(' ', $classes)),
