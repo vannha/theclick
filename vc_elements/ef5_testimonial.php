@@ -208,9 +208,15 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $args = wp_parse_args($args,[
             'class' => ''
         ]);
+        $ttmn_text_style = [];
+        $ttmn_text_style[] = (!empty($bg_color)) ? 'background-color:'.$bg_color.';' : '';
+        $ttmn_text_style[] = (!empty($text_color_opts) && !empty($text_color)) ? ? 'color:'.$text_color.';' : '';
+          
+        $ttmn_text_attrs[] = 'style="'.trim(implode(' ', $ttmn_text_style)).'"';
+
         $classes = ['ttmn-text', 'text-'.$atts['text_color_opts'], $args['class']];
         ?>
-            <div class="<?php echo trim(implode(' ', $classes));?>" <?php $this->theclick_tm_text_color($atts);?>><?php echo theclick_html($testimonial['text']);?></div>
+            <div class="<?php echo trim(implode(' ', $classes));?>" <?php echo trim(implode(' ', $ttmn_text_attrs));?>><?php echo theclick_html($testimonial['text']);?></div>
         <?php
     }
     protected function theclick_tm_name($testimonial, $atts, $args=[]){
