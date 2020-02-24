@@ -205,6 +205,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
     }
     protected function theclick_tm_text($testimonial, $atts, $args=[]){
         if(empty($testimonial['text'])) return;
+        extract($atts);
         $args = wp_parse_args($args,[
             'class' => ''
         ]);
@@ -214,7 +215,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
           
         $ttmn_text_attrs[] = 'style="'.trim(implode(' ', $ttmn_text_style)).'"';
 
-        $classes = ['ttmn-text', 'text-'.$atts['text_color_opts'], $args['class']];
+        $classes = ['ttmn-text', 'text-'.$text_color_opts, $class];
         ?>
             <div class="<?php echo trim(implode(' ', $classes));?>" <?php echo trim(implode(' ', $ttmn_text_attrs));?>><?php echo theclick_html($testimonial['text']);?></div>
         <?php
