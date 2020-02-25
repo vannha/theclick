@@ -53,7 +53,7 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
 ?>
 <div class="<?php echo theclick_optimize_css_class(implode(' ', $ttmn_wrap_classes));?>">
     <div class="title-read-more d-flex justify-content-between align-items-center gutter-30">
-        <div class="title text-xs-40 text-xl-50 lh-1/28"><?php echo theclick_html($title)?></div>
+        <div class="title text-40 text-xl-50 lh-1/28"><?php echo theclick_html($title)?></div>
         <?php if($show_read_more != 'none'): ?>
         <div class="read-more">
             <a href="<?php echo get_permalink($read_more_page);?>" class="link-read-more"><?php echo esc_html($read_more_text);?></a>
