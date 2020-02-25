@@ -265,9 +265,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
             $author_link_close = '</a>';
         }
         ?>
-            <span class="<?php echo trim(implode(' ', $classes));?>" <?php $this->theclick_tm_text_color($atts);?>>
-                <?php echo theclick_html($author_link_open.$testimonial['author_name'].$author_link_close);?>
-            </span>
+            <span class="<?php echo trim(implode(' ', $classes));?>" <?php $this->theclick_tm_text_color($atts);?>><?php echo theclick_html($author_link_open.$testimonial['author_name'].$author_link_close);?></span>
         <?php
     }
     protected function theclick_tm_position($testimonial, $args=[]){
@@ -277,9 +275,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         ]);
         $classes = ['ttmn-position', $args['class']];
         ?>
-            <span class="<?php echo trim(implode(' ', $classes));?>">
-                <?php echo theclick_html($testimonial['author_position']);?>
-            </span>
+            <span class="<?php echo trim(implode(' ', $classes));?>"><?php echo theclick_html($testimonial['author_position']);?></span>
         <?php
     }
     protected function theclick_tm_rate($testimonial,$atts, $args=[]){
