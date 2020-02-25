@@ -2,6 +2,21 @@
 	.ef5-owl-nav-total{
 		margin-top: 47px;
 	}
+	.ef5-owl-nav.ef5-owl-nav-layout-dot-in-nav{
+		@include d-flex();
+		align-item:center;
+		.ef5-owl-dots {
+		    margin: 0 0 0 -16px; 
+		    padding-top: 0px; 
+		}
+	}
+	.ef5-owl-navs{
+		.ef5-owl-dots {
+		    margin: 0;
+		    padding-top: 0;
+		}
+	}
+
 }
 .ef5-product-carousel-1{
 	.title-read-more{
