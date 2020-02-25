@@ -13,7 +13,7 @@ extract( $atts );
 $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
 $wrap_css_class = ['ef5-testimonial-wrap','ef5-owl-wrap-inner relative'];
 $css_class_attr = $item_class = array();
-$css_class_attr[] = 'ef5-testimonial ef5-testimonial-layout-'.$layout_template;
+$css_class_attr[] = 'ef5-testimonial';
 $item_class[] = 'testimonial-item';
 
 if($layout_style === 'carousel'){
@@ -47,7 +47,7 @@ $j=0;
 
 $inner_css_classes = ['ttmn-inner','transition'];
 
-$ttmn_wrap_classes = ['ef5-testimonials', ef5systems_owl_css_class($atts)];
+$ttmn_wrap_classes = ['ef5-testimonials','ef5-testimonial-layout-'.$layout_template, ef5systems_owl_css_class($atts)];
 
 if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5','6'])) $ttmn_wrap_classes[] = 'text-center';
 ?>
