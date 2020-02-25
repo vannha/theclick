@@ -76,11 +76,13 @@
         </div>
         <?php 
             theclick_loading_animation('three-dot-bounce'); 
-            ef5systems_owl_dots_container($atts);
+            
         ?>
         <div class="ef5-owl-nav-total d-flex justify-content-between align-items-center">
         	<div class="ef5-owl-navs">
 	           <?php ef5systems_owl_nav_container($atts); ?>
+               <?php ef5systems_owl_dots_container($atts); ?>
+               <?php ef5systems_owl_dots_in_nav_container($atts);?>
 	        </div>
             <?php if(isset($show_number_total) && $show_number_total == '1'): ?>
     	        <div class="ef5-owl-total">
@@ -90,8 +92,6 @@
     	        </div>
             <?php endif; ?>
         </div>
-        <?php 
-            ef5systems_owl_dots_in_nav_container($atts);
-        ?>
+        
     </div>  
 </div>
