@@ -59,6 +59,38 @@ vc_map(array(
                 'edit_field_class' => 'vc_col-sm-6',
             ),
             array(
+                'type'       => 'dropdown',
+                'param_name' => 'show_read_more',
+                'value'      => array(
+                    esc_html__('None','theclick')          => 'none',
+                    esc_html__('Select a Page','theclick') => 'page' 
+                ),
+                'std'        => 'none',
+                'heading'    => esc_html__('Show Read More','theclick'),
+            ),
+            array(
+                'type'       => 'dropdown',
+                'param_name' => 'read_more_page',
+                'value'      => ef5systems_vc_list_page(['default' => false]),
+                'std'        => '',
+                'dependency'    => array(
+                    'element'   => 'show_read_more',
+                    'value'     => 'page',
+                ),
+                'heading'    => esc_html__('Choose a Page for read more!','theclick'),
+            ),
+            array(
+                'type'       => 'textfield',
+                'param_name' => 'read_more_text',
+                'value'      => 'Read More',
+                'std'        => 'Read More',
+                'dependency'    => array(
+                    'element'   => 'show_read_more',
+                    'value'     => 'page',
+                ),
+                'heading'    => esc_html__('Read More Text','theclick'),
+            ),
+            array(
                 'type'        => 'el_id',
                 'settings' => array(
                     'auto_generate' => true,

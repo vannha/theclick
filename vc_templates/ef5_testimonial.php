@@ -52,6 +52,14 @@ $ttmn_wrap_classes = ['ef5-testimonials', ef5systems_owl_css_class($atts)];
 if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5','6'])) $ttmn_wrap_classes[] = 'text-center';
 ?>
 <div class="<?php echo theclick_optimize_css_class(implode(' ', $ttmn_wrap_classes));?>">
+    <div class="title-shop-more d-flex justify-content-between align-items-center gutter-30">
+        <div class="title text-xs-40 text-xl-50 lh-1/28"><?php echo theclick_html($title)?></div>
+        <?php if($show_shop_more != 'none'): ?>
+        <div class="shop-more">
+            <a href="<?php echo get_permalink($shop_more_page);?>" class="link-shop-more"><?php echo esc_html($shop_more_text);?></a>
+        </div> 
+        <?php endif; ?>
+    </div>
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
