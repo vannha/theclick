@@ -52,5 +52,21 @@
 		@media (max-width: 1199px){
 			padding: 30px 15px 50px; 
 		}
+		p{
+			position: relative;
+		}
+	}
+	.tm-avatar{
+		position: relative;
+		margin-top: -35px;
+	}
+	.ttmn-name{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.ttmn-position{
+		font-size: 16px;
+		line-height: 26px
 	}
 }
