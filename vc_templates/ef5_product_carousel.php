@@ -22,11 +22,11 @@
     
 ?>  
 <div class="ef5-posts <?php echo esc_attr(trim($css_class));?>">
-	<div class="title-shop-more d-flex justify-content-between align-items-center gutter-30">
+	<div class="title-read-more d-flex justify-content-between align-items-center gutter-30">
         <div class="title text-xs-40 text-xl-50 lh-1/28"><?php echo theclick_html($title)?></div>
         <?php if($show_shop_more != 'none'): ?>
-        <div class="shop-more">
-        	<a href="<?php echo get_permalink($shop_more_page);?>" class="link-shop-more"><?php echo esc_html($shop_more_text);?></a>
+        <div class="read-more">
+        	<a href="<?php echo get_permalink($shop_more_page);?>" class="link-read-more"><?php echo esc_html($shop_more_text);?></a>
     	</div> 
     	<?php endif; ?>
     </div>
