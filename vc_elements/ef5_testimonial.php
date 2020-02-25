@@ -252,7 +252,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         ?>
             <div class="<?php echo trim(implode(' ', $classes));?>" <?php echo theclick_html($ttmn_text_attrs);?>>
                 <?php echo theclick_get_svg('two-quotes'); ?>
-                <?php echo theclick_html($testimonial['text']);?>
+                <p><?php echo theclick_html($testimonial['text']);?></p>
             </div>
         <?php
     }
