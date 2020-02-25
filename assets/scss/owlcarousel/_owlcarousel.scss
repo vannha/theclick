@@ -2,6 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
+.ef5-owl-nav.ef5-owl-nav-layout-dot-in-nav{
+	@include d-flex();
+	align-item:center;
+	.ef5-owl-dots {
+	    margin: 0px; 
+	    padding-top: 0px; 
+	}
+}
 .ef5-owl-nav.ef5-owl-nav-style-default{
 	margin: 0 -12px;
 	padding-top: 0;
