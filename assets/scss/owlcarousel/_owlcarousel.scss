@@ -2,7 +2,41 @@
 	margin: 0;
 	padding: 0;
 }
-
+.ef5-owl-dots .ef5-owl-dot {
+    width: 6px;
+	height: 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0);
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    background: transparent;
+    span{
+	    width: 100%;
+    	height: 100%;
+    	background: var(--primary-color);
+    	border-radius: 50%;
+    	-webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+    	transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    &:hover,&.active{
+    	width: 20px;
+	    height: 20px;
+	    margin-left: -7px;
+	    margin-top: -7px;
+    	box-shadow: 0 0 0 2px #ffffff;
+	    border: none;
+	    border-radius: 50%;
+	    background: transparent;
+    	span{
+	    	transform: scale(0.3);
+	    	-webkit-transform: scale(0.3);
+		    box-shadow: 0 0 0 2px #ffffff;
+		    border: none;
+		    border-radius: 50%;
+		    background: transparent;
+		}
+    }
+}
 .ef5-owl-nav.ef5-owl-nav-style-default{
 	margin: 0 -12px;
 	padding-top: 0;
