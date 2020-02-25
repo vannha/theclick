@@ -3,8 +3,10 @@
 	padding: 0;
 }
 .ef5-posts .ef5-owl-dots .ef5-owl-dot {
+	position: relative;
     width: 6px;
 	height: 6px;
+    margin: 10px;
     border-radius: 50%;
     box-shadow: 0 0 0 2px rgba(255,255,255,0);
     -webkit-transition: box-shadow 0.3s ease;
@@ -15,6 +17,9 @@
     	height: 100%;
     	background: var(--primary-color);
     	border-radius: 50%;
+    	position: absolute;
+	    top: 0;
+	    left: 0;
     	-webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
     	transition: background-color 0.3s ease, transform 0.3s ease;
     }
