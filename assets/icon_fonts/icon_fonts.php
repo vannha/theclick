@@ -17,8 +17,7 @@ function theclick_ef5systems_default_extra_icons(){
 		'et-line',
 		'flaticon',
 		'linear',
-		'pe7',
-		'simple-line'
+		'openiconic',
 	];
 }
 //pe-icon-7-stroke
@@ -42,7 +41,7 @@ add_filter('ef5systems_extra_icons','theclick_extras_icons');
 function theclick_extras_icons(){
 	return [
 		'theclick' => [
-			'title'   => 'Over Come',
+			'title'   => 'TheClick',
 			'icon'    => theclick_iconpicker_theclick_icons(), // icons list
 			'css'     => THECLICK_ICON_FONT_DIR.'theclick/theclick.css',
 			'version' => '1.0'
