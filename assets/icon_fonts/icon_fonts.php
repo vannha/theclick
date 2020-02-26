@@ -17,10 +17,11 @@ function theclick_ef5systems_default_extra_icons(){
 		'et-line',
 		'flaticon',
 		'linear',
-		'pe-icon-7-stroke',
+		'pe7',
 		'simple-line'
 	];
 }
+//pe-icon-7-stroke
 /**
  * Add filter to support your icon font in Mega Menu and VC 
  * user filter: ef5systems_extra_icons
