@@ -10,7 +10,17 @@ define('THECLICK_ICON_FONT_DIR' , get_template_directory_uri() . '/assets/icon_f
 		return ['flaticon','linear'];
 	}
 */
-
+add_filter('ef5systems_default_extra_icons','theclick_ef5systems_default_extra_icons');
+function theclick_ef5systems_default_extra_icons(){
+	return [
+		'elegant',
+		'et-line',
+		'flaticon',
+		'linear',
+		'pe-icon-7-stroke',
+		'simple-line'
+	];
+}
 /**
  * Add filter to support your icon font in Mega Menu and VC 
  * user filter: ef5systems_extra_icons
