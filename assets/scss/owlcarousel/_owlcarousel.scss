@@ -32,6 +32,9 @@
 .ef5-owl-nav.ef5-owl-nav-style-default{
 	margin: 0 -12px;
 	padding-top: 0;
+	&.ef5-owl-nav-pos-top{
+		margin-bottom: 30px;
+	}
 	.ef5-owl-nav-button {
 		background: transparent;
 	    width: 30px;
