@@ -12,7 +12,7 @@ vc_map(array(
                 'heading'    => esc_html__('Layout Template','theclick'),
                 'param_name' => 'layout_template',
                 'value'      =>  array(
-                    '1'         => get_template_directory_uri().'/vc_extends/layouts/client-logo1.png',
+                    '1'         => get_template_directory_uri().'/vc_elements/layouts/client-layout-1.png',
                 ),
                 'std'        => '1',
                 'admin_label' => true
