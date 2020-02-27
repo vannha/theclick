@@ -9,23 +9,25 @@
     margin: 8px;
     padding: 5px;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px var(--primary-color);
-    -webkit-transition: box-shadow 0.3s ease;
-    transition: box-shadow 0.3s ease;
     background: transparent;
+    @include box-shadow(0,0,0,2px, var(--primary-color));
+    @include transition(box-shadow(0.3s ease));
     span{
 	    width: 6px;
     	height: 6px;
     	background: var(--primary-color);
     	border-radius: 50%;
     	display: block; 
-    	-webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
-    	transition: background-color 0.3s ease, transform 0.3s ease;
+    	@include transition(background-color 0.3s ease, transform 0.3s ease);
     }
     &:hover,&.active{
     	box-shadow: 0 0 0 2px var(--primary-color);
 	    border: none;
 	    background: transparent;
+	    span{
+	    	width: 100%;
+	    	height: 100%;
+	    }
     }
 }
 .ef5-owl-nav.ef5-owl-nav-style-default{
