@@ -30,11 +30,11 @@
     	</div> 
     	<?php endif; ?>
     </div>
-    <?php 
-        ef5systems_owl_nav_top($atts);
-        ef5systems_owl_dots_top($atts); 
-    ?>
     <div class="ef5-owl-wrap-inner relative">
+        <?php 
+            ef5systems_owl_nav_top($atts);
+            ef5systems_owl_dots_top($atts); 
+        ?>
         <div id="<?php echo esc_attr($el_id);?>" class="ef5-owl owl-carousel">
         <?php 
             while($loop->have_posts()){

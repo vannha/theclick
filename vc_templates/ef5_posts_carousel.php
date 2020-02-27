@@ -49,11 +49,11 @@
     $thumbnail_size = explode(',', $thumbnail_size);
 ?>
 <div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
-    <?php 
-        ef5systems_owl_nav_top($atts);
-        ef5systems_owl_dots_top($atts); 
-    ?>
     <div class="ef5-owl-wrap-inner relative">
+        <?php 
+            ef5systems_owl_nav_top($atts);
+            ef5systems_owl_dots_top($atts); 
+        ?>
         <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
         <?php 
             while($posts->have_posts()){
