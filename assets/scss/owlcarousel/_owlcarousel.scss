@@ -10,7 +10,7 @@
     padding: 5px;
     border-radius: 50%;
     background: transparent;
-    @include box-shadow(0,0,0,2px, var(--primary-color));
+    @include box-shadow(0 0 0 2px  var(--primary-color));
     @include transition(box-shadow(0.3s ease));
     span{
 	    width: 6px;
@@ -21,7 +21,7 @@
     	@include transition(background-color 0.3s ease, transform 0.3s ease);
     }
     &:hover,&.active{
-    	box-shadow: 0 0 0 2px var(--primary-color);
+    	@include box-shadow(0 0 0 2px  var(--primary-color));
 	    border: none;
 	    background: transparent;
 	    span{
