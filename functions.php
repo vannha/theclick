@@ -397,7 +397,7 @@ function theclick_ef5systems_styles(){
         wp_enqueue_style('font-awesome5-shim');
         wp_enqueue_style('hint');
     } else {
-        wp_enqueue_style('font-awesome5', get_template_directory_uri() . '/assets/icon_fonts/awesome5/css/all..css', array(), wp_get_theme()->get( 'Version' ));
+        wp_enqueue_style('font-awesome5', get_template_directory_uri() . '/assets/icon_fonts/awesome5/css/all.min.css', array(), wp_get_theme()->get( 'Version' ));
         wp_enqueue_style('font-awesome5-shim', get_template_directory_uri() . '/assets/icon_fonts/awesome5/css/v4-shims.min.css', array('font-awesome5'), wp_get_theme()->get( 'Version' ));
         wp_enqueue_style('font-theclick', get_template_directory_uri() . '/assets/icon_fonts/theclick/theclick.css', array(), wp_get_theme()->get( 'Version' ));
     }
