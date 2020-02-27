@@ -23,9 +23,9 @@
     &:hover,&.active{
     	@include box-shadow(0 0 0 2px  var(--primary-color));
 	    border: none;
-	    background: var(--primary-color);
+	    background: var(--accent-color);
 	    span{
-	    	background: #fff;
+	    	background: var(--accent-color);
 	    }
     }
 }
