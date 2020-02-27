@@ -21,11 +21,11 @@
     	@include transition(background-color 0.3s ease, transform 0.3s ease);
     }
     &:hover,&.active{
-    	@include box-shadow(0 0 0 2px  var(--primary-color));
+    	@include box-shadow(0 0 0 2px  var(--accent-color));
 	    border: none;
 	    background: var(--accent-color);
 	    span{
-	    	background: var(--accent-color);
+	    	background: #fff;
 	    }
     }
 }
