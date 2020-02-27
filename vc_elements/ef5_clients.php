@@ -140,7 +140,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             'echo'  => true
         ]);
         $el_id = !empty($el_id) ? $el_id : uniqid();
-        $wrap_css_class = ['ef5-clients', $args['class'], 'ef5-clients-'.$el_id];
+        $wrap_css_class = ['ef5-clients', 'layout-'.$layout_template, 'layout-type-'.$layout_style, $args['class'], 'ef5-clients-'.$el_id];
 
         if($args['echo']){
             echo trim(implode(' ', $wrap_css_class));
