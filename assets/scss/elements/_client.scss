@@ -1,5 +1,10 @@
 .ef5-clients{
-	@media (min-width: 1200px){
+	@media (min-width: 320px){
+		&.client-layout-1{
+			margin: 0 -15px;
+		}
+	}
+	@media (min-width: 1430px){
 		&.client-layout-1{
 			margin: 0 -90px;
 		}
