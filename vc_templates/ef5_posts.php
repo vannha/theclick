@@ -69,7 +69,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
         }
         wp_reset_postdata();
         ?>
-        <div class="row ef5-blog-wrap">
+        <div class="row ef5-blog-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
         	$d = 0;
         	while ($posts->have_posts()) {
@@ -93,7 +93,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
 	break;
     case '3':
         ?>
-        <div class="row ef5-blog-wrap">
+        <div class="row ef5-blog-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
             $d = 0;
             while ($posts->have_posts()) {

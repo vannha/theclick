@@ -107,6 +107,23 @@ vc_map(array(
         ),
         array(
             array(
+                "type" => "dropdown",
+                "heading" => esc_html__("Column XL Gutter",'theclick'),
+                "param_name" => "column_xl_gutter",
+                "value" => array(
+                    "30px" => "gutter-xl-30",
+                    "40px" => "gutter-xl-40"
+                ),
+                'std'        => 'gutter-xl-40',
+                'dependency'    => array(
+                    'element'   => 'layout_template',
+                    'value'     => ['2','3']
+                ),
+                'group' => esc_html__('Layouts','theclick'),
+            ),
+        ),
+        array(
+            array(
                 'type'          => 'textfield',
                 'param_name'    => 'thumbnail_size',
                 'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','theclick'),
