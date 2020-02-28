@@ -261,7 +261,8 @@ function theclick_colors(){
 		'ababab' => ['TheClick Color 01', '#ababab'],
 		'f5f5f5' => ['TheClick Color 02', '#f5f5f5'],
 		'161618' => ['TheClick Color 03', '#161618'],
-		'F8F6F1' => ['TheClick Color 04', '#F8F6F1']
+		'F8F6F1' => ['TheClick Color 04', '#F8F6F1'],
+		'FAFAFA' => ['TheClick Color 04', '#FAFAFA']
 	];
 }
 
