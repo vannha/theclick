@@ -102,7 +102,7 @@ vc_map(array(
                 'group'                  => esc_html__('Layouts','theclick'),
                 'dependency_element'     => 'layout_template', 
                 'dependency_value'       => 'value_not_equal_to',
-                'dependency_value_value' => ['1','3']
+                'dependency_value_value' => ['1']
             ]
         ),
         array(
