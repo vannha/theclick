@@ -106,7 +106,6 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
                     </div>
                 </div>
                 <?php
-                }
             } // end while
             wp_reset_postdata();
         ?>
