@@ -1,7 +1,8 @@
 .ef5-clients{
-	@media (min-width: 1200px)
-	&.client-layout-1{
-		margin: 0 -90px;
+	@media (min-width: 1200px){
+		&.client-layout-1{
+			margin: 0 -90px;
+		}
 	}
 	.ef5-owl .owl-stage-outer{
 	    margin: 0;
