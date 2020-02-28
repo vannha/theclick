@@ -91,6 +91,28 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
         </div>
    <?php
 	break;
+    case '3':
+        ?>
+        <div class="row ef5-blog-wrap">
+            <?php
+            $d = 0;
+            while ($posts->have_posts()) {
+                $d++;
+                $posts->the_post();
+                ?>
+                <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php theclick_vc_post_layout3($atts);?>
+                    </div>
+                </div>
+                <?php
+                }
+            } // end while
+            wp_reset_postdata();
+        ?>
+        </div>
+   <?php
+    break;
     }
     ?>
     </div>
