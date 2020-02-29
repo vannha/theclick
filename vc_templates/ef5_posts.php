@@ -29,7 +29,6 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
 ?>
 
 <div class="ef5-posts" id="<?php echo esc_attr($el_id); ?>">
-    <?php $this->title($atts);?>
     <div class="<?php $this->theclick_posts_wrap_css_class($atts);?>">
     <?php
     switch ($layout_template) {
@@ -93,7 +92,18 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
 	break;
     case '3':
         ?>
+        <div class="title-read-more d-flex justify-content-between align-items-center gutter-30">
+            <?php if(!empty($el_title)): ?>
+                <div class="title text-40 text-xl-50 lh-1/28"><?php echo theclick_html($el_title)?></div>
+            <?php endif; ?>
+            <?php if($show_view_all !== 'none'): ?>
+            <div class="read-more">
+                <a href="<?php echo get_permalink($show_view_all_page);?>" class="link-read-more"><?php echo esc_html($show_view_all_text);?></a>
+            </div> 
+            <?php endif; ?>
+        </div>
         <div>
+            <?php $this->title($atts);?>
             <?php if($show_view_all === 'none') ?>
         </div>
 

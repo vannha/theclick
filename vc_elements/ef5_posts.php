@@ -211,18 +211,6 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode{
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         return parent::content($atts, $content);
     }
-    protected function title($atts, $args=[]){
-        if(empty($atts['el_title'])) return;
-        $args = wp_parse_args($args, [
-            'class' => ''
-        ]);
-        $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
-        ?>
-        <div class="<?php echo trim(implode(' ', $classes));?>">
-            <?php echo esc_html($atts['el_title']); ?>
-        </div>
-        <?php
-    }
     protected function theclick_posts_wrap_css_class($atts){
         extract($atts);
         /* get value for Design Tab */
