@@ -8,15 +8,6 @@ vc_map(array(
     'params'        => array_merge(
         array(
             array(
-                'type'        => 'textfield',
-                'heading'     => esc_html__( 'Element Title', 'theclick' ),
-                'description' => esc_html__( 'Enter the text you want to show as title', 'theclick' ),
-                'param_name'  => 'el_title',
-                'value'       => '',
-                'std'         => '',
-                'admin_label' => true,
-            ),
-            array(
                 'type'        => 'dropdown',
                 'heading'     => esc_html__( 'Data source', 'theclick' ),
                 'param_name'  => 'post_type',
@@ -130,6 +121,18 @@ vc_map(array(
                 'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
                 'std'           => '',
                 'group'         => esc_html__('Post Meta','theclick'),
+            ),
+            array(
+                'type'        => 'textfield',
+                'heading'     => esc_html__( 'Element Title', 'theclick' ),
+                'description' => esc_html__( 'Enter the text you want to show as title', 'theclick' ),
+                'param_name'  => 'el_title',
+                'value'       => '',
+                'std'         => '',
+                'dependency'    => array(
+                    'element'   => 'layout_template',
+                    'value'     => ['3']
+                )
             ),
             array(
                 'type'          => 'checkbox',

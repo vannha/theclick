@@ -93,6 +93,10 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
 	break;
     case '3':
         ?>
+        <div>
+            <?php if($show_view_all === 'none') ?>
+        </div>
+
         <div class="row ef5-blog-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
             $d = 0;
