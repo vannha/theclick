@@ -206,6 +206,7 @@
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 23px;
+		margin-top: 20px;
 		@include text-truncate-multi-line(18px,1.27777777777778,1);
 		a:hover{
 			color: inherit;
@@ -216,8 +217,9 @@
 		font-size: 15px;
 		line-height: 24px;
 		color: $accent_color;
+		margin-top: 11px;
 	}
 	.ef5-readmore{
-
+		margin-top: 25px;
 	}
 }
