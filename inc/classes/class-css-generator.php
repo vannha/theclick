@@ -467,8 +467,8 @@ class TheClick_CSS_Generator
             printf(
                 '.menu-ontop > li:hover > a,
                 .menu-ontop > li:focus > a,
-                .menu-ontop a:hover,
-                .menu-ontop a:focus,
+                .menu-ontop > li > a:hover,
+                .menu-ontop > li > a:focus,
                 .nav-extra .header-icon:hover {
                     color: %s!important;
                 }',
