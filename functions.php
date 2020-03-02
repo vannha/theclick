@@ -474,11 +474,10 @@ function theclick_inline_styles() {
     );
     /* Ontop Header Color */
     $ontop_header_text_color = theclick_get_opts('ontop_header_text_color',theclick_configs('ontop_header_text_color'));
-    var_dump($ontop_header_text_color); die;
     printf(':root{
             --ontop_text_color: %1$s;
         }', 
-        $ontop_header_text_color
+        $ontop_header_text_color['ontop_header_text_color']
     );
     $ontop_link_color = theclick_get_opts('ontop_link_colors', apply_filters('theclick_ontop_link_color', ['regular' => theclick_configs('ontop_link_color_regular'), 'hover' => theclick_configs('ontop_link_color_hover'), 'active' => theclick_configs('ontop_link_color_active')]) );
     printf(':root{
