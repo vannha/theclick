@@ -159,6 +159,21 @@
     }
 }
 
-.header-ontop .ef5-dropdown a{
-    color: $dropdown_regular;
-}
+.header-ontop .ef5-dropdown{
+    a{
+        color: $dropdown_regular;
+    }
+    .menu-item{
+        &:hover > a{
+            color: $dropdown_color_hover;
+        }
+        &.current_page_item,
+        &.current-menu-item,
+        &.current_page_ancestor,
+        &.current-menu-ancestor {
+            > a {
+                color: $dropdown_color_active;
+            }
+        }
+    }
+} 
