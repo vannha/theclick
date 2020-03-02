@@ -435,7 +435,7 @@ function theclick_inline_styles() {
         'background-attachment' => 'inherit', 
         'background-position'   => 'inherit' 
     ]);
-    $header_text_color = theclick_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => 'inherit']);
+    $header_text_color = theclick_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => 'rgba(255,255,255,1)']);
     $header_ontop_top_space = theclick_get_opts('header_ontop_top_space',['height' => '']);
     printf(
         ':root{
