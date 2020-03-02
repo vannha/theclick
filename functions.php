@@ -474,7 +474,7 @@ function theclick_inline_styles() {
     );
     /* Ontop Header Color */
     $ontop_header_text_color = theclick_get_opts('ontop_header_text_color',theclick_configs('ontop_header_text_color'));
-    var_dump($ontop_header_text_color);
+    var_dump($ontop_header_text_color); die;
     printf(':root{
             --ontop_text_color: %1$s;
         }', 
