@@ -485,21 +485,21 @@ class TheClick_CSS_Generator
         // menu active
         if(!empty($ontop_link_colors['active'])){
             printf(
-                '.menu-ontop li.current_page_item > a,
-                .menu-ontop li.current-menu-item > a,
-                .menu-ontop li.current_page_ancestor > a,
-                .menu-ontop li.current-menu-ancestor > a,
-                .menu-ontop a:active,
+                '.menu-ontop > li.current_page_item > a,
+                .menu-ontop > li.current-menu-item > a,
+                .menu-ontop > li.current_page_ancestor > a,
+                .menu-ontop > li.current-menu-ancestor > a,
+                .menu-ontop > li > a:active,
                 .nav-extra .header-icon:active {
                     color: %s!important;
                 }',
                 esc_attr($ontop_link_colors['active'])
             );
             printf(
-                '.menu-ontop li.current_page_item > a:after,
-                .menu-ontop li.current-menu-item > a:after,
-                .menu-ontop li.current_page_ancestor > a:after,
-                .menu-ontop li.current-menu-ancestor > a:after {
+                '.menu-ontop > li.current_page_item > a:after,
+                .menu-ontop > li.current-menu-item > a:after,
+                .menu-ontop > li.current_page_ancestor > a:after,
+                .menu-ontop > li.current-menu-ancestor > a:after {
                     background-color: %s!important;
                 }',
                 esc_attr($ontop_link_colors['active'])
