@@ -837,9 +837,9 @@ if(!function_exists('theclick_ontop_header_opts')){
                     'id'    => 'ontop_link_colors',
                     'type'  => 'link_color',
                     'title' => esc_html__('Link colors', 'theclick'),
-                    'output' => array(
+                    /*'output' => array(
                         'color' => '.header-ontop a'
-                    ),
+                    ),*/
                     'force_output' => $force_output,
                     'required' => array('header_ontop', '=', '1')
                 ),
