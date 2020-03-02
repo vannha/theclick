@@ -71,6 +71,15 @@ $customs_gutters: (
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	&.ef5-padding-0{
+		margin-left: 0;
+		margin-right: 0;
+		> [class*='col'],
+		> *{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 }
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
