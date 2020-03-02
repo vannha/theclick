@@ -108,8 +108,14 @@ body .revslider-initialised .uranus .tp-bullet:hover .tp-bullet-inner {
 .revo-left-arrow{
 	padding: 20px 15px 10px 15px;
 	background-color: #111;
+	img{
+		max-width: 30px;
+	}
 }
 .revo-right-arrow{
 	padding: 10px 15px 20px 15px;
 	background-color: #111;
+	img{
+		max-width: 30px;
+	}
 }
