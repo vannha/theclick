@@ -195,13 +195,13 @@ add_filter('theclick_cpts_footer', function(){ return true;});
 add_filter('ef5systems_spacings','theclick_spacings');
 function theclick_spacings(){
 	return [
-		'0'                         => ['TheClick Space 0', 'Left 0 - Right 0','0 0'],
+		'0'                             => ['TheClick Space 0', 'Left 0 - Right 0','0 0'],
 		'custom1 pl-xxxl-45 pr-xxxl-45' => ['TheClick Space 01', 'Left 45px - Right 45px','0 45px'],
 		'custom2 pl-xxxl-60 pr-xxxl-60' => ['TheClick Space 02', 'Left 60px - Right 60px','0 60px'],
-		'custom3 pt-8 pb-8'         => ['TheClick Space 03', 'Top 8px - Bottom 8px'],
-		'87-0-92'                   => ['TheClick Space 04', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
-		'93-0-100'                  => ['TheClick Space 05', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
-		'100-0'                     => ['TheClick Space 06', 'Top 100px - Bottom 100px', '100px 0'],
+		'custom3 pt-10 pl-10 pr-10'     => ['TheClick Space 03', 'Top 10px - Left 10px - Right-10'],
+		'87-0-92'                       => ['TheClick Space 04', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
+		'93-0-100'                      => ['TheClick Space 05', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
+		'100-0'                         => ['TheClick Space 06', 'Top 100px - Bottom 100px', '100px 0'],
 	];
 }
 
@@ -211,7 +211,7 @@ function theclick_margin_spacings(){
 		'0'                             => ['TheClick Space 0', 'Left 0 - Right 0','0 0'],
 		'custom1 ml-xxxl-45 mr-xxxl-45' => ['TheClick Space 01', 'Left 45px - Right 45px','0 45px'],
 		'custom2 ml-xxxl-60 mr-xxxl-60' => ['TheClick Space 02', 'Left 60px - Right 60px','0 60px'],
-		'custom3 mt-8 mb-8'             => ['TheClick Space 03', 'Top 8px - Bottom 8px'],
+		'custom3 mt-10 ml-10 mr-10'     => ['TheClick Space 03', 'Top 10px - Left 10px - Right 10px'],
 		'87-0-92'                       => ['TheClick Space 04', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
 		'93-0-100'                      => ['TheClick Space 05', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
 		'100-0'                         => ['TheClick Space 06', 'Top 100px - Bottom 100px', '100px 0'],
