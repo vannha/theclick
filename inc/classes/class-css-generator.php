@@ -300,6 +300,8 @@ class TheClick_CSS_Generator
         printf( '$header_hover: %s;', 'var(--header_hover)' );
         printf( '$header_active: %s;', 'var(--header_active)' );
          /* Ontop Header Color */
+         
+        printf( '$ontop_text_color: %s;', 'var(--ontop_text_color)' );
         printf( '$ontop_regular: %s;', 'var(--ontop_regular)' );
         printf( '$ontop_hover: %s;', 'var(--ontop_hover)' );
         printf( '$ontop_active: %s;', 'var(--ontop_active)' );

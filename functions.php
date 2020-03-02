@@ -73,6 +73,7 @@ if(!function_exists('theclick_configs')){
             'menu_link_color_hover' => 'var(--accent-color)',
             'menu_link_color_active' => 'var(--accent-color)',
             // Menu Ontop Color
+            'ontop_header_text_color' => '#ffffff',
             'ontop_link_color_regular' => '#ffffff',
             'ontop_link_color_hover' => 'rgba(255,255,255,0.8)',
             'ontop_link_color_active' => 'rgba(255, 255, 255, 0.8)',
@@ -472,6 +473,12 @@ function theclick_inline_styles() {
         $header_link_color['active']
     );
     /* Ontop Header Color */
+    $ontop_header_text_color = theclick_get_opts('ontop_header_text_color',theclick_configs('ontop_header_text_color'));
+    printf(':root{
+            --ontop_text_color: %1$s;
+        }', 
+        $ontop_header_text_color
+    );
     $ontop_link_color = theclick_get_opts('ontop_link_colors', apply_filters('theclick_ontop_link_color', ['regular' => theclick_configs('ontop_link_color_regular'), 'hover' => theclick_configs('ontop_link_color_hover'), 'active' => theclick_configs('ontop_link_color_active')]) );
     printf(':root{
             --ontop_regular: %1$s;
@@ -482,6 +489,7 @@ function theclick_inline_styles() {
         $ontop_link_color['hover'],
         $ontop_link_color['active']
     );
+
     /* Sticky Header Color */
     $sticky_link_color = theclick_get_opts('sticky_link_colors',apply_filters('theclick_sticky_link_color',['regular' => theclick_configs('sticky_link_color_regular'), 'hover' => theclick_configs('sticky_link_color_hover'), 'active' => theclick_configs('sticky_link_color_active')]));    
     printf(':root{
