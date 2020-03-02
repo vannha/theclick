@@ -838,7 +838,7 @@ if(!function_exists('theclick_ontop_header_opts')){
                     'type'  => 'link_color',
                     'title' => esc_html__('Link colors', 'theclick'),
                     'output' => array(
-                        'color' => '.header-ontop a'
+                        'color' => '.header-ontop .ef5-menu > li > a'
                     ),
                     'force_output' => $force_output,
                     'required' => array('header_ontop', '=', '1')
