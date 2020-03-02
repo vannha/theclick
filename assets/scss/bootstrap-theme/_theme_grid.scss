@@ -63,7 +63,7 @@ $customs_gutters: (
 	150 : 150px,
 	160 : 160px,
 );
-/*.vc_row{
+.vc_row{
 	margin-left: -15px;
 	margin-right: -15px;
 	> [class*='col'],
@@ -71,7 +71,7 @@ $customs_gutters: (
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-}*/
+}
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
