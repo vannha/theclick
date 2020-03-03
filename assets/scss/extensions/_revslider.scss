@@ -109,6 +109,7 @@ body .rv-home-3 .custom.tparrows{
 	width: 60px !important;
 	height: 46px !important;
 	background-color: $primary_color !important;
+	@include transition();
 	&.tp-leftarrow{
 		padding: 20px 15px 10px 15px;
 		&:before{
@@ -130,5 +131,8 @@ body .rv-home-3 .custom.tparrows{
 			height: 15px;
 			display: block;
 		}
+	}
+	&:hover{
+		background-color: rgba($primary_color,0.5) !important;
 	}
 }
