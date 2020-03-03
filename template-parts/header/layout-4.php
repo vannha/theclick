@@ -8,7 +8,7 @@
         <div class="<?php theclick_header_inner_class(); ?>">
             <div class="header-inner-wrap">
                 <div class="row justify-content-between align-items-center">
-                    <div class="ef5-header-left col">
+                    <div class="ef5-header-left">
                         <div class="d-flex align-items-center">
                             <?php
                             theclick_header_menu(['class' => 'ef5-navs']); 
