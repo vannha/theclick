@@ -105,11 +105,11 @@ body .revslider-initialised .uranus .tp-bullet:hover .tp-bullet-inner {
     -webkit-transform: scale(0.3) !important;
 }
 
-body #rev_slider_3_1_wrapper .custom.tparrows{
+body .rv-home-3 .custom.tparrows{
 	width: 60px;
 	height: 46px;
 	&.tp-leftarrow{
-		padding: 20px 15px 11px 15px;
+		padding: 20px 15px 10px 15px;
 		&:before{
 			content: "";
 			background: url(../images/icons/left-arrow.png) no-repeat 0 0;
@@ -120,7 +120,7 @@ body #rev_slider_3_1_wrapper .custom.tparrows{
 		}
 	}
 	&.tp-rightarrow{
-		padding: 11px 15px 20px 15px;	
+		padding: 10px 15px 20px 15px;	
 		&:before{
 			content: "";
 			background: url(../images/icons/right-arrow.png) no-repeat 0 0;
