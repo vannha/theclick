@@ -458,52 +458,52 @@ class TheClick_CSS_Generator
         // menu regular
         if(!empty($ontop_link_colors['regular'])){
             printf(
-                '.menu-ontop > li > a{
+                '@media (min-width:1200px){.menu-ontop > li > a{
                     color: %s!important;
-                }',
+                }}',
                 esc_attr($ontop_link_colors['regular'])
             );
         }
         // menu hover
         if(!empty($ontop_link_colors['hover'])){
             printf(
-                '.menu-ontop > li:hover > a,
+                '@media (min-width:1200px){.menu-ontop > li:hover > a,
                 .menu-ontop > li:focus > a,
                 .menu-ontop > li > a:hover,
                 .menu-ontop > li > a:focus,
                 .nav-extra .header-icon:hover {
                     color: %s!important;
-                }',
+                }}',
                 esc_attr($ontop_link_colors['hover'])
             );
             printf(
-                '.menu-ontop > li:hover > a:after,
+                '@media (min-width:1200px){.menu-ontop > li:hover > a:after,
                 .menu-ontop > li:focus > a:after {
                     background-color: %s!important;
-                }',
+                })',
                 esc_attr($ontop_link_colors['hover'])
             );
         }
         // menu active
         if(!empty($ontop_link_colors['active'])){
             printf(
-                '.menu-ontop > li.current_page_item > a,
+                '@media (min-width:1200px){.menu-ontop > li.current_page_item > a,
                 .menu-ontop > li.current-menu-item > a,
                 .menu-ontop > li.current_page_ancestor > a,
                 .menu-ontop > li.current-menu-ancestor > a,
                 .menu-ontop > li > a:active,
                 .nav-extra .header-icon:active {
                     color: %s!important;
-                }',
+                })',
                 esc_attr($ontop_link_colors['active'])
             );
             printf(
-                '.menu-ontop > li.current_page_item > a:after,
+                '@media (min-width:1200px){.menu-ontop > li.current_page_item > a:after,
                 .menu-ontop > li.current-menu-item > a:after,
                 .menu-ontop > li.current_page_ancestor > a:after,
                 .menu-ontop > li.current-menu-ancestor > a:after {
                     background-color: %s!important;
-                }',
+                })',
                 esc_attr($ontop_link_colors['active'])
             );
         }
