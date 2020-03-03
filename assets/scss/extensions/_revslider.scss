@@ -135,6 +135,9 @@ body .rv-home-3 .custom.tparrows{
 		}
 	}
 	&:hover{
+		&.tp-leftarrow,&.tp-rightarrow{
+			padding: 20px 15px 20px 15px;
+		}
 		background-color: rgba(1,1,1,0.5) !important;
 	}
 }
