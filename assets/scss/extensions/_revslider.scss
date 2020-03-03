@@ -106,13 +106,13 @@ body .revslider-initialised .uranus .tp-bullet:hover .tp-bullet-inner {
 }
 
 body .rv-home-3 .custom.tparrows{
-	width: 60px;
-	height: 46px;
+	width: 60px !important;
+	height: 46px !important;
 	background-color: $primary_color;
 	&.tp-leftarrow{
 		padding: 20px 15px 10px 15px;
 		&:before{
-			content: "";
+			content: "" !important;
 			background: url(../images/icons/left-arrow.png) no-repeat 0 0;
 			background-size: cover !important;
 			width: 30px;
@@ -123,7 +123,7 @@ body .rv-home-3 .custom.tparrows{
 	&.tp-rightarrow{
 		padding: 10px 15px 20px 15px;	
 		&:before{
-			content: "";
+			content: "" !important;
 			background: url(../images/icons/right-arrow.png) no-repeat 0 0;
 			background-size: cover !important;
 			width: 30px;
