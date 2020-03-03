@@ -76,13 +76,13 @@ body .rv-home-1 .custom.tparrows{
 	height: 15px !important;
 	background-size: cover !important;
 	&.tp-leftarrow{
-		background: url(../images/icons/left-arrow.png) no-repeat 0 0;
+		background: url(../images/icons/left-arrow.png) no-repeat 0 0 !important;
 		&:before{
 			content: "" !important;
 		}
 	}
 	&.tp-rightarrow{
-		background: url(../images/icons/right-arrow.png) no-repeat 0 0;
+		background: url(../images/icons/right-arrow.png) no-repeat 0 0 !important;
 		&:before{
 			content: "" !important;
 		}
@@ -114,7 +114,7 @@ body .rv-home-3 .custom.tparrows{
 		padding: 20px 15px 10px 15px;
 		&:before{
 			content: "" !important;
-			background: url(../images/icons/left-arrow.png) no-repeat 0 0 !important;
+			background: url(../images/icons/left-arrow.png) no-repeat 0 0;
 			background-size: cover !important;
 			width: 30px;
 			height: 15px;
@@ -125,7 +125,7 @@ body .rv-home-3 .custom.tparrows{
 		padding: 10px 15px 20px 15px;	
 		&:before{
 			content: "" !important;
-			background: url(../images/icons/right-arrow.png) no-repeat 0 0 !important;
+			background: url(../images/icons/right-arrow.png) no-repeat 0 0;
 			background-size: cover !important;
 			width: 30px;
 			height: 15px;
