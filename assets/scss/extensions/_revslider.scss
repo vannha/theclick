@@ -136,3 +136,7 @@ body .rv-home-3 .custom.tparrows{
 		background-color: rgba(1,1,1,0.5) !important;
 	}
 }
+body .rv-home-3 .uranus .tp-bullet.selected, 
+body .rv-home-3 .uranus .tp-bullet:hover{
+	box-shadow: 0 0 0 1px $primary_color !important;
+}
