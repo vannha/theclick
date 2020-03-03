@@ -114,6 +114,9 @@ body #rev_slider_3_1_wrapper .custom.tparrows{
 			content: "";
 			background: url(../images/icons/left-arrow.png) no-repeat 0 0;
 			background-size: cover !important;
+			width: 30px;
+			height: 15px;
+			display: block;
 		}
 	}
 	&.tp-rightarrow{
@@ -122,6 +125,9 @@ body #rev_slider_3_1_wrapper .custom.tparrows{
 			content: "";
 			background: url(../images/icons/right-arrow.png) no-repeat 0 0;
 			background-size: cover !important;
+			width: 30px;
+			height: 15px;
+			display: block;
 		}
 	}
 }
