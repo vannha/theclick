@@ -158,9 +158,9 @@ body .rv-home-3 .uranus .tp-bullet:hover{
 	a{
 		font-family: 'futura-pt' !important;
 		font-size: 12px;
-		line-height: 15px;
+		line-height: 15px !important;
 		color: $link_color;
-		font-weight: 700;
+		font-weight: 700 !important;
 		text-transform: uppercase;
 	}
 }
