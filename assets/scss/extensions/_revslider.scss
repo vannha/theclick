@@ -105,23 +105,20 @@ body .revslider-initialised .uranus .tp-bullet:hover .tp-bullet-inner {
     -webkit-transform: scale(0.3) !important;
 }
 
-.revo-left-arrow{
-	padding-left: 15px;
-	padding-right: 15px;
-	background-color: #111;
-	img{
-		max-width: 30px;
-		margin-top: 20px;
-		margin-bottom: 10px;
+body #rev_slider_3_1_wrapper .custom.tparrows{
+	width: 60px;
+	height: 46px;
+	background-size: cover !important;
+	&.tp-leftarrow{
+		background: url(../images/icons/left-arrow.png) no-repeat 0 0;
+		&:before{
+			content: "";
+		}
 	}
-}
-.revo-right-arrow{
-	padding-left: 15px;
-	padding-right: 15px;
-	background-color: #111;
-	img{
-		max-width: 30px;
-		margin-top: 10px;
-		margin-bottom: 20px;
+	&.tp-rightarrow{
+		background: url(../images/icons/right-arrow.png) no-repeat 0 0;
+		&:before{
+			content: "";
+		}
 	}
 }
