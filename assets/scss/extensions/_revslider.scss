@@ -74,15 +74,17 @@
 body .rv-home-1 .custom.tparrows{
 	width: 30px !important;
 	height: 15px !important;
-	background-size: cover !important;
+	background-color: transparent !important;
 	&.tp-leftarrow{
-		background: url(../images/icons/left-arrow.png) no-repeat 0 0 !important;
+		background: url(../images/icons/left-arrow.png) !important;
+		background-size: cover !important;
 		&:before{
 			content: "" !important;
 		}
 	}
 	&.tp-rightarrow{
-		background: url(../images/icons/right-arrow.png) no-repeat 0 0 !important;
+		background: url(../images/icons/right-arrow.png) !important;
+		background-size: cover !important;
 		&:before{
 			content: "" !important;
 		}
