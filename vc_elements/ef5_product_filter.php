@@ -169,6 +169,7 @@ vc_map(array(
 class WPBakeryShortCode_ef5_product_filter extends WPBakeryShortCode{
 	protected function content($atts, $content = null){
 		$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
+		wp_enqueue_script('infinite-scroll',get_template_directory_uri().'/assets/js/infinite-scroll.pkgd.min.js',array('jquery'),'3.0.5',true);
 	    wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
         wp_enqueue_style('slick-css',get_template_directory_uri().'/assets/css/slick.css');
         return parent::content($atts, $content);
