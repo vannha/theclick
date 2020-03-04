@@ -76,8 +76,10 @@
 //theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
-
-    next_posts_link( $loadmore_text ); 
+	echo '<div class="woocommerce-infinite text-center infinite-btn load-on-infinite">';
+        next_posts_link( $loadmore_text ); 
+    echo '</div>';
+    
 	/*$total_page =  ceil((int)$loop->found_posts / (int)$post_per_page);
     $args = array(
         'total'   => $total_page,
