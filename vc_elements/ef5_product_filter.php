@@ -31,7 +31,7 @@ vc_map(array(
 						esc_html__( 'Product Deals', 'theclick' )     => 'deals'
 						),
 			        'std' => array('all')
-			    );
+			    ),
 	            array(
 					'type' => 'autocomplete',
 					'heading' => esc_html__( 'Narrow data source', 'theclick' ),
