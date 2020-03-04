@@ -34,7 +34,7 @@
             foreach($filter_type as $ft): 
                 if( !empty($ft['filter_type_item']) ){
                 	$title = !empty($ft['filter_title_item']) ? $ft['filter_title_item'] : $default_title[$ft['filter_type_item']];
-                    echo '<a href="'.esc_url(get_page_link(false).'&filter_type='.$ft['filter_type_item']).'" class="aaaa">'.$title.'</a>';
+                    echo '<a href="'.esc_url(get_page_link(false).'&filter_type='.$ft['filter_type_item']).'" class="product-filter-ajx">'.$title.'</a>';
                 }
             endforeach; 
             ?>
