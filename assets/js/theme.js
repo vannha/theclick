@@ -785,9 +785,10 @@
                 status: '.infinite-btn > a',
                 history: false,
             });
-            /*$grid.on( 'load.infiniteScroll', function( event, response, path ) {
-                var $items = $( response ).find('.loop-products>.product');
-                if ( Cookies.get( 'bixbang_shop_col' ) ) { 
+            $grid.on( 'load.infiniteScroll', function( event, response, path ) {
+                var $items = $( response ).find('.ef5-product-grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+
+                /*if ( Cookies.get( 'bixbang_shop_col' ) ) { 
                     var col = Cookies.get( 'bixbang_shop_col' ),
                         windowWidth   = $window.width(),
                         addClasses    = '';
@@ -807,16 +808,17 @@
                         addClasses = 'col-xl-' + col;
                     }
                     $($items).addClass(addClasses);
-                }
-                $grid.append($items).isotope('appended', $items); 
-                $grid.imagesLoaded( function() {
+                }*/
+                $grid.append($items);
+                //$grid.append($items).isotope('appended', $items); 
+                /*$grid.imagesLoaded( function() {
                     $grid.isotope( {
                         layoutMode        : 'fitRows',
                         itemSelector      : '.loop-products>.product',
                         transitionDuration: '0.2s',
                     } ) 
-                });
-            });*/
+                });*/
+            });
         }
     }
 
