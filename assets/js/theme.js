@@ -779,13 +779,13 @@
     }
     function theclick_infinite_page(){
         if ( $(document).find( '.infinite-btn' ).length ) {
-            var $grid = $(document).find('.products.loop-products');
+            var $grid = $(document).find('.ef5-product-grid-filter .ef5-product-grid-wrap');
             $grid.infiniteScroll({
                 path: '.infinite-btn',
                 status: '.infinite-btn',
                 history: false,
             });
-            $grid.on( 'load.infiniteScroll', function( event, response, path ) {
+            /*$grid.on( 'load.infiniteScroll', function( event, response, path ) {
                 var $items = $( response ).find('.loop-products>.product');
                 if ( Cookies.get( 'bixbang_shop_col' ) ) { 
                     var col = Cookies.get( 'bixbang_shop_col' ),
@@ -816,7 +816,7 @@
                         transitionDuration: '0.2s',
                     } ) 
                 });
-            });
+            });*/
         }
     }
 
