@@ -27,7 +27,7 @@
 
 ?>
 
-<div class="ef5-posts ef5-product-grid-filter <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
+<div class="ef5-posts ef5-product-grid grid-filter <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
 	<?php if(!empty($filter_type)): ?>
 		<div class="filter-type d-flex gutter-40">
             <?php 
