@@ -72,7 +72,7 @@
         </div>
     </div>
 <?php 
-wp_reset_query();
+//wp_reset_query();
 //theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
