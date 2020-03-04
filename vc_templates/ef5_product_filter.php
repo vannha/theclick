@@ -45,22 +45,18 @@
 <?php 
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
-    $args = array(
-        'total'   => wc_get_loop_prop( 'total_pages' ),
-        'current' => wc_get_loop_prop( 'current_page' ),
+   /* $args = array(
+        'total'   => $loop->found_posts,
+        'current' => $post_per_page,
         'base'    => esc_url_raw( add_query_arg( 'product-page', '%#%', false ) ),
         'format'  => '?product-page=%#%',
     );
-    var_dump($args);
-    if ( ! wc_get_loop_prop( 'is_shortcode' ) ) {
-        $args['format'] = '';
-        $args['base']   = esc_url_raw( str_replace( 999999999, $args['base'], remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
-    }
+     */
 
     $loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
-    if($args['total'] >= $args['current']+1){
+    if($loop->found_posts > $post_per_page){
         echo '<div class="woocommerce-infinite text-center">';
-        echo '<a href="'. esc_url( $loadmore_url).'" class="infinite-btn load-on-infinite">'.esc_html('loadmore_text').'</a>';
+        echo '<a href="'. esc_url( get_pagenum_link( 999999999, false )).'" class="infinite-btn load-on-infinite">'.esc_html('loadmore_text').'</a>';
         echo '</div>';
     }
 }
