@@ -72,7 +72,7 @@
         </div>
     </div>
 <?php 
-wp_reset_query();
+
 //theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
@@ -110,6 +110,6 @@ if($pagin_type == 'infinite'){
         echo '<a href="'. esc_url( $loadmore_url ).'" class="infinite-btn load-on-infinite">'.esc_html($loadmore_text).'</a>';
         echo '</div>';
     }*/
-}
+} wp_reset_query();
 ?>
 </div>
