@@ -198,11 +198,11 @@ vc_map(array(
 class WPBakeryShortCode_ef5_product_filter extends WPBakeryShortCode{
 	protected function content($atts, $content = null){
 		$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-	    //wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
-       // wp_enqueue_style('slick-css',get_template_directory_uri().'/assets/css/slick.css');
+	    wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
+        wp_enqueue_style('slick-css',get_template_directory_uri().'/assets/css/slick.css');
         return parent::content($atts, $content);
 	}
-	/*protected function theclick_products_wrap_css_class($atts){
+	protected function theclick_products_wrap_css_class($atts){
         extract($atts);
 
         $css_classes = array(
@@ -229,5 +229,5 @@ class WPBakeryShortCode_ef5_product_filter extends WPBakeryShortCode{
         ?>
         	<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>
         <?php
-    }*/
+    }
 }
