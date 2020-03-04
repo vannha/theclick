@@ -29,7 +29,7 @@
 
 <div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
 	<?php if(!empty($filter_type)): ?>
-		<div class="filter-type">
+		<div class="filter-type d-flex gutter-40">
             <?php 
             foreach($filter_type as $ft): 
                 if( !empty($ft['filter_type_item']) ){
