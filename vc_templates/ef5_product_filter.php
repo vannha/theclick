@@ -52,7 +52,7 @@ if($pagin_type == 'infinite'){
         //'format'  => '?product-page=%#%',
     );
      
-
+    var_dump($loop->found_posts);
     $loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
     if($loop->found_posts >= ((int)$post_per_page +1)){
         echo '<div class="woocommerce-infinite text-center">';
