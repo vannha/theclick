@@ -35,8 +35,9 @@ vc_map(array(
 								esc_html__( 'New Review', 'theclick' )        => 'recent_review',
 								esc_html__( 'Product Deals', 'theclick' )     => 'deals'
 			                ),
-			                'std'        => 'all',
-			                'edit_field_class' => 'vc_col-sm-6'
+							'std'              => 'all',
+							'admin_label'      => true,
+							'edit_field_class' => 'vc_col-sm-6'
 			            ),
 			            array(
 			                'type'        => 'textfield',
