@@ -781,8 +781,8 @@
         if ( $(document).find( '.infinite-btn' ).length ) {
             var $grid = $(document).find('.ef5-product-grid-filter .ef5-product-grid-wrap');
             $grid.infiniteScroll({
-                path: '.infinite-btn',
-                status: '.infinite-btn',
+                path: '.infinite-btn > a',
+                status: '.infinite-btn > a',
                 history: false,
             });
             /*$grid.on( 'load.infiniteScroll', function( event, response, path ) {
