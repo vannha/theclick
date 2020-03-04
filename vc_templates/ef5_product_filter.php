@@ -21,7 +21,7 @@
 		'top_rate'         => esc_html__( 'Top Rate', 'theclick' ),        
 		'recent_review'    => esc_html__( 'New Review', 'theclick' ),      
 		'deals'            => esc_html__( 'Product Deals', 'theclick' )   
-    ),
+    );
 ?>
 
 <div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
@@ -31,7 +31,7 @@
             foreach($filter_type as $ft): 
                 if( !empty($ft['filter_type_item']) ){
                 	$title = !empty($ft['filter_title_item']) ? $ft['filter_title_item'] : $default_title[$ft['filter_type_item']];
-                    echo '<a href="'.esc_url(get_page_link(false).'filter_type='.$ft['filter_title_item']).'" class="aaaa">'.$.'</a>';
+                    echo '<a href="'.esc_url(get_page_link(false).'filter_type='.$ft['filter_title_item']).'" class="aaaa">'.$title.'</a>';
                 }
             endforeach; 
             ?>
