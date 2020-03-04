@@ -10,6 +10,7 @@
 
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
 
+    $filter_type=(array) vc_param_group_parse_atts($filter_type );
     var_dump($filter_type);
 ?>
 
