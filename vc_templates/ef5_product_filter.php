@@ -72,7 +72,8 @@
         </div>
     </div>
 <?php 
-theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
+wp_reset_query();
+//theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
 	/*posts_nav_link(
@@ -80,7 +81,7 @@ if($pagin_type == 'infinite'){
         apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')),
         apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick'))
     );*/
-    next_posts_link( 'aaaaaaaaaaa' ); 
+    next_posts_link( $loadmore_text ); 
 	/*$total_page =  ceil((int)$loop->found_posts / (int)$post_per_page);
     $args = array(
         'total'   => $total_page,
