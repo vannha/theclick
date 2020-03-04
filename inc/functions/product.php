@@ -12,7 +12,6 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
     if($paged > 1){
         $args['paged'] = $paged;
     }
-    var_dump($args);
     $loop = new WP_Query($args);
 	return $loop;
 }
@@ -24,19 +23,6 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
-		/*'date_query' => array(
-			array(
-			   'before' => date('Y-m-d H:i:s', current_time( 'timestamp' ))
-			)
-	    ),
-	    'tax_query' => array(
-			array(
-				'taxonomy' => 'product_visibility',
-				'field'    => 'term_taxonomy_id',
-				'terms'    => is_search() ? $product_visibility_term_ids['exclude-from-search'] : $product_visibility_term_ids['exclude-from-catalog'],
-				'operator' => 'NOT IN',
-			)
-	    ),*/
 	    'post_parent' => 0
     );
     if(!empty($taxonomies) || !empty($taxonomies_exclude)){
