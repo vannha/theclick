@@ -4,7 +4,9 @@
 
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
     $product_ids = '';
-    $loop = theclick_woocommerce_query('recent_product',$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
+    
+    $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : 'recent_product';
+    $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
      
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
@@ -22,6 +24,7 @@
 		'recent_review'    => esc_html__( 'New Review', 'theclick' ),      
 		'deals'            => esc_html__( 'Product Deals', 'theclick' )   
     );
+
 ?>
 
 <div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
