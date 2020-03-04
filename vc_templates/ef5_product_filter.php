@@ -72,7 +72,7 @@
         </div>
     </div>
 <?php 
-theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
+theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
 	posts_nav_link(
