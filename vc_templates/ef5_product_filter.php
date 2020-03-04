@@ -27,7 +27,7 @@
 
 ?>
 
-<div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
+<div class="ef5-posts ef5-product-grid-filter <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
 	<?php if(!empty($filter_type)): ?>
 		<div class="filter-type d-flex gutter-40">
             <?php 
@@ -72,42 +72,14 @@
         </div>
     </div>
 <?php 
-
-//theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
+ 
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
 	echo '<div class="woocommerce-infinite text-center infinite-btn load-on-infinite">';
         next_posts_link( $loadmore_text ); 
     echo '</div>';
-    
-	/*$total_page =  ceil((int)$loop->found_posts / (int)$post_per_page);
-    $args = array(
-        'total'   => $total_page,
-        'current' => (int)$post_per_page + 1,
-        'base'    => esc_url_raw( add_query_arg( 'product-page', '%#%', false ) ),
-        'format'  => '?product-page=%#%',
-    );
-    $args = array(
-        'total'   => wc_get_loop_prop( 'total_pages' ),
-        'current' => wc_get_loop_prop( 'current_page' ),
-        'base'    => esc_url_raw( add_query_arg( 'product-page', '%#%', false ) ),
-        'format'  => '?product-page=%#%',
-    );
-    if ( ! wc_get_loop_prop( 'is_shortcode' ) ) {
-        $args['format'] = '';
-        $args['base']   = esc_url_raw( str_replace( 999999999, $args['base'], remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
-    }
-
-    $loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
-    
-    var_dump($total_page);
- 
-    $loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
-    if($total_page >= ((int)$post_per_page +1)){
-        echo '<div class="woocommerce-infinite text-center">';
-        echo '<a href="'. esc_url( $loadmore_url ).'" class="infinite-btn load-on-infinite">'.esc_html($loadmore_text).'</a>';
-        echo '</div>';
-    }*/
-} wp_reset_query();
+     
+} 
+wp_reset_query();
 ?>
 </div>

@@ -15,8 +15,8 @@
         theclick_inlineCss();
         theclick_ajax_pagination();
         theclick_link_search_toggle();
-        // WooCommerce
 
+        // WooCommerce
         theclick_woo_filters();
         theclick_woo_loop_thumb_gallery();
         theclick_wc_single_product_gallery();
@@ -24,6 +24,7 @@
         theclick_quantity_plus_minus();
         theclick_quantity_plus_minus_action();
         theclick_remove_cart_actions();
+        theclick_infinite_page();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -775,6 +776,48 @@
          * jQuery('.actions > .coupon').remove();
          * jQuery('.actions > [name="update_cart"]').remove();
          */
+    }
+    function theclick_infinite_page(){
+        if ( $(document).find( '.infinite-btn' ).length ) {
+            var $grid = $(document).find('.products.loop-products');
+            $grid.infiniteScroll({
+                path: '.infinite-btn',
+                status: '.infinite-btn',
+                history: false,
+            });
+            $grid.on( 'load.infiniteScroll', function( event, response, path ) {
+                var $items = $( response ).find('.loop-products>.product');
+                if ( Cookies.get( 'bixbang_shop_col' ) ) { 
+                    var col = Cookies.get( 'bixbang_shop_col' ),
+                        windowWidth   = $window.width(),
+                        addClasses    = '';
+
+                    if ( 5 == col ) {
+                        col = 'is-5';
+                    }
+                    if ( windowWidth <= 575 ) {
+                        addClasses = 'col-xl-' + col;
+                    } else if ( windowWidth >= 576 && windowWidth <= 767 ) {
+                        addClasses = 'col-xl-' + col;
+                    } else if ( windowWidth >= 768 && windowWidth <= 991 ) {
+                        addClasses = 'col-xl-' + col;
+                    } else if ( windowWidth >= 992 && windowWidth <= 1199 ) {
+                        addClasses = 'col-xl-' + col;
+                    } else if ( windowWidth >= 1200 ) { 
+                        addClasses = 'col-xl-' + col;
+                    }
+                    $($items).addClass(addClasses);
+                }
+                $grid.append($items).isotope('appended', $items); 
+                $grid.imagesLoaded( function() {
+                    $grid.isotope( {
+                        layoutMode        : 'fitRows',
+                        itemSelector      : '.loop-products>.product',
+                        transitionDuration: '0.2s',
+                    } ) 
+                });
+            });
+        }
     }
 
     // Woo Smart Compare 
