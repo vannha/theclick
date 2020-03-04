@@ -785,7 +785,9 @@
                 status: '.infinite-btn > a',
                 history: false,
             });
+
             $grid.on( 'load.infiniteScroll', function( event, response, path ) {
+                $('.ef5-wc-loop-img').slick('unslick');
                 var $items = $( response ).find('.ef5-product-grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
                 /*if ( Cookies.get( 'bixbang_shop_col' ) ) { 
@@ -810,6 +812,14 @@
                     $($items).addClass(addClasses);
                 }*/
                 $grid.append($items);
+                $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                    vertical: false,
+                    slidesToShow: 1,
+                    focusOnSelect: true,
+                    prevArrow:"<button class='slick-prev'><span></span></button>",
+                    nextArrow:"<button class='slick-next'><span></span></button>",
+                    infinite: true,
+                });
                 //$grid.append($items).isotope('appended', $items); 
                 /*$grid.imagesLoaded( function() {
                     $grid.isotope( {
