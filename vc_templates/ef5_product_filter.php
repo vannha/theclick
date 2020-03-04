@@ -79,7 +79,7 @@ if($pagin_type == 'infinite'){
         apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')),
         apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick'))
     );*/
-    echo next_posts_link( 'aaaaaaaaaaa' ); 
+    var_dump(next_posts_link( 'aaaaaaaaaaa' )); 
 	/*$total_page =  ceil((int)$loop->found_posts / (int)$post_per_page);
     $args = array(
         'total'   => $total_page,
