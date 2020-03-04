@@ -11,11 +11,32 @@
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
 
     $filter_type=(array) vc_param_group_parse_atts($filter_type );
-    var_dump($filter_type);
+    
+    $default_title = array(
+		'all'              => esc_html__( 'All Products', 'theclick' ),    
+		'best_selling'     => esc_html__( 'Best Sellers', 'theclick' ),    
+		'recent_product'   => esc_html__( 'New Products', 'theclick' ),    
+		'on_sale'          => esc_html__( 'Sale Products', 'theclick' ),   
+		'featured_product' => esc_html__( 'Featured Products', 'theclick'), 
+		'top_rate'         => esc_html__( 'Top Rate', 'theclick' ),        
+		'recent_review'    => esc_html__( 'New Review', 'theclick' ),      
+		'deals'            => esc_html__( 'Product Deals', 'theclick' )   
+    ),
 ?>
 
 <div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
-	<?php var_dump($filter_type); ?>
+	<?php if(!empty($filter_type)): ?>
+		<div class="filter-type">
+            <?php 
+            foreach($filter_type as $ft): 
+                if( !empty($ft['filter_type_item']) ){
+                	$title = !empty($ft['filter_title_item']) ? $ft['filter_title_item'] : $default_title[$ft['filter_type_item']];
+                    echo '<a href="'.esc_url(get_page_link(false).'filter_type='.$ft['filter_title_item']).'" class="aaaa">'.$.'</a>';
+                }
+            endforeach; 
+            ?>
+		</div>
+	<?php endif; ?>
     <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
         <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
