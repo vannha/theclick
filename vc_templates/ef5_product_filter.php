@@ -5,7 +5,7 @@
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
     $product_ids = '';
 
-    $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : '';
+    $filter_request = ( !empty($_GET['filter_type']) && $_GET['filter_type'] !='' ) ? $_GET['filter_type'] : '';
     $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
      
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
