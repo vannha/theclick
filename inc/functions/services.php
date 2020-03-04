@@ -48,8 +48,6 @@ if(!function_exists('theclick_service_featured')){
 			'posts_per_page'      => $args['posts_per_page'],
 			'no_found_rows'       => true,
 			'post_status'         => 'publish',
-			'orderby'             => 'date',
-			'order'               => 'DESC'
 			'ignore_sticky_posts' => true,
 			'post__not_in'        => array( get_the_ID() )	
         ) );

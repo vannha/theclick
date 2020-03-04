@@ -24,8 +24,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
-	    'post_parent' => 0,
-        ''
+	    'post_parent' => 0
     );
     if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
@@ -48,12 +47,14 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
 			);
             break;
         case 'top_rate':
-            $args['meta_key']='_wc_average_rating';
-            $args['orderby']='meta_value_num';
-            $args['order']='DESC';
+            $args['meta_key']   ='_wc_average_rating';
+            $args['orderby']    ='meta_value_num';
+            $args['order']      ='DESC';
             $args['meta_query'] = array();
             break;
         case 'recent_product':
+            $args['orderby']    = 'date';
+            $args['order']      = 'DESC';
             $args['meta_query'] = array();
             break;
         case 'on_sale':
