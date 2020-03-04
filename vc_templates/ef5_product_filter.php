@@ -53,7 +53,7 @@ if($pagin_type == 'infinite'){
     );
      */
 
-    $loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
+    //$loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
     if($loop->found_posts > $post_per_page){
         echo '<div class="woocommerce-infinite text-center">';
         echo '<a href="'. esc_url( get_pagenum_link( 999999999, false )).'" class="infinite-btn load-on-infinite">'.esc_html('loadmore_text').'</a>';
