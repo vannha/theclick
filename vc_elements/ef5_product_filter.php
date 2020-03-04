@@ -185,20 +185,5 @@ class WPBakeryShortCode_ef5_product_filter extends WPBakeryShortCode{
 
         echo trim($css_class);
     }
-    protected function view_all($atts = ''){
-        extract($atts);
-        if($pagination !== 'view_all') return;
-        ?>
-            <div class="view-all-wrap text-center">
-                <a href="<?php echo get_permalink($view_all_page);?>" class="ef5-btn outline"><?php echo esc_html($view_all_text);?></a>
-            </div>
-        <?php
-    }
-    protected function loadmore($atts = ''){
-        extract($atts);
-        if($pagination !== 'loadmore') return;
-        ?>
-        	<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>
-        <?php
-    }
+    
 }
