@@ -51,6 +51,7 @@ if($pagin_type == 'infinite'){
         'base'    => esc_url_raw( add_query_arg( 'product-page', '%#%', false ) ),
         'format'  => '?product-page=%#%',
     );
+    var_dump($args);
     if ( ! wc_get_loop_prop( 'is_shortcode' ) ) {
         $args['format'] = '';
         $args['base']   = esc_url_raw( str_replace( 999999999, $args['base'], remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
