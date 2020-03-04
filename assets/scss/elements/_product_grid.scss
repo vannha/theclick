@@ -41,18 +41,10 @@
 	.infinite-btn{
 		a{
 		    font-size: 12px;
-		    line-height: 14px;
+		    line-height: 70px;
+		    font-weight: 600;
 		    text-transform: uppercase;
 		    position: relative;
-		    @include d-flex();   
-		    -webkit-box-align: center;
-		    -webkit-align-items: center;
-		    -ms-flex-align: center;
-		    align-items: center;
-		    -webkit-box-pack: center;
-		    -webkit-justify-content: center;
-		    -ms-flex-pack: center;
-		    justify-content: center;
 		    width: 90px;
 		    height: 90px;
 		    padding: 10px;

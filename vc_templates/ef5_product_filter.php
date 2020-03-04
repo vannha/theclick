@@ -75,7 +75,7 @@
  
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
-	echo '<div class="woocommerce-infinite text-center infinite-btn load-on-infinite">';
+	echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
         next_posts_link( $loadmore_text ); 
     echo '</div>';
      
