@@ -4,8 +4,8 @@
 
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
     $product_ids = '';
-    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
-    var_dump($loop); die;
+    $loop = theclick_woocommerce_query('all',$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
+
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
