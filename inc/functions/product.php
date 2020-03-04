@@ -24,12 +24,12 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
-		'date_query' => array(
+		/*'date_query' => array(
 			array(
 			   'before' => date('Y-m-d H:i:s', current_time( 'timestamp' ))
 			)
 	    ),
-	    /*'tax_query' => array(
+	    'tax_query' => array(
 			array(
 				'taxonomy' => 'product_visibility',
 				'field'    => 'term_taxonomy_id',
