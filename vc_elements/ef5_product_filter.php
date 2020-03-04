@@ -16,6 +16,38 @@ vc_map(array(
 	                'std'        => '1',
 	            ),
 	            array(
+	                'type'       => 'param_group',
+	                'heading'    => esc_html__( 'Add Filter Type', 'theclick' ),
+	                'param_name' => 'filter_type',
+	                'value'      =>  urlencode( json_encode( array())),
+	                'params'     => array(
+	                    array(
+			                'type'       => 'dropdown',
+			                'heading'    => esc_html__('Select Type','theclick'),
+			                'param_name' => 'filter_type_item',
+			                'value'      =>  array(
+			                    esc_html__( 'All Products', 'theclick' )      => 'all',
+								esc_html__( 'Best Sellers', 'theclick' )      => 'best_selling',
+								esc_html__( 'New Products', 'theclick' )      => 'recent_product',
+								esc_html__( 'Sale Products', 'theclick' )     => 'on_sale',
+								esc_html__( 'Featured Products', 'theclick' ) => 'featured_product',
+								esc_html__( 'Top Rate', 'theclick' )          => 'top_rate',
+								esc_html__( 'New Review', 'theclick' )        => 'recent_review',
+								esc_html__( 'Product Deals', 'theclick' )     => 'deals'
+			                ),
+			                'std'        => 'all',
+			                'edit_field_class' => 'vc_col-sm-6'
+			            ),
+			            array(
+			                'type'        => 'textfield',
+			                'heading'     => esc_html__( 'Filter Title', 'theclick' ),
+			                'param_name'  => 'filter_title_item',
+			                'value'       => '',
+			            ),
+	                     
+	                ),
+	            ),
+	            /*array(
 			        'type'        => 'checkbox',
 			        'heading'     => esc_html__( 'Filter Type', 'theclick' ),
 			        'param_name'  => 'filter_type',
@@ -30,7 +62,7 @@ vc_map(array(
 						esc_html__( 'Product Deals', 'theclick' )     => 'deals'
 						),
 			        'std' => array('all')
-			    ),
+			    ),*/
 	            array(
 					'type' => 'autocomplete',
 					'heading' => esc_html__( 'Narrow data source', 'theclick' ),
