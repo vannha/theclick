@@ -44,7 +44,7 @@
     </div>
 <?php 
 
-if(isset($show_loadmore) && $show_loadmore){ ?>
+if(isset($show_loadmore) && $show_loadmore){ echo 'aaaa'; ?>
 	<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>
 <?php } ?>
 </div>
