@@ -80,7 +80,8 @@ if($pagin_type == 'infinite'){
         //'base'    => esc_url_raw( add_query_arg( 'product-page', '%#%', false ) ),
         //'format'  => '?product-page=%#%',
     );
-     
+    $total_page =  (int)$loop->found_posts / (int)$post_per_page;
+    var_dump($total_page);
  
     $loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
     if($loop->found_posts >= ((int)$post_per_page +1)){
