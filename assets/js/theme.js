@@ -779,7 +779,7 @@
     }
     function theclick_infinite_page(){
         if ( $(document).find( '.infinite-btn' ).length ) {
-            var $grid = $(document).find('.ef5-product-grid-filter .ef5-product-grid-wrap');
+            var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap');
             $grid.infiniteScroll({
                 path: '.infinite-btn > a',
                 status: '.infinite-btn > a',
@@ -788,7 +788,7 @@
 
             $grid.on( 'load.infiniteScroll', function( event, response, path ) {
                 $('.ef5-wc-loop-img').slick('unslick');
-                var $items = $( response ).find('.ef5-product-grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+                var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
                 /*if ( Cookies.get( 'bixbang_shop_col' ) ) { 
                     var col = Cookies.get( 'bixbang_shop_col' ),
