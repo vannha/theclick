@@ -43,8 +43,8 @@
         </div>
     </div>
 <?php 
-$pagin_type=='infinite';
-if($pagin_type=='infinite'){
+$pagin_type = 'infinite';
+if($pagin_type == 'infinite'){
     $args = array(
         'total'   => wc_get_loop_prop( 'total_pages' ),
         'current' => wc_get_loop_prop( 'current_page' ),
