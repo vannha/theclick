@@ -5,13 +5,14 @@
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
     $product_ids = '';
     $loop = theclick_woocommerce_query('recent_product',$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
-    //var_dump($loop->found_posts);
+     
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
     $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
 ?>
 
 <div class="ef5-posts ef5-product-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
+	<?php var_dump($filter_type); ?>
     <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
         <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php

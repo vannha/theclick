@@ -91,23 +91,6 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
     			}
     		}
             break;
-        /*case 'category':
-            if(!empty($taxonomies) || !empty($taxonomies_exclude)){
-                $tax_query = ef5systems_tax_query('product', $taxonomies, '');
-                $args['tax_query']= $tax_query;
-            }
-            break;
-        case 'category_slug':
-            if($product_cat != ''){
-                $args['tax_query'] = array(
-        			array(
-        				'taxonomy' => 'product_cat',
-        				'field' => 'slug',
-        				'terms' => $product_cat
-        			)
-        		);
-            }
-            break;*/
     }
     return $args;
 }
