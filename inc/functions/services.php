@@ -44,12 +44,14 @@ if(!function_exists('theclick_service_featured')){
 		]);
 		if($args['posts_per_page'] === '0' || $args['posts_per_page'] === '') return;
 		$r = new WP_Query( array(
-            'post_type'           => 'service',
-            'posts_per_page'      => $args['posts_per_page'],
-            'no_found_rows'       => true,
-            'post_status'         => 'publish',
-            'ignore_sticky_posts' => true,
-            'post__not_in'		  => array( get_the_ID() )	
+			'post_type'           => 'service',
+			'posts_per_page'      => $args['posts_per_page'],
+			'no_found_rows'       => true,
+			'post_status'         => 'publish',
+			'orderby'             => 'date',
+			'order'               => 'DESC'
+			'ignore_sticky_posts' => true,
+			'post__not_in'        => array( get_the_ID() )	
         ) );
 		$thumbnail_size = [86,66];
         if ( $r->have_posts() ) {

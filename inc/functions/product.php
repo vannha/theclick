@@ -24,7 +24,8 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
-	    'post_parent' => 0
+	    'post_parent' => 0,
+        ''
     );
     if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
