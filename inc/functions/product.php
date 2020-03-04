@@ -1,6 +1,6 @@
 <?php
 function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude=''){
-    
+    global $wp_query;
 	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
     if (get_query_var('paged')){ 
         $paged = get_query_var('paged'); 
@@ -13,7 +13,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
         $args['paged'] = $paged;
     }
  
-    $loop = new WP_Query($args);
+    $loop = $wp_query = new WP_Query($args);
 	return $loop;
 }
  
