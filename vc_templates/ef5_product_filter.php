@@ -72,15 +72,15 @@
         </div>
     </div>
 <?php 
-theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
+//theclick_loop_pagination(['show_pagination' => '1', 'style' => '3']);
 $pagin_type = 'infinite';
 if($pagin_type == 'infinite'){
-	posts_nav_link(
+	/*posts_nav_link(
         apply_filters('theclick_loop_pagination_sep_text', '<span class="d-none"></span>'),
         apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')),
         apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick'))
-    );
-    //var_dump(next_posts_link( 'aaaaaaaaaaa' )); 
+    );*/
+    next_posts_link( 'aaaaaaaaaaa' ); 
 	/*$total_page =  ceil((int)$loop->found_posts / (int)$post_per_page);
     $args = array(
         'total'   => $total_page,
