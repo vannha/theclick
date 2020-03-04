@@ -43,8 +43,8 @@
         </div>
     </div>
 <?php 
-var_dump($show_loadmore);
-if(isset($show_loadmore) && $show_loadmore)){ ?>
+
+if(isset($show_loadmore) && $show_loadmore){ ?>
 	<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>
 <?php } ?>
 </div>
