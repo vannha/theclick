@@ -63,7 +63,10 @@
 				</div>
 			</div>
 			<div class="panel-content">
-				
+				<?php 
+				if(is_active_sidebar( 'filter-by' ))
+					dynamic_sidebar('filter-by');
+				?>
 			</div>
 		</div>
 	</div>

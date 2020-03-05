@@ -328,7 +328,7 @@ function theclick_widgets_init()
         register_sidebar(array(
             'name'          => esc_html__('Filter By', 'theclick'),
             'id'            => 'filter-by',
-            'description'   => esc_html__('Add widgets here to appear in widget area of grid filter ', 'theclick'),
+            'description'   => esc_html__('Add widgets here to appear in widget area of grid filter by', 'theclick'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<div class="ef5-heading h3 widgettitle">',
