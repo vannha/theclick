@@ -37,6 +37,16 @@
 	}
 }
 
+.filter-type{
+	.filter-left{
+		margin-left: -20px;
+		margin-right: -20px;
+		a{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
 .ef5-product-grid.grid-filter{
 	.infinite-btn{
 		a{
