@@ -25,6 +25,7 @@
         theclick_quantity_plus_minus_action();
         theclick_remove_cart_actions();
         theclick_infinite_page();
+        theclick_woo_filter_sidebar();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -805,6 +806,18 @@
                  
             });
         }
+    }
+
+    function theclick_woo_filter_sidebar(){
+        'use strict';
+        $('.filter-tune').on('click',function(e){
+            e.preventDefault();
+            $('.filter-by-sidebar').toggleClass('open');
+        }); 
+        $('.button-close-x').on('click',function(e){
+            e.preventDefault();
+            $('.filter-by-sidebar').removeClass('open');
+        });  
     }
 
     // Woo Smart Compare 
