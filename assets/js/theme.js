@@ -816,7 +816,7 @@
         }); 
         $('.button-close-x').on('click',function(e){
             e.preventDefault();
-            $('.filter-by-sidebar').removeClass('open');
+            $('.filter-by-sidebar').removeClass('open').hide('slow');
         });  
     }
 
