@@ -120,6 +120,11 @@
 	    -ms-flex-direction: column;
 	    flex-direction: column;
     }
+    &.open{
+		.panel-wrap{
+			@include transform(translateX(0));
+		}
+	}
     .overlay-wrap{
 	    position: absolute;
 	    top: 0;
@@ -137,6 +142,7 @@
     	width: 100%;
     	overflow-y: auto;
 	}
+
 }
 .ef5-product-grid.grid-filter{
 	.infinite-btn{
