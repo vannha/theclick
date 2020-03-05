@@ -789,28 +789,7 @@
             $grid.on( 'load.infiniteScroll', function( event, response, path ) {
                 $('.ef5-wc-loop-img').slick('unslick');
                 var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
-
-                /*if ( Cookies.get( 'bixbang_shop_col' ) ) { 
-                    var col = Cookies.get( 'bixbang_shop_col' ),
-                        windowWidth   = $window.width(),
-                        addClasses    = '';
-
-                    if ( 5 == col ) {
-                        col = 'is-5';
-                    }
-                    if ( windowWidth <= 575 ) {
-                        addClasses = 'col-xl-' + col;
-                    } else if ( windowWidth >= 576 && windowWidth <= 767 ) {
-                        addClasses = 'col-xl-' + col;
-                    } else if ( windowWidth >= 768 && windowWidth <= 991 ) {
-                        addClasses = 'col-xl-' + col;
-                    } else if ( windowWidth >= 992 && windowWidth <= 1199 ) {
-                        addClasses = 'col-xl-' + col;
-                    } else if ( windowWidth >= 1200 ) { 
-                        addClasses = 'col-xl-' + col;
-                    }
-                    $($items).addClass(addClasses);
-                }*/
+ 
                 $grid.append($items);
                 
                 $grid.imagesLoaded( function() {
@@ -823,14 +802,7 @@
                         infinite: true,
                     });
                 });
-                //$grid.append($items).isotope('appended', $items); 
-                /*$grid.imagesLoaded( function() {
-                    $grid.isotope( {
-                        layoutMode        : 'fitRows',
-                        itemSelector      : '.loop-products>.product',
-                        transitionDuration: '0.2s',
-                    } ) 
-                });*/
+                 
             });
         }
     }

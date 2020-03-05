@@ -48,22 +48,7 @@ vc_map(array(
 	                     
 	                ),
 	            ),
-	            /*array(
-			        'type'        => 'checkbox',
-			        'heading'     => esc_html__( 'Filter Type', 'theclick' ),
-			        'param_name'  => 'filter_type',
-			        'value'       => array(
-						esc_html__( 'All Products', 'theclick' )      => 'all',
-						esc_html__( 'Best Sellers', 'theclick' )      => 'best_selling',
-						esc_html__( 'New Products', 'theclick' )      => 'recent_product',
-						esc_html__( 'Sale Products', 'theclick' )     => 'on_sale',
-						esc_html__( 'Featured Products', 'theclick' ) => 'featured_product',
-						esc_html__( 'Top Rate', 'theclick' )          => 'top_rate',
-						esc_html__( 'New Review', 'theclick' )        => 'recent_review',
-						esc_html__( 'Product Deals', 'theclick' )     => 'deals'
-						),
-			        'std' => array('all')
-			    ),*/
+	             
 	            array(
 					'type' => 'autocomplete',
 					'heading' => esc_html__( 'Narrow data source', 'theclick' ),
@@ -137,17 +122,7 @@ vc_map(array(
 		            'heading'     => esc_html__( 'Element ID', 'theclick' ),
 		            'param_name'  => 'el_id',
 		            'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'theclick' ), '//w3schools.com/tags/att_global_id.asp' ),
-		        ),
-		        array(
-		            "type" => "dropdown",
-		            "heading" => esc_html__("Layout Type",'theclick'),
-		            "param_name" => "layout",
-		            "value" => array(
-		            	"Basic" => "basic",
-		            	"Masonry" => "masonry",
-		            	),
-		            "group" => esc_html__("Grid Settings", 'theclick')
-		        ),
+		        )
 	        ),
 			ef5systems_grid_settings([
                 'group'                  => esc_html__('Grid Settings','theclick'),
@@ -167,20 +142,7 @@ vc_map(array(
 	            	'std'        => 'gutter-xl-40',
 		            "group" => esc_html__("Grid Settings", 'theclick')
 		        ),
-		        array(
-		            "type" => "dropdown",
-		            "heading" => esc_html__("Filter on Masonry",'theclick'),
-		            "param_name" => "filter",
-		            "value" => array(
-		            	"Enable" => "true",
-		            	"Disable" => "false"
-		            	),
-		            "dependency" => array(
-		            	"element" => "layout",
-		            	"value" => "masonry"
-		            	),
-		            "group" => esc_html__("Grid Settings", 'theclick')
-		        ),
+		         
 		        ef5systems_vc_map_add_css_animation([
 		            'param_name' => 'css_animation',
 		            "group" => esc_html__("Grid Settings", 'theclick')
