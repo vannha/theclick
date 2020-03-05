@@ -74,7 +74,7 @@
 				        }
 				    }
 				}
-			    var_dump($attribute_array);
+			     
 				?>
 				<div class="woo-sidebar-filters row">
 					<?php 
