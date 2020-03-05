@@ -63,10 +63,7 @@
 				background-color: $link_color;
 				@include transition(width .3s linear 0s);
 			}
-			&.active{
-				color: $link_color;
-			}
-			&:hover{
+			&:hover,&.active{
 				color: $link_color;
 				&:after{
 					width: 100%;
