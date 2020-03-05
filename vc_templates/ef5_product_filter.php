@@ -29,7 +29,7 @@
 
 <div class="ef5-posts ef5-product-grid grid-filter <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
 	<?php if(!empty($filter_type)): ?>
-		<div class="filter-type d-flex justify-content-between gutter-30">
+		<div class="filter-type d-flex justify-content-between align-items-center gutter-30">
 			<div class="filter-left">
             <?php 
             foreach($filter_type as $ft): 
