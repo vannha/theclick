@@ -46,18 +46,21 @@
 } 
 // svg color
 .ef5-svg path{
-	fill: $header_regular;
+	fill: $link_color;
 	@include transition();
 }
 .ef5-svg:hover path{
-	fill: $header_hover;
+	fill: $link_color_hover;
 }
 a:hover >.ef5-svg path{
-	fill: $header_hover;
+	fill: $link_color_hover;
+}
+a:hover > span >.ef5-svg path{
+	fill: $link_color_hover;
 }
 .ef5-svg:active path{
-	fill: $header_active;
+	fill: $link_color_hover;
 }
 a:active >.ef5-svg path{
-	fill: $header_active;
+	fill: $link_color_hover;
 }
