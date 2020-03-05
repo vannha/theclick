@@ -787,7 +787,7 @@
             });
 
             $grid.on( 'load.infiniteScroll', function( event, response, path ) {
-                $('.ef5-wc-loop-img').slick('unslick');
+                
                 var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
                 /*if ( Cookies.get( 'bixbang_shop_col' ) ) { 
@@ -813,6 +813,7 @@
                 }*/
                 $grid.append($items);
                 $grid.imagesLoaded( function() {
+                    $('.ef5-wc-loop-img').slick('unslick');
                     $('.ef5-wc-loop-img').not('.slick-initialized').slick({
                         vertical: false,
                         slidesToShow: 1,
