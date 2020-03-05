@@ -45,30 +45,40 @@
 		> span{
 			padding-left: 20px;
 			padding-right: 20px;
+		}	
+	}
+	a.filter-link{
+		position: relative;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 26px;
+		color: $link_color_hover;
+		padding-bottom: 7px;
+		&:after{
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			height: 2px;
+			background-color: $link_color;
+			@include transition(width .3s linear 0s);
 		}
-		a{
-			position: relative;
-			font-weight: 500;
-			font-size: 20px;
-			line-height: 26px;
-			color: $link_color_hover;
-			padding-bottom: 7px;
+		&:hover,&.active{
+			color: $link_color;
 			&:after{
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 0;
-				height: 2px;
-				background-color: $link_color;
-				@include transition(width .3s linear 0s);
+				width: 100%;
 			}
-			&:hover,&.active{
-				color: $link_color;
-				&:after{
-					width: 100%;
-				}
-			}
+		}
+	}
+	.filter-tune{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 26px;
+		span{
+			display: inline-block;
+			line-height: 1;
+			margin-left: 10px;
 		}
 	}
 }
