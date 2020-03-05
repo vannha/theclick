@@ -99,7 +99,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
 }
 
 theclick_product_filter_sidebar(){
-    $current_url = home_url('/');
+    $current_url = theclick_get_current_page_url();
     //$_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes();
     ?>
     <form action="<?php echo esc_url($current_url) ?>" method="get" class="ajax-filter">
