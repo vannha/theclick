@@ -59,7 +59,7 @@
 			<div class="panel-header">
 				<div class="d-flex justify-content-between">
 					<h3><?php echo esc_html__( 'Filter By', 'theclick' ) ?></h3>
-					<span class="button-close-x"><?php echo theclick_get_svg('outline-tune') ?></span>
+					<span class="button-close-x"><?php echo theclick_get_svg('close') ?></span>
 				</div>
 			</div>
 			<div class="panel-content">
