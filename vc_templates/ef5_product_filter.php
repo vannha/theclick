@@ -67,11 +67,12 @@
 				$attribute_array = [];
 			    $attribute_taxonomies = wc_get_attribute_taxonomies();
 			    if (!empty($attribute_taxonomies)) {
-			    foreach ($attribute_taxonomies as $tax) {
-			        if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
-			            $attribute_array[$tax->attribute_name] = $tax->attribute_label;
-			        }
-			    }
+				    foreach ($attribute_taxonomies as $tax) {
+				        if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
+				            $attribute_array[$tax->attribute_name] = $tax->attribute_label;
+				        }
+				    }
+				}
 			    var_dump($attribute_array);
 				?>
 				<div class="woo-sidebar-filters row">
@@ -94,7 +95,7 @@
 		                    ) 
 		                );
 		            } 
-	            ?>
+	            	?>
 				</div>
 			</div>
 		</div>
