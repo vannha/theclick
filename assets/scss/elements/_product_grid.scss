@@ -46,6 +46,32 @@
 			padding-left: 20px;
 			padding-right: 20px;
 		}
+		a{
+			position: relative;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 26px;
+			color: $link_color_hover;
+			&:after{
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 2px;
+				background-color: $link_color;
+				@include transition(width .3s linear 0s);
+			}
+			&.active{
+				color: $link_color;
+			}
+			&:hover{
+				color: $link_color;
+				&:after{
+					width: 100%;
+				}
+			}
+		}
 	}
 }
 .ef5-product-grid.grid-filter{
