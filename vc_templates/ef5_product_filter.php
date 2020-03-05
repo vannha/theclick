@@ -72,6 +72,7 @@
 			            $attribute_array[$tax->attribute_name] = $tax->attribute_label;
 			        }
 			    }
+			    var_dump($attribute_array);
 				?>
 				<div class="woo-sidebar-filters row">
 					<?php 
