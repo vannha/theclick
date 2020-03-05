@@ -97,3 +97,23 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
     }
     return $args;
 }
+
+theclick_product_filter_sidebar(){
+    global $wp;
+    $current_url = home_url( add_query_arg( array(), $wp->request ) );
+    $_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes();
+    ?>
+    <form action="<?php echo esc_url($current_url) ?>" method="get" class="ajax-filter">
+        <div class="filters">
+            <div class="filter product_cat">
+                <span class="filter-name"><?php echo esc_html__( 'Categories', 'theclick' ) ?></span>
+                <div class="filter-control">
+                    <select name="product_cat" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                        <option value=""><?php echo esc_html__( 'Select a Category', 'theclick' ) ?></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+}
