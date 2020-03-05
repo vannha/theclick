@@ -86,10 +86,47 @@
 	.button-close-x{
 		width: 20px;
 		height: 20px;
+		cursor: pointer;
 		svg{
 			width: 20px;
 			height: 20px;
 		}
+	}
+}
+.filter-by-sidebar{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1600;
+    display: none;
+    .panel-wrap{
+    	position: absolute;
+	    right: 0;
+	    top: 0;
+	    height: 100%;
+	    width: 600px;
+	    max-width: 100%;
+	    margin: 0;
+	    background: #fff;
+	    box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
+	    @include d-flex();
+	    @include transform(translateX(100%));
+	    @include transition(transform .5s); 
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+    }
+    .panel-header {
+	    padding-top: 50px;
+	}
+	.panel-content {
+        padding: 45px 60px 60px 60px;
+    	width: 100%;
+    	overflow-y: auto;
 	}
 }
 .ef5-product-grid.grid-filter{
