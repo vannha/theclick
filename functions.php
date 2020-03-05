@@ -325,6 +325,15 @@ function theclick_widgets_init()
             'before_title'  => '<div class="ef5-heading h3 widgettitle">',
             'after_title'   => '</div>',
         ));
+        register_sidebar(array(
+            'name'          => esc_html__('Filter By', 'theclick'),
+            'id'            => 'filter-by',
+            'description'   => esc_html__('Add widgets here to appear in widget area of grid filter ', 'theclick'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<div class="ef5-heading h3 widgettitle">',
+            'after_title'   => '</div>',
+        ));
     }
      
 }
