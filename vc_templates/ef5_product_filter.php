@@ -42,7 +42,7 @@
             ?>
         	</div>
         	<div class="filter-right">
-        		<a href="javascript:void(0);" class="filter-tune"><?php echo esc_html__('Filter by','theclick') ?><span><?php theclick_get_svg('outline-tune') ?></span></a>
+        		<a href="javascript:void(0);" class="filter-tune"><?php echo esc_html__('Filter by','theclick') ?><span><?php echo theclick_get_svg('outline-tune') ?></span></a>
         	</div>
 		</div>
 	<?php endif; ?>
