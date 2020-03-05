@@ -114,5 +114,5 @@ function theclick_product_filter_sidebar(){
             </div>
         </div>
     </form>
-    
+    <?
 }
