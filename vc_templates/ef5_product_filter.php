@@ -29,7 +29,8 @@
 
 <div class="ef5-posts ef5-product-grid grid-filter <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
 	<?php if(!empty($filter_type)): ?>
-		<div class="filter-type d-flex gutter-40">
+		<div class="filter-type d-flex justify-content-between gutter-30">
+			<div class="filter-left">
             <?php 
             foreach($filter_type as $ft): 
                 if( !empty($ft['filter_type_item']) ){
@@ -39,6 +40,10 @@
                 }
             endforeach; 
             ?>
+        	</div>
+        	<div class="filter-right">
+        		<a href="javascript:void(0);" class="filter-tune"><?php echo esc_html__('Filter by','theclick') ?><span><?php theclick_get_svg('outline-tune') ?></span></a>
+        	</div>
 		</div>
 	<?php endif; ?>
     <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
