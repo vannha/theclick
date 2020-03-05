@@ -72,6 +72,9 @@
 .ef5-wc-loop-img{
 	position: relative;
 	overflow: hidden;
+	.loop-p-link img{
+		width: 100%;
+	}
 	.slick-arrow{
 		background-color: transparent;
 		position: absolute;
