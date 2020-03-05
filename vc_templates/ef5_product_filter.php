@@ -53,6 +53,20 @@
         	</div>
 		</div>
 	<?php endif; ?>
+	<div class="filter-by-sidebar">
+		<div class="overlay-wrap"></div>
+		<div class="panel-wrap">
+			<div class="panel-header">
+				<div class="d-flex justify-content-between">
+					<h3><?php echo esc_html__( 'Filter By', 'theclick' ) ?></h3>
+					<span class="button-close-x"><?php echo theclick_get_svg('outline-tune') ?></span>
+				</div>
+			</div>
+			<div class="panel-content">
+				
+			</div>
+		</div>
+	</div>
     <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
         <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
