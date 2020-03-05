@@ -812,7 +812,7 @@
         'use strict';
         $('.filter-tune').on('click',function(e){
             e.preventDefault();
-            $('.filter-by-sidebar').toggleClass('open');
+            $('.filter-by-sidebar').toggleClass('open').show('slow');
         }); 
         $('.button-close-x').on('click',function(e){
             e.preventDefault();
