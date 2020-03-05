@@ -64,6 +64,7 @@
 			</div>
 			<div class="panel-content">
 				<?php 
+				global $wpdb;
 				$attribute_array = [];
 			    $attribute_taxonomies = wc_get_attribute_taxonomies();
 			    if (!empty($attribute_taxonomies)) {
