@@ -814,7 +814,7 @@
             e.preventDefault();
             $('.filter-by-sidebar').toggleClass('open').show('slow');
         }); 
-        $('.button-close-x').on('click',function(e){
+        $('.button-close-x, .filter-by-sidebar .overlay-wrap').on('click',function(e){
             e.preventDefault();
             $('.filter-by-sidebar').removeClass('open').hide('slow');
         });  
