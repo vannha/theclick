@@ -34,7 +34,13 @@
             <?php 
             foreach($filter_type as $ft): 
                 if( !empty($ft['filter_type_item']) ){
-                	$active_cls = ($filter_request == $ft['filter_type_item']) ? 'active' : '';
+                	if( $filter_request == $ft['filter_type_item'] )
+                		$active_cls = 'active';
+                	elseif(empty($filter_request) && $ft['filter_type_item'] == 'all')
+                		$active_cls = 'active';
+                	else
+                		$active_cls = '';
+                	
                 	$title = !empty($ft['filter_title_item']) ? $ft['filter_title_item'] : $default_title[$ft['filter_type_item']];
                 	$link  = add_query_arg( 'filter_type',$ft['filter_type_item'], get_page_link(false) );
                     echo '<span><a href="'.esc_url($link).'" class="product-filter-ajx '.$active_cls.'">'.$title.'</a></span>';
