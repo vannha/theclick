@@ -812,8 +812,8 @@
                     $($items).addClass(addClasses);
                 }*/
                 $grid.append($items);
+                $('.ef5-wc-loop-img').slick('unslick');
                 $grid.imagesLoaded( function() {
-                    $('.ef5-wc-loop-img').slick('unslick');
                     $('.ef5-wc-loop-img').not('.slick-initialized').slick({
                         vertical: false,
                         slidesToShow: 1,
