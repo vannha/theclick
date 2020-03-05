@@ -194,7 +194,6 @@ if (!function_exists('theclick_setup')) {
 
         /* WooCommerce */
         add_theme_support('woocommerce');
-        add_post_type_support( 'post_type', 'woosidebars' );
         add_theme_support('wc-product-gallery-zoom');
         add_theme_support('wc-product-gallery-lightbox');
         add_theme_support('wc-product-gallery-slider');    

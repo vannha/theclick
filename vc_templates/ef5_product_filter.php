@@ -64,8 +64,7 @@
 			</div>
 			<div class="panel-content">
 				<?php 
-				global $wpdb;
-				$attribute_array = [];
+				/*$attribute_array = [];
 			    $attribute_taxonomies = wc_get_attribute_taxonomies();
 			    if (!empty($attribute_taxonomies)) {
 				    foreach ($attribute_taxonomies as $tax) {
@@ -73,15 +72,15 @@
 				            $attribute_array[$tax->attribute_name] = $tax->attribute_label;
 				        }
 				    }
-				}
+				}*/
 			     
 				?>
 				<div class="woo-sidebar-filters row">
 					<?php 
-					foreach ($attribute_array as $key => $value) {
+					//foreach ($attribute_array as $key => $value) {
 		                $filter_attr_args = [
-		                    'title'           => esc_html($value),
-		                    'attribute'       => $key,
+		                    'title'           => 'Color',
+		                    'attribute'       => 'color',
 		                    'display_type'    => 'list',
 		                    'query_type'      => 'and'
 		                ];
@@ -95,7 +94,7 @@
 		                        'after_title'   => '</h3>',
 		                    ) 
 		                );
-		            } 
+		            //} 
 	            	?>
 				</div>
 			</div>
