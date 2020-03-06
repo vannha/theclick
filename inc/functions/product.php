@@ -148,6 +148,47 @@ function theclick_product_filter_sidebar(){
                     </div>
                 </div>
             <?php } endif; ?>
+            <?php 
+            $WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
+            wp_enqueue_script( 'wc-price-slider' );
+            $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
+            $prices    = $WC_Widget_Price_Filter->get_filtered_price();
+            $min_price = $prices->min_price;
+            $max_price = $prices->max_price;
+            if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
+                $tax_class = apply_filters( 'woocommerce_price_filter_widget_tax_class', '' ); // Uses standard tax class.
+                $tax_rates = WC_Tax::get_rates( $tax_class );
+
+                if ( $tax_rates ) {
+                    $min_price += WC_Tax::get_tax_total( WC_Tax::calc_exclusive_tax( $min_price, $tax_rates ) );
+                    $max_price += WC_Tax::get_tax_total( WC_Tax::calc_exclusive_tax( $max_price, $tax_rates ) );
+                }
+            }
+
+            $min_price = apply_filters( 'woocommerce_price_filter_widget_min_amount', floor( $min_price / $step ) * $step );
+            $max_price = apply_filters( 'woocommerce_price_filter_widget_max_amount', ceil( $max_price / $step ) * $step );
+
+            // If both min and max are equal, we don't need a slider.
+            if ( $min_price === $max_price ) {
+                return;
+            }
+            $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price; // WPCS: input var ok, CSRF ok.
+            $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
+            ?>
+            <div class="filter price_slider_wrapper">
+                <div class="price_slider" style="display:none;"></div>
+                <div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
+                    <input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'theclick' ); ?>" />
+                    <input type="text" id="max_price" name="max_price" value="<?php echo esc_attr( $current_max_price ); ?>" data-max="<?php echo esc_attr( $max_price ); ?>" placeholder="<?php echo esc_attr__( 'Max price', 'theclick' ); ?>" />
+                    <?php /* translators: Filter: verb "to filter" */ ?>
+                    <button type="submit" class="button"><?php echo esc_html__( 'Filter', 'theclick' ); ?></button>
+                    <div class="price_label" style="display:none;">
+                        <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
+                    </div>
+                    <?php echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
+                    <div class="clear"></div>
+                </div>
+            </div>
         </div>
     </form>
     <?php
