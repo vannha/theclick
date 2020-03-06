@@ -110,6 +110,8 @@ function theclick_product_filter_sidebar(){
             }
         }
     }*/
+    $colors = get_terms(array( 'taxonomy' => 'pa_color' ));
+    var_dump($colors);
 
     //$_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes();
     ?>
