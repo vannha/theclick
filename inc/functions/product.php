@@ -149,7 +149,7 @@ function theclick_product_filter_sidebar(){
                 </div>
             <?php } endif; ?>
             <?php 
-            $WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
+            /*$WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
             wp_enqueue_script( 'wc-price-slider' );
             $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
             $prices    = $WC_Widget_Price_Filter->get_filtered_price();
@@ -173,7 +173,13 @@ function theclick_product_filter_sidebar(){
                 return;
             }
             $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price; // WPCS: input var ok, CSRF ok.
-            $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
+            $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; */
+            $form_action = '';
+            $step = '';
+            $min_price = '';
+            $max_price = '';
+            $current_min_price = '';
+            $current_max_price = '';
             ?>
             <div class="filter price_slider_wrapper">
                 <div class="price_slider" style="display:none;"></div>
