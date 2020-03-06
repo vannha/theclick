@@ -103,20 +103,19 @@ function theclick_product_filter_sidebar(){
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $attribute_taxonomies = wc_get_attribute_taxonomies();
     
+    $att_tax = []
     $att_data = [];
     if ( ! empty( $attribute_taxonomies ) ) {
         foreach ( $attribute_taxonomies as $tax ) {
             if ( taxonomy_exists( wc_attribute_taxonomy_name( $tax->attribute_name ) ) ) {
-                //return wc_attribute_taxonomy_name( $tax->attribute_name );
+                $att_tax[$tax->attribute_name] = wc_attribute_taxonomy_name( $tax->attribute_name );
                 $att_term_data = get_terms(array( 'taxonomy' => 'pa_'.$tax->attribute_name ));
                 if(!empty($att_term_data))
                     $att_data[$tax->attribute_name] = $att_term_data;
             }
         }
     }
-    var_dump($att_data);
-     
-    //$_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes();
+
     ?>
     <form action="<?php echo esc_url($current_url) ?>" method="get" class="ajax-filter">
         <div class="filters">
@@ -132,19 +131,23 @@ function theclick_product_filter_sidebar(){
                     </select>
                 </div>
             </div>
-            <?php  ?>
-            <div class="filter product_cat">
-                <span class="filter-name"><?php echo esc_html__( 'Categories', 'theclick' ) ?></span>
-                <div class="filter-control">
-                    <select name="product_cat" tabindex="-1" class="select2" aria-hidden="true">
-                        <option value=""><?php echo esc_html__( 'Select a Category', 'theclick' ) ?></option>
-                        <?php 
-                        foreach($product_categories as $category){
-                            echo '<option value="'.$category->slug.'">'.$category->name.'</option>';
-                        } ?>
-                    </select>
+            <?php 
+            if(!empty($att_data)): 
+                foreach($att_data as $key => $att_dt){
+                ?>
+                <div class="filter product_<?php echo esc_attr($key)?>">
+                    <span class="filter-name"><?php echo esc_html( $att_tax[$key]) ?></span>
+                    <div class="filter-control">
+                        <select name="pa_<?php echo esc_attr($key);?>" tabindex="-1" class="select2" aria-hidden="true">
+                            <option value=""><?php printf(esc_html__('Select a %s','theclick'),$att_tax[$key]); ?></option>
+                            <?php 
+                            foreach($att_dt as $term){
+                                echo '<option value="'.$term->slug.'">'.$term->name.'</option>';
+                            } ?>
+                        </select>
+                    </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </form>
     <?php
