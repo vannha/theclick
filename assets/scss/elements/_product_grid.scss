@@ -114,6 +114,7 @@
 	    box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
 	    @include transform(translateX(100%));
 	    @include transition(transform .5s); 
+    }
     &.open{
 		.panel-wrap{
 			@include transform(translateX(0));
