@@ -147,7 +147,7 @@ function theclick_product_filter_sidebar(){
                         </select>
                     </div>
                 </div>
-            <?php endif; ?>
+            <?php } endif; ?>
         </div>
     </form>
     <?php
