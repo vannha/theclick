@@ -102,16 +102,19 @@ function theclick_product_filter_sidebar(){
     $current_url = theclick_get_current_page_url();
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $attribute_taxonomies = wc_get_attribute_taxonomies();
-    var_dump($attribute_taxonomies);
-    /*if ( ! empty( $attribute_taxonomies ) ) {
+    
+    $att_data = [];
+    if ( ! empty( $attribute_taxonomies ) ) {
         foreach ( $attribute_taxonomies as $tax ) {
             if ( taxonomy_exists( wc_attribute_taxonomy_name( $tax->attribute_name ) ) ) {
-                return wc_attribute_taxonomy_name( $tax->attribute_name );
+                //return wc_attribute_taxonomy_name( $tax->attribute_name );
+                $att_data[] = $tax->attribute_name;
             }
         }
-    }*/
+    }
+    var_dump($att_data);
     $colors = get_terms(array( 'taxonomy' => 'pa_color' ));
-    var_dump($colors);
+    //var_dump($colors);
 
     //$_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes();
     ?>
