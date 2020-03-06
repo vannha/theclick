@@ -103,7 +103,7 @@ function theclick_product_filter_sidebar(){
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $attribute_taxonomies = wc_get_attribute_taxonomies();
     
-    $att_tax = []
+    $att_tax = [];
     $att_data = [];
     if ( ! empty( $attribute_taxonomies ) ) {
         foreach ( $attribute_taxonomies as $tax ) {
