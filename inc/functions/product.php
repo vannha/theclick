@@ -108,14 +108,14 @@ function theclick_product_filter_sidebar(){
         foreach ( $attribute_taxonomies as $tax ) {
             if ( taxonomy_exists( wc_attribute_taxonomy_name( $tax->attribute_name ) ) ) {
                 //return wc_attribute_taxonomy_name( $tax->attribute_name );
-                $att_data[] = $tax->attribute_name;
+                $att_term_data = get_terms(array( 'taxonomy' => 'pa_'.$tax->attribute_name ));
+                if(!empty($att_term_data))
+                    $att_data[$tax->attribute_name] = $att_term_data;
             }
         }
     }
     var_dump($att_data);
-    $colors = get_terms(array( 'taxonomy' => 'pa_brand' ));
-    var_dump($colors);
-
+     
     //$_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes();
     ?>
     <form action="<?php echo esc_url($current_url) ?>" method="get" class="ajax-filter">
@@ -132,6 +132,7 @@ function theclick_product_filter_sidebar(){
                     </select>
                 </div>
             </div>
+            <?php  ?>
             <div class="filter product_cat">
                 <span class="filter-name"><?php echo esc_html__( 'Categories', 'theclick' ) ?></span>
                 <div class="filter-control">
