@@ -108,7 +108,7 @@ function theclick_product_filter_sidebar(){
     if ( ! empty( $attribute_taxonomies ) ) {
         foreach ( $attribute_taxonomies as $tax ) {
             if ( taxonomy_exists( wc_attribute_taxonomy_name( $tax->attribute_name ) ) ) {
-                $att_tax[$tax->attribute_name] = wc_attribute_taxonomy_name( $tax->attribute_name );
+                $att_tax[$tax->attribute_name] = $tax->attribute_label;
                 $att_term_data = get_terms(array( 'taxonomy' => 'pa_'.$tax->attribute_name ));
                 if(!empty($att_term_data))
                     $att_data[$tax->attribute_name] = $att_term_data;
