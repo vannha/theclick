@@ -206,7 +206,8 @@ function theclick_product_filter_sidebar(){
                 )';
 
             $sql = apply_filters( 'woocommerce_price_filter_sql', $sql, $meta_query_sql, $tax_query_sql );
-            
+            $prices = $wpdb->get_row( $sql );
+            var_dump($prices);
             /*$min_price = $prices->min_price;
             $max_price = $prices->max_price;
             if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
