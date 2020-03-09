@@ -189,7 +189,7 @@ function theclick_product_filter_sidebar(){
             $meta_query = new WP_Meta_Query(array());
             $tax_query  = new WP_Tax_Query(array());
             //$search     = WC_Query::get_main_search_query_sql();
-var_dump($search);
+
             $meta_query_sql   = $meta_query->get_sql( 'post', $wpdb->posts, 'ID' );
             $tax_query_sql    = $tax_query->get_sql( $wpdb->posts, 'ID' );
             //$search_query_sql = $search ? ' AND ' . $search : '';
