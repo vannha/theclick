@@ -172,6 +172,7 @@ function theclick_product_filter_sidebar(){
             global $wpdb;
 
             $args       = WC()->query->get_main_query()->query_vars;
+            var_dump($args);
             $tax_query  = isset( $args['tax_query'] ) ? $args['tax_query'] : array();
             $meta_query = isset( $args['meta_query'] ) ? $args['meta_query'] : array();
 
@@ -205,7 +206,7 @@ function theclick_product_filter_sidebar(){
                 )';
 
             $sql = apply_filters( 'woocommerce_price_filter_sql', $sql, $meta_query_sql, $tax_query_sql );
-            var_dump($wpdb->get_row( $sql ));
+            
             /*$min_price = $prices->min_price;
             $max_price = $prices->max_price;
             if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
