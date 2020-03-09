@@ -160,7 +160,7 @@ function theclick_product_filter_sidebar(){
                     'currency_format_thousand_sep' => esc_attr( wc_get_price_thousand_separator() ),
                     'currency_format'              => esc_attr( str_replace( array( '%1$s', '%2$s' ), array( '%s', '%v' ), get_woocommerce_price_format() ) ),
                 );
-            var_dump($abc);            
+            var_dump(get_woocommerce_price_format());            
             wp_localize_script(
                 'wc-price-slider',
                 'woocommerce_price_slider_params',
