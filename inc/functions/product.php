@@ -168,8 +168,44 @@ function theclick_product_filter_sidebar(){
             wp_enqueue_script( 'wc-price-slider' );*/
             
             $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
-            $prices    = $WC_Widget_Price_Filter->get_filtered_price();
-            var_dump($prices);
+            //$prices    = $WC_Widget_Price_Filter->get_filtered_price();
+            global $wpdb;
+
+            $args       = WC()->query->get_main_query()->query_vars;
+            $tax_query  = isset( $args['tax_query'] ) ? $args['tax_query'] : array();
+            $meta_query = isset( $args['meta_query'] ) ? $args['meta_query'] : array();
+
+            if ( ! is_post_type_archive( 'product' ) && ! empty( $args['taxonomy'] ) && ! empty( $args['term'] ) ) {
+                $tax_query[] = WC()->query->get_main_tax_query();
+            }
+
+            foreach ( $meta_query + $tax_query as $key => $query ) {
+                if ( ! empty( $query['price_filter'] ) || ! empty( $query['rating_filter'] ) ) {
+                    unset( $meta_query[ $key ] );
+                }
+            }
+
+            $meta_query = new WP_Meta_Query( $meta_query );
+            $tax_query  = new WP_Tax_Query( $tax_query );
+            $search     = WC_Query::get_main_search_query_sql();
+
+            $meta_query_sql   = $meta_query->get_sql( 'post', $wpdb->posts, 'ID' );
+            $tax_query_sql    = $tax_query->get_sql( $wpdb->posts, 'ID' );
+            $search_query_sql = $search ? ' AND ' . $search : '';
+
+            $sql = "
+                SELECT min( min_price ) as min_price, MAX( max_price ) as max_price
+                FROM {$wpdb->wc_product_meta_lookup}
+                WHERE product_id IN (
+                    SELECT ID FROM {$wpdb->posts}
+                    " . $tax_query_sql['join'] . $meta_query_sql['join'] . "
+                    WHERE {$wpdb->posts}.post_type IN ('" . implode( "','", array_map( 'esc_sql', apply_filters( 'woocommerce_price_filter_post_type', array( 'product' ) ) ) ) . "')
+                    AND {$wpdb->posts}.post_status = 'publish'
+                    " . $tax_query_sql['where'] . $meta_query_sql['where'] . $search_query_sql . '
+                )';
+
+            $sql = apply_filters( 'woocommerce_price_filter_sql', $sql, $meta_query_sql, $tax_query_sql );
+            var_dump($wpdb->get_row( $sql ));
             /*$min_price = $prices->min_price;
             $max_price = $prices->max_price;
             if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
