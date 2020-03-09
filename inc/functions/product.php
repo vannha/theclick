@@ -150,7 +150,7 @@ function theclick_product_filter_sidebar(){
             <?php } endif; ?>
             <?php 
             $WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
-            wp_register_script( 'accounting', WC()->plugin_url() . '/assets/js/accounting/accounting.min.js', array( 'jquery' ), '0.4.2', true );
+            /*wp_register_script( 'accounting', WC()->plugin_url() . '/assets/js/accounting/accounting.min.js', array( 'jquery' ), '0.4.2', true );
             wp_register_script( 'wc-jquery-ui-touchpunch', WC()->plugin_url() . '/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js', array( 'jquery-ui-slider' ), WC_VERSION, true );
             wp_register_script( 'wc-price-slider', WC()->plugin_url() . '/assets/js/frontend/price-slider.min.js', array( 'jquery-ui-slider', 'wc-jquery-ui-touchpunch', 'accounting' ), WC_VERSION, true );
               
@@ -165,9 +165,10 @@ function theclick_product_filter_sidebar(){
                     'currency_format'              => esc_attr( str_replace( array( '%1$s', '%2$s' ), array( '%s', '%v' ), get_woocommerce_price_format() ) ),
                 )
             );
-            wp_enqueue_script( 'wc-price-slider' );
+            wp_enqueue_script( 'wc-price-slider' );*/
+            var_dump($WC_Widget_Price_Filter);
             $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
-            /*$prices    = $WC_Widget_Price_Filter->get_filtered_price();
+            $prices    = $WC_Widget_Price_Filter->get_filtered_price();
             $min_price = $prices->min_price;
             $max_price = $prices->max_price;
             if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
