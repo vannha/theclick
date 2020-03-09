@@ -186,8 +186,8 @@ function theclick_product_filter_sidebar(){
                 }
             }*/
 
-            $meta_query = new WP_Meta_Query( $meta_query );
-            $tax_query  = new WP_Tax_Query( $tax_query );
+            $meta_query = new WP_Meta_Query(array());
+            $tax_query  = new WP_Tax_Query(array());
             $search     = WC_Query::get_main_search_query_sql();
 var_dump($search);
             $meta_query_sql   = $meta_query->get_sql( 'post', $wpdb->posts, 'ID' );
