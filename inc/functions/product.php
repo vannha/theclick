@@ -171,7 +171,7 @@ function theclick_product_filter_sidebar(){
             //$prices    = $WC_Widget_Price_Filter->get_filtered_price();
             global $wpdb;
 
-            $args       = WC()->query->get_main_query()->query_vars;
+            /*$args       = WC()->query->get_main_query()->query_vars;
             var_dump($args);
             $tax_query  = isset( $args['tax_query'] ) ? $args['tax_query'] : array();
             $meta_query = isset( $args['meta_query'] ) ? $args['meta_query'] : array();
@@ -184,12 +184,12 @@ function theclick_product_filter_sidebar(){
                 if ( ! empty( $query['price_filter'] ) || ! empty( $query['rating_filter'] ) ) {
                     unset( $meta_query[ $key ] );
                 }
-            }
+            }*/
 
             $meta_query = new WP_Meta_Query( $meta_query );
             $tax_query  = new WP_Tax_Query( $tax_query );
             $search     = WC_Query::get_main_search_query_sql();
-
+var_dump($search);
             $meta_query_sql   = $meta_query->get_sql( 'post', $wpdb->posts, 'ID' );
             $tax_query_sql    = $tax_query->get_sql( $wpdb->posts, 'ID' );
             $search_query_sql = $search ? ' AND ' . $search : '';
