@@ -188,11 +188,11 @@ function theclick_product_filter_sidebar(){
 
             $meta_query = new WP_Meta_Query(array());
             $tax_query  = new WP_Tax_Query(array());
-            $search     = WC_Query::get_main_search_query_sql();
+            //$search     = WC_Query::get_main_search_query_sql();
 var_dump($search);
             $meta_query_sql   = $meta_query->get_sql( 'post', $wpdb->posts, 'ID' );
             $tax_query_sql    = $tax_query->get_sql( $wpdb->posts, 'ID' );
-            $search_query_sql = $search ? ' AND ' . $search : '';
+            //$search_query_sql = $search ? ' AND ' . $search : '';
 
             $sql = "
                 SELECT min( min_price ) as min_price, MAX( max_price ) as max_price
@@ -202,7 +202,7 @@ var_dump($search);
                     " . $tax_query_sql['join'] . $meta_query_sql['join'] . "
                     WHERE {$wpdb->posts}.post_type IN ('" . implode( "','", array_map( 'esc_sql', apply_filters( 'woocommerce_price_filter_post_type', array( 'product' ) ) ) ) . "')
                     AND {$wpdb->posts}.post_status = 'publish'
-                    " . $tax_query_sql['where'] . $meta_query_sql['where'] . $search_query_sql . '
+                    " . $tax_query_sql['where'] . $meta_query_sql['where'] . '
                 )';
 
             $sql = apply_filters( 'woocommerce_price_filter_sql', $sql, $meta_query_sql, $tax_query_sql );
