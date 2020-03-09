@@ -99,6 +99,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
 }
 
 function theclick_product_filter_sidebar(){
+    global $wpdb;
     $current_url = theclick_get_current_page_url();
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $attribute_taxonomies = wc_get_attribute_taxonomies();
@@ -149,7 +150,6 @@ function theclick_product_filter_sidebar(){
                 </div>
             <?php } endif; ?>
             <?php 
-            //$WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
             wp_register_script( 'accounting', WC()->plugin_url() . '/assets/js/accounting/accounting.min.js', array( 'jquery' ), '0.4.2', true );
             wp_register_script( 'wc-jquery-ui-touchpunch', WC()->plugin_url() . '/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js', array( 'jquery-ui-slider' ), WC_VERSION, true );
             wp_register_script( 'wc-price-slider', WC()->plugin_url() . '/assets/js/frontend/price-slider.min.js', array( 'jquery-ui-slider', 'wc-jquery-ui-touchpunch', 'accounting' ), WC_VERSION, true );
@@ -166,33 +166,14 @@ function theclick_product_filter_sidebar(){
                 )
             );
             wp_enqueue_script( 'wc-price-slider' );
-            
+
             $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
-            //$prices    = $WC_Widget_Price_Filter->get_filtered_price();
-            global $wpdb;
-
-            /*$args       = WC()->query->get_main_query()->query_vars;
-            var_dump($args);
-            $tax_query  = isset( $args['tax_query'] ) ? $args['tax_query'] : array();
-            $meta_query = isset( $args['meta_query'] ) ? $args['meta_query'] : array();
-
-            if ( ! is_post_type_archive( 'product' ) && ! empty( $args['taxonomy'] ) && ! empty( $args['term'] ) ) {
-                $tax_query[] = WC()->query->get_main_tax_query();
-            }
-
-            foreach ( $meta_query + $tax_query as $key => $query ) {
-                if ( ! empty( $query['price_filter'] ) || ! empty( $query['rating_filter'] ) ) {
-                    unset( $meta_query[ $key ] );
-                }
-            }*/
-
+   
             $meta_query = new WP_Meta_Query(array());
             $tax_query  = new WP_Tax_Query(array());
-            //$search     = WC_Query::get_main_search_query_sql();
 
             $meta_query_sql   = $meta_query->get_sql( 'post', $wpdb->posts, 'ID' );
             $tax_query_sql    = $tax_query->get_sql( $wpdb->posts, 'ID' );
-            //$search_query_sql = $search ? ' AND ' . $search : '';
 
             $sql = "
                 SELECT min( min_price ) as min_price, MAX( max_price ) as max_price
@@ -223,27 +204,25 @@ function theclick_product_filter_sidebar(){
             $min_price = apply_filters( 'woocommerce_price_filter_widget_min_amount', floor( $min_price / $step ) * $step );
             $max_price = apply_filters( 'woocommerce_price_filter_widget_max_amount', ceil( $max_price / $step ) * $step );
 
-            // If both min and max are equal, we don't need a slider.
-            if ( $min_price !== $max_price ) {
-                
-            $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price; // WPCS: input var ok, CSRF ok.
-            $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
-            ?>
-            <div class="filter price_slider_wrapper widget_price_filter">
-                <div class="price_slider" style="display:none;"></div>
-                <div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
-                    <input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'theclick' ); ?>" />
-                    <input type="text" id="max_price" name="max_price" value="<?php echo esc_attr( $current_max_price ); ?>" data-max="<?php echo esc_attr( $max_price ); ?>" placeholder="<?php echo esc_attr__( 'Max price', 'theclick' ); ?>" />
-                    <?php /* translators: Filter: verb "to filter" */ ?>
-                    <button type="submit" class="button"><?php echo esc_html__( 'Filter', 'theclick' ); ?></button>
-                    <div class="price_label" style="display:none;">
-                        <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
+            if ( $min_price !== $max_price ) {  
+                $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price; // WPCS: input var ok, CSRF ok.
+                $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
+                ?>
+                <div class="filter price_slider_wrapper widget_price_filter">
+                    <div class="price_slider" style="display:none;"></div>
+                    <div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
+                        <input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'theclick' ); ?>" />
+                        <input type="text" id="max_price" name="max_price" value="<?php echo esc_attr( $current_max_price ); ?>" data-max="<?php echo esc_attr( $max_price ); ?>" placeholder="<?php echo esc_attr__( 'Max price', 'theclick' ); ?>" />
+                        <?php /* translators: Filter: verb "to filter" */ ?>
+                        <button type="submit" class="button"><?php echo esc_html__( 'Filter', 'theclick' ); ?></button>
+                        <div class="price_label" style="display:none;">
+                            <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
+                        </div>
+                        <?php echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
+                        <div class="clear"></div>
                     </div>
-                    <?php echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
-                    <div class="clear"></div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
         </div>
         <button type="submit" value="Filter" class="button filter-button"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
         <span class="products-loader"><span class="spinner"></span></span>
