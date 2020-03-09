@@ -167,7 +167,7 @@ function theclick_product_filter_sidebar(){
             );
             wp_enqueue_script( 'wc-price-slider' );*/
             var_dump($WC_Widget_Price_Filter);
-            $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
+            /*$step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
             $prices    = $WC_Widget_Price_Filter->get_filtered_price();
             $min_price = $prices->min_price;
             $max_price = $prices->max_price;
