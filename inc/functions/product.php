@@ -232,7 +232,7 @@ function theclick_product_filter_sidebar(){
             $current_min_price = 10;
             $current_max_price = 50;
             ?>
-            <div class="filter price_slider_wrapper">
+            <div class="filter price_slider_wrapper widget_price_filter">
                 <div class="price_slider" style="display:none;"></div>
                 <div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
                     <input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'theclick' ); ?>" />
