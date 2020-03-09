@@ -228,9 +228,6 @@ function theclick_product_filter_sidebar(){
                 
             $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price; // WPCS: input var ok, CSRF ok.
             $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
-    
-            $current_min_price = 10;
-            $current_max_price = 50;
             ?>
             <div class="filter price_slider_wrapper widget_price_filter">
                 <div class="price_slider" style="display:none;"></div>
