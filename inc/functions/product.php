@@ -149,7 +149,7 @@ function theclick_product_filter_sidebar(){
                 </div>
             <?php } endif; ?>
             <?php 
-            $WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
+            //$WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
             /*wp_register_script( 'accounting', WC()->plugin_url() . '/assets/js/accounting/accounting.min.js', array( 'jquery' ), '0.4.2', true );
             wp_register_script( 'wc-jquery-ui-touchpunch', WC()->plugin_url() . '/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js', array( 'jquery-ui-slider' ), WC_VERSION, true );
             wp_register_script( 'wc-price-slider', WC()->plugin_url() . '/assets/js/frontend/price-slider.min.js', array( 'jquery-ui-slider', 'wc-jquery-ui-touchpunch', 'accounting' ), WC_VERSION, true );
@@ -207,8 +207,8 @@ function theclick_product_filter_sidebar(){
 
             $sql = apply_filters( 'woocommerce_price_filter_sql', $sql, $meta_query_sql, $tax_query_sql );
             $prices = $wpdb->get_row( $sql );
-            var_dump($prices);
-            /*$min_price = $prices->min_price;
+
+            $min_price = $prices->min_price;
             $max_price = $prices->max_price;
             if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
                 $tax_class = apply_filters( 'woocommerce_price_filter_widget_tax_class', '' ); // Uses standard tax class.
@@ -224,17 +224,16 @@ function theclick_product_filter_sidebar(){
             $max_price = apply_filters( 'woocommerce_price_filter_widget_max_amount', ceil( $max_price / $step ) * $step );
 
             // If both min and max are equal, we don't need a slider.
-            if ( $min_price === $max_price ) {
-                return;
-            }
+            if ( $min_price !== $max_price ) {
+                
             $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price; // WPCS: input var ok, CSRF ok.
-            $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; */
-            $form_action = '';
-            $step = '';
+            $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
+          
+            /*$step = '';
             $min_price = '';
             $max_price = '';
             $current_min_price = '';
-            $current_max_price = '';
+            $current_max_price = '';*/
             ?>
             <div class="filter price_slider_wrapper">
                 <div class="price_slider" style="display:none;"></div>
@@ -250,6 +249,7 @@ function theclick_product_filter_sidebar(){
                     <div class="clear"></div>
                 </div>
             </div>
+        <?php } ?>
         </div>
     </form>
     <?php
