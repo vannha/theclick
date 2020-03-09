@@ -151,11 +151,11 @@ function theclick_product_filter_sidebar(){
             <?php 
             $WC_Widget_Price_Filter = new WC_Widget_Price_Filter();
             wp_enqueue_script( 'wc-price-slider' );
-            $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
+            /*$step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
             $prices    = $WC_Widget_Price_Filter->get_filtered_price();
             $min_price = $prices->min_price;
             $max_price = $prices->max_price;
-            /*if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
+            if ( wc_tax_enabled() && ! wc_prices_include_tax() && 'incl' === $tax_display_mode ) {
                 $tax_class = apply_filters( 'woocommerce_price_filter_widget_tax_class', '' ); // Uses standard tax class.
                 $tax_rates = WC_Tax::get_rates( $tax_class );
 
