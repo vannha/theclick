@@ -172,7 +172,7 @@ function theclick_product_filter_sidebar(){
                     'currency_format'              => esc_attr( str_replace( array( '%1$s', '%2$s' ), array( '%s', '%v' ), get_woocommerce_price_format() ) ),
                 )
             );
-            wp_enqueue_script( 'wc-price-slider' );
+            //wp_enqueue_script( 'wc-price-slider' );
             $step = max( apply_filters( 'woocommerce_price_filter_widget_step', 10 ), 1 );
             /*$prices    = $WC_Widget_Price_Filter->get_filtered_price();
             $min_price = $prices->min_price;
