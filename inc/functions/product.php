@@ -134,7 +134,9 @@ function theclick_product_filter_sidebar(){
             </div>
             <?php 
             if(!empty($att_data)): 
+                $att_data_serial = [];
                 foreach($att_data as $key => $att_dt){
+                    $att_data_serial[]= 'pa_'.$key;
                 ?>
                 <div class="filter product_<?php echo esc_attr($key)?>">
                     <span class="filter-name"><?php echo esc_html( $att_tax[$key]) ?></span>
@@ -224,10 +226,15 @@ function theclick_product_filter_sidebar(){
                 </div>
             <?php } ?>
         </div>
+        <?php 
+            if(!empty($att_data_serial)) 
+                $att_data_serial_str = jsonSerialize($att_data_serial);
+            var_dump($att_data_serial_str);
+        ?>
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
         <input type="hidden" name="action" value="ef5_product_filter_action" />
         <?php wp_nonce_field('ajax_filter_action', '_acf_nonce', false, true); ?>
-        <button type="button" value="Filter" class="ef5-btn primary fill ef5-ajax-filter"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
+        <button type="button" value="Filter" class="ef5-btn primary fill ef5-ajax-filter"><?php echo esc_html__( 'Filter', 'theclick' ) ?></button>
         <span class="products-loader"><span class="spinner"></span></span>
     </form>
     <?php
@@ -236,36 +243,25 @@ function theclick_product_filter_sidebar(){
 add_action( 'wp_ajax_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
 add_action( 'wp_ajax_nopriv_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
 function theclick_ef5_product_filter_action_callback(){
-    $args = [
-        'number_pass'            => $_POST['number-pass'],
-        'number_bags'            => $_POST['number-bags'],
-        'firstname'              => $_POST['firstname'],
-        'lastname'               => $_POST['lastname'],
-        'email'                  => $_POST['email'],
-        'phone'                  => $_POST['phone'],
-        'information'            => $_POST['information'],
-        'selected_vehicle_name'  => $_POST['selected-vehicle-name'],
-        'selected_vehicle_price' => $_POST['selected-vehicle-price'],
-        'form_type'              => $_POST['form_type'],
-        'pickup_add'             => $_POST['pickup-address'],
-        'dropoff_add'            => $_POST['dropoff-address'],
-        'pickup_date'            => $_POST['pickup-date'],
-        'pickup_time'            => $_POST['pickup-time'],
-        'num_hours'              => $_POST['num-hours'],
-        'num_days'               => $_POST['num-days'],
-        'flat_location'          => $_POST['flat-location'],
-        'trip_distance'          => $_POST['trip-distance'],
-        'trip_time'              => $_POST['trip-time'],
-        'vehicle_fleet'          => $_POST['vehicle_fleet'],
-        'currency_symbol'        => $_POST['currency-symbol'],
-        'return_journey'         => $_POST['return-journey'],
-        'invalid_address'        => $_POST['invalid_address'],
-        'step'                   => 3
-    ];
+    if ( ! isset( $_POST['_acf_nonce'] ) || ! wp_verify_nonce( $_POST['_acf_nonce'], 'ajax_filter_action' ) ) {
+       echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
+       exit;
+    } else {
+       
+        $args = [
+            'product_cat'            => $_POST['number-pass'],
+            'pa_brand'            => $_POST['number-bags'],
+            'pa_color'              => $_POST['firstname'],
+            'pa_size'               => $_POST['lastname'],
+            'min_price'                  => $_POST['email'],
+             
+        ];
+        
 
-    $content_data = 'aaaaaaaaaaaaaaaaaa'; //theclick_booking_payment($args);
-    $resp = array( 'content_data' => $content_data);
-    header( "Content-Type: application/json" );
-    echo json_encode($resp);
-    die();
+        $content_data = 'aaaaaaaaaaaaaaaaaa'; //theclick_booking_payment($args);
+        $resp = array( 'content_data' => $content_data);
+        header( "Content-Type: application/json" );
+        echo json_encode($resp);
+        exit();
+    }
 }
