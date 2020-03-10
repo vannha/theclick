@@ -289,6 +289,7 @@ function theclick_ef5_product_filter_action_callback(){
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
+        ob_start();
         while ($loop->have_posts()) {
             $loop->the_post();
             global $product;
@@ -306,8 +307,13 @@ function theclick_ef5_product_filter_action_callback(){
                 </div>
             </div>
         <?php 
-        }  
+        }    
         wp_reset_postdata();
+        $html_data = ob_get_clean();
+
+        $resp = array( 'filter_content' => $html_data);
+        //header( "Content-Type: application/json" );
+        echo json_encode($resp);
         exit();
     }
 }
