@@ -848,7 +848,7 @@
                 }
             });
             $('html,body').animate({scrollTop: $('.ef5-posts').offset().top - 100}, 750);
-            
+            return false;
         });   
     }
     function theclick_ajax_pagination(){
