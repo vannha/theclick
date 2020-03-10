@@ -843,7 +843,7 @@
                 //dataType: 'json',
                 success: function(response) {  
                     //console.log(response); return false;
-                    $('.ef5-wc-loop-img').slick('unslick');
+                    $(document).find('.ef5-wc-loop-img').slick('unslick');
                     $grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
                         status: '.infinite-btn > a',
