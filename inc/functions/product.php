@@ -263,13 +263,13 @@ function theclick_ef5_product_filter_action_callback(){
             'max_price'       => $_POST['max_price']
         ];
         
-        var_dump($array_param); die;
-        $atts = json_decode( $atts_str );
+        //var_dump($array_param); die;
+        $atts = json_decode( $array_param['atts_str'] );
 
         extract($atts);
         $args = array(
             'post_type'      => 'product',
-            'posts_per_page' => $post_per_page,
+            'posts_per_page' => $array_param['post_per_page'],
             'post_status'    => 'publish',
             'post_parent'    => 0
         ); 
