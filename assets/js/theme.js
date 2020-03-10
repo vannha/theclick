@@ -857,8 +857,8 @@
                         });
                     });
                     $grid_inner.infiniteScroll({
-                        path: $(response).find('.infinite-btn > a'),
-                        status: $(response).find('.infinite-btn > a'),
+                        path: '.infinite-btn > a',
+                        status: '.infinite-btn > a',
                         history: false,
                     });
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
