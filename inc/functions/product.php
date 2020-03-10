@@ -223,7 +223,7 @@ function theclick_product_filter_sidebar(){
                 </div>
             <?php } ?>
         </div>
-        <button type="submit" value="Filter" class="button filter-button"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
+        <button type="submit" value="Filter" class="ef5-btn primary  filter-button"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
         <span class="products-loader"><span class="spinner"></span></span>
     </form>
     <?php
