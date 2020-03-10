@@ -841,7 +841,7 @@
                 url: theclick_ajax_opts.ajaxurl,
                 data: formData1,
                 //dataType: 'json',
-                success: function(response) {
+                success: function(response) { console.log(response); return false;
                     //console.log(response); return false;
                     $('.ef5-wc-loop-img').slick('unslick');
                     $grid.html(response);
