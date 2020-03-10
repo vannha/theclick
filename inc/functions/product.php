@@ -98,8 +98,9 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
     return $args;
 }
 
-function theclick_product_filter_sidebar(){
+function theclick_product_filter_sidebar($atts = ''){
     global $wpdb;
+    extract($atts);
     $current_url = theclick_get_current_page_url();
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $attribute_taxonomies = wc_get_attribute_taxonomies();
@@ -232,6 +233,7 @@ function theclick_product_filter_sidebar(){
                 echo '<input type="hidden" name="att_data_serial" value="'.$att_data_serial_str.'">';        
             }
         ?>
+        <input type="hidden" name="post_per_page" value="<?php echo esc_attr($post_per_page) ?>">
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
         <input type="hidden" name="action" value="ef5_product_filter_action" />
         <?php wp_nonce_field('ajax_filter_action', '_acf_nonce', false, true); ?>
@@ -248,17 +250,18 @@ function theclick_ef5_product_filter_action_callback(){
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
     } else {
+        $post_per_page   = $_POST['product_cat'];
         $product_cat     = $_POST['product_cat'];
         $att_data_serial = $_POST['att_data_serial'];
         $min_price       = $_POST['min_price'];
         $max_price       = $_POST['max_price'];
         
-        /*$args = array(
+        $args = array(
             'post_type' => 'product',
-            'posts_per_page' => $post_per_page,
+            'posts_per_page' => -1,
             'post_status' => 'publish',
             'post_parent' => 0
-        );*/ 
+        ); 
         $content_data = 'aaaaaaaaaaaaaaaaaa';  
         echo $content_data;
         exit();

@@ -63,7 +63,7 @@
 				</div>
 			</div>
 			<div class="panel-content">
-			 	<?php theclick_product_filter_sidebar(); ?>
+			 	<?php theclick_product_filter_sidebar($atts); ?>
 			</div>
 		</div>
 	</div>
