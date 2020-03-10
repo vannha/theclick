@@ -269,9 +269,10 @@ function theclick_ef5_product_filter_action_callback(){
         extract($atts);
         $args = array(
             'post_type'      => 'product',
-            'posts_per_page' => -1,//$array_param['post_per_page'],
+            'posts_per_page' => $array_param['post_per_page'],
             'post_status'    => 'publish',
-            'post_parent'    => 0
+            'post_parent'    => 0,
+            'paged'          => 1
         ); 
         /*if (get_query_var('paged')){ 
             $paged = get_query_var('paged'); 
@@ -284,30 +285,33 @@ function theclick_ef5_product_filter_action_callback(){
             $args['paged'] = $paged;
         }*/
 
-        $loop = $wp_query = new WP_Query($args);
-
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
+
+        $loop = $wp_query = new WP_Query($args);
+        if($loop->found_posts > 0){
+        
         //ob_start();
-        while ($loop->have_posts()) {
-            $loop->the_post();
-            global $product;
-            $d++;
-            ?>
-            <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
-                <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                <?php
-                    do_action( 'woocommerce_before_shop_loop_item' );
-                    do_action( 'woocommerce_before_shop_loop_item_title' );
-                    do_action( 'woocommerce_shop_loop_item_title' );
-                    do_action( 'woocommerce_after_shop_loop_item_title' );
-                    do_action( 'woocommerce_after_shop_loop_item' );
+            while ($loop->have_posts()) {
+                $loop->the_post();
+                global $product;
+                $d++;
                 ?>
+                <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                    <?php
+                        do_action( 'woocommerce_before_shop_loop_item' );
+                        do_action( 'woocommerce_before_shop_loop_item_title' );
+                        do_action( 'woocommerce_shop_loop_item_title' );
+                        do_action( 'woocommerce_after_shop_loop_item_title' );
+                        do_action( 'woocommerce_after_shop_loop_item' );
+                    ?>
+                    </div>
                 </div>
-            </div>
-        <?php 
-        }    
+            <?php 
+            }    
+        }
         wp_reset_postdata();
         /*$html_data = ob_get_clean();
         $resp = array( 'filter_content' => $html_data);
