@@ -830,7 +830,7 @@
                 name: this.name,
                 value: this.value
             });
-            console.log(formData1); return false;
+
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.ajax({
                 type: 'POST',
@@ -838,7 +838,7 @@
                 data: formData1,
                 dataType: 'json',
                 success: function(response) {
-                    $('.ef5-product-grid-content').html(response.content_data);
+                    $('.ef5-product-grid-content').html(response);
                     $this.fadeTo('slow',1).removeClass(loading_class);
                     $this.find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
                     
