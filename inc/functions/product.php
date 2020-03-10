@@ -262,9 +262,9 @@ function theclick_ef5_product_filter_action_callback(){
             'min_price'       => $_POST['min_price'],
             'max_price'       => $_POST['max_price']
         ];
-   
+   var_dump($array_param);
         $atts = json_decode( $array_param['atts_str'] );
-        var_dump($atts);
+        
         extract($atts);
         $args = array(
             'post_type'      => 'product',
