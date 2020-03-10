@@ -258,12 +258,44 @@ function theclick_ef5_product_filter_action_callback(){
         
         $args = array(
             'post_type' => 'product',
-            'posts_per_page' => -1,
+            'posts_per_page' => $post_per_page,
             'post_status' => 'publish',
             'post_parent' => 0
         ); 
-        $content_data = 'aaaaaaaaaaaaaaaaaa';  
-        echo $content_data;
+        if (get_query_var('paged')){ 
+            $paged = get_query_var('paged'); 
+        }elseif(get_query_var('page')){ 
+            $paged = get_query_var('page'); 
+        }else{ 
+            $paged = 1; 
+        }
+        if($paged > 1){
+            $args['paged'] = $paged;
+        }
+        
+        $loop = $wp_query = new WP_Query($args);
+
+        $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
+
+        $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
+        while ($loop->have_posts()) {
+            $loop->the_post();
+            global $product;
+            $d++;
+            ?>
+            <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                <?php
+                    do_action( 'woocommerce_before_shop_loop_item' );
+                    do_action( 'woocommerce_before_shop_loop_item_title' );
+                    do_action( 'woocommerce_shop_loop_item_title' );
+                    do_action( 'woocommerce_after_shop_loop_item_title' );
+                    do_action( 'woocommerce_after_shop_loop_item' );
+                ?>
+                </div>
+            </div>
+        <?php 
+        }  
         exit();
     }
 }

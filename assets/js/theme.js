@@ -838,7 +838,7 @@
                 data: formData1,
                 dataType: 'html',
                 success: function(response) {
-                    $('.ef5-product-grid-content').html(response);
+                    $('.ef5-product-grid-content .ef5-product-grid-wrap').html(response);
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
                     $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
                     
