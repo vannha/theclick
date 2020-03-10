@@ -826,6 +826,7 @@
                 return;
             }
             var formData1 = form1.serializeArray();
+            
             formData1.push({
                 name: this.name,
                 value: this.value
@@ -836,7 +837,7 @@
                 type: 'POST',
                 url: theclick_ajax_opts.ajaxurl,
                 data: formData1,
-                dataType: 'html',
+                dataType: 'json',
                 success: function(response) {
                     //console.log(response); return false;
                     $('.ef5-product-grid-content .ef5-product-grid-wrap').html(response);
