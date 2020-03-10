@@ -262,8 +262,7 @@ function theclick_ef5_product_filter_action_callback(){
             'min_price'       => $_POST['min_price'],
             'max_price'       => $_POST['max_price']
         ];
-        
-        var_dump($array_param); die;
+   
         $atts = json_decode( $array_param['atts_str'] );
 
         extract($atts);
@@ -289,7 +288,7 @@ function theclick_ef5_product_filter_action_callback(){
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
-        ob_start();
+        //ob_start();
         while ($loop->have_posts()) {
             $loop->the_post();
             global $product;
@@ -309,11 +308,10 @@ function theclick_ef5_product_filter_action_callback(){
         <?php 
         }    
         wp_reset_postdata();
-        $html_data = ob_get_clean();
-
+        /*$html_data = ob_get_clean();
         $resp = array( 'filter_content' => $html_data);
         header( "Content-Type: application/json" );
-        echo json_encode($resp);
+        echo json_encode($resp);*/
         exit();
     }
 }
