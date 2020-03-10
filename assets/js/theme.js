@@ -866,7 +866,7 @@
                         var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
          
                         $grid_inner.append($items);
-                        
+                        $('.ef5-wc-loop-img').slick('unslick');
                         $grid_inner.imagesLoaded( function() {
                             $('.ef5-wc-loop-img').not('.slick-initialized').slick({
                                 vertical: false,
