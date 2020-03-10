@@ -836,7 +836,7 @@
                 type: 'POST',
                 url: theclick_ajax_opts.ajaxurl,
                 data: formData1,
-                dataType: 'json',
+                dataType: 'html',
                 success: function(response) {
                     $('.ef5-product-grid-content').html(response);
                     $this.fadeTo('slow',1).removeClass(loading_class);
