@@ -844,7 +844,6 @@
                 success: function(data) {  
                     //console.log(response); return false;
                     $grid.html(data);
-                    $('.ef5-wc-loop-img').slick('unslick');
                     $grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
                         status: '.infinite-btn > a',
