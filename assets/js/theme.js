@@ -844,12 +844,12 @@
                 success: function(data) {  
                     //console.log(response); return false;
                     $('.ef5-wc-loop-img').slick('unslick');
+                    $grid.html(data);
                     $grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
                         status: '.infinite-btn > a',
                         history: false,
                     });
-                    $grid.html(data);
                     $grid_inner.on( 'load.infiniteScroll', function( event, response, path ) {
                         $('.ef5-wc-loop-img').slick('unslick');
                         var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
