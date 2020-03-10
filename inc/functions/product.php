@@ -217,7 +217,7 @@ function theclick_product_filter_sidebar(){
                         <div class="price_label" style="display:none;">
                             <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
                         </div>
-                        <?php //echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
+                        <?php echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
                         <div class="clear"></div>
                     </div>
                 </div>
