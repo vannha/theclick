@@ -208,17 +208,19 @@ function theclick_product_filter_sidebar(){
                 $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price;  
                 $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
                 ?>
-                <div class="filter price_slider_wrapper widget_price_filter mt-30">
-                    <div class="price_slider" style="display:none;"></div>
-                    <div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
-                        <input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'theclick' ); ?>" />
-                        <input type="text" id="max_price" name="max_price" value="<?php echo esc_attr( $current_max_price ); ?>" data-max="<?php echo esc_attr( $max_price ); ?>" placeholder="<?php echo esc_attr__( 'Max price', 'theclick' ); ?>" />
-                        <button type="submit" class="button"><?php echo esc_html__( 'Filter', 'theclick' ); ?></button>
-                        <div class="price_label" style="display:none;">
-                            <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
+                <div class="filter widget_price_filter mt-30">
+                    <div class="price_slider_wrapper">
+                        <div class="price_slider" style="display:none;"></div>
+                        <div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
+                            <input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'theclick' ); ?>" />
+                            <input type="text" id="max_price" name="max_price" value="<?php echo esc_attr( $current_max_price ); ?>" data-max="<?php echo esc_attr( $max_price ); ?>" placeholder="<?php echo esc_attr__( 'Max price', 'theclick' ); ?>" />
+                            <button type="submit" class="button"><?php echo esc_html__( 'Filter', 'theclick' ); ?></button>
+                            <div class="price_label" style="display:none;">
+                                <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
+                            </div>
+                            <?php //echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
+                            <div class="clear"></div>
                         </div>
-                        <?php //echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
-                        <div class="clear"></div>
                     </div>
                 </div>
             <?php } ?>
