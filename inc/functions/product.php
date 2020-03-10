@@ -227,7 +227,16 @@ function theclick_product_filter_sidebar($atts = ''){
                 </div>
             <?php } ?>
         </div>
-        
+        <?php 
+            if(!empty($att_data_serial)){ 
+                $att_data_serial_str = json_encode($att_data_serial);   
+                echo '<input type="hidden" name="att_data_serial" value="'.$att_data_serial_str.'">';        
+            }
+            if(!empty($atts)){ 
+                $atts_str = json_encode($atts);   
+                echo '<input type="hidden" name="atts_str" value="'.$atts_str.'">';        
+            }
+        ?>
         <input type="hidden" name="post_per_page" value="<?php echo esc_attr($post_per_page) ?>">
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
         <input type="hidden" name="action" value="ef5_product_filter_action" />
@@ -303,7 +312,7 @@ function theclick_ef5_product_filter_action_callback(){
         $html_data = ob_get_clean();
 
         $resp = array( 'filter_content' => $html_data);
-        //header( "Content-Type: application/json" );
+        header( "Content-Type: application/json" );
         echo json_encode($resp);
         exit();
     }
