@@ -250,17 +250,17 @@ function theclick_ef5_product_filter_action_callback(){
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
     } else {
-        $post_per_page   = $_POST['product_cat'];
+        $post_per_page   = $_POST['post_per_page'];
         $product_cat     = $_POST['product_cat'];
         $att_data_serial = $_POST['att_data_serial'];
         $min_price       = $_POST['min_price'];
         $max_price       = $_POST['max_price'];
         
         $args = array(
-            'post_type' => 'product',
+            'post_type'      => 'product',
             'posts_per_page' => $post_per_page,
-            'post_status' => 'publish',
-            'post_parent' => 0
+            'post_status'    => 'publish',
+            'post_parent'    => 0
         ); 
         if (get_query_var('paged')){ 
             $paged = get_query_var('paged'); 
