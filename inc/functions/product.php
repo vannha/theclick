@@ -232,6 +232,10 @@ function theclick_product_filter_sidebar($atts = ''){
                 $att_data_serial_str = json_encode($att_data_serial);   
                 echo '<input type="hidden" name="att_data_serial" value="'.$att_data_serial_str.'">';        
             }
+            if(!empty($atts)){ 
+                $atts_str = json_encode($atts);   
+                echo '<input type="hidden" name="atts_str" value="'.$atts_str.'">';        
+            }
         ?>
         <input type="hidden" name="post_per_page" value="<?php echo esc_attr($post_per_page) ?>">
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
@@ -250,6 +254,7 @@ function theclick_ef5_product_filter_action_callback(){
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
     } else {
+        $atts_str        = $_POST['atts_str'];
         $post_per_page   = $_POST['post_per_page'];
         $product_cat     = $_POST['product_cat'];
         $att_data_serial = $_POST['att_data_serial'];
@@ -277,7 +282,7 @@ function theclick_ef5_product_filter_action_callback(){
 
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
-        $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
+        $item_css_class = ['product-grid-item', 'ef5-product-item-layout-1', 'transition'];
         while ($loop->have_posts()) {
             $loop->the_post();
             global $product;
