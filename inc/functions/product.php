@@ -227,9 +227,10 @@ function theclick_product_filter_sidebar(){
             <?php } ?>
         </div>
         <?php 
-            if(!empty($att_data_serial)) 
-                $att_data_serial_str = json_encode($att_data_serial);  //json_decode( $string, $assoc_array = false ) jsonSerialize($att_data_serial);
-            var_dump($att_data_serial_str);
+            if(!empty($att_data_serial)){ 
+                $att_data_serial_str = json_encode($att_data_serial);   
+                echo '<input type="hidden" name="att_data_serial" value="'.$att_data_serial_str.'">';        
+            }
         ?>
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
         <input type="hidden" name="action" value="ef5_product_filter_action" />
@@ -247,21 +248,13 @@ function theclick_ef5_product_filter_action_callback(){
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
     } else {
-       
-        $args = [
-            'product_cat'            => $_POST['number-pass'],
-            'pa_brand'            => $_POST['number-bags'],
-            'pa_color'              => $_POST['firstname'],
-            'pa_size'               => $_POST['lastname'],
-            'min_price'                  => $_POST['email'],
-             
-        ];
-        
-
-        $content_data = 'aaaaaaaaaaaaaaaaaa'; //theclick_booking_payment($args);
-        $resp = array( 'content_data' => $content_data);
-        header( "Content-Type: application/json" );
-        echo json_encode($resp);
+        $product_cat     = $_POST['product_cat'];
+        $att_data_serial = $_POST['att_data_serial'];
+        $min_price       = $_POST['min_price'];
+        $max_price       = $_POST['max_price'];
+         
+        $content_data = 'aaaaaaaaaaaaaaaaaa';  
+        echo $content_data;
         exit();
     }
 }
