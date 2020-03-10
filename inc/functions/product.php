@@ -269,11 +269,11 @@ function theclick_ef5_product_filter_action_callback(){
         extract($atts);
         $args = array(
             'post_type'      => 'product',
-            'posts_per_page' => $array_param['post_per_page'],
+            'posts_per_page' => -1,//$array_param['post_per_page'],
             'post_status'    => 'publish',
             'post_parent'    => 0
         ); 
-        if (get_query_var('paged')){ 
+        /*if (get_query_var('paged')){ 
             $paged = get_query_var('paged'); 
         }elseif(get_query_var('page')){ 
             $paged = get_query_var('page'); 
@@ -282,7 +282,7 @@ function theclick_ef5_product_filter_action_callback(){
         }
         if($paged > 1){
             $args['paged'] = $paged;
-        }
+        }*/
 
         $loop = $wp_query = new WP_Query($args);
 
