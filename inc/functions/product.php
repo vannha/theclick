@@ -272,7 +272,7 @@ function theclick_ef5_product_filter_action_callback(){
         if($paged > 1){
             $args['paged'] = $paged;
         }
-        
+        var_dump($args); die;
         $loop = $wp_query = new WP_Query($args);
 
         $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
