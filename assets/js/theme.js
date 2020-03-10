@@ -852,7 +852,7 @@
                     $grid_inner.on( 'load.infiniteScroll', function( event, response, path ) {
                         $grid.html(response);
                         $grid_inner.imagesLoaded( function() {
-                            $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                            $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
                                 vertical: false,
                                 slidesToShow: 1,
                                 focusOnSelect: true,
