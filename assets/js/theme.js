@@ -844,23 +844,25 @@
                 success: function(response) {  
                     //console.log(response); return false;
                     $('.ef5-wc-loop-img').slick('unslick');
-                    $grid.html(response);
-
-                    $grid_inner.imagesLoaded( function() {
-                        $('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                            vertical: false,
-                            slidesToShow: 1,
-                            focusOnSelect: true,
-                            prevArrow:"<button class='slick-prev'><span></span></button>",
-                            nextArrow:"<button class='slick-next'><span></span></button>",
-                            infinite: true,
-                        });
-                    });
                     $grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
                         status: '.infinite-btn > a',
                         history: false,
                     });
+                    $grid_inner.on( 'load.infiniteScroll', function( event, response, path ) {
+                        $grid.html(response);
+                        $grid_inner.imagesLoaded( function() {
+                            $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                                vertical: false,
+                                slidesToShow: 1,
+                                focusOnSelect: true,
+                                prevArrow:"<button class='slick-prev'><span></span></button>",
+                                nextArrow:"<button class='slick-next'><span></span></button>",
+                                infinite: true,
+                            });
+                        });
+                    });
+                     
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
                     $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');           
                 },
