@@ -282,18 +282,9 @@ function theclick_ef5_product_filter_action_callback(){
             $loop->the_post();
             global $product;
             $d++;
+            do_action( 'woocommerce_before_shop_loop_item' );
             ?>
-            <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
-                <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                <?php
-                    do_action( 'woocommerce_before_shop_loop_item' );
-                    do_action( 'woocommerce_before_shop_loop_item_title' );
-                    do_action( 'woocommerce_shop_loop_item_title' );
-                    do_action( 'woocommerce_after_shop_loop_item_title' );
-                    do_action( 'woocommerce_after_shop_loop_item' );
-                ?>
-                </div>
-            </div>
+            
         <?php 
         }  
         exit();
