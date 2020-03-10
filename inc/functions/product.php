@@ -255,12 +255,12 @@ function theclick_ef5_product_filter_action_callback(){
        exit;
     } else {
         $array_param = [
-            'atts_str'        = $_POST['atts_str'],
-            'post_per_page'   = $_POST['post_per_page'],
-            'product_cat'     = $_POST['product_cat'],
-            'att_data_serial' = $_POST['att_data_serial'],
-            'min_price'       = $_POST['min_price'],
-            'max_price'       = $_POST['max_price']
+            'atts_str'        => $_POST['atts_str'],
+            'post_per_page'   => $_POST['post_per_page'],
+            'product_cat'     => $_POST['product_cat'],
+            'att_data_serial' => $_POST['att_data_serial'],
+            'min_price'       => $_POST['min_price'],
+            'max_price'       => $_POST['max_price']
         ];
         
         var_dump($array_param); die;
