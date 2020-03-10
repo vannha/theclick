@@ -96,15 +96,17 @@
             wp_reset_postdata();
             ?>
         </div>
+        <?php 
+        $pagin_type = 'infinite';
+        if($pagin_type == 'infinite'){
+            echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
+                next_posts_link( $loadmore_text ); 
+            echo '</div>';     
+        }  ?>
     </div>
 <?php 
  
-$pagin_type = 'infinite';
-if($pagin_type == 'infinite'){
-	echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
-        next_posts_link( $loadmore_text ); 
-    echo '</div>';     
-} 
+
 wp_reset_query();
 ?>
 </div>

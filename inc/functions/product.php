@@ -292,7 +292,9 @@ function theclick_ef5_product_filter_action_callback(){
         $loop = $wp_query = new WP_Query($args);
         if($loop->found_posts > 0){
         
-        //ob_start();
+            ?>
+            <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
+            <?php 
             while ($loop->have_posts()) {
                 $loop->the_post();
                 global $product;
@@ -310,7 +312,16 @@ function theclick_ef5_product_filter_action_callback(){
                     </div>
                 </div>
             <?php 
-            }    
+            } 
+            ?>
+            </div>
+            <?php
+            $pagin_type = 'infinite';
+            if($pagin_type == 'infinite'){
+                echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
+                    next_posts_link( $loadmore_text ); 
+                echo '</div>';     
+            }   
         }
         wp_reset_postdata();
         /*$html_data = ob_get_clean();
