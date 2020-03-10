@@ -837,7 +837,7 @@
                 type: 'POST',
                 url: theclick_ajax_opts.ajaxurl,
                 data: formData1,
-                dataType: 'json',
+                dataType: 'html',
                 success: function(response) {
                     //console.log(response); return false;
                     $('.ef5-product-grid-content .ef5-product-grid-wrap').html(response.filter_content);
