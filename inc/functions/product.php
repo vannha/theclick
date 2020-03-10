@@ -230,11 +230,11 @@ function theclick_product_filter_sidebar($atts = ''){
         <?php 
             if(!empty($att_data_serial)){ 
                 $att_data_serial_str = serialize($att_data_serial);   
-                echo '<input type="hidden" name="att_data_serial" value="'.$att_data_serial_str.'">';        
+                echo "<input type='hidden' name='att_data_serial' value='".$att_data_serial_str."'>";        
             }
             if(!empty($atts)){ 
                 $atts_str = serialize($atts);   
-                echo '<input type="hidden" name="atts_str" value="'.$atts_str.'">';        
+                echo "<input type='hidden' name='atts_str' value='".$atts_str."'>";        
             }
         ?>
         <input type="hidden" name="post_per_page" value="<?php echo esc_attr($post_per_page) ?>">
