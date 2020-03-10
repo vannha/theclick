@@ -228,7 +228,7 @@ function theclick_product_filter_sidebar(){
         </div>
         <?php 
             if(!empty($att_data_serial)) 
-                $att_data_serial_str = jsonSerialize($att_data_serial);
+                $att_data_serial_str = json_encode($att_data_serial);  //json_decode( $string, $assoc_array = false ) jsonSerialize($att_data_serial);
             var_dump($att_data_serial_str);
         ?>
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
