@@ -826,7 +826,7 @@
                 return;
             }
             var formData1 = form1.serializeArray();
-
+            console.log(formData1); return false;
             formData1.push({
                 name: this.name,
                 value: this.value
