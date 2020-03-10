@@ -275,7 +275,7 @@ function theclick_ef5_product_filter_action_callback(){
 
         $loop = $wp_query = new WP_Query($args);
 
-        $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
+        $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
         while ($loop->have_posts()) {
