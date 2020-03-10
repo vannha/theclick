@@ -205,7 +205,7 @@ function theclick_product_filter_sidebar(){
             $max_price = apply_filters( 'woocommerce_price_filter_widget_max_amount', ceil( $max_price / $step ) * $step );
 
             if ( $min_price !== $max_price ) {  
-                $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price; // WPCS: input var ok, CSRF ok.
+                $current_min_price = isset( $_GET['min_price'] ) ? floor( floatval( wp_unslash( $_GET['min_price'] ) ) / $step ) * $step : $min_price;  
                 $current_max_price = isset( $_GET['max_price'] ) ? ceil( floatval( wp_unslash( $_GET['max_price'] ) ) / $step ) * $step : $max_price; 
                 ?>
                 <div class="filter price_slider_wrapper widget_price_filter">
@@ -217,13 +217,13 @@ function theclick_product_filter_sidebar(){
                         <div class="price_label" style="display:none;">
                             <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
                         </div>
-                        <?php echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
+                        <?php //echo wc_query_string_form_fields( null, array( 'min_price', 'max_price', 'paged' ), '', true ); ?>
                         <div class="clear"></div>
                     </div>
                 </div>
             <?php } ?>
         </div>
-        <button type="submit" value="Filter" class="ef5-btn primary  filter-button"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
+        <button type="submit" value="Filter" class="ef5-btn primary fill filter-button"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
         <span class="products-loader"><span class="spinner"></span></span>
     </form>
     <?php
