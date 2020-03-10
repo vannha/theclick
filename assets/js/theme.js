@@ -833,6 +833,8 @@
             });
 
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
+            var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap');
+            
             $.ajax({
                 type: 'POST',
                 url: theclick_ajax_opts.ajaxurl,
@@ -840,7 +842,23 @@
                 //dataType: 'json',
                 success: function(response) {
                     //console.log(response); return false;
+                    $('.ef5-wc-loop-img').slick('unslick');
                     $('.ef5-product-grid-content .ef5-product-grid-wrap').html(response);
+                    $grid.infiniteScroll({
+                        path: '.infinite-btn > a',
+                        status: '.infinite-btn > a',
+                        history: false,
+                    });
+                    $grid.imagesLoaded( function() {
+                        $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                            vertical: false,
+                            slidesToShow: 1,
+                            focusOnSelect: true,
+                            prevArrow:"<button class='slick-prev'><span></span></button>",
+                            nextArrow:"<button class='slick-next'><span></span></button>",
+                            infinite: true,
+                        });
+                    });
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
                     $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');           
                 },
