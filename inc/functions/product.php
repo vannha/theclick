@@ -296,6 +296,7 @@ function theclick_ef5_product_filter_action_callback(){
             </div>
         <?php 
         }  
+        wp_reset_postdata();
         exit();
     }
 }
