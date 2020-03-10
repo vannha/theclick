@@ -320,7 +320,10 @@ function theclick_ef5_product_filter_action_callback(){
             $pagin_type = 'infinite';
             if($pagin_type == 'infinite'){
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
-                    next_posts_link( $loadmore_text ); 
+                    //next_posts_link( $loadmore_text ); 
+                    $new_link = str_replace('wp-admin/admin-ajax.php','', get_next_posts_link( $loadmore_text, 0 ));
+                    $new_link = add_query_arg( 'page_id', '14', $new_link );
+                    echo $new_link;
                 echo '</div>';     
             }   
         }
