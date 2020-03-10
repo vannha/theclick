@@ -821,7 +821,7 @@
 
         $(document).on('click','.ef5-ajax-filter', function() {
             var form1 = $(this).closest('.ajax-filter');
-            $loading_class = 'ef5-loading';
+            var loading_class = 'ef5-loading';
             if(form1.length === 0) {
                 return;
             }
@@ -831,7 +831,7 @@
                 value: this.value
             });
             console.log(formData1); return false;
-            $('.ef5-posts').fadeTo('slow',0.3).addClass($loading_class);
+            $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.ajax({
                 type: 'POST',
                 url: theclick_ajax_opts.ajaxurl,
@@ -839,7 +839,7 @@
                 dataType: 'json',
                 success: function(response) {
                     $('.ef5-product-grid-content').html(response.content_data);
-                    $this.fadeTo('slow',1).removeClass($loading_class);
+                    $this.fadeTo('slow',1).removeClass(loading_class);
                     $this.find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
                     
                 },
