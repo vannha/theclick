@@ -260,9 +260,9 @@ function theclick_ef5_product_filter_action_callback(){
         $att_data_serial = $_POST['att_data_serial'];
         $min_price       = $_POST['min_price'];
         $max_price       = $_POST['max_price'];
-        
+        var_dump($atts_str); die;
         $atts = json_decode( $atts_str );
-        var_dump($atts); die;
+        
         extract($atts);
         $args = array(
             'post_type'      => 'product',
