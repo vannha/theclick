@@ -250,7 +250,7 @@ function theclick_product_filter_sidebar($atts = ''){
 add_action( 'wp_ajax_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
 add_action( 'wp_ajax_nopriv_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
 function theclick_ef5_product_filter_action_callback(){
-    global $wp_query;
+    global $paged, $wp_query;
     if ( ! isset( $_POST['_acf_nonce'] ) || ! wp_verify_nonce( $_POST['_acf_nonce'], 'ajax_filter_action' ) ) {
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
@@ -318,12 +318,19 @@ function theclick_ef5_product_filter_action_callback(){
             </div>
             <?php
             $pagin_type = 'infinite';
+            $max_page = $wp_query->max_num_pages;
+            if ( ! $paged ) {
+                $paged = 1;
+            }
+
+            $nextpage = intval( $paged ) + 1;
+            $nextpage <= $max_page
             if($pagin_type == 'infinite'){
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
                     //next_posts_link( $loadmore_text ); 
-                    $new_link = str_replace('wp-admin/admin-ajax.php','', get_next_posts_link( $loadmore_text, 0 ));
+                    $new_link = str_replace('wp-admin/admin-ajax.php','', next_posts( $max_page, false ));
                     $new_link = add_query_arg( 'page_id', '14', $new_link );
-                    echo $new_link;
+                    echo '<a href="' . $new_link .'" >"' . preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $loadmore_text ) . '</a>';
                 echo '</div>';     
             }   
         }
