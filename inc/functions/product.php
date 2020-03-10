@@ -264,8 +264,8 @@ function theclick_ef5_product_filter_action_callback(){
         ];
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
   
-        $atts = json_decode( $array_param['atts_str'] );
- var_dump($atts);
+        $atts = (array)json_decode( $array_param['atts_str'] );
+ //var_dump($atts);
         extract($atts);
         $args = array(
             'post_type'      => 'product',
