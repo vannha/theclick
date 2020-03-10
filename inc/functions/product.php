@@ -324,15 +324,16 @@ function theclick_ef5_product_filter_action_callback(){
             }
 
             $nextpage = intval( $paged ) + 1;
-            $nextpage <= $max_page
-            if($pagin_type == 'infinite'){
-                echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
-                    //next_posts_link( $loadmore_text ); 
-                    $new_link = str_replace('wp-admin/admin-ajax.php','', next_posts( $max_page, false ));
-                    $new_link = add_query_arg( 'page_id', '14', $new_link );
-                    echo '<a href="' . $new_link .'" >"' .  $loadmore_text . '</a>';
-                echo '</div>';     
-            }   
+            if($nextpage <= $max_page){
+                if($pagin_type == 'infinite'){
+                    echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
+                        //next_posts_link( $loadmore_text ); 
+                        $new_link = str_replace('wp-admin/admin-ajax.php','', next_posts( $max_page, false ));
+                        $new_link = add_query_arg( 'page_id', '14', $new_link );
+                        echo '<a href="' . $new_link .'" >"' .  $loadmore_text . '</a>';
+                    echo '</div>';     
+                }   
+            }
         }
         
         wp_reset_query();
