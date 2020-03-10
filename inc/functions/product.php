@@ -214,7 +214,6 @@ function theclick_product_filter_sidebar(){
                         <div class="price_slider_amount" data-step="<?php echo esc_attr( $step ); ?>">
                             <input type="text" id="min_price" name="min_price" value="<?php echo esc_attr( $current_min_price ); ?>" data-min="<?php echo esc_attr( $min_price ); ?>" placeholder="<?php echo esc_attr__( 'Min price', 'theclick' ); ?>" />
                             <input type="text" id="max_price" name="max_price" value="<?php echo esc_attr( $current_max_price ); ?>" data-max="<?php echo esc_attr( $max_price ); ?>" placeholder="<?php echo esc_attr__( 'Max price', 'theclick' ); ?>" />
-                            <button type="submit" class="button"><?php echo esc_html__( 'Filter', 'theclick' ); ?></button>
                             <div class="price_label" style="display:none;">
                                 <?php echo esc_html__( 'Price:', 'theclick' ); ?> <span class="from"></span> &mdash; <span class="to"></span>
                             </div>
@@ -228,7 +227,7 @@ function theclick_product_filter_sidebar(){
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
         <input type="hidden" name="action" value="ef5_product_filter_action" />
         <?php wp_nonce_field('ajax_filter_action', '_acf_nonce', true, false); ?>
-        <button type="submit" value="Filter" class="ef5-btn primary fill ef5-ajax-filter"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
+        <button type="button" value="Filter" class="ef5-btn primary fill ef5-ajax-filter"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
         <span class="products-loader"><span class="spinner"></span></span>
     </form>
     <?php
