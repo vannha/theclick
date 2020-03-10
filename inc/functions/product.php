@@ -319,7 +319,7 @@ function theclick_ef5_product_filter_action_callback(){
             $pagin_type = 'infinite';
             if($pagin_type == 'infinite'){
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
-                    next_posts_link( $loadmore_text ); 
+                    var_dump(next_posts_link( $loadmore_text )); 
                 echo '</div>';     
             }   
         }
