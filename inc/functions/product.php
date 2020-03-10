@@ -252,7 +252,13 @@ function theclick_ef5_product_filter_action_callback(){
         $att_data_serial = $_POST['att_data_serial'];
         $min_price       = $_POST['min_price'];
         $max_price       = $_POST['max_price'];
-         
+        
+        /*$args = array(
+            'post_type' => 'product',
+            'posts_per_page' => $post_per_page,
+            'post_status' => 'publish',
+            'post_parent' => 0
+        );*/ 
         $content_data = 'aaaaaaaaaaaaaaaaaa';  
         echo $content_data;
         exit();
