@@ -312,6 +312,7 @@ function theclick_ef5_product_filter_action_callback(){
                 </div>
             <?php 
             } 
+            wp_reset_postdata();
             ?>
             </div>
             <?php
@@ -322,7 +323,8 @@ function theclick_ef5_product_filter_action_callback(){
                 echo '</div>';     
             }   
         }
-        wp_reset_postdata();
+        
+        wp_reset_query();
         /*$html_data = ob_get_clean();
         $resp = array( 'filter_content' => $html_data);
         header( "Content-Type: application/json" );
