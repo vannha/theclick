@@ -27,7 +27,7 @@
 
 ?>
 
-<div class="ef5-posts ef5-product-grid grid-filter <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
+<div class="ef5-posts ef5-product-grid grid-filter <?php $this->theclick_products_wrap_css_class($atts);?>" id="<?php echo esc_attr($el_id); ?>">
 	<?php if(!empty($filter_type)): ?>
 		<div class="filter-type d-flex justify-content-between align-items-center gutter-30">
 			<div class="filter-left">
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 	</div>
-    <div class="<?php $this->theclick_products_wrap_css_class($atts);?>">
+    <div class="ef5-product-grid-content">
         <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
             switch ($layout_template) {

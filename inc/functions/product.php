@@ -226,8 +226,47 @@ function theclick_product_filter_sidebar(){
             <?php } ?>
         </div>
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
-        <button type="submit" value="Filter" class="ef5-btn primary fill filter-button"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
+        <input type="hidden" name="action" value="ef5_product_filter_action" />
+        <?php wp_nonce_field('ajax_filter_action', '_acf_nonce', true, false); ?>
+        <button type="submit" value="Filter" class="ef5-btn primary fill ef5-ajax-filter"><?php echo esc_html__( 'Filter', 'theclick' ) ?> Filter</button>
         <span class="products-loader"><span class="spinner"></span></span>
     </form>
     <?php
+}
+
+add_action( 'wp_ajax_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
+add_action( 'wp_ajax_nopriv_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
+function theclick_ef5_product_filter_action_callback(){
+    $args = [
+        'number_pass'            => $_POST['number-pass'],
+        'number_bags'            => $_POST['number-bags'],
+        'firstname'              => $_POST['firstname'],
+        'lastname'               => $_POST['lastname'],
+        'email'                  => $_POST['email'],
+        'phone'                  => $_POST['phone'],
+        'information'            => $_POST['information'],
+        'selected_vehicle_name'  => $_POST['selected-vehicle-name'],
+        'selected_vehicle_price' => $_POST['selected-vehicle-price'],
+        'form_type'              => $_POST['form_type'],
+        'pickup_add'             => $_POST['pickup-address'],
+        'dropoff_add'            => $_POST['dropoff-address'],
+        'pickup_date'            => $_POST['pickup-date'],
+        'pickup_time'            => $_POST['pickup-time'],
+        'num_hours'              => $_POST['num-hours'],
+        'num_days'               => $_POST['num-days'],
+        'flat_location'          => $_POST['flat-location'],
+        'trip_distance'          => $_POST['trip-distance'],
+        'trip_time'              => $_POST['trip-time'],
+        'vehicle_fleet'          => $_POST['vehicle_fleet'],
+        'currency_symbol'        => $_POST['currency-symbol'],
+        'return_journey'         => $_POST['return-journey'],
+        'invalid_address'        => $_POST['invalid_address'],
+        'step'                   => 3
+    ];
+
+    $content_data = 'aaaaaaaaaaaaaaaaaa'; //theclick_booking_payment($args);
+    $resp = array( 'content_data' => $content_data);
+    header( "Content-Type: application/json" );
+    echo json_encode($resp);
+    die();
 }

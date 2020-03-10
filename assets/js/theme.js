@@ -817,7 +817,61 @@
         $('.button-close-x, .filter-by-sidebar .overlay-wrap').on('click',function(e){
             e.preventDefault();
             $('.filter-by-sidebar').removeClass('open').hide('slow');
-        });  
+        });
+
+        $(document).on('click','.ef5-ajax-filter', function() {
+            var form1 = $(this).closest('.ajax-filter');
+            $loading_class = 'ef5-loading';
+            if(form1.length === 0) {
+                return;
+            }
+            var formData1 = form1.serializeArray();
+            formData1.push({
+                name: this.name,
+                value: this.value
+            });
+            console.log(formData1); return false;
+            $('.ef5-posts').fadeTo('slow',0.3).addClass($loading_class);
+            $.ajax({
+                type: 'POST',
+                url: theclick_ajax_opts.ajaxurl,
+                data: formData1,
+                dataType: 'json',
+                success: function(response) {
+                    $('.ef5-product-grid-content').html(response.content_data);
+                    $this.fadeTo('slow',1).removeClass($loading_class);
+                    $this.find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
+                    
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(jqXHR, textStatus, errorThrown);
+                }
+            });
+            $('html,body').animate({scrollTop: $('.ef5-posts').offset().top - 100}, 750);
+            
+        });   
+    }
+    function theclick_ajax_pagination(){
+        'use strict';
+        $('.ef5-posts').each(function(){
+            "use strict";
+            var $this = $(this),
+                $id = $(this).attr('id'),
+                $loading_class = 'ef5-loading';
+            $this.find('.ef5-loop-pagination a').live('click',function(){
+                $this.fadeTo('slow',0.3).addClass($loading_class);
+                $this.addClass($loading_class);
+                var $link = $(this).attr('href');
+                jQuery.get($link,function(data){
+                    $this.html($(data).find('#'+$id).html());
+                    $this.fadeTo('slow',1).removeClass($loading_class);
+                    $this.removeClass($loading_class);
+                    $this.find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
+                });
+                $('html,body').animate({scrollTop: $this.offset().top - 100}, 750);
+                return false;
+            });
+        });
     }
 
     // Woo Smart Compare 

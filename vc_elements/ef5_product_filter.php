@@ -174,6 +174,7 @@ class WPBakeryShortCode_ef5_product_filter extends WPBakeryShortCode{
 
         $css_classes = array(
             'ef5-product-filter-'.$layout_template,
+            $el_class,
             vc_shortcode_custom_css_class( $css ),
         );
 
