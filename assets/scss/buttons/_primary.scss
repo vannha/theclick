@@ -16,7 +16,7 @@ $btn-pri-border-color-hover  : $primary_color;
 	    }
 	}
 	&.outline{
-		color: $btn-pri-color-hover;
+		color: $primary_color;
 		border-color: $btn-pri-border-color;
 		background: transparent;
 		&:hover{
