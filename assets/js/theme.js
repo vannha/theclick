@@ -838,10 +838,10 @@
                 data: formData1,
                 dataType: 'html',
                 success: function(response) {
+                    console.log(response); return false;
                     $('.ef5-product-grid-content .ef5-product-grid-wrap').html(response);
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
-                    $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
-                    
+                    $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');           
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(jqXHR, textStatus, errorThrown);
