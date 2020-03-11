@@ -6,8 +6,10 @@
     $product_ids = '';
 
     $filter_request = ( !empty($_GET['filter_type']) && $_GET['filter_type'] !='all' ) ? $_GET['filter_type'] : '';
-    var_dump($taxonomies);
-    $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
+
+    $taxs = (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) ? $_GET['product_cat'] : $taxonomies;
+
+    $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxs,$taxonomies_exclude);
      
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
