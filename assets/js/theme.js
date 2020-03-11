@@ -781,7 +781,6 @@
     function theclick_infinite_page(){
         if ( $(document).find( '.infinite-btn' ).length ) {
             var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap');
-            $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap .ef5-wc-loop-img > a').addClass('hidden'); 
             $grid.infiniteScroll({
                 path: '.infinite-btn > a',
                 status: '.infinite-btn > a',
@@ -792,10 +791,10 @@
                 $('.ef5-wc-loop-img').slick('unslick');
                  
                 var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
-                //$(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap .ef5-wc-loop-img > a').addClass('hidden');
+
                 $grid.append($items);
                 
-                /*$grid.imagesLoaded( function() {
+                $grid.imagesLoaded( function() {
                     $('.ef5-wc-loop-img').not('.slick-initialized').slick({
                         vertical: false,
                         slidesToShow: 1,
@@ -804,7 +803,7 @@
                         nextArrow:"<button class='slick-next'><span></span></button>",
                         infinite: true,
                     });
-                });*/
+                });
                     
             });
         }
