@@ -266,7 +266,7 @@ function theclick_ef5_product_filter_action_callback(){
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
   
         $atts = (array)json_decode( $array_param['atts_str'] );
- //var_dump($atts);
+ 
         extract($atts);
         $args = array(
             'post_type'      => 'product',
@@ -274,16 +274,7 @@ function theclick_ef5_product_filter_action_callback(){
             'post_status'    => 'publish',
             'post_parent'    => 0
         ); 
-        /*if (get_query_var('paged')){ 
-            $paged = get_query_var('paged'); 
-        }elseif(get_query_var('page')){ 
-            $paged = get_query_var('page'); 
-        }else{ 
-            $paged = 1; 
-        }
-        if($paged > 1){
-            $args['paged'] = $paged;
-        }*/
+        
 
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
@@ -325,9 +316,7 @@ function theclick_ef5_product_filter_action_callback(){
             $nextpage = intval( $paged ) + 1;
             if($nextpage <= $max_page){
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center btn-ajax-more">';
-                    //next_posts_link( $loadmore_text );  infinite-btn load-on-infinite
-                    //$new_link = str_replace('wp-admin/admin-ajax.php','', next_posts( $max_page, false ));
-                    $new_link = next_posts( $max_page, false );
+                    $new_link = str_replace('wp-admin/admin-ajax.php','', next_posts( $max_page, false ));
                     $new_link = add_query_arg( 'page_id', '14', $new_link );
                     echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
                 echo '</div>';     
@@ -335,10 +324,7 @@ function theclick_ef5_product_filter_action_callback(){
         }
         
         wp_reset_query();
-        /*$html_data = ob_get_clean();
-        $resp = array( 'filter_content' => $html_data);
-        header( "Content-Type: application/json" );
-        echo json_encode($resp);*/
+         
         exit();
     }
 }
