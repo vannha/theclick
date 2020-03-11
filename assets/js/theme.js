@@ -864,8 +864,8 @@
             });
 
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
-            var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content');
-            var $grid_inner = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
+            var $grid = $('.ef5-product-grid.grid-filter .ef5-product-grid-content');
+            var $grid_inner = $('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
             
             $.ajax({
                 type: 'POST',
