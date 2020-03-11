@@ -872,7 +872,7 @@
                 type: 'POST',
                 url: theclick_ajax_opts.ajaxurl,
                 data: formData1,
-                dataType: 'json',
+                //dataType: 'html',
                 success: function(data) {  
                     //console.log(response); return false;
 
