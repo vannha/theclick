@@ -899,7 +899,7 @@
                         history: false,
                     });
 
-                    $grid_inner.on( 'load.infiniteScroll', function( event, response, path ) {
+                    $grid_inner.on( 'load.infiniteScroll', function( event, response ) {
                         
                         var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
