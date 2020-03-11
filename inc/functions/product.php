@@ -326,7 +326,8 @@ function theclick_ef5_product_filter_action_callback(){
             if($nextpage <= $max_page){
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center btn-ajax-more">';
                     //next_posts_link( $loadmore_text );  infinite-btn load-on-infinite
-                    $new_link = str_replace('wp-admin/admin-ajax.php','', next_posts( $max_page, false ));
+                    //$new_link = str_replace('wp-admin/admin-ajax.php','', next_posts( $max_page, false ));
+                    $new_link = next_posts( $max_page, false );
                     $new_link = add_query_arg( 'page_id', '14', $new_link );
                     echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
                 echo '</div>';     
