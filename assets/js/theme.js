@@ -814,10 +814,12 @@
         $('.filter-tune').on('click',function(e){
             e.preventDefault();
             $('.filter-by-sidebar').toggleClass('open').show('slow');
+            $('.filter-by-sidebar .overlay-wrap').show('slow');
         }); 
         $('.button-close-x, .filter-by-sidebar .overlay-wrap').on('click',function(e){
             e.preventDefault();
             $('.filter-by-sidebar').removeClass('open').hide('slow');
+            $('.filter-by-sidebar .overlay-wrap').hide('slow');
         });
 
         /*$(document).on('click','.btn-ajax-more a', function(e) {
