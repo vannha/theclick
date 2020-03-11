@@ -128,7 +128,7 @@ function theclick_product_filter_sidebar($atts = ''){
                         <option value=""><?php echo esc_html__( 'Select a Category', 'theclick' ) ?></option>
                         <?php 
                         foreach($product_categories as $category){
-                            echo '<option value="'.$category->term_id.'">'.$category->name.'</option>';
+                            echo '<option value="'.$category->slug.'">'.$category->name.'</option>';
                         } ?>
                     </select>
                 </div>
@@ -276,12 +276,19 @@ function theclick_ef5_product_filter_action_callback(){
         ); 
 
         if(!empty($array_param['product_cat']))
-            $args['product_cat'] = (int)$array_param['product_cat'];
+            $args['tax_query'] = array(
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field' => 'slug',
+                    'terms' => $array_param['product_cat']
+                )
+            );
+            
          
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
-        var_dump($args);
+        
         $loop = $wp_query = new WP_Query($args);
         echo $loop->found_posts;
         if($loop->found_posts > 0){
