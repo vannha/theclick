@@ -879,11 +879,11 @@
                     $(document).find('.ef5-wc-loop-img').slick('unslick');
                     $grid.html(data);
                     $grid_inner.infiniteScroll({
-                        //path: '.infinite-btn > a',
-                        path: function() {
+                        path: '.infinite-btn > a',
+                        /*path: function() {
                             $( data ).find('.infinite-btn > a').attr('href');
-                        },
-                        //status: '.infinite-btn > a',
+                        },*/
+                        status: '.infinite-btn > a',
                         responseType: 'text',
                         history: false,
                     });
