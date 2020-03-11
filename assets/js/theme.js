@@ -872,6 +872,7 @@
                 //dataType: 'json',
                 success: function(data) {  
                     //console.log(response); return false;
+
                     $(document).find('.ef5-wc-loop-img').slick('unslick');
                     $grid.html(data);
                     $grid_inner.imagesLoaded( function() {
@@ -916,7 +917,8 @@
                     
                     
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
-                    //$('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');           
+                    $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');    
+                    $('.filter-by-sidebar .overlay-wrap').hide('slow');      
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(jqXHR, textStatus, errorThrown);
