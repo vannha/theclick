@@ -127,8 +127,8 @@ function theclick_product_filter_sidebar($atts = ''){
                     <select name="product_cat" tabindex="-1" class="select2" aria-hidden="true">
                         <option value=""><?php echo esc_html__( 'Select a Category', 'theclick' ) ?></option>
                         <?php 
-                        foreach($product_categories as $category){ var_dump($category);
-                            echo '<option value="'.$category->ID.'">'.$category->name.'</option>';
+                        foreach($product_categories as $category){
+                            echo '<option value="'.$category->term_id.'">'.$category->name.'</option>';
                         } ?>
                     </select>
                 </div>
