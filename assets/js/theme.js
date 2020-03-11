@@ -899,7 +899,7 @@
                     $grid_inner.on( 'load.infiniteScroll', function( event, response, path ) {
                         
                         var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
-                        console.log($items); return false;
+
                         $grid_inner.append($items);
                         $(document).find('.ef5-wc-loop-img').slick('unslick');
                         $grid_inner.imagesLoaded( function() {
