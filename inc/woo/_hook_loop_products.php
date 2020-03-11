@@ -57,7 +57,7 @@ if(!function_exists('theclick_woocommerce_loop_product_thumbnail')){
 						$gallery = explode( ',', $gallery );
 						foreach ($gallery as $gal) {
 							$gal_img = wp_get_attachment_image( $gal, $image_size, false, array( 'class' => 'gal-image') );
-							echo '<a href="' . esc_url( get_permalink() ) . '" class="loop-p-link" style="display:none;">';
+							echo '<a href="' . esc_url( get_permalink() ) . '" class="loop-p-link ">';
 							echo theclick_html($gal_img);
 							echo '</a>';
 						}
