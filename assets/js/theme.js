@@ -793,10 +793,10 @@
             $grid.on( 'load.infiniteScroll', function( event, response, path ) {
                 $('.ef5-wc-loop-img').slick('unslick');
                  
-                //var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+                var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
-                //$grid.append($items);
-                $( response ).find('.infinite-btn > a').attr('href');
+                $grid.append($items);
+                //$( response ).find('.infinite-btn > a').attr('href');
                 
                 $grid.imagesLoaded( function() {
                     $('.ef5-wc-loop-img').not('.slick-initialized').slick({
