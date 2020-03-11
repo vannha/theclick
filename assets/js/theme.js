@@ -782,7 +782,10 @@
         if ( $(document).find( '.infinite-btn' ).length ) {
             var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap');
             $grid.infiniteScroll({
-                path: '.infinite-btn > a',
+                //path: '.infinite-btn > a',
+                path: function() {
+                    $( document ).find('.infinite-btn > a').attr('href');
+                },
                 status: '.infinite-btn > a',
                 history: false,
             });
@@ -790,9 +793,10 @@
             $grid.on( 'load.infiniteScroll', function( event, response, path ) {
                 $('.ef5-wc-loop-img').slick('unslick');
                  
-                var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+                //var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
-                $grid.append($items);
+                //$grid.append($items);
+                $( response ).find('.infinite-btn > a').attr('href');
                 
                 $grid.imagesLoaded( function() {
                     $('.ef5-wc-loop-img').not('.slick-initialized').slick({
@@ -893,7 +897,7 @@
                         //path: '.infinite-btn > a',
                         path: function() {
                             $( document ).find('.infinite-btn > a').attr('href');
-                          },
+                        },
                         status: '.infinite-btn > a',
                         responseType: 'text',
                         history: false,
