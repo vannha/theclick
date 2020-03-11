@@ -904,8 +904,8 @@
                         
                         var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
                         //$( response ).find('.infinite-btn > a').attr('href');
-                        $grid_inner.append($items);
-                        $grid_inner.infiniteScroll( 'appendItems', $items );
+                        console.log($grid_inner.append($items)); return false;
+                        //$grid_inner.infiniteScroll( 'appendItems', $items );
                         //$(document).find('.ef5-wc-loop-img').slick('unslick');
                         /*$grid_inner.imagesLoaded( function() {
                             setTimeout(function(){
