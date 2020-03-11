@@ -872,7 +872,7 @@
                 type: 'POST',
                 url: theclick_ajax_opts.ajaxurl,
                 data: formData1,
-                //dataType: 'json',
+                dataType: 'json',
                 success: function(data) {  
                     //console.log(response); return false;
 
@@ -891,7 +891,7 @@
                         },100);
                     });
                     theclick_infinite_page();
-                    
+
                     /*$grid_inner.infiniteScroll({
                         //path: '.infinite-btn > a',
                         path: function() {
