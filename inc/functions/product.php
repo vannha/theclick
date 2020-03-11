@@ -278,7 +278,7 @@ function theclick_ef5_product_filter_action_callback(){
         if(!empty($array_param['product_cat']))
             $args['tax_query'] = [$array_param['product_cat']];
          
-
+        var_dump($args);
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
