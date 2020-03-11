@@ -892,7 +892,7 @@
                     $grid_inner.infiniteScroll({
                         //path: '.infinite-btn > a',
                         path: function() {
-                            return 'http://dev.joomexp.com/wordpress72/theclick/?paged=2&page_id=14';
+                            $( document ).find('.infinite-btn > a').attr('href');
                           },
                         status: '.infinite-btn > a',
                         responseType: 'text',
@@ -901,10 +901,10 @@
 
                     $grid_inner.on( 'load.infiniteScroll', function( event, response ) {
                         
-                        var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
-
+                        //var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+                        $( response ).find('.infinite-btn > a').attr('href');
                         //$grid_inner.append($items);
-                        $grid_inner.infiniteScroll( 'appendItems', $items );
+                        //$grid_inner.infiniteScroll( 'appendItems', $items );
                         //$(document).find('.ef5-wc-loop-img').slick('unslick');
                         /*$grid_inner.imagesLoaded( function() {
                             setTimeout(function(){
