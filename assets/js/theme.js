@@ -820,7 +820,7 @@
             $('.filter-by-sidebar').removeClass('open').hide('slow');
         });
 
-        $(document).on('click','.btn-ajax-more a', function(e) {
+        /*$(document).on('click','.btn-ajax-more a', function(e) {
             e.preventDefault();
             var url = $(this).attr('href');
             var loading_class = 'ef5-loading';
@@ -846,7 +846,7 @@
                 $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
                 $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated'); 
             });
-        });
+        });*/
 
         $(document).on('click','.ef5-ajax-filter', function() {
             var form1 = $(this).closest('.ajax-filter');
