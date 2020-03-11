@@ -781,7 +781,7 @@
     function theclick_infinite_page(){
         if ( $(document).find( '.infinite-btn' ).length ) {
             var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap');
-            var loading_class = 'ef5-loading';
+             
             $grid.infiniteScroll({
                 path: '.infinite-btn > a',
                 status: '.infinite-btn > a',
@@ -790,9 +790,9 @@
 
             $grid.on( 'load.infiniteScroll', function( event, response, path ) {
                 $('.ef5-wc-loop-img').slick('unslick');
-                $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
-                var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
- 
+                 
+                var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+                $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap .ef5-wc-loop-img .loop-p-link + .loop-p-link').addClass('hidden');
                 $grid.append($items);
                 
                 $grid.imagesLoaded( function() {
@@ -805,8 +805,7 @@
                         infinite: true,
                     });
                 });
-                $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
-                $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');   
+                    
             });
         }
     }
