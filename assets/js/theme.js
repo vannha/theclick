@@ -890,9 +890,9 @@
                         },100);
                     });
                     $grid_inner.infiniteScroll({
-                        path: '.infinite-btn > a',
-                        append: '.ef5-posts',
-                        status: '.infinite-btn > a',
+                        path: $(document).find('.infinite-btn > a').attr('href'),
+                        //append: '.ef5-posts',
+                        //status: '.infinite-btn > a',
                         history: false,
                     });
 
