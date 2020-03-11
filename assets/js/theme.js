@@ -890,7 +890,7 @@
                         },100);
                     });
                     $grid_inner.infiniteScroll({
-                        path: $(document).find('.infinite-btn > a').attr('href'),
+                        path: $(document).find('.infinite-btn > a'),
                         //append: '.ef5-posts',
                         //status: '.infinite-btn > a',
                         history: false,
