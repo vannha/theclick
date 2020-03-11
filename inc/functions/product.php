@@ -266,7 +266,7 @@ function theclick_ef5_product_filter_action_callback(){
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
   
         $atts = (array)json_decode( $array_param['atts_str'] );
- //var_dump($atts);
+  
         extract($atts);
         $args = array(
             'post_type'      => 'product',
@@ -274,22 +274,17 @@ function theclick_ef5_product_filter_action_callback(){
             'post_status'    => 'publish',
             'post_parent'    => 0
         ); 
-        if (get_query_var('paged')){ 
-            $paged = get_query_var('paged'); 
-        }elseif(get_query_var('page')){ 
-            $paged = get_query_var('page'); 
-        }else{ 
-            $paged = 1; 
-        }
-        if($paged > 1){
-            $args['paged'] = $paged;
-        }
+
+        if(!empty($array_param['product_cat']))
+            $args['tax_query'] = $array_param['product_cat'];
+         
 
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
 
         $loop = $wp_query = new WP_Query($args);
+        echo $loop->found_posts;
         if($loop->found_posts > 0){
         
             ?>
