@@ -782,10 +782,7 @@
         if ( $(document).find( '.infinite-btn' ).length ) {
             var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap');
             $grid.infiniteScroll({
-                //path: '.infinite-btn > a',
-                path: function() {
-                    $( document ).find('.infinite-btn > a').attr('href');
-                },
+                path: '.infinite-btn > a',
                 status: '.infinite-btn > a',
                 history: false,
             });
