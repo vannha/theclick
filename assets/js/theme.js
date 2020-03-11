@@ -892,6 +892,7 @@
                     $grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
                         status: '.infinite-btn > a',
+                        responseType: 'text',
                         history: false,
                     });
 
