@@ -842,6 +842,8 @@
                         infinite: true,
                     });
                 });
+                $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
+                $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated'); 
             });
         });
 
