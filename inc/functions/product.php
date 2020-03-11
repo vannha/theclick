@@ -274,7 +274,7 @@ function theclick_ef5_product_filter_action_callback(){
             'post_status'    => 'publish',
             'post_parent'    => 0
         ); 
-        /*if (get_query_var('paged')){ 
+        if (get_query_var('paged')){ 
             $paged = get_query_var('paged'); 
         }elseif(get_query_var('page')){ 
             $paged = get_query_var('page'); 
@@ -283,7 +283,7 @@ function theclick_ef5_product_filter_action_callback(){
         }
         if($paged > 1){
             $args['paged'] = $paged;
-        }*/
+        }
 
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
