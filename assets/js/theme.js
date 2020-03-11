@@ -890,7 +890,10 @@
                         },100);
                     });
                     $grid_inner.infiniteScroll({
-                        path: '.infinite-btn > a',
+                        //path: '.infinite-btn > a',
+                        path: function() {
+                            return 'http://dev.joomexp.com/wordpress72/theclick/?paged=2&page_id=14';
+                          },
                         status: '.infinite-btn > a',
                         responseType: 'text',
                         history: false,
