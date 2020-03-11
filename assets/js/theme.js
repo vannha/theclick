@@ -893,19 +893,19 @@
                     $grid_inner.infiniteScroll({
                         //path: '.infinite-btn > a',
                         path: function() {
-                            $( document ).find('.infinite-btn > a').attr('href');
+                            $( data ).find('.infinite-btn > a').attr('href');
                         },
-                        status: '.infinite-btn > a',
+                        //status: '.infinite-btn > a',
                         responseType: 'text',
                         history: false,
                     });
 
                     $grid_inner.on( 'load.infiniteScroll', function( event, response ) {
                         
-                        //var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
-                        $( response ).find('.infinite-btn > a').attr('href');
-                        //$grid_inner.append($items);
-                        //$grid_inner.infiniteScroll( 'appendItems', $items );
+                        var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+                        //$( response ).find('.infinite-btn > a').attr('href');
+                        $grid_inner.append($items);
+                        $grid_inner.infiniteScroll( 'appendItems', $items );
                         //$(document).find('.ef5-wc-loop-img').slick('unslick');
                         /*$grid_inner.imagesLoaded( function() {
                             setTimeout(function(){
