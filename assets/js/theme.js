@@ -865,7 +865,7 @@
 
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content');
-            var $grid_inner = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
+            
             
             $.ajax({
                 type: 'POST',
@@ -874,7 +874,7 @@
                 //dataType: 'json',
                 success: function(data) {  
                     //console.log(response); return false;
-
+                    var $grid_inner = $(data).find('.ef5-product-grid-wrap');
                     $(document).find('.ef5-wc-loop-img').slick('unslick');
                     $grid.html(data);
                     $grid_inner.imagesLoaded( function() {
