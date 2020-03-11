@@ -325,13 +325,9 @@ function theclick_ef5_product_filter_action_callback(){
             $nextpage = intval( $paged ) + 1;
             if($nextpage <= $max_page){
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
-                    //next_posts_link( $loadmore_text );  //btn-ajax-more
-                   // $output = esc_url( get_next_posts_page_link( $max_page ) );
-                    //return get_pagenum_link( $nextpage );
                     $link_params=['page_id=14'];
                     $link_param_str = implode('&', $link_params);
                     $new_link = str_replace('wp-admin/admin-ajax.php?','?'.$link_param_str.'&', next_posts( $max_page, false ));
-                   // $new_link = add_query_arg( 'page_id', '14', $new_link );
                     echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
                 echo '</div>';     
             }
