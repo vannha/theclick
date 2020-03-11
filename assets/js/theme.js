@@ -820,7 +820,7 @@
             $('.filter-by-sidebar').removeClass('open').hide('slow');
         });
 
-        $(document).on('click','.btn-ajax-more', function(e) {
+        $(document).on('click','.btn-ajax-more a', function(e) {
             e.preventDefault();
             var url = $(this).attr('href');
             var loading_class = 'ef5-loading';
