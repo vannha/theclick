@@ -900,10 +900,10 @@
                         var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
                         $grid_inner.append($items);
-                        $('.ef5-wc-loop-img').slick('unslick');
-                        $grid_inner.imagesLoaded( function() {
+                        //$(document).find('.ef5-wc-loop-img').slick('unslick');
+                        /*$grid_inner.imagesLoaded( function() {
                             setTimeout(function(){
-                                $('.ef5-wc-loop-img').slick({
+                                $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
                                     vertical: false,
                                     slidesToShow: 1,
                                     focusOnSelect: true,
@@ -912,7 +912,7 @@
                                     infinite: true,
                                 });
                             },100);
-                        });
+                        });*/
                          
                     });
                     
