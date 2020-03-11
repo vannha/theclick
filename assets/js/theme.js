@@ -820,6 +820,29 @@
             $('.filter-by-sidebar').removeClass('open').hide('slow');
         });
 
+        $(document).on('click','.btn-ajax-more', function() {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            var loading_class = 'ef5-loading';
+            $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
+            var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content');
+            var $grid_inner = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
+            $.get(url, function (data) {
+                $('.ef5-wc-loop-img').slick('unslick');
+                $grid_inner.append($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+                $grid_inner.imagesLoaded( function() {
+                    $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                        vertical: false,
+                        slidesToShow: 1,
+                        focusOnSelect: true,
+                        prevArrow:"<button class='slick-prev'><span></span></button>",
+                        nextArrow:"<button class='slick-next'><span></span></button>",
+                        infinite: true,
+                    });
+                });
+            });
+        });
+
         $(document).on('click','.ef5-ajax-filter', function() {
             var form1 = $(this).closest('.ajax-filter');
             var loading_class = 'ef5-loading';
