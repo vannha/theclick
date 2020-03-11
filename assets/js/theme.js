@@ -830,7 +830,7 @@
             var $grid_inner = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
             $.get(url, function (data) {
                 $('.ef5-wc-loop-img').slick('unslick');
-                $('.btn-ajax-more ').removeClass('active');
+                $('.btn-ajax-more a').removeClass('active');
                 $grid_inner.append($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap'));
                 $grid_inner.imagesLoaded( function() {
                     $('.ef5-wc-loop-img').not('.slick-initialized').slick({
