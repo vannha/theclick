@@ -900,7 +900,7 @@
                         var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
                         $grid_inner.append($items);
-                        //$(document).find('.ef5-wc-loop-img').slick('unslick');
+                        $('.ef5-wc-loop-img').slick('unslick');
                         $grid_inner.imagesLoaded( function() {
                             setTimeout(function(){
                                 $('.ef5-wc-loop-img').slick({
