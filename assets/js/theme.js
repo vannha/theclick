@@ -792,7 +792,7 @@
                 $('.ef5-wc-loop-img').slick('unslick');
                  
                 var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
-                $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap .ef5-wc-loop-img > a + a').addClass('hidden');
+                $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap .ef5-wc-loop-img > a').addClass('hidden');
                 $grid.append($items);
                 
                 /*$grid.imagesLoaded( function() {
