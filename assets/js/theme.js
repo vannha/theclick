@@ -875,14 +875,17 @@
                     $('.ef5-wc-loop-img').slick('unslick');
                     $grid.html(data);
                     $grid_inner.imagesLoaded( function() {
-                        $('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                            vertical: false,
-                            slidesToShow: 1,
-                            focusOnSelect: true,
-                            prevArrow:"<button class='slick-prev'><span></span></button>",
-                            nextArrow:"<button class='slick-next'><span></span></button>",
-                            infinite: true,
-                        });
+                        setTimeout(function(){
+                            $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                                vertical: false,
+                                slidesToShow: 1,
+                                focusOnSelect: true,
+                                prevArrow:"<button class='slick-prev'><span></span></button>",
+                                nextArrow:"<button class='slick-next'><span></span></button>",
+                                infinite: true,
+                            });
+                        },100);
+                        
                     });
                     /*$grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
