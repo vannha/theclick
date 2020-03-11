@@ -104,7 +104,9 @@ $ef5-anims: (
 		@include animation($anim 2s linear infinite);
 	}
 }
-
+.hidden{
+	display: none;
+}
 // Background size
 .bg-cover{
 	background-size: cover;
