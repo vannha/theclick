@@ -332,7 +332,7 @@ function theclick_ef5_product_filter_action_callback(){
                     $link_param_str = implode('&', $link_params);
                     $new_link = str_replace('wp-admin/admin-ajax.php?','?'.$link_param_str.'&', next_posts( $max_page, false ));
                    // $new_link = add_query_arg( 'page_id', '14', $new_link );
-                   // echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
+                    echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
                 echo '</div>';     
             }
         }
