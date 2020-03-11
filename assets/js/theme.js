@@ -891,8 +891,7 @@
                     });
                     $grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
-                        //append: '.ef5-posts',
-                        //status: '.infinite-btn > a',
+                        status: '.infinite-btn > a',
                         history: false,
                     });
 
