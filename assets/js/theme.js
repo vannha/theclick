@@ -855,7 +855,7 @@
                             infinite: true,
                         });
                     });
-                    $grid_inner.infiniteScroll({
+                    /*$grid_inner.infiniteScroll({
                         path: '.infinite-btn > a',
                         status: '.infinite-btn > a',
                         history: false,
@@ -878,7 +878,7 @@
                             });
                         });
                          
-                    });
+                    });*/
                     
 
                     /*$grid_inner.imagesLoaded( function() {
