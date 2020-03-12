@@ -40,12 +40,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
     );
 
     $args['meta_query'] = array(
-        'relation'    => 'AND',
-        array(
-            'key'       => 'your_custom_meta_key',
-            'value'     => '1',
-            'compare'   => '=',
-        ),
+        'relation'    => 'AND'
     );
     /*$meta_query[] = wc_get_min_max_price_meta_query(array(
         'min_price' => 39,
@@ -365,12 +360,7 @@ function theclick_ef5_product_filter_action_callback(){
         
 
         $args['meta_query'] = array(
-            'relation'    => 'AND',
-            array(
-                'key'       => 'your_custom_meta_key',
-                'value'     => '1',
-                'compare'   => '=',
-            ),
+            'relation'    => 'AND'
         );
         $args['meta_query'][] = wc_get_min_max_price_meta_query(array(
             'min_price' => 39,
