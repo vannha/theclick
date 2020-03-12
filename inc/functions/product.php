@@ -303,12 +303,12 @@ function theclick_ef5_product_filter_action_callback(){
         );
         $link_params = [];
         if(!empty($array_param['page_id'])){
-            $link_params[] = 'page_id='.$array_param['page_id'];
+            $link_params[] = !empty($array_param['page_id']) ? 'page_id='.$array_param['page_id'] : 'page_id='.home_url();
         }else{
 
         }
          
-        var_dump($_GET['page_id']);
+        var_dump(home_url());
          
 
         if(!empty($array_param['product_cat'])){
