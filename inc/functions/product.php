@@ -302,17 +302,8 @@ function theclick_ef5_product_filter_action_callback(){
             ),
         );
         $link_params = [];
-        if(!empty($array_param['page_id'])){
-            $link_params[] = !empty($array_param['page_id']) ? 'page_id='.$array_param['page_id'] : 'page_id='.home_url();
-        }else{
-
-        }
-        /*$pagename = get_query_var( 'pagename' );
-        if ( !$pagename) {
-            $postx = $wp_query->get_queried_object();
-            $pagenamea = $postx->post_name;
-        } */
-        var_dump($wp_query);
+         
+        $link_params[] = !empty($array_param['page_id']) ? 'page_id='.$array_param['page_id'] : 'page_id=1';
          
 
         if(!empty($array_param['product_cat'])){
