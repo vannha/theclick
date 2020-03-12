@@ -310,7 +310,8 @@ function theclick_ef5_product_filter_action_callback(){
         ];
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
         $atts = (array)json_decode( $array_param['atts_str'] );
-
+        var_dump($array_param['min_price']);
+        var_dump($array_param['max_price']);
         extract($atts);
         
         $args = array(
