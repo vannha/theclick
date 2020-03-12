@@ -43,6 +43,10 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
         $args['tax_query'][]= $tax_query;
     }
+    $args_arr = theclick_product_filter_type_args($type,$args);
+    return $args_arr;
+}
+function theclick_product_filter_type_args($type,$args){
     switch ($type) {
         case 'best_selling':
             $args['meta_key']='total_sales';
@@ -54,10 +58,10 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
             $args['ignore_sticky_posts'] = 1;
             $args['meta_query'] = array();
             $args['tax_query'][] = array(
-				'taxonomy' => 'product_visibility',
-				'field'    => 'term_taxonomy_id',
-				'terms'    => $product_visibility_term_ids['featured'],
-			);
+                'taxonomy' => 'product_visibility',
+                'field'    => 'term_taxonomy_id',
+                'terms'    => $product_visibility_term_ids['featured'],
+            );
             break;
         case 'top_rate':
             $args['meta_key']   ='_wc_average_rating';
@@ -99,13 +103,13 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         case 'separate':
             $args['meta_query'] = array();
             if ( ! empty( $product_ids ) ) {
-    			$ids = array_map( 'trim', explode( ',', $product_ids ) );
-    			if ( 1 === count( $ids ) ) {
-    				$args['p'] = $ids[0];
-    			} else {
-    				$args['post__in'] = $ids;
-    			}
-    		}
+                $ids = array_map( 'trim', explode( ',', $product_ids ) );
+                if ( 1 === count( $ids ) ) {
+                    $args['p'] = $ids[0];
+                } else {
+                    $args['post__in'] = $ids;
+                }
+            }
             break;
     }
     return $args;
@@ -285,10 +289,11 @@ function theclick_ef5_product_filter_action_callback(){
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
     } else {
-        
+
         $array_param = [
             'post_per_page'   => $_POST['post_per_page'],
             'product_cat'     => $_POST['product_cat'],
+            'filter_type'     => $_POST['filter_type'],
             'min_price'       => $_POST['min_price'],
             'max_price'       => $_POST['max_price'],
             'atts_str'        => $_POST['atts_str'],
@@ -299,6 +304,7 @@ function theclick_ef5_product_filter_action_callback(){
         $atts = (array)json_decode( $array_param['atts_str'] );
 
         extract($atts);
+        
         $args = array(
             'post_type'      => 'product',
             'posts_per_page' => $array_param['post_per_page'],
@@ -343,16 +349,16 @@ function theclick_ef5_product_filter_action_callback(){
                 }
             }
         }
-          
-         
-        $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
-
-        $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
         
-        $loop = $wp_query = new WP_Query($args);
+        $args_arr = theclick_product_filter_type_args($array_param['filter_type'],$args);  
+         
+         
+        $loop = $wp_query = new WP_Query($args_arr);
+
         echo $loop->found_posts;
         if($loop->found_posts > 0){
-        
+            $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
+            $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
             ?>
             <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php 
