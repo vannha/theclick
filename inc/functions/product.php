@@ -307,9 +307,8 @@ function theclick_ef5_product_filter_action_callback(){
         }else{
 
         }
-        $queried_object = $wp_query->get_queried_object();
-        $linksss = get_term_link( $queried_object->slug, $queried_object->taxonomy );
-        var_dump($queried_object);
+         
+        var_dump($_GET['page_id']);
          
 
         if(!empty($array_param['product_cat'])){
