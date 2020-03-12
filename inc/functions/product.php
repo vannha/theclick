@@ -39,6 +39,18 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         ),
     );
 
+    $args['meta_query'] = array(
+        'relation'    => 'AND',
+        array(
+            'key'       => 'your_custom_meta_key',
+            'value'     => '1',
+            'compare'   => '=',
+        ),
+    );
+    /*$meta_query[] = wc_get_min_max_price_meta_query(array(
+        'min_price' => 39,
+        'max_price' => 41,
+    ));*/
     if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
         $args['tax_query'][]= $tax_query;
@@ -52,11 +64,11 @@ function theclick_product_filter_type_args($type,$args){
             $args['meta_key']='total_sales';
             $args['orderby']='meta_value_num';
             $args['ignore_sticky_posts']   = 1;
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             break;
         case 'featured_product':
             $args['ignore_sticky_posts'] = 1;
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             $args['tax_query'][] = array(
                 'taxonomy' => 'product_visibility',
                 'field'    => 'term_taxonomy_id',
@@ -67,15 +79,15 @@ function theclick_product_filter_type_args($type,$args){
             $args['meta_key']   ='_wc_average_rating';
             $args['orderby']    ='meta_value_num';
             $args['order']      ='DESC';
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             break;
         case 'recent_product':
             $args['orderby']    = 'date';
             $args['order']      = 'DESC';
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             break;
         case 'on_sale':
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             $args['post__in'] = wc_get_product_ids_on_sale();
             break;
         case 'recent_review':
@@ -89,11 +101,11 @@ function theclick_product_filter_type_args($type,$args){
                 $_pids[] = $re->comment_post_ID;
             }
 
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             $args['post__in'] = $_pids;
             break;
         case 'deals':
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             $args['meta_query'][] = array(
                                  'key' => '_sale_price_dates_to',
                                  'value' => '0',
@@ -101,7 +113,7 @@ function theclick_product_filter_type_args($type,$args){
             $args['post__in'] = wc_get_product_ids_on_sale();
             break;
         case 'separate':
-            $args['meta_query'] = array();
+            //$args['meta_query'] = array();
             if ( ! empty( $product_ids ) ) {
                 $ids = array_map( 'trim', explode( ',', $product_ids ) );
                 if ( 1 === count( $ids ) ) {
@@ -349,9 +361,19 @@ function theclick_ef5_product_filter_action_callback(){
                 }
             }
         }
-        $args['meta_query'] = wc_get_min_max_price_meta_query(array(
-          'min_price' => 39,
-          'max_price' => 41,
+        
+
+        $args['meta_query'] = array(
+            'relation'    => 'AND',
+            array(
+                'key'       => 'your_custom_meta_key',
+                'value'     => '1',
+                'compare'   => '=',
+            ),
+        );
+        $args['meta_query'][] = wc_get_min_max_price_meta_query(array(
+            'min_price' => 39,
+            'max_price' => 41,
         ));
 
         if(!empty($array_param['filter_type'])){
