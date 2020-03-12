@@ -307,7 +307,7 @@ function theclick_ef5_product_filter_action_callback(){
         
         $args = array(
             'post_type'      => 'product',
-            'posts_per_page' => $array_param['post_per_page'],
+            'posts_per_page' => 20, //$array_param['post_per_page'],
             'post_status'    => 'publish',
             'post_parent'    => 0,
             'date_query' => array(
