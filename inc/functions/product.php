@@ -310,8 +310,7 @@ function theclick_ef5_product_filter_action_callback(){
         ];
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
         $atts = (array)json_decode( $array_param['atts_str'] );
-        var_dump($array_param['min_price']);
-        var_dump($array_param['max_price']);
+
         extract($atts);
         
         $args = array(
@@ -363,9 +362,10 @@ function theclick_ef5_product_filter_action_callback(){
         $args['meta_query'] = array(
             'relation'    => 'AND'
         );
+
         $args['meta_query'][] = wc_get_min_max_price_meta_query(array(
-            'min_price' => 39,
-            'max_price' => 41,
+            'min_price' => $array_param['min_price'],
+            'max_price' => $array_param['max_price']
         ));
 
         if(!empty($array_param['filter_type'])){
