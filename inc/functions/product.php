@@ -263,7 +263,7 @@ function theclick_product_filter_sidebar($atts = ''){
 add_action( 'wp_ajax_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
 add_action( 'wp_ajax_nopriv_ef5_product_filter_action', 'theclick_ef5_product_filter_action_callback',9 );
 function theclick_ef5_product_filter_action_callback(){
-    global $paged, $pagename, $wp_query;
+    global $paged, $wp_query;
     if ( ! isset( $_POST['_acf_nonce'] ) || ! wp_verify_nonce( $_POST['_acf_nonce'], 'ajax_filter_action' ) ) {
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
@@ -312,7 +312,7 @@ function theclick_ef5_product_filter_action_callback(){
             $postx = $wp_query->get_queried_object();
             $pagenamea = $postx->post_name;
         } */
-        var_dump([$paged,$pagename]);
+        var_dump($wp_query);
          
 
         if(!empty($array_param['product_cat'])){
@@ -379,7 +379,7 @@ function theclick_ef5_product_filter_action_callback(){
 
             $nextpage = intval( $paged ) + 1;
             $link_param_str = implode('&', $link_params);
-            var_dump($link_param_str);
+
             if($nextpage <= $max_page){
                 
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
