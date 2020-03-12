@@ -39,10 +39,10 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         ),
     );
 
-    /*if(!empty($taxonomies) || !empty($taxonomies_exclude)){
+    if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
-        $args['tax_query']= $tax_query;
-    }*/
+        $args['tax_query'][]= $tax_query;
+    }
     switch ($type) {
         case 'best_selling':
             $args['meta_key']='total_sales';
