@@ -148,8 +148,8 @@ function theclick_product_filter_sidebar($atts = [],$default_title=[]){
                 </div>
             </div>
             <?php if(!empty($filter_type)): ?>
-            <div class="filter filter-type">
-                <span class="filter-name"><?php echo esc_html__( 'Filter Type', 'theclick' ) ?></span>
+            <div class="filter sort-type">
+                <span class="filter-name"><?php echo esc_html__( 'Type', 'theclick' ) ?></span>
                 <div class="filter-control">
                     <select name="filter_type" tabindex="-1" class="select2" aria-hidden="true">
                         <?php 
