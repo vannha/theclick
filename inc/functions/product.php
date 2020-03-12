@@ -111,13 +111,14 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
     return $args;
 }
 
-function theclick_product_filter_sidebar($atts = ''){
+function theclick_product_filter_sidebar($atts = [],$default_title=[]){
     global $wpdb;
     extract($atts);
     $current_url = theclick_get_current_page_url();
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $attribute_taxonomies = wc_get_attribute_taxonomies();
-    
+    $filter_type=(array) vc_param_group_parse_atts($filter_type );
+
     $att_tax = [];
     $att_data = [];
     if ( ! empty( $attribute_taxonomies ) ) {
@@ -134,7 +135,7 @@ function theclick_product_filter_sidebar($atts = ''){
     ?>
     <form action="<?php echo esc_url($current_url) ?>" method="get" class="ajax-filter">
         <div class="filters">
-            <div class="filter product_cat">
+            <div class="filter product-cat">
                 <span class="filter-name"><?php echo esc_html__( 'Categories', 'theclick' ) ?></span>
                 <div class="filter-control">
                     <select name="product_cat" tabindex="-1" class="select2" aria-hidden="true">
@@ -146,13 +147,29 @@ function theclick_product_filter_sidebar($atts = ''){
                     </select>
                 </div>
             </div>
+            <?php if(!empty($filter_type)): ?>
+            <div class="filter filter-type">
+                <span class="filter-name"><?php echo esc_html__( 'Sort Type', 'theclick' ) ?></span>
+                <div class="filter-control">
+                    <select name="filter_type" tabindex="-1" class="select2" aria-hidden="true">
+                        <?php 
+                        foreach($filter_type as $ft){ 
+                            if( !empty($ft['filter_type_item']) ){
+                                $title = !empty($ft['filter_title_item']) ? $ft['filter_title_item'] : $default_title[$ft['filter_type_item']];
+                                echo '<option value="'.$ft['filter_type_item'].'">'.$title.'</option>';
+                            }
+                        }?>
+                    </select>
+                </div>
+            </div>
+            <?php endif; ?>
             <?php 
             if(!empty($att_data)): 
                 $att_data_serial = [];
                 foreach($att_data as $key => $att_dt){
                     $att_data_serial[]= 'pa_'.$key;
                 ?>
-                <div class="filter product_<?php echo esc_attr($key)?>">
+                <div class="filter product-<?php echo esc_attr($key)?>">
                     <span class="filter-name"><?php echo esc_html( $att_tax[$key]) ?></span>
                     <div class="filter-control">
                         <select name="pa_<?php echo esc_attr($key);?>" tabindex="-1" class="select2" aria-hidden="true">
