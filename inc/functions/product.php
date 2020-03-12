@@ -308,7 +308,7 @@ function theclick_ef5_product_filter_action_callback(){
 
         }
          
-        var_dump(home_url());
+        var_dump(get_page_link(false));
          
 
         if(!empty($array_param['product_cat'])){
