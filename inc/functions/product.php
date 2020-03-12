@@ -269,40 +269,49 @@ function theclick_ef5_product_filter_action_callback(){
        exit;
     } else {
         $array_param = [
-            'atts_str'        => $_POST['atts_str'],
             'post_per_page'   => $_POST['post_per_page'],
             'product_cat'     => $_POST['product_cat'],
-            'att_data_serial' => $_POST['att_data_serial'],
             'min_price'       => $_POST['min_price'],
-            'max_price'       => $_POST['max_price']
+            'max_price'       => $_POST['max_price'],
+            'atts_str'        => $_POST['atts_str'],
+            'att_data_serial' => $_POST['att_data_serial'],
         ];
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
   
         $atts = (array)json_decode( $array_param['atts_str'] );
-  
+        var_dump($array_param['att_data_serial'] );
         extract($atts);
         $args = array(
             'post_type'      => 'product',
             'posts_per_page' => $array_param['post_per_page'],
             'post_status'    => 'publish',
-            'post_parent'    => 0
+            'post_parent'    => 0,
+            'date_query' => array(
+                array(
+                   'before' => date('Y-m-d H:i:s', current_time( 'timestamp' ))
+                )
+             ),
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_visibility',
+                    'field'    => 'term_taxonomy_id',
+                    'terms'    => is_search() ? $product_visibility_term_ids['exclude-from-search'] : $product_visibility_term_ids['exclude-from-catalog'],
+                    'operator' => 'NOT IN',
+                )
+            ),
         ); 
 
         if(!empty($array_param['product_cat']))
-            $args['tax_query'] = array(
-                array(
-                    'taxonomy' => 'product_cat',
-                    'field' => 'slug',
-                    'terms' => $array_param['product_cat']
-                )
-            );
-            
-        $args['tax_query'] = array(
-            array(
-                'taxonomy' => 'pa_color',
+            $args['tax_query'][] = array(
+                'taxonomy' => 'product_cat',
                 'field' => 'slug',
-                'terms' => 'gray'
-            )
+                'terms' => $array_param['product_cat']
+            );
+        if(!empty($array_param['product_cat']))    
+        $args['tax_query'][] = array(
+            'taxonomy' => 'pa_color',
+            'field' => 'slug',
+            'terms' => 'gray'
         ); 
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
