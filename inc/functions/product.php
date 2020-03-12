@@ -276,6 +276,7 @@ function theclick_ef5_product_filter_action_callback(){
             'max_price'       => $_POST['max_price'],
             'atts_str'        => $_POST['atts_str'],
             'att_data_serial' => $_POST['att_data_serial'],
+            'page_id'         => $_POST['page_id']  
         ];
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
         $atts = (array)json_decode( $array_param['atts_str'] );
@@ -300,8 +301,16 @@ function theclick_ef5_product_filter_action_callback(){
                 )
             ),
         );
-        var_dump(get_the_ID());
-        $link_params=['page_id=14']; 
+        $link_params = [];
+        if(!empty($array_param['page_id'])){
+            $link_params[] = 'page_id='.$array_param['page_id'];
+        }else{
+
+        }
+        $queried_object = get_queried_object();
+        $linksss = get_term_link( $queried_object->slug, $queried_object->taxonomy );
+        var_dump($queried_object);
+         
 
         if(!empty($array_param['product_cat'])){
             $args['tax_query'][] = array(
