@@ -349,11 +349,13 @@ function theclick_ef5_product_filter_action_callback(){
                 }
             }
         }
-        
-        $args_arr = theclick_product_filter_type_args($array_param['filter_type'],$args);  
+        if(!empty($array_param['filter_type'])){
+            $args = theclick_product_filter_type_args($array_param['filter_type'],$args);  
+            $link_params[] = 'filter_type='.$array_param['filter_type'];
+        }
          
          
-        $loop = $wp_query = new WP_Query($args_arr);
+        $loop = $wp_query = new WP_Query($args);
 
         echo $loop->found_posts;
         if($loop->found_posts > 0){
