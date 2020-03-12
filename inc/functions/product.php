@@ -368,6 +368,9 @@ function theclick_ef5_product_filter_action_callback(){
             'max_price' => $array_param['max_price']
         ));
 
+        $link_params[] = 'min_price='.$array_param['min_price'];
+        $link_params[] = 'max_price='.$array_param['max_price'];
+
         if(!empty($array_param['filter_type'])){
             $args = theclick_product_filter_type_args($array_param['filter_type'],$args);  
             $link_params[] = 'filter_type='.$array_param['filter_type'];
