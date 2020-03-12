@@ -312,7 +312,7 @@ function theclick_ef5_product_filter_action_callback(){
             $postx = $wp_query->get_queried_object();
             $pagenamea = $postx->post_name;
         } */
-        var_dump([$pagename,$pagename]);
+        var_dump([$paged,$pagename]);
          
 
         if(!empty($array_param['product_cat'])){
