@@ -51,7 +51,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         $args['tax_query'][]= $tax_query;
     }
     $args_arr = theclick_product_filter_type_args($type,$args);
-    var_dump($args_arr);
+     
     return $args_arr;
 }
 function theclick_product_filter_type_args($type,$args){
