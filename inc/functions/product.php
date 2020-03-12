@@ -24,8 +24,22 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
-	    'post_parent' => 0
+	    'post_parent' => 0,
+        'date_query' => array(
+            array(
+               'before' => date('Y-m-d H:i:s', current_time( 'timestamp' ))
+            )
+         ),
+         'tax_query' => array(
+            array(
+                'taxonomy' => 'product_visibility',
+                'field'    => 'term_taxonomy_id',
+                'terms'    => is_search() ? $product_visibility_term_ids['exclude-from-search'] : $product_visibility_term_ids['exclude-from-catalog'],
+                'operator' => 'NOT IN',
+            )
+         ),
     );
+
     if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
         $args['tax_query']= $tax_query;
