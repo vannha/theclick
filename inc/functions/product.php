@@ -309,14 +309,18 @@ function theclick_ef5_product_filter_action_callback(){
         if(!empty($array_param['att_data_serial'])){
             $array_param['att_data_serial'] = str_replace('\"', '"',$array_param['att_data_serial']);
             $att_data_serial = (array)json_decode( $array_param['att_data_serial'] );
-            var_dump($att_data_serial );
+            foreach ($att_data_serial as $att_tax) {
+                if(!empty($_POST[$att_tax])){
+                    $args['tax_query'][] = array(
+                        'taxonomy' => $att_tax,
+                        'field' => 'slug',
+                        'terms' => $_POST[$att_tax]
+                    );
+                }
+            }
         }
-        if(!empty($array_param['product_cat']))    
-        $args['tax_query'][] = array(
-            'taxonomy' => 'pa_color',
-            'field' => 'slug',
-            'terms' => 'gray'
-        ); 
+          
+         
         $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 
         $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
