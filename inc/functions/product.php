@@ -28,7 +28,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
             array(
                'before' => date('Y-m-d H:i:s', current_time( 'timestamp' ))
             )
-         ),
+        ),
         'tax_query' => array(
             array(
                 'taxonomy' => 'product_visibility',
@@ -353,8 +353,7 @@ function theclick_ef5_product_filter_action_callback(){
             $args = theclick_product_filter_type_args($array_param['filter_type'],$args);  
             $link_params[] = 'filter_type='.$array_param['filter_type'];
         }
-         
-         
+          
         $loop = $wp_query = new WP_Query($args);
 
         echo $loop->found_posts;
