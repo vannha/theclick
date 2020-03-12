@@ -307,8 +307,12 @@ function theclick_ef5_product_filter_action_callback(){
         }else{
 
         }
-         
-        var_dump(get_page_link(false));
+        $pagename = get_query_var( 'pagename' );
+        if ( !$pagename) {
+            $postx = $wp_query->get_queried_object();
+            $pagenamea = $postx->post_name;
+        } 
+        var_dump([$pagename,$pagenamea]);
          
 
         if(!empty($array_param['product_cat'])){
