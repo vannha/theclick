@@ -268,6 +268,7 @@ function theclick_ef5_product_filter_action_callback(){
        echo esc_html__( 'Sorry, your nonce did not verify.','theclick');
        exit;
     } else {
+        
         $array_param = [
             'post_per_page'   => $_POST['post_per_page'],
             'product_cat'     => $_POST['product_cat'],
@@ -298,14 +299,17 @@ function theclick_ef5_product_filter_action_callback(){
                     'operator' => 'NOT IN',
                 )
             ),
-        ); 
+        );
+        $link_params=['page_id=14']; 
 
-        if(!empty($array_param['product_cat']))
+        if(!empty($array_param['product_cat'])){
             $args['tax_query'][] = array(
                 'taxonomy' => 'product_cat',
                 'field' => 'slug',
                 'terms' => $array_param['product_cat']
             );
+            $link_params[] = 'product_cat='.$array_param['product_cat'];
+        }
         if(!empty($array_param['att_data_serial'])){
             $array_param['att_data_serial'] = str_replace('\"', '"',$array_param['att_data_serial']);
             $att_data_serial = (array)json_decode( $array_param['att_data_serial'] );
@@ -316,6 +320,7 @@ function theclick_ef5_product_filter_action_callback(){
                         'field' => 'slug',
                         'terms' => $_POST[$att_tax]
                     );
+                    $link_params[] = $att_tax.'='.$_POST[$att_tax];
                 }
             }
         }
@@ -361,10 +366,8 @@ function theclick_ef5_product_filter_action_callback(){
 
             $nextpage = intval( $paged ) + 1;
             if($nextpage <= $max_page){
+                $link_param_str = implode('&', $link_params);
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
-                    $link_params=['page_id=14'];
-                    $link_params[] = 'product_cat='.$array_param['product_cat'];
-                    $link_param_str = implode('&', $link_params);
                     $new_link = str_replace('wp-admin/admin-ajax.php?','?'.$link_param_str.'&', next_posts( $max_page, false ));
                     echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
                 echo '</div>';     
