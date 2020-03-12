@@ -358,7 +358,7 @@ function theclick_ef5_product_filter_action_callback(){
             $args = theclick_product_filter_type_args($array_param['filter_type'],$args);  
             $link_params[] = 'filter_type='.$array_param['filter_type'];
         }
-        var_dump($args);  
+ 
         $loop = $wp_query = new WP_Query($args);
 
         echo $loop->found_posts;
