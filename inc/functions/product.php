@@ -277,9 +277,8 @@ function theclick_ef5_product_filter_action_callback(){
             'att_data_serial' => $_POST['att_data_serial'],
         ];
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
-  
         $atts = (array)json_decode( $array_param['atts_str'] );
-        var_dump($array_param['att_data_serial'] );
+
         extract($atts);
         $args = array(
             'post_type'      => 'product',
@@ -307,6 +306,11 @@ function theclick_ef5_product_filter_action_callback(){
                 'field' => 'slug',
                 'terms' => $array_param['product_cat']
             );
+        if(!empty($array_param['att_data_serial'])){
+            $array_param['att_data_serial'] = str_replace('\"', '"',$array_param['att_data_serial']);
+            $att_data_serial = (array)json_decode( $array_param['att_data_serial'] );
+            var_dump($att_data_serial );
+        }
         if(!empty($array_param['product_cat']))    
         $args['tax_query'][] = array(
             'taxonomy' => 'pa_color',
