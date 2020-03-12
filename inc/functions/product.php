@@ -300,7 +300,7 @@ function theclick_ef5_product_filter_action_callback(){
                 )
             ),
         );
-        var_dump(get_page_link(false));
+        var_dump(get_the_ID());
         $link_params=['page_id=14']; 
 
         if(!empty($array_param['product_cat'])){
