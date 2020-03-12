@@ -301,10 +301,8 @@ function theclick_ef5_product_filter_action_callback(){
                 )
             ),
         );
-        $link_params = [];
-         
-        $link_params[] = !empty($array_param['page_id']) ? 'page_id='.$array_param['page_id'] : 'page_id=1';
-         
+        $link_params = [];  $array_param['page_id']='';
+        $link_params[] = !empty($array_param['page_id']) ? 'page_id='.$array_param['page_id'] : '';
 
         if(!empty($array_param['product_cat'])){
             $args['tax_query'][] = array(
@@ -370,7 +368,7 @@ function theclick_ef5_product_filter_action_callback(){
 
             $nextpage = intval( $paged ) + 1;
             $link_param_str = implode('&', $link_params);
-
+            var_dump($link_param_str);
             if($nextpage <= $max_page){
                 
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
