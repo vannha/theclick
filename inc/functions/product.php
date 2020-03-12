@@ -365,8 +365,10 @@ function theclick_ef5_product_filter_action_callback(){
             }
 
             $nextpage = intval( $paged ) + 1;
+            $link_param_str = implode('&', $link_params);
+            var_dump($link_param_str);
             if($nextpage <= $max_page){
-                $link_param_str = implode('&', $link_params);
+                
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
                     $new_link = str_replace('wp-admin/admin-ajax.php?','?'.$link_param_str.'&', next_posts( $max_page, false ));
                     echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
