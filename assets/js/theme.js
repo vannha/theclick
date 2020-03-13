@@ -743,7 +743,7 @@
                         slideshow      : false,
                         animationLoop  : false, // Breaks photoswipe pagination if true.
                         itemWidth      : itemW,
-                        itemMargin     : itemSpace,
+                        itemMargin     : 30, //itemSpace,
                         start: function(slider){
 
                         }
