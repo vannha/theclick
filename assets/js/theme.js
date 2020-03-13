@@ -26,7 +26,7 @@
         theclick_remove_cart_actions();
         theclick_infinite_page();
         theclick_woo_filter_sidebar();
-        theclick_woo_filter_type();
+        //theclick_woo_filter_type();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
