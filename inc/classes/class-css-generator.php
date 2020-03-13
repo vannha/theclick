@@ -329,7 +329,7 @@ class TheClick_CSS_Generator
         printf( '$theclick_product_gallery_thumbnail_h_w: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_h_w')));
         printf( '$theclick_product_gallery_thumbnail_h_h: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_h_h')));
         printf( '$theclick_product_gallery_thumbnail_space: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_space')));
-        printf( '$theclick_woocommerce_cart_item_thumbnail_size: %s;', str_replace('px','', theclick_configs('theclick_woocommerce_cart_item_thumbnail_size')));
+        printf( '$theclick_woocommerce_cart_item_thumbnail_size: %s;', str_replace('px','', theclick_configs('theclick_woocommerce_cart_item_thumbnail_size')['width']));
 
         /*printf( '$theclick_product_single_image_w: %s;', theclick_configs('theclick_product_single_image_w') );
         printf( '$theclick_product_single_image_h: %s;', theclick_configs('theclick_product_single_image_h') );
