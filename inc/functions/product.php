@@ -318,7 +318,7 @@ function theclick_ef5_product_filter_action_callback(){
             'att_data_serial' => $_POST['att_data_serial'],
             'page_id'         => $_POST['page_id']  
         ];
-         var_dump($array_param);
+
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
         $atts = (array)json_decode( $array_param['atts_str'] );
 

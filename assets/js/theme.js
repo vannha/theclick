@@ -848,8 +848,8 @@
                 //dataType: 'html',
                 success: function(data) {  
                     if( filter_type !== ''){
-                        $(document).find('.filter-type filter-link').removeClass('active');
-                        $(document).find('.filter-type filter-link-'+filter_type).addClass('active');
+                        $(document).find('.filter-type .filter-link').removeClass('active');
+                        $(document).find('.filter-type .filter-link-'+filter_type).addClass('active');
                     }
                     $(document).find('.ef5-wc-loop-img').slick('unslick');
                     $grid.html(data);
