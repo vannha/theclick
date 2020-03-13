@@ -1325,15 +1325,6 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'default'  => $default_gallery_layout
                 ),
                 array(
-                    'title'    => esc_html__('Gallery Width', 'theclick'),
-                    'subtitle' => esc_html__('Enter the gallery image width', 'theclick'),
-                    'id'       => 'theclick_product_single_gallery_w',
-                    'type'     => 'dimensions',
-                    'height'   => false,
-                    'units'    => array('px'),
-                    'default'  => array()
-                ),
-                array(
                     'id'       => 'product_gallery_thumb_position',
                     'type'     => 'button_set',
                     'title'    => esc_html__('Thumbnail Position', 'theclick'),

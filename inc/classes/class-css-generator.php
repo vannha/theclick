@@ -318,7 +318,20 @@ class TheClick_CSS_Generator
 
   
         /* WooCommerce */
-        printf( '$theclick_product_single_image_w: %s;', theclick_configs('theclick_product_single_image_w') );
+        printf( '$theclick_product_single_image_w: %s;', str_replace('px','', theclick_configs('theclick_product_single_image_w'));
+        printf( '$theclick_product_single_image_h: %s;', str_replace('px','', theclick_configs('theclick_product_single_image_h'));
+        printf( '$theclick_product_loop_image_w: %s;', str_replace('px','', theclick_configs('theclick_product_loop_image_w'));
+        printf( '$theclick_product_loop_image_h: %s;', str_replace('px','', theclick_configs('theclick_product_loop_image_h'));
+        printf( '$theclick_product_gallery_thumbnail_w: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_w'));
+        printf( '$theclick_product_gallery_thumbnail_h: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_h'));
+        printf( '$theclick_product_gallery_thumbnail_v_w: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_v_w'));
+        printf( '$theclick_product_gallery_thumbnail_v_h: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_v_h'));
+        printf( '$theclick_product_gallery_thumbnail_h_w: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_h_w'));
+        printf( '$theclick_product_gallery_thumbnail_h_h: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_h_h'));
+        printf( '$theclick_product_gallery_thumbnail_space: %s;', str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_space'));
+        printf( '$theclick_woocommerce_cart_item_thumbnail_size: %s;', str_replace('px','', theclick_configs('theclick_woocommerce_cart_item_thumbnail_size'));
+
+        /*printf( '$theclick_product_single_image_w: %s;', theclick_configs('theclick_product_single_image_w') );
         printf( '$theclick_product_single_image_h: %s;', theclick_configs('theclick_product_single_image_h') );
         
         printf( '$theclick_product_loop_image_w: %s;', theclick_configs('theclick_product_loop_image_w') );
@@ -333,7 +346,7 @@ class TheClick_CSS_Generator
         printf( '$theclick_product_gallery_thumbnail_h_w: %s;', theclick_configs('theclick_product_gallery_thumbnail_h_w') );
         printf( '$theclick_product_gallery_thumbnail_h_h: %s;', theclick_configs('theclick_product_gallery_thumbnail_h_h') );
 
-        printf( '$theclick_product_gallery_thumbnail_space: %s;', theclick_configs('theclick_product_gallery_thumbnail_space') );
+        printf( '$theclick_product_gallery_thumbnail_space: %s;', theclick_configs('theclick_product_gallery_thumbnail_space') );*/
 
 
         return ob_get_clean();

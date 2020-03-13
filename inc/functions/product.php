@@ -22,18 +22,30 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
         ),
     );
 
-    $args['meta_query'] = array(
-        'relation'    => 'AND'
-    );
-    var_dump($param_args);
-    /*$meta_query[] = wc_get_min_max_price_meta_query(array(
-        'min_price' => 39,
-        'max_price' => 41,
-    ));*/
     if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
         $args['tax_query'][]= $tax_query;
     }
+    if( !empty($param_args['pro_atts']) ){
+        foreach ($param_args['pro_atts'] as $k => $v) {
+            $args['tax_query'][] = array(
+                'taxonomy' => $k,
+                'field' => 'slug',
+                'terms' => $v
+            );
+        }
+    }
+
+    $args['meta_query'] = array(
+        'relation'    => 'AND'
+    );
+    if( !empty($param_args['min_price']) && !empty($param_args['max_price'])){
+        $args['meta_query'][] = wc_get_min_max_price_meta_query(array(
+            'min_price' => $param_args['min_price'],
+            'max_price' => $param_args['max_price']
+        ));
+    }
+     
     $args_arr = theclick_product_filter_type_args($type,$args);
 
     if (get_query_var('paged')){ 
