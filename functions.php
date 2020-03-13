@@ -91,7 +91,7 @@ if(!function_exists('theclick_configs')){
 
             // WooCommerce,
             // product single image size
-            'theclick_product_single_image_w' => theclick_get_theme_opt('product_single_image_size',['width' => '555'])['width'],
+            'theclick_product_single_image_w' => theclick_get_theme_opt('product_single_image_size',['width' => '455'])['width'],
             'theclick_product_single_image_h' => theclick_get_theme_opt('product_single_image_size',['height' => '605'])['height'],
             // loop product image size
             'theclick_product_loop_image_w' => theclick_get_theme_opt('product_loop_image_size',['width' => '640'])['width'],
