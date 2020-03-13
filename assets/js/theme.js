@@ -909,7 +909,9 @@
                 theclick_infinite_page();
                 
                 $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
+
             });
+            $('html,body').animate({scrollTop: $('.ef5-posts').offset().top - 100}, 750);
         }); 
     }
     function theclick_ajax_pagination(){
