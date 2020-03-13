@@ -889,7 +889,8 @@
             var loading_class = 'ef5-loading';
             var $link = $(this).attr('href');   
             var $grid = $('.ef5-product-grid.grid-filter .ef5-product-grid-content');
-            console.log($.urlParam('filter_type'));  
+            var results = theclick_get_url_param('filter_type');
+            console.log(results);  
             //window.history.pushState({url: "" + $link + ""}, "", $link);
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.get($link, function (data) {
@@ -1060,7 +1061,12 @@
             }, 'xml');
         
         });
-    };
+    }
+    function theclick_get_url_param(name,link){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(link);
+        return results[1] || 0;
+    }
+     
 })( jQuery );
 
 (function ($) { "use strict";
