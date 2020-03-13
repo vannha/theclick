@@ -111,4 +111,4 @@ function theclick_modify_wc_theme_support() {
     update_option( 'woocommerce_thumbnail_cropping_custom_width', theclick_wc_thumbnail_value('custom_width') );
     update_option( 'woocommerce_thumbnail_cropping_custom_height', theclick_wc_thumbnail_value('custom_height') );
 }
-add_action( 'after_setup_theme', 'theclick_modify_wc_theme_support', 10 );
+//add_action( 'after_setup_theme', 'theclick_modify_wc_theme_support', 10 );
