@@ -1337,7 +1337,7 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                 ),
                 array(
                     'title'    => esc_html__('Gallery Images Size', 'theclick'),
-                    'subtitle' => esc_html__('Enter the gallery image size', 'theclick'),
+                    'subtitle' => esc_html__('Enter the gallery image size (regenerate-thumbnails after change)', 'theclick'),
                     'id'       => 'product_gallery_thumbnail_size',
                     'type'     => 'dimensions',
                     'units'    => array('px'),
