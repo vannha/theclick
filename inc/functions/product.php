@@ -22,7 +22,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
         ),
     );
 
-    if(!empty($taxonomies) || !empty($taxonomies_exclude)){
+    /*if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
         $args['tax_query'][]= $tax_query;
     }
@@ -48,7 +48,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
         );
     }
      
-    $args_arr = theclick_product_filter_type_args($type,$args);
+    $args_arr = theclick_product_filter_type_args($type,$args);*/
 
     if (get_query_var('paged')){ 
         $paged = get_query_var('paged'); 
@@ -61,7 +61,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
         $args['paged'] = $paged;
     }
     var_dump($args);
-    $loop = $wp_query = new WP_Query($args_arr);
+    $loop = $wp_query = new WP_Query($args);
     return $loop;
 }
 function theclick_product_filter_type_args($type,$args){
