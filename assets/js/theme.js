@@ -829,6 +829,7 @@
             if(form1.length === 0) {
                 return;
             }
+            var filter_type = $(this).find('.sort-type select').val();
             var formData1 = form1.serializeArray();
 
             formData1.push({
@@ -846,8 +847,10 @@
                 data: formData1,
                 //dataType: 'html',
                 success: function(data) {  
-                    //console.log(response); return false;
-
+                    if( filter_type !== ''){
+                        $(document).find('.filter-type filter-link').removeClass('active');
+                        $(document).find('.filter-type filter-link-'+filter_type).addClass('active');
+                    }
                     $(document).find('.ef5-wc-loop-img').slick('unslick');
                     $grid.html(data);
                     $grid_inner.imagesLoaded( function() {
@@ -863,9 +866,8 @@
                         },100);
                     });
                     theclick_infinite_page();
- 
+                    
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
-                    $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');    
                     $('.filter-by-sidebar .overlay-wrap').hide('slow');      
                 },
                 error: function(jqXHR, textStatus, errorThrown) {

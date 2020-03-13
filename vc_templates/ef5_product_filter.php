@@ -5,7 +5,7 @@
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
     $product_ids = '';
 
-    $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : '';
+    $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : 'all';
      
     $taxs = (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) ? $_GET['product_cat'] : '';
     $taxonomies_exclude = '';
@@ -56,14 +56,12 @@
                 if( !empty($ft['filter_type_item']) ){
                 	if( $filter_request == $ft['filter_type_item'] )
                 		$active_cls = 'active';
-                	elseif(empty($filter_request) && $ft['filter_type_item'] == 'all')
-                		$active_cls = 'active';
                 	else
                 		$active_cls = '';
 
                 	$title = !empty($ft['filter_title_item']) ? $ft['filter_title_item'] : $default_title[$ft['filter_type_item']];
                 	$link  = add_query_arg( 'filter_type',$ft['filter_type_item'], get_page_link(false) );
-                    echo '<span><a href="'.esc_url($link).'" class="filter-link '.$active_cls.'">'.$title.'</a></span>';
+                    echo '<span><a href="'.esc_url($link).'" class="filter-link filter-link-'.$ft['filter_type_item'].' '.$active_cls.'">'.$title.'</a></span>';
                 }
             endforeach; 
             ?>
