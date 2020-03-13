@@ -863,40 +863,7 @@
                         },100);
                     });
                     theclick_infinite_page();
-
-                    /*$grid_inner.infiniteScroll({
-                        //path: '.infinite-btn > a',
-                        path: function() {
-                            $( data ).find('.infinite-btn > a').attr('href');
-                        },
-                        status: '.infinite-btn > a',
-                        responseType: 'text',
-                        history: false,
-                    });
-
-                    $grid_inner.on( 'load.infiniteScroll', function( event, response ) {
-                        
-                        var $items = $( response ).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
-                        //$( response ).find('.infinite-btn > a').attr('href');
-                        $grid_inner.append($items);
-                        $grid_inner.infiniteScroll( 'appendItems', $items );
-                        //$(document).find('.ef5-wc-loop-img').slick('unslick');
-                        $grid_inner.imagesLoaded( function() {
-                            setTimeout(function(){
-                                $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                                    vertical: false,
-                                    slidesToShow: 1,
-                                    focusOnSelect: true,
-                                    prevArrow:"<button class='slick-prev'><span></span></button>",
-                                    nextArrow:"<button class='slick-next'><span></span></button>",
-                                    infinite: true,
-                                });
-                            },100);
-                        });
-                         
-                    });*/
-                    
-                    
+ 
                     $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
                     $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');    
                     $('.filter-by-sidebar .overlay-wrap').hide('slow');      
