@@ -22,8 +22,8 @@ function theclick_wc_thumbnail_value($value){
 
 
     $wc_gallery_thumbnail  = array(
-        'width'  => $wc_gallery_thumbnail_w,
-        'height' => $wc_gallery_thumbnail_h,
+        'width'  => (int)$wc_gallery_thumbnail_w,
+        'height' => (int)$wc_gallery_thumbnail_h,
         'crop'   => 1,
     );
     var_dump($wc_gallery_thumbnail);
