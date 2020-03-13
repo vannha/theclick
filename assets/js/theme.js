@@ -889,11 +889,15 @@
             var loading_class = 'ef5-loading';
             var $link = $(this).attr('href');   
             var $grid = $('.ef5-product-grid.grid-filter .ef5-product-grid-content');
-            var results = theclick_get_url_param('filter_type',$link);
-            console.log(results);  
+            var filter_type_param = theclick_get_url_param('filter_type',$link);
+            
             //window.history.pushState({url: "" + $link + ""}, "", $link);
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.get($link, function (data) {
+                if( filter_type_param !== ''){
+                    $(document).find('.filter-type .filter-link').removeClass('active');
+                    $(document).find('.filter-type .filter-link-'+filter_type_param).addClass('active');
+                }
                 $(document).find('.ef5-wc-loop-img').slick('unslick');
                 $grid.html($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-content').html());
                 $grid.imagesLoaded( function() {
