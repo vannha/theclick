@@ -85,6 +85,7 @@
 			</div>
 		</div>
 	</div>
+    <?php if($loop->found_posts > 0): ?>
     <div class="ef5-product-grid-content">
         <div class="row ef5-product-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
@@ -122,7 +123,9 @@
             echo '</div>';     
         }  ?>
     </div>
-    <p class="woocommerce-info"> <?php echo esc_html__( 'No products were found.', 'theclick' ) ?> </p>
+    <?php else: ?>
+        <p class="woocommerce-info"> <?php echo esc_html__( 'No products were found.', 'theclick' ) ?> </p>
+    <?php endif; ?>
 <?php 
  
 wp_reset_query();
