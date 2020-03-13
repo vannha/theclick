@@ -389,9 +389,9 @@ function theclick_ef5_product_filter_action_callback(){
             $args = theclick_product_filter_type_args($array_param['filter_type'],$args);  
             $link_params[] = 'filter_type='.$array_param['filter_type'];
         }
-        
+        var_dump($args);
         $loop = $wp_query = new WP_Query($args);
-        var_dump($loop->found_posts);
+
         if($loop->found_posts > 0){
             $grid_item_css_class = ['ef5-grid-item-wrap', 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
             $item_css_class = ['product-grid-item', 'ef5-product-item-layout-' . $layout_template, 'transition'];
