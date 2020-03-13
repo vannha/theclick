@@ -26,6 +26,7 @@
         theclick_remove_cart_actions();
         theclick_infinite_page();
         theclick_woo_filter_sidebar();
+        theclick_woo_filter_type();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -877,6 +878,36 @@
             $('html,body').animate({scrollTop: $('.ef5-posts').offset().top - 100}, 750);
             return false;
         });   
+    }
+    function theclick_woo_filter_type(){
+        'use strict';
+        $('.ef5-posts.ef5-product-grid.grid-filter .filter-type .filter-link').on('click',function(e){
+            e.preventDefault();
+            var loading_class = 'ef5-loading';
+            var url = $(this).attr('href');   
+            var $grid_wrap = $('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
+
+            $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
+            $.get(url, function (data) {
+                $(document).find('.ef5-wc-loop-img').slick('unslick');
+                $grid_wrap.html(data);
+                $grid_wrap.imagesLoaded( function() {
+                    setTimeout(function(){
+                        $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                            vertical: false,
+                            slidesToShow: 1,
+                            focusOnSelect: true,
+                            prevArrow:"<button class='slick-prev'><span></span></button>",
+                            nextArrow:"<button class='slick-next'><span></span></button>",
+                            infinite: true,
+                        });
+                    },100);
+                });
+                theclick_infinite_page();
+                
+                $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
+            });
+        }); 
     }
     function theclick_ajax_pagination(){
         'use strict';
