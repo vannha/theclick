@@ -22,10 +22,10 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
         ),
     );
 
-    /*if(!empty($taxonomies) || !empty($taxonomies_exclude)){
+    if(!empty($taxonomies) || !empty($taxonomies_exclude)){
         $tax_query = ef5systems_tax_query('product', $taxonomies, $taxonomies_exclude);
         $args['tax_query'][]= $tax_query;
-    }*/
+    }
     if( !empty($param_args['pro_atts']) ){
         foreach ($param_args['pro_atts'] as $k => $v) {
             $args['tax_query'][] = array(
