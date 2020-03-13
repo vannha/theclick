@@ -60,7 +60,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
     if($paged > 1){
         $args['paged'] = $paged;
     }
-
+    
     $loop = $wp_query = new WP_Query($args);
     return $loop;
 }
