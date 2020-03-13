@@ -10,7 +10,20 @@
     $taxs = (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) ? $_GET['product_cat'] : 'decor';
     $taxonomies_exclude = '';
 
-    $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxs,$taxonomies_exclude);
+    $param_args=[];
+    $attribute_taxonomies = wc_get_attribute_taxonomies();
+    if ( ! empty( $attribute_taxonomies ) ) {
+        foreach ( $attribute_taxonomies as $tax ) {
+            if ( taxonomy_exists( wc_attribute_taxonomy_name( $tax->attribute_name ) ) ) {
+                $param_args['pro_atts'][] = !empty($_GET['pa_'.$tax->attribute_name]) ? $_GET['pa_'.$tax->attribute_name] : '';
+            }
+        }
+    }
+    $param_args['min_price'] = !empty($_GET['min_price']) ? $_GET['min_price'] : '';
+    $param_args['max_price'] = !empty($_GET['max_price']) ? $_GET['max_price'] : '';
+     
+
+    $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxs,$taxonomies_exclude,$param_args);
     var_dump($loop->found_posts); 
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 

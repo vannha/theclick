@@ -1,23 +1,6 @@
 <?php
-function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude=''){
+function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude='',$param_args=[]){
     global $wp_query;
-	$args = theclick_woocommerce_query_args($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
-    if (get_query_var('paged')){ 
-        $paged = get_query_var('paged'); 
-    }elseif(get_query_var('page')){ 
-        $paged = get_query_var('page'); 
-    }else{ 
-        $paged = 1; 
-    }
-    if($paged > 1){
-        $args['paged'] = $paged;
-    }
- 
-    $loop = $wp_query = new WP_Query($args);
-	return $loop;
-}
- 
-function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude=''){
 	$product_visibility_term_ids = wc_get_product_visibility_term_ids();
     $args = array(
         'post_type' => 'product',
@@ -42,6 +25,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
     $args['meta_query'] = array(
         'relation'    => 'AND'
     );
+    var_dump($param_args);
     /*$meta_query[] = wc_get_min_max_price_meta_query(array(
         'min_price' => 39,
         'max_price' => 41,
@@ -51,8 +35,21 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         $args['tax_query'][]= $tax_query;
     }
     $args_arr = theclick_product_filter_type_args($type,$args);
+
+    if (get_query_var('paged')){ 
+        $paged = get_query_var('paged'); 
+    }elseif(get_query_var('page')){ 
+        $paged = get_query_var('page'); 
+    }else{ 
+        $paged = 1; 
+    }
+    if($paged > 1){
+        $args['paged'] = $paged;
+    }
+
     var_dump($args_arr); 
-    return $args_arr;
+    $loop = $wp_query = new WP_Query($args_arr);
+    return $loop;
 }
 function theclick_product_filter_type_args($type,$args){
     switch ($type) {

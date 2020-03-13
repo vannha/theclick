@@ -46,8 +46,9 @@
     );
     */
     //if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
+    $param_args=[];
  
-    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude);
+    $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude,$param_args);
 
     $ifp = is_front_page();
 

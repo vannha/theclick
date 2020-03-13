@@ -12,8 +12,8 @@
     $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
     //if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
- 
-    $loop = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies); 
+    $param_args=[];
+    $loop = theclick_woocommerce_query($type,$number,$product_ids,$taxonomies,$taxonomies_exclude,$param_args); 
     $count = $loop->post_count;
 
     $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item'];
