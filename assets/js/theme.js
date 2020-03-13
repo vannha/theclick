@@ -797,7 +797,7 @@
                 $grid.append($items);
             
                 $grid.imagesLoaded( function() {
-                    setTimeout(function(){
+                    //setTimeout(function(){
                         $('.ef5-wc-loop-img').not('.slick-initialized').slick({
                             vertical: false,
                             slidesToShow: 1,
@@ -806,7 +806,7 @@
                             nextArrow:"<button class='slick-next'><span></span></button>",
                             infinite: true,
                         });
-                    },100);
+                    //},100);
 
                 });
                     
