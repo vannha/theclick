@@ -51,7 +51,7 @@ function theclick_woocommerce_query_args($type='recent_product',$post_per_page=-
         $args['tax_query'][]= $tax_query;
     }
     $args_arr = theclick_product_filter_type_args($type,$args);
-     
+    var_dump($args_arr); 
     return $args_arr;
 }
 function theclick_product_filter_type_args($type,$args){
@@ -375,7 +375,7 @@ function theclick_ef5_product_filter_action_callback(){
             $args = theclick_product_filter_type_args($array_param['filter_type'],$args);  
             $link_params[] = 'filter_type='.$array_param['filter_type'];
         }
-        var_dump($args);
+        
         $loop = $wp_query = new WP_Query($args);
 
         echo $loop->found_posts;
