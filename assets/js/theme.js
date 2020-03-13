@@ -889,7 +889,7 @@
             var loading_class = 'ef5-loading';
             var $link = $(this).attr('href');   
             var $grid_wrap = $('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
-            window.history.pushState({url: "" + $link + ""}, "", $link);
+            //window.history.pushState({url: "" + $link + ""}, "", $link);
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.get($link, function (data) {
                 $(document).find('.ef5-wc-loop-img').slick('unslick');
