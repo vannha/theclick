@@ -435,6 +435,8 @@ function theclick_ef5_product_filter_action_callback(){
                     echo '<a href="' . $new_link .'" >' .  $loadmore_text . '</a>';
                 echo '</div>';     
             }
+        }else{
+            echo '<p class="woocommerce-info">'. esc_html__( 'No products were found.', 'theclick' ).'</p>';
         }
         
         wp_reset_query();
