@@ -703,7 +703,6 @@
                     itemN      = parseInt($(this).attr('data-thumb-n')),
                     itemMargin = parseInt($(this).attr('data-thumb-margin')),
                     itemSpace  = itemH - itemW + itemMargin;
-                    console.log(itemSpace);
                 if($(this).hasClass('thumbnail_v')){
                     $(this).flexslider({
                         selector       : '.wc-gallery-sync-slides > .wc-gallery-sync-slide',
@@ -744,7 +743,7 @@
                         slideshow      : false,
                         animationLoop  : false, // Breaks photoswipe pagination if true.
                         itemWidth      : itemW,
-                        //itemMargin     : 30, //itemSpace,
+                        itemMargin     : '30px', //itemSpace,
                         start: function(slider){
 
                         }
