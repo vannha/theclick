@@ -703,6 +703,7 @@
                     itemN      = parseInt($(this).attr('data-thumb-n')),
                     itemMargin = parseInt($(this).attr('data-thumb-margin')),
                     itemSpace  = itemH - itemW + itemMargin;
+                    console.log(itemSpace);
                 if($(this).hasClass('thumbnail_v')){
                     $(this).flexslider({
                         selector       : '.wc-gallery-sync-slides > .wc-gallery-sync-slide',
@@ -793,8 +794,7 @@
                 var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
 
                 $grid.append($items);
-                //$( response ).find('.infinite-btn > a').attr('href');
-                
+            
                 $grid.imagesLoaded( function() {
                     $('.ef5-wc-loop-img').not('.slick-initialized').slick({
                         vertical: false,
@@ -822,35 +822,7 @@
             $('.filter-by-sidebar').removeClass('open').hide('slow');
             $('.filter-by-sidebar .overlay-wrap').hide('slow');
         });
-
-        /*$(document).on('click','.btn-ajax-more a', function(e) {
-            e.preventDefault();
-            var url = $(this).attr('href');
-            var loading_class = 'ef5-loading';
-            $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
-            $(this).addClass('active');
-            var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content');
-            var $grid_inner = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
-            $.get(url, function (data) {
-                console.log($(data).find('.ef5-product-grid.grid-filter .woocommerce-infinite').html()); return false;
-                $('.ef5-wc-loop-img').slick('unslick');
-                $('.btn-ajax-more a').removeClass('active');
-                $grid_inner.append($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap'));
-                $grid_inner.imagesLoaded( function() {
-                    $('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                        vertical: false,
-                        slidesToShow: 1,
-                        focusOnSelect: true,
-                        prevArrow:"<button class='slick-prev'><span></span></button>",
-                        nextArrow:"<button class='slick-next'><span></span></button>",
-                        infinite: true,
-                    });
-                });
-                $('.ef5-posts').fadeTo('slow',1).removeClass(loading_class);
-                $('.ef5-posts').find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated'); 
-            });
-        });*/
-
+ 
         $(document).on('click','.ef5-ajax-filter', function() {
             var form1 = $(this).closest('.ajax-filter');
             var loading_class = 'ef5-loading';
