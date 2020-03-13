@@ -889,7 +889,7 @@
             var loading_class = 'ef5-loading';
             var $link = $(this).attr('href');   
             var $grid = $('.ef5-product-grid.grid-filter .ef5-product-grid-content');
-            console.log($.urlParam('city'));  
+            console.log($.urlParam('filter_type'));  
             //window.history.pushState({url: "" + $link + ""}, "", $link);
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.get($link, function (data) {
