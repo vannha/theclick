@@ -318,7 +318,7 @@ function theclick_ef5_product_filter_action_callback(){
             'att_data_serial' => $_POST['att_data_serial'],
             'page_id'         => $_POST['page_id']  
         ];
-        var_dump($array_param);
+         
         $array_param['atts_str'] = str_replace('\"', '"',$array_param['atts_str']);
         $atts = (array)json_decode( $array_param['atts_str'] );
 
@@ -376,7 +376,7 @@ function theclick_ef5_product_filter_action_callback(){
         if( !empty($array_param['min_price']) && !empty($array_param['max_price'])){
             $args['meta_query'][] =   array(
                 'key'     => '_price',
-                'value'   => array( $param_args['min_price'], $param_args['max_price'] ),
+                'value'   => array( $array_param['min_price'], $array_param['max_price'] ),
                 'compare' => 'BETWEEN',
                 'type'    => 'DECIMAL(10,' . wc_get_price_decimals() . ')',
             );
