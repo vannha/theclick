@@ -17,8 +17,8 @@ function theclick_wc_thumbnail_value($value){
     $custom_width  = $thumbnail_image_width;
     $custom_height = $thumbnail_image_height;
 
-    $wc_gallery_thumbnail_w = theclick_configs('theclick_product_gallery_thumbnail_w');
-    $wc_gallery_thumbnail_h = theclick_configs('theclick_product_gallery_thumbnail_h');
+    $wc_gallery_thumbnail_w = str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_w'));
+    $wc_gallery_thumbnail_h = str_replace('px','', theclick_configs('theclick_product_gallery_thumbnail_h'));
 
 
     $wc_gallery_thumbnail  = array(
@@ -26,8 +26,7 @@ function theclick_wc_thumbnail_value($value){
         'height' => $wc_gallery_thumbnail_h,
         'crop'   => 1,
     );
-    var_dump($wc_gallery_thumbnail);
-
+    
     $image_size_thumbnail = array(
         'width'  => $custom_width,
         'height' => $custom_height,
