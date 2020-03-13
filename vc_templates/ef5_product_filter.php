@@ -7,7 +7,7 @@
 
     $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : '';
      
-    $taxs = (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) ? $_GET['product_cat'] : '';
+    $taxs = (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) ? $_GET['product_cat'] : 'clothing';
     $taxonomies_exclude = '';
 
     $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxs,$taxonomies_exclude);
