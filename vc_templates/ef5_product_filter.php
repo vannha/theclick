@@ -5,8 +5,8 @@
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
     $product_ids = '';
 
-    $filter_request = ( !empty($_GET['filter_type']) && $_GET['filter_type'] !='all' ) ? $_GET['filter_type'] : '';
-
+    $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : '';
+     
     $taxs = (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) ? $_GET['product_cat'] : '';
     $taxonomies_exclude = '';
 
