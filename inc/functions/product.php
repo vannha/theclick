@@ -39,11 +39,13 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
     $args['meta_query'] = array(
         'relation'    => 'AND'
     );
-    if( !empty($param_args['min_price']) && !empty($param_args['max_price'])){
-        $args['meta_query'][] = wc_get_min_max_price_meta_query(array(
-            'min_price' => $param_args['min_price'],
-            'max_price' => $param_args['max_price']
-        ));
+    if( !empty($param_args['min_price']) && !empty($param_args['max_price'])){ 
+        $args['meta_query'][] =   array(
+            'key'     => '_price',
+            'value'   => array( $param_args['min_price'], $param_args['max_price'] ),
+            'compare' => 'BETWEEN',
+            'type'    => 'DECIMAL(10,' . wc_get_price_decimals() . ')',
+        );
     }
      
     $args_arr = theclick_product_filter_type_args($type,$args);
@@ -372,10 +374,12 @@ function theclick_ef5_product_filter_action_callback(){
             'relation'    => 'AND'
         );
 
-        $args['meta_query'][] = wc_get_min_max_price_meta_query(array(
-            'min_price' => $array_param['min_price'],
-            'max_price' => $array_param['max_price']
-        ));
+        $args['meta_query'][] =   array(
+            'key'     => '_price',
+            'value'   => array( $param_args['min_price'], $param_args['max_price'] ),
+            'compare' => 'BETWEEN',
+            'type'    => 'DECIMAL(10,' . wc_get_price_decimals() . ')',
+        );
 
         $link_params[] = 'min_price='.$array_param['min_price'];
         $link_params[] = 'max_price='.$array_param['max_price'];
