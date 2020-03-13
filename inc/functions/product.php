@@ -373,7 +373,7 @@ function theclick_ef5_product_filter_action_callback(){
         $args['meta_query'] = array(
             'relation'    => 'AND'
         );
-        if( !empty($array_param['min_price']) && !empty($array_param['max_price']))
+        if( !empty($array_param['min_price']) && !empty($array_param['max_price'])){
             $args['meta_query'][] =   array(
                 'key'     => '_price',
                 'value'   => array( $param_args['min_price'], $param_args['max_price'] ),
