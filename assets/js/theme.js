@@ -890,7 +890,7 @@
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.get(url, function (data) {
                 $(document).find('.ef5-wc-loop-img').slick('unslick');
-                $grid_wrap.html(data);
+                $grid_wrap.html($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap').html());
                 $grid_wrap.imagesLoaded( function() {
                     setTimeout(function(){
                         $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
