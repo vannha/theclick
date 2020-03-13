@@ -888,13 +888,13 @@
             e.preventDefault();
             var loading_class = 'ef5-loading';
             var $link = $(this).attr('href');   
-            var $grid_wrap = $('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
+            var $grid = $('.ef5-product-grid.grid-filter .ef5-product-grid-content');
             //window.history.pushState({url: "" + $link + ""}, "", $link);
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
             $.get($link, function (data) {
                 $(document).find('.ef5-wc-loop-img').slick('unslick');
-                $grid_wrap.html($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap').html());
-                $grid_wrap.imagesLoaded( function() {
+                $grid.html($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-content').html());
+                $grid.imagesLoaded( function() {
                     setTimeout(function(){
                         $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
                             vertical: false,
