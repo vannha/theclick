@@ -423,7 +423,7 @@ function theclick_ef5_product_filter_action_callback(){
 
             $nextpage = intval( $paged ) + 1;
             $link_param_str = implode('&', $link_params);
-
+            echo $link_param_str;
             //if($nextpage <= $max_page){
                 
                 echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
