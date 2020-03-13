@@ -35,7 +35,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
             );
         }
     }
-
+*/
     $args['meta_query'] = array(
         'relation'    => 'AND'
     );
@@ -47,7 +47,7 @@ function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$pr
             'type'    => 'DECIMAL(10,' . wc_get_price_decimals() . ')',
         );
     }
-     */
+     
     $args_arr = theclick_product_filter_type_args($type,$args);
 
     if (get_query_var('paged')){ 
