@@ -884,11 +884,11 @@
         $('.ef5-posts.ef5-product-grid.grid-filter .filter-type .filter-link').on('click',function(e){
             e.preventDefault();
             var loading_class = 'ef5-loading';
-            var url = $(this).attr('href');   
+            var $link = $(this).attr('href');   
             var $grid_wrap = $('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap');
-
+            window.history.pushState({url: "" + $link + ""}, "", $link);
             $('.ef5-posts').fadeTo('slow',0.3).addClass(loading_class);
-            $.get(url, function (data) {
+            $.get($link, function (data) {
                 $(document).find('.ef5-wc-loop-img').slick('unslick');
                 $grid_wrap.html($(data).find('.ef5-product-grid.grid-filter .ef5-product-grid-content .ef5-product-grid-wrap').html());
                 $grid_wrap.imagesLoaded( function() {
