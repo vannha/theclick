@@ -373,16 +373,18 @@ function theclick_ef5_product_filter_action_callback(){
         $args['meta_query'] = array(
             'relation'    => 'AND'
         );
-
-        $args['meta_query'][] =   array(
-            'key'     => '_price',
-            'value'   => array( $param_args['min_price'], $param_args['max_price'] ),
-            'compare' => 'BETWEEN',
-            'type'    => 'DECIMAL(10,' . wc_get_price_decimals() . ')',
-        );
-
-        $link_params[] = 'min_price='.$array_param['min_price'];
-        $link_params[] = 'max_price='.$array_param['max_price'];
+        if( !empty($array_param['min_price']) && !empty($array_param['max_price']))
+            $args['meta_query'][] =   array(
+                'key'     => '_price',
+                'value'   => array( $param_args['min_price'], $param_args['max_price'] ),
+                'compare' => 'BETWEEN',
+                'type'    => 'DECIMAL(10,' . wc_get_price_decimals() . ')',
+            );
+        }
+        if(!empty($array_param['min_price']))
+            $link_params[] = 'min_price='.$array_param['min_price'];
+        if(!empty($array_param['max_price']))
+            $link_params[] = 'max_price='.$array_param['max_price'];
 
         if(!empty($array_param['filter_type'])){
             $args = theclick_product_filter_type_args($array_param['filter_type'],$args);  
