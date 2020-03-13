@@ -20,8 +20,10 @@
             }
         }
     }
-    $param_args['min_price'] = !empty($_GET['min_price']) ? $_GET['min_price'] : '';
-    $param_args['max_price'] = !empty($_GET['max_price']) ? $_GET['max_price'] : '';
+    if( !empty($_GET['min_price']) )
+    $param_args['min_price'] = $_GET['min_price'];
+    if( !empty($_GET['max_price']) )
+    $param_args['max_price'] = $_GET['max_price'];
      
 
     $loop = theclick_woocommerce_query($filter_request,$post_per_page,$product_ids,$taxs,$taxonomies_exclude,$param_args);
