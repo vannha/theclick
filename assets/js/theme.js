@@ -732,6 +732,7 @@
                     });
                 }
                 if($(this).hasClass('thumbnail_h')){
+                    console.log(itemSpace);
                     $(this).flexslider({
                         selector       : '.wc-gallery-sync-slides > .wc-gallery-sync-slide',
                         animation      : 'slide',
