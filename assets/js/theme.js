@@ -847,6 +847,7 @@
                 data: formData1,
                 //dataType: 'html',
                 success: function(data) {  
+                    console.log(filter_type);
                     if( filter_type !== ''){
                         $(document).find('.filter-type filter-link').removeClass('active');
                         $(document).find('.filter-type filter-link-'+filter_type).addClass('active');
