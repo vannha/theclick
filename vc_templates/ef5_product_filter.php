@@ -122,6 +122,7 @@
             echo '</div>';     
         }  ?>
     </div>
+    <p class="woocommerce-info"> <?php echo esc_html__( 'No products were found.', 'theclick' ) ?> </p>
 <?php 
  
 wp_reset_query();
