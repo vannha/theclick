@@ -26,7 +26,7 @@
         theclick_remove_cart_actions();
         theclick_infinite_page();
         theclick_woo_filter_sidebar();
-        //theclick_woo_filter_type();
+        theclick_woo_filter_type();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -797,14 +797,25 @@
                 $grid.append($items);
             
                 $grid.imagesLoaded( function() {
-                    $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                    setTimeout(function(){
+                        $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                            vertical: false,
+                            slidesToShow: 1,
+                            focusOnSelect: true,
+                            prevArrow:"<button class='slick-prev'><span></span></button>",
+                            nextArrow:"<button class='slick-next'><span></span></button>",
+                            infinite: true,
+                        });
+                    },100);
+                    
+                    /*$('.ef5-wc-loop-img').not('.slick-initialized').slick({
                         vertical: false,
                         slidesToShow: 1,
                         focusOnSelect: true,
                         prevArrow:"<button class='slick-prev'><span></span></button>",
                         nextArrow:"<button class='slick-next'><span></span></button>",
                         infinite: true,
-                    });
+                    });*/
                 });
                     
             });
