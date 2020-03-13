@@ -15,7 +15,8 @@
     if ( ! empty( $attribute_taxonomies ) ) {
         foreach ( $attribute_taxonomies as $tax ) {
             if ( taxonomy_exists( wc_attribute_taxonomy_name( $tax->attribute_name ) ) ) {
-                $param_args['pro_atts'][] = !empty($_GET['pa_'.$tax->attribute_name]) ? $_GET['pa_'.$tax->attribute_name] : '';
+                if( !empty($_GET['pa_'.$tax->attribute_name]) )
+                    $param_args['pro_atts'][] = $_GET['pa_'.$tax->attribute_name];
             }
         }
     }
