@@ -346,7 +346,7 @@ if(!function_exists('theclick_script_debug')){
  */
 add_action('wp_footer', 'theclick_scripts', 0);
 function theclick_scripts()
-{
+{ die('aaa');
     $min = theclick_script_debug();
     // Comment
     if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -369,7 +369,7 @@ function theclick_scripts()
     if(class_exists('Woocommerce')) {
         wp_enqueue_script( 'selectWoo' );
         wp_enqueue_style( 'select2' ); 
-        die('aaa');
+
     }
 
     // Scripts
