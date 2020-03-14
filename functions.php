@@ -369,6 +369,7 @@ function theclick_scripts()
     if(class_exists('Woocommerce')) {
         wp_enqueue_script( 'selectWoo' );
         wp_enqueue_style( 'select2' ); 
+        die('aaa');
     }
 
     // Scripts
