@@ -148,8 +148,8 @@
 	.filter-control{
 		select{
 			border-color: transparent;
-			border-bottom-color: ;
-			color: #777;
+			border-bottom-color: $MainBorderColor ;
+			color: $accent_color;
 			padding: 4px 0px 4px 0;
 			background-image: none;
 		}
