@@ -108,6 +108,7 @@
 }
 .select2-container.container-layout1{
 	border-bottom: 1px solid $MainBorderColor;
+	@include transition(border .4s);
 	&:hover{
 		border-color: $primary_color;
 	}
