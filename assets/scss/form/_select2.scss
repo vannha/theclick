@@ -117,6 +117,16 @@
 			top:50%;
 			@include transform(translateY(-50%));
 			background-image: $FF_Select_BG;
+			&:before {
+				font-family: 'Font Awesome 5 Pro';
+    			font-weight: 400;
+			    content: "\f107";
+		        display: inline-block;
+			    font-style: normal;
+			    font-variant: normal;
+			    text-rendering: auto;
+			    line-height: 1;
+			}
 			[dir="rtl"] & {
 				right: auto;
 				left: 20px;
