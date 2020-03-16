@@ -107,13 +107,20 @@
 	}  
 }
 .select2-container.container-layout1{
-	//padding: 6px 0;
-	//height: 36px; 
 	border-bottom: 1px solid $MainBorderColor;
 	.select2-selection--single{
 		padding: 6px 0;
 		height: 36px;
 		margin: 0;
+		.select2-selection__arrow{
+			right: 20px;
+			top:50%;
+			@include transform(translateY(-50%));
+			[dir="rtl"] & {
+				right: auto;
+				left: 20px;
+			}
+		}
 	} 
 	.select2-selection--single .select2-selection__rendered{
 	 	padding-left: 0;
