@@ -829,7 +829,10 @@
             $('.filter-by-sidebar .overlay-wrap').hide('slow');
         });
         
-        $('.select2').select2({ minimumResultsForSearch: 10 });
+        $('.select2').select2({ 
+            minimumResultsForSearch: 10, 
+            containerCssClass: 'style-1' 
+        });
  
         $(document).on('click','.ef5-ajax-filter', function() {
             var form1 = $(this).closest('.ajax-filter');
