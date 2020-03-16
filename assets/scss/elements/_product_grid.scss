@@ -150,6 +150,7 @@
 	}
 	.filter-control{
 		width: 100%;
+		position: relative;
 		select{
 			border-color: transparent;
 			border-bottom-color: $MainBorderColor ;
