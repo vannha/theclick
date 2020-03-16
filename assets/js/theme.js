@@ -827,7 +827,7 @@
             $('.filter-by-sidebar .overlay-wrap').hide('slow');
         });
         
-        //$('.wc-enhanced-select').select2({ minimumResultsForSearch: 10 });
+        $('.select2').select2({ minimumResultsForSearch: 10 });
  
         $(document).on('click','.ef5-ajax-filter', function() {
             var form1 = $(this).closest('.ajax-filter');
