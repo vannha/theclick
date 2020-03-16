@@ -149,6 +149,7 @@
 	    display: block;
 	}
 	.filter-control{
+		position: relative;
 		select{
 			border-color: transparent;
 			border-bottom-color: $MainBorderColor ;
