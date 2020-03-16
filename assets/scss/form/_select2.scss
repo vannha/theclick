@@ -116,6 +116,7 @@
 			right: 20px;
 			top:50%;
 			@include transform(translateY(-50%));
+			background-image: $FF_Select_BG;
 			[dir="rtl"] & {
 				right: auto;
 				left: 20px;
