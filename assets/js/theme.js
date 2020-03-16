@@ -831,7 +831,7 @@
         
         $('.select2').select2({ 
             minimumResultsForSearch: 10, 
-            containerCssClass: 'style-1' 
+            theme: 'layout-1 container-layout1'
         });
  
         $(document).on('click','.ef5-ajax-filter', function() {
