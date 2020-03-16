@@ -108,14 +108,17 @@
 }
 .select2-container.container-layout1{
 	border-bottom: 1px solid $MainBorderColor;
+	&:hover{
+		border-color: $primary_color;
+	}
 	.select2-selection--single{
 		padding: 6px 0;
 		height: 36px;
 		margin: 0;
 		.select2-selection__arrow{
 			position: absolute;
-			right: 20px;
-			top:50%;
+			right: 0;
+			top:54%;
 			@include transform(translateY(-50%));
 			&:before {
 				font-family: 'Font Awesome 5 Pro';
@@ -129,13 +132,13 @@
 			}
 			[dir="rtl"] & {
 				right: auto;
-				left: 20px;
+				left: 0;
 			}
 		}
 	} 
 	.select2-selection--single .select2-selection__rendered{
 	 	padding-left: 0;
-	 	padding-right: 20px;
+	 	padding-right: 0;
 	}
 	 
 	.select2-dropdown{
