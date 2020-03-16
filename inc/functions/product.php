@@ -157,16 +157,17 @@ function theclick_product_filter_sidebar($atts = [],$default_title=[]){
     ?>
     <form action="<?php echo esc_url($current_url) ?>" method="get" class="ajax-filter">
         <div class="filters">
-            <div class="filter product-cat">
-                <span class="filter-name"><?php echo esc_html__( 'Categories', 'theclick' ) ?></span>
-                <div class="filter-control">
-                    <select name="product_cat" tabindex="-1" class="wc-enhanced-select" aria-hidden="true">
+            <select name="product_cat" tabindex="-1" class="wc-enhanced-select" aria-hidden="true">
                         <option value=""><?php echo esc_html__( 'Select a Category', 'theclick' ) ?></option>
                         <?php 
                         foreach($product_categories as $category){
                             echo '<option value="'.$category->slug.'">'.$category->name.'</option>';
                         } ?>
                     </select>
+            <div class="filter product-cat">
+                <span class="filter-name"><?php echo esc_html__( 'Categories', 'theclick' ) ?></span>
+                <div class="filter-control">
+                    
                 </div>
             </div>
             <?php if(!empty($filter_type)): ?>
