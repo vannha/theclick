@@ -293,7 +293,7 @@ function theclick_product_filter_sidebar($atts = [],$default_title=[]){
         <input type="hidden" name="page_id" value="<?php echo esc_attr(get_the_ID()) ?>">
         <input type="hidden" name="action" value="ef5_product_filter_action" />
         <?php wp_nonce_field('ajax_filter_action', '_acf_nonce', false, true); ?>
-        <button type="button" value="Filter" class="ef5-btn primary fill ef5-ajax-filter"><?php echo esc_html__( 'Filter', 'theclick' ) ?></button>
+        <button type="button" value="Filter" class="ef5-btn ef5-btn-lg ef5-btn-block primary fill ef5-ajax-filter"><?php echo esc_html__( 'Filter', 'theclick' ) ?></button>
         <span class="products-loader"><span class="spinner"></span></span>
     </form>
     <?php
