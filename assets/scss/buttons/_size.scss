@@ -8,7 +8,7 @@ $btn-sizes: (
 	md 11.5px 33.5px '' '' '' '' '' 164px, 
 	xmd 12px 22px 12px 700 uppercase '' '',
 	df 16px 30px 13px 700 uppercase '' '', 
-	lg 16px 30px 13px 700 uppercase '' '', 
+	lg 16px 30px 13px 700 uppercase 0.5px '', 
 	xlg 16px 30px 13px 700 uppercase '' '' 179px,
 );
 @each $size in $btn-sizes {
