@@ -76,7 +76,7 @@
 		<div class="panel-wrap">
 			<div class="panel-header">
 				<div class="d-flex justify-content-between align-items-center">
-					<h3><?php echo esc_html__( 'Filter By', 'theclick' ) ?></h3>
+					<span class="title-heading"><?php echo esc_html__( 'Filter By', 'theclick' ) ?></span>
 					<span class="button-close-x"><?php echo theclick_get_svg('close') ?></span>
 				</div>
 			</div>
