@@ -827,7 +827,7 @@
             $('.filter-by-sidebar .overlay-wrap').hide('slow');
         });
         
-        $('.filter-by-sidebar .filter-control .wc-enhanced-select').select2();
+        $('.wc-enhanced-select').select2();
  
         $(document).on('click','.ef5-ajax-filter', function() {
             var form1 = $(this).closest('.ajax-filter');
