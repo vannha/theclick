@@ -69,14 +69,6 @@
         	<div class="filter-right">
         		<a href="javascript:void(0);" class="filter-tune"><?php echo esc_html__('Filter by','theclick') ?><span><?php echo theclick_get_svg('outline-tune') ?></span></a>
         	</div>
-            <select name="product_cat1" tabindex="-1" class="select2 wc-enhanced-select" aria-hidden="true">
-                <option value=""><?php echo esc_html__( 'Select a Category', 'theclick' ) ?></option>
-                <option value="aaaaaaa">aaaaaaaa</option>
-                <option value="bbb">bbb</option>
-                <option value="ccc">ccc</option>
-                <option value="dd">đ</option>
-                 
-            </select>
 		</div>
 	<?php endif; ?>
 	<div class="filter-by-sidebar">
