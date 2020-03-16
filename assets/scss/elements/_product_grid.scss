@@ -148,6 +148,9 @@ body.products-filter-open{
 	    @media (max-width: 1199px){
     		padding: 45px 30px 0 30px;
     	}
+    	@media (max-width: 480px){
+    		padding: 45px 15px 0 15px;
+    	}
 	    .title-heading{
 	    	font-size: 24px;
 	    }
@@ -158,6 +161,9 @@ body.products-filter-open{
     	overflow-y: auto;
     	@media (max-width: 1199px){
     		padding: 45px 40px 40px 40px;
+    	}
+    	@media (max-width: 480px){
+    		padding: 45px 15px 40 15px;
     	}
 	}
 	.filters > .filter{
