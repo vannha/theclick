@@ -93,6 +93,9 @@
 		}
 	}
 }
+body.products-filter-open{
+	overflow: hidden;
+}
 .filter-by-sidebar{
 	position: fixed;
     top: 0;

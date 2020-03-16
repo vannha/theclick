@@ -819,11 +819,13 @@
         $('.filter-tune').on('click',function(e){
             e.preventDefault();
             $('.filter-by-sidebar').toggleClass('open').show('slow');
+            $('body').addClass('products-filter-open');
             $('.filter-by-sidebar .overlay-wrap').show('slow');
         }); 
         $('.button-close-x, .filter-by-sidebar .overlay-wrap').on('click',function(e){
             e.preventDefault();
             $('.filter-by-sidebar').removeClass('open').hide('slow');
+            $('body').removeClass('products-filter-open');
             $('.filter-by-sidebar .overlay-wrap').hide('slow');
         });
         
