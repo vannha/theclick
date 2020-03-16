@@ -158,10 +158,10 @@ function theclick_product_filter_sidebar($atts = [],$default_title=[]){
     <form action="<?php echo esc_url($current_url) ?>" method="get" class="ajax-filter">
         <select name="product_cat" tabindex="-1" class="wc-enhanced-select" aria-hidden="true">
                         <option value=""><?php echo esc_html__( 'Select a Category', 'theclick' ) ?></option>
-                        <?php 
-                        foreach($product_categories as $category){
-                            echo '<option value="'.$category->slug.'">'.$category->name.'</option>';
-                        } ?>
+                <option value="aaaaaaa">aaaaaaaa</option>
+                <option value="bbb">bbb</option>
+                <option value="ccc">ccc</option>
+                <option value="dd">đ</option>
                     </select>
         <div class="filters">
 
