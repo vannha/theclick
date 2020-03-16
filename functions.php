@@ -367,12 +367,11 @@ function theclick_scripts()
         'is_rtl'              => is_rtl() ? 'true' : 'false'
     );
     if(class_exists('Woocommerce')) {
-        //wp_enqueue_script( 'selectWoo' );
-        wp_enqueue_style( 'select2' ); 
+        wp_enqueue_script( 'selectWoo' );
+        //wp_enqueue_style( 'select2' ); 
     }
 
     // Scripts
-    wp_enqueue_script('selectWoo1', get_template_directory_uri() . '/assets/js/selectWoo.full.js', array('jquery'), '', true);
     wp_enqueue_script('theclick', get_template_directory_uri() . '/assets/js/theme'.$min.'.js', array('jquery'), '', true);
     wp_localize_script( 'theclick', 'theclick_ajax_opts', $theclick_ajax_opts);
 }
