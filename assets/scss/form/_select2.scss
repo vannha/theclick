@@ -113,10 +113,10 @@
 		height: 36px;
 		margin: 0;
 		.select2-selection__arrow{
+			position: absolute;
 			right: 20px;
 			top:50%;
 			@include transform(translateY(-50%));
-			background-image: $FF_Select_BG;
 			&:before {
 				font-family: 'Font Awesome 5 Pro';
     			font-weight: 400;
