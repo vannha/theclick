@@ -1,0 +1,193 @@
+#ef5-header-top {
+	position: relative;
+	z-index: 3;
+	font-size: 14px;
+	> p.attachment{
+		display: none !important;
+		position: absolute;
+		z-index: -1;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+		@include opacity(0);
+	}
+	.ef5-el-title{
+		font-size: 12px;
+		.title-icon{
+			font-size: 125%;
+		}
+	}
+	a{
+		>*{
+			line-height: inherit;
+		}
+		&:hover{
+			color: $lightent_accent_accent;
+		}
+	}
+	.flex_authenticate .fs-link span a +a:before{
+		top: calc(50% - 7px);
+	}
+	.ht-separate{
+		display: inline-block;
+    	margin: 0 -10px;
+    	@media (max-width: 767px){
+    		text-align: center;
+    	}
+		span{
+			padding: 0 10px;
+			position: relative;
+			@media (min-width: 768px){
+				+span:before{
+					content: "";
+					height: 14px;
+					width: 1px;
+					background-color: rgba(255,255,255,0.4);
+					position: absolute;
+					top: 50%;
+					left: -1px;
+					margin-top: -7px;
+				}
+			}
+		}
+	}
+	.widget li{
+	    border-bottom: 0;
+	    padding: 0;
+	    display: inline-flex;
+	    a{
+	    	padding: 0;
+	    	color: inherit;
+	    	&:hover{
+				color: $lightent_accent_accent;
+			}
+	    }
+	}
+	ul.menu{
+		margin: 0 -12px;
+		li{
+			padding: 0 12px;
+			a{
+				text-transform: uppercase;
+				font-size: 11px;
+			}
+		}
+	}
+	.woocommerce-currency-switcher-form{
+		select{
+			background-image: none;
+			background-color: transparent;
+		    border: 0;
+		    color: inherit;
+		    padding: 0 17px 0 0;
+		    font-size: 14px;
+		}
+	}
+	.select2-container{
+		vertical-align: top;
+		@include transition(all .3s linear 0s);
+		&:hover{
+			color: $lightent_accent_accent;
+		}
+	}
+	.select2.select2-container .select2-selection--single{
+	    border: 0;
+	    height: auto;
+	    padding: 0 17px 0 0;
+	    margin: 0;
+	    background-color: transparent;
+	    border-radius: 0;
+	    position: relative;
+	    &:before{
+			content: "\f107";
+			font-family: $FontAwesome;
+			font-size: 12px;
+			font-weight: 400;
+			position: absolute;
+			right: 0px;
+			bottom: 4px;
+			line-height: 1;
+			color: inherit;
+		}
+	}
+	.select2-search--dropdown .select2-search__field{
+		display: none;
+	}
+	.select2.select2-container .select2-selection--single .select2-selection__rendered{
+	    padding: 0;
+	    color: inherit;
+   		line-height: 22px;
+	}
+	.select2.select2-container .select2-selection--single .select2-selection__arrow{
+		display: none;
+	}
+
+	.wpml-ls-legacy-dropdown{
+		width: auto;
+		a{
+			background-color: transparent;
+			border: 0;
+		    padding: 0 17px 0 0;
+    		line-height: 22px;
+    		color: inherit;
+			&.wpml-ls-item-toggle{
+				position: relative;
+				&:after{
+				    vertical-align: middle;
+				    display: inline-block;
+				    border: 0;
+				    border-top: 0;
+				    content: "\f107";
+				    font-family: 'Font Awesome 5 Pro';
+				    font-size: 12px;
+				    font-weight: 400;
+				    position: absolute;
+				    top: 6px;
+				    right: 0px;
+				    bottom: 1px;
+				    line-height: 1;
+				    color: inherit;
+				}
+			}
+			&:hover,&:focus{
+				color: $lightent_accent_accent;
+				background-color: transparent;
+			}
+			span {
+			    vertical-align: inherit;
+			} 
+		}
+		.wpml-ls-current-language{
+			&:hover,
+			&:focus{
+				>a{
+					color: $lightent_accent_accent;
+					background-color: transparent;
+				}
+				.wpml-ls-sub-menu{
+					top: 100%;
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+		.wpml-ls-sub-menu{
+			border-top: 0;
+			background: #111;
+		    min-width: 100px;
+		    padding: 10px 15px;
+		    top: calc(100% + 10px);
+		    visibility: hidden;
+		    opacity: 0;
+		    @include transition(all .3s linear 0s);
+		    .wpml-ls-item{
+				padding: 3px 0;
+				line-height: 24px;
+				.wpml-ls-display{
+					display: none;
+				}
+			}
+		}
+		 
+	}
+}

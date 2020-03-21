@@ -1,0 +1,16 @@
+.wpb_raw_html{
+	.code-off{
+		font-size: 18px;
+		line-height: 23px;
+		span+span{
+			padding: 4px 15px;
+			margin-left: 15px;
+			background: $primary_color;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 17px;
+			letter-spacing: 1.18182px;
+			text-transform: uppercase;
+		}
+	}
+}
