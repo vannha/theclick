@@ -23,7 +23,7 @@ vc_map(array(
                 'heading'       => esc_html__('Number Image', 'theclick'),
                 'param_name'    => 'number',
                 'std'           => '4',
-            )
+            ),
             array(
                 'type'          => 'dropdown',
                 'heading'       => esc_html__('Image Size', 'theclick'),
