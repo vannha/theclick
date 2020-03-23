@@ -128,9 +128,7 @@ if (!function_exists('theclick_instagram_custom_layout')) {
     function theclick_instagram_custom_layout()
     {
         return [
-            '1' => esc_html__('Default', 'theclick'),
-            '2' => esc_html__('Author on top', 'theclick'),
-            '3' => esc_html__('Carousel', 'theclick'),
+            '1' => esc_html__('Carousel', 'theclick')
         ];
     }
 }

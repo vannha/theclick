@@ -1,5 +1,9 @@
 <?php
 if (!class_exists('EF5Systems')) return;
+$custom_layout = wp_parse_args(
+    apply_filters('ef5systems_instagram_custom_layout',[]),
+    ['default' => esc_html__('Default','theclick')]
+);
 vc_map(array(
     'name'          => 'TheClick Instagram',
     'base'          => 'ef5_instagram',
@@ -11,9 +15,7 @@ vc_map(array(
             'type'          => 'dropdown',
             'heading'       => esc_html__('Layout', 'theclick'),
             'param_name'    => 'layout_mode',
-            'value'         => array(
-                esc_html__('Default', 'theclick')       => 'default',
-            ),
+            'value'         => $custom_layout,
             'std'           => 'default'
         ),
         array(
