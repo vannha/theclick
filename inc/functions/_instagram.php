@@ -123,12 +123,13 @@ if(!function_exists('theclick_default_ins_data')){
  * Custom layout 
  * add_filter('ef5systems_instagram_custom_layout','theclick_instagram_custom_layout');
  */
-add_filter('ef5systems_instagram_custom_layout','theclick_instagram_custom_layout');
 if (!function_exists('theclick_instagram_custom_layout')) {
     function theclick_instagram_custom_layout()
     {
         return [
-            'carousel' => 'carousel'
+            '1' => esc_html__('Layout 1', 'theclick'),
+            '2' => esc_html__('Layout 2', 'theclick'),
+            '3' => esc_html__('Layout 3', 'theclick'),
         ];
     }
 }
