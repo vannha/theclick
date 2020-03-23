@@ -26,7 +26,7 @@ vc_map(array(
             'type'          => 'dropdown',
             'heading'       => esc_html__('Number Columns', 'theclick'),
             'param_name'    => 'columns',
-            'value'         => array('1', '2', '3', '4', '6', '8', '12'),
+            'value'         => array('1', '2', '3', '4', '5' ,'6', '8', '12'),
             'std'           => '4'
         ),
         array(
