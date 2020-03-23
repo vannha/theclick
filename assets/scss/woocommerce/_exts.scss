@@ -1,0 +1,58 @@
+/* WooSmart Plugin */
+.woosmart-icon{
+	> a{
+		font-size: 0;
+		border: none;
+		outline: none;
+		background: transparent;
+		cursor: pointer;
+		&:before{
+			content: "";
+			min-width: 12px;
+			height: 12px;
+			display: inline-block;
+			margin: 0;
+		}
+		&.wooscp-btn{
+			&:before{
+				min-width: 16px;
+				background: url('../images/icons/compare.png') no-repeat center;
+				background-size: contain;
+			}
+			&.wooscp-btn-added:before{
+				background: url('../images/icons/compare.png') no-repeat center;
+				background-size: contain;
+				margin-right: 0;
+			}
+		}
+		&.woosq-btn{
+			&:before{
+				background: url('../images/icons/quickview.png') no-repeat center;
+				background-size: contain;
+			}
+		}
+		&.woosw-btn{
+			&:before{
+				min-width: 13px;
+				background: url('../images/icons/wishlist.png') no-repeat center;
+				background-size: contain;
+			}
+			&.woosw-added:before{
+				font-family: $FontAwesome;
+				margin-right: 0;
+			}
+		}
+
+		&[class*="-adding"]:before{
+			content: '\f110';
+			display: block;
+			@include css3-prefix('animation','spin 1s linear infinite');
+		}
+	}
+}
+// Smart Wishlist 
+.woosw-area.ef5-loading {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.7);
+}

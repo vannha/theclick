@@ -1,0 +1,224 @@
+.ef5-newsletter-1{
+	@media (min-width: $screen_lg_min){
+		max-width: 690px;
+		margin: 0 auto;
+	}
+	form{
+		position: relative;
+		::-webkit-input-placeholder {
+		    font-size: 16px;
+		}
+	}
+	label{
+		display: none;
+	}
+	.tnp-name{
+		border-width: 0 0 2px 0;
+		border-style: solid;
+		line-height: 21px;
+    	padding: 10px 0;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+	.tnp-email{
+		border-width: 0 0 2px 0;
+		border-style: solid;
+		line-height: 21px;
+    	padding: 10px 70px 10px 0;
+    	font-size: 16px;
+	}
+	.tnp-submit,
+	.tnp-button{
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 16px;
+		line-height: 21px;
+		padding: 10px 0;
+		background-color: transparent;
+		text-transform: capitalize;
+		&:hover{
+			color: $FF_placeholder_color;
+	        background: transparent;
+	    }
+	}
+}
+.ef5-bg-161618{
+	.ef5-newsletter-1{
+		.tnp-email{
+			background-color: transparent;
+			border-bottom-color: $MainBorderColor;
+			color: #fff;
+		}
+		.tnp-submit,
+		.tnp-button{
+			color: #fff;
+			&:hover{
+		    	color: $lightent_accent_accent;
+		    }
+		}
+	}
+}
+
+.ef5-newsletter-2{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.ef5-heading{
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 38px;
+		position: relative;
+		@media (max-width: 991px){
+			font-size: 24px;
+			line-height: 28px;
+		}
+		@media (min-width: 768px){
+			flex: 0 0 auto;
+			width: auto;
+			&:after{
+				content: "";
+				width: 19px;
+				height: 2px;
+				background-color: $primary_color;
+				position: absolute;
+				left: 100%;
+				bottom: 7px;
+				margin-left: 10px;
+			}
+		}
+	}
+	.tnp-subscription-minimal{
+		flex: 0 0 auto;
+		width: auto; 
+		@media (max-width: 991px){
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-top: 20px;
+		}
+		form{ 
+			width: 100%;
+			@media (min-width: 992px){
+				width: 420px;
+			}
+			@media (min-width: 1200px){
+				width: 495px;
+			}
+		}
+	}
+	form{
+		position: relative;
+		::-webkit-input-placeholder {
+		    font-size: 16px;
+		    color: $primary_color;
+		}
+	}
+	label{
+		display: none;
+	}
+	.tnp-name{
+		border-width: 0 0 2px 0;
+		border-style: solid;
+		line-height: 21px;
+    	padding: 10px 0;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+	.tnp-email{
+		border-width: 0 0 2px 0;
+		border-style: solid;
+		line-height: 21px;
+    	padding: 10px 70px 10px 0;
+    	font-size: 16px;
+    	border-color: #000;
+    	background-color: transparent;
+	}
+	.tnp-submit,
+	.tnp-button{
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 16px;
+		line-height: 21px;
+		padding: 10px 0;
+		background-color: transparent;
+		text-transform: capitalize;
+		&:hover{
+			color: $FF_placeholder_color;
+	        background: transparent;
+	    }
+	}
+}
+.ef5-newsletter-3{
+	padding: 40px 30px 40px 30px;
+	@media (min-width: 1200px){
+		
+	}
+	@media (min-width: 1200px){
+		padding: 70px 60px 60px 60px;
+	}
+	@media (max-width: 480px){
+		padding: 30px 15px 30px 15px;
+	}
+	.ef5-el-title{
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 46px;
+		@media (max-width: 575px){
+			font-size: 28px;
+			line-height: 36px;
+		}
+	}
+	.sub-title{
+		font-size: 22px;
+		line-height: 28px;
+		margin-top: 15px;
+	}
+	form{
+		margin-top: 51px;
+		position: relative;
+		@media (max-width: 575px){
+			margin-top: 30px;
+		}
+		::-webkit-input-placeholder {
+		    font-size: 16px;
+		}
+	}
+	label{
+		display: none;
+	}
+	.tnp-name{
+		line-height: 21px;
+    	padding: 18px 25px 19px 25px;
+		margin-bottom: 10px;
+		font-size: 16px;
+		border-color: $primary_color;
+	}
+	.tnp-email{
+		line-height: 21px;
+    	padding: 18px 100px 19px 25px;
+    	font-size: 16px;
+    	border-color: $primary_color;
+    	@media (min-width: 1366px){
+    		min-width: 460px;
+    	}
+    	@media (min-width: 1600px){
+    		min-width: 508px;
+    	}
+	}
+	.tnp-submit,
+	.tnp-button{
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 16px;
+		line-height: 22px;
+    	padding: 18px 25px 18px 10px;
+		background-color: transparent;
+		text-transform: capitalize;
+		&:hover{
+			color: $FF_placeholder_color;
+	        background: transparent;
+	    }
+	}
+}

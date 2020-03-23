@@ -1,0 +1,39 @@
+.ef5-countdown-layout-1{
+	.ef5-countdown-bar{
+		@include d-flex();
+		align-items:center;
+		justify-content: center;
+		margin: 0 -30px;
+		@media (max-width: 767px){
+			margin: 0 -15px;	
+		}
+		.item{
+			flex: 0 0 auto;
+			padding: 0 30px;
+			text-align: center;
+			@media (max-width: 767px){
+				padding: 0 15px;	
+			}
+		}
+		.amount{
+			display: block;
+			font-weight: 500;
+			font-size: 36px;
+			line-height: 1.2777;
+			@media (max-width: 767px){
+				font-size: 28px;
+			}
+		}
+		.title{
+			display: block;
+			font-weight: 450;
+			font-size: 15px;
+			line-height: 19px;
+			margin-top: 10px;
+			text-transform: uppercase;
+			@media (max-width: 767px){
+				font-size: 12px;
+			}
+		}
+	}
+}

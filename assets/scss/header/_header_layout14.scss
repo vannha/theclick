@@ -1,0 +1,16 @@
+.header-layout-14{
+	.ef5-menu > li > a{
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+	@media (min-width: 768px){
+		.ef5-header-menu > li{
+		    padding: 0px 18px;
+		}
+	}
+	@media (max-width: 1199px){
+		.header-inner-wrap{
+			padding: 8px 0;
+		}
+	}
+}

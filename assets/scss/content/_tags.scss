@@ -1,0 +1,32 @@
+.ef5-tagged-in{
+	>*{
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+	.ef5-heading-tags{
+		font-size: 10px;
+	    font-weight: 500;
+		line-height: 14px;
+		color: $accent_color;
+		padding-right: 33px;
+		margin-right: 12px;
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 18px;
+			height: 1px;
+			background: $lightent_accent_accent;
+		}
+	}
+	a{
+		font-size: 10px;
+		font-weight: 500;
+		text-transform: uppercase;
+		+a{
+			margin-left: 26px;
+		}
+	}
+}

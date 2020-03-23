@@ -1,0 +1,19 @@
+.flex_authenticate{
+	.fs-link{
+		white-space: nowrap;
+		span{
+			margin: 0 -6px;
+			a{
+				padding: 0 6px;
+				position: relative;
+				+a:before{
+					content: "/";
+					position: absolute;
+					left: -5px;
+					top: calc(50% - 8px);
+    				line-height: 1;
+				}
+			}
+		}
+	}
+}

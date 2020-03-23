@@ -1,0 +1,42 @@
+.header-ontop{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: transparent;
+	.header-icon,
+    .header-icon a,
+    .nav-link{
+        color: $ontop_regular;
+        &:hover{
+            color: $ontop_hover;
+        }
+    }
+    .ef5-svg path{
+        fill: $ontop_regular;
+        @include transition();
+    }
+    .ef5-svg:hover path{
+        fill: $ontop_hover;
+    }
+    a:hover > .ef5-svg path{
+        fill: $ontop_hover;
+    }
+    .flex_logout a{
+        color: $ontop_regular;
+        &:hover{
+            color: $ontop_hover;
+        }
+    }
+    .flex_authenticate .fs-link span a{
+        color: $ontop_regular;
+        &:hover{
+            color: $ontop_hover;
+        }
+    }
+    .header-icon .header-count{
+        background: $ontop_regular;
+        color: $ontop_text_color;
+    }
+}

@@ -1,0 +1,31 @@
+.header-layout-12{
+	.ef5-menu > li > a{
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+	@media (min-width: 768px){
+		.ef5-header-menu > li{
+		    padding: 0px 18px;
+		}
+	}
+	@media (max-width: 1199px){
+		.header-inner-wrap{
+			padding: 8px 0;
+		}
+	}
+	.nav-extra .header-icon .fa, 
+	.nav-extra .header-icon .fal, 
+	.nav-extra .header-icon .fab{
+		font-size: 14px;
+	}
+}
+.page-header-12 .header-logo{
+	text-align: center;
+	padding: 50px 15px;
+	@media (max-width: 1199px){
+		padding: 30px 15px;
+	}
+	.sticky-logo{
+		display: none;
+	}
+}

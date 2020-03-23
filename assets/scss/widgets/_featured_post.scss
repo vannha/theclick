@@ -1,0 +1,26 @@
+.widget_theclick_featured_posts{
+	.featured-list >div{
+		position: relative;
+	}
+	.fea-item{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		max-width: 233px;
+		background-color: #fff;
+		padding: 21px 25px 2px 0;
+		.ef5-posted-in{
+			font-size: 10px;
+			line-height: 13px;
+			text-transform: uppercase;
+			color: $primary_color;
+			font-weight: 500;
+    		margin-bottom: 10px;
+		}
+		.fea-item-title{
+			font-size: 15px;
+			line-height: 19px;
+			display: block;
+		}
+	}
+}
