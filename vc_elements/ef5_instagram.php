@@ -104,7 +104,7 @@ vc_map(array(
             'group'      => esc_html__('Carousel Layout','theclick'), 
             'param_name' => 'layout_type', 
             'value'      => 'carousel'
-        )), 
+        ))
     )
 ));
 class WPBakeryShortCode_ef5_instagram extends WPBakeryShortCode
