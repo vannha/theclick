@@ -15,6 +15,9 @@ switch ($columns) {
     case 4:
         $span = "col-6 col-sm-3";
         break;
+    case 5:
+        $span = "col-6 col-sm-3 col-lg-1/5";
+        break;
     case 6:
         $span = "col-6 col-sm-3 col-lg-2";
         break;
