@@ -27,7 +27,7 @@ $following    = $media_array['user']['following'];
 
 switch ($layout_mode) {
     case 'default':
-        echo '<div class="ef5-instagram layout-' . $layout_mode . '">'; 
+        echo '<div class="ef5-posts ef5-instagram layout-' . $layout_mode . '">'; 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
         ?>
