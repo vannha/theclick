@@ -53,5 +53,5 @@ $args = [
     'less_more'     => $less_more
 ];
 
-$html = apply_filters('ef5systems_instagram_output_html', $args,$atts);
+$html = apply_filters('ef5systems_instagram_output_html', $args);
 echo theclick_html($html);
