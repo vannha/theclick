@@ -18,7 +18,6 @@ if (is_wp_error($media_array)) {
     return;
 }
 $media_array['images'] = array_slice($media_array['images'], 0, $number);
-$less_more = (int)$number > (int) $columns ? 'more' : 'less';
 
 $username     = $media_array['user']['username'];  
 $display_name = $media_array['user']['display_name'];  
@@ -28,7 +27,7 @@ $following    = $media_array['user']['following'];
 
 switch ($layout_mode) {
     case 'default':
-        echo '<div class="ef5-instagram layout-' . $layout_mode . ' ' . $less_more . '">'; 
+        echo '<div class="ef5-instagram layout-' . $layout_mode . '">'; 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
         ?>
