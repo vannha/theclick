@@ -102,7 +102,7 @@ vc_map(array(
         ),
         ef5systems_owl_settings(array(
             'group'      => esc_html__('Carousel Layout','theclick'), 
-            'param_name' => 'layout_type', 
+            'param_name' => 'layout_mode', 
             'value'      => 'carousel'
         ))
     )
