@@ -14,8 +14,7 @@ vc_map(array(
                 'heading'       => esc_html__('Layout', 'theclick'),
                 'param_name'    => 'layout_mode',
                 'value'         => array(
-                    esc_html__('Default', 'theclick') => 'default',
-                    esc_html__('Carousel', 'theclick') => 'carousel'
+                    esc_html__('Default', 'theclick') => 'default'
                 ),
                 'std'           => 'default'
             ),
@@ -24,21 +23,7 @@ vc_map(array(
                 'heading'       => esc_html__('Number Image', 'theclick'),
                 'param_name'    => 'number',
                 'std'           => '4',
-            ),
-            array(
-                'type'          => 'dropdown',
-                'heading'       => esc_html__('Number Columns', 'theclick'),
-                'param_name'    => 'columns',
-                'value'         => array('1', '2', '3', '4', '5' ,'6', '8', '12'),
-                'std'           => '4'
-            ),
-            array(
-                'type'          => 'dropdown',
-                'heading'       => esc_html__('Columns Space', 'theclick'),
-                'param_name'    => 'columns_space',
-                'value'         => array('0', '2', '5', '10', '20', '30'),
-                'std'           => '0'
-            ),
+            )
             array(
                 'type'          => 'dropdown',
                 'heading'       => esc_html__('Image Size', 'theclick'),
@@ -102,7 +87,7 @@ vc_map(array(
         ),
         ef5systems_owl_settings(array(
             'group'      => esc_html__('Carousel Layout','theclick'), 
-            'param_name' => 'layout_mode', 
+            'param_name' => 'layout_type', 
             'value'      => 'carousel'
         ))
     )
@@ -112,9 +97,7 @@ class WPBakeryShortCode_ef5_instagram_carousel extends WPBakeryShortCode
     protected function content($atts, $content = null)
     {
         $atts = vc_map_get_attributes($this->getShortcode(), $atts);
-        extract($atts);
-        if($layout_mode == 'carousel')
-            ef5systems_owl_call_settings($atts);
+        ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
     
