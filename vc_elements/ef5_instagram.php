@@ -14,8 +14,8 @@ vc_map(array(
                 'heading'       => esc_html__('Layout', 'theclick'),
                 'param_name'    => 'layout_mode',
                 'value'         => array(
-                    'default'   => esc_html__('Default', 'theclick'),
-                    'carousel'   => esc_html__('Carousel', 'theclick'),
+                    esc_html__('Default', 'theclick') => 'default',
+                    esc_html__('Carousel', 'theclick') => 'carousel'
                 ),
                 'std'           => 'default'
             ),
