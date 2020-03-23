@@ -128,7 +128,7 @@ if (!function_exists('theclick_instagram_custom_layout')) {
     function theclick_instagram_custom_layout()
     {
         return [
-            'carousel' => esc_html__('Carousel', 'theclick')
+            esc_html__('Carousel', 'theclick') => 'carousel'
         ];
     }
 }

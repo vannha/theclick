@@ -2,7 +2,7 @@
 if (!class_exists('EF5Systems')) return;
 $custom_layout = wp_parse_args(
     apply_filters('ef5systems_instagram_custom_layout',[]),
-    ['default' => esc_html__('Default','theclick')]
+    [ esc_html__('Default','theclick') => 'default' ]
 );
 vc_map(array(
     'name'          => 'TheClick Instagram',
