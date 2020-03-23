@@ -113,6 +113,8 @@ class WPBakeryShortCode_ef5_instagram extends WPBakeryShortCode
     {
         $atts = vc_map_get_attributes($this->getShortcode(), $atts);
         extract($atts);
+        if($layout_mode == 'carousel')
+            ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
     

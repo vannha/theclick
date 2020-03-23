@@ -208,14 +208,24 @@ if (!function_exists('theclick_instagram_html_output')) {
                 echo '</div>';
             break;
             case 'carousel':
-
-                echo '<div class="ef5-instagram layout-' . $layout_mode . ' ' . $less_more . '">'; echo 'aaaaaaa';
+                $el_id = uniqid('ef5-');
+                $css_classes = array(
+                    'ef5-posts-carousel',
+                    'ef5-instagram-wrap',
+                    'ef5-owl',
+                    'owl-carousel',
+                    vc_shortcode_custom_css_class( $css ),
+                );
+                echo '<div class="ef5-instagram layout-' . $layout_mode . ' ' . $less_more . '">';
+                 
+                ef5systems_owl_nav_top($atts);
+                ef5systems_owl_dots_top($atts); 
                 ?>
-                <div class="ef5-instagram-wrap row grid-gutters-<?php echo esc_attr($columns_space); ?> clearfix">
+                <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
                     <?php
                     foreach ($media_array['images'] as $item) {
                         ?>
-                        <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap'))); ?>">
+                        <div class="<?php echo trim(implode(' ', array('instagram-item ef5-carousel-item', $span, 'overlay-wrap'))); ?>">
                             <a class="ins-img" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
                                 <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
                             </a>
@@ -235,6 +245,12 @@ if (!function_exists('theclick_instagram_html_output')) {
                     echo '<span class="author-name">@' . trim($username) . '</span>'; ?></a></div>
                 <?php
                 }
+                 
+                theclick_loading_animation('three-dot-bounce'); 
+                ef5systems_owl_dots_container($atts);
+                ef5systems_owl_nav_container($atts);
+                ef5systems_owl_dots_in_nav_container($atts);
+                
                 echo '</div>';
             break;
             default:
