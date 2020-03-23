@@ -2,8 +2,8 @@
 if (!class_exists('EF5Systems')) return;
 
 vc_map(array(
-    'name'          => 'TheClick Instagram',
-    'base'          => 'ef5_instagram',
+    'name'          => 'TheClick Instagram Carousel',
+    'base'          => 'ef5_instagram_carousel',
     'category'    => esc_html__('TheClick', 'theclick'),
     'description' => esc_html__('Show your Instagram image', 'theclick'),
     'icon'        => 'icon-wpb-ui-icon',
@@ -107,7 +107,7 @@ vc_map(array(
         ))
     )
 ));
-class WPBakeryShortCode_ef5_instagram extends WPBakeryShortCode
+class WPBakeryShortCode_ef5_instagram_carousel extends WPBakeryShortCode
 {
     protected function content($atts, $content = null)
     {
