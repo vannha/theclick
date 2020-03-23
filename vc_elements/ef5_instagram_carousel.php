@@ -84,6 +84,15 @@ vc_map(array(
                     'value'     => 'true',
                 ),
             ),
+            array(
+                'type'        => 'el_id',
+                'settings' => array(
+                    'auto_generate' => true,
+                ),
+                'heading'     => esc_html__( 'Element ID', 'theclick' ),
+                'param_name'  => 'el_id',
+                'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'theclick' ), '//w3schools.com/tags/att_global_id.asp' ),
+            ),
         ),
         ef5systems_owl_settings(array(
             'group'      => esc_html__('Carousel Layout','theclick'), 

@@ -136,8 +136,8 @@ if (!function_exists('theclick_instagram_custom_layout')) {
 
 // Output HTML 
 if (!function_exists('theclick_instagram_html_output')) {
-    add_filter('ef5systems_instagram_output_html', 'theclick_instagram_html_output', 10,2);
-    function theclick_instagram_html_output($args = [],$atts=[]){
+    add_filter('ef5systems_instagram_output_html', 'theclick_instagram_html_output', 10,1);
+    function theclick_instagram_html_output($args = []){
         $args = wp_parse_args($args, [
             'layout_mode'   => 'default',
             'span'          => '4',
@@ -205,52 +205,6 @@ if (!function_exists('theclick_instagram_html_output')) {
                     <?php } ?>
                 </div>
                 <?php 
-                echo '</div>';
-            break;
-            case 'carousel':
-                $el_id = uniqid('ef5-');
-                $css_classes = array(
-                    'ef5-posts-carousel',
-                    'ef5-instagram-wrap',
-                    'ef5-owl',
-                    'owl-carousel',
-                    vc_shortcode_custom_css_class( $css ),
-                );
-                echo '<div class="ef5-instagram layout-' . $layout_mode . ' ' . $less_more . '">';
-                 
-                ef5systems_owl_nav_top($atts);
-                ef5systems_owl_dots_top($atts); 
-                ?>
-                <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
-                    <?php
-                    foreach ($media_array['images'] as $item) {
-                        ?>
-                        <div class="<?php echo trim(implode(' ', array('instagram-item ef5-carousel-item', $span, 'overlay-wrap'))); ?>">
-                            <a class="ins-img" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
-                                <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
-                            </a>
-                            <div class="overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">
-                                <div class="overlay-inner col-12 text-center">
-                                    <a class="ins-icon" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-instagram"></span></a>
-                                    <?php if ($show_like) : ?><a class="like" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-heart-o"></span><span><?php echo esc_html($item['likes']); ?></span></a><?php endif; ?>
-                                    <?php if ($show_cmt) : ?><a class="comments" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-comments-o"></span><span><?php echo esc_html($item['comments']); ?></span></a><?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div>
-                <?php if ($show_author) { ?>
-                    <div class="user"><a href="//instagram.com/<?php echo trim($username); ?>" target="<?php echo esc_attr($target); ?>"><?php if (!empty($author_text)) echo '<span class="author-text">' . esc_html($author_text) . '</span>';
-                        else echo '<span class="author-text">' . $display_name . '</span>';
-                    echo '<span class="author-name">@' . trim($username) . '</span>'; ?></a></div>
-                <?php
-                }
-                 
-                theclick_loading_animation('three-dot-bounce'); 
-                ef5systems_owl_dots_container($atts);
-                ef5systems_owl_nav_container($atts);
-                ef5systems_owl_dots_in_nav_container($atts);
-                
                 echo '</div>';
             break;
             default:
