@@ -3,7 +3,7 @@ $atts = vc_map_get_attributes($this->getShortcode(), $atts);
 extract( $atts );
 $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
 $css_classes = array(
-    'ef5-posts-carousel',
+    'ef5-instagram-carousel',
     'ef5-instagram-wrap',
     'ef5-owl',
     'owl-carousel'
