@@ -176,6 +176,6 @@ body .rv-home-3 .uranus .tp-bullet:hover{
 		margin-left: 2px;
 	}
 	&:hover{
-		@include transform(scale(1.1));
+		@include transform(scale(1.2) !important) ;
 	}
 }
