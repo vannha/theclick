@@ -172,4 +172,5 @@ body .rv-home-3 .uranus .tp-bullet:hover{
 .play-icon.rs-layer:hover{
 	background: #fff !important;
 	color: $primary_color !important;
+	@include transition();
 }
