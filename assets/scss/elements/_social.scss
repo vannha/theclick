@@ -52,11 +52,16 @@
 	} 
 }
 .ef5-social-2{
+    margin: 0 -15px;
+ 	> * {
+	    padding: 0 15px;
+	}
 	.ef5-el-title{
 		display: block;
 		font-size: 30px;
 		line-height: 1.6;
 		font-weight: 500;
+		margin-bottom: 23px;
 		&:after {
 		    content: "";
 		    width: 21px;
@@ -67,6 +72,6 @@
 		}
 	}
 	a{
-		font-size: 23px;
+		font-size: 22px; 
 	}
 }
