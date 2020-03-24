@@ -51,3 +51,19 @@
 		}
 	} 
 }
+.ef5-social-2{
+	.ef5-el-title{
+		display: block;
+		font-size: 30px;
+		line-height: 1.6;
+		font-weight: 500;
+		&:after {
+		    content: "";
+		    width: 21px;
+		    height: 2px;
+		    margin-left: 20px;
+		    background-color: var(--primary-color);
+		    display: inline-block;
+		}
+	}
+}
