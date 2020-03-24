@@ -35,7 +35,7 @@ switch ($layout_mode) {
             <?php
             foreach ($media_array['images'] as $item) {
                 ?>
-                <div class="<?php echo trim(implode(' ', array('instagram-item ef5-carousel-item', $span, 'overlay-wrap'))); ?>">
+                <div class="<?php echo trim(implode(' ', array('instagram-item ef5-carousel-item', 'overlay-wrap'))); ?>">
                     <a class="ins-img" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
                         <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
                     </a>
