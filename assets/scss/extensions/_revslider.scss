@@ -169,8 +169,7 @@ body .rv-home-3 .uranus .tp-bullet:hover{
 	}
 }
 
-/* .play-icon.rs-layer{
-	background: transparent;
-	border: 1px solid #fff;
-	color: #fff; 
-} */
+.play-icon.rs-layer:hover{
+	background: #fff !important;
+	color: $primary_color; 
+}
