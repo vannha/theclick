@@ -12,6 +12,21 @@
 	label{
 		display: none;
 	}
+	.ef5-el-title{
+		display: block;
+		font-size: 30px;
+		line-height: 1.6;
+		font-weight: 500;
+		margin-bottom: 23px;
+		&:after {
+		    content: "";
+		    width: 21px;
+		    height: 2px;
+		    margin-left: 10px;
+		    background-color: $primary_color;
+		    display: inline-block;
+		}
+	}
 	.tnp-name{
 		border-width: 0 0 2px 0;
 		border-style: solid;
