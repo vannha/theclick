@@ -96,7 +96,7 @@
             $('#ef5-footer .woocommerce-currency-switcher').select2({
                 theme: "footer"
             });
-            $('.select2').select2({ 
+            $('.filter-by-sidebar .select2').select2({ 
                 minimumResultsForSearch: 10, 
                 theme: 'layout-1 container-layout1'
             });
