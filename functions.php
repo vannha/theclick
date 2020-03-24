@@ -366,10 +366,10 @@ function theclick_scripts()
         'has_select2'         => class_exists('Woocommerce') ? true : false,
         'is_rtl'              => is_rtl() ? 'true' : 'false'
     );
-    if(class_exists('Woocommerce')) {
+    /*if(class_exists('Woocommerce')) {
         wp_enqueue_script( 'selectWoo' );
         wp_enqueue_style( 'select2' ); 
-    }
+    }*/
 
     // Scripts
     wp_enqueue_script('theclick', get_template_directory_uri() . '/assets/js/theme'.$min.'.js', array('jquery'), '', true);
