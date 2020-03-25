@@ -85,9 +85,10 @@ vc_map(array(
         ),
         array(
             "type" => "textfield",
-            "heading" => esc_html__("Main title class",'theclick'),
-            "param_name" => "mt_class",
+            "heading" => esc_html__("Main title width",'theclick'),
+            "param_name" => "mt_xl_width",
             "value" => "",
+            'description' => esc_html__( 'Enter width in px for desktop device (420px)','theclick'),
             'group'      => esc_html__('Main Title', 'theclick')
         ), 
         ef5systems_vc_map_add_css_animation([
