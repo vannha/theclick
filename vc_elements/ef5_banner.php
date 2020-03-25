@@ -28,7 +28,7 @@ vc_map(array(
             'std'        => 'left',
             'dependency' => array(
                 'element' => 'banner_style',
-                'value'      => '2',
+                'value'      => array('2','4'),
             ),
         ), 
         ef5systems_vc_map_add_css_animation([
