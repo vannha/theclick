@@ -409,6 +409,7 @@ if(!function_exists('theclick_post_related')){
 
         //for use in the loop, list 2 posts related to first tag on current post
         $tag_tax_name = theclick_get_custom_post_tag_taxonomy();
+        var_dump($tag_tax_name);
         $post = get_post();
         $tags = get_the_terms($post->ID,$tag_tax_name);
         $rtl = is_rtl() ? true : false;
