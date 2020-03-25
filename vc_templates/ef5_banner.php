@@ -30,7 +30,7 @@ $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
             echo '<div class="content-wrap">'; 
             $this->ef5_banner_sub_title($atts,['class' => '']);
             $this->ef5_banner_main_title($atts,['class' => '']);
-            $this->ef5_banner_button($atts,['class' => 'ef5-btn outline']);
+            $this->ef5_banner_button($atts,['class' => 'ef5-btn primary outline2']);
             echo '</div>';
             break;
         case '2': 
