@@ -214,9 +214,8 @@
 		text-align: right;
 		right: calc(100% - 35px);
 	}
-	&.right .content-wrap{
-		text-align: right;
-		right: calc(100% - 35px);
+	&.left .content-wrap{
+		left: calc(100% - 35px);
 	}
 	
 	.main-title{
