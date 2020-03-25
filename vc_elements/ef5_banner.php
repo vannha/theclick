@@ -86,7 +86,7 @@ vc_map(array(
         array(
             "type" => "textfield",
             "heading" => esc_html__("Main title width",'theclick'),
-            "param_name" => "mt_xl_width",
+            "param_name" => "mt_width",
             "value" => "",
             'description' => esc_html__( 'Enter width in px for desktop device (420px)','theclick'),
             'group'      => esc_html__('Main Title', 'theclick')
@@ -208,14 +208,13 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $main_title_attrs = [];
         $main_title_css_class = [
             'main-title',
-            $mt_class,
             $this->getCSSAnimation($atts['main_title_css_animation']),
             $args['class']
         ];
 
         $main_title_style = [];
         $main_title_style[] = (!empty($main_title_color)) ? 'color:'.$main_title_color.';' : '';
-        $main_title_style[] = (!empty($mt_xl_width)) ? 'width:'.$mt_xl_width.';' : '';
+        $main_title_style[] = (!empty($mt_xl_width)) ? 'width:'.$mt_width.';' : '';
 
         $main_title_attrs[] = 'class="'.trim(implode(' ', $main_title_css_class)).'"';
         $main_title_attrs[] = 'style="'.trim(implode(' ', $main_title_style)).'"';
