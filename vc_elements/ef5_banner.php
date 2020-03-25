@@ -131,7 +131,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         extract( $atts );
 
         $el_class = $this->getExtraClass( $el_class );
-        $align = $banner_style == '2' ? $el_content_align : ''; 
+        $align = ($banner_style == '2' || $banner_style == '4' ) ? $el_content_align : ''; 
         $wrap_css_class = [
             'ef5-banner-wrap',
             'ef5-banner-'.$banner_style,
