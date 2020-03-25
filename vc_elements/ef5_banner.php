@@ -214,7 +214,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
 
         $main_title_style = [];
         $main_title_style[] = (!empty($main_title_color)) ? 'color:'.$main_title_color.';' : '';
-        $main_title_style[] = (!empty($mt_xl_width)) ? 'width:'.$mt_width.';' : '';
+        $main_title_style[] = (!empty($mt_width)) ? 'width:'.$mt_width.';' : '';
 
         $main_title_attrs[] = 'class="'.trim(implode(' ', $main_title_css_class)).'"';
         $main_title_attrs[] = 'style="'.trim(implode(' ', $main_title_style)).'"';
