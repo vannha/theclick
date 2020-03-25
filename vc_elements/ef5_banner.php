@@ -13,6 +13,7 @@ vc_map(array(
                 '2' => get_template_directory_uri().'/vc_elements/layouts/banner-style2.jpg', 
                 '3' => get_template_directory_uri().'/vc_elements/layouts/banner-style3.jpg', 
                 '4' => get_template_directory_uri().'/vc_elements/layouts/banner-style4.jpg', 
+                '5' => get_template_directory_uri().'/vc_elements/layouts/banner-style4.jpg', 
             ),
             'param_name' => 'banner_style',
             "admin_label" => true
@@ -29,6 +30,16 @@ vc_map(array(
             'dependency' => array(
                 'element' => 'banner_style',
                 'value'      => array('2','4'),
+            ),
+        ), 
+        array(
+            "type" => "textfield",
+            "heading" => esc_html__("Background Text",'theclick'),
+            "param_name" => "bg_text",
+            "value" => "",
+            'dependency' => array(
+                'element' => 'banner_style',
+                'value'      => array('4','5'),
             ),
         ), 
         ef5systems_vc_map_add_css_animation([
@@ -53,6 +64,16 @@ vc_map(array(
             "type" => "attach_image",
             "heading" => esc_html__("Image Item",'theclick'),
             "param_name" => "bn_image",
+            'group'      => esc_html__('Media', 'theclick')
+        ),
+        array(
+            "type" => "attach_image",
+            "heading" => esc_html__("Image background",'theclick'),
+            "param_name" => "bn_image_bg",
+            'dependency' => array(
+                'element' => 'banner_style',
+                'value'      => array('4','5'),
+            ),
             'group'      => esc_html__('Media', 'theclick')
         ),
         ef5systems_vc_map_add_css_animation([
@@ -217,7 +238,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
 
         $main_title_attrs[] = 'class="'.trim(implode(' ', $main_title_css_class)).'"';
         $main_title_attrs[] = 'style="'.trim(implode(' ', $main_title_style)).'"';
-        
+
         $mtl_style = (!empty($mt_width)) ? 'style="width:'.$mt_width.';"' : '';
         ?>
         <div <?php echo trim(implode(' ', $main_title_attrs));?>><?php 
