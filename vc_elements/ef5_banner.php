@@ -43,7 +43,6 @@ vc_map(array(
             'param_name'  => 'el_id',
             'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'theclick' ), '//w3schools.com/tags/att_global_id.asp' ),
         ),
-
         array(
             "type" => "textfield",
             "heading" => esc_html__("Class",'theclick'),
@@ -84,6 +83,13 @@ vc_map(array(
             "value"      => "",
             "group" => esc_html__("Main Title", 'theclick'),
         ),
+        array(
+            "type" => "textfield",
+            "heading" => esc_html__("Main title class",'theclick'),
+            "param_name" => "mt_class",
+            "value" => "",
+            'group'      => esc_html__('Main Title', 'theclick')
+        ), 
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'main_title_css_animation',
             'group'      => esc_html__('Main Title', 'theclick')
@@ -201,6 +207,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $main_title_attrs = [];
         $main_title_css_class = [
             'main-title',
+            $mt_class,
             $this->getCSSAnimation($atts['main_title_css_animation']),
             $args['class']
         ];
