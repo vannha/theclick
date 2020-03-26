@@ -220,12 +220,14 @@
 		}
 		.content-wrap{
 			text-align: right;
-			margin-right: -35px;
+			
 		}
 	} 
-	&.left .content-wrap{
-
-	}
+	&.left{
+		.content-wrap{
+			margin-left: -35px;
+		}
+	} 
 	
 	.main-title{
 		font-weight: 500;
