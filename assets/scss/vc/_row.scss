@@ -14,4 +14,10 @@
 }
 .ef5-row-bg-text{
 	position: absolute;
+	top: 0;
+	font-weight: 600;
+	padding: 0;
+	&.ef5-bg-font-tr{
+		right: 60px;
+	}
 }
