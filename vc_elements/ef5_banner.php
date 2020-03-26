@@ -32,16 +32,6 @@ vc_map(array(
                 'value'      => array('2','4'),
             ),
         ), 
-        array(
-            "type" => "textfield",
-            "heading" => esc_html__("Background Text",'theclick'),
-            "param_name" => "bg_text",
-            "value" => "",
-            'dependency' => array(
-                'element' => 'banner_style',
-                'value'      => array('4','5'),
-            ),
-        ), 
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'banner_css_animation'
         ]), 
@@ -64,16 +54,6 @@ vc_map(array(
             "type" => "attach_image",
             "heading" => esc_html__("Image Item",'theclick'),
             "param_name" => "bn_image",
-            'group'      => esc_html__('Media', 'theclick')
-        ),
-        array(
-            "type" => "attach_image",
-            "heading" => esc_html__("Image background",'theclick'),
-            "param_name" => "bn_image_bg",
-            'dependency' => array(
-                'element' => 'banner_style',
-                'value'      => array('4','5'),
-            ),
             'group'      => esc_html__('Media', 'theclick')
         ),
         ef5systems_vc_map_add_css_animation([
