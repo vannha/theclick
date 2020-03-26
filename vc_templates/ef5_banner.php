@@ -27,15 +27,15 @@ $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
             break;
         case '4': 
             //$this->theclick_banner_image_bg($atts,['class' => '']);
-            $this->theclick_banner_bg_text($atts,['class' => '']);
-            echo '<div class="media-content-wrap">'; 
+            //$this->theclick_banner_bg_text($atts,['class' => '']);
+            //echo '<div class="media-content-wrap">'; 
             $this->theclick_banner_main_media($atts,['class' => '']);
             echo '<div class="content-wrap">'; 
             $this->theclick_banner_sub_title($atts,['class' => '']);
             $this->theclick_banner_main_title($atts,['class' => '']);
             $this->theclick_banner_button($atts,['class' => 'ef5-btn primary outline2']);
             echo '</div>';
-            echo '</div>';
+            //echo '</div>';
             break;
         case '2': 
         default:
