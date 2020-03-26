@@ -16,8 +16,10 @@
 	position: absolute;
 	top: 0;
 	font-weight: 600;
-	padding: 0;
 	&.ef5-bg-font-tr{
 		right: 60px;
+	}
+	&.ef5-bg-font-tl{
+		left: 66px;
 	}
 }
