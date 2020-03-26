@@ -214,6 +214,7 @@
 		display: inline-block;
 	}
 	.media-content-wrap{
+		position: relative;
 		@media (min-width: 992px){
 			@include d-flex();
 			align-items: center;
