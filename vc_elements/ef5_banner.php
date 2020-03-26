@@ -167,47 +167,6 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         
         echo esc_attr($css_class);
     }
-    protected function theclick_banner_image_bg($atts,$args = []){
-        extract( $atts );
-        $args = wp_parse_args($args, [
-            'class' => ''        
-        ]);
-        $image_url = '';
-        if (!empty($bn_image_bg)) {
-            $attachment_image = wp_get_attachment_image_src($bn_image_bg, 'full');
-            $image_url = $attachment_image[0];
-        }
-        if(empty($image_url)) return;
-        $banner_css_class = [
-            'bn-img-bg',
-            $args['class']
-        ];
-        $banner_attrs[] = 'class="'.trim(implode(' ', $banner_css_class)).'"';
-         
-        ?>
-        <div <?php echo trim(implode(' ', $banner_attrs));?>>
-            <img src="<?php echo esc_url($image_url);?>" class="media-img">
-        </div>
-        <?php 
-    }
-    protected function theclick_banner_bg_text($atts,$args = []){
-        extract( $atts );
-        $args = wp_parse_args($args, [
-            'class' => ''        
-        ]);
-         
-        if(empty($bg_text)) return;
-        $banner_css_class = [
-            'bn-text-bg',
-            $args['class']
-        ];
-        $banner_attrs[] = 'class="'.trim(implode(' ', $banner_css_class)).'"';
-         
-        ?>
-        <div <?php echo trim(implode(' ', $banner_attrs));?>><?php echo esc_html($bg_text); ?></div>
-        <?php 
-    }
-    
     protected function theclick_banner_main_media($atts,$args = []){ 
         extract( $atts );
         $args = wp_parse_args($args, [
