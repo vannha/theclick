@@ -26,7 +26,7 @@ $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
             echo '</div>';
             break;
         case '4': 
-            $this->theclick_banner_image_bg($atts,['class' => '']);
+            //$this->theclick_banner_image_bg($atts,['class' => '']);
             $this->theclick_banner_bg_text($atts,['class' => '']);
             $this->theclick_banner_main_media($atts,['class' => '']);
             echo '<div class="content-wrap">'; 
