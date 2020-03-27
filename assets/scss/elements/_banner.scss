@@ -228,21 +228,7 @@
 	.content-wrap{
 		 
 	}
-	&.right{
-		@media (min-width: 992px){
-			flex-direction: row-reverse;
-		}
-		.content-wrap{
-			text-align: right;
-			margin-right: -35px;
-		}
-	} 
-	&.left{
-		background-position: right !important;
-		.content-wrap{
-			margin-left: -35px;
-		}
-	} 
+	
 	
 	.main-title{
 		font-weight: 500;
@@ -265,14 +251,36 @@
 		font-size: 16px;
 		line-height: 19px;
 		font-weight: 500;
+		position: relative;
 		&:after{
 			content: "";
 			width: 20px;
 			height: 2px;
+			position: absolute;
+			bottom: 5px;
+			left: calc(100% + 10px);
 			background-color: $HeadingColor;
 			display: block;
 		}
 
 	}
+	&.right{
+		@media (min-width: 992px){
+			flex-direction: row-reverse;
+		}
+		.content-wrap{
+			text-align: right;
+			margin-right: -35px;
+		}
+		.sub-title::after{
+			left: -30px;
+		}
+	} 
+	&.left{
+		background-position: right !important;
+		.content-wrap{
+			margin-left: -35px;
+		}
+	} 
 	
 }
