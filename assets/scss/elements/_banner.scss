@@ -220,6 +220,11 @@
 			}
 		}
 	}
+	.content-wrap{
+		@media (max-width: 767px){
+			margin-top: 20px;
+		}
+	}
 	.main-title{
 		font-weight: 500;
 		font-size: 100px;
@@ -233,6 +238,9 @@
 			font-size: 50px;
 			margin-bottom: 30px;
 		}
+		@media (max-width: 576px){
+			font-size: 30px;
+		}
 		a{
 			display: inline-block;
 		}
@@ -245,6 +253,13 @@
 		line-height: 19px;
 		font-weight: 500;
 		position: relative;
+		@media (max-width: 576px){
+			font-size: 12px;
+			font-weight: 400;
+			&:after{
+				content: none;
+			}	
+		}
 		&:after{
 			content: "";
 			width: 20px;
