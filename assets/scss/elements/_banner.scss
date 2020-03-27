@@ -211,6 +211,15 @@
 		@include d-flex();
 		align-items: center;
 	}
+	>div{
+		@media (min-width: 1430px){
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+	.content-media{
+
+	}
 	.content-wrap{
 		 
 	}
