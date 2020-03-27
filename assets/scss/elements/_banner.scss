@@ -1,6 +1,9 @@
 .ef5-banner-wrap{
 	.main-title a{
 		display: block;
+		@media (max-width: 991px){
+			width: auto !important;
+		}
 	}
 }
 .ef5-banner-1{
@@ -207,17 +210,6 @@
 }
 .ef5-banner-4{
 	position: relative;
-	/* @media (min-width: 992px){
-		@include d-flex();
-		align-items: center;
-	}
-	>div{
-		@media (max-width: 1430px){
-			flex: 0 0 50%;
-			max-width: 50%;
-		}
-	}
- */
 	.main-media{
 		img{
 			@media (max-width: 1430px){
@@ -225,11 +217,6 @@
 			}
 		}
 	}
-	.content-wrap{
-		 
-	}
-	
-	
 	.main-title{
 		font-weight: 500;
 		font-size: 100px;
