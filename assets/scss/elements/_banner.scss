@@ -316,6 +316,11 @@
 	    margin-bottom: 30px;
 	}
 }
+.ml-xl-sub-40{
+	@media (min-width: 1200px){
+		margin-left: -40px;
+	}
+}
 .ef5-banner-6{
 	background-position: right 0 !important;
 	.content-wrap{
