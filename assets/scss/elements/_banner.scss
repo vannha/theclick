@@ -213,6 +213,9 @@
 	@media (max-width: 1599px){
 		background-size: 80% !important;
 	}
+	@media (max-width: 767px){
+		background-image: none !important;
+	}
 	.main-media{
 		img{
 			@media (max-width: 1430px){
