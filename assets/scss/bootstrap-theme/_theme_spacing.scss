@@ -137,7 +137,7 @@ $spacers: (
                 }
             }
         }
-        .col-#{$infix}-auto { 
+        .col#{$infix}-auto { 
             flex: 0 0 auto;
             width: auto;
         }
