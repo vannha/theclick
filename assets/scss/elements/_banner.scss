@@ -265,7 +265,7 @@
 	}
 	&.right{
 		.row{
-			@media (min-width: 992px){
+			@media (min-width: 768px){
 				flex-direction: row-reverse;
 			}
 		}
