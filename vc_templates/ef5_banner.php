@@ -37,8 +37,8 @@ $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
             break;
         case '5': 
             echo '<div class="row gutter-0">'; 
-            $this->theclick_banner_main_media($atts,['class' => '']);
-            echo '<div class="content-wrap align-self-end">'; 
+            $this->theclick_banner_main_media($atts,['class' => 'col-12 col-md-6 col-xxxl-auto']);
+            echo '<div class="content-wrap align-self-end col-12 col-md-6 col-xxxl-auto">'; 
             $this->theclick_banner_sub_title($atts,['class' => '']);
             $this->theclick_banner_main_title($atts,['class' => '']);
             $this->theclick_banner_button($atts,['class' => 'btn-link']);
