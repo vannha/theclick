@@ -303,8 +303,11 @@
 	} 
 }
 .ef5-banner-5{
-	padding-left: 34%px;
+	padding-left: 34%;
 	background-position: 0 78% !important;
+	@media (max-width: 1599px){
+		padding-left: 24%;
+	}
 	.content-wrap{
 		margin-left: -35px;
 		margin-bottom: 142px;
