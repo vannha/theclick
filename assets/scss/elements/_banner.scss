@@ -361,14 +361,18 @@
 }
 .ef5-banner-6{
 	background-position: right 0 !important;
+	padding-bottom: 66px;
 	@media (max-width: 1599px){
 		padding-top: 100px;
 		background-size: 70%;
 	}
 	@media (max-width: 767px){
-		padding-top: 0;
+		padding-top: 50px;
+		padding-bottom: 36px;
 	}
 	@media (max-width: 479px){	
+		padding-top: 0;
+		padding-bottom: 0;
 		background-image: none !important;
 	}
 	.content-wrap{
