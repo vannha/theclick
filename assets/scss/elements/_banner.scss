@@ -269,8 +269,10 @@
 				margin-right: -35px;
 			}
 		}
-		.sub-title::after{
-			left: -30px;
+		@media (min-width: 768px){
+			.sub-title::after{
+				left: -30px;
+			}
 		}
 	} 
 	&.left{
