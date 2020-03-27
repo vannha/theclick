@@ -226,6 +226,10 @@
 			font-size: 70px;
 			margin-bottom: 30px;
 		}
+		@media (max-width: 991px){
+			font-size: 50px;
+			margin-bottom: 30px;
+		}
 		a{
 			display: inline-block;
 		}
