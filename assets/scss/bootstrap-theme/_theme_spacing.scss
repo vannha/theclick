@@ -137,11 +137,7 @@ $spacers: (
                 }
             }
         }
-        .col#{$infix}-auto { 
-            flex: 0 0 auto;
-            width: auto;
-        }
-
+         
         // Some special margin utils
         .m#{$infix}-auto { margin: auto !important; }
         .mt#{$infix}-auto,
@@ -159,6 +155,11 @@ $spacers: (
         .ml#{$infix}-auto,
         .mx#{$infix}-auto {
             margin-left: auto !important;
+        }
+
+        .col#{$infix}-auto { 
+            flex: 0 0 auto;
+            width: auto;
         }
     }
 }
