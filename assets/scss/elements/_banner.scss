@@ -219,7 +219,11 @@
 	}
 
 	.content-media{
-
+		img{
+			@media (max-width: 1430px){
+				width: 100%;
+			}
+		}
 	}
 	.content-wrap{
 		 
