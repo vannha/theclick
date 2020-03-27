@@ -210,6 +210,9 @@
 }
 .ef5-banner-4{
 	position: relative;
+	@media (max-width: 1599px){
+		background-size: 60% !important;
+	}
 	.main-media{
 		img{
 			@media (max-width: 1430px){
