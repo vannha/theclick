@@ -24,5 +24,7 @@
 	}
 }
 .bg-text-left-256 .ef5-row-bg-text.ef5-bg-font-tl{
-	left: 256px;
+	@media (min-width: 768px){
+		left: 256px;
+	}
 }
