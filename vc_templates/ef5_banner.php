@@ -26,11 +26,13 @@ $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
             echo '</div>';
             break;
         case '4': 
+            echo '<div class="row gutter-0">'; 
             $this->theclick_banner_main_media($atts,['class' => 'col-12 col-md-6 col-lg-7 col-xxl-auto']);
             echo '<div class="content-wrap col-12 col-md-6 col-lg-5 col-xxl-auto">'; 
             $this->theclick_banner_sub_title($atts,['class' => '']);
             $this->theclick_banner_main_title($atts,['class' => '']);
             $this->theclick_banner_button($atts,['class' => 'ef5-btn primary outline2']);
+            echo '</div>';
             echo '</div>';
             break;
         case '2': 
