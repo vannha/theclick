@@ -261,8 +261,10 @@
 			}
 		}
 		.content-wrap{
-			text-align: right;
-			margin-right: -35px;
+			@media (min-width: 768px){
+				text-align: right;
+				margin-right: -35px;
+			}
 		}
 		.sub-title::after{
 			left: -30px;
@@ -271,7 +273,9 @@
 	&.left{
 		background-position: right !important;
 		.content-wrap{
-			margin-left: -35px;
+			@media (min-width: 768px){
+				margin-left: -35px;
+			}
 		}
 	} 
 	
