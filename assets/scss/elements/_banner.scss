@@ -207,7 +207,7 @@
 }
 .ef5-banner-4{
 	position: relative;
-	@media (min-width: 992px){
+	/* @media (min-width: 992px){
 		@include d-flex();
 		align-items: center;
 	}
@@ -217,7 +217,7 @@
 			max-width: 50%;
 		}
 	}
-
+ */
 	.main-media{
 		img{
 			@media (max-width: 1430px){
