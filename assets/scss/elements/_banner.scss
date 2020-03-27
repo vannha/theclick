@@ -249,6 +249,10 @@
 		font-size: 100px;
 		line-height: 1;
 		margin-bottom: 50px;
+		@media (max-width: 1199px){
+			font-size: 70px;
+			margin-bottom: 30px;
+		}
 		a{
 			display: inline-block;
 		}
@@ -260,6 +264,15 @@
 		display: block;
 		font-size: 16px;
 		line-height: 19px;
+		font-weight: 500;
+		&:after{
+			content: "";
+			width: 20px;
+			height: 2px;
+			background-color: $HeadingColor;
+			display: block;
+		}
+
 	}
 	
 }
