@@ -256,13 +256,6 @@
 		line-height: 19px;
 		font-weight: 500;
 		position: relative;
-		@media (max-width: 576px){
-			font-size: 12px;
-			font-weight: 400;
-			&:after{
-				content: none;
-			}	
-		}
 		&:after{
 			content: "";
 			width: 20px;
@@ -272,6 +265,13 @@
 			left: calc(100% + 10px);
 			background-color: $HeadingColor;
 			display: block;
+		}
+		@media (max-width: 576px){
+			font-size: 12px;
+			font-weight: 400;
+			&:after{
+				content: none;
+			}	
 		}
 
 	}
