@@ -335,6 +335,9 @@
 	.content-wrap{
 		margin-left: -125px;
 		margin-bottom: 40px;
+		@media (max-width: 1365px){
+			margin-left: -25px;
+		}
 	}
 	.main-title{
 		font-size: 70px;
