@@ -325,11 +325,16 @@
 	.content-wrap{
 		margin-left: -35px;
 		margin-bottom: 142px;
+		@media (max-width: 1199px){
+			margin-bottom: 102px;
+		}
 		@media (max-width: 767px){
 			margin-left: -15px;
+			margin-bottom: 82px;
 		}
 		@media (max-width: 479px){
 			margin-left: 15px;
+			margin-bottom: 0;
 		}
 	}
 	.main-title{
