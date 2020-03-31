@@ -119,7 +119,38 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
             wp_reset_postdata();
         ?>
         </div>
-   <?php
+    <?php
+    break;
+    case '4':
+        ?>
+        <div class="title-read-more d-flex justify-content-between align-items-center gutter-30">
+            <?php if(!empty($el_title)): ?>
+                <div class="title text-40 text-xl-50 lh-1/28"><?php echo theclick_html($el_title)?></div>
+            <?php endif; ?>
+            <?php if($show_view_all !== 'none'): ?>
+            <div class="read-more">
+                <a href="<?php echo get_permalink($show_view_all_page);?>" class="link-read-more"><?php echo esc_html($show_view_all_text);?></a>
+            </div> 
+            <?php endif; ?>
+        </div>
+        <div class="row ef5-blog-wrap <?php echo esc_attr($column_xl_gutter)?>">
+            <?php
+            $d = 0;
+            while ($posts->have_posts()) {
+                $d++;
+                $posts->the_post();
+                ?>
+                <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php theclick_vc_post_layout3($atts);?>
+                    </div>
+                </div>
+                <?php
+            } // end while
+            wp_reset_postdata();
+        ?>
+        </div>
+    <?php
     break;
     }
     ?>
