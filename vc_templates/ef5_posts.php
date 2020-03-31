@@ -157,8 +157,11 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
                 ?>
                 <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 100); ?>ms">
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <div class="ef5-media-wrap">
+                        <?php theclick_post_media(['thumbnail_size' => $atts['thumbnail_size']]); ?>
+                        <?php get_the_term_list( get_the_ID(), 'category', '', ' / ', '' ) ?>
+                        </div>
                         <?php 
-                        theclick_post_media(['thumbnail_size' => $atts['thumbnail_size']]);
                         the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
                         theclick_post_excerpt(['show_excerpt' => '1', 'length' => '30' ]);
                         printf('<div class="ef5-readmore"><a href="%1$s" title="%2$s" class="ef5-btn primary outline2">%3$s</a></div>',
