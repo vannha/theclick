@@ -57,7 +57,9 @@
 }
 .ef5-fancybox-3{
 	padding-bottom: 50px;
-	border-bottom: 1px solid $primary_color;
+	@media (min-width: 768px){
+		border-bottom: 1px solid $primary_color;	
+	}
 	.ef5-fancybox-icon{
 		font-size: 22px;
 		margin-bottom: 22px;
