@@ -132,7 +132,7 @@ vc_map(array(
                 'std'         => '',
                 'dependency'    => array(
                     'element'   => 'layout_template',
-                    'value'     => ['3']
+                    'value'     => ['3','4']
                 )
             ),
             array(
