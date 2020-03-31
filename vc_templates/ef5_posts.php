@@ -164,11 +164,6 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
                         <?php 
                         the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
                         theclick_post_excerpt(['show_excerpt' => '1', 'length' => '30' ]);
-                        printf('<div class="ef5-readmore"><a href="%1$s" title="%2$s" class="ef5-btn primary outline2">%3$s</a></div>',
-                            esc_url( get_the_permalink() ),
-                            esc_attr( get_the_title() ),
-                            esc_html__('Continue Reading','theclick')
-                        );
                         ?>
                     </div>
                 </div>
