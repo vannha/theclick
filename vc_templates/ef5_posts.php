@@ -164,6 +164,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
                         <?php 
                         the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
                         theclick_post_excerpt(['show_excerpt' => '1', 'length' => '30' ]);
+                        theclick_post_meta(['show_author' => '1','show_date' => '1','show_cmt' => '1']);
                         ?>
                     </div>
                 </div>
@@ -179,7 +180,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
     </div>
 <?php
 theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
-if($layout_template !== '3')
+if($layout_template !== '3' && $layout_template !== '4')
 $this->view_all($atts);
 ?>
 </div>
