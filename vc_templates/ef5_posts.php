@@ -159,7 +159,7 @@ $item_css_class = ['post-grid-item', 'ef5-post-item-layout-' . $layout_template,
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <div class="ef5-media-wrap">
                         <?php theclick_post_media(['thumbnail_size' => $atts['thumbnail_size']]); ?>
-                        <?php echo get_the_term_list( get_the_ID(), 'category', '', ' / ', '' ) ?>
+                        <?php echo '<span class="ef5-cat">'.get_the_term_list( get_the_ID(), 'category', '', ' / ', '' ).'</span>'; ?>
                         </div>
                         <?php 
                         the_title( '<div class="ef5-heading"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
