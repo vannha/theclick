@@ -253,6 +253,9 @@
 			padding: 8px 15px;
 			background-color: #fff;
 			text-transform: uppercase;
+			a,a:hover{
+				color: inherit;
+			}
 		}
 	}
 	.title-read-more{
