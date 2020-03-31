@@ -240,6 +240,19 @@
 			padding-bottom: 30px;
 		}
 	}
+	.ef5-media-wrap{
+		position: relative;
+		.ef5-cat{
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 16px;
+			padding: 8px 15px;
+			background-color: $white;
+		}
+	}
 	.title-read-more{
 		margin-bottom: 50px;
 	}
