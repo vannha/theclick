@@ -12,9 +12,9 @@ $grid-breakpoints: (
 ) !default;
 
 @import 'bootstrap/bootstrap-grid';
-@import 'bootstrap-theme/bootstrap-theme';
 @import 'functions';
 @import 'options';
+@import 'bootstrap-theme/bootstrap-theme';
 @import 'variations';
 @import 'localfont';
 
