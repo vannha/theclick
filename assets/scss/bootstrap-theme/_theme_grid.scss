@@ -111,7 +111,23 @@ $customs_gutters: (
 		}
 	}
 }
-$ef5-gutters
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		@each $gutters , $gutters-value in $ef5-gutters{
+			.vc_row.gutter#{$infix}-#{$gutters},
+			.vc_row.gutters#{$infix}-#{$gutters}{
+				margin-left: ($gutters-value / -2);
+				margin-right: ($gutters-value / -2);
+				> [class*='col'],
+				> *{
+					padding-left: ($gutters-value / 2);
+					padding-right: ($gutters-value / 2);
+				}
+			}
+		}
+	}
+}
 
 .no-container{
 	padding-left: $grid-gutter-width / 2;
