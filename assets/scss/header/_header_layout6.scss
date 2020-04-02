@@ -1,6 +1,6 @@
 $boxed_w: 1200px;
 @media (min-width: $screen-xl-min){
-	body.header-6:not(.side-header-ontop){
+	/* body.header-6:not(.side-header-ontop){
 		position: relative;
 		padding-left: $header_sidewidth;
 		[dir='rtl'] &{
@@ -29,5 +29,5 @@ $boxed_w: 1200px;
 				padding-right: $grid-gutter-width / 2;
 			}
 		}
-	}
+	} */
 }
