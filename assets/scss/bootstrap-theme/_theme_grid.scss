@@ -111,6 +111,7 @@ $customs_gutters: (
 		}
 	}
 }
+$ef5-gutters:('default':'','20':20px,'xl-45':45px,'50':50px);
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
