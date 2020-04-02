@@ -72,6 +72,7 @@ $customs_gutters: (
 		padding-right: 15px;
 	}
 }
+$ef5-gutters:('default':'','20':20px,'xl-45':45px,'50':50px);
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
@@ -109,12 +110,6 @@ $customs_gutters: (
 				}
 			}
 		}
-	}
-}
-$ef5-gutters:('default':'','20':20px,'xl-45':45px,'50':50px);
-@each $breakpoint in map-keys($grid-breakpoints) {
-	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
 		@each $gutters , $gutters-value in $ef5-gutters{
 			.vc_row.gutter#{$infix}-#{$gutters},
 			.vc_row.gutters#{$infix}-#{$gutters}{
@@ -129,6 +124,8 @@ $ef5-gutters:('default':'','20':20px,'xl-45':45px,'50':50px);
 		}
 	}
 }
+
+ 
 
 .no-container{
 	padding-left: $grid-gutter-width / 2;
