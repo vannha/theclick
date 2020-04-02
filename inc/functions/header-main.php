@@ -210,7 +210,7 @@ if(!function_exists('theclick_header_menu_class')){
         $header_sticky = theclick_get_opts('header_sticky','0');
         $header_helper_menu = theclick_get_opts('header_helper_menu','');
 
-        if($header_layout === '3')
+        if($header_layout === '0')
             $classes[] = 'ef5-side-menu';
         else 
             $classes[] = 'ef5-header-menu';
