@@ -11,7 +11,7 @@
                     <div class="ef5-logo col">
                         <?php get_template_part('template-parts/header/header-logo'); ?>
                     </div>
-                    <div class="ef5-navigation-wrap col">
+                    <div class="ef5-navigation-wrap col-auto">
                         <div class="d-flex align-items-center">
                             <?php
                             theclick_header_menu(['class' => 'ef5-navs']); 
