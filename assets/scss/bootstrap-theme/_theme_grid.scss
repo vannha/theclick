@@ -111,7 +111,7 @@ $customs_gutters: (
 			}
 		}
 		@each $gutters , $gutters-value in $ef5-gutters{
-			@if $gutters != default{
+			@if $gutters-value != ''{
 				.vc_row.gutter#{$infix}-#{$gutters},
 				.vc_row.gutters#{$infix}-#{$gutters}{
 					margin-left: ($gutters-value / -2);
