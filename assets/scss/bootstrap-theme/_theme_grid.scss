@@ -111,14 +111,16 @@ $customs_gutters: (
 			}
 		}
 		@each $gutters , $gutters-value in $ef5-gutters{
-			.vc_row.gutter#{$infix}-#{$gutters},
-			.vc_row.gutters#{$infix}-#{$gutters}{
-				margin-left: ($gutters-value / -2);
-				margin-right: ($gutters-value / -2);
-				> [class*='col'],
-				> *{
-					padding-left: ($gutters-value / 2);
-					padding-right: ($gutters-value / 2);
+			@if $gutters != default{
+				.vc_row.gutter#{$infix}-#{$gutters},
+				.vc_row.gutters#{$infix}-#{$gutters}{
+					margin-left: ($gutters-value / -2);
+					margin-right: ($gutters-value / -2);
+					> [class*='col'],
+					> *{
+						padding-left: ($gutters-value / 2);
+						padding-right: ($gutters-value / 2);
+					}
 				}
 			}
 		}
