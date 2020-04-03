@@ -17,7 +17,7 @@ if(!function_exists('theclick_woocommerce_after_single_product_summary')){
 		echo '</div>';
 	}
 }
-
+ 
 /**
  * Wrap Product Image / Gallery in a Div
  * add new acction to add new content
