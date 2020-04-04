@@ -171,7 +171,6 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		bottom: 0;
 		width: 100%;
 		padding: 70px 60px 60px 60px;
 		@media (max-width: 1430px){
@@ -185,6 +184,9 @@
 		}
 		@media (max-width: 767px){
 		 	padding: 50px 30px;
+		}
+		@media (max-width: 480px){
+		 	padding: 30px 15px;
 		}
 	}
 	.ef5-el-title{
@@ -202,7 +204,11 @@
 		}
 		@media (max-width: 575px){
 			font-size: 28px;
-			line-height: 36px;
+			line-height: 28px;
+		}
+		@media (max-width: 480px){
+		 	font-size: 28px;
+			line-height: 28px;
 		}
 	}
 	.sub-title{
@@ -214,6 +220,9 @@
 		 	font-size: 16px;
 		 	line-height: 22px;
 		 	margin-top: 10px;
+		}
+		@media (max-width: 480px){
+		 	display: none;
 		}
 	}
 	form{
@@ -227,6 +236,9 @@
 		}
 		@media (max-width: 575px){
 			margin-top: 30px;
+		}
+		@media (max-width: 480px){
+		 	margin-top: 20px;
 		}
 		::-webkit-input-placeholder {
 		    font-size: 16px;
@@ -251,6 +263,9 @@
     	@media (min-width: 768px) and (max-width: 991px){
 		 	padding: 8px 100px 9px 25px;
 		}
+		@media (max-width: 480px){
+		 	padding: 8px 100px 9px 25px;
+		}
 	}
 	.tnp-submit,
 	.tnp-button{
@@ -263,6 +278,9 @@
 		background-color: transparent;
 		text-transform: capitalize;
 		@media (min-width: 768px) and (max-width: 991px){
+		 	padding: 8px 25px 8px 10px;
+		}
+		@media (max-width: 480px){
 		 	padding: 8px 25px 8px 10px;
 		}
 		&:hover{
