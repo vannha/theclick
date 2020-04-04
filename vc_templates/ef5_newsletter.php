@@ -26,6 +26,7 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
 ?>
 <div id="<?php echo esc_attr($el_id); ?>" class="<?php echo esc_attr( $css_class ) ?>">
     <?php $this->theclick_nsl_media($atts,[]); ?>
+    <?php if($layout_template == '3') echo '<div class="nsl-content-wrap">'; ?>
     <?php $this->theclick_title($atts,[]); ?>
     <?php $this->theclick_sub_title($atts,[]); ?>
     <?php switch ($layout_mode) {
@@ -36,4 +37,5 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
             echo do_shortcode($default_form);
             break;
     } ?>
+    <?php if($layout_template == '3') echo '</div>'; ?>
 </div>
