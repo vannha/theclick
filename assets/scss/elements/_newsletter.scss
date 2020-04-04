@@ -185,7 +185,7 @@
 		@media (max-width: 767px){
 		 	padding: 50px 30px;
 		}
-		@media (max-width: 480px){
+		@media (max-width: 575px){
 		 	padding: 30px 15px;
 		 	top: 50%;
 		 	@include transform(translateY(-50%));
@@ -205,12 +205,8 @@
     		line-height: 28px;
 		}
 		@media (max-width: 575px){
-			font-size: 26px;
-    		line-height: 36px;
-		}
-		@media (max-width: 480px){
-		 	font-size: 20px;
-			line-height: 28px;
+			font-size: 20px;
+    		line-height: 28px;
 		}
 	}
 	.sub-title{
