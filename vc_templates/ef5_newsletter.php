@@ -25,8 +25,9 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
     $el_id = !empty($el_id) ? 'ef5-nsl-' . $el_id : uniqid('ef5-nsl-');
 ?>
 <div id="<?php echo esc_attr($el_id); ?>" class="<?php echo esc_attr( $css_class ) ?>">
-    <?php $this->title($atts); ?>
-    <?php $this->sub_title($atts); ?>
+    <?php $this->theclick_nsl_media($atts,[]); ?>
+    <?php $this->theclick_title($atts,[]); ?>
+    <?php $this->theclick_sub_title($atts,[]); ?>
     <?php switch ($layout_mode) {
         case 'minimal':
             echo do_shortcode('[newsletter_form type="minimal" button="'.esc_attr($btn_text).'" placeholder="'.esc_attr($email_text).'"  class="'.esc_attr($el_class).'"][/newsletter_form]');

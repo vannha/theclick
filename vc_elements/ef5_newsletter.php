@@ -31,6 +31,15 @@ vc_map(array(
 			'std'		  => 'minimal',
 			'admin_label' => true,
     	),
+    	array(
+            "type" => "attach_image",
+            "heading" => esc_html__("Image Item",'theclick'),
+            "param_name" => "nsl_image",
+            'dependency'    => array(
+				'element'   => 'layout_template',
+				'value'     => '3',
+			),
+        ),
 		array(
 			'type'        => 'textfield',
 			'heading'     => esc_html__( 'Element Title', 'theclick' ),
@@ -130,7 +139,7 @@ class WPBakeryShortCode_ef5_newsletter extends WPBakeryShortCode
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         return parent::content($atts, $content);
     }
-    protected function title($atts, $args=[]){
+    protected function theclick_title($atts, $args=[]){
     	if(empty($atts['el_title'])) return;
     	$args = wp_parse_args($args, [
     		'class' => ''
@@ -140,7 +149,7 @@ class WPBakeryShortCode_ef5_newsletter extends WPBakeryShortCode
 		<div class="<?php echo trim(implode(' ', $classes));?>"><?php echo esc_html($atts['el_title']); ?></div>
     	<?php
     }
-    protected function sub_title($atts, $args=[]){
+    protected function theclick_sub_title($atts, $args=[]){
     	if(empty($atts['el_title'])) return;
     	$args = wp_parse_args($args, [
     		'class' => ''
@@ -150,4 +159,22 @@ class WPBakeryShortCode_ef5_newsletter extends WPBakeryShortCode
 		<div class="<?php echo trim(implode(' ', $classes));?>"><?php echo esc_html($atts['el_sub_title']); ?></div>
     	<?php
     }
+    protected function theclick_nsl_media($atts,$args = []){ 
+        extract( $atts );
+        $args = wp_parse_args($args, [
+            'class' => ''        
+        ]);
+        $image_url = '';
+        if (!empty($nsl_image)) {
+            $attachment_image = wp_get_attachment_image_src($nsl_image, 'full');
+            $image_url = $attachment_image[0];
+        }
+        if(empty($image_url)) return;
+        var_dump($nsl_image);
+  		theclick_image_by_size(['id' => $nsl_image,'size' => 'full', 'class' => 'nsl-img']);
+        ?>
+        
+        <?php 
+    }
+   
 }
