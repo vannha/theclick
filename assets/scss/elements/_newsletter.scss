@@ -165,13 +165,21 @@
 	}
 }
 .ef5-newsletter-3{
-	padding: 40px 30px 40px 30px;
 	position: relative;
-	@media (min-width: 1200px){
+	/* @media (min-width: 1200px){
 		padding: 70px 60px 60px 60px;
 	}
 	@media (max-width: 480px){
 		padding: 30px 15px 30px 15px;
+	} */
+	.nsl-content-wrap{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 40px 30px 40px 30px;
 	}
 	.ef5-el-title{
 		font-weight: 500;
