@@ -139,7 +139,19 @@ vc_map(array(
             'heading' => esc_html__( 'CSS box', 'theclick' ),
             'param_name' => 'css',
             'group' => esc_html__( 'Design', 'theclick' ),
-        )
+        ),
+        array(
+			'type'        => 'textfield',
+			'heading'     => esc_html__( 'Content Inner Class', 'theclick' ),
+			'param_name'  => 'inner_class',
+			'value'       => '',
+			'std'		  => '',
+			'dependency'    => array(
+				'element'   => 'layout_template',
+				'value'     => '3',
+			),
+			'group' => esc_html__( 'Design', 'theclick' ),
+    	),
     ) 
 ));
 
