@@ -175,7 +175,10 @@
 		width: 100%;
 		padding: 70px 60px 60px 60px;
 		@media (max-width: 1199px){
-			 padding: 30px;
+		 	padding: 50px 60px 60px 60px;
+		}
+		@media (max-width: 1199px){
+		 	padding: 30px;
 		}
 	}
 	.ef5-el-title{
