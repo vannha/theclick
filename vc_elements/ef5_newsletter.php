@@ -38,7 +38,18 @@ vc_map(array(
             'dependency'    => array(
 				'element'   => 'layout_template',
 				'value'     => '3',
-			),
+			)
+        ),
+        array(
+            'type'          => 'textfield',
+            'param_name'    => 'thumbnail_size',
+            'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','theclick'),
+            'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
+            'std'           => '',
+            'dependency'    => array(
+				'element'   => 'layout_template',
+				'value'     => '3',
+			)
         ),
 		array(
 			'type'        => 'textfield',
@@ -170,8 +181,8 @@ class WPBakeryShortCode_ef5_newsletter extends WPBakeryShortCode
             $image_url = $attachment_image[0];
         }
         if(empty($image_url)) return;
-        var_dump($nsl_image);
-  		theclick_image_by_size(['id' => $nsl_image,'size' => 'full', 'class' => 'nsl-img']);
+
+  		theclick_image_by_size(['id' => $nsl_image,'size' => $thumbnail_size, 'class' => 'nsl-img']);
         ?>
         
         <?php 
