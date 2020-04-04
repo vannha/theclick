@@ -5,9 +5,9 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
 
     $wrapper_class = [
         'ef5-newsletter',
+        'ef5-newsletter-'.$layout_template,
         $layout_mode,
         $layout_type,
-        'ef5-newsletter-'.$layout_template,
         $this->getCSSAnimation($atts['nsl_css_animation']),
         $el_class
     ];
