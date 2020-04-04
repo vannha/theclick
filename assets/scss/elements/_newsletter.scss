@@ -174,12 +174,19 @@
 		bottom: 0;
 		width: 100%;
 		padding: 70px 60px 60px 60px;
+		@media (max-width: 1199px){
+			 padding: 30px;
+		}
 	}
 	.ef5-el-title{
 		font-weight: 500;
 		font-size: 36px;
 		line-height: 46px;
 		text-align: center;
+		@media (max-width: 1199px){
+	     	font-size: 26px;
+    		line-height: 36px;
+		}
 		@media (max-width: 575px){
 			font-size: 28px;
 			line-height: 36px;
@@ -194,6 +201,9 @@
 	form{
 		margin-top: 51px;
 		position: relative;
+		@media (max-width: 1199px){
+		 	margin-top: 30px;
+		}
 		@media (max-width: 575px){
 			margin-top: 30px;
 		}
