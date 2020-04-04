@@ -187,6 +187,8 @@
 		}
 		@media (max-width: 480px){
 		 	padding: 30px 15px;
+		 	top: 50%;
+		 	@include transform(translateY(-50%));
 		}
 	}
 	.ef5-el-title{
