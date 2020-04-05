@@ -31,7 +31,7 @@ vc_map(array(
             'std'        => 'left',
             'dependency' => array(
                 'element' => 'banner_style',
-                'value'      => array('2','4'),
+                'value'      => array('2','4')
             ),
         ), 
         array(
@@ -44,7 +44,7 @@ vc_map(array(
             'std'         => '1',
             'dependency'    => array(
                 'element'   => 'banner_style',
-                'value'     => '3',
+                'value'     => '3'
             ),
         ),
         array(
