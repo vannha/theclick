@@ -207,6 +207,15 @@
 			@include transition(width 0.4s);
 		}
 	}
+	&.small{
+		.content-wrap {
+		    left: 50px;
+		    bottom: 44px;
+		}
+		.banner_btn_link{
+			margin-top: 12px;
+		}
+	}
 }
 .ef5-banner-4{
 	position: relative;
