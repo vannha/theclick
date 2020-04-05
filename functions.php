@@ -376,7 +376,7 @@ function theclick_scripts()
     wp_localize_script( 'theclick', 'theclick_ajax_opts', $theclick_ajax_opts);
 }
 
-add_action('wp_enqueue_scripts', 'theclick_styles', 0);
+add_action('wp_enqueue_scripts', 'theclick_styles');
 function theclick_styles()
 {
     $min = theclick_script_debug();
