@@ -34,6 +34,19 @@ vc_map(array(
                 'value'      => array('2','4'),
             ),
         ), 
+        array(
+            'type'        => 'checkbox',
+            'description' => esc_html__( 'Show overlay', 'theclick' ),
+            'param_name'  => 'show_overlay',
+            'value'       => array(
+                esc_html__( 'Show overlay', 'theclick' ) => '1'
+            ),
+            'std'         => '1',
+            'dependency'    => array(
+                'element'   => 'banner_style',
+                'value'     => '3',
+            ),
+        ),
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'banner_css_animation'
         ]), 
