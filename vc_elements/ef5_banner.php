@@ -47,6 +47,21 @@ vc_map(array(
                 'value'     => '3',
             ),
         ),
+        array(
+            'type'        => 'dropdown',
+            'heading'     => esc_html__( 'Layout Type', 'theclick' ),
+            'description' => esc_html__( 'Choose Layout type you want to show', 'theclick' ),
+            'param_name'  => 'layout_type',
+            'value'       => array(
+                esc_html__('Default','theclick')         => 'default',
+                esc_html__('Small Padding','theclick')   => 'small',
+            ),
+            'std'         => 'default',
+            'dependency'    => array(
+                'element'   => 'banner_style',
+                'value'     => '3'
+            )
+        ),
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'banner_css_animation'
         ]), 
