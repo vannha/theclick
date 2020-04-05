@@ -17,9 +17,9 @@ $grid-breakpoints: (
 @import 'bootstrap-theme/bootstrap-theme';
 @import 'variations';
 @import 'localfont';
-@import 'vc/extends';
 @import 'mixins';
 @import 'extras';
+@import 'vc/extends';
 @import 'flexslider/flexslider';
 @import 'loading/loading';
 @import 'hover/hover';
