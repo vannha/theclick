@@ -170,6 +170,9 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
             $this->getCSSAnimation($atts['banner_css_animation']),
             $el_class
         ];
+        if($banner_style == '3')
+            $wrap_css_class[] = $layout_type;
+
         if(!empty($atts['css'])){
             $wrap_css_class[]=vc_shortcode_custom_css_class($atts['css']);
         }
