@@ -17,7 +17,7 @@ $grid-breakpoints: (
 @import 'bootstrap-theme/bootstrap-theme';
 @import 'variations';
 @import 'localfont';
-
+@import 'vc/extends';
 @import 'mixins';
 @import 'extras';
 @import 'flexslider/flexslider';
@@ -43,7 +43,7 @@ $grid-breakpoints: (
 @import 'elements/elements';
 @import 'flexuser/flexuser';
 @import 'icons';
-@import 'vc/extends';
+
 @import 'woocommerce/woocommerce';
 
 @import 'classes';
