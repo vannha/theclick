@@ -17,6 +17,7 @@ vc_map(array(
             'param_name' => 'layout_template',
             'value'      =>  array(
                 '1' => get_template_directory_uri().'/vc_elements/layouts/countdown-1.jpg'
+                '2' => get_template_directory_uri().'/vc_elements/layouts/countdown-2.jpg'
             ),
             'std'        => '1',
             'admin_label' => true
