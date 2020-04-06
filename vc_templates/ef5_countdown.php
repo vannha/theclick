@@ -50,7 +50,7 @@ if($layout_template == '2'){
 		echo '<div class="cd-content-wrap">';
 		echo '<div class="cd-sub-title">'.esc_html($sub_title).'</div>';
 		echo '<div class="cd-main-title">'.esc_html($main_title).'</div>';
-		if($use_link) echo '<a href="'.esc_url($a_href).'" class="link-shop-more" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; 
+		if($use_link) echo '<a class="link-shop-more" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; 
 	endif;
 	?>
 	<div class="ef5-countdown-bar ef5-countdown-time" data-count="<?php echo esc_attr(date('Y,m,d,H,i,s', $time)); ?>" data-format="<?php echo esc_attr($time_format);?>" data-label="<?php echo esc_attr($time_label);?>" data-timezone="<?php echo esc_attr($gmt_offset); ?>"></div> 
