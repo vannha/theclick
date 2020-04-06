@@ -93,7 +93,7 @@ vc_map(array(
             'dependency'    => array(
                 'element'   => 'layout_template',
                 'value'     => '2'
-            )
+            ),
             'group'      => esc_html__('Media Content', 'theclick')
         ),
         array(
