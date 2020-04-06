@@ -51,6 +51,7 @@
 	line-height: 23px;	
 	position: relative;
 	color: $btn-color;
+	display: inline-block;
 	&:before,&:after{
 		content: "";
 	    width: 100%;
