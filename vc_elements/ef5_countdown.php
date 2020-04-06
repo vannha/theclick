@@ -97,6 +97,17 @@ vc_map(array(
             'group'      => esc_html__('Media Content', 'theclick')
         ),
         array(
+            'type'          => 'textfield',
+            'param_name'    => 'thumbnail_size',
+            'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','theclick'),
+            'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
+            'std'           => '',
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2',
+            )
+        ),
+        array(
             "type" => "textfield",
             "heading" => esc_html__("Main Title",'theclick'),
             "param_name" => "main_title",

@@ -190,12 +190,7 @@ class WPBakeryShortCode_ef5_newsletter extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class' => ''        
         ]);
-        $image_url = '';
-        if (!empty($nsl_image)) {
-            $attachment_image = wp_get_attachment_image_src($nsl_image, 'full');
-            $image_url = $attachment_image[0];
-        }
-        if(empty($image_url)) return;
+        if(empty($nsl_image)) return;
         $thumbnail_size = $thumbnail_size != '' ? $thumbnail_size : 'full';
   		theclick_image_by_size(['id' => $nsl_image,'size' => $thumbnail_size, 'class' => 'nsl-img']);
         ?>
