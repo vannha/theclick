@@ -85,7 +85,73 @@ vc_map(array(
             'heading'     => esc_html__( 'Format Time For Countdown', 'theclick' ),
             'description' => esc_html__( 'Choose time format you want!', 'theclick' ),
             'group'       => esc_html__('Timer','theclick')
-        )
+        ),
+        array(
+            "type" => "attach_image",
+            "heading" => esc_html__("Image Item",'theclick'),
+            "param_name" => "cd_image",
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2'
+            )
+            'group'      => esc_html__('Media Content', 'theclick')
+        ),
+        array(
+            "type" => "textfield",
+            "heading" => esc_html__("Main Title",'theclick'),
+            "param_name" => "main_title",
+            "value" => "",
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2'
+            ),
+            'group'      => esc_html__('Media Content', 'theclick')
+        ),
+        ef5systems_vc_map_add_css_animation([
+            'param_name' => 'main_title_css_animation',
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2'
+            ),
+            'group'      => esc_html__('Media Content', 'theclick')
+        ]), 
+        array(
+            "type" => "textfield",
+            "heading" => esc_html__("Sub Title",'theclick'),
+            "param_name" => "sub_title",
+            "value" => "",
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2'
+            ),
+            'group'      => esc_html__('Media Content', 'theclick')
+        ),
+        ef5systems_vc_map_add_css_animation([
+            'param_name' => 'sub_title_css_animation',
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2'
+            ),
+            'group'      => esc_html__('Media Content', 'theclick')
+        ]),
+        array(
+            'type' => 'vc_link',
+            'heading' => esc_html__( 'URL (Link)', 'theclick' ),
+            'param_name' => 'link',
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2'
+            )
+            'group'      => esc_html__('Media Content', 'theclick')
+        ),
+        ef5systems_vc_map_add_css_animation([
+            'param_name' => 'button_link_css_animation',
+            'dependency'    => array(
+                'element'   => 'layout_template',
+                'value'     => '2'
+            )
+            'group'      => esc_html__('Media Content', 'theclick')
+        ]),
     )
 ));
 
