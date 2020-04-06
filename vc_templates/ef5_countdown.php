@@ -37,7 +37,7 @@ if($layout_template == '2'){
 	
 	$wrap_css_class[] = 'text-center'; 
 
-	$style_inline = 'style="background-image:url('.esc_url($image_url).')"';
+	$style_inline = 'style="background:url('.esc_url($image_url).') no-repeat; background-size: cover;"';
 
 }
 ?>
