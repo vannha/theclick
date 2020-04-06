@@ -141,7 +141,7 @@ vc_map(array(
             'dependency'    => array(
                 'element'   => 'layout_template',
                 'value'     => '2'
-            )
+            ),
             'group'      => esc_html__('Media Content', 'theclick')
         ),
         ef5systems_vc_map_add_css_animation([
