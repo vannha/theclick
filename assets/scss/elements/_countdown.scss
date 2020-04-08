@@ -46,6 +46,7 @@
 	.cd-content-wrap{
 		position: absolute;
 		top: 50%;
+		width: 100%;
 		@include transform(translateY(-50%));
 		margin-bottom: 10px;
 	}
@@ -53,11 +54,16 @@
 	 	font-size: 14px;
 		line-height: 16px;
 		text-transform: uppercase;
+		margin-bottom: 15px;
 	}
 	.cd-main-title{
 		font-weight: 500;
 		font-size: 40px;
 		line-height: 51px;
+		margin-bottom: 32px;
+	}
+	.link-shop-more{
+		margin-bottom: 75px;
 	}
 	.ef5-countdown-bar{
 		@include d-flex();
