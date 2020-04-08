@@ -38,7 +38,15 @@
 	}
 }
 .ef5-countdown-layout-2{
+	position: relative;
+	.cd-img{
+		opacity: 0;
+		visibility: hidden;
+	}
 	.cd-content-wrap{
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
 		margin-bottom: 10px;
 	}
 	.cd-sub-title{
