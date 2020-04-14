@@ -16,7 +16,7 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         <?php 
         foreach($values as $value){
         ?>
-            <div class="ef5-carousel-item ef5-banner-carousel-item"> 
+            <div class="ef5-banner-carousel-item"> 
                 <?php $this->theclick_banner_carousel_render($atts, $value); ?>
             </div>
         <?php
