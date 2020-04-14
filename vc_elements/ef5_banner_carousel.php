@@ -33,7 +33,7 @@ vc_map(array(
                 'description'   => esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "post-thumbnail", "full". Alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
                 'param_name'    => 'image_size',
                 'value'         => '1078',
-                'std'           => '567'
+                'std'           => '1078'
             ),
             array(
                 'type'        => 'el_id',
@@ -133,7 +133,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         theclick_image_by_size([
             'id'    => $value['image'],
             'size'  => $atts['image_size'],
-            'class' => $args.' img-static w-auto'
+            'class' => 'img-static w-auto'
         ]);
          
     }
