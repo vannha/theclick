@@ -6,7 +6,8 @@ $el_id = !empty($el_id) ? 'ef5-banner-carousel-' . $el_id : uniqid('ef5-banner-c
 $banner_carousels = vc_map_get_attributes( $this->getShortcode(), $atts );
 $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
 ?>
-<div class="ef5-posts <?php $this->theclick_banner_carousel_wrap_css_class($atts);?>">
+<div class="<?php $this->theclick_banner_carousel_wrap_css_class($atts);?>">
+    <div class="bcw">
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
@@ -30,5 +31,6 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         ef5systems_owl_nav_container($atts);
         ef5systems_owl_dots_in_nav_container($atts);
     ?>
+    </div>
 </div>
   
