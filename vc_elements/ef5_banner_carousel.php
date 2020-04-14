@@ -133,7 +133,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         theclick_image_by_size([
             'id'    => $value['image'],
             'size'  => $atts['image_size'],
-            'class' => $args'img-static w-auto'
+            'class' => $args.' img-static w-auto'
         ]);
          
     }
