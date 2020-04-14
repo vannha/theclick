@@ -129,7 +129,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
     }
     protected function theclick_banner_carousel_render($atts, $value){ 
         
-        if(empty($value['image'])) return;
+        //if(empty($value['image'])) return;
         //$value['image'] = isset($value['image']) ? $value['image'] : '';
         theclick_image_by_size([
             'id'    => $value['image'],
