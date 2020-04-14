@@ -12,12 +12,12 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
     ?>
-    <div id="<?php echo esc_attr($el_id) ?>" class="ef5-owl owl-carousel ef5-clients-<?php echo esc_attr($el_id) ?>">
+    <div id="<?php echo esc_attr($el_id) ?>" class="ef5-owl owl-carousel ef5-bn-carousel-<?php echo esc_attr($el_id) ?>">
         <?php 
         foreach($values as $value){
         ?>
-            <div class="ef5-banner-carousel-item"> 
-                <?php $this->theclick_banner_carousel_render($atts, $value); ?>
+            <div class="ef5-banner-carousel-item"> aaaaaaaaaaaaaaaaaaaaaaa
+                <?php ///////$this->theclick_banner_carousel_render($atts, $value); ?>
             </div>
         <?php
         }
