@@ -104,6 +104,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
 {
     protected function content($atts, $content = null){
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
+        $atts['layout_style'] = 'carousel';
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
