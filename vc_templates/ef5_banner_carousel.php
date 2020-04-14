@@ -12,7 +12,7 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         ef5systems_owl_dots_top($atts); 
     ?>
     <div id="<?php echo esc_attr($el_id); ?>" class="ef5-owl owl-carousel">
-        <div class="ef5-owl-item">
+         
         <?php 
         foreach($values as $value){
         ?>
@@ -22,7 +22,7 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         <?php
         }
         ?>
-        </div>
+         
     </div>
     <?php 
         theclick_loading_animation('three-dot-bounce'); 
