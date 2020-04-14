@@ -64,19 +64,4 @@ switch ($layout_mode) {
         echo '</div>';
     break;
 }
-/*$args = [
-    'layout_mode'   => $layout_mode,
-    'span'          => $span,
-    'columns_space' => $columns_space,
-    'media_array'   => $media_array,
-    'size'          => $size,
-    'target'        => $target,
-    'show_like'     => $show_like,
-    'show_cmt'      => $show_cmt,
-    'show_author'   => $show_author,
-    'author_text'   => $author_text,
-    'less_more'     => $less_more
-];
 
-$html = apply_filters('ef5systems_instagram_output_html', $args);
-echo theclick_html($html);*/
