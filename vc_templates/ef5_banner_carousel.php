@@ -7,6 +7,7 @@ $banner_carousels = vc_map_get_attributes( $this->getShortcode(), $atts );
 $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
 ?>
 <div class="ef5-posts ef5-owl-wrap <?php $this->theclick_banner_carousel_wrap_css_class($atts);?>">
+    <div class="ef5-owl-wrap-inner relative">
     <?php 
         //ef5systems_owl_nav_top($atts);
         //ef5systems_owl_dots_top($atts); 
@@ -29,5 +30,6 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         ef5systems_owl_nav_container($atts);
         ef5systems_owl_dots_in_nav_container($atts);
     ?>
+    </div>
 </div>
   
