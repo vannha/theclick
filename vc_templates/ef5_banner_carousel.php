@@ -15,8 +15,8 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         <?php 
         foreach($values as $value){
         ?>
-            <div class="ef5-banner-carousel-item"> aaaaaaaaaaaaaaaaaaaaaaa
-                <?php ///////$this->theclick_banner_carousel_render($atts, $value); ?>
+            <div class="ef5-banner-carousel-item"> 
+                <?php $this->theclick_banner_carousel_render($atts, $value); ?>
             </div>
         <?php
         }
@@ -24,10 +24,10 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
          
     </div>
     <?php 
-        //theclick_loading_animation('three-dot-bounce'); 
-       // ef5systems_owl_dots_container($atts);
+        theclick_loading_animation('three-dot-bounce'); 
+        ef5systems_owl_dots_container($atts);
         ef5systems_owl_nav_container($atts);
-        //ef5systems_owl_dots_in_nav_container($atts);
+        ef5systems_owl_dots_in_nav_container($atts);
     ?>
 </div>
   
