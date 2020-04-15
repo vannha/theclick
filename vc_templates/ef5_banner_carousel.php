@@ -2,7 +2,7 @@
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract($atts);
 
-$el_id = !empty($el_id) ? 'ef5-bc-' . $el_id : uniqid('ef5-bc-');
+$el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
 $banner_carousels = vc_map_get_attributes( $this->getShortcode(), $atts );
 $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
 ?>
