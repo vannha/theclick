@@ -105,9 +105,9 @@ class TheClick_CSS_Generator
 
         $_options = $scss_dir . 'options.scss';
 
-        var_dump($this->redux->filesystem->execute( 'put_contents', $_options, array( 
+        $this->redux->filesystem->execute( 'put_contents', $_options, array( 
             'content' => $this->options_output()
-        ) )); die;
+        ) );
             
         /**
          * build source map
