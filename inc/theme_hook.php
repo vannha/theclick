@@ -220,7 +220,7 @@ function theclick_margin_spacings(){
 /**
  * Add your theme Gutter
 */
-add_filter('ef5systems_gutters','theclick_gutters');
+//add_filter('ef5systems_gutters','theclick_gutters');
 function theclick_gutters(){
 	return [
 		'0' => [
