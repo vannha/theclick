@@ -8,7 +8,6 @@
  * @author EF5 Team
  *
 */
-
 if(!function_exists('theclick_configs')){
     function theclick_configs($value){
         $configs = [
@@ -599,3 +598,5 @@ if(class_exists('WooCommerce')){
  *
 */
 theclick_require_folder('inc/extensions', get_template_directory());
+
+ 
