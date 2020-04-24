@@ -15,7 +15,7 @@
 
     ?>
     <div class="ef5-post-info">
-    	<div class="ef5-post-cat"><?php echo theclick_html($terms); ?></div>
+    	<div class="ef5-post-cat"><?php the_category( ' ' ); ?><?php //echo theclick_html($terms); ?></div>
     	<div class="ef5-post-title ef5-heading"><?php echo theclick_html($post->post_title); ?></div>
     	<?php  
 		$content = !empty($post->post_excerpt) ? $post->post_excerpt : $post->post_content;
