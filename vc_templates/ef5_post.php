@@ -3,8 +3,12 @@
 	extract($atts);
 	if(empty($post_id)) return;
  
-	$terms = get_term_link( $post_id , 'category', '', ' ', '' );
+	//$terms = get_term_link( $post_id , 'category', '', ' ', '' );
+    $terms = get_the_term_list( $post_id, 'category', ': ', ' / ' );
+    $terms = strip_tags( $terms );
+
 	$post   = get_post( $post_id );
+
 ?>
 <div class="ef5-post <?php echo esc_attr($el_class);?>">
     <?php 
@@ -15,7 +19,7 @@
 
     ?>
     <div class="ef5-post-info">
-    	<div class="ef5-post-cat"><?php the_category( ',', '', $post_id ); ?><?php //echo theclick_html($terms); ?></div>
+    	<div class="ef5-post-cat"><?php echo theclick_html($terms); ?></div>
     	<div class="ef5-post-title ef5-heading"><?php echo theclick_html($post->post_title); ?></div>
     	<?php  
 		$content = !empty($post->post_excerpt) ? $post->post_excerpt : $post->post_content;
