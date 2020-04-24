@@ -3,11 +3,8 @@
 	extract($atts);
 	if(empty($post_id)) return;
  
-    $terms = get_the_term_list( $post_id, 'category', '', ', ' );
-    $terms = strip_tags( $terms );
-
+	$terms = get_term_link( $post_id , 'category', '', ' ', '' );
 	$post   = get_post( $post_id );
-
 ?>
 <div class="ef5-post <?php echo esc_attr($el_class);?>">
     <?php 
