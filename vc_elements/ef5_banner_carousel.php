@@ -140,6 +140,16 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
             $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
             $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
         }
+        $title_class = [
+            'title',
+            $this->getCSSAnimation($value['main_title_css_animation'])
+        ];
+        $link_class = [
+            'ef5-btn',
+            $color ,
+            'outline3',
+            $this->getCSSAnimation($value['button_link_css_animation']),
+        ];
         theclick_image_by_size([
             'id'    => $value['image'],
             'size'  => $atts['image_size'],
@@ -147,8 +157,8 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         ]);
         ?>
         <div class="bn-content-wrap">
-            <div class="title"><?php echo esc_html($value['main_title']); ?></div>
-            <?php if($use_link) echo '<a class="ef5-btn '.$color.' outline3" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; ?>
+            <div class="<?php echo trim(implode(' ', $title_class));?>"><?php echo esc_html($value['main_title']); ?></div>
+            <?php if($use_link) echo '<a class="'.trim(implode(' ', $title_class)).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; ?>
         </div>
         <?php 
     }
