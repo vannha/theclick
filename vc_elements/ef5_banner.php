@@ -93,7 +93,8 @@ vc_map(array(
             'description'   => esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "post-thumbnail", "full". Alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
             'param_name'    => 'image_size',
             'value'         => '',
-            'std'           => ''
+            'std'           => '',
+            'group'      => esc_html__('Media', 'theclick')
         ),
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'media_css_animation',
