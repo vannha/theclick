@@ -12,7 +12,7 @@ $values = (array) vc_param_group_parse_atts( $banner_carousels['values'] );
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
     ?>
-    <div id="<?php echo esc_attr($el_id) ?>" class="ef5-posts-carousel ef5-posts-carousel-3 ef5-owl owl-carousel owl-loaded owl-drag">
+    <div id="<?php echo esc_attr($el_id) ?>" class="ef5-owl owl-carousel">
         <?php 
         foreach($values as $value){
         ?>
