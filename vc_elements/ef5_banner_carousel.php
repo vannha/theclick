@@ -116,6 +116,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         $wrap_css_class = [
             'ef5-banner-carousel-wrap',
             'ef5-banner-carousel-'.$banner_carousel_style,
+            $color,
             $el_class
         ];
 
@@ -127,7 +128,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         echo esc_attr($css_class);
     }
     protected function theclick_banner_carousel_render($atts, $value){ 
-        
+        extract( $atts );
         if(empty($value['image'])) return;
 
         $link     = (isset($value['btn_link'])) ? $value['btn_link'] : '';
@@ -147,7 +148,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         ?>
         <div class="bn-content-wrap">
             <div class="title"><?php echo esc_html($value['main_title']); ?></div>
-            <?php if($use_link) echo '<a class="ef5-btn white outline3" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; ?>
+            <?php if($use_link) echo '<a class="ef5-btn '.$color.' outline3" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; ?>
         </div>
         <?php 
     }
