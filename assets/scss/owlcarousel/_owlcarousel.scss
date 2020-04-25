@@ -63,6 +63,7 @@
 		&.white{
 			.ef5-owl-nav-icon:before {
 				background: url(../images/next-icon-white.png) no-repeat 0 0;
+				background-size: cover;
 			}
 		}
 	} 
@@ -78,6 +79,7 @@
 		&.white{
 			.ef5-owl-nav-icon:before{
 				background: url(../images/prev-icon-white.png) no-repeat 0 0;
+				background-size: cover;
 			}
 		}
 	} 
