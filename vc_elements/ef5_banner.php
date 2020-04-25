@@ -228,14 +228,14 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
                 $this->theclick_banner_sub_title($atts,['class' => '']);
                 theclick_image_by_size([
                     'id'    => $bn_image,
-                    'size'  => $atts['image_size'],
+                    'size'  => $img_size,
                     'class' => 'media-img'
                 ]);
                 if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'"><span>'.theclick_get_svg('play').'</span></a>';
             }else {
                 theclick_image_by_size([
                     'id'    => $bn_image,
-                    'size'  => $atts['image_size'],
+                    'size'  => $img_size,
                     'class' => 'media-img'
                 ]);
             }
