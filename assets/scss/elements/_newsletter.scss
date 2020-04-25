@@ -226,7 +226,7 @@
 	form{
 		margin-top: 51px;
 		position: relative;
-		@media (max-width: 1600px){
+		@media (max-width: 1599px){
 		 	margin-top: 30px;
 		}
 		@media (min-width: 768px) and (max-width: 991px){
@@ -289,6 +289,9 @@
 	&.small{
 		.nsl-content-wrap{
 			padding: 64px 50px 65px 50px;
+			@media (max-width: 1599px){
+				padding: 50px 50px 50px 50px;
+			}
 			/* @media (max-width: 1430px){
 			 	padding: 50px 60px 60px 60px;
 			}
