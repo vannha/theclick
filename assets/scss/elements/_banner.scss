@@ -461,5 +461,13 @@
 		width: 100%;
 		@include transform(translateY(-50%));
 		padding: 30px;
+		.main-title{
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 46px;
+			a,a:hover{
+				color: inherit;
+			}
+		}
 	}
 }
