@@ -288,7 +288,12 @@
 	}
 	&.small{
 		.nsl-content-wrap{
-			padding: 64px 50px 65px 50px;
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			@include transform(translateY(-50%));
+			/* padding: 64px 50px 65px 50px; */
+			padding: 10px 50px 15px 50px;
 			@media (max-width: 1599px){
 				padding: 50px 30px 50px 30px;
 			}
