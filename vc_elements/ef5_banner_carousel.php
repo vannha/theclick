@@ -69,19 +69,12 @@ vc_map(array(
                         "value" => "",
                         "group" => esc_html__("Main Title", 'theclick'),
                     ),
-                    ef5systems_vc_map_add_css_animation([
-                        'param_name' => 'main_title_css_animation',
-                        'group'      => esc_html__('Main Title', 'theclick')
-                    ]),
                     array(
                         'type'        => 'vc_link',
                         'heading'     => esc_html__( 'Button Link', 'theclick' ),
                         'param_name'  => 'btn_link',
                         'description' => esc_html__( 'Enter link for button.', 'theclick' ),
-                    ),
-                    ef5systems_vc_map_add_css_animation([
-                        'param_name' => 'button_link_css_animation'
-                    ])
+                    )
                 ),
                 'group'     => 'Images'
             ),
@@ -141,14 +134,12 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
             $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
         }
         $title_class = [
-            'title',
-            $this->getCSSAnimation($value['main_title_css_animation'])
+            'title'
         ];
         $link_class = [
             'ef5-btn',
             $color ,
-            'outline3',
-            $this->getCSSAnimation($value['button_link_css_animation']),
+            'outline3'
         ];
         theclick_image_by_size([
             'id'    => $value['image'],
