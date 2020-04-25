@@ -334,14 +334,10 @@
 			font-size: 22px;
 			line-height: 28px;
 			margin-top: 15px;
-			/* @media (min-width: 768px) and (max-width: 991px){
-			 	font-size: 16px;
-			 	line-height: 22px;
-			 	margin-top: 10px;
-			}
-			@media (max-width: 480px){
+			@media (min-width: 768px) and (max-width: 1365px){
 			 	display: none;
-			} */
+			}
+			 
 		}
 	}
 }
