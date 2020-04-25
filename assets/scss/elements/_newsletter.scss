@@ -288,13 +288,12 @@
 	}
 	&.small{
 		.nsl-content-wrap{
-			position: absolute;
-			top: 50%;
-			width: 100%;
-			@include transform(translateY(-50%));
+			display: flex;
+			flex-wrap: wrap;
+			
 			/* padding: 64px 50px 65px 50px; */
-			padding: 10px 50px 15px 50px;
-			@media (max-width: 1599px){
+			padding: 15px 50px 15px 50px;
+			/* @media (max-width: 1599px){
 				padding: 50px 30px 50px 30px;
 			}
 			@media (max-width: 1430px){
@@ -302,7 +301,7 @@
 			}
 			@media (max-width: 1365px){
 			 	padding: 40px 15px 30px 15px;
-			}
+			} */
 			/* 
 			@media (max-width: 1199px){
 			 	padding: 30px;

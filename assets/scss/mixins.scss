@@ -453,10 +453,18 @@ $social-colors: (
  * Display 
 */
 @mixin d-flex(){
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
     display: flex;
     flex-wrap: wrap; 
 }
 @mixin d-flex-auto(){
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap; 
     > * {
@@ -474,6 +482,10 @@ $social-colors: (
     max-width: 100%;
 }
 @mixin d-flex-between(){
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
