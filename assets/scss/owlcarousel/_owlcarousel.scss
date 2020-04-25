@@ -51,22 +51,36 @@
 			display: inline-block;
 		}
 	}
-	.ef5-owl-next .ef5-owl-nav-icon:before {
-	    content: '';
-	    display: block;
-	    width: 14px;
-	    height: 25px;
-	    background: url(../images/next-icon.png) no-repeat 0 0;
-	    background-size: cover;
-	}
-	.ef5-owl-prev .ef5-owl-nav-icon:before{
-	    content: '';
-	    display: block;
-	    width: 14px;
-	    height: 25px;
-	    background: url(../images/prev-icon.png) no-repeat 0 0;
-	    background-size: cover;
-	}
+	.ef5-owl-next{
+		.ef5-owl-nav-icon:before {
+		    content: '';
+		    display: block;
+		    width: 14px;
+		    height: 25px;
+		    background: url(../images/next-icon.png) no-repeat 0 0;
+		    background-size: cover;
+		}
+		&.white{
+			.ef5-owl-nav-icon:before {
+				background: url(../images/next-icon-white.png) no-repeat 0 0;
+			}
+		}
+	} 
+	.ef5-owl-prev{
+		.ef5-owl-nav-icon:before{
+		    content: '';
+		    display: block;
+		    width: 14px;
+		    height: 25px;
+		    background: url(../images/prev-icon.png) no-repeat 0 0;
+		    background-size: cover;
+		}
+		&.white{
+			.ef5-owl-nav-icon:before{
+				background: url(../images/prev-icon-white.png) no-repeat 0 0;
+			}
+		}
+	} 
 }
 .owl-num-count{
 	font-size: 24px;
