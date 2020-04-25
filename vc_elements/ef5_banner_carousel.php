@@ -115,10 +115,9 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         
         $wrap_css_class = [
             'ef5-banner-carousel-wrap',
-            'ef5-banner-'.$banner_carousel_style,
+            'ef5-banner-carousel-'.$banner_carousel_style,
             $el_class
         ];
-         
 
         if(!empty($atts['css'])){
             $wrap_css_class[]=vc_shortcode_custom_css_class($atts['css']);
