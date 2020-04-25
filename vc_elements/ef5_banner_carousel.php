@@ -139,18 +139,6 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
             $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
             $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
         }
-        if(isset($value['btn_link'])){
-            $image_link = vc_build_link( $value['image_link']);
-            $image_link = ( $image_link == '||' ) ? '' : $image_link;
-            if ( strlen( $image_link['url'] ) > 0 ) {
-                $link = true;
-                $a_href = $image_link['url'];
-                $a_title = $image_link['title'] ? $image_link['title'] : '';
-                $a_target = strlen( $image_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                $link_open = '<a class="'.trim(implode(' ', $classes)).'" href="'.esc_url($a_href).'" data-hint="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'"><span>';
-                $link_close = '</span></a>';
-            }
-        }
         theclick_image_by_size([
             'id'    => $value['image'],
             'size'  => $atts['image_size'],
