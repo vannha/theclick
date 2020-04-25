@@ -47,6 +47,9 @@
 			background: transparent;
 			color: $accent_color;
 		}
+		span{
+			display: inline-block;
+		}
 	}
 	.ef5-owl-next .ef5-owl-nav-icon:before {
 	    content: '';
