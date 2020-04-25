@@ -1,0 +1,12 @@
+.ef5-banner-carousel-wrap{
+
+}
+.ef5-banner-carousel-1{
+	.bn-content-wrap{
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+		text-align: center;
+		width: 100%;	
+	}
+}
