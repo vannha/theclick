@@ -43,6 +43,9 @@
 		opacity: 0;
 		visibility: hidden;
 	}
+	.overlay{
+		background: rgba(0,0,0,0.15);
+	}
 	.cd-content-wrap{
 		position: absolute;
 		top: 50%;

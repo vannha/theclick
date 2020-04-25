@@ -45,7 +45,7 @@ if($layout_template == '2'){
 	<?php 
 	if($layout_template == '2' && !empty($cd_image)){
 		theclick_image_by_size(['id' => $cd_image,'size' => $thumbnail_size, 'class' => 'cd-img']);
-		echo '<div class="ef5-overlay"></div>';
+		echo '<div class="overlay"></div>';
 	}
 
 	if($layout_template == '2'): 
