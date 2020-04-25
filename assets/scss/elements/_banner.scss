@@ -469,5 +469,15 @@
 				color: inherit;
 			}
 		}
+		.banner_btn_link{
+			color: #fff;
+			&:hover{
+				color: #fff;
+			}
+			&:before,&:after{
+				color: #fff;
+    			background-color: #fff;
+			}
+		}
 	}
 }
