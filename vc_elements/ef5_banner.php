@@ -87,6 +87,14 @@ vc_map(array(
             "param_name" => "bn_image",
             'group'      => esc_html__('Media', 'theclick')
         ),
+        array(
+            'type'          => 'textfield',
+            'heading'       => esc_html__('Image size','theclick'),
+            'description'   => esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "post-thumbnail", "full". Alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
+            'param_name'    => 'image_size',
+            'value'         => '',
+            'std'           => ''
+        ),
         ef5systems_vc_map_add_css_animation([
             'param_name' => 'media_css_animation',
             'group'      => esc_html__('Media', 'theclick')
@@ -214,12 +222,23 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         ?>
         <div <?php echo trim(implode(' ', $banner_attrs));?>>
             <?php if($banner_style == '2'): ?>
-                <?php $this->theclick_banner_sub_title($atts,['class' => '']); ?>
-                <img src="<?php echo esc_url($image_url);?>" class="media-img" alt="<?php echo esc_attr($a_title);?>">
-                <?php if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'"><span>'.theclick_get_svg('play').'</span></a>'; ?>
-            <?php else : ?>
-                <img src="<?php echo esc_url($image_url);?>" class="media-img" alt="<?php echo esc_attr($a_title);?>">
-            <?php endif; ?>
+                <?php 
+                $this->theclick_banner_sub_title($atts,['class' => '']);
+                theclick_image_by_size([
+                    'id'    => $bn_image,
+                    'size'  => $atts['image_size'],
+                    'class' => 'media-img'
+                ]);
+                if($use_link) echo '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'"><span>'.theclick_get_svg('play').'</span></a>';
+            else {
+                theclick_image_by_size([
+                    'id'    => $bn_image,
+                    'size'  => $atts['image_size'],
+                    'class' => 'media-img'
+                ]);
+            }
+             
+            ?>
         </div>
         <?php 
     }
