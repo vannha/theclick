@@ -456,6 +456,9 @@
 .ef5-banner-8{
 	position: relative;
 	.content-wrap{
-
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		@include transform(translateY(-50%));
 	}
 }
