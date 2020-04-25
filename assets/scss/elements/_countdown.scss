@@ -63,6 +63,9 @@
 	}
 	.link-shop-more{
 		margin-bottom: 68px;
+		@media (max-width: 1430px){
+			margin-bottom: 38px;
+		}
 	}
 	.ef5-countdown-bar{
 		@include d-flex();
