@@ -195,13 +195,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
             'class' => ''        
         ]);
         if(empty($bn_image)) return;
-        /*$image_url = '';
-        if (!empty($bn_image)) {
-            $attachment_image = wp_get_attachment_image_src($bn_image, 'full');
-            $image_url = $attachment_image[0];
-        }
-        if(empty($image_url)) return;*/
-
+        
         $link     = (isset($link)) ? $link : '';
         $link     = vc_build_link( $link );
         $use_link = false;
