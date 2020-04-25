@@ -147,7 +147,7 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         ?>
         <div class="bn-content-wrap">
             <div class="title"><?php echo esc_html($value['main_title']); ?></div>
-            <?php if($use_link) echo '<a class="ef5-btn white outline" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; ?>
+            <?php if($use_link) echo '<a class="ef5-btn white outline3" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; ?>
         </div>
         <?php 
     }

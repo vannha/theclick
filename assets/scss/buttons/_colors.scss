@@ -28,6 +28,16 @@
 			    	color: $white;
 			    }
 			}
+			&.outline3{
+				color: $color;
+				border-color: $color;
+				background: transparent;
+				&:hover{
+			    	background-color: $color;
+			    	border-color: $color;
+			    	color: $primary_color;
+			    }
+			}
 			&.ef5-btn-hover-outline:hover{
 				background: transparent;
 				color: $color;
