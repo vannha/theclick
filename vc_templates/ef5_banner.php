@@ -69,7 +69,7 @@ $el_id = !empty($el_id) ? 'ef5-banner-' . $el_id : uniqid('ef5-banner-');
             echo '<div class="content-wrap text-center">'; 
             $this->theclick_banner_main_title($atts,['class' => '']);
             $this->theclick_banner_sub_title($atts,['class' => '']);
-            $this->theclick_banner_button($atts,['class' => 'btn-link']);
+            $this->theclick_banner_button($atts,['class' => 'link-shop-more']);
             echo '</div>';
             break;
         case '2': 
