@@ -43,8 +43,10 @@ if($layout_template == '2'){
 ?>
 <div class="<?php echo theclick_optimize_css_class(implode(' ', $wrap_css_class));?>" <?php echo theclick_html($style_inline) ?>>
 	<?php 
-	if($layout_template == '2' && !empty($cd_image)) 
+	if($layout_template == '2' && !empty($cd_image)){
 		theclick_image_by_size(['id' => $cd_image,'size' => $thumbnail_size, 'class' => 'cd-img']);
+		echo '<div class="ef5-overlay"></div>';
+	}
 
 	if($layout_template == '2'): 
 		echo '<div class="cd-content-wrap">';
