@@ -129,13 +129,39 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
     protected function theclick_banner_carousel_render($atts, $value){ 
         
         if(empty($value['image'])) return;
-        //$value['image'] = isset($value['image']) ? $value['image'] : '';
+
+        $link     = (isset($value['btn_link'])) ? $value['btn_link'] : '';
+        $link     = vc_build_link( $value['btn_link'] );
+        $use_link = false;
+        if ( strlen( $link['url'] ) > 0 ) {
+            $use_link = true;
+            $a_href   = $link['url'];
+            $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
+            $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
+        }
+        if(isset($value['btn_link'])){
+            $image_link = vc_build_link( $value['image_link']);
+            $image_link = ( $image_link == '||' ) ? '' : $image_link;
+            if ( strlen( $image_link['url'] ) > 0 ) {
+                $link = true;
+                $a_href = $image_link['url'];
+                $a_title = $image_link['title'] ? $image_link['title'] : '';
+                $a_target = strlen( $image_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
+                $link_open = '<a class="'.trim(implode(' ', $classes)).'" href="'.esc_url($a_href).'" data-hint="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'"><span>';
+                $link_close = '</span></a>';
+            }
+        }
         theclick_image_by_size([
             'id'    => $value['image'],
             'size'  => $atts['image_size'],
             'class' => 'img-static w-auto'
         ]);
-         
+        ?>
+        <div class="bn-content-wrap">
+            <div class="title"><?php echo esc_html($value['main_title']); ?></div>
+            <?php if($use_link) echo '<a class="" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">'.esc_html($a_title).'</a>'; ?>
+        </div>
+        <?php 
     }
     /*
     protected function theclick_banner_main_media($atts,$args = []){ 
