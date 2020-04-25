@@ -194,12 +194,13 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class' => ''        
         ]);
-        $image_url = '';
+        if(empty($bn_image)) return;
+        /*$image_url = '';
         if (!empty($bn_image)) {
             $attachment_image = wp_get_attachment_image_src($bn_image, 'full');
             $image_url = $attachment_image[0];
         }
-        if(empty($image_url)) return;
+        if(empty($image_url)) return;*/
 
         $link     = (isset($link)) ? $link : '';
         $link     = vc_build_link( $link );
@@ -222,6 +223,7 @@ class WPBakeryShortCode_ef5_banner extends WPBakeryShortCode
         ?>
         <div <?php echo trim(implode(' ', $banner_attrs));?>>
             <?php 
+            $img_size = !empty($atts['image_size']) ? $atts['image_size'] : 'full';
             if($banner_style == '2'){
                 $this->theclick_banner_sub_title($atts,['class' => '']);
                 theclick_image_by_size([
