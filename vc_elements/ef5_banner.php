@@ -16,7 +16,7 @@ vc_map(array(
                 '5' => get_template_directory_uri().'/vc_elements/layouts/banner-style5.jpg', 
                 '6' => get_template_directory_uri().'/vc_elements/layouts/banner-style6.jpg', 
                 '7' => get_template_directory_uri().'/vc_elements/layouts/banner-style7.jpg', 
-                //'8' => get_template_directory_uri().'/vc_elements/layouts/banner-style8.jpg', 
+                '8' => get_template_directory_uri().'/vc_elements/layouts/banner-style8.jpg', 
             ),
             'param_name' => 'banner_style',
             "admin_label" => true
