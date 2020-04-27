@@ -84,7 +84,7 @@ if ( ! function_exists( 'theclick_posted_on' ) ) :
             'date_format' => get_option('date_format')  
         ]);
         if($args['show_date'] !== '1') return;
-
+        
         $time_string = '<span class="published" data-time="%1$s">%2$s</span>';
         $posted_time = sprintf( $time_string,
             esc_attr( get_the_date( 'c' ) ),
