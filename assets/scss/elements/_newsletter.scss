@@ -361,6 +361,13 @@
 		.tnp-email{
 	    	@media (min-width: 768px) and (max-width: 1199px){
 			 	padding: 8px 100px 9px 25px;
+			} 
+		}
+		.tnp-submit,
+		.tnp-button{
+			 
+			@media (min-width: 768px) and (max-width: 1199px){
+			 	padding: 8px 25px 8px 10px;
 			}
 			 
 		}
