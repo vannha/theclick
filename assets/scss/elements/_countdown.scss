@@ -62,8 +62,12 @@
 	.cd-main-title{
 		font-weight: 500;
 		font-size: 40px;
-		line-height: 51px;
+		line-height: 1.275;
 		margin-bottom: 28px;
+		@media (min-width: 992px) and (max-width: 1199px){
+			font-size: 30px;
+			margin-bottom: 15px;
+		}
 	}
 	.link-shop-more{
 		margin-bottom: 68px;
