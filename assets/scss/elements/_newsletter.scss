@@ -173,8 +173,8 @@
 		right: 0;
 		bottom: 0;
 		width: 100%;
-		padding: 70px 60px 60px 60px;
-		@media (max-width: 1430px){
+		/* padding: 70px 60px 60px 60px; */
+		/* @media (max-width: 1430px){
 		 	padding: 50px 60px 60px 60px;
 		}
 		@media (max-width: 1199px){
@@ -190,9 +190,31 @@
 		 	padding: 30px 15px;
 		 	top: 50%;
 		 	@include transform(translateY(-50%));
+		} */
+	}
+	&.default .nsl-content-inner{
+		position: absolute;
+		top: 50%;
+		left: 60px;
+		right: 60px;
+		@include transform(translateY(-50%));
+		@media (max-width: 1199px){
+			left: 30px;
+			right: 30px;
+		}
+		@media (min-width: 768px) and (max-width: 991px){
+		 	left: 15px;
+			right: 15px;
+		}
+		@media (max-width: 767px){
+		 	left: 30px;
+			right: 30px;
+		}
+		@media (max-width: 575px){
+		 	left: 15px;
+			right: 15px;
 		}
 	}
-
 	.ef5-el-title{
 		font-weight: 500;
 		font-size: 36px;
