@@ -58,6 +58,9 @@
 		line-height: 16px;
 		text-transform: uppercase;
 		margin-bottom: 15px;
+		@media (min-width: 992px) and (max-width: 1199px){
+			margin-bottom: 5px;
+		}
 	}
 	.cd-main-title{
 		font-weight: 500;
