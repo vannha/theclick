@@ -214,6 +214,10 @@
 		.content-wrap {
 		    left: 50px;
 		    bottom: 44px;
+		    @media (max-width: 1430px){
+				left: 30px;
+				bottom: 30px;
+			}
 		}
 		.banner_btn_link{
 			margin-top: 12px;
