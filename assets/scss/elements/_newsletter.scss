@@ -341,6 +341,23 @@
 			}
 			 
 		}
+		form{
+			@media (max-width: 1599px){
+			 	margin-top: 30px;
+			}
+			@media (min-width: 768px) and (max-width: 1199px){
+			 	margin-top: 20px;
+			}
+			@media (max-width: 575px){
+				margin-top: 30px;
+			}
+			@media (max-width: 480px){
+			 	margin-top: 20px;
+			}
+			::-webkit-input-placeholder {
+			    font-size: 16px;
+			}
+		}
 		.tnp-email{
 	    	@media (min-width: 768px) and (max-width: 1199px){
 			 	padding: 8px 100px 9px 25px;
