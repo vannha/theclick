@@ -1,4 +1,4 @@
-<?php
+<?php die('aa');
 /**
  * TheClick functions and definitions
  *
