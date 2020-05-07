@@ -43,7 +43,7 @@ if (!$titles_html) {
                     <?php printf('%s', $titles_html); ?>
                 </div>
                 <?php if ($show_breadcrumb && (!is_home() || !is_front_page())) { ?>
-                    <div class="ef5-breadcrumb text-center">
+                    <div class="ef5-breadcrumb col-12 text-center">
                         <?php theclick_breadcrumb(['class' => 'h5']); ?>
                     </div>
                 <?php } ?>
