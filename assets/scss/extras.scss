@@ -11,4 +11,7 @@
 	left: 0;
 	bottom: 135px;
 	z-index: -1;
+	@media (max-width: 1199px){
+		bottom: 75px;
+	}
 }
