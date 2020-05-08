@@ -26,9 +26,8 @@ function theclick_get_page_titles()
     if (!is_archive()) {
         // Posts / page view
         if (is_home()) {
-
             $page_for_posts = get_option('page_for_posts');
-            $shop_page_id = get_option('woocommerce_shop_page_id');
+            
             // Only available if posts page is set.
             if (!is_front_page() && $page_for_posts ) {
                 $title = get_the_title($page_for_posts);
@@ -63,6 +62,7 @@ function theclick_get_page_titles()
             $title = get_the_title();
         }
     } elseif (function_exists('is_shop') && is_shop()){
+        $shop_page_id = get_option('woocommerce_shop_page_id');
         $title = get_the_title(get_option('woocommerce_shop_page_id'));
         $desc = get_post_meta($shop_page_id, 'page_desc', true);
         //$desc  = get_the_archive_description();
