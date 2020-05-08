@@ -157,6 +157,7 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
         ]);
         $css_classes = ['ef5-fancybox-icon', 'transition', $args['class']];
         $icon_name = "i_icon_" . $i_type;
+        var_dump($atts[$icon_name]);
         $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
         if(empty($iconClass)) return;
         ?>
