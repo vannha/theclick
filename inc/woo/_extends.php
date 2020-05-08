@@ -68,6 +68,7 @@ function theclick_get_current_page_url() {
 }
 
 function theclick_get_product_categories_for_autocomplete(){
+	if(!class_exists('WooCommerce')) return array();
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $result = array();
     foreach($product_categories as $category)
