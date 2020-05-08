@@ -30,7 +30,7 @@ function theclick_get_page_titles()
             
             // Only available if posts page is set.
             if (!is_front_page() && $page_for_posts ) {
-                $title = !empty(overcome_get_opts( 'custom_title', '' )) ? overcome_get_opts( 'custom_title', '' ) : get_the_title($page_for_posts);
+                $title = !empty(theclick_get_opts( 'custom_title', '' )) ? theclick_get_opts( 'custom_title', '' ) : get_the_title($page_for_posts);
                 $desc = get_post_meta($page_for_posts, 'custom_desc', true);
             } else {
                 $title = get_bloginfo('name');
@@ -62,7 +62,7 @@ function theclick_get_page_titles()
             $title = get_the_title();
         }
     } elseif (function_exists('is_shop') && is_shop()){
-        $title = !empty(overcome_get_opts( 'custom_title', '' )) ? overcome_get_opts( 'custom_title', '' ) : get_the_title(get_option('woocommerce_shop_page_id'));
+        $title = !empty(theclick_get_opts( 'custom_title', '' )) ? theclick_get_opts( 'custom_title', '' ) : get_the_title(get_option('woocommerce_shop_page_id'));
         $desc = get_post_meta(get_option('woocommerce_shop_page_id'), 'custom_desc', true);
     } else {
 		$title = get_the_archive_title();
