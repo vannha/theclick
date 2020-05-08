@@ -1,4 +1,5 @@
 <?php
+if(!class_exists('WooCommerce')) return;
 vc_map(array(
 		'name' => 'TheClick Product Filter',
 	    'base' => 'ef5_product_filter',
