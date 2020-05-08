@@ -62,9 +62,8 @@ function theclick_get_page_titles()
             $title = get_the_title();
         }
     } elseif (function_exists('is_shop') && is_shop()){
-        $shop_page_id = get_option('woocommerce_shop_page_id');
-        $title = get_the_title(get_option('woocommerce_shop_page_id'));
-        $desc = get_post_meta($shop_page_id, 'custom_desc', true);
+        $title = !empty(overcome_get_opts( 'custom_title', '' )) ? overcome_get_opts( 'custom_title', '' ) : get_the_title(get_option('woocommerce_shop_page_id'));
+        $desc = get_post_meta(get_option('woocommerce_shop_page_id'), 'custom_desc', true);
     } else {
 		$title = get_the_archive_title();
 		$desc  = get_the_archive_description();
