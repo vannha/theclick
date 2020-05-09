@@ -16,7 +16,7 @@ if(empty($cl_group_1[0])) {
             foreach($cl_group_1 as $group_1){
                 echo '<li>';
                 if(!empty($group_1['title_1'])){
-                    $echo  '<div class="ef5-list-item">'.$group_1['title_1'];
+                    $echo  '<div class="list-item">'.$group_1['title_1'].'</div>';
                 }
                 echo '</li>';
             }
