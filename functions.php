@@ -150,13 +150,10 @@ if (!function_exists('theclick_setup')) {
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
             'ef5-primary'     => esc_html__('Primary Menu', 'theclick'),
-            'ef5-menu-icon'   => esc_html__('Menu with Icon', 'theclick')
-        ));
-        register_nav_menus(array(
             'ef5-secondary'     => esc_html__('Secondary Menu', 'theclick'),
             'ef5-menu-icon'   => esc_html__('Menu with Icon', 'theclick')
         ));
-
+          
         /*
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
