@@ -17,6 +17,7 @@ if(empty($cl_group_1[0])) {
             $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
             if(!empty($group_1['title_1'])){
                 echo '<li class="list-item">';
+                    echo '<div class="row">';
                     echo '<div class="col-12 col-xl-4">';
                     echo '<a href="#">'.$group_1['title_1'].'</a>';
                     echo '</div>';
@@ -42,6 +43,7 @@ if(empty($cl_group_1[0])) {
                         ]);
                         echo '</div>';
                     }
+                    echo '</div>';
                 echo '</li>';
             }
         }
