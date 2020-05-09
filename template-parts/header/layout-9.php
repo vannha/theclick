@@ -9,14 +9,16 @@
             <div class="header-inner-wrap">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                        <div class="ef5-logo">
-                            <?php get_template_part('template-parts/header/header-logo'); ?>
-                        </div>
-                        <div class="ef5-navigation-wrap">
-                            <div class="d-flex align-items-center">
-                                <?php
-                                theclick_header_menu(['class' => 'ef5-navs']); 
-                                ?>
+                        <div class="row">
+                            <div class="ef5-logo col-auto">
+                                <?php get_template_part('template-parts/header/header-logo'); ?>
+                            </div>
+                            <div class="ef5-navigation-wrap col-auto">
+                                <div class="d-flex align-items-center">
+                                    <?php
+                                    theclick_header_menu(['class' => 'ef5-navs']); 
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
