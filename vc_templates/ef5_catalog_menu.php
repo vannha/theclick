@@ -8,10 +8,8 @@ if(empty($cl_group_1[0])) {
     echo '<p class="require required">'.esc_html__('Please add a Category item!','theclick').'</p>';
     return;
 }
- 
-if(count($cl_group_1) <=0 ) return;
 ?>
-<div class="<?php $this->theclick_catalog_menu_wrap_css_class($atts);?>">
+<div class="<?php //$this->theclick_catalog_menu_wrap_css_class($atts);?>">
     <div class="<?php //$this->theclick_clients_css_class($atts);?>">
         <ul class="catalog-parent">
         <?php 
