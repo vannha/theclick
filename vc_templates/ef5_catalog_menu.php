@@ -37,7 +37,7 @@ if(empty($cl_group_1[0])) {
                         echo '<div class="d-none d-xl-block col-12 col-xl-4">';
                         theclick_image_by_size([
                             'id'    => $catalog_img,
-                            'size'  => $atts['thumbnail_size'],
+                            'size'  => $thumbnail_size,
                             'class' => 'img-static w-auto'
                         ]);
                         echo '</div>';
