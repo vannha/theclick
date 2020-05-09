@@ -34,8 +34,7 @@ vc_map(array(
         ),
         array(
             'type'       => 'param_group',
-            'heading'    => esc_html__( 'Add items', 'theclick' ),
-            'param_name' => 'values',
+            'heading'    => esc_html__( 'Add catalog items', 'theclick' ),
             'param_name' => 'cl_group_1',
             'value'      =>  urlencode( json_encode( array())),
             'params'     => array(
