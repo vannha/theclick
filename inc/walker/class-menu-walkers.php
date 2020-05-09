@@ -120,7 +120,7 @@ if(!function_exists('theclick_enable_megamenu')){
 if(!function_exists('theclick_megamenu_locations')){
     add_filter('ef5_locations','theclick_megamenu_locations');
     function theclick_megamenu_locations(){
-        return array('ef5-primary');
+        return array('ef5-primary','ef5-secondary');
     }
 }
 
