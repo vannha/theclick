@@ -55,7 +55,7 @@ vc_map(array(
                 array(
                     'type'        => 'vc_link',
                     'heading'     => esc_html__( 'Link', 'theclick' ),
-                    'param_name'  => 'category_link'
+                    'param_name'  => 'category_link_1'
                 ),
                 array(
                     'type'       => 'param_group',
@@ -66,14 +66,14 @@ vc_map(array(
                         array(
                             "type"          => "textfield",
                             "heading"       => esc_html__("Title", 'theclick'),
-                            "param_name"    => "title_1",
+                            "param_name"    => "title_2",
                             "value"         => '',
                             'admin_label'   => true
                         ),
                         array(
                             'type'        => 'vc_link',
                             'heading'     => esc_html__( 'Link', 'theclick' ),
-                            'param_name'  => 'category_link'
+                            'param_name'  => 'category_link_2'
                         ),
                     ),
                 ),
