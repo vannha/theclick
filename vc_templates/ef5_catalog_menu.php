@@ -14,11 +14,23 @@ if(empty($cl_group_1[0])) {
         <ul class="catalog-parent">
         <?php 
             foreach($cl_group_1 as $group_1){
-                echo '<li>';
+                $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                 if(!empty($group_1['title_1'])){
+                    echo '<li>';
                     echo '<div class="list-item">'.$group_1['title_1'].'</div>';
-                }
+                    if(!empty($cl_group_2[0])){
+                        echo '<ul class="catalog-child">';
+                        foreach($cl_group_2 as $group_2){
+                            if(!empty($group_2['title_2'])){
+                            echo '<li>';
+                                echo '<div class="list-item">'.$group_2['title_2'].'</div>';
+                            echo '</li>';
+                            }
+                        }
+                        echo '</ul>';
+                    }
                 echo '</li>';
+                }
             }
         ?>
         </ul>
