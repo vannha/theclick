@@ -53,7 +53,7 @@ vc_map(array(
                         'param_name'  => 'image',
                         'admin_label' => true,
                         'edit_field_class' => 'vc_col-sm-6'
-                    )
+                    ),
                     array(
                         'type'        => 'vc_link',
                         'heading'     => esc_html__( 'Link', 'theclick' ),
