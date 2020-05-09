@@ -105,53 +105,7 @@ class WPBakeryShortCode_ef5_catalog_menu extends WPBakeryShortCode
             return trim(implode(' ', $wrap_css_class));
         }
     }
-    /*protected function theclick_clients_css_class($atts, $args = []){
-        extract($atts);
-        $args = wp_parse_args($args, [
-            'class' => '',
-            'echo'  => true
-        ]);
-        $el_id = !empty($el_id) ? $el_id : uniqid();
-        $wrap_css_class = [$atts['el_class']];
-        switch ($layout_style) {
-            case 'carousel':
-                $wrap_css_class[] = 'ef5-owl owl-carousel';
-                break;
-            
-            default:
-                $wrap_css_class[] = 'ef5-grid row justify-content-center align-items-center';
-                break;
-        }
-        $wrap_css_class[] = 'img-hover-'.$atts['hover_style'];
-        if($args['echo']){
-            echo trim(implode(' ', $wrap_css_class));
-        } else {
-            return trim(implode(' ', $wrap_css_class));
-        }
-    }
-    protected function theclick_clients_item_css_class($atts, $args = []){
-        extract($atts);
-        $args = wp_parse_args($args, [
-            'class' => '',
-            'echo'  => true
-        ]);
-        $item_css_class = ['ef5-item ef5-client', $args['class']];
-        switch ($layout_style) {
-            case 'carousel':
-                $item_css_class[] = 'ef5-carousel-item';
-                break;
-            
-            default:
-                $item_css_class[] = 'ef5-grid-item col-'.$col_sm.' col-md-'.$col_md.' col-lg-'.$col_lg.' col-xl-'.$col_xl;
-                break;
-        }
-        
-        if($args['echo']){
-            echo trim(implode(' ', $item_css_class));
-        } else {
-            return trim(implode(' ', $item_css_class));
-        }
-    }
+    /*  
     protected function theclick_client_render($atts, $value, $args = []){
         $args = wp_parse_args($args,[
             'class' => '',
