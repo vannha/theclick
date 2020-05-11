@@ -17,9 +17,6 @@ $has_col3 = false;
             <ul class="catalog-parent no-padding">
             <?php 
                 $i=0;
-                $clss = [
-                    'cat-item-parent'
-                ];
                 foreach($cl_group_1 as $group_1){
                     $i++;
                     $has_child = '';
@@ -43,8 +40,11 @@ $has_col3 = false;
                     if(!empty($cl_group_2[0])){
                         $has_child = 'has-child';
                     }
-                    $clss[] = 'item-parent-'.$i;
-                    $clss[] = $has_child;
+                    $clss = [
+                        'cat-item-parent',
+                        'item-parent-'.$i,
+                        $has_child
+                    ]; 
                     if(!empty($group_1['title_1'])){
                         $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="javascript:void(0);">';
                         $link_close = '</a>';
@@ -73,13 +73,14 @@ $has_col3 = false;
         <div class="catalog-child-wrap col-12 col-xl-3">
             <?php  
             $j=0;
-            $clss = [
-                'catalog-child',
-                'no-padding'
-            ];
+            
             foreach($cl_group_1 as $group_1){
                 $j++;
-                $clss[] = 'in-parent-'.$j;
+                $clss = [
+                    'catalog-child',
+                    'in-parent-'.$j;
+                    'no-padding'
+                ];
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                 echo '<ul class="'.trim(implode(' ', $clss)).'">';
                     foreach($cl_group_2 as $group_2){
@@ -109,13 +110,13 @@ $has_col3 = false;
         <?php if($has_col3): ?>
         <div class="catalog-img-wrap col-12 col-xl-6">
             <?php  
-            $k=0;
-            $clss = [
-                'cat-item-parent-image'
-            ];
+            $k=0; 
             foreach($cl_group_1 as $group_1){
                 $k++;
-                $clss[] = 'in-parent-'.$k;
+                $clss = [
+                    'cat-item-parent-image',
+                    'in-parent-'.$k;
+                ];
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 if(!empty($catalog_img)){
                     $link_open = '<div class="'.trim(implode(' ', $clss)).'">';
