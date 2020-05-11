@@ -60,12 +60,14 @@ $has_col3 = false;
                         if(isset($group_2['category_link_2'])){
                             $cat_link = vc_build_link( $group_2['category_link_2']);
                             $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
+                            var_dump(strlen( $cat_link['url'] ));
                             if ( strlen( $cat_link['url'] ) > 0  && !empty($cat_link['title'])) {
                                 $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$cat_link['target']) : '_self';
                                 echo '<li class="list-item-child">';
                                 echo '<a href="'.$cat_link['url'].'" target="'.esc_attr($a_target).'">'.$cat_link['title'].'</a>';
                                 echo '</li>';
                             }
+
                         }
                     }
                 echo '</ul>';
