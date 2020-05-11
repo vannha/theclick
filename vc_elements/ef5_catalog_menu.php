@@ -97,7 +97,7 @@ class WPBakeryShortCode_ef5_catalog_menu extends WPBakeryShortCode
             'echo'  => true
         ]);
         
-        $wrap_css_class = ['ef5-catalog-menu', 'client-layout-'.$layout_template, $args['class']];
+        $wrap_css_class = ['ef5-catalog-menu', 'layout-'.$layout_template, $args['class']];
 
         if($args['echo']){
             echo trim(implode(' ', $wrap_css_class));
