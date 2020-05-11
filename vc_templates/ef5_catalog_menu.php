@@ -74,7 +74,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
         if($has_col2): 
         $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
         ?>
-        <div class="catalog-child-wrap col-12 col-xl-3" <?php echo esc_attr($col2_bg_attr);?>>
+        <div class="catalog-child-wrap col-12 col-xl-3" <?php echo trim($col2_bg_attr);?>>
             <?php  
             $j=0;
             

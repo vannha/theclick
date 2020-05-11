@@ -85,6 +85,7 @@ class WPBakeryShortCode_ef5_catalog_menu extends WPBakeryShortCode
     protected function content($atts, $content = null)
     {
         //$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
+        
         return parent::content($atts, $content);
     }
     protected function theclick_catalog_menu_wrap_css_class($atts, $args = []){
