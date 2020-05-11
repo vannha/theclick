@@ -27,8 +27,8 @@ $has_col3 = false;
                         $has_col3 = true;
                     }
                     if(!empty($group_1['title_1'])){
-                        $link_open = '<span class="cat-item-parent">';
-                        $link_close = '</span>';
+                        $link_open = '<a class="cat-item-parent" href="javascript:void(0);">';
+                        $link_close = '</a>';
                         if(isset($group_1['category_link_1'])){
                             $cat_link = vc_build_link( $value['category_link_1']);
                             $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
