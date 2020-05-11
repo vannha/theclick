@@ -17,23 +17,36 @@ $has_col3 = false;
             <ul class="catalog-parent no-padding">
             <?php 
                 $i=0;
+                $clss = [
+                    'cat-item-parent'
+                ];
                 foreach($cl_group_1 as $group_1){
                     $i++;
                     $has_child = '';
                     $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                     $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
+                    $has_col2_tmp = false;
+                    $has_col3_tmp = false;
                     if(!empty($cl_group_2[0])){
-                        $has_col2 = true;
+                        $has_col2_tmp = true;
                     }
                     if(!empty($catalog_img)){
+                        $has_col3_tmp = true;
+                    }
+                    if($has_col2_tmp){
+                        $has_col2 = true;
+                    }
+                    if($has_col3_tmp){
                         $has_col3 = true;
                     }
-                    var_dump($cl_group_2[0]);
+                       
                     if(!empty($cl_group_2[0])){
                         $has_child = 'has-child';
                     }
+                    $clss[] = 'item-parent-'.$i;
+                    $clss[] = $has_child;
                     if(!empty($group_1['title_1'])){
-                        $link_open = '<a class="cat-item-parent item-parent-'.$i.'" href="javascript:void(0);">';
+                        $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="javascript:void(0);">';
                         $link_close = '</a>';
                         if(isset($group_1['category_link_1'])){
                             $cat_link = vc_build_link( $value['category_link_1']);
@@ -43,7 +56,7 @@ $has_col3 = false;
                                 $a_href = $cat_link['url'];
                                 $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                                 $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                                $link_open = '<a class="cat-item-parent item-parent-'.$i.'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                                $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
                                 $link_close = '</a>';
 
                             }
@@ -60,10 +73,15 @@ $has_col3 = false;
         <div class="catalog-child-wrap col-12 col-xl-3">
             <?php  
             $j=0;
+            $clss = [
+                'catalog-child',
+                'no-padding'
+            ];
             foreach($cl_group_1 as $group_1){
                 $j++;
+                $clss[] = 'in-parent-'.$j;
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
-                echo '<ul class="catalog-child no-padding">';
+                echo '<ul class="'.trim(implode(' ', $clss)).'">';
                     foreach($cl_group_2 as $group_2){
                         if(isset($group_2['category_link_2'])){
                             $cat_link = vc_build_link( $group_2['category_link_2']);
@@ -92,11 +110,15 @@ $has_col3 = false;
         <div class="catalog-img-wrap col-12 col-xl-6">
             <?php  
             $k=0;
+            $clss = [
+                'cat-item-parent-image'
+            ];
             foreach($cl_group_1 as $group_1){
                 $k++;
+                $clss[] = 'in-parent-'.$k;
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 if(!empty($catalog_img)){
-                    $link_open = '<div class="cat-item-parent-image">';
+                    $link_open = '<div class="'.trim(implode(' ', $clss)).'">';
                     $link_close = '</div>';
                     if(isset($group_1['category_link_1'])){
                         $cat_link = vc_build_link( $value['category_link_1']);
@@ -106,7 +128,7 @@ $has_col3 = false;
                             $a_href = $cat_link['url'];
                             $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                             $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                            $link_open = '<a class="cat-item-parent-image" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                            $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
                             $link_close = '</a>';
 
                         }
