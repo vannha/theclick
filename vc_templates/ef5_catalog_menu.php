@@ -28,8 +28,8 @@ $has_col3 = false;
                     if(!empty($catalog_img)){
                         $has_col3 = true;
                     }
-                    var_dump($group_1['cl_group_2'][0]);
-                    if(!empty($group_1['cl_group_2'][0])){
+                    var_dump($cl_group_2[0]);
+                    if(!empty($cl_group_2[0])){
                         $has_child = 'has-child';
                     }
                     if(!empty($group_1['title_1'])){
