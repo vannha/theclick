@@ -15,15 +15,6 @@ vc_map(array(
             ),
             'std'        => '1'
         ),
-         
-        array(
-            'type'       => 'textfield',
-            'heading'    => esc_html__('Extra Class','theclick'),
-            'param_name' => 'el_class',
-            'value'      => '',
-            'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'theclick'),
-        ),
-      
         array(
             'type'          => 'textfield',
             'heading'       => esc_html__('Upload image size','theclick'),
@@ -31,6 +22,19 @@ vc_map(array(
             'param_name'    => 'thumbnail_size',
             'value'         => '760',
             'std'           => '530',
+        ),
+        array(
+            "type"       => "colorpicker",
+            "heading"    => esc_html__("Column 2 background", 'theclick'),
+            "param_name" => "col2_bg",
+            "value"      => "",
+        ),
+        array(
+            'type'       => 'textfield',
+            'heading'    => esc_html__('Extra Class','theclick'),
+            'param_name' => 'el_class',
+            'value'      => '',
+            'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'theclick'),
         ),
         array(
             'type'       => 'param_group',
@@ -98,42 +102,5 @@ class WPBakeryShortCode_ef5_catalog_menu extends WPBakeryShortCode
             return trim(implode(' ', $wrap_css_class));
         }
     }
-    /*  
-    protected function theclick_client_render($atts, $value, $args = []){
-        $args = wp_parse_args($args,[
-            'class' => '',
-            'thumbnail_class' => ''
-        ]);
-        $classes = ['client-logo image-hover', $args['class']];
-        // image
-        $value['image'] = isset($value['image']) ? $value['image'] : '';
     
-        $link = false;
-        $link_open = '<span class="'.trim(implode(' ', $classes)).'" data--hint="No Title"><span>';
-        $link_close = '</span></span>';
-        if(isset($value['image_link'])){
-            $image_link = vc_build_link( $value['image_link']);
-            $image_link = ( $image_link == '||' ) ? '' : $image_link;
-            if ( strlen( $image_link['url'] ) > 0 ) {
-                $link = true;
-                $a_href = $image_link['url'];
-                $a_title = $image_link['title'] ? $image_link['title'] : '';
-                $a_target = strlen( $image_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                $link_open = '<a class="'.trim(implode(' ', $classes)).'" href="'.esc_url($a_href).'" data-hint="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'"><span>';
-                $link_close = '</span></a>';
-            }
-        }
-        echo theclick_html($link_open);
-            theclick_image_by_size([
-                'id'    => $value['image'],
-                'size'  => $atts['thumbnail_size'],
-                'class' => trim($args['thumbnail_class'].' img-static w-auto')
-            ]);
-            theclick_image_by_size([
-                'id'    => isset($value['image_hover']) ? $value['image_hover'] : $value['image'],
-                'size'  => $atts['thumbnail_size'],
-                'class' => trim($args['thumbnail_class'].' img-hover w-auto')
-            ]);
-        echo theclick_html($link_close);
-    }*/
 }
