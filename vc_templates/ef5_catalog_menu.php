@@ -59,6 +59,7 @@ $has_col3 = false;
             foreach($cl_group_1 as $group_1){
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 $thumbnail_url = theclick_get_image_url_by_size( ['id' => $catalog_img,'size' => $thumbnail_size, 'default_thumb' => false,'class'=>'img-static w-auto'] );
+                echo theclick_html($thumbnail_url);
                 /*theclick_image_by_size([
                     'id'            => $catalog_img,
                     'size'          => $thumbnail_size,
