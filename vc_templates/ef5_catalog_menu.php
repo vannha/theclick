@@ -27,35 +27,8 @@ $has_col3 = false;
                         $has_col3 = true;
                     }
                     if(!empty($group_1['title_1'])){
-                        echo '<li class="list-item">';
-                            //echo '<div class="row">';
-                            //echo '<div class="col-12 col-xl-4">';
+                        echo '<li class="list-item">';   
                             echo '<a href="#">'.$group_1['title_1'].'</a>';
-                            //echo '</div>';
-                            /*if(!empty($cl_group_2[0])){
-                                echo '<div class="col-12 col-xl-4">';
-                                echo '<ul class="catalog-child no-padding">';
-                                foreach($cl_group_2 as $group_2){
-                                    if(!empty($group_2['title_2'])){
-                                    echo '<li class="list-item-child">';
-                                        echo '<a href="#">'.$group_2['title_2'].'</a>';
-                                    echo '</li>';
-                                    }
-                                }
-                                echo '</ul>';
-                                echo '</div>';
-                            }*/
-                            /*if(!empty($catalog_img)){
-                                $has_col3 = true;
-                                echo '<div class="d-none d-xl-block col-12 col-xl-4">';
-                                theclick_image_by_size([
-                                    'id'    => $catalog_img,
-                                    'size'  => $thumbnail_size,
-                                    'class' => 'img-static w-auto'
-                                ]);
-                                echo '</div>';
-                            }*/
-                            //echo '</div>';
                         echo '</li>';
                     }
                 }
