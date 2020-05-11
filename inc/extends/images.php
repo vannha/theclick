@@ -310,7 +310,7 @@ if(!function_exists('theclick_image_by_size')){
             'size'    => 'medium', 
             'class'   => '', 
             'echo'    => true , 
-            'default' => false,
+            'default_thumb' => false,
             'before'  => '',
             'after'   => ''
         ];
@@ -324,7 +324,7 @@ if(!function_exists('theclick_image_by_size')){
         $mime_type  = get_post_mime_type($id);
         if($mime_type === 'image/svg+xml') $class .= ' svg';
 
-        if(empty($id) ){
+        if(empty($id) && $default_thumb == true){
             $theclick_image_by_size = theclick_default_image_thumbnail(['size' => $size, 'class' => $class]);
         } elseif ( is_string( $size ) && ( ( ! empty( $_wp_additional_image_sizes[ $size ] ) && is_array( $_wp_additional_image_sizes[ $size ] ) ) || in_array( $size, array(
                     'thumbnail',

@@ -59,9 +59,10 @@ $has_col3 = false;
             foreach($cl_group_1 as $group_1){
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 theclick_image_by_size([
-                    'id'    => $catalog_img,
-                    'size'  => $thumbnail_size,
-                    'class' => 'img-static w-auto'
+                    'id'            => $catalog_img,
+                    'size'          => $thumbnail_size,
+                    'default_thumb' => false,
+                    'class'         => 'img-static w-auto'
                 ]);
             }
             ?>
