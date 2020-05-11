@@ -14,7 +14,7 @@ $has_col3 = false;
 ?>
 <div class="<?php $this->theclick_catalog_menu_wrap_css_class($atts);?>">
     <div class="row">
-        <div class="col-12 col-xl-4">
+        <div class="catalog-parent-wrap col-12 col-xl-3">
             <ul class="catalog-parent no-padding">
             <?php 
                 foreach($cl_group_1 as $group_1){
@@ -36,7 +36,7 @@ $has_col3 = false;
             </ul>
         </div>
         <?php if($has_col2): ?>
-        <div class="col-12 col-xl-4">
+        <div class="catalog-child-wrap col-12 col-xl-3">
             <?php  
             foreach($cl_group_1 as $group_1){
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
@@ -54,13 +54,11 @@ $has_col3 = false;
         </div>
         <?php endif; ?>
         <?php if($has_col3): ?>
-        <div class="col-12 col-xl-4">
+        <div class="catalog-img-wrap col-12 col-xl-6">
             <?php  
             foreach($cl_group_1 as $group_1){
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
-                $thumbnail_url = theclick_get_image_url_by_size( ['id' => $catalog_img,'size' => $thumbnail_size, 'default_thumb' => false,'class'=>'img-static w-auto'] );
                 if(!empty($catalog_img)){
-                    //echo '<img src="'.$thumbnail_url.'" alt="'.$group_1['title_1'].'"/>';
                     theclick_image_by_size([
                         'id'            => $catalog_img,
                         'size'          => $thumbnail_size,
