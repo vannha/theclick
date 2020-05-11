@@ -49,9 +49,9 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     if(!empty($group_1['title_1'])){
                         $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="javascript:void(0);">';
                         $link_close = '</a>';
-                        var_dump($group_1['category_link_1']);
+                        
                         if(isset($group_1['category_link_1'])){
-                            $cat_link = vc_build_link( $value['category_link_1']);
+                            $cat_link = vc_build_link( $group_1['category_link_1']);
                             $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
                             if ( strlen( $cat_link['url'] ) > 0 ) {
                                 $link = true;
@@ -124,7 +124,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     $link_open = '<div class="'.trim(implode(' ', $clss)).'">';
                     $link_close = '</div>';
                     if(isset($group_1['category_link_1'])){
-                        $cat_link = vc_build_link( $value['category_link_1']);
+                        $cat_link = vc_build_link( $group_1['category_link_1']);
                         $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
                         if ( strlen( $cat_link['url'] ) > 0 ) {
                             $link = true;
