@@ -63,17 +63,18 @@ vc_map(array(
                     'param_name' => 'cl_group_2',
                     'value'      =>  urlencode( json_encode( array())),
                     'params'     => array(
-                        array(
+                        /*array(
                             "type"          => "textfield",
                             "heading"       => esc_html__("Title", 'theclick'),
                             "param_name"    => "title_2",
                             "value"         => '',
                             'admin_label'   => true
-                        ),
+                        ),*/
                         array(
                             'type'        => 'vc_link',
                             'heading'     => esc_html__( 'Link', 'theclick' ),
-                            'param_name'  => 'category_link_2'
+                            'param_name'  => 'category_link_2',
+                            'admin_label'   => true
                         ),
                     ),
                 ),
