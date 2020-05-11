@@ -1,10 +1,20 @@
 .ef5-catalog-menu{
+	@media (min-width: 1430px){
+		padding-left: 45px;
+	}
 	ul,ol{
 		list-style: none;
 	}
+	.catalog-parent-wrap,
+	.catalog-child-wrap{
+		padding-top: 30px;
+	}
 	.catalog-img-wrap{
 		@media (min-width: 1200px){
-			padding-right: 0;
+			padding: 0;
+		}
+		a{
+			padding: 0;
 		}
 	}
 }
