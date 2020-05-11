@@ -27,8 +27,23 @@ $has_col3 = false;
                         $has_col3 = true;
                     }
                     if(!empty($group_1['title_1'])){
+                        $link_open = '<span class="cat-item-parent">';
+                        $link_close = '</span>';
+                        if(isset($group_1['category_link_1'])){
+                            $cat_link = vc_build_link( $value['category_link_1']);
+                            $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
+                            if ( strlen( $cat_link['url'] ) > 0 ) {
+                                $link = true;
+                                $a_href = $cat_link['url'];
+                                $a_title = $cat_link['title'] ? $cat_link['title'] : '';
+                                $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
+                                $link_open = '<a class="cat-item-parent" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                                $link_close = '</a>';
+
+                            }
+                        }
                         echo '<li class="list-item">';   
-                            echo '<a href="#">'.$group_1['title_1'].'</a>';
+                            echo  theclick_html($link_open.$group_1['title_1'].$link_close);
                         echo '</li>';
                     }
                 }
@@ -64,12 +79,29 @@ $has_col3 = false;
             foreach($cl_group_1 as $group_1){
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 if(!empty($catalog_img)){
+                    $link_open = '<div class="cat-item-parent-image">';
+                    $link_close = '</div>';
+                    if(isset($group_1['category_link_1'])){
+                        $cat_link = vc_build_link( $value['category_link_1']);
+                        $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
+                        if ( strlen( $cat_link['url'] ) > 0 ) {
+                            $link = true;
+                            $a_href = $cat_link['url'];
+                            $a_title = $cat_link['title'] ? $cat_link['title'] : '';
+                            $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
+                            $link_open = '<a class="cat-item-parent-image" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                            $link_close = '</a>';
+
+                        }
+                    }
+                    echo theclick_html($link_open);
                     theclick_image_by_size([
                         'id'            => $catalog_img,
                         'size'          => $thumbnail_size,
                         'default_thumb' => false,
                         'class'         => 'img-static w-auto'
                     ]);
+                    echo theclick_html($link_close);
                 }
             }
             ?>
