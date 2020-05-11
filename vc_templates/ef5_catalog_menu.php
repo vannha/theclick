@@ -49,6 +49,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     if(!empty($group_1['title_1'])){
                         $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="javascript:void(0);">';
                         $link_close = '</a>';
+                        var_dump($group_1['category_link_1']);
                         if(isset($group_1['category_link_1'])){
                             $cat_link = vc_build_link( $value['category_link_1']);
                             $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
