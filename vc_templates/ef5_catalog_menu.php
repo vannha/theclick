@@ -10,14 +10,16 @@ if(empty($cl_group_1[0])) {
 }
 $has_col2 = false;
 $has_col3 = false;
-//continue ....
 ?>
 <div class="<?php $this->theclick_catalog_menu_wrap_css_class($atts);?>">
     <div class="row">
         <div class="catalog-parent-wrap col-12 col-xl-3">
             <ul class="catalog-parent no-padding">
             <?php 
+                $i=0;
                 foreach($cl_group_1 as $group_1){
+                    $i++;
+                    $has_child = '';
                     $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                     $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                     if(!empty($cl_group_2[0])){
@@ -26,8 +28,12 @@ $has_col3 = false;
                     if(!empty($catalog_img)){
                         $has_col3 = true;
                     }
+                    var_dump($group_1['cl_group_2'][0]);
+                    if(!empty($group_1['cl_group_2'][0])){
+                        $has_child = 'has-child';
+                    }
                     if(!empty($group_1['title_1'])){
-                        $link_open = '<a class="cat-item-parent" href="javascript:void(0);">';
+                        $link_open = '<a class="cat-item-parent item-parent-'.$i.'" href="javascript:void(0);">';
                         $link_close = '</a>';
                         if(isset($group_1['category_link_1'])){
                             $cat_link = vc_build_link( $value['category_link_1']);
@@ -37,7 +43,7 @@ $has_col3 = false;
                                 $a_href = $cat_link['url'];
                                 $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                                 $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                                $link_open = '<a class="cat-item-parent" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                                $link_open = '<a class="cat-item-parent item-parent-'.$i.'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
                                 $link_close = '</a>';
 
                             }
@@ -53,7 +59,9 @@ $has_col3 = false;
         <?php if($has_col2): ?>
         <div class="catalog-child-wrap col-12 col-xl-3">
             <?php  
+            $j=0;
             foreach($cl_group_1 as $group_1){
+                $j++;
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                 echo '<ul class="catalog-child no-padding">';
                     foreach($cl_group_2 as $group_2){
@@ -83,7 +91,9 @@ $has_col3 = false;
         <?php if($has_col3): ?>
         <div class="catalog-img-wrap col-12 col-xl-6">
             <?php  
+            $k=0;
             foreach($cl_group_1 as $group_1){
+                $k++;
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 if(!empty($catalog_img)){
                     $link_open = '<div class="cat-item-parent-image">';
