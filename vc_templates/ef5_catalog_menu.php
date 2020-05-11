@@ -10,6 +10,7 @@ if(empty($cl_group_1[0])) {
 }
 $has_col2 = false;
 $has_col3 = false;
+$thumbnail_size !empty($thumbnail_size) ? $thumbnail_size : 'full';
 ?>
 <div class="<?php $this->theclick_catalog_menu_wrap_css_class($atts);?>">
     <div class="row">
