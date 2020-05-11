@@ -78,7 +78,7 @@ $has_col3 = false;
                 $j++;
                 $clss = [
                     'catalog-child',
-                    'in-parent-'.$j;
+                    'in-parent-'.$j,
                     'no-padding'
                 ];
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
@@ -115,7 +115,7 @@ $has_col3 = false;
                 $k++;
                 $clss = [
                     'cat-item-parent-image',
-                    'in-parent-'.$k;
+                    'in-parent-'.$k
                 ];
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 if(!empty($catalog_img)){
