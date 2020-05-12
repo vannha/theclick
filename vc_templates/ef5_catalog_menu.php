@@ -74,7 +74,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
         if($has_col2): 
         $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
         ?>
-        <div class="catalog-child-wrap col-12 col-xl-3" <?php echo trim($col2_bg_attr);?>>
+        <div class="catalog-child-wrap col-12 col-xl-4" <?php echo trim($col2_bg_attr);?>>
             <?php  
             $j=0;
             
@@ -112,7 +112,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
         </div>
         <?php endif; ?>
         <?php if($has_col3): ?>
-        <div class="catalog-img-wrap col-12 col-xl-6">
+        <div class="catalog-img-wrap col-12 col-xl-5">
             <?php  
             $k=0; 
             foreach($cl_group_1 as $group_1){
