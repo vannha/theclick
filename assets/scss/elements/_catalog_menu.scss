@@ -2,6 +2,11 @@
 	padding: 8px 0;
 	display: inline-flex;
 }
+@media (max-width: 1199px){
+	.ef5-dropdown.ef5-dropdown-mega .vc_row{
+		background-color: transparent !important;
+	}
+}
 .ef5-catalog-menu{
 	@media (min-width: 1430px){
 		padding-left: 45px;
@@ -17,6 +22,9 @@
 	.catalog-child-wrap{
 		@media (min-width: 1200px){
 			padding-left: 60px;
+		}
+		@media (max-width: 1199px){
+			background-color: transparent !important;
 		}
 	}
 	.catalog-img-wrap{
