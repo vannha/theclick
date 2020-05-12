@@ -5,6 +5,7 @@
     $( document ).ready( function() {
         theclick_select2();
         theclick_StickyHeader();
+        theclick_catalog_mega_menu();
         theclick_touched_side();
         theclick_open_mobile_menu();
         theclick_popup();
@@ -148,6 +149,18 @@
           }
           c = currentScrollTop;
         });
+    }
+
+    /**
+    *  Catalog mega menu
+    */
+    function theclick_catalog_mega_menu(){
+        'use strict';
+        if($('.ef5-catalog-menu').length){
+            alert('aaa');
+        }else{
+            alert('bbb');
+        }
     }
 	/**
 	 * Toggle Menu 
