@@ -157,9 +157,16 @@
     function theclick_catalog_mega_menu(){
         'use strict';
         if($('.ef5-catalog-menu').length){
-            $('.ef5-catalog-menu').each(function(index, el) {
+            /*$('.ef5-catalog-menu').each(function(index, el) {
                 $(this).find('.catalog-child-wrap ul + ul').css('display','none');
                 $(this).find('.catalog-img-wrap .cat-item-parent-image + .cat-item-parent-image').css('display','none');
+            }); */
+            $('.catalog-child-wrap ul + ul').css('display','none');
+            $('.catalog-img-wrap .cat-item-parent-image + .cat-item-parent-image').css('display','none');
+            $('.cat-item-parent.has-child').on('click', function(e){ 
+                var data_parent = $(this).attr('data-parent');
+                $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).css('display','block');
+                $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).css('display','block');
             }); 
         } 
     }

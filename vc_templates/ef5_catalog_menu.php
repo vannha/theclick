@@ -47,7 +47,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                         $has_child
                     ]; 
                     if(!empty($group_1['title_1'])){
-                        $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="javascript:void(0);">';
+                        $link_open = '<a class="'.trim(implode(' ', $clss)).'" data-parent="parent-'.$i.'" href="javascript:void(0);">';
                         $link_close = '</a>';
                         if(isset($group_1['category_link_1'])){
                             $cat_link = vc_build_link( $group_1['category_link_1']);
@@ -57,7 +57,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                                 $a_href = $cat_link['url'];
                                 $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                                 $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                                $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                                $link_open = '<a class="'.trim(implode(' ', $clss)).'" data-parent="parent-'.$i.'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
                                 $link_close = '</a>';
 
                             }
@@ -82,7 +82,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                 $j++;
                 $clss = [
                     'catalog-child',
-                    'in-parent-'.$j,
+                    'parent-'.$j,
                     'no-padding'
                 ];
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
@@ -119,7 +119,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                 $k++;
                 $clss = [
                     'cat-item-parent-image',
-                    'in-parent-'.$k
+                    'parent-'.$k
                 ];
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 if(!empty($catalog_img)){
