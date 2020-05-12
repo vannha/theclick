@@ -176,7 +176,7 @@
                     $this_catalog.find('.catalog-parent .list-item').each(function(index, el) {
                         var data_parent = $(this).find('.cat-item-parent').attr('data-parent');
                         var this_html = $this_catalog.find('.catalog-child-wrap .'+data_parent).html();
-                        $(this).append(this_html);
+                        $(this).append('<ul class="ef5-submenu ef5-dropdown ef5-dropdown-base">'+this_html+'</ul>');
 
                     });
                     $this_catalog.find('.catalog-child-wrap').remove();
