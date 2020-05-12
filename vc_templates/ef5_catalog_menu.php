@@ -47,7 +47,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                         $has_child
                     ]; 
                     if($i == 1) $clss[] = 'active';
-                    
+
                     if(!empty($group_1['title_1'])){
                         $link_open = '<a class="'.trim(implode(' ', $clss)).'" data-parent="parent-'.$i.'" href="javascript:void(0);">';
                         $link_close = '</a>';
@@ -102,7 +102,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                             }
                             if ( strlen( $cat_link['url'] ) <= 0  && !empty($cat_link['title'])) {
                                 echo '<li class="list-item-child">';
-                                echo '<h4 class="cata-subcat-title">'.$cat_link['title'].'</h4>';
+                                echo '<h5 class="cata-subcat-title">'.$cat_link['title'].'</h5>';
                                 echo '</li>';
                             }
 
