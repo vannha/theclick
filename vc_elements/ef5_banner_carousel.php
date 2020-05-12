@@ -127,11 +127,13 @@ class WPBakeryShortCode_ef5_banner_carousel extends WPBakeryShortCode
         $link     = (isset($value['btn_link'])) ? $value['btn_link'] : '';
         $link     = vc_build_link( $value['btn_link'] );
         $use_link = false;
-        if ( strlen( $link['url'] ) > 0 ) {
-            $use_link = true;
-            $a_href   = $link['url'];
-            $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
-            $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
+        if(isset($link['url'])){
+            if ( strlen( $link['url'] ) > 0 ) {
+                $use_link = true;
+                $a_href   = $link['url'];
+                $a_title  = !empty($link['title'])?$link['title']: esc_html__('Explore Now','theclick');
+                $a_target = strlen( $link['target'] ) > 0 ? $link['target'] : '_self';
+            }
         }
         $title_class = [
             'title'
