@@ -41,7 +41,7 @@
 			    background-color: #fff;
 			    @include transition(width 0.3s linear 0s);
 			}
-			&.active{
+			&.active:before{
 			    width: 100%;
 			}
 		}
