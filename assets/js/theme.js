@@ -159,6 +159,7 @@
         if($('.ef5-catalog-menu').length){
             $('.ef5-catalog-menu').each(function(index, el) {
                 $(this).find('.catalog-child-wrap ul + ul').css('display','none');
+                $(this).find('.catalog-img-wrap .cat-item-parent-image + .cat-item-parent-image').css('display','none');
             }); 
         } 
     }
