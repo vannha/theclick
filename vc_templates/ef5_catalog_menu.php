@@ -37,9 +37,11 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     if($has_col3_tmp){
                         $has_col3 = true;
                     }
-                       
+                    
+                    $toggle_html = '';   
                     if(!empty($cl_group_2[0])){
                         $has_child = 'has-child menu-item-has-children';
+                        $toggle_html = '<span class="ef5-toggle"><span class="ef5-toggle-inner"></span></span>';   
                     }
                     $clss = [
                         'cat-item-parent',
@@ -64,8 +66,9 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
 
                             }
                         }
+                        
                         echo '<li class="menu-item list-item">';   
-                            echo  theclick_html($link_open.$group_1['title_1'].$link_close);
+                            echo  theclick_html($link_open.'<span class="menu-title">'.$group_1['title_1'].'</span>'.$toggle_html.$link_close);
                         echo '</li>';
                     }
                 }

@@ -169,6 +169,7 @@
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
                 $(this).parents('.catalog-parent').find('.cat-item-parent').removeClass('active');
                 $(this).addClass('active');
+                
             }); 
             if($(window).width() < 1200 ){
                 $('.ef5-catalog-menu').each(function(index, el) {
