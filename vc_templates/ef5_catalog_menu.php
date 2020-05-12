@@ -87,6 +87,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     'parent-'.$j,
                     'no-padding'
                 ];
+                if($i == 1) $clss[] = 'active';
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                 echo '<ul class="'.trim(implode(' ', $clss)).'">';
                     foreach($cl_group_2 as $group_2){
