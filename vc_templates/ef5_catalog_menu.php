@@ -39,7 +39,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     }
                        
                     if(!empty($cl_group_2[0])){
-                        $has_child = 'has-child';
+                        $has_child = 'has-child menu-item-has-children';
                     }
                     $clss = [
                         'cat-item-parent',
