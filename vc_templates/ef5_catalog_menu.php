@@ -87,10 +87,12 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     'parent-'.$j,
                     'no-padding'
                 ];
-                $link_cls = ($j == 1) ? 'active' : '';
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                 echo '<ul class="'.trim(implode(' ', $clss)).'">';
+                    $t=0;
                     foreach($cl_group_2 as $group_2){
+                        $t++;
+                        $link_cls = ($t == 1) ? 'active' : '';
                         if(isset($group_2['category_link_2'])){
                             $cat_link = vc_build_link( $group_2['category_link_2']);
                             $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
