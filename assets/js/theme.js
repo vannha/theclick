@@ -170,6 +170,18 @@
                 $(this).parents('.catalog-parent').find('.cat-item-parent').removeClass('active');
                 $(this).addClass('active');
             }); 
+            if($(window).width() < 1200 ){
+                $('.ef5-catalog-menu').each(function(index, el) {
+                    var $this_catalog = $(this);
+                    $this_catalog.find('.catalog-parent .list-item').each(function(index, el) {
+                        var data_parent = $(this).find('.cat-item-parent').attr('data-parent');
+                        var this_html = $this_catalog.find('.catalog-child-wrap .'+data_parent).html();
+                        $(this).append(this_html);
+
+                    });
+                    $this_catalog.find('.catalog-child-wrap').remove();
+                });
+            }
         } 
     }
 	/**
