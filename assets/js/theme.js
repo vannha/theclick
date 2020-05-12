@@ -165,8 +165,8 @@
             $('.catalog-img-wrap .cat-item-parent-image + .cat-item-parent-image').css('display','none');
             $('.cat-item-parent.has-child').on('click', function(e){ 
                 var data_parent = $(this).attr('data-parent');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap :not(.'+data_parent+')').css('display','none');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap :not(.'+data_parent+')').css('display','none');
+                $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').css('display','none');
+                $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).css('display','block');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).css('display','block');
             }); 
