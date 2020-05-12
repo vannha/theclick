@@ -47,7 +47,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     $clss = [
                         'cat-item-parent',
                         'item-parent-'.$i,
-                        $has_child
+                        $has_child_cls
                     ]; 
                     if($i == 1) $clss[] = 'active';
 
