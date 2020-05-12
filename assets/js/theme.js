@@ -157,10 +157,10 @@
     function theclick_catalog_mega_menu(){
         'use strict';
         if($('.ef5-catalog-menu').length){
-            alert('aaa');
-        }else{
-            alert('bbb');
-        }
+            $('.ef5-catalog-menu').each(function(index, el) {
+                $(this).find('.catalog-child-wrap ul + ul').css('display','none');
+            }); 
+        } 
     }
 	/**
 	 * Toggle Menu 
