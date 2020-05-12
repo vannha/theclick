@@ -167,6 +167,8 @@
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').fadeTo('0.1',0).css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).fadeTo('0.2',1).css('display','block');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).fadeTo('0.2',1).css('display','block');
+                $(this).parents('.catalog-parent').find('.cat-item-parent').removeClass('active');
+                $(this).addClass('active');
             }); 
         } 
     }
