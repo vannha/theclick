@@ -165,8 +165,8 @@
                 var data_parent = $(this).attr('data-parent');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').css('display','none');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).css('display','block');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).css('display','block');
+                $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).fadeTo('slow',0.3).css('display','block');
+                $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).fadeTo('slow',0.3).css('display','block');
             }); 
         } 
     }
