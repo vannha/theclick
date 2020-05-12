@@ -20,7 +20,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                 $i=0;
                 foreach($cl_group_1 as $group_1){
                     $i++;
-                    $has_child_cls = $item_child_cls = '';
+                    $item_child_cls = $has_child_cls = '';
                     $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                     $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                     $has_col2_tmp = false;
@@ -40,8 +40,8 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     
                     $toggle_html = '';   
                     if(!empty($cl_group_2[0])){
-                        $has_child_cls = 'has-child menu-item-has-children';
                         $item_child_cls = 'menu-item-has-children';
+                        $has_child_cls = 'has-child';
                         $toggle_html = '<span class="ef5-toggle"><span class="ef5-toggle-inner"></span></span>';   
                     }
                     $clss = [
