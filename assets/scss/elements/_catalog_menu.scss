@@ -33,26 +33,28 @@
 		@media (min-width: 1200px){
 			padding: 0;
 		}
-		 
+
 		a{
 			padding: 0;
 		}
 	}
 	.list-item{
-		a{
-			position: relative;
-			&:before{
-				content: "";
-			    width: 0;
-			    height: 1px;
-			    position: absolute;
-			    left: 0;
-			    bottom: 8px;
-			    background-color: #fff;
-			    @include transition(width 0.3s linear 0s);
-			}
-			&.active:before{
-			    width: 100%;
+		@media (min-width: 1200px){
+			a{
+				position: relative;
+				&:before{
+					content: "";
+				    width: 0;
+				    height: 1px;
+				    position: absolute;
+				    left: 0;
+				    bottom: 8px;
+				    background-color: #fff;
+				    @include transition(width 0.3s linear 0s);
+				}
+				&.active:before{
+				    width: 100%;
+				}
 			}
 		}
 	}
