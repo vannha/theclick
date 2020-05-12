@@ -64,7 +64,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
 
                             }
                         }
-                        echo '<li class="list-item">';   
+                        echo '<li class="menu-item list-item">';   
                             echo  theclick_html($link_open.$group_1['title_1'].$link_close);
                         echo '</li>';
                     }
@@ -99,12 +99,12 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                             
                             if ( strlen( $cat_link['url'] ) > 0  && !empty($cat_link['title'])) {
                                 $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$cat_link['target']) : '_self';
-                                echo '<li class="cata-list-item-child">';
+                                echo '<li class="menu-item cata-list-item-child">';
                                 echo '<a class="cat-item-child '.$link_cls.'" href="'.$cat_link['url'].'" target="'.esc_attr($a_target).'">'.$cat_link['title'].'</a>';
                                 echo '</li>';
                             }
                             if ( strlen( $cat_link['url'] ) <= 0  && !empty($cat_link['title'])) {
-                                echo '<li class="list-item-child">';
+                                echo '<li class="menu-item list-item-child">';
                                 echo '<h5 class="cata-subcat-title">'.$cat_link['title'].'</h5>';
                                 echo '</li>';
                             }
