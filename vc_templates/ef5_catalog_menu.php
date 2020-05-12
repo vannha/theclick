@@ -117,7 +117,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
         </div>
         <?php endif; ?>
         <?php if($has_col3): ?>
-        <div class="catalog-img-wrap col-12 col-xl-5">
+        <div class="catalog-img-wrap col-12 col-xl-5 d-none d-xl-block">
             <?php  
             $k=0; 
             foreach($cl_group_1 as $group_1){
