@@ -87,7 +87,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                     'parent-'.$j,
                     'no-padding'
                 ];
-                if($i == 1) $clss[] = 'active';
+                $link_cls = ($j == 1) ? 'active' : '';
                 $cl_group_2 = (array) vc_param_group_parse_atts( $group_1['cl_group_2'] );
                 echo '<ul class="'.trim(implode(' ', $clss)).'">';
                     foreach($cl_group_2 as $group_2){
@@ -98,7 +98,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                             if ( strlen( $cat_link['url'] ) > 0  && !empty($cat_link['title'])) {
                                 $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$cat_link['target']) : '_self';
                                 echo '<li class="cata-list-item-child">';
-                                echo '<a href="'.$cat_link['url'].'" target="'.esc_attr($a_target).'">'.$cat_link['title'].'</a>';
+                                echo '<a class="cat-item-child '.$link_cls.'" href="'.$cat_link['url'].'" target="'.esc_attr($a_target).'">'.$cat_link['title'].'</a>';
                                 echo '</li>';
                             }
                             if ( strlen( $cat_link['url'] ) <= 0  && !empty($cat_link['title'])) {
