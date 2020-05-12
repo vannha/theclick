@@ -46,6 +46,8 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                         'item-parent-'.$i,
                         $has_child
                     ]; 
+                    if($i == 1) $clss[] = 'active';
+                    
                     if(!empty($group_1['title_1'])){
                         $link_open = '<a class="'.trim(implode(' ', $clss)).'" data-parent="parent-'.$i.'" href="javascript:void(0);">';
                         $link_close = '</a>';

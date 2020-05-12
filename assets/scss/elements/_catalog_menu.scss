@@ -1,3 +1,6 @@
+.ef5-menu .ef5-catalog-menu li a{
+	display: inline-flex;
+}
 .ef5-catalog-menu{
 	@media (min-width: 1430px){
 		padding-left: 45px;
@@ -21,6 +24,9 @@
 		a{
 			padding: 0;
 		}
+	}
+	a.active{
+
 	}
 	.cata-subcat-title{
 		font-weight: 500;
