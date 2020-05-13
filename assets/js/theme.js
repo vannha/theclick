@@ -167,6 +167,7 @@
                 $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
                 $(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
                 $(this).parent('li.menu-item').find('.cat-item-parent-image').fadeTo('0.08',1).css('display','block');
+                $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent').removeClass('active');
                 $(this).addClass('active');
                 /*$(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
