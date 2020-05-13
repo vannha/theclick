@@ -29,18 +29,7 @@
             theclick_page_title();
     ?>
     <div id="ef5-header-wrap">
-        <?php
-        /*$ptitle_ontop = theclick_get_opts('ptitle_ontop','0');
-        if(is_singular('post'))
-        $ptitle_ontop = theclick_get_theme_opt('psingle_ptitle_ontop', '0');
-        if($ptitle_ontop == '1')
-            theclick_page_title();*/
-
-            theclick_header_main(); 
-            
-        /*if($ptitle_ontop != '1')
-            theclick_page_title();*/
-        ?>
+        <?php theclick_header_main(); ?>
     </div>
     <?php 
         if($ptitle_ontop != '1')
