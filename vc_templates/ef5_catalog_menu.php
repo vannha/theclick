@@ -12,7 +12,7 @@ if(empty($cl_group_1[0])) {
 $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
 ?>
 <div class="<?php $this->theclick_catalog_menu_wrap_css_class($atts);?>">
-    <ul class="catalog-parent no-padding">
+    <ul class="catalog-parent">
     <?php 
     $i=0;
     foreach($cl_group_1 as $group_1){
