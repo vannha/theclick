@@ -54,6 +54,7 @@
 				    height: 1px;
 				    position: absolute;
 				    left: 0;
+				    top: auto;
 				    bottom: 8px;
 				    background-color: #fff;
 				    @include transition(width 0.3s linear 0s);
