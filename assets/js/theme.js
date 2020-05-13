@@ -157,19 +157,19 @@
     function theclick_catalog_mega_menu(){
         'use strict';
         if($('.ef5-catalog-menu').length){
-            /*$('.catalog-child-wrap ul + ul').css('display','none');
+            $('.catalog-child-wrap ul + ul').css('display','none');
             $('.catalog-img-wrap .cat-item-parent-image + .cat-item-parent-image').css('display','none');
             $('.cat-item-parent.has-child').on('click', function(e){ 
                 e.preventDefault();
                 e.stopPropagation();
                 var data_parent = $(this).attr('data-parent');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
+                /*$(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
                 $(this).parents('.catalog-parent').find('.cat-item-parent').removeClass('active');
-                $(this).addClass('active');
-            }); */
+                $(this).addClass('active');*/
+            }); 
             if($(window).width() < 1200 ){
                 /*$('.ef5-catalog-menu').each(function(index, el) {
                     var $this_catalog = $(this);
