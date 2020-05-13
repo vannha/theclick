@@ -60,6 +60,21 @@
 		ul.catalog-child{
 			padding-left: 60px;
 		}
+		.menu-item > a{
+			&:before{
+				content: "";
+			    width: 0;
+			    height: 1px;
+			    position: absolute;
+			    left: 0;
+			    bottom: 8px;
+			    background-color: #fff;
+			    @include transition(width 0.3s linear 0s);
+			}
+			&.active:before{
+			    width: 100%;
+			}
+		}
 	}
 	.cat-item-parent-image{
 		img{
@@ -100,19 +115,7 @@
 		@media (min-width: 1200px){
 			a{
 				position: relative;
-				&:before{
-					content: "";
-				    width: 0;
-				    height: 1px;
-				    position: absolute;
-				    left: 0;
-				    bottom: 8px;
-				    background-color: #fff;
-				    @include transition(width 0.3s linear 0s);
-				}
-				&.active:before{
-				    width: 100%;
-				}
+				
 			}
 
 		}
