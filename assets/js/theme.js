@@ -157,8 +157,8 @@
     function theclick_catalog_mega_menu(){
         'use strict';
         if($('.ef5-catalog-menu').length){
-            $('.catalog-child-wrap ul + ul').css('display','none');
-            $('.catalog-img-wrap .cat-item-parent-image + .cat-item-parent-image').css('display','none');
+            $('.ef5-catalog-menu .catalog-parent > li + li ul').css('display','none');
+            $('.ef5-catalog-menu .catalog-parent > li + li .cat-item-parent-image').css('display','none');
             $('.cat-item-parent.has-child').on('click', function(e){ 
                 e.preventDefault();
                 e.stopPropagation();
