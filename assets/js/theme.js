@@ -159,7 +159,7 @@
         'use strict';
         if($('.ef5-catalog-menu').length){
             if($(window).width() < 1200 ){
-
+                $('.ef5-catalog-menu ul.catalog-child').addClass('ef5-submenu ef5-dropdown'); 
             }else{
                 $('.ef5-catalog-menu .catalog-parent > li + li ul').css('display','none');
                 $('.ef5-catalog-menu .catalog-parent > li + li .cat-item-parent-image').css('display','none');
