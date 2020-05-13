@@ -84,6 +84,12 @@
 		}
 	}
 	@media (max-width: 1199px){
+		ul,ol{
+			padding-left: 0;
+		}
+		ul.catalog-child{
+			background-color: transparent !important; 
+		}
 		.cat-item-parent-image{
 			display: none;
 		}
