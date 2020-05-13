@@ -17,9 +17,13 @@
 }
 .ef5-catalog-menu{
 	@media (min-width: 1200px){
-		padding-top: 40px;
-		padding-bottom: 40px;
+		>ul,
+		>ul>li>ul{
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
 	}
+
 	/* @media (max-width: 1199px){
 		margin-left: -15px;
 		margin-right: 15px;
@@ -38,7 +42,7 @@
 			overflow: visible;
 			ul{
 			    position: absolute;
-			    top: 40px;
+			    top: 0;
 			    width: 32vw;
 			    left: calc(28vw + 15px);
 			}
