@@ -132,7 +132,14 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                 ];
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 if(!empty($catalog_img)){
-                    $link_open = '<div class="'.trim(implode(' ', $clss)).'">';
+                    $img_url = theclick_get_image_url_by_size([
+                        'id'            => $catalog_img,
+                        'size'          => $thumbnail_size,
+                        'default_thumb' => false,
+                        'class'         => 'img-bg'
+                    ]);
+
+                    $link_open = '<div class="'.trim(implode(' ', $clss)).'" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
                     $link_close = '</div>';
                     if(isset($group_1['category_link_1'])){
                         $cat_link = vc_build_link( $group_1['category_link_1']);
@@ -142,7 +149,7 @@ $thumbnail_size = !empty($thumbnail_size) ? $thumbnail_size : 'full';
                             $a_href = $cat_link['url'];
                             $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                             $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                            $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                            $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
                             $link_close = '</a>';
 
                         }
