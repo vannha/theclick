@@ -53,6 +53,17 @@
 		    height: 100%;
 		}
 	}
+	.cat-item-parent-image{
+		img{
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	@media (max-width: 1199px){
+		.cat-item-parent-image{
+			display: none;
+		}
+	}
 	/* .catalog-parent-wrap,
 	.catalog-child-wrap{
 		@media (min-width: 1200px){
@@ -103,15 +114,5 @@
 	    margin: 30px 0 8px 0;
 	    text-transform: uppercase;
 	}
-	/* .cat-item-parent-image{
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		img{
-			visibility: hidden;
-			opacity: 0;
-		}
-	} */
+	
 }
