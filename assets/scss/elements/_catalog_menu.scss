@@ -43,6 +43,7 @@
 			ul{
 			    position: absolute;
 			    top: 0;
+			    bottom: 0;
 			    width: 32vw;
 			    left: calc(28vw + 15px);
 			}
@@ -55,6 +56,9 @@
 		    right: 0;
 		    width: calc(40vw - 15px);
 		    height: 100%;
+		}
+		ul.catalog-child{
+			padding-left: 60px;
 		}
 	}
 	.cat-item-parent-image{
