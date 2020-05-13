@@ -9,6 +9,12 @@
 		background-color: transparent !important;
 	}
 }
+@media (min-width: 1200px){
+	.ef5-dropdown .ef5-catalog-menu .menu-item.menu-item-has-children > a:before, 
+	.ef5-dropdown .ef5-catalog-menu .menu-item.menu-item-has-children > a:after{
+		top: auto;
+	}
+}
 .ef5-catalog-menu{
 	@media (min-width: 1430px){
 		padding-left: 45px;
@@ -54,7 +60,6 @@
 				    height: 1px;
 				    position: absolute;
 				    left: 0;
-				    top: auto;
 				    bottom: 8px;
 				    background-color: #fff;
 				    @include transition(width 0.3s linear 0s);
@@ -63,6 +68,7 @@
 				    width: 100%;
 				}
 			}
+
 		}
 	}
 	.cata-subcat-title{
