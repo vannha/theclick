@@ -159,10 +159,14 @@
         if($('.ef5-catalog-menu').length){
             $('.ef5-catalog-menu .catalog-parent > li + li ul').css('display','none');
             $('.ef5-catalog-menu .catalog-parent > li + li .cat-item-parent-image').css('display','none');
-            $('.cat-item-parent.has-child').on('click', function(e){ 
+            $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){ 
                 e.preventDefault();
                 e.stopPropagation();
                 var data_parent = $(this).attr('data-parent');
+                $(this).siblings('li.menu-item').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
+                $(this).siblings('li.menu-item').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
+                $(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
+                $(this).parent('li.menu-item').find('.cat-item-parent-image').fadeTo('0.08',1).css('display','block');
                 /*$(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
                 $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
