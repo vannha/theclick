@@ -22,28 +22,28 @@
     <div id="ef5-page" class="<?php theclick_page_css_class();?>">
     <?php theclick_header_top(); ?>
     <?php 
-        /*$ptitle_ontop = theclick_get_opts('ptitle_ontop','0');
-        if(is_singular('post'))
-        $ptitle_ontop = theclick_get_theme_opt('psingle_ptitle_ontop', '0');
-        if($ptitle_ontop == '1')
-            theclick_page_title();*/
-    ?>
-    <div id="ef5-header-wrap">
-        <?php
         $ptitle_ontop = theclick_get_opts('ptitle_ontop','0');
         if(is_singular('post'))
         $ptitle_ontop = theclick_get_theme_opt('psingle_ptitle_ontop', '0');
         if($ptitle_ontop == '1')
             theclick_page_title();
+    ?>
+    <div id="ef5-header-wrap">
+        <?php
+        /*$ptitle_ontop = theclick_get_opts('ptitle_ontop','0');
+        if(is_singular('post'))
+        $ptitle_ontop = theclick_get_theme_opt('psingle_ptitle_ontop', '0');
+        if($ptitle_ontop == '1')
+            theclick_page_title();*/
 
             theclick_header_main(); 
             
-        if($ptitle_ontop != '1')
-            theclick_page_title();
+        /*if($ptitle_ontop != '1')
+            theclick_page_title();*/
         ?>
     </div>
     <?php 
-        /*if($ptitle_ontop != '1')
-            theclick_page_title();*/
+        if($ptitle_ontop != '1')
+            theclick_page_title();
     ?>
     <main id="ef5-main" class="ef5-main">
