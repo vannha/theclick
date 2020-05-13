@@ -32,13 +32,16 @@
 		    min-height: 500px;
 		    height: 100%;
 		}
-		.menu-item ul{
-		    position: absolute;
-		    top: 0;
-		    width: 30vw;
-		    left: 30vw;
-    		height: 100%;
-		}
+		li.menu-item{
+			overflow: visible;
+			ul{
+			    position: absolute;
+			    top: 0;
+			    width: 30vw;
+			    left: 30vw;
+	    		height: 100%;
+			}
+		} 
 		.cat-item-parent-image {
 		    position: absolute;
 		    top: 0;
