@@ -163,8 +163,8 @@
                 e.preventDefault();
                 e.stopPropagation();
                 var data_parent = $(this).attr('data-parent');
-                $(this).siblings('li.menu-item').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
-                $(this).siblings('li.menu-item').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
+                $(this).parent('li.menu-item').siblings('li').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
+                $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
                 $(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
                 $(this).parent('li.menu-item').find('.cat-item-parent-image').fadeTo('0.08',1).css('display','block');
                 /*$(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
