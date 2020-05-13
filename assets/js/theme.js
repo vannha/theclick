@@ -55,6 +55,7 @@
         "use strict";
 		clearTimeout( resizeTimer );
         theclick_join_mobile_menu();
+        theclick_catalog_mega_menu();
 		theclick_touched_side();
         theclick_vcRow();
 	});
@@ -157,25 +158,29 @@
     function theclick_catalog_mega_menu(){
         'use strict';
         if($('.ef5-catalog-menu').length){
-            $('.ef5-catalog-menu .catalog-parent > li + li ul').css('display','none');
-            $('.ef5-catalog-menu .catalog-parent > li + li .cat-item-parent-image').css('display','none');
-            $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){ 
-                e.preventDefault();
-                e.stopPropagation();
-                var data_parent = $(this).attr('data-parent');
-                $(this).parent('li.menu-item').siblings('li').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
-                $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
-                $(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
-                $(this).parent('li.menu-item').find('.cat-item-parent-image').fadeTo('0.08',1).css('display','block');
-                $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent').removeClass('active');
-                $(this).addClass('active');
-                /*$(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
-                $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
-                $(this).parents('.catalog-parent').find('.cat-item-parent').removeClass('active');
-                $(this).addClass('active');*/
-            }); 
+            if($(window).width() < 1200 ){
+
+            }else{
+                $('.ef5-catalog-menu .catalog-parent > li + li ul').css('display','none');
+                $('.ef5-catalog-menu .catalog-parent > li + li .cat-item-parent-image').css('display','none');
+                $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){ 
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var data_parent = $(this).attr('data-parent');
+                    $(this).parent('li.menu-item').siblings('li').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
+                    $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
+                    $(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
+                    $(this).parent('li.menu-item').find('.cat-item-parent-image').fadeTo('0.08',1).css('display','block');
+                    $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent').removeClass('active');
+                    $(this).addClass('active');
+                    /*$(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
+                    $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
+                    $(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
+                    $(this).parents('.ef5-catalog-menu').find('.catalog-img-wrap .'+data_parent).fadeTo('0.08',1).css('display','block');
+                    $(this).parents('.catalog-parent').find('.cat-item-parent').removeClass('active');
+                    $(this).addClass('active');*/
+                }); 
+            }
             if($(window).width() < 1200 ){
                 /*$('.ef5-catalog-menu').each(function(index, el) {
                     var $this_catalog = $(this);
