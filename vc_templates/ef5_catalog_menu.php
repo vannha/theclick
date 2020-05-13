@@ -54,7 +54,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
             
             echo '<li class="menu-item list-item '.$item_child_cls.'">';   
                 echo  theclick_html($link_open.'<span class="menu-title">'.$group_1['title_1'].'</span>'.$toggle_html.$link_close);
-                if(!empty($cl_group_2[0])){
+                /*if(!empty($cl_group_2[0])){
                     echo '<ul class="catalog-child parent-'.$i.'" '.$col2_bg_attr.'>';
                     $t=0;
                     foreach($cl_group_2 as $group_2){
@@ -79,7 +79,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                         }
                     }
                     echo '</ul>';
-                }
+                }*/
 
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 
