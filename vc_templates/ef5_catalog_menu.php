@@ -59,7 +59,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                     $t=0;
                     foreach($cl_group_2 as $group_2){
                         $t++;
-                        $link_cls = ($t == 1) ? 'active' : '';
+                        //$link_cls = ($t == 1) ? 'active' : '';
                         if(isset($group_2['category_link_2'])){
                             $cat_link = vc_build_link( $group_2['category_link_2']);
                             $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
@@ -67,7 +67,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                             if ( strlen( $cat_link['url'] ) > 0  && !empty($cat_link['title'])) {
                                 $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$cat_link['target']) : '_self';
                                 echo '<li class="menu-item cata-list-item-child">';
-                                echo '<a class="cat-item-child '.$link_cls.'" href="'.$cat_link['url'].'" target="'.esc_attr($a_target).'">'.$cat_link['title'].'</a>';
+                                echo '<a class="cat-item-child" href="'.$cat_link['url'].'" target="'.esc_attr($a_target).'">'.$cat_link['title'].'</a>';
                                 echo '</li>';
                             }
                             if ( strlen( $cat_link['url'] ) <= 0  && !empty($cat_link['title'])) {
