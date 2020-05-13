@@ -83,7 +83,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
 
                 $catalog_img = isset($group_1['image']) ? $group_1['image'] : '';
                 
-                if(!empty($catalog_img)){
+                /*if(!empty($catalog_img)){
                     $img_url = theclick_get_image_url_by_size([
                         'id'            => $catalog_img,
                         'size'          => $thumbnail_size,
@@ -114,7 +114,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                         'class'         => 'img-static w-auto'
                     ]);
                     echo theclick_html($link_close);
-                }
+                }*/
             echo '</li>';
         }
     }
