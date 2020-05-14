@@ -2,6 +2,7 @@
 @media (max-width: 1199px){
 	.ef5-dropdown.ef5-dropdown-mega .vc_row{
 		background-color: transparent !important;
+		width: calc( 100vw - 30px ) !important;
 		/* margin-left: 0;
 		margin-right: 0; */
 	}
