@@ -55,7 +55,9 @@
         "use strict";
 		clearTimeout( resizeTimer );
         theclick_join_mobile_menu();
-        theclick_catalog_mega_menu();
+        setTimeout(function () {
+            theclick_catalog_mega_menu();
+        }, 500);
 		theclick_touched_side();
         theclick_vcRow();
 	});
