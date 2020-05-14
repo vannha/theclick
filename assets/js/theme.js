@@ -170,7 +170,6 @@
                 $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){ 
                     e.preventDefault();
                     e.stopPropagation();
-                    var data_parent = $(this).attr('data-parent');
                     $(this).parent('li.menu-item').siblings('li').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
                     $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
                     $(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');

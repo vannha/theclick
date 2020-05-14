@@ -30,13 +30,12 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
         }
         $clss = [
             'cat-item-parent',
-            'item-parent-'.$i,
             $has_child_cls
         ]; 
         if($i == 1) $clss[] = 'active';
 
         if(!empty($group_1['title_1'])){
-            $link_open = '<a class="'.trim(implode(' ', $clss)).'" data-parent="parent-'.$i.'" href="javascript:void(0);">';
+            $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="javascript:void(0);">';
             $link_close = '</a>';
             if(isset($group_1['category_link_1'])){
                 $cat_link = vc_build_link( $group_1['category_link_1']);
@@ -46,7 +45,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                     $a_href = $cat_link['url'];
                     $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                     $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                    $link_open = '<a class="'.trim(implode(' ', $clss)).'" data-parent="parent-'.$i.'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
+                    $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
                     $link_close = '</a>';
 
                 }
@@ -55,11 +54,8 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
             echo '<li class="menu-item list-item '.$item_child_cls.'">';   
                 echo  theclick_html($link_open.'<span class="menu-title">'.$group_1['title_1'].'</span>'.$toggle_html.$link_close);
                 if(!empty($cl_group_2[0])){
-                    echo '<ul class="catalog-child parent-'.$i.'" '.$col2_bg_attr.'>';
-                    $t=0;
+                    echo '<ul class="catalog-child" '.$col2_bg_attr.'>';
                     foreach($cl_group_2 as $group_2){
-                        $t++;
-                        //$link_cls = ($t == 1) ? 'active' : '';
                         if(isset($group_2['category_link_2'])){
                             $cat_link = vc_build_link( $group_2['category_link_2']);
                             $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
@@ -91,7 +87,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                         'class'         => 'img-bg'
                     ]);
 
-                    $link_open = '<div class="cat-item-parent-image parent-'.$i.'" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
+                    $link_open = '<div class="cat-item-parent-image" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
                     $link_close = '</div>';
                     if(isset($group_1['category_link_1'])){
                         $cat_link = vc_build_link( $group_1['category_link_1']);
@@ -101,7 +97,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                             $a_href = $cat_link['url'];
                             $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                             $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                            $link_open = '<a class="cat-item-parent-image parent-'.$i.'" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
+                            $link_open = '<a class="cat-item-parent-image" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
                             $link_close = '</a>';
 
                         }
