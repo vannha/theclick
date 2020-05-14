@@ -28,10 +28,16 @@
 		list-style: none;
 	}
 	ul.catalog-child{
-		display: none;
+		visibility: hidden;
+		opacity: 0;
+		height: 1px;
+		@include transition(all .3s linear 0s);
 	}
 	.cat-item-parent-image{
-		display: none;
+		visibility: hidden;
+		opacity: 0;
+		height: 1px;
+		@include transition(all .3s linear 0s);
 	}
 	@media (min-width: 1200px){
 		ul.catalog-parent{
@@ -61,10 +67,14 @@
 			}
 			&.active {
 				>ul.catalog-child{
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: 100%;
 				}
 				>.cat-item-parent-image{
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					height: 100%;
 				}
 				> a:before{
 				    width: 100%;
