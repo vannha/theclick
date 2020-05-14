@@ -1,9 +1,4 @@
-.ef5-menu .ef5-catalog-menu li.menu-item a{
-	@media (min-width: 1200px){
-		padding: 8px 0;
-		display: inline-flex;
-	}
-}
+
 @media (max-width: 1199px){
 	.ef5-dropdown.ef5-dropdown-mega .vc_row{
 		background-color: transparent !important;
@@ -54,6 +49,8 @@
 			position: static;
 			overflow: visible;
 			> a{
+				padding: 8px 0;
+				display: inline-flex;
 				&:before{
 					content: "";
 				    width: 0;
