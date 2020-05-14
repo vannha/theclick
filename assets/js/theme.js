@@ -166,6 +166,8 @@
             }else{
                 $('.ef5-catalog-menu ul.catalog-child').removeClass('ef5-submenu ef5-dropdown'); 
                 $('.ef5-catalog-menu .cat-item-parent-image').css('display','block');
+                $('.ef5-catalog-menu ul.catalog-child').css('display','none');
+                $('.ef5-catalog-menu .cat-item-parent-image').css('display','block');
                 $('.ef5-catalog-menu .catalog-parent > li + li ul').css('display','none');
                 $('.ef5-catalog-menu .catalog-parent > li + li .cat-item-parent-image').css('display','none');
                 $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){ alert('lol');
