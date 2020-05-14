@@ -18,11 +18,13 @@
 	ul.catalog-child{
 		visibility: hidden;
 		opacity: 0;
+		display: none;
 		@include transition(all .3s linear 0s);
 	}
 	.cat-item-parent-image{
 		visibility: hidden;
 		opacity: 0;
+		display: none;
 		@include transition(all .3s linear 0s);
 		img{
 	    	visibility: hidden;
@@ -69,10 +71,12 @@
 				>ul.catalog-child{
 					visibility: visible;
 					opacity: 1;
+					display: block;
 				}
 				>.cat-item-parent-image{
 					visibility: visible;
 					opacity: 1;
+					display: block;
 				}
 				> a:before{
 				    width: 100%;
