@@ -32,11 +32,23 @@
 	ul,ol{
 		list-style: none;
 	}
+	ul.catalog-child{
+		display: none;
+	}
+	.cat-item-parent-image{
+		display: none;
+	}
 	@media (min-width: 1200px){
 		ul.catalog-parent{
 	        width: 28vw;
 		    height: 100%;
 		    padding-left: 45px;
+		    >li:first-child > ul.catalog-child{
+		    	display: block;
+		    }
+		    >li:first-child > .cat-item-parent-image{
+		    	display: block;
+		    }
 		}
 		li.menu-item{
 			position: static;
