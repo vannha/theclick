@@ -164,8 +164,9 @@
                 $('.ef5-catalog-menu ul.catalog-child').removeClass('ef5-submenu ef5-dropdown'); 
             }
             $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){  
-                e.preventDefault();
+                
                 if($(window).width() >= 1200 ){
+                    e.preventDefault();
                     e.stopPropagation();
                 }
                 $('.ef5-catalog-menu li.menu-item').removeClass('active');
