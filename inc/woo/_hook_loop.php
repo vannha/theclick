@@ -85,8 +85,8 @@ add_filter('woocommerce_pagination_args','theclick_woocommerce_pagination_args')
 function theclick_woocommerce_pagination_args($args){
 	$custom = [
 		'type'      => 'plain',
-        'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')).'"><span></span></span>',
-        'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick')).'"><span></span></span>'
+        'prev_text' => '<span class="prev"><span>'.apply_filters('theclick_loop_pagination_prev_text', esc_html__('Previous', 'theclick')).'</span></span>',
+        'next_text' => '<span class="next hint--top"><span>'.apply_filters('theclick_loop_pagination_next_text', esc_html__('Next', 'theclick')).'</span></span>'
     ];
 	$args = array_merge($args, $custom);
 	return $args;
