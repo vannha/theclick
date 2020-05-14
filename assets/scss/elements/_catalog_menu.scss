@@ -7,12 +7,6 @@
 @media (max-width: 1199px){
 	.ef5-dropdown.ef5-dropdown-mega .vc_row{
 		background-color: transparent !important;
-		margin-left: 0;
-    	margin-right: 0;
-	}
-	.ef5-dropdown.ef5-dropdown-mega .vc_row > .wpb_column{
-		padding-left: 0;
-    	padding-right: 0;
 	}
 
 }
@@ -31,10 +25,10 @@
 		}
 	}
 
-	/* @media (max-width: 1199px){
+	@media (max-width: 1199px){
 		margin-left: -15px;
 		margin-right: 15px;
-	} */
+	}
 	ul,ol{
 		list-style: none;
 	}
