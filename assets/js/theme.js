@@ -176,9 +176,9 @@
                 e.stopPropagation();
                 $('.ef5-catalog-menu li.menu-item').removeClass('active');
                 $(this).parent('li.menu-item').addClass('active');
-                if($(window).width() < 1200 ){
+                /*if($(window).width() < 1200 ){
                     $(this).find('.ef5-toggle' ).trigger( 'click' );
-                }
+                }*/
                 
                 //$(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
                 /*$(this).parent('li.menu-item').siblings('li').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
