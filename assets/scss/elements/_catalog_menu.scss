@@ -5,12 +5,13 @@
 		width: calc( 100vw - 47px ) !important;
 		margin-left: 0;
 		margin-right: 0; 
+		left: 0 !important;
 	}
-	/* .ef5-dropdown.ef5-dropdown-mega .vc_row > [class*='col'], 
+	.ef5-dropdown.ef5-dropdown-mega .vc_row > [class*='col'], 
 	.ef5-dropdown.ef5-dropdown-mega .vc_row > *{
 		padding-left: 0;
 		padding-right: 0;
-	} */
+	}
 }
 @media (min-width: 1200px){
 	.ef5-dropdown .ef5-catalog-menu .menu-item.menu-item-has-children > a:before, 
