@@ -18,13 +18,11 @@
 	ul.catalog-child{
 		visibility: hidden;
 		opacity: 0;
-		height: 1px;
 		@include transition(all .3s linear 0s);
 	}
 	.cat-item-parent-image{
 		visibility: hidden;
 		opacity: 0;
-		height: 1px;
 		@include transition(all .3s linear 0s);
 	}
 	.cata-subcat-title{
@@ -67,12 +65,10 @@
 				>ul.catalog-child{
 					visibility: visible;
 					opacity: 1;
-					height: 100%;
 				}
 				>.cat-item-parent-image{
 					visibility: visible;
 					opacity: 1;
-					height: 100%;
 				}
 				> a:before{
 				    width: 100%;
