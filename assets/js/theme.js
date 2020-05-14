@@ -161,8 +161,8 @@
             console.log($(window).width());
             if($(window).width() < 1200 ){
                 $('.ef5-catalog-menu ul.catalog-child').addClass('ef5-submenu ef5-dropdown'); 
-                $('.ef5-catalog-menu ul.catalog-child').css('display','none');
-                $('.ef5-catalog-menu .cat-item-parent-image').css('display','none');
+                //$('.ef5-catalog-menu ul.catalog-child').css('display','none');
+                //$('.ef5-catalog-menu .cat-item-parent-image').css('display','none');
             }else{
                 $('.ef5-catalog-menu ul.catalog-child').removeClass('ef5-submenu ef5-dropdown'); 
                 /*$('.ef5-catalog-menu .cat-item-parent-image').css('display','block');
@@ -173,13 +173,15 @@
                 $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){  
                     e.preventDefault();
                     e.stopPropagation();
-                    
+                    $('.ef5-catalog-menu li.menu-item').removeClass('active');
+                    $(this).parent('li.menu-item').addClass('active');
+                    //$(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
                     /*$(this).parent('li.menu-item').siblings('li').find('ul.catalog-child').fadeTo('0.01',0).css('display','none');
                     $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent-image').fadeTo('0.01',0).css('display','none');
                     $(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
                     $(this).parent('li.menu-item').find('.cat-item-parent-image').fadeTo('0.08',1).css('display','block');*/
-                    $(this).parent('li.menu-item').siblings('li').find('.cat-item-parent').removeClass('active');
-                    $(this).addClass('active');
+                    //$(this).parent('li.menu-item').siblings('li').find('.cat-item-parent').removeClass('active');
+                    //$(this).addClass('active');
 
 
                     /*$(this).parents('.ef5-catalog-menu').find('.catalog-child-wrap > :not(.'+data_parent+')').fadeTo('0.01',0).css('display','none');
