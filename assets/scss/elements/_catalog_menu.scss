@@ -7,7 +7,14 @@
 @media (max-width: 1199px){
 	.ef5-dropdown.ef5-dropdown-mega .vc_row{
 		background-color: transparent !important;
+		margin-left: 0;
+    	margin-right: 0;
 	}
+	.ef5-dropdown.ef5-dropdown-mega .vc_row > .wpb_column{
+		padding-left: 0;
+    	padding-right: 0;
+	}
+
 }
 @media (min-width: 1200px){
 	.ef5-dropdown .ef5-catalog-menu .menu-item.menu-item-has-children > a:before, 
