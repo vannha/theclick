@@ -158,6 +158,7 @@
     function theclick_catalog_mega_menu(){
         'use strict';
         if($('.ef5-catalog-menu').length){
+            console.log($(window).width());
             if($(window).width() < 1200 ){
                 $('.ef5-catalog-menu ul.catalog-child').addClass('ef5-submenu ef5-dropdown'); 
             }else{
