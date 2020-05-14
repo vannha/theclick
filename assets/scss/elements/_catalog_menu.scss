@@ -34,7 +34,7 @@
 		ul.catalog-parent{
 	        width: 28vw;
 		    height: 100%;
-		    padding-left: 45px;
+		    padding-left: 60px;
 		}
 		ul.catalog-child{
 			display: none !important;
@@ -82,16 +82,19 @@
 			    top: 0;
 			    bottom: 0;
 			    width: 32vw;
-			    left: calc(28vw + 15px);
+			    /* left: calc(28vw + 15px); */
+			    left: 28vw;
 			}
 		} 
 		.cat-item-parent-image {
 	        position: absolute;
 		    top: 0;
-		    left: calc(60vw + 15px);
+		    /* left: calc(60vw + 15px); */
+		    left: 60vw;
 		    bottom: 0;
 		    right: 0;
-		    width: calc(40vw - 15px);
+		    /* width: calc(40vw - 15px); */
+		    width: 40vw;
 		    height: 100%;
 		}
 		ul.catalog-child{
@@ -100,8 +103,8 @@
 	}
 	 
 	@media (max-width: 1199px){
-		margin-left: -15px;
-		margin-right: 15px;
+		/* margin-left: -15px;
+		margin-right: 15px; */
 		ul,ol{
 			padding-left: 0;
 		}
