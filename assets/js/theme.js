@@ -165,7 +165,9 @@
             }
             $('.ef5-catalog-menu .cat-item-parent.has-child').on('click', function(e){  
                 e.preventDefault();
-                e.stopPropagation();
+                if($(window).width() >= 1200 ){
+                    e.stopPropagation();
+                }
                 $('.ef5-catalog-menu li.menu-item').removeClass('active');
                 $(this).parent('li.menu-item').addClass('active');
             }); 
