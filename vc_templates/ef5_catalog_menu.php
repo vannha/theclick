@@ -33,7 +33,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
             $has_child_cls
         ]; 
 
-        if($i == 1) $item_child_cls += ' active';
+        if($i == 1) $item_child_cls .= ' active';
 
         if(!empty($group_1['title_1'])){
             $link_open = '<a class="'.trim(implode(' ', $clss)).'" href="javascript:void(0);">';
