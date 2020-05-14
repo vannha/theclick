@@ -177,7 +177,7 @@
                 $('.ef5-catalog-menu li.menu-item').removeClass('active');
                 $(this).parent('li.menu-item').addClass('active');
                 if($(window).width() < 1200 ){
-                    $(document).trigger('ef5-toggle', 'click');
+                    $(this).find('.ef5-toggle' ).trigger( 'click' );
                 }
                 
                 //$(this).parent('li.menu-item').find('ul.catalog-child').fadeTo('0.08',1).css('display','block');
