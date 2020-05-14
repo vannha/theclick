@@ -66,8 +66,16 @@
 				}
 				
 			}
-			&.active > a:before{
-			    width: 100%;
+			&.active {
+				>ul.catalog-child{
+					display: block;
+				}
+				>.cat-item-parent-image{
+					display: block;
+				}
+				> a:before{
+				    width: 100%;
+				}
 			}
 			ul{
 			    position: absolute;
