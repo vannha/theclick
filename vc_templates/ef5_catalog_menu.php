@@ -90,7 +90,7 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                     ]);
 
                     $link_open = '<div class="cat-item-parent-image" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
-                    $link_close = '</div>';
+                    $link_close = '';
                     if(isset($group_1['category_link_1'])){
                         $cat_link = vc_build_link( $group_1['category_link_1']);
                         $cat_link = ( $cat_link == '||' ) ? '' : $cat_link;
@@ -99,11 +99,12 @@ $col2_bg_attr = !empty($col2_bg) ? 'style="background-color:'.$col2_bg.'"' : '';
                             $a_href = $cat_link['url'];
                             $a_title = $cat_link['title'] ? $cat_link['title'] : '';
                             $a_target = strlen( $cat_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                            $link_open = '<a class="cat-item-parent-image" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'" style="background: url('.$img_url.') no-repeat center center; background-size:cover;">';
+                            $link_open .= '<a href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'">';
                             $link_close = '</a>';
 
                         }
                     }
+                    $link_close .= '</div>';
                     echo theclick_html($link_open);
                     theclick_image_by_size([
                         'id'            => $catalog_img,
