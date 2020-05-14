@@ -37,7 +37,7 @@
 		    padding-left: 45px;
 		}
 		ul.catalog-child{
-			display: none;
+			display: none !important;
 			@include transition(all .3s linear 0s);
 		}
 		.cat-item-parent-image{
