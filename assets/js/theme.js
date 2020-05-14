@@ -161,6 +161,7 @@
             console.log($(window).width());
             if($(window).width() < 1200 ){
                 $('.ef5-catalog-menu ul.catalog-child').addClass('ef5-submenu ef5-dropdown'); 
+                $('.ef5-catalog-menu ul.catalog-child').css('display','none');
                 $('.ef5-catalog-menu .cat-item-parent-image').css('display','none');
             }else{
                 $('.ef5-catalog-menu ul.catalog-child').removeClass('ef5-submenu ef5-dropdown'); 
