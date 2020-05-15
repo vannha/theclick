@@ -63,3 +63,44 @@
         padding-left: 60px;
     }
 }
+.ef5-dropdown-mega{
+    .ef5-banner-7{
+        .content-wrap{
+            position: absolute;
+            top: 30%;
+            left: 60px;
+            right: 15px;
+
+            .main-title{
+                text-transform: uppercase;
+                font-size: 16px !important;
+                font-weight: 500;
+                color: var(--dropdown_hover);
+                margin-bottom: 25px;
+                a,a:hover{
+                    color: inherit;
+                }
+            }
+            .sub-title{
+                font-size: 50px;
+                font-weight: 500;
+            }
+            a{
+                padding: 0;
+                display: inline-block;
+                font-size: inherit;
+                color: inherit;
+            } 
+            a.btn-link {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 23px;
+                position: relative;
+                color: #fff;
+                &:after{
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
