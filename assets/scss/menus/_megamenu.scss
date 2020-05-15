@@ -54,4 +54,9 @@
         }
     }
 }
-
+@media (min-width: 1200px){
+    .ef5-menu .ef5-dropdown-mega li a,
+    .ef5-dropdown-mega .widget li > a{
+        padding: 8px 0;
+    }
+}
