@@ -76,7 +76,7 @@
                 font-size: 16px !important;
                 font-weight: 500;
                 color: var(--dropdown_hover);
-                margin-bottom: 25px;
+                margin-bottom: 0;
                 a,a:hover{
                     color: inherit;
                 }
@@ -84,6 +84,7 @@
             .sub-title{
                 font-size: 50px;
                 font-weight: 500;
+                display: block;
             }
             a{
                 padding: 0;
