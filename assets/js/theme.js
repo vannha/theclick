@@ -151,7 +151,6 @@
           c = currentScrollTop;
         });
     }
-
     /**
     *  Catalog mega menu
     */
