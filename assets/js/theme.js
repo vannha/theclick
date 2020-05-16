@@ -104,7 +104,7 @@
             });
             $('.woocommerce-ordering select').select2({ 
                 minimumResultsForSearch: 10, 
-                theme: 'woo-order'
+                theme: 'woo-order layout-1 container-layout1'
             });
         }
     }
