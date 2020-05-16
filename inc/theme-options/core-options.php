@@ -1218,24 +1218,6 @@ if(!function_exists('theclick_page_opts')){
 */
 if(!function_exists('theclick_woocommerce_theme_opts')){
     function theclick_woocommerce_theme_opts($default = false){
-        $gallery_layout = $gallery_thumb_position        = array();
-        $default_value          = 'none';
-        $default_gallery_layout = 'simple';
-        $default_gallery_thumb_position = 'thumb-right';
-        if($default){
-            $gallery_layout['-1']         = esc_html__('Default','theclick');
-            $gallery_thumb_position['-1'] = esc_html__('Default','theclick');
-            $default_value                = '-1';
-            $default_gallery_layout       = '-1';
-            $default_gallery_thumb_position       = '-1';
-        }
-        $gallery_layout['simple']     = esc_html__('Simple', 'theclick');
-        $gallery_layout['thumbnail_v'] = esc_html__('Thumbnail Vertical', 'theclick');
-        $gallery_layout['thumbnail_h'] = esc_html__('Thumbnail Horizontal', 'theclick');
-
-        $gallery_thumb_position['thumb-left'] = esc_html__('Left','theclick');
-        $gallery_thumb_position['thumb-right'] = esc_html__('Right','theclick');
-
         return array(
             'title'      => esc_html__('WooCommerce', 'theclick'),
             'icon'       => 'el el-shopping-cart',
@@ -1300,14 +1282,37 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'subtitle' => esc_html__('select a layout for products page', 'theclick'),
                     'options'  => theclick_sidebar_position_opts(),
                     'default'  => theclick_shop_sidebar_position()
-                ),
-                array(
-                    'id'       => 'single_product_design',
-                    'type'     => 'info',
-                    'style'    => 'success',
-                    'title'    => esc_html__('Single Product Design', 'theclick'),
-                    'subtitle' => esc_html__('Custom single product design, ...', 'theclick'),
-                ),
+                )
+            )
+        );
+    }
+}
+
+if(!function_exists('theclick_woocommerce_single_theme_opts')){
+    function theclick_woocommerce_single_theme_opts($default = false){
+        $gallery_layout = $gallery_thumb_position        = array();
+        $default_value          = 'none';
+        $default_gallery_layout = 'simple';
+        $default_gallery_thumb_position = 'thumb-right';
+        if($default){
+            $gallery_layout['-1']         = esc_html__('Default','theclick');
+            $gallery_thumb_position['-1'] = esc_html__('Default','theclick');
+            $default_value                = '-1';
+            $default_gallery_layout       = '-1';
+            $default_gallery_thumb_position       = '-1';
+        }
+        $gallery_layout['simple']      = esc_html__('Simple', 'theclick');
+        $gallery_layout['thumbnail_v'] = esc_html__('Thumbnail Vertical', 'theclick');
+        $gallery_layout['thumbnail_h'] = esc_html__('Thumbnail Horizontal', 'theclick');
+
+        $gallery_thumb_position['thumb-left'] = esc_html__('Left','theclick');
+        $gallery_thumb_position['thumb-right'] = esc_html__('Right','theclick');
+
+        return array(
+            'title'      => esc_html__('Single Product Design', 'theclick'),
+            'icon'       => 'el el-shopping-cart',
+            'subsection' => true,
+            'fields'     => array(
                 array(
                     'id'       => 'product_sidebar_pos',
                     'type'     => 'button_set',
@@ -1397,7 +1402,6 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
         );
     }
 }
-
 /**
  * Theme Options 
  * Footer Area 

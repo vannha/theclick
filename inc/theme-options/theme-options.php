@@ -800,7 +800,16 @@ Redux::setSection($opt_name, theclick_footer_opts());
  # WooCommerce
 */
 Redux::setSection($opt_name, theclick_woocommerce_theme_opts());
+Redux::setSection($opt_name, theclick_woocommerce_single_theme_opts());
 
+Redux::setSection($opt_name, array(
+    'title'      => esc_html__('Single Page', 'theclick'),
+    'icon'       => 'el-icon-file-edit',
+    'subsection' => true,
+    'fields'     => array_merge(
+        theclick_page_opts()
+    )
+));
 /*--------------------------------------------------------------
 # Development
 --------------------------------------------------------------*/
