@@ -45,19 +45,19 @@ function theclick_woocommerce_count_ordering(){
 				$total    = wc_get_loop_prop( 'total' );
 				$per_page = wc_get_loop_prop( 'per_page' );
 				$current  = wc_get_loop_prop( 'current_page' );
-				echo '<p class="red-result-count">';
+				echo '<p class="ef5-result-count">';
 					if ( $total <= $per_page || - 1 === $per_page ) {
-						printf( _n( 'Showing the single result', 'Showing all %d results', $total, 'bixbang' ), $total );
+						printf( _n( 'Showing the single result', 'Showing all %d results', $total, 'theclick' ), $total );
 					} else {
 						$first = ( $per_page * $current ) - $per_page + 1;
 						$last  = min( $total, $per_page * $current );
-						printf( _nx( 'Showing the single result', 'Showing <span>%1$d&ndash;%2$d</span> of <span>%3$d</span> items', $total, 'with first and last result', 'bixbang' ), $first, $last, $total );
+						printf( _nx( 'Showing the single result', 'Showing <span>%1$d&ndash;%2$d</span> of <span>%3$d</span> items', $total, 'with first and last result', 'theclick' ), $first, $last, $total );
 					}
 				echo '</p>';
 				?>
 			</div>
 			</div>
-		<?php //do_action('theclick_woocommerce_count_ordering'); ?>
+			<?php //do_action('theclick_woocommerce_count_ordering'); ?>
 		</div>
 		<?php } ?>
 		<div class="filter-icon"><a href="javascript:void(0);" class="woo-filter-toggle"><?php echo esc_html__('Filter by','theclick') ?><span><?php echo theclick_get_svg('outline-tune') ?></span></a></div>
