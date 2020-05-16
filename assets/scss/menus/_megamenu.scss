@@ -63,6 +63,16 @@
         padding-left: 60px;
     }
 }
+@media (max-width: 1199px){
+    .ef5-dropdown-mega {
+        >.vc_row >.wpb_column > .vc_column-inner{
+            background: transparent !important;
+        }
+        .widget_nav_menu .widgettitle{
+            display: none;
+        }
+    }
+}
 .ef5-dropdown-mega{
     .ef5-banner-7{
         .content-wrap{
