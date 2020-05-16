@@ -1276,6 +1276,18 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'display_value' => 'label'
                 ),
                 array(
+                    'id'       => 'shop_pagination',
+                    'type'     => 'button_set',
+                    'title'    => esc_html__( 'Pagination Type', 'theclick' ),
+                    'subtitle' => esc_html__( 'Select pagination type', 'theclick' ),
+                    'options'  => array(
+                        'default'  => esc_html__( 'Default', 'theclick' ),
+                        'more-btn' => esc_html__( 'Load More Button', 'theclick' ),
+                        'infinite' => esc_html__( 'Infinite Scroll', 'theclick' ),
+                    ),
+                    'default'  => 'default',
+                ),
+                array(
                     'id'       => 'shop_sidebar_pos',
                     'type'     => 'button_set',
                     'title'    => esc_html__('Layouts', 'theclick'),
