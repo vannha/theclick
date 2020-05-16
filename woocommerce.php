@@ -11,8 +11,8 @@
 get_header();
 ?>
     <div class="<?php theclick_woo_container_class(); ?>">
-        <div class="row gutter-xl-40">
-            <div id="ef5-content-area" class="<?php theclick_content_css_class();?>">
+        <div class="row">
+            <div id="ef5-content-area" class="<?php theclick_content_css_class();?> pl-xl-60 pr-xl-60">
                 <div id="ef5-posts" class="ef5-posts ef5-blogs">
                     <?php woocommerce_content(); ?>
                 </div>
