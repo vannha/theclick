@@ -1,3 +1,13 @@
+.woo-filter-toggle{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 26px;
+	span{
+		display: inline-block;
+		line-height: 1;
+		margin-left: 10px;
+	}
+}
 .ef5-woo-filters{
 	select[name="orderby"]{
 		border: none;

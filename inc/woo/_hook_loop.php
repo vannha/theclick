@@ -27,7 +27,7 @@ add_action('theclick_woocommerce_count_ordering','woocommerce_result_count',20);
 add_action('theclick_woocommerce_count_ordering','woocommerce_catalog_ordering',30);
 function theclick_woocommerce_count_ordering(){
 ?>
-	<div class="ef5-woo-count-order d-flex justify-content-between align-items-center">
+	<div class="ef5-woo-count-order ef5-woo-filters d-flex justify-content-between align-items-center">
 		<div class="count-order-wrap">
 		<?php 
 		//do_action('theclick_woocommerce_count_ordering'); 
