@@ -28,7 +28,10 @@ add_action('theclick_woocommerce_count_ordering','woocommerce_catalog_ordering',
 function theclick_woocommerce_count_ordering(){
 ?>
 	<div class="ef5-woo-count-order d-flex justify-content-between align-items-center">
+		<div class="count-order-wrap">
 		<?php do_action('theclick_woocommerce_count_ordering'); ?>
+		</div>
+		<div class="filter-icon"><a href="javascript:void(0);" class="woo-filter-toggle"><?php echo esc_html__('Filter by','theclick') ?><span><?php echo theclick_get_svg('outline-tune') ?></span></a></div>
 	</div>
 <?php
 }
