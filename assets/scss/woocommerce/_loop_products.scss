@@ -4,6 +4,9 @@
 	margin: $grid-gutter-width / -2;
 	list-style: none;
 	@include d-flex();
+	@media (min-width: 1200px){
+		margin: -20px;	
+	}
 	> .product{
 		padding: $grid-gutter-width / 2;
 		float: none;
@@ -13,6 +16,9 @@
 		position: relative;
 		background: $white;
 		@include transition();
+		@media (min-width: 1200px){
+			padding: 20px;
+		}
 	}
 	/* Columns */
 	@media (min-width: $screen-md-min){
