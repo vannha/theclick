@@ -46,7 +46,7 @@ function theclick_woocommerce_count_ordering(){
 				$current  = wc_get_loop_prop( 'current_page' );
 				echo '<p class="ef5-result-count">';
 					if ( $total <= $per_page || - 1 === $per_page ) {
-						printf( _n( 'Showing the single result', 'Showing all %d Products', $total, 'theclick' ), $total );
+						printf( _n( 'Showing the single result', '(%d Products)', $total, 'theclick' ), $total );
 					} else {
 						printf( _n( 'Showing the single result', '(<span>%d</span> Products)', $total, 'theclick' ), $total );
 					}
