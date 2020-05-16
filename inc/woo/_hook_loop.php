@@ -27,7 +27,7 @@ add_action('woocommerce_before_shop_loop','theclick_woocommerce_count_ordering',
 add_action('theclick_woocommerce_count_ordering','woocommerce_catalog_ordering',30);*/
 function theclick_woocommerce_count_ordering(){
 	?>
-	<div class="ef5-woo-count-order d-flex justify-content-between align-items-center">
+	<div class="ef5-woo-count-order ef5-woo-filters d-flex justify-content-between align-items-center">
 		<?php if ( wc_get_loop_prop( 'is_paginated' ) || woocommerce_products_will_display() ) { ?>
 		<div class="count-order-wrap">
 			<div class="d-flex">
