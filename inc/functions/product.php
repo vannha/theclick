@@ -444,3 +444,19 @@ function theclick_ef5_product_filter_action_callback(){
         exit();
     }
 }
+
+/**
+ * Woo container class
+ */
+if(!function_exists('theclick_woo_container_class')){
+    function theclick_woo_container_class($class = ''){
+        $woo_fullwidth = theclick_get_opts('shop_full_width', '0');
+        if('1' === $woo_fullwidth){
+            $classes[] = 'no-container';
+        } else {
+            $classes[] = 'container';
+        }
+        if(!empty($class)) $classes[] = $class;
+        echo trim(implode(' ', $classes));
+    }
+}
