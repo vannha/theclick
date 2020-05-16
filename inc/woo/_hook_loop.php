@@ -23,18 +23,43 @@ add_filter('woocommerce_show_page_title', function(){ return false;});
 remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
 remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
 add_action('woocommerce_before_shop_loop','theclick_woocommerce_count_ordering', 11);
-add_action('theclick_woocommerce_count_ordering','woocommerce_result_count',20);
-add_action('theclick_woocommerce_count_ordering','woocommerce_catalog_ordering',30);
+/*add_action('theclick_woocommerce_count_ordering','woocommerce_result_count',20);
+add_action('theclick_woocommerce_count_ordering','woocommerce_catalog_ordering',30);*/
 function theclick_woocommerce_count_ordering(){
-?>
+	?>
 	<div class="ef5-woo-count-order ef5-woo-filters d-flex justify-content-between align-items-center">
+		<?php if ( wc_get_loop_prop( 'is_paginated' ) || woocommerce_products_will_display() ) { ?>
 		<div class="count-order-wrap">
-		<?php 
-		//do_action('theclick_woocommerce_count_ordering'); 
-		do_action('woocommerce_catalog_ordering'); 
-		do_action('woocommerce_result_count'); 
-		?>
+			<div class="row">
+			<div class="ordering col-auto">
+				<?php woocommerce_catalog_ordering(); ?>
+			</div>
+			<div class="result-count col-auto">
+				<?php 
+
+				$args = array(
+					'total'    => wc_get_loop_prop( 'total' ),
+					'per_page' => wc_get_loop_prop( 'per_page' ),
+					'current'  => wc_get_loop_prop( 'current_page' ),
+				);
+				$total    = wc_get_loop_prop( 'total' );
+				$per_page = wc_get_loop_prop( 'per_page' );
+				$current  = wc_get_loop_prop( 'current_page' );
+				echo '<p class="red-result-count">';
+					if ( $total <= $per_page || - 1 === $per_page ) {
+						printf( _n( 'Showing the single result', 'Showing all %d results', $total, 'bixbang' ), $total );
+					} else {
+						$first = ( $per_page * $current ) - $per_page + 1;
+						$last  = min( $total, $per_page * $current );
+						printf( _nx( 'Showing the single result', 'Showing <span>%1$d&ndash;%2$d</span> of <span>%3$d</span> items', $total, 'with first and last result', 'bixbang' ), $first, $last, $total );
+					}
+				echo '</p>';
+				?>
+			</div>
+			</div>
+		<?php //do_action('theclick_woocommerce_count_ordering'); ?>
 		</div>
+		<?php } ?>
 		<div class="filter-icon"><a href="javascript:void(0);" class="woo-filter-toggle"><?php echo esc_html__('Filter by','theclick') ?><span><?php echo theclick_get_svg('outline-tune') ?></span></a></div>
 	</div>
 <?php
