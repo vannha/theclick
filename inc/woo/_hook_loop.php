@@ -30,11 +30,11 @@ function theclick_woocommerce_count_ordering(){
 	<div class="ef5-woo-count-order ef5-woo-filters d-flex justify-content-between align-items-center">
 		<?php if ( wc_get_loop_prop( 'is_paginated' ) || woocommerce_products_will_display() ) { ?>
 		<div class="count-order-wrap">
-			<div class="row">
-			<div class="ordering col-auto">
+			<div class="d-flex">
+			<div class="ordering">
 				<?php woocommerce_catalog_ordering(); ?>
 			</div>
-			<div class="result-count col-auto">
+			<div class="result-count">
 				<?php 
 				$args = array(
 					'total'    => wc_get_loop_prop( 'total' ),
