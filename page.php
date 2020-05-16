@@ -15,7 +15,7 @@
  */
 get_header();
 ?>
-    <div class="container aaa">
+    <div class="container">
         <div class="row">
             <div id="ef5-content-area" class="<?php theclick_content_css_class();?>">
                 <div id="ef5-posts" class="ef5-posts ef5-blogs">

@@ -1254,6 +1254,12 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'subtitle' => esc_html__('Custom shop page design, ...', 'theclick'),
                 ),
                 array(
+                    'title'     => esc_html__('Catalog Full Width', 'theclick'),
+                    'id'        => 'shop_full_width',
+                    'type'      => 'switch',
+                    'default'   => true
+                ),
+                array(
                     'id'       => 'products_per_page',
                     'type'     => 'slider',
                     'title'    => esc_html__('Number Products', 'theclick'),

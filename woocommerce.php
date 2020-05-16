@@ -10,7 +10,7 @@
  */
 get_header();
 ?>
-    <div class="container">
+    <div class="<?php theclick_woo_container_class(); ?>">
         <div class="row gutter-lg-60">
             <div id="ef5-content-area" class="<?php theclick_content_css_class();?>">
                 <div id="ef5-posts" class="ef5-posts ef5-blogs">
