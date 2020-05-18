@@ -14,6 +14,9 @@
 	.result-count{
 		margin-bottom: 15px;
 	}
+	form.woocommerce-ordering{
+		min-width: 250px;
+	}
 	select[name="orderby"]{
 		border: none;
 		padding: 0;
