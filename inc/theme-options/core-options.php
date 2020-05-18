@@ -1218,6 +1218,7 @@ if(!function_exists('theclick_page_opts')){
 */
 if(!function_exists('theclick_woocommerce_theme_opts')){
     function theclick_woocommerce_theme_opts($default = false){
+        var_dump(theclick_woo_filter_widget_opts());
         return array(
             'title'      => esc_html__('WooCommerce', 'theclick'),
             'icon'       => 'el el-shopping-cart',
