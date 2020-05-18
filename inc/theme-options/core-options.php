@@ -1282,6 +1282,32 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'display_value' => 'label'
                 ),
                 array(
+                    'id'      => 'individual_social_on_header',
+                    'type'    => 'sorter',
+                    'title'   => 'Social on header',
+                    'options' => array(
+                        'enabled'  => array(
+                            'twitter'     => esc_html__('Twitter', 'medix'),
+                            'facebook' => esc_html__('Facebook', 'medix'),
+                            'google' => esc_html__('Google', 'medix'),
+                        ),
+                        'disabled' => array(
+                            'instagram' => esc_html__('Instagram', 'medix'),
+                            'youtube' => esc_html__('Youtube', 'medix'),
+                            'linkedin'     => esc_html__('Linkedin', 'medix'),
+                            'skype' => esc_html__('Skype', 'medix'),
+                            'pinterest' => esc_html__('Pinterest', 'medix'),
+                            'vimeo' => esc_html__('Vimeo', 'medix'),
+                            'yelp' => esc_html__('Yelp', 'medix'),
+                            'tumblr' => esc_html__('Tumblr', 'medix'),
+                            'rss' => esc_html__('Rss', 'medix'),
+                            'behance' => esc_html__('Behance', 'medix'),
+                            'dribbble' => esc_html__('Dribbble', 'medix'),
+                        )
+                    ),
+                    'required'  => array( 'hide_social', '=', 0),
+                ),
+                /*array(
                     'id'      => 'filter_widget_display',
                     'type'    => 'sorter',
                     'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
@@ -1306,7 +1332,7 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                             'dribbble' => esc_html__('Dribbble', 'medix'),
                         )
                     )
-                ),
+                ),*/
                 /*array(
                     'id'       => 'filter_widget_display',
                     'type'     => 'button_set',
