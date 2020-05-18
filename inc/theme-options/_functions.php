@@ -148,7 +148,7 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
             'type'  => esc_html__( 'Type', 'theclick' )
         );
         if (!empty($attribute_taxonomies)) {
-            foreach ($attribute_taxonomies as $tax) {   var_dump(taxonomy_exists('pa_'.$tax->attribute_name));
+            foreach ($attribute_taxonomies as $tax) {   var_dump(taxonomy_exists('pa_brand'));
                 if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
                     $opts[$tax->attribute_name] = $tax->attribute_label;
                 }
