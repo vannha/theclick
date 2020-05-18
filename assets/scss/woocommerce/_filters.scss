@@ -9,11 +9,7 @@
 	}
 }
 .ef5-woo-count-order{
-	margin-bottom: 30px;
-	.ordering,
-	.result-count{
-		margin-bottom: 15px;
-	}
+	margin-bottom: 45px;
 	form.woocommerce-ordering{
 		min-width: 180px;
 	}
@@ -43,9 +39,7 @@
 	    font-weight: 500;
 	    color: $primary_color;
 	}
-	.select2-container.container-layout1{
-		border-bottom-color: $primary_color;
-	}
+	 
 	.result-count{
 		margin-left: 10px;
 		color: $accent_color;
