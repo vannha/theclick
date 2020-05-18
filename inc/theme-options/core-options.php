@@ -1307,7 +1307,7 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     ),
                 ),
                 array(
-                    'id'      => 'filter_widget_display1',
+                    'id'      => 'filter_widget_display',
                     'type'    => 'sorter',
                     'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
                     'subtitle' => esc_html__( 'Select widget for show, hide', 'theclick' ),
