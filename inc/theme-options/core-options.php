@@ -1282,6 +1282,15 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'display_value' => 'label'
                 ),
                 array(
+                    'id'       => 'filter_widget_display',
+                    'type'     => 'button_set',
+                    'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
+                    'subtitle' => esc_html__( 'Select widget for show, hide', 'theclick' ),
+                    'multi'    => true,
+                    'options'  => theclick_woo_filter_widget_opts(),
+                    'default'  => array('2', '3'),
+                ),
+                array(
                     'id'       => 'shop_pagination',
                     'type'     => 'button_set',
                     'title'    => esc_html__( 'Pagination Type', 'theclick' ),

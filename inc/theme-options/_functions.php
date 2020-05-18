@@ -138,3 +138,26 @@ if(!function_exists('theclick_get_list_cf7')){
         return $contact_forms;
     }
 }
+if( !function_exists('theclick_woo_filter_widget_opts')){
+    function theclick_woo_filter_widget_opts(){
+        if(!class_exists('WooCommerce')) return;
+        $attribute_array = [];
+        $attribute_taxonomies = wc_get_attribute_taxonomies();
+        
+        $opts = array(
+            'category'  => esc_html__( 'Default', 'theclick' ),
+            'type'  => esc_html__( 'Default', 'theclick' )
+        );
+        if (!empty($attribute_taxonomies)) {
+            foreach ($attribute_taxonomies as $tax) {
+                if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
+                    $attribute_array[$tax->attribute_name] = $tax->attribute_label;
+                    $opts[$tax->attribute_name] = $tax->attribute_label;
+                }
+            }
+        }
+        $opts['rating'] = esc_html__( 'Infinite Scroll', 'theclick' );
+        $opts['price'] = esc_html__( 'Infinite Scroll', 'theclick' );
+        return $opts;
+    }
+}
