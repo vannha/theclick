@@ -1218,7 +1218,6 @@ if(!function_exists('theclick_page_opts')){
 */
 if(!function_exists('theclick_woocommerce_theme_opts')){
     function theclick_woocommerce_theme_opts($default = false){
-        var_dump(theclick_woo_filter_widget_opts());
         return array(
             'title'      => esc_html__('WooCommerce', 'theclick'),
             'icon'       => 'el el-shopping-cart',
@@ -1284,10 +1283,10 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                 ),
                 
                 array(
-                    'id'      => 'filter_widget_display',
+                    'id'      => 'filter_widget_display5',
                     'type'    => 'sorter',
-                    'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
-                    'subtitle' => esc_html__( 'Select widget for show, hide', 'theclick' ),
+                    'title'    => esc_html__( 'Filter Widget Display 5', 'theclick' ),
+                    'subtitle' => esc_html__( 'Select widget for show, hide 5', 'theclick' ),
                     'options' => array(
                         'enabled'  => theclick_woo_filter_widget_opts(),
                         'disabled' => array()
