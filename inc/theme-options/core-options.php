@@ -1288,7 +1288,8 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
                     'subtitle' => esc_html__( 'Select widget for show, hide', 'theclick' ),
                     'options' => array(
-                        'enabled'  => theclick_woo_filter_widget_opts()
+                        'enabled'  => theclick_woo_filter_widget_opts(),
+                        'disabled' => array()
                     ),
                 ),
                 /*array(
