@@ -142,20 +142,20 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
     function theclick_woo_filter_widget_opts(){
         if(!class_exists('WooCommerce')) return array();
         $attribute_taxonomies = wc_get_attribute_taxonomies();
-        var_dump($attribute_taxonomies);
+      
         $opts = array(
             'category'  => esc_html__( 'Category', 'theclick' ),
             'type'  => esc_html__( 'Type', 'theclick' )
         );
         if (!empty($attribute_taxonomies)) {
-            foreach ($attribute_taxonomies as $tax) {
+            foreach ($attribute_taxonomies as $tax) {   var_dump($tax);
                 if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
                     $opts[$tax->attribute_name] = $tax->attribute_label;
                 }
             }
         }
         $opts['rating'] = esc_html__( 'Rating', 'theclick' );
-        $opts['price'] = esc_html__( 'Price', 'theclick' );
+        $opts['price']  = esc_html__( 'Price', 'theclick' );
         return $opts;
     }
 }
@@ -176,7 +176,7 @@ if( !function_exists('theclick_woo_filter_widget_opts_default')){
             }
         }
         $opts['rating'] = esc_html__( 'Rating', 'theclick' );
-        $opts['price'] = esc_html__( 'Price', 'theclick' );
+        $opts['price']  = esc_html__( 'Price', 'theclick' );
         return $opts;
     }
 }
