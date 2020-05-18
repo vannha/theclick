@@ -53,6 +53,9 @@
 	.select2-dropdown{
 		padding: 10px 0;
 	}
+	.select2-container.container-layout1 .select2-results__option{
+		padding: 6px 12px 6px 0;
+	}
 	&.container-layout1 .select2-results__option--highlighted {
 	    background: transparent;
 	    color: $accent_color;
