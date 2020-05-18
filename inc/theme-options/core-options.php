@@ -1305,7 +1305,6 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                             'dribbble' => esc_html__('Dribbble', 'medix'),
                         )
                     ),
-                    'required'  => array( 'hide_social', '=', 0),
                 ),
                 /*array(
                     'id'      => 'filter_widget_display',
