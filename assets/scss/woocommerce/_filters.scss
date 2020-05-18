@@ -29,5 +29,19 @@
 	    background: none !important;
 	    color: $accent_color !important;
 	}
-
+	.select2-container.container-layout1 .select2-selection--single{
+	    padding: 0 0 12px 0;
+        font-size: 20px;
+	    font-weight: 500;
+	    color: $heading_color;
+	}
+	.select2-container.container-layout1{
+		border-bottom-color: $heading_color;
+	}
+	.result-count{
+		margin-left: 10px;
+		.ef5-result-count{
+			padding-top: 6px;
+		}
+	}
 }
