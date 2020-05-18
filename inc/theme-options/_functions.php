@@ -141,7 +141,6 @@ if(!function_exists('theclick_get_list_cf7')){
 if( !function_exists('theclick_woo_filter_widget_opts')){
     function theclick_woo_filter_widget_opts(){
         if(!class_exists('WooCommerce')) return array();
-        $attribute_array = [];
         $attribute_taxonomies = wc_get_attribute_taxonomies();
         var_dump($attribute_taxonomies);
         $opts = array(
@@ -151,7 +150,6 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
         if (!empty($attribute_taxonomies)) {
             foreach ($attribute_taxonomies as $tax) {
                 if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
-                    $attribute_array[$tax->attribute_name] = $tax->attribute_label;
                     $opts[$tax->attribute_name] = $tax->attribute_label;
                 }
             }
@@ -164,7 +162,6 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
 if( !function_exists('theclick_woo_filter_widget_opts_default')){
     function theclick_woo_filter_widget_opts_default(){
         if(!class_exists('WooCommerce')) return array();
-        $attribute_array = [];
         $attribute_taxonomies = wc_get_attribute_taxonomies();
         
         $opts = array(
@@ -174,7 +171,6 @@ if( !function_exists('theclick_woo_filter_widget_opts_default')){
         if (!empty($attribute_taxonomies)) {
             foreach ($attribute_taxonomies as $tax) {
                 if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
-                    $attribute_array[$tax->attribute_name] = $tax->attribute_label;
                     $opts[$tax->attribute_name] = $tax->attribute_label;
                 }
             }
