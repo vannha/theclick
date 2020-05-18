@@ -141,17 +141,17 @@ if(!function_exists('theclick_get_list_cf7')){
 if( !function_exists('theclick_woo_filter_widget_opts')){
     function theclick_woo_filter_widget_opts(){
         if(!class_exists('WooCommerce')) return array();
-        //$attribute_taxonomies = wc_get_attribute_taxonomies();
-      
+        
+        $attribute_taxonomies = wc_get_attribute_taxonomies();
         $opts = array(
             'category'  => esc_html__( 'Category', 'theclick' ),
             'type'  => esc_html__( 'Type', 'theclick' ),
         );
-        /*if (!empty($attribute_taxonomies)) {
+        if (!empty($attribute_taxonomies)) {
             foreach ($attribute_taxonomies as $tax) {   
                 $opts[$tax->attribute_name] = $tax->attribute_label;
             }
-        }*/
+        }
         $opts['rating'] = esc_html__( 'Rating', 'theclick' );
         $opts['price']  = esc_html__( 'Price', 'theclick' );
         return $opts;
