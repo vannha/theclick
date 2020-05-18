@@ -580,6 +580,12 @@
                     $this.html($(data).find('#'+$id).html());
                     $this.removeClass($loading_class);
                     $this.fadeTo('slow',1).removeClass($loading_class);
+                    if(theclick_ajax_opts.has_select2 == true){
+                        $('.woocommerce-ordering select').select2({ 
+                            minimumResultsForSearch: 10, 
+                            theme: 'woo-order layout-1 container-layout1'
+                        });
+                    }
                 });
                 return false;
             });
