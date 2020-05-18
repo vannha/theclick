@@ -8,7 +8,12 @@
 		margin-left: 10px;
 	}
 }
-.ef5-woo-filters{
+.ef5-woo-count-order{
+	margin-bottom: 30px;
+	.woocommerce-result-count,
+	.woocommerce-ordering{
+		margin-bottom: 15px;
+	}
 	select[name="orderby"]{
 		border: none;
 		padding: 0;
@@ -45,3 +50,4 @@
 		}
 	}
 }
+ 
