@@ -147,15 +147,14 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
             'category'  => esc_html__( 'Category', 'theclick' ),
             'type'  => esc_html__( 'Type', 'theclick' )
         );
-        if (!empty($attribute_taxonomies)) {
+        /*if (!empty($attribute_taxonomies)) {
             foreach ($attribute_taxonomies as $tax) {   
                 $opts[$tax->attribute_name] = $tax->attribute_label;
             }
-        }
+        }*/
         $opts['rating'] = esc_html__( 'Rating', 'theclick' );
         $opts['price']  = esc_html__( 'Price', 'theclick' );
-        var_dump($opts);
-        //return $opts;
+        return $opts;
     }
 }
  
