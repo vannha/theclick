@@ -1283,10 +1283,10 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                 ),
                 
                 array(
-                    'id'      => 'filter_widget_display5',
+                    'id'      => 'filter_widget_display',
                     'type'    => 'sorter',
-                    'title'    => esc_html__( 'Filter Widget Display 5', 'theclick' ),
-                    'subtitle' => esc_html__( 'Select widget for show, hide 5', 'theclick' ),
+                    'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
+                    'subtitle' => esc_html__( 'Select widget for show, hide', 'theclick' ),
                     'options' => array(
                         'enabled'  => theclick_woo_filter_widget_opts(),
                         'disabled' => array()
