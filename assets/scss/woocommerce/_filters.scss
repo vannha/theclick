@@ -12,7 +12,8 @@
 	select[name="orderby"]{
 		border: none;
 		padding: 0;
-		display: none;
+		opacity: 0;
+		visibility: hidden;
 		option{
 			padding: 6px 0;
 			cursor: pointer;
