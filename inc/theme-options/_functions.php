@@ -143,7 +143,7 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
         if(!class_exists('WooCommerce')) return array();
         $attribute_array = [];
         $attribute_taxonomies = wc_get_attribute_taxonomies();
-        
+        var_dump($attribute_taxonomies);
         $opts = array(
             'category'  => esc_html__( 'Category', 'theclick' ),
             'type'  => esc_html__( 'Type', 'theclick' )
