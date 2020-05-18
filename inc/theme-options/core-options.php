@@ -1306,7 +1306,7 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                         )
                     ),
                 ),
-                /*array(
+                array(
                     'id'      => 'filter_widget_display',
                     'type'    => 'sorter',
                     'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
@@ -1330,8 +1330,8 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                             'behance' => esc_html__('Behance', 'medix'),
                             'dribbble' => esc_html__('Dribbble', 'medix'),
                         )
-                    )
-                ),*/
+                    ),
+                ),
                 /*array(
                     'id'       => 'filter_widget_display',
                     'type'     => 'button_set',
