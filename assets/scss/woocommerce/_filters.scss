@@ -62,6 +62,7 @@
 	&.container-layout1 .select2-results__option--highlighted {
 	    background: transparent;
 	    color: $accent_color;
+	    @include transition(all .3s linear 0s);
 	}
 }
  
