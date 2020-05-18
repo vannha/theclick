@@ -2,7 +2,7 @@
 /**
  * add filter bar
 */
-//add_action('theclick_woocommerce_before_shop_loop','theclick_woocommerce_filter_bar');
+add_action('theclick_woocommerce_before_shop_loop','theclick_woocommerce_filter_bar');
 function theclick_woocommerce_filter_bar(){
     $attribute_array = [];
     $attribute_taxonomies = wc_get_attribute_taxonomies();
