@@ -67,13 +67,17 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
-        theclick_select2();
+        //theclick_select2();
         theclick_video_size();
         theclick_popup();
         theclick_init_price_filter();
         theclick_masonry_filter();
         theclick_vc_animation_callback();
         theclick_remove_cart_actions();
+        $('.woocommerce-ordering select').select2({ 
+                minimumResultsForSearch: 10, 
+                theme: 'woo-order layout-1 container-layout1'
+            });
     });
     jQuery( document ).on( 'updated_wc_div', function() {
         theclick_remove_cart_actions();
