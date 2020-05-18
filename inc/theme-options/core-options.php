@@ -1288,7 +1288,7 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     'subtitle' => esc_html__( 'Select widget for show, hide', 'theclick' ),
                     'multi'    => true,
                     'options'  => theclick_woo_filter_widget_opts(),
-                    'default'  => array('2', '3'),
+                    'default'  => theclick_woo_filter_widget_opts_default()
                 ),
                 array(
                     'id'       => 'shop_pagination',
