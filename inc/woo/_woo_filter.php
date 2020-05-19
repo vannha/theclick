@@ -7,13 +7,15 @@ function theclick_woocommerce_filter_bar(){
     $attribute_array = [];
     $attribute_taxonomies = wc_get_attribute_taxonomies();
     if (!empty($attribute_taxonomies)) {
-    foreach ($attribute_taxonomies as $tax) {
-        if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
-            $attribute_array[$tax->attribute_name] = $tax->attribute_label;
+        foreach ($attribute_taxonomies as $tax) {
+            if (taxonomy_exists(wc_attribute_taxonomy_name($tax->attribute_name))) {
+                $attribute_array[$tax->attribute_name] = $tax->attribute_label;
+            }
         }
     }
-}
-?>
+    $filter_widget_display = theclick_get_theme_opt('filter_widget_display',array());
+    var_dump($filter_widget_display);
+    ?>
 	<div class="ef5-woo-filters row">
 		<?php 
 			$filtered_args = [

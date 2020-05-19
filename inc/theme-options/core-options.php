@@ -1292,15 +1292,6 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                         'disabled' => array()
                     ),
                 ),
-                /*array(
-                    'id'       => 'filter_widget_display',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__( 'Filter Widget Display', 'theclick' ),
-                    'subtitle' => esc_html__( 'Select widget for show, hide', 'theclick' ),
-                    'multi'    => true,
-                    'options'  => theclick_woo_filter_widget_opts(),
-                    'default'  => theclick_woo_filter_widget_opts_default()
-                ),*/
                 array(
                     'id'       => 'shop_pagination',
                     'type'     => 'button_set',
