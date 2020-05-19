@@ -17,7 +17,7 @@ function theclick_woocommerce_filter_bar(){
     ?>
 
 	<div class="ef5-woo-filters-wrap">
-    <div class="ef5-woo-filters row">
+    <div class="ef5-woo-filters row gutter-xxxl-50">
 		<?php 
         if(!empty($filter_widget_display['enabled'])){
             $filtered_args = [
