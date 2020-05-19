@@ -20,6 +20,12 @@
   }
 }
 @include make-grid-columns-offset-rtl();
+
+$extra_breakpoints: (
+    'xxl': 1366px,
+    'xxxl': 1600px,
+    'xxxxl': 1800px
+);
 // Row Gutters
 $customs_gutters: (
 	0 : 0,
@@ -79,6 +85,22 @@ $max_width:(
 			}
 		}
 	}
+}
+@each $breakpoint in map-keys($extra_breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $extra_breakpoints);
+    @include media-breakpoint-up($breakpoint, $extra_breakpoints) {
+        @each $gutters , $gutters-value in $customs_gutters{
+			.gutters#{$infix}-#{$gutters}{
+				margin-left: $gutters-value / -2!important;
+				margin-right: $gutters-value / -2!important;
+				> [class*='col']{
+					padding-left: $gutters-value / 2;
+					padding-right: $gutters-value / 2;
+				}
+			}
+		}
+          
+    }
 }
 // Grid Gutters
 @each $gutters , $gutters-value in $customs_gutters{
