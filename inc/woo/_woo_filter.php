@@ -15,7 +15,9 @@ function theclick_woocommerce_filter_bar(){
     }
     $filter_widget_display = theclick_get_theme_opt('filter_widget_display',array());
     ?>
-	<div class="ef5-woo-filters row">
+
+	<div class="ef5-woo-filters-wrap">
+    <div class="ef5-woo-filters row">
 		<?php 
         if(!empty($filter_widget_display['enabled'])){
             $filtered_args = [
@@ -115,5 +117,6 @@ function theclick_woocommerce_filter_bar(){
         }
         ?>
 	</div>
+    </div>
 <?php
 }
