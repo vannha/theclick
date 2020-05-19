@@ -40,7 +40,7 @@
 			border-radius: 1em;
 			cursor: ew-resize;
 			outline: none;
-			top: -0.3em;
+			top: -0.5em;
 			/* rtl:ignore */
 			margin-left: -0.5em;
 		}
@@ -57,17 +57,17 @@
 
 		.price_slider_wrapper .ui-widget-content {
 			border-radius: 1em;
-			background-color: $primary_color;
+			background-color: $MainBorderColor;
 			border: 0;
 		}
 
 		.ui-slider-horizontal {
-			height: 0;
+			height: 1px;
 		}
 
 		.ui-slider-horizontal .ui-slider-range {
-			top: 2px;
-			height: 2px;
+			top: 0;
+			height: 1px;
 		}
 
 		.ui-slider-horizontal .ui-slider-range-min {
