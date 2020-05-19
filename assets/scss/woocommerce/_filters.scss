@@ -3,10 +3,9 @@
 	font-size: 20px;
 	line-height: 26px;
 	padding: 5px 0;
-	color: $accent_color;
     border-bottom: 1px solid transparent; 
     &.opened{
-    	color: $primary_color;
+    	color: $accent_color;
     	border-bottom-color: $MainBorderColor;
     }
 	span{
