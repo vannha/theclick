@@ -55,25 +55,18 @@ class TheClick_Woo_Filter_Type_Widget extends WP_Widget
             'recent_review'    => esc_html__( 'New Review', 'theclick' ),      
             'deals'            => esc_html__( 'Product Deals', 'theclick' )   
         );
-        ?>
-        <div class="filter-type d-flex gutter-10">
-        <?php 
+        
         $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : 'all';
+        echo '<ul class="filter-type">';
         foreach($filter_type as $key => $ft): 
-             
             if( $filter_request == $key )
                 $active_cls = 'active';
             else
                 $active_cls = '';
-             
             $link  = add_query_arg( 'filter_type',$key, get_page_link(false) );
-            echo '<a href="'.esc_url($link).'" class="filter-link filter-link-'.$key.' '.$active_cls.'">'.$ft.'</a>';
-             
+            echo '<li><a href="'.esc_url($link).'" class="filter-link filter-link-'.$key.' '.$active_cls.'">'.$ft.'</a></li>';
         endforeach; 
-        
-        ?>  
-        </div>
-        <?php 
+        echo '</ul>';
         printf('%s', $args['after_widget']);
     }
 
