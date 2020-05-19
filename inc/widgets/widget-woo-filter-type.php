@@ -57,7 +57,7 @@ class TheClick_Woo_Filter_Type_Widget extends WP_Widget
         );
         
         $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : 'all';
-        echo '<ul class="filter-type">';
+        echo '<ul class="woo-filter-type">';
         foreach($filter_type as $key => $ft): 
             if( $filter_request == $key )
                 $active_cls = 'active';
