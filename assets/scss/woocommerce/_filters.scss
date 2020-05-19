@@ -96,13 +96,16 @@
 			margin-bottom: 45px;
 		}
 	}
-	.widget li > a{
-	    display: inline-block;
-	    flex-wrap: inherit;
-	    flex-grow: inherit;
-	    width: auto;
-	    max-width: 100%;
-	    padding: 8px 0;
-	}
+	.widget li{
+		border-bottom: 0;
+		> a{
+		    display: inline-block;
+		    flex-wrap: inherit;
+		    flex-grow: inherit;
+		    width: auto;
+		    max-width: 100%;
+		    padding: 8px 0;
+		}
+	} 
 }
  
