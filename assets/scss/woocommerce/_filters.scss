@@ -7,6 +7,9 @@
     &.opened{
     	color: $accent_color;
     	border-bottom-color: $MainBorderColor;
+    	.ef5-svg path{
+    		fill: $accent_color;
+    	}
     }
 	span{
 		display: inline-block;
