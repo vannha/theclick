@@ -36,7 +36,7 @@
 			z-index: 2;
 			width: 1em;
 			height: 1em;
-			background-color: $accent_color;
+			background-color: $primary_color;
 			border-radius: 1em;
 			cursor: ew-resize;
 			outline: none;
@@ -52,7 +52,7 @@
 			display: block;
 			border: 0;
 			border-radius: 1em;
-			background-color: $accent_color;
+			background-color: $primary_color;
 		}
 
 		.price_slider_wrapper .ui-widget-content {
@@ -60,7 +60,7 @@
 			background-color: $primary_color;
 			border: 0;
 		}
-
+		
 		.ui-slider-horizontal {
 			height: 0.5em;
 		}
