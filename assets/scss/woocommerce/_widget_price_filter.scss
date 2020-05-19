@@ -60,14 +60,14 @@
 			background-color: $primary_color;
 			border: 0;
 		}
-		
+
 		.ui-slider-horizontal {
 			height: 0.5em;
 		}
 
 		.ui-slider-horizontal .ui-slider-range {
-			top: 0;
-			height: 100%;
+			top: 2px;
+			height: 2px;
 		}
 
 		.ui-slider-horizontal .ui-slider-range-min {
