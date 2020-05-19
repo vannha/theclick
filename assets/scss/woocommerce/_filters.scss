@@ -3,7 +3,12 @@
 	font-size: 20px;
 	line-height: 26px;
 	padding: 5px 0;
-    border-bottom: 1px solid $Main_Border_Color;
+	color: $accent_color;
+    border-bottom: 1px solid transparent; 
+    &.opened{
+    	color: $primary_color;
+    	border-bottom-color: $Main_Border_Color;
+    }
 	span{
 		display: inline-block;
 		line-height: 1;
