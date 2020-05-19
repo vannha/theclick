@@ -63,7 +63,12 @@ class TheClick_Woo_Filter_Type_Widget extends WP_Widget
                 $active_cls = 'active';
             else
                 $active_cls = '';
-            $link  = add_query_arg( 'filter_type',$key, get_page_link(false) );
+            if(function_exists('is_shop') && is_shop()){
+                $link  = home_url( '/' ).'?post_type=product&filter_type='.$key;
+            }else{
+                $link  = add_query_arg( 'filter_type',$key, get_page_link(false) );
+            }
+
             echo '<li><a href="'.esc_url($link).'" class="filter-link filter-link-'.$key.' '.$active_cls.'">'.$ft.'</a></li>';
         endforeach; 
         echo '</ul>';
