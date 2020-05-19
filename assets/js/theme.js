@@ -569,9 +569,7 @@
             e.preventDefault();
             $(this).toggleClass('opened');
             $('.ef5-woo-filters-wrap').slideToggle();
-/*
-            $('.ef5-cartform').removeClass('active');
-            $('.ef5-searchform').toggleClass('active').find('.ef5-search-field').focus();*/
+ 
         });
         
         $('.ef5-main').each(function(){
