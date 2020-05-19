@@ -46,7 +46,7 @@ class TheClick_Woo_Filter_Type_Widget extends WP_Widget
         printf('%s', $args['before_title'] . $title . $args['after_title']);
         
         $filter_type = array(
-            'all'              => esc_html__( 'All Products', 'theclick' ),    
+            //'all'              => esc_html__( 'All Products', 'theclick' ),    
             'best_selling'     => esc_html__( 'Best Sellers', 'theclick' ),    
             'recent_product'   => esc_html__( 'New Products', 'theclick' ),    
             'on_sale'          => esc_html__( 'Sale Products', 'theclick' ),   
