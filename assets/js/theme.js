@@ -340,6 +340,7 @@
     */
     function theclick_toggle(){
         'use strict';
+
         //Search Toggle
         /* $('.ef5-search-toggle').on('click',function(e){
             e.preventDefault();
@@ -564,6 +565,15 @@
     // WooCommerce Filters 
     function theclick_woo_filters(){
         "use strict";
+        $('.woo-filter-toggle').on('click',function(e){
+            e.preventDefault();
+            $(this).toggleClass('opened');
+            $('.ef5-woo-filters-wrap').slideToggle();
+/*
+            $('.ef5-cartform').removeClass('active');
+            $('.ef5-searchform').toggleClass('active').find('.ef5-search-field').focus();*/
+        });
+        
         $('.ef5-main').each(function(){
             var $this = $(this),
                 $id = $(this).attr('id'),
