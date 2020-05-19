@@ -4,11 +4,11 @@
  * Change count output
 */
 if(!function_exists('theclick_wc_attr_count_span')){
-	//add_filter('woocommerce_layered_nav_term_html', 'theclick_woocommerce_layered_nav_term_html');
+	add_filter('woocommerce_layered_nav_term_html', 'theclick_woocommerce_layered_nav_term_html');
     function theclick_woocommerce_layered_nav_term_html($term_html) {
         //$term_html = str_replace('"> <span class="count">(', ' <span class="count">', $term_html);
-        $term_html = str_replace('</a> <span class="count">(', ' <span class="count">', $term_html);
-        $term_html = str_replace(')</span>', '</span></a>', $term_html);
+        $term_html = str_replace('</a> <span class="count">(', ' <span class="count">(', $term_html);
+        $term_html = str_replace(')</span>', ')</span></a>', $term_html);
         return $term_html;
     }
 }
