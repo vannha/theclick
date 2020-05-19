@@ -50,6 +50,15 @@ $grid-x-columns : (
 // Custom Gutters 
 $customs_gutters: (
 	0 : 0,
+	1 : 1px,
+	2 : 2px,
+	3 : 3px,
+	4 : 4px,
+	5 : 5px,
+	6 : 6px,
+	7 : 7px,
+	8 : 8px,
+	9 : 9px,
 	10 : 10px,
 	15 : 15px,
 	20 : 20px,
@@ -82,7 +91,8 @@ $customs_gutters: (
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
 		@each $gutters , $gutters-value in $customs_gutters{
-			.gutter#{$infix}-#{$gutters}{
+			.gutter#{$infix}-#{$gutters},
+			.gutters#{$infix}-#{$gutters}{
 				margin-left: ($gutters-value / -2);
 				margin-right: ($gutters-value / -2);
 				> [class*='col'],
@@ -136,8 +146,7 @@ $customs_gutters: (
     @include media-breakpoint-up($breakpoint, $extra_breakpoints) {
         @each $gutters , $gutters-value in $customs_gutters{
 			.gutter#{$infix}-#{$gutters},
-			.gutters#{$infix}-#{$gutters}
-			{
+			.gutters#{$infix}-#{$gutters}{
 				margin-left: ($gutters-value / -2);
 				margin-right: ($gutters-value / -2);
 				> [class*='col'],
@@ -150,7 +159,21 @@ $customs_gutters: (
           
     }
 }
- 
+// Grid Gutters
+@each $gutters , $gutters-value in $customs_gutters{
+	.grid-gutters-#{$gutters}{
+		margin: $gutters-value / -2!important;
+		> [class*='col']{
+			padding: $gutters-value / 2;
+			.overlay{
+				top: $gutters-value / 2;
+			    right: $gutters-value / 2;
+			    bottom: $gutters-value / 2;
+			    left: $gutters-value / 2;
+			}
+		}
+	}
+}
 
 .no-container{
 	padding-left: $grid-gutter-width / 2;
