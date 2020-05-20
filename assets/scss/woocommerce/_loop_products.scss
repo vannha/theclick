@@ -39,17 +39,6 @@
 			}
 		}
 	}
-	/* @media (min-width: $screen-md-min){
-		&.columns-4,
-		&.columns-3,
-		&.columns-5,
-		&.columns-6{
-			> .product{
-				flex: 0 0 33.3333333333%;
-				max-width: 33.3333333333%;
-			}
-		}
-	} */
 	@media (min-width: $screen-lg-min){
 		&.columns-3,
 		&.columns-4,
