@@ -90,6 +90,7 @@ function theclick_loop_shop_columns() {
   } elseif(class_exists('WPcleverWoosq') && class_exists('WPcleverWoosw') && class_exists('WPcleverWooscp') && $sidebar_position !== 'bottom'){
   	$columns = $columns - 1;
   }
+  var_dump($columns);
   return $columns;
 }
 
