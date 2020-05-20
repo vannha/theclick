@@ -103,14 +103,22 @@ function theclick_modify_wc_theme_support() {
     remove_theme_support( 'woocommerce' );
 
     add_theme_support( 'woocommerce', $theme_support );*/
-var_dump(theclick_wc_thumbnail_value('custom_width') !== get_option( 'woocommerce_thumbnail_cropping_custom_width' ));
-    if( theclick_wc_thumbnail_value('image_size_single_width') !== get_option( 'woocommerce_single_image_width' ) ){
+ 
+    if(  !empty(theclick_wc_thumbnail_value('image_size_single_width')) && (theclick_wc_thumbnail_value('image_size_single_width') !== get_option( 'woocommerce_single_image_width' ) )){
         update_option( 'woocommerce_single_image_width', theclick_wc_thumbnail_value('image_size_single_width') );
     }
-    update_option( 'woocommerce_thumbnail_image_width', theclick_wc_thumbnail_value('thumbnail_image_width') );
+    if(  !empty(theclick_wc_thumbnail_value('thumbnail_image_width')) && (theclick_wc_thumbnail_value('thumbnail_image_width') !== get_option( 'woocommerce_thumbnail_image_width' ) )){
+        update_option( 'woocommerce_thumbnail_image_width', theclick_wc_thumbnail_value('thumbnail_image_width') );
+    }
 
-    update_option( 'woocommerce_thumbnail_cropping', 'custom' );
-    update_option( 'woocommerce_thumbnail_cropping_custom_width', theclick_wc_thumbnail_value('custom_width') );
-    update_option( 'woocommerce_thumbnail_cropping_custom_height', theclick_wc_thumbnail_value('custom_height') );
+    
+    if(  !empty(theclick_wc_thumbnail_value('custom_width')) && (theclick_wc_thumbnail_value('custom_width') !== get_option( 'woocommerce_thumbnail_cropping_custom_width' ) )){
+        update_option( 'woocommerce_thumbnail_cropping', 'custom' );
+        update_option( 'woocommerce_thumbnail_cropping_custom_width', theclick_wc_thumbnail_value('custom_width') );
+    }
+    if(  !empty(theclick_wc_thumbnail_value('custom_height')) && (theclick_wc_thumbnail_value('custom_height') !== get_option( 'woocommerce_thumbnail_cropping_custom_height' ) )){
+        update_option( 'woocommerce_thumbnail_cropping', 'custom' );
+        update_option( 'woocommerce_thumbnail_cropping_custom_height', theclick_wc_thumbnail_value('custom_height') );
+    }
 }
 add_action( 'after_setup_theme', 'theclick_modify_wc_theme_support', 10 );
