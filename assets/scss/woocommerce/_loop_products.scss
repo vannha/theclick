@@ -27,15 +27,26 @@
 		}
 	}
 	/* Columns */
-	@media (min-width: $screen-md-min){
+	@media (min-width: $screen-sm-min){
 		&.columns-2,
-		&.columns-4,
 		&.columns-3,
+		&.columns-4,
 		&.columns-5,
 		&.columns-6{
 			> .product{
 				flex: 0 0 50%;
 				max-width: 50%;
+			}
+		}
+	}
+	@media (min-width: $screen-md-min){
+		&.columns-4,
+		&.columns-3,
+		&.columns-5,
+		&.columns-6{
+			> .product{
+				flex: 0 0 33.3333333333%;
+				max-width: 33.3333333333%;
 			}
 		}
 	}
