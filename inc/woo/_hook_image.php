@@ -8,11 +8,11 @@
 */
 
 function theclick_wc_thumbnail_value($value){
-    $image_size_single_width  = theclick_configs('theclick_product_single_image_w');
-    $image_size_single_height = theclick_configs('theclick_product_single_image_h');
+    $image_size_single_width  = str_replace('px','', theclick_configs('theclick_product_single_image_w'));
+    $image_size_single_height = str_replace('px','', theclick_configs('theclick_product_single_image_h'));
 
-    $thumbnail_image_width  = theclick_configs('theclick_product_loop_image_w');
-    $thumbnail_image_height = theclick_configs('theclick_product_loop_image_h');;
+    $thumbnail_image_width  = str_replace('px','', theclick_configs('theclick_product_loop_image_w'));
+    $thumbnail_image_height = str_replace('px','', theclick_configs('theclick_product_loop_image_h'));
 
     $custom_width  = $thumbnail_image_width;
     $custom_height = $thumbnail_image_height;
