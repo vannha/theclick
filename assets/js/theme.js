@@ -568,7 +568,7 @@
         $(document).find('.woo-filter-toggle').on('click',function(e){
             e.preventDefault();
             $(this).toggleClass('opened');
-            $('.ef5-woo-filters-wrap').slideToggle();
+            $(document).find('.ef5-woo-filters-wrap').slideToggle();
         });
         
         $('.ef5-main').each(function(){
