@@ -572,7 +572,7 @@
             var $this = $(this),
                 $id = $(this).attr('id'),
                 $loading_class = 'ef5-loading',
-                $product_grid = $(document).find('.products'),
+                $product_grid = $('.woocommerce .products'),
                 $filtered_nav = $('.widget_layered_nav_filters ul');
 
             $this.find('.wc-layered-nav-term > a, .chosen > a, .wc-layered-nav-rating > a, .ef5-filter').live('click touch',function(){
