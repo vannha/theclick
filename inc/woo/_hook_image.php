@@ -94,7 +94,7 @@ add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
  * Unset image width theme support.
  */
 function theclick_modify_wc_theme_support() {
-    global $image_size_single_width, $thumbnail_image_width, $custom_width, $custom_height;
+    /*global $image_size_single_width, $thumbnail_image_width, $custom_width, $custom_height;
     $theme_support = get_theme_support( 'woocommerce' );
     $theme_support = is_array( $theme_support ) ? $theme_support[0] : array();
  
@@ -102,8 +102,9 @@ function theclick_modify_wc_theme_support() {
  
     remove_theme_support( 'woocommerce' );
 
-    add_theme_support( 'woocommerce', $theme_support );
+    add_theme_support( 'woocommerce', $theme_support );*/
 
+    var_dump(get_option( 'woocommerce_single_image_width' ));
     update_option( 'woocommerce_single_image_width', theclick_wc_thumbnail_value('image_size_single_width') );
     update_option( 'woocommerce_thumbnail_image_width', theclick_wc_thumbnail_value('thumbnail_image_width') );
 
