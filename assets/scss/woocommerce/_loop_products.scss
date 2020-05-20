@@ -6,7 +6,7 @@
 	margin-bottom: -45px;
 	list-style: none;
 	@include d-flex();
-	@media (min-width: 1200px){
+	@media (min-width: 1430px){
 		margin-left: -20px;	
 		margin-right: -20px;
 	}
@@ -20,7 +20,7 @@
 		position: relative;
 		background: $white;
 		@include transition();
-		@media (min-width: 1200px){
+		@media (min-width: 1430px){
 			padding-left: 20px;
 			padding-right: 20px;
 
