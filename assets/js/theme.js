@@ -67,6 +67,7 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
+        theclick_woo_filters();
         theclick_video_size();
         theclick_popup();
         theclick_init_price_filter();
