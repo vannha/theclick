@@ -125,6 +125,12 @@
 			max-width: 50%;
 		}
 	}
+	@media (max-width: 479px){
+		.col{
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
 	 
 }
  
