@@ -565,7 +565,7 @@
     // WooCommerce Filters 
     function theclick_woo_filters(){
         "use strict";
-        $('.woo-filter-toggle').on('click',function(e){
+        $(document).find('.woo-filter-toggle').on('click',function(e){
             e.preventDefault();
             $(this).toggleClass('opened');
             $('.ef5-woo-filters-wrap').slideToggle();
