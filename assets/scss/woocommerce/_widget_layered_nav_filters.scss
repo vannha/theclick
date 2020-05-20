@@ -1,2 +1,10 @@
 .widget_layered_nav_filters{
+	ul{
+	    display: flex;
+	    flex-wrap: wrap;
+	    margin: -5px -10px;
+	    li{
+	    	padding: 5px 10px;
+	    }
+	}
 }
