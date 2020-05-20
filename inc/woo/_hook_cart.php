@@ -27,7 +27,7 @@ if(!function_exists('theclick_woocommerce_cart_item_name')){
 		$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 
 		$terms = get_the_terms($product_id, 'pa_brand');
-        if(!is_wp_error($terms)){
+        if( !empty($terms) && !is_wp_error($terms)){
             $count = count($terms);
         } else {
             $count = 0;
