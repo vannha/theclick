@@ -4,15 +4,6 @@
 
     $el_id = !empty($el_id) ? 'ef5-product-grid' . $el_id : uniqid('ef5-product-grid');
 
-    /*if (get_query_var('paged')) {
-        $paged = get_query_var('paged');
-    } elseif (get_query_var('page')) {
-        $paged = get_query_var('page');
-    } else {
-        $paged = 1;
-    }*/
-
-    //$tax_query = array();
     $select_terms = array();
     if ( ! empty( $atts['taxonomies'] ) ) {
         $terms = get_terms( array(
@@ -26,34 +17,13 @@
                 $select_terms[] = $t; 
             }
         }
-        /*$tax_query = array(
-            array(
-                'taxonomy' => 'product_cat',
-                'field'    => 'slug',
-                'terms'    => $elected_taxs,
-            ),
-        );*/
     } 
 
-    /*$products_args = array(
-        'post_type' => 'product',
-        'posts_per_page' => $post_per_page,
-        'post_status' => 'publish',
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'tax_query' => $tax_query,
-        'paged' => $paged,
-    );
-    */
-    //if(!empty($category_slug)) $category_slug = explode(',',$category_slug);
     $param_args=[];
  
     $loop = theclick_woocommerce_query($type,$post_per_page,$product_ids,$taxonomies,$taxonomies_exclude,$param_args);
 
     $ifp = is_front_page();
-
-    /*global $wp_query;
-    $wp_query = new WP_Query($products_args);*/
 
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
 

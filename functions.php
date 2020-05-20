@@ -370,6 +370,10 @@ function theclick_scripts()
         wp_enqueue_script( 'selectWoo' );
         wp_enqueue_style( 'select2' ); 
     }
+    if(class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_singular('product') ) ){
+        wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
+        wp_enqueue_style('slick-css',get_template_directory_uri().'/assets/css/slick.css');
+    }
 
     // Scripts
     wp_enqueue_script('theclick', get_template_directory_uri() . '/assets/js/theme'.$min.'.js', array('jquery'), '', true);
