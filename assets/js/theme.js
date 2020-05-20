@@ -598,11 +598,42 @@
     
     function theclick_woo_filters_toggle(){
         "use strict";
-        $(document).find('.woo-filter-toggle').on('click',function(e){
+        var filter_area = document.querySelector( '.ef5-woo-filters-wrap' );
+        if ( filter_area ) {
+            $( filter_area ).removeClass( 'filters-opened' ).stop().hide();
+        }
+        $( '.woo-filter-toggle' ).unbind( 'click' ).on( 'click', function( e ) {
+            e.preventDefault();
+            var filter_area = document.querySelector( '.ef5-woo-filters-wrap' );
+
+            if ( filter_area.classList.contains( 'filters-opened' ) ) {
+                closeFilters();
+            } else {
+                openFilters();
+            }
+        } );
+        var openFilters = function() {
+            var filter_area = document.querySelector( '.ef5-woo-filters-wrap' ),
+                btnFilter = document.querySelector( '.woo-filter-toggle' );
+
+            filter_area.classList.add( 'filters-opened' );
+            $( filter_area ).stop().slideDown( 300 );
+            btnFilter.classList.add( 'opened' );
+        };
+
+        var closeFilters = function() {
+            var filter_area = document.querySelector( '.ef5-woo-filters-wrap' ),
+                btnFilter = document.querySelector( '.woo-filter-toggle' );
+
+            filter_area.classList.remove( 'filters-opened' );
+            $( filter_area ).stop().slideUp( 300 );
+            btnFilter.classList.remove( 'opened' );
+        };
+        /*$(document).find('.woo-filter-toggle').on('click',function(e){
             e.preventDefault();
             $(this).toggleClass('opened');
             $(document).find('.ef5-woo-filters-wrap').slideToggle();
-        });
+        });*/
     }
     // Re-Run filer by Price
     function theclick_init_price_filter() {
