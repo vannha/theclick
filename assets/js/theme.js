@@ -580,6 +580,7 @@
                 $this.addClass($loading_class);
                 var $link = $(this).attr('href');
                 window.history.pushState({url: "" + $link + ""}, "", $link);
+                theclick_woo_filters_toggle();
                 jQuery.get($link,function(data){
                     $this.html($(data).find('#'+$id).html());
                     $this.removeClass($loading_class);
@@ -629,11 +630,7 @@
             $( filter_area ).stop().slideUp( 300 );
             btnFilter.classList.remove( 'opened' );
         };
-        /*$(document).find('.woo-filter-toggle').on('click',function(e){
-            e.preventDefault();
-            $(this).toggleClass('opened');
-            $(document).find('.ef5-woo-filters-wrap').slideToggle();
-        });*/
+         
     }
     // Re-Run filer by Price
     function theclick_init_price_filter() {
