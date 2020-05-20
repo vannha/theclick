@@ -103,7 +103,7 @@ function theclick_modify_wc_theme_support() {
     remove_theme_support( 'woocommerce' );
 
     add_theme_support( 'woocommerce', $theme_support );*/
-var_dump(theclick_wc_thumbnail_value('image_size_single_width'));
+var_dump(theclick_wc_thumbnail_value('image_size_single_width') !== get_option( 'woocommerce_single_image_width' ));
     if( theclick_wc_thumbnail_value('image_size_single_width') !== get_option( 'woocommerce_single_image_width' ) ){
         update_option( 'woocommerce_single_image_width', theclick_wc_thumbnail_value('image_size_single_width') );
     }
