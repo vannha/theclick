@@ -94,24 +94,13 @@ add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
  * Unset image width theme support.
  */
 function theclick_modify_wc_theme_support() {
-    /*global $image_size_single_width, $thumbnail_image_width, $custom_width, $custom_height;
-    $theme_support = get_theme_support( 'woocommerce' );
-    $theme_support = is_array( $theme_support ) ? $theme_support[0] : array();
- 
-    unset( $theme_support['single_image_width'], $theme_support['thumbnail_image_width'] );
- 
-    remove_theme_support( 'woocommerce' );
-
-    add_theme_support( 'woocommerce', $theme_support );*/
- 
+      
     if(  !empty(theclick_wc_thumbnail_value('image_size_single_width')) && (theclick_wc_thumbnail_value('image_size_single_width') !== get_option( 'woocommerce_single_image_width' ) )){
         update_option( 'woocommerce_single_image_width', theclick_wc_thumbnail_value('image_size_single_width') );
     }
     if(  !empty(theclick_wc_thumbnail_value('thumbnail_image_width')) && (theclick_wc_thumbnail_value('thumbnail_image_width') !== get_option( 'woocommerce_thumbnail_image_width' ) )){
         update_option( 'woocommerce_thumbnail_image_width', theclick_wc_thumbnail_value('thumbnail_image_width') );
     }
-
-    
     if(  !empty(theclick_wc_thumbnail_value('custom_width')) && (theclick_wc_thumbnail_value('custom_width') !== get_option( 'woocommerce_thumbnail_cropping_custom_width' ) )){
         update_option( 'woocommerce_thumbnail_cropping', 'custom' );
         update_option( 'woocommerce_thumbnail_cropping_custom_width', theclick_wc_thumbnail_value('custom_width') );
