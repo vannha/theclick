@@ -367,6 +367,7 @@ function theclick_scripts()
         'is_rtl'              => is_rtl() ? 'true' : 'false'
     );
     if(class_exists('Woocommerce')) {
+        wp_enqueue_script('imagesloaded');
         wp_enqueue_script( 'selectWoo' );
         wp_enqueue_style( 'select2' ); 
     }
