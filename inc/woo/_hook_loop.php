@@ -80,7 +80,7 @@ if(!function_exists('theclick_woocommerce_before_shop_loop')){
 */
 add_filter( 'loop_shop_columns', 'theclick_loop_shop_columns', 20 );
 function theclick_loop_shop_columns() {
-  $columns = theclick_get_opts('products_columns', 4);
+  $columns = theclick_get_opts('products_columns', 4); var_dump($columns);
   $sidebar_position   = theclick_sidebar_position();
   if(is_active_sidebar('sidebar-shop') && $sidebar_position !== 'bottom') {
   	if(class_exists('WPcleverWoosq') && class_exists('WPcleverWoosw') && class_exists('WPcleverWooscp'))
@@ -90,7 +90,7 @@ function theclick_loop_shop_columns() {
   } elseif(class_exists('WPcleverWoosq') && class_exists('WPcleverWoosw') && class_exists('WPcleverWooscp') && $sidebar_position !== 'bottom'){
   	$columns = $columns - 1;
   }
-  var_dump($columns);
+
   return $columns;
 }
 
