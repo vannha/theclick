@@ -51,22 +51,12 @@
 		}
 	} */
 	@media (min-width: $screen-lg-min){
-		&.columns-3{
+		&.columns-3,
+		&.columns-4,
+		&.columns-5{
 			> .product{
 				flex: 0 0 33.3333333333%;
     			max-width: 33.3333333333%;
-			}
-		}
-		&.columns-4{
-			> .product{
-				flex: 0 0 25%;
-				max-width: 25%;
-			}
-		}
-		&.columns-5{
-			> .product{
-				flex: 0 0 25%;
-				max-width: 25%;
 			}
 		}
 		&.columns-6{
