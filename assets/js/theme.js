@@ -67,7 +67,6 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
-        theclick_woo_filters();
         theclick_video_size();
         theclick_popup();
         theclick_init_price_filter();
@@ -570,7 +569,6 @@
             e.preventDefault();
             $(this).toggleClass('opened');
             $('.ef5-woo-filters-wrap').slideToggle();
- 
         });
         
         $('.ef5-main').each(function(){
