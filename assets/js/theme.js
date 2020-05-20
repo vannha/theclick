@@ -572,6 +572,7 @@
             var $this = $(this),
                 $id = $(this).attr('id'),
                 $loading_class = 'ef5-loading',
+                $product_grid = $(document).find('.products'),
                 $filtered_nav = $('.widget_layered_nav_filters ul');
 
             $this.find('.wc-layered-nav-term > a, .chosen > a, .wc-layered-nav-rating > a, .ef5-filter').live('click touch',function(){
@@ -591,7 +592,7 @@
                             theme: 'woo-order layout-1 container-layout1'
                         });
                     }
-                    $(document).find('.products').imagesLoaded( function() {
+                    $product_grid.imagesLoaded( function() {
                         setTimeout(function(){
                             $(document).find('.ef5-wc-loop-img').not('.slick-initialized').slick({
                                 vertical: false,
