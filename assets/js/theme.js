@@ -19,6 +19,7 @@
 
         // WooCommerce
         theclick_woo_filters();
+        theclick_woo_filters_toggle();
         theclick_woo_loop_thumb_gallery();
         theclick_wc_single_product_gallery();
         theclick_wooscp_change_text();
@@ -67,6 +68,7 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
+        theclick_woo_filters_toggle();
         theclick_video_size();
         theclick_popup();
         theclick_init_price_filter();
@@ -565,12 +567,7 @@
     // WooCommerce Filters 
     function theclick_woo_filters(){
         "use strict";
-        $(document).find('.woo-filter-toggle').on('click',function(e){
-            e.preventDefault();
-            $(this).toggleClass('opened');
-            $(document).find('.ef5-woo-filters-wrap').slideToggle();
-        });
-        
+          
         $('.ef5-main').each(function(){
             var $this = $(this),
                 $id = $(this).attr('id'),
@@ -599,6 +596,14 @@
         })
     };
     
+    function theclick_woo_filters_toggle(){
+        "use strict";
+        $(document).find('.woo-filter-toggle').on('click',function(e){
+            e.preventDefault();
+            $(this).toggleClass('opened');
+            $(document).find('.ef5-woo-filters-wrap').slideToggle();
+        });
+    }
     // Re-Run filer by Price
     function theclick_init_price_filter() {
         "use strict";
