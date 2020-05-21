@@ -1,19 +1,13 @@
 <?php
-add_action( 'pre_get_posts', 'theclick_loop_per_page' );
+/*add_action( 'pre_get_posts', 'theclick_loop_per_page' );
 function theclick_loop_per_page( $query ) {
     if (!is_admin() && (is_woocommerce() || is_shop() || is_post_type_archive('product') || is_product_category() || is_product_tag() ) && $query->is_main_query()){
         var_dump($query);
     }
-    /*$portfolio_per_page = theclick_get_opts('portfolio_per_page','12');  
-
-    if(!is_admin()){
-        if( ($query->is_post_type_archive('portfolio') && !is_page()) || is_tax( 'portfolio_category' ) ) { 
-                $query->set( 'posts_per_page', (int)$portfolio_per_page );
-        }
-    }*/
+   
 
     return $query;
-}
+}*/
 function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude='',$param_args=[]){
     global $wp_query;
 	$product_visibility_term_ids = wc_get_product_visibility_term_ids();
