@@ -137,9 +137,9 @@ function theclick_get_sidebar($check = true){
     else 
         return $sidebar;
 }
-function theclick_sidebar_position(){
+function theclick_sidebar_position(){ var_dump(is_post_type_archive('product'));
     if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && !is_post_type_archive('product')){ 
-        $sidebar_position = theclick_get_opts('archive_sidebar_pos', theclick_archive_sidebar_position()); var_dump($sidebar_position);
+        $sidebar_position = theclick_get_opts('archive_sidebar_pos', theclick_archive_sidebar_position()); 
     } elseif(is_post_type_archive('portfolio')){
         $sidebar_position = theclick_get_opts('portfolio_archive_sidebar_pos', theclick_archive_sidebar_position());
     } elseif(is_page()){
