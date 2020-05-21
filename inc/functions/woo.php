@@ -1,13 +1,4 @@
 <?php
-/*add_action( 'pre_get_posts', 'theclick_loop_per_page' );
-function theclick_loop_per_page( $query ) {
-    if (!is_admin() && (is_woocommerce() || is_shop() || is_post_type_archive('product') || is_product_category() || is_product_tag() ) && $query->is_main_query()){
-        var_dump($query);
-    }
-   
-
-    return $query;
-}*/
 function theclick_woocommerce_query($type='recent_product',$post_per_page=-1,$product_ids='',$taxonomies='',$taxonomies_exclude='',$param_args=[]){
     global $wp_query;
 	$product_visibility_term_ids = wc_get_product_visibility_term_ids();

@@ -106,6 +106,10 @@
 		    max-width: 100%;
 		    padding: 8px 0;
 		}
+	}
+	.widget_rating_filter ul li::after, 
+	.widget_rating_filter ul li::before {
+	    content: none;
 	} 
 	@media (max-width: $screen-lg-max){
 		.col{
