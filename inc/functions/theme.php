@@ -125,7 +125,7 @@ function theclick_get_sidebar($check = true){
         } else {
             $sidebar = 'sidebar-page';
         }
-    } elseif (class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_singular('product') ) ) {
+    } elseif (class_exists('WooCommerce') && (is_woocommerce() || is_product_category() || is_product_tag() || is_singular('product') ) ) {
         $sidebar = 'sidebar-shop';
     } elseif(class_exists('Tribe__Events__Main')){
         $sidebar = 'sidebar-tribe-event';
@@ -138,7 +138,7 @@ function theclick_get_sidebar($check = true){
         return $sidebar;
 }
 function theclick_sidebar_position(){ var_dump(is_archive());
-    if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && !is_post_type_archive('product')){ 
+    if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && (!is_product_category() || !is_product_tag())){ 
         $sidebar_position = theclick_get_opts('archive_sidebar_pos', theclick_archive_sidebar_position()); 
     } elseif(is_post_type_archive('portfolio')){
         $sidebar_position = theclick_get_opts('portfolio_archive_sidebar_pos', theclick_archive_sidebar_position());
@@ -152,9 +152,7 @@ function theclick_sidebar_position(){ var_dump(is_archive());
         $sidebar_position = theclick_get_opts('post_sidebar_pos',theclick_post_sidebar_position());
     } elseif (is_singular('ef5_portfolio')) {
         $sidebar_position = theclick_get_opts('portfolio_sidebar_pos',theclick_portfolio_sidebar_position());
-    } elseif (class_exists('WooCommerce') && is_post_type_archive('product')) {
-        $sidebar_position = theclick_get_opts('shop_sidebar_pos',theclick_shop_sidebar_position());
-    } elseif(is_product_category() || is_product_tag()){
+    } elseif (class_exists('WooCommerce') && (is_product_category() || is_product_tag())) {
         $sidebar_position = theclick_get_opts('shop_sidebar_pos',theclick_shop_sidebar_position());
     } elseif (is_singular('product')) {
         $sidebar_position = theclick_get_opts('product_sidebar_pos',theclick_product_sidebar_position());
