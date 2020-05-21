@@ -117,7 +117,7 @@ if ( ! function_exists( 'woocommerce_pagination' ) ) {
 		if ( ! wc_get_loop_prop( 'is_paginated' ) || ! woocommerce_products_will_display() ) {
 			return;
 		}
-
+		$shop_pagination = theclick_get_theme_opt('shop_pagination','default');
 		$args = array(
 			'total'   => wc_get_loop_prop( 'total_pages' ),
 			'current' => wc_get_loop_prop( 'current_page' ),
@@ -137,25 +137,26 @@ if ( ! function_exists( 'woocommerce_pagination' ) ) {
 		if ( $total <= 1 ) {
 			return;
 		}
-	?>
-	<div class="ef5-loop-pagination">
-		<div class="nav-links">
-			<?php
-				echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
-					'base'         => $base,
-					'format'       => $format,
-					'add_args'     => false,
-					'current'      => max( 1, $current ),
-					'total'        => $total,
-					'prev_text'    => '&larr;',
-					'next_text'    => '&rarr;',
-					'type'         => 'list',
-					'end_size'     => 3,
-					'mid_size'     => 3,
-				) ) );
-			?>
+		var_dump($shop_pagination);
+		?>
+		<div class="ef5-loop-pagination">
+			<div class="nav-links">
+				<?php
+					echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
+						'base'         => $base,
+						'format'       => $format,
+						'add_args'     => false,
+						'current'      => max( 1, $current ),
+						'total'        => $total,
+						'prev_text'    => '&larr;',
+						'next_text'    => '&rarr;',
+						'type'         => 'list',
+						'end_size'     => 3,
+						'mid_size'     => 3,
+					) ) );
+				?>
+			</div>
 		</div>
-	</div>
-	<?php
+		<?php
 	}
 }
