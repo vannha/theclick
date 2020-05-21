@@ -125,7 +125,7 @@ function theclick_get_sidebar($check = true){
         } else {
             $sidebar = 'sidebar-page';
         }
-    } elseif (class_exists('WooCommerce') && (is_woocommerce() || is_product_category() || is_product_tag() || is_singular('product') ) ) {
+    } elseif (class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_product_category() || is_product_tag() || is_singular('product') ) ) {
         $sidebar = 'sidebar-shop';
     } elseif(class_exists('Tribe__Events__Main')){
         $sidebar = 'sidebar-tribe-event';
@@ -152,7 +152,7 @@ function theclick_sidebar_position(){
         $sidebar_position = theclick_get_opts('post_sidebar_pos',theclick_post_sidebar_position());
     } elseif (is_singular('ef5_portfolio')) {
         $sidebar_position = theclick_get_opts('portfolio_sidebar_pos',theclick_portfolio_sidebar_position());
-    } elseif (class_exists('WooCommerce') && (is_product_category() || is_product_tag())) {
+    } elseif (class_exists('WooCommerce') && (is_post_type_archive('product') || is_product_category() || is_product_tag())) {
         $sidebar_position = theclick_get_opts('shop_sidebar_pos',theclick_shop_sidebar_position());
     } elseif (is_singular('product')) {
         $sidebar_position = theclick_get_opts('product_sidebar_pos',theclick_product_sidebar_position());
