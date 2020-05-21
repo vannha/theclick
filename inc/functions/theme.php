@@ -172,7 +172,7 @@ function theclick_content_css_class($class=''){
     $sidebar            = theclick_get_sidebar();
     $sidebar_position   = theclick_sidebar_position();
     $content_grid_class = theclick_archive_grid_col();
-    var_dump($content_grid_class);
+    var_dump($sidebar_position) ;
     if( $sidebar_position === 'bottom' ){
         $classes[] = 'col-12 has-gtb';
     } else {
