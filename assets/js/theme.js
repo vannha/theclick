@@ -575,7 +575,7 @@
                 $product_grid = $('.woocommerce .products'),
                 $filtered_nav = $('.widget_layered_nav_filters ul');
 
-            $this.find('.wc-layered-nav-term > a, .chosen > a, .wc-layered-nav-rating > a, .ef5-filter').live('click touch',function(){
+            $this.find('.wc-layered-nav-term > a, .chosen > a, .wc-layered-nav-rating > a, .product-categories > li > a, .ef5-filter').live('click touch',function(){
                 'use strict';
                 $this.fadeTo('slow',0.3).addClass($loading_class);
                 $this.addClass($loading_class);
