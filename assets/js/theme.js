@@ -1042,17 +1042,13 @@
                         },100);
 
                     });
-                    /*$grid.imagesLoaded( function() {
-                        $grid.append($item).isotope('appended', $item); 
-                        $grid.isotope('reloadItems');
-                    });*/
-
-                    /*var _link_lm = $(data).find('.woocommerce-loadmore a').attr('href');
-                    if(_link_lm){
-                        $(document).find( '.woocommerce-loadmore a' ).attr('href',_link_lm);
+     
+                    var link_lm = $(data).find('.woocommerce-loadmore > a').attr('href');
+                    if(link_lm){
+                        $(document).find( '.woocommerce-loadmore > a' ).attr('href',link_lm);
                     }else{
                         $(document).find( '.woocommerce-loadmore' ).remove();
-                    }*/
+                    }
                 }
             });
         });
