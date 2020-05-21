@@ -33,6 +33,7 @@ function theclick_woocommerce_filter_bar(){
                 if($key == 'category'){
                     $filter_category_args = [
                         'title'           => esc_html__('Categories','theclick'),
+                        'show_count'      => 1,
                         'hierarchical'    => 0
                     ];
                     the_widget(
