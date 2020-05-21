@@ -654,7 +654,8 @@
         var min_price = $( '.price_slider_amount #min_price' ).data( 'min' ),
             max_price = $( '.price_slider_amount #max_price' ).data( 'max' ),
             current_min_price = $( '.price_slider_amount #min_price' ).val(),
-            current_max_price = $( '.price_slider_amount #max_price' ).val(); alert('abcd');
+            current_max_price = $( '.price_slider_amount #max_price' ).val(); 
+            console.log(typeof $.slider);
         if(typeof $.slider != 'undefined'){ 
             $( '.price_slider:not(.ui-slider)' ).slider({
                 range: true,
