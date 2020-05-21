@@ -655,8 +655,7 @@
             max_price = $( '.price_slider_amount #max_price' ).data( 'max' ),
             current_min_price = $( '.price_slider_amount #min_price' ).val(),
             current_max_price = $( '.price_slider_amount #max_price' ).val(); 
-            //console.log(typeof $.slider);
-        //if(typeof $.slider != 'undefined'){ 
+        if($.fn.slider){ 
             $( '.price_slider:not(.ui-slider)' ).slider({
                 range: true,
                 animate: true,
@@ -682,7 +681,7 @@
                     $( document.body ).trigger( 'price_slider_change', [ ui.values[0], ui.values[1] ] );
                 }
             });
-        //}
+        }
     }
     /* 
      * Woocomere filter modify
