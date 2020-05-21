@@ -138,7 +138,7 @@ function theclick_get_sidebar($check = true){
         return $sidebar;
 }
 function theclick_sidebar_position(){   
-    if( (is_archive() || is_post_type_archive('post') || is_home() || is_search()) && (!is_product_category() && !is_product_tag())){ 
+    if( (is_archive() || is_post_type_archive('post') || is_home() || is_search()) && (!is_post_type_archive('product') && !is_product_category() && !is_product_tag())){ 
         $sidebar_position = theclick_get_opts('archive_sidebar_pos', theclick_archive_sidebar_position()); 
     } elseif(is_post_type_archive('portfolio')){
         $sidebar_position = theclick_get_opts('portfolio_archive_sidebar_pos', theclick_archive_sidebar_position());
