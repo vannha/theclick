@@ -604,6 +604,7 @@
                             });
                         },100);
                     });
+                    theclick_init_price_filter();
                 });
                 return false;
             });
