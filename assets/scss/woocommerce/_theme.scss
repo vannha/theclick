@@ -7,9 +7,7 @@
 }
 
 .woocommerce-loadmore{
-	padding-top: 40px;
 	margin-top: 35px;
-	border-top: 1px solid $MainBorderColor;
 	@include d-flex();
 	justify-content: center;
 	a{
