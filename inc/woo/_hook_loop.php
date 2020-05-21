@@ -139,7 +139,25 @@ if ( ! function_exists( 'woocommerce_pagination' ) ) {
 		}
 		 
 		if($pagin_type == 'more-btn'){
-			echo '<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>';
+			$args = array(
+	            'total'   => wc_get_loop_prop( 'total_pages' ),
+	            'current' => wc_get_loop_prop( 'current_page' ),
+	            'base'    => esc_url_raw( add_query_arg( 'product-page', '%#%', false ) ),
+	            'format'  => '?product-page=%#%',
+	        );
+	        if ( ! wc_get_loop_prop( 'is_shortcode' ) ) {
+	            $args['format'] = '';
+	            $args['base']   = esc_url_raw( str_replace( 999999999, $args['base'], remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
+	        }
+
+	        $loadmore_url = esc_url_raw( str_replace( 999999999, $args['current']+1, remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
+	        
+	        if($args['total'] >= $args['current']+1){
+	            echo '<div class="woocommerce-loadmore text-center">';
+	            echo '<a href="'. esc_url( $loadmore_url).'" class="btn loadmore-btn load-on-click">'.esc_html__( 'Load More','bixbang' ).'</a>';
+	            echo '</div>';
+	        }
+			//echo '<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>';
 		}elseif($pagin_type == 'infinite'){
 			echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
                 next_posts_link( esc_html__( 'Load More','theclick' ) ); 
