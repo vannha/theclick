@@ -55,7 +55,7 @@ class TheClick_Woo_Filter_Type_Widget extends WP_Widget
             'recent_review'    => esc_html__( 'New Review', 'theclick' ),      
             'deals'            => esc_html__( 'Product Deals', 'theclick' )   
         );
-        
+        $base_link          = theclick_get_current_page_url();
         $filter_request = !empty($_GET['filter_type']) ? $_GET['filter_type'] : 'all';
         echo '<ul class="woo-filter-type">';
         foreach($filter_type as $key => $ft): 
@@ -66,7 +66,7 @@ class TheClick_Woo_Filter_Type_Widget extends WP_Widget
             if(function_exists('is_shop') && is_shop()){
                 $link  = home_url( '/' ).'?post_type=product&filter_type='.$key;
             }else{
-                $link  = add_query_arg( 'filter_type',$key, get_page_link(false) );
+                $link  = add_query_arg( 'filter_type',$key, $base_link );
             }
 
             echo '<li><a href="'.esc_url($link).'" class="filter-link filter-link-'.$key.' '.$active_cls.'">'.$ft.'</a></li>';
