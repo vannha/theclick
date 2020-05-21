@@ -29,7 +29,9 @@
 		@include animation('spin 1s infinite linear')
 	}
 }
-
+.woocommerce .ef5-loading:after{
+	top: 25%;
+} 
 .empty-none:empty{
 	display: none;
 }
