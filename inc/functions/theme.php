@@ -137,7 +137,7 @@ function theclick_get_sidebar($check = true){
     else 
         return $sidebar;
 }
-function theclick_sidebar_position(){ var_dump(is_archive());
+function theclick_sidebar_position(){  
     if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && (!is_product_category() || !is_product_tag())){ 
         $sidebar_position = theclick_get_opts('archive_sidebar_pos', theclick_archive_sidebar_position()); 
     } elseif(is_post_type_archive('portfolio')){
@@ -172,7 +172,7 @@ function theclick_content_css_class($class=''){
     $sidebar            = theclick_get_sidebar();
     $sidebar_position   = theclick_sidebar_position();
     $content_grid_class = theclick_archive_grid_col();
-    
+    var_dump($content_grid_class);
     if( $sidebar_position === 'bottom' ){
         $classes[] = 'col-12 has-gtb';
     } else {
