@@ -151,8 +151,8 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
                 $opts[$tax->attribute_name] = $tax->attribute_label;
             }
         }
-        $opts['rating'] = esc_html__( 'Rating', 'theclick' );
         $opts['price']  = esc_html__( 'Price', 'theclick' );
+        $opts['rating'] = esc_html__( 'Rating', 'theclick' );
         return $opts;
     }
 }
