@@ -154,7 +154,8 @@ function theclick_sidebar_position(){
         $sidebar_position = theclick_get_opts('portfolio_sidebar_pos',theclick_portfolio_sidebar_position());
     } elseif (class_exists('WooCommerce') && is_post_type_archive('product')) {
         $sidebar_position = theclick_get_opts('shop_sidebar_pos',theclick_shop_sidebar_position());
-        var_dump($sidebar_position);
+    } elseif(is_product_category() || is_product_tag()){
+        $sidebar_position = theclick_get_opts('shop_sidebar_pos',theclick_shop_sidebar_position());
     } elseif (is_singular('product')) {
         $sidebar_position = theclick_get_opts('product_sidebar_pos',theclick_product_sidebar_position());
     } elseif (class_exists('Tribe__Events__Main') && is_post_type_archive('tribe_events')) {
