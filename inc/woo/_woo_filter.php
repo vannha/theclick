@@ -46,21 +46,6 @@ function theclick_woocommerce_filter_bar(){
                         ) 
                     );
                 }
-                if($key == 'type'){
-                    $filter_type_args = [
-                        'title'           => esc_html__('Type','theclick'),
-                    ];
-                    the_widget(
-                        'TheClick_Woo_Filter_Type_Widget',
-                        $filter_type_args,
-                        array(
-                            'before_widget' => '<div class="widget widget_woo_filter_type_filter col">',
-                            'after_widget'  => '</div>',
-                            'before_title'  => '<h3 class="ef5-heading widgettitle">',
-                            'after_title'   => '</h3>',
-                        ) 
-                    );
-                }
                 if (!empty($attribute_array)) {
                     foreach ($attribute_array as $tax_key => $tax_value) {
                         if ($tax_key == $key) {
