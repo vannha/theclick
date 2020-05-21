@@ -604,7 +604,6 @@
                             });
                         },100);
                     });
-                    theclick_init_price_filter();
                 });
                 return false;
             });
@@ -656,7 +655,7 @@
             max_price = $( '.price_slider_amount #max_price' ).data( 'max' ),
             current_min_price = $( '.price_slider_amount #min_price' ).val(),
             current_max_price = $( '.price_slider_amount #max_price' ).val();
-        if(typeof $.slider != 'undefined'){
+        if(typeof $.slider != 'undefined'){ alert('abcd');
             $( '.price_slider:not(.ui-slider)' ).slider({
                 range: true,
                 animate: true,
