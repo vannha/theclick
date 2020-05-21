@@ -374,6 +374,9 @@ function theclick_scripts()
     if(class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_singular('product') ) ){
         wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
         wp_enqueue_style('slick-css',get_template_directory_uri().'/assets/css/slick.css');
+        $pagin_type = (isset($_GET['pagin_type']) && !empty($_GET['pagin_type'])) ? $_GET['pagin_type'] : theclick_get_theme_opt('shop_pagination','default');
+        if($pagin_type == 'infinite')
+        wp_enqueue_script('infinite-scroll',get_template_directory_uri().'/assets/js/infinite-scroll.pkgd.min.js',array('jquery'),'3.0.5',true);
     }
 
     // Scripts
