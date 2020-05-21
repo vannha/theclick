@@ -390,17 +390,7 @@ function load_JQuislider(){
  wp_enqueue_script('jquery-ui-core');
  wp_enqueue_script('jquery-ui-slider');
 
-//Enqueue the jQuery UI theme css file from google:
- $wp_scripts = wp_scripts();
- 
- wp_enqueue_style(
- 'jquery-ui-theme-smoothness', //select ui theme: base...
- sprintf(
- 'https://ajax.googleapis.com/ajax/libs/jqueryui/%s/themes/smoothness/jquery-ui.css',
- $wp_scripts->registered['jquery-ui-core']->ver
- )
- );
- 
+
 }
 add_action('wp_enqueue_scripts', 'load_JQuislider');
 
