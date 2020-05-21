@@ -29,6 +29,7 @@
         theclick_infinite_page();
         theclick_woo_filter_sidebar();
         theclick_woo_filter_type();
+        theclick_woo_loadmore();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -1014,6 +1015,47 @@
             });
             $('html,body').animate({scrollTop: $('.ef5-posts').offset().top - 100}, 750);
         }); 
+    }
+    function theclick_woo_loadmore(){
+        $(document).on('click', '.woocommerce-loadmore > a', function (e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $(this).addClass('loading');
+            var $grid = $(document).find( '.products' );
+            $.get(url, function (data) {
+                if(data){
+                    $('.ef5-wc-loop-img').slick('unslick');
+                    $(document).find( '.woocommerce-loadmore > a' ).removeClass('loading');
+                    var $items = $(data).find('.products');
+                    var $item  =  $($items).find('.product')
+                    $grid.append($item);
+                    $grid.imagesLoaded( function() {
+                        setTimeout(function(){
+                            $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                                vertical: false,
+                                slidesToShow: 1,
+                                focusOnSelect: true,
+                                prevArrow:"<button class='slick-prev'><span></span></button>",
+                                nextArrow:"<button class='slick-next'><span></span></button>",
+                                infinite: true,
+                            });
+                        },100);
+
+                    });
+                    /*$grid.imagesLoaded( function() {
+                        $grid.append($item).isotope('appended', $item); 
+                        $grid.isotope('reloadItems');
+                    });*/
+
+                    /*var _link_lm = $(data).find('.woocommerce-loadmore a').attr('href');
+                    if(_link_lm){
+                        $(document).find( '.woocommerce-loadmore a' ).attr('href',_link_lm);
+                    }else{
+                        $(document).find( '.woocommerce-loadmore' ).remove();
+                    }*/
+                }
+            });
+        });
     }
     function theclick_ajax_pagination(){
         'use strict';
