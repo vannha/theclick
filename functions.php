@@ -374,9 +374,8 @@ function theclick_scripts()
     if(class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_singular('product') ) ){
         wp_enqueue_script('slick-js',get_template_directory_uri().'/assets/js/slick.min.js',array('jquery'),'',true);
         wp_enqueue_style('slick-css',get_template_directory_uri().'/assets/css/slick.css');
-        //'wp-includes/js/jquery/ui/jquery.ui.slider.min.js',
-        
-        //wp_enqueue_style('jquery-ui');
+        wp_enqueue_script('jquery-ui-core');
+        wp_enqueue_script('jquery-ui-slider'); 
     }
 
     // Scripts
@@ -384,22 +383,9 @@ function theclick_scripts()
     wp_localize_script( 'theclick', 'theclick_ajax_opts', $theclick_ajax_opts);
 }
 
-function load_JQuislider(){
-
- wp_enqueue_script('jquery');
- wp_enqueue_script('jquery-ui-core');
- wp_enqueue_script('jquery-ui-slider');
-
-
-}
-add_action('wp_enqueue_scripts', 'load_JQuislider');
 
 add_action('wp_enqueue_scripts', 'theclick_styles', 0);
-function theclick_styles()
-{
-    wp_enqueue_script('jquery-ui-core');
-    wp_enqueue_script('jquery-ui-slider');
-
+function theclick_styles(){
     $min = theclick_script_debug();
     // Theme Style
     wp_enqueue_style('theclick', get_template_directory_uri() . '/assets/css/theme'.$min.'.css', array(), wp_get_theme()->get( 'Version' ) );
