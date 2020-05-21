@@ -17,7 +17,7 @@ get_header();
                     <?php woocommerce_content(); ?>
                 </div>
             </div>
-            <?php theclick_sidebar(); ?>
+            <?php //theclick_sidebar(); ?>
         </div>
     </div>
 <?php
