@@ -138,7 +138,7 @@ function theclick_get_sidebar($check = true){
         return $sidebar;
 }
 function theclick_sidebar_position(){
-    if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && !is_post_type_archive('product')){
+    if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && !is_post_type_archive('product')){ die('aaa');
         $sidebar_position = theclick_get_opts('archive_sidebar_pos', theclick_archive_sidebar_position());
     } elseif(is_post_type_archive('portfolio')){
         $sidebar_position = theclick_get_opts('portfolio_archive_sidebar_pos', theclick_archive_sidebar_position());
@@ -196,7 +196,7 @@ function theclick_content_css_class($class=''){
 function theclick_sidebar(){
     $sidebar            = theclick_get_sidebar(false);
     $sidebar_position   = theclick_sidebar_position();
-    var_dump($sidebar_position);
+
     if($sidebar_position === 'none' || $sidebar_position === 'center') return;
     if( is_active_sidebar( $sidebar ) ) {
     ?>
