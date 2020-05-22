@@ -71,6 +71,7 @@
             $( this ).closest( 'form' ).submit();
         });
         theclick_woo_filters_toggle();
+        theclick_toggle_menu();
         theclick_video_size();
         theclick_popup();
         theclick_init_price_filter();
