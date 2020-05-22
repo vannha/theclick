@@ -543,6 +543,7 @@
         _inline_css += '</style>';
         $('head').append(_inline_css);
     }
+    
     // Unbreak Ajax Pagination
     function theclick_ajax_pagination(){
         'use strict';
