@@ -775,7 +775,7 @@
     // WooCommerce Loop Product Gallery 
     function theclick_woo_loop_thumb_gallery(){
         'use strict';
-        setTimeout(function(){
+        //setTimeout(function(){
             $('.ef5-wc-loop-img').slick({
                 vertical: false,
                 slidesToShow: 1,
@@ -784,14 +784,14 @@
                 nextArrow:"<button class='slick-next'><span></span></button>",
                 infinite: true,
             });
-        },100);
+        //},100);
     }
 
     // WooCommerce reniew slick slide
     function theclick_woo_renew_slick($grid){
         'use strict';
         $grid.imagesLoaded( function() {
-            setTimeout(function(){
+            //setTimeout(function(){
                 $('.ef5-wc-loop-img').not('.slick-initialized').slick({
                     vertical: false,
                     slidesToShow: 1,
@@ -800,7 +800,7 @@
                     nextArrow:"<button class='slick-next'><span></span></button>",
                     infinite: true,
                 });
-            },100);
+            //},100);
         });
     }
     // WooCommerce Single Product Gallery 
@@ -1056,7 +1056,7 @@
                     $grid.append($item);
                     
                     theclick_woo_renew_slick($grid)
-                    
+
                     var link_lm = $(data).find('.woocommerce-loadmore > a').attr('href');
                     if(link_lm){
                         $(document).find( '.woocommerce-loadmore > a' ).attr('href',link_lm);
