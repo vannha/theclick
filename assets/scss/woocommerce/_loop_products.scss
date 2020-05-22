@@ -120,6 +120,18 @@
 			background-size: contain;
 		}
 	}
+	.slick-slide.slick-active{
+		position: relative;
+		&:after{
+			content: "";
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    width: 10px;
+		    background: #fff;
+		    left: 100%;
+		}
+	}
 }
 .wc-loop-content-wrap{
 	padding: 20px 25px;
