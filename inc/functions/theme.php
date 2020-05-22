@@ -220,7 +220,8 @@ function theclick_sidebar_css_class($class=''){
     if( $sidebar_position === 'bottom' ){
         $classes[] = 'col-12 has-gtb';
     } else { 
-        $classes[] = $class;
+        if(class_exists('WooCommerce') && !is_post_type_archive('product') && !is_product_category() && !is_product_tag())
+            $classes[] = $class;
         $archive_grid_col = theclick_archive_grid_col();
         $has_dash = explode('/',$archive_grid_col);
         if(count($has_dash)<=1){
