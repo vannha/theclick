@@ -98,6 +98,13 @@
 	}
 	.widget li{
 		border-bottom: 0;
+		&.cat-parent{
+			>a{
+			    display: flex;
+			    flex-wrap: wrap;
+			    width: 100%;
+			}
+		}
 		> a{
 		    display: inline-block;
 		    flex-wrap: inherit;
