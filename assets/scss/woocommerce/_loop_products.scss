@@ -92,6 +92,38 @@
 			}
 		}
 	}
+	@media (min-width: $screen-xl-min){
+		&.columns-2{
+			> .product{
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+		}
+		&.columns-3{
+			> .product{
+				flex: 0 0 33.3333333333%;
+    			max-width: 33.3333333333%;
+			}
+		}
+		&.columns-4{
+			> .product{
+				flex: 0 0 25%;
+				max-width: 25%;
+			}
+		}
+		&.columns-5{
+			> .product{
+				flex: 0 0 20%;
+				max-width: 20%;
+			}
+		}
+		&.columns-6{
+			> .product{
+				flex: 0 0 16.6666667%;
+				max-width: 16.6666667%;
+			}
+		}
+	}
 }
 
 .ef5-loop-products-inner{
