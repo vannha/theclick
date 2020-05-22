@@ -162,7 +162,7 @@ if ( ! function_exists( 'woocommerce_pagination' ) ) {
             echo '</div>';
 			//echo '<div class="loadmore text-center"><div class="cms_pagination grid-loadmore"></div></div>';
 		}elseif($pagin_type == 'infinite'){
-			echo '<div class="woocommerce-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
+			echo '<div class="woocommerce-infinite woo-infinite d-flex justify-content-center text-center infinite-btn load-on-infinite">';
                 next_posts_link( esc_html__( 'Load More','theclick' ) ); 
             echo '</div>';
 		}else{  

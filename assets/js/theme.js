@@ -875,7 +875,7 @@
          */
     }
     function theclick_infinite_page(){
-        if ( $(document).find( '.infinite-btn' ).length ) {
+        if ( $(document).find( '.ef5-product-grid.grid-filter .infinite-btn' ).length ) {
             var $grid = $(document).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap');
             $grid.infiniteScroll({
                 path: '.infinite-btn > a',
@@ -887,6 +887,39 @@
                 $('.ef5-wc-loop-img').slick('unslick');
                  
                 var $items = $(response).find('.ef5-product-grid.grid-filter .ef5-product-grid-wrap .ef5-grid-item-wrap');
+
+                $grid.append($items);
+            
+                $grid.imagesLoaded( function() {
+                    //setTimeout(function(){
+                        $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                            vertical: false,
+                            slidesToShow: 1,
+                            focusOnSelect: true,
+                            prevArrow:"<button class='slick-prev'><span></span></button>",
+                            nextArrow:"<button class='slick-next'><span></span></button>",
+                            infinite: true,
+                        });
+                    //},100);
+
+                });
+                    
+            });
+        }
+    }
+    function theclick_infinite_woo(){
+        if ( $(document).find( '.woo-infinite.infinite-btn' ).length ) {
+            var $grid = $(document).find('.woocommerce .products');
+            $grid.infiniteScroll({
+                path: '.woo-infinite.infinite-btn > a',
+                status: '.woo-infinite.infinite-btn > a',
+                history: false,
+            });
+
+            $grid.on( 'load.infiniteScroll', function( event, response, path ) {
+                $('.ef5-wc-loop-img').slick('unslick');
+                 
+                var $items = $(response).find('.products > .product');
 
                 $grid.append($items);
             
