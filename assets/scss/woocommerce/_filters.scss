@@ -97,12 +97,13 @@
 		}
 	}
 	.widget li{
-		border-bottom: 0;
+		border: 0;
 		&.cat-parent{
 			>a{
 			    display: flex;
 			    flex-wrap: wrap;
 			    width: 100%;
+			    align-items: center;
 			}
 		}
 		> a{
@@ -114,9 +115,7 @@
 		    padding: 8px 0;
 		}
 	}
-	.widget li ul li{
-		border-bottom: 0;
-	}
+
 	.widget_rating_filter ul li::after, 
 	.widget_rating_filter ul li::before {
 	    content: none;
