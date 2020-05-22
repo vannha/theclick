@@ -187,6 +187,7 @@
 		'use strict';
 		$('.ef5-toggle').on('click', function(e){  
             e.preventDefault();
+            e.stopPropagation();
 			$(this).find('.ef5-toggle-inner').toggleClass('active');
             $(this).prev().find('.ef5-toggle-inner').toggleClass('active');
 			$(this).parent().parent().toggleClass('clicked');
@@ -557,7 +558,6 @@
 
             $this.find('.wc-layered-nav-term > a, .chosen > a, .wc-layered-nav-rating > a, .product-categories > li > a, .woo-filter-type > li > a, .ef5-filter').live('click touch',function(e){
                 e.preventDefault();
-                e.stopPropagation();
                 $this.fadeTo('slow',0.3).addClass($loading_class);
                 $this.addClass($loading_class);
                 var $link = $(this).attr('href');
