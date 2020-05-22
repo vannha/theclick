@@ -89,18 +89,7 @@
     	padding-right: 60px;
     }
 }
-.has-sidebar{
-	.ef5-woo-filters-wrap{
-		left: 15px;
-    	right: 15px;
-    	padding-left: 0;
-    	padding-right: 0;
-		@media (min-width: 1430px){
-			left: 25px;
-	    	right: 25px;
-	    }
-	}
-}
+
 .ef5-woo-filters{
 	@media (min-width: 1600px){
 	    margin-left: -25px;
@@ -166,3 +155,25 @@
 	 
 }
  
+.has-sidebar{
+	.ef5-woo-filters-wrap{
+		left: 15px;
+    	right: 15px;
+    	padding-left: 0;
+    	padding-right: 0;
+		@media (min-width: 1430px){
+			left: 25px;
+	    	right: 25px;
+	    }
+	}
+	.ef5-woo-filters{
+		@media (min-width: 1600px){
+		    margin-left: -15px;
+		    margin-right: -15px;
+		    >div{
+		    	padding-left: 15px;
+		    	padding-right: 15px;
+		    }
+		}
+	}
+}
