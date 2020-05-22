@@ -56,6 +56,12 @@
 		}
 	}
 	@media (min-width: $screen-xl-min){
+		&.columns-4{
+			> .product{
+				flex: 0 0 20%;
+				max-width: 20%;
+			}
+		}
 		&.columns-5{
 			> .product{
 				flex: 0 0 20%;
