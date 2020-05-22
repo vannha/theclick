@@ -131,9 +131,24 @@
 .woocommerce-input-wrapper{
 	display: block;
 }
-.woocommerce .ef5-content-area{
+.woocommerce .ef5-main{
 	@media (min-width: 1430px){
     	padding-left: 60px;
     	padding-right: 60px;
     }
+	.no-container .row{
+		@media (min-width: 1430px){
+	    	margin-left: -60px;
+	    	margin-right: -60px;
+	    }
+	    >div{
+	    	@media (min-width: 1430px){
+		    	padding-left: 60px;
+		    	padding-right: 60px;
+		    }
+	    }
+	}
+} 
+.woocommerce .ef5-content-area{
+	
 }
