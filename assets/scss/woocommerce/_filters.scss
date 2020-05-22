@@ -102,6 +102,14 @@
 	}
 }
 .ef5-woo-filters{
+	@media (min-width: 1600px){
+	    margin-left: -25px;
+	    margin-right: -25px;
+	    >div{
+	    	padding-left: 25px;
+	    	padding-right: 25px;
+	    }
+	}
 	.widget_price_filter{
 		.widgettitle{
 			margin-bottom: 45px;
