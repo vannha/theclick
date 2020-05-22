@@ -79,7 +79,20 @@
 		justify-content: center;
 	}
 }
-
+.has-sidebar .products{
+	@media (min-width: $screen-lg-min){
+		&.columns-2,
+		&.columns-4,
+		&.columns-3,
+		&.columns-5,
+		&.columns-6{
+			> .product{
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+		}
+	}
+}
 
 .ef5-loop-products-inner{
 	overflow: hidden;
