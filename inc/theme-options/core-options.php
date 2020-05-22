@@ -1293,6 +1293,12 @@ if(!function_exists('theclick_woocommerce_theme_opts')){
                     ),
                 ),
                 array(
+                    'title'     => esc_html__('Filter Category Show hierarchy', 'theclick'),
+                    'id'        => 'cat_show_hierarchy',
+                    'type'      => 'switch',
+                    'default'   => false
+                ),
+                array(
                     'id'       => 'shop_pagination',
                     'type'     => 'button_set',
                     'title'    => esc_html__( 'Pagination Type', 'theclick' ),
