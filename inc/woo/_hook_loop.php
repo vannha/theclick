@@ -147,7 +147,7 @@ if ( ! function_exists( 'woocommerce_pagination' ) ) {
                 next_posts_link( esc_html__( 'Load More','theclick' ) ); 
             echo '</div>';
 		}else{  
-			echo '<div class="ef5-loop-pagination"><div class="nav-links">';
+			echo '<div class="ef5-loop-pagination woo-pagin"><div class="nav-links">';
 				echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
 					'base'         => $base,
 					'format'       => $format,
