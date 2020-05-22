@@ -252,6 +252,12 @@ function theclick_gutters(){
 			'desc'  => '',
 			'key'   => '50',
 			'value' => '50px'
+		],
+		'xl-50' => [
+			'title' => 'TheClick Gutter XL 50', 
+			'desc'  => '',
+			'key'   => '50',
+			'value' => '50px'
 		]
 		
 	];
