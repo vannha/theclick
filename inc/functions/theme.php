@@ -167,6 +167,8 @@ function theclick_sidebar_position(){
 function theclick_content_css_class($class=''){
     $classes = [
         'ef5-content-area',
+        'col-12',
+        'col-lg-8',
         $class
     ];
     $sidebar            = theclick_get_sidebar();
@@ -176,7 +178,7 @@ function theclick_content_css_class($class=''){
         $classes[] = 'col-12 has-gtb';
     } else {
         if($sidebar && ('none' !== $sidebar_position || 'center' == $sidebar_position)){
-            $classes[] = 'col-lg-'.$content_grid_class;
+            $classes[] = 'col-xl-'.$content_grid_class;
             if($sidebar_position == 'left') $classes[] = 'order-lg-1';
             if($sidebar_position == 'center') $classes[] = 'offset-lg-2';
         } else {
@@ -197,7 +199,7 @@ function theclick_sidebar(){
     if($sidebar_position === 'none' || $sidebar_position === 'center') return;
     if( is_active_sidebar( $sidebar ) ) {
     ?>
-        <div id="ef5-sidebar-area" class="<?php theclick_sidebar_css_class('col-lg-29/509'); ?>">
+        <div id="ef5-sidebar-area" class="<?php theclick_sidebar_css_class('col-xl-29/509'); ?>">
             <div class="sidebar-inner">
                 <?php get_sidebar(); ?>
             </div>
@@ -210,7 +212,8 @@ function theclick_sidebar(){
 */
 function theclick_sidebar_css_class($class=''){
     $classes = [
-        'ef5-sidebar-area'
+        'ef5-sidebar-area',
+        'col-12 col-lg-4'
     ];
     if(!is_singular() || is_single() || !is_page_template()) $classes[] = 'ef5-blogs';
     $sidebar_position   = theclick_sidebar_position();
@@ -223,7 +226,7 @@ function theclick_sidebar_css_class($class=''){
         if(count($has_dash)<=1){
             $content_grid_class = (int)theclick_archive_grid_col();
             $sidebar_grid_class = 12 - $content_grid_class;
-            $classes[] = 'col-lg-'.$sidebar_grid_class; 
+            $classes[] = 'col-xl-'.$sidebar_grid_class; 
         }
     }
 
