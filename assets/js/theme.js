@@ -1059,7 +1059,6 @@
                 var $link = $(this).attr('href');
                 var $grid = $(document).find( '.products' );
                 jQuery.get($link,function(data){
-                    console.log($(data).find('#'+$id).find('.ef5-loop-pagination').html());
                     $this.html($(data).find('#'+$id).html());
                     $this.fadeTo('slow',1).removeClass($loading_class);
                     $this.removeClass($loading_class);
