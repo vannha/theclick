@@ -210,22 +210,27 @@ function theclick_sidebar(){
 */
 function theclick_sidebar_css_class($class=''){
     $classes = [
-        'ef5-sidebar-area',
-        'col-12 col-lg-4'
+        'ef5-sidebar-area'
     ];
+
     if(!is_singular() || is_single() || !is_page_template()) $classes[] = 'ef5-blogs';
+    $sidebar            = theclick_get_sidebar();
     $sidebar_position   = theclick_sidebar_position();
     if( $sidebar_position === 'bottom' ){
         $classes[] = 'col-12 has-gtb';
     } else { 
         if(class_exists('WooCommerce') && !is_post_type_archive('product') && !is_product_category() && !is_product_tag())
             $classes[] = $class;
-        $archive_grid_col = theclick_archive_grid_col();
-        $has_dash = explode('/',$archive_grid_col);
-        if(count($has_dash)<=1){
-            $content_grid_class = (int)theclick_archive_grid_col();
-            $sidebar_grid_class = 12 - $content_grid_class;
-            $classes[] = 'col-xl-'.$sidebar_grid_class; 
+        
+        if($sidebar && ('none' !== $sidebar_position || 'center' == $sidebar_position)){
+            $classes[] = 'col-12 col-lg-4';
+            $archive_grid_col = theclick_archive_grid_col();
+            $has_dash = explode('/',$archive_grid_col);
+            if(count($has_dash)<=1){
+                $content_grid_class = (int)theclick_archive_grid_col();
+                $sidebar_grid_class = 12 - $content_grid_class;
+                $classes[] = 'col-xl-'.$sidebar_grid_class; 
+            }
         }
     }
 
