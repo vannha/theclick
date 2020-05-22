@@ -30,6 +30,7 @@
         theclick_woo_filter_sidebar();
         theclick_woo_filter_type();
         theclick_woo_loadmore();
+        theclick_infinite_woo();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
