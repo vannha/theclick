@@ -291,14 +291,14 @@ if(!function_exists('theclick_loop_pagination')){
         printf('%s','<div class="ef5-loop-pagination layout-type-'.esc_attr($args['style']).'">');
         switch ($args['style']) {
             case '3':
-                global $paged;
+                /*global $paged;
                 if (get_query_var('paged')) {
                     $paged = get_query_var('paged');
                 } elseif (get_query_var('page')) {
                     $paged = get_query_var('page');
                 } else {
                     $paged = 1;
-                }
+                }*/
                 echo '<div class="d-flex justify-content-between">';
                 posts_nav_link(
                     apply_filters('theclick_loop_pagination_sep_text', '<span class="d-none"></span>'),

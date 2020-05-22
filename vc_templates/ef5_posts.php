@@ -6,6 +6,7 @@ $el_id = !empty($el_id) ? 'ef5-posts-' . $el_id : uniqid('ef5-posts-');
 
 /* Post query */
 $tax_query = theclick_tax_query($post_type, $taxonomies, $taxonomies_exclude);
+global $paged, $wp_query;
 if (get_query_var('paged')) {
 	$paged = get_query_var('paged');
 } elseif (get_query_var('page')) {
@@ -20,7 +21,7 @@ $posts_args = array(
 	'tax_query' => $tax_query,
 	'paged' => $paged,
 );
-global $wp_query;
+//global $wp_query;
 $posts = $wp_query = new WP_Query($posts_args);
 // Grid columns css class
 $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation($css_animation), 'col-' . $col_sm, 'col-md-' . $col_md, 'col-lg-' . $col_lg, 'col-xl-' . $col_xl];
