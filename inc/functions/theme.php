@@ -167,8 +167,6 @@ function theclick_sidebar_position(){
 function theclick_content_css_class($class=''){
     $classes = [
         'ef5-content-area',
-        'col-12',
-        'col-lg-8',
         $class
     ];
     $sidebar            = theclick_get_sidebar();
@@ -178,7 +176,7 @@ function theclick_content_css_class($class=''){
         $classes[] = 'col-12 has-gtb';
     } else {
         if($sidebar && ('none' !== $sidebar_position || 'center' == $sidebar_position)){
-            $classes[] = 'col-xl-'.$content_grid_class;
+            $classes[] = 'col-12 col-lg-8 col-xl-'.$content_grid_class;
             if($sidebar_position == 'left') $classes[] = 'order-lg-1';
             if($sidebar_position == 'center') $classes[] = 'offset-lg-2';
         } else {
