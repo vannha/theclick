@@ -785,8 +785,23 @@
                 infinite: true,
             });
         },100);
-        
-         
+    }
+
+    // WooCommerce reniew slick slide
+    function theclick_woo_renew_slick($grid){
+        'use strict';
+        $grid.imagesLoaded( function() {
+            setTimeout(function(){
+                $('.ef5-wc-loop-img').not('.slick-initialized').slick({
+                    vertical: false,
+                    slidesToShow: 1,
+                    focusOnSelect: true,
+                    prevArrow:"<button class='slick-prev'><span></span></button>",
+                    nextArrow:"<button class='slick-next'><span></span></button>",
+                    infinite: true,
+                });
+            },100);
+        });
     }
     // WooCommerce Single Product Gallery 
     function theclick_wc_single_product_gallery(){
@@ -891,19 +906,7 @@
 
                 $grid.append($items);
             
-                $grid.imagesLoaded( function() {
-                    //setTimeout(function(){
-                        $('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                            vertical: false,
-                            slidesToShow: 1,
-                            focusOnSelect: true,
-                            prevArrow:"<button class='slick-prev'><span></span></button>",
-                            nextArrow:"<button class='slick-next'><span></span></button>",
-                            infinite: true,
-                        });
-                    //},100);
-
-                });
+                theclick_woo_renew_slick($grid)
                     
             });
         }
@@ -924,19 +927,7 @@
 
                 $grid.append($items);
             
-                $grid.imagesLoaded( function() {
-                    //setTimeout(function(){
-                        $('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                            vertical: false,
-                            slidesToShow: 1,
-                            focusOnSelect: true,
-                            prevArrow:"<button class='slick-prev'><span></span></button>",
-                            nextArrow:"<button class='slick-next'><span></span></button>",
-                            infinite: true,
-                        });
-                    //},100);
-
-                });
+                theclick_woo_renew_slick($grid)
                     
             });
         }
@@ -1063,20 +1054,9 @@
                     var $items = $(data).find('.products');
                     var $item  =  $($items).find('.product')
                     $grid.append($item);
-                    $grid.imagesLoaded( function() {
-                        setTimeout(function(){
-                            $('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                                vertical: false,
-                                slidesToShow: 1,
-                                focusOnSelect: true,
-                                prevArrow:"<button class='slick-prev'><span></span></button>",
-                                nextArrow:"<button class='slick-next'><span></span></button>",
-                                infinite: true,
-                            });
-                        },100);
-
-                    });
-     
+                    
+                    theclick_woo_renew_slick($grid)
+                    
                     var link_lm = $(data).find('.woocommerce-loadmore > a').attr('href');
                     if(link_lm){
                         $(document).find( '.woocommerce-loadmore > a' ).attr('href',link_lm);
@@ -1105,19 +1085,7 @@
                     $this.removeClass($loading_class);
                     $this.find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
                     if($this.find('.woo-pagin').length){
-                        $grid.imagesLoaded( function() {
-                            setTimeout(function(){
-                                $('.ef5-wc-loop-img').not('.slick-initialized').slick({
-                                    vertical: false,
-                                    slidesToShow: 1,
-                                    focusOnSelect: true,
-                                    prevArrow:"<button class='slick-prev'><span></span></button>",
-                                    nextArrow:"<button class='slick-next'><span></span></button>",
-                                    infinite: true,
-                                });
-                            },100);
-
-                        });
+                        theclick_woo_renew_slick($grid)
                     }
                 });
                 $('html,body').animate({scrollTop: $this.offset().top - 100}, 750);
