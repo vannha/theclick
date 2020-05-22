@@ -87,7 +87,13 @@ add_filter('theclick_archive_sidebar_position', function(){ return 'bottom';});
  * @return string 1 - 12
  * @example add_filter('theclick_archive_grid_col', function(){ return '8';});
 */
-add_filter('theclick_archive_grid_col', function(){ return '70/491';});
+add_filter('theclick_archive_grid_col', function(){ 
+	if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_product_category() || is_product_tag())){
+		return '9';
+	}else{
+		return '70/491';
+	}
+});
 
 /**
  * Default Archive Pagination
