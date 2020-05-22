@@ -543,7 +543,7 @@
         _inline_css += '</style>';
         $('head').append(_inline_css);
     }
-    
+
     // Unbreak Ajax Pagination
     function theclick_ajax_pagination(){
         'use strict';
@@ -557,7 +557,7 @@
                 $this.addClass($loading_class);
                 var $link = $(this).attr('href');
                 jQuery.get($link,function(data){
-                    console.log($(data).find('#'+$id).find('.ef5-loop-pagination').html());
+                    console.log(data);
                     $this.html($(data).find('#'+$id).html());
                     $this.fadeTo('slow',1).removeClass($loading_class);
                     $this.removeClass($loading_class);
