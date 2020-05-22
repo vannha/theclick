@@ -543,31 +543,7 @@
         _inline_css += '</style>';
         $('head').append(_inline_css);
     }
-
-    // Unbreak Ajax Pagination
-    function theclick_ajax_pagination(){
-        'use strict';
-        $('.ef5-posts').each(function(){
-            "use strict";
-            var $this = $(this),
-                $id = $(this).attr('id'),
-                $loading_class = 'ef5-loading';
-            $this.find('.ef5-loop-pagination a').live('click',function(){
-                $this.fadeTo('slow',0.3).addClass($loading_class);
-                $this.addClass($loading_class);
-                var $link = $(this).attr('href');
-                jQuery.get($link,function(data){
-                    console.log(data);
-                    $this.html($(data).find('#'+$id).html());
-                    $this.fadeTo('slow',1).removeClass($loading_class);
-                    $this.removeClass($loading_class);
-                    $this.find('.wpb_animate_when_almost_visible').addClass('wpb_start_animation animated');
-                });
-                $('html,body').animate({scrollTop: $this.offset().top - 100}, 750);
-                return false;
-            });
-        });
-    }
+ 
     // WooCommerce Filters 
     function theclick_woo_filters(){
         "use strict";
@@ -1069,6 +1045,7 @@
             });
         });
     }
+    
     function theclick_ajax_pagination(){
         'use strict';
         $('.ef5-posts').each(function(){
@@ -1082,6 +1059,7 @@
                 var $link = $(this).attr('href');
                 var $grid = $(document).find( '.products' );
                 jQuery.get($link,function(data){
+                    console.log($(data).find('#'+$id).find('.ef5-loop-pagination').html());
                     $this.html($(data).find('#'+$id).html());
                     $this.fadeTo('slow',1).removeClass($loading_class);
                     $this.removeClass($loading_class);
