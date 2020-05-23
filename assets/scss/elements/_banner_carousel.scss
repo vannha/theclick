@@ -1,7 +1,16 @@
 .ef5-banner-carousel-wrap{
-
+	overflow: hidden;
+	.ef5-img{
+		@include transition(transform 1s);
+	}
+	&:hover{
+		.ef5-img{
+			@include transform(scale(1.1));
+		}
+	}
 }
 .ef5-banner-carousel-1{
+
 	.title{
 		font-weight: 500;
 		font-size: 52px;
