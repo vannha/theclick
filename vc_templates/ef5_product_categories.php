@@ -15,15 +15,13 @@ if(!empty($taxonomies)){
 		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
-		
-	    $image = wp_get_attachment_url( $thumbnail_id ); 
+		 
 	    if(!empty($thumbnail_id)){
-	    	echo '<img src="'.$image.'"/>';
-    	 	/*theclick_image_by_size([
+    	 	theclick_image_by_size([
 	            'id'    => $thumbnail_id,
 	            'size'  => $img_size,
 	            'class' => 'cat-img'
-	        ]);*/
+	        ]);
 	    } 
 	    echo '</div>';
 	}
