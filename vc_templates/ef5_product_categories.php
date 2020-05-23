@@ -1,7 +1,7 @@
 <?php 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
-$img_size = !empty($image_size) ? $image_size : 'medium';
+$img_sizes = !empty($image_size) ? $image_size : 'medium';
 if(!empty($taxonomies)){
 	$taxonomies_arr = explode(',', $taxonomies);
 	echo '<div class="ef5-categorys-wrap">';
@@ -13,10 +13,11 @@ if(!empty($taxonomies)){
 		if($i==1){
 			$item_cls = 'col-12';
 			$img_size = '800x300';
-		} 
-		if($i==2 || $i==3){
-			$img_size = '800x500';
+		}if($i==2 || $i==3){
 			$item_cls = 'col-6';
+			$img_size = '800x500';
+		}else{
+			$img_size = $img_sizes;
 		} 
 		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
