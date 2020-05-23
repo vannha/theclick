@@ -4,10 +4,11 @@ extract( $atts );
  
 if(!empty($taxonomies)){
 	$taxonomies_arr = explode(',', $taxonomies);
+	$terms = get_terms(['slug' => $taxonomies_arr, 'taxonomy' => 'product_cat']);
 	
-	foreach ($taxonomies_arr as $tax) {
-		$cat_obj = get_term(['slug' => $tax, 'taxonomy' => 'product_cat']);
-		var_dump($cat_obj);
-	}
+	foreach ($terms as $cat) {
+		var_dump($cat);
+		
+    }  
 }
 ?>
