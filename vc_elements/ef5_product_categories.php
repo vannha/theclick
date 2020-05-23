@@ -21,7 +21,16 @@ vc_map(array(
 					'values'   =>  theclick_get_product_categories_for_autocomplete(),
 				),
 				'description' => esc_html__( 'Enter categories.', 'theclick' ),
-			),    
+			),
+			array(
+	            'type'          => 'textfield',
+	            'heading'       => esc_html__('Image size','theclick'),
+	            'description'   => esc_html__('Enter image size (Example: "thumbnail", "medium", "large", "post-thumbnail", "full". Alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
+	            'param_name'    => 'image_size',
+	            'value'         => '',
+	            'std'           => '',
+	            'group'      => esc_html__('Media', 'theclick')
+	        ),    
 	    )
 	)
 );
