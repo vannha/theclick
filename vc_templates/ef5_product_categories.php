@@ -11,7 +11,7 @@ if(!empty($taxonomies)){
 		$i++;
 		$item_cls = 'col-3';
 		if($i==1) $item_cls = 'col-12';
-		if($i==2) $item_cls = 'col-6';
+		if($i==2 || $i == 3) $item_cls = 'col-6';
 		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
