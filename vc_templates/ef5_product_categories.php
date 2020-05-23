@@ -28,6 +28,7 @@ if(!empty($taxonomies)){
 	    echo '</div>';
 	}
 	echo '</div>';
+	echo '</div>';
 	 
 	/*foreach ($terms as $cat) {
 		var_dump($cat);
