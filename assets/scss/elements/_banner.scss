@@ -188,6 +188,7 @@
 		font-size: 40px;
 		line-height: 1.15;
 		margin-bottom: 8px;
+		@include transform(translateY(0));
 		@media (max-width: 576px){
 			font-size: 30px;
 		}
@@ -226,6 +227,11 @@
 			bottom: -6px;
 			background-color: #fff;
 			@include transition(width 0.4s);
+		}
+	}
+	&:hover{
+		.main-title{
+			@include transform(translateY(10px));
 		}
 	}
 	&.small{
