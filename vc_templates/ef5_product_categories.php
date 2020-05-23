@@ -11,17 +11,19 @@ if(!empty($taxonomies)){
 		$i++;
 		$item_cls = 'col-4';
 		if($i==1) $item_cls = 'col-12';
-		if($i==2 || $i == 3) $item_cls = 'col-6';
+		if($i==2 || $i==3) $item_cls = 'col-6';
 		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
-		 
+		
+	    $image = wp_get_attachment_url( $thumbnail_id ); 
 	    if(!empty($thumbnail_id)){
-    	 	theclick_image_by_size([
+	    	echo '<img src="'.$image.'"/>';
+    	 	/*theclick_image_by_size([
 	            'id'    => $thumbnail_id,
 	            'size'  => $img_size,
 	            'class' => 'cat-img'
-	        ]);
+	        ]);*/
 	    } 
 	    echo '</div>';
 	}
