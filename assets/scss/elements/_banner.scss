@@ -5,6 +5,14 @@
 			width: auto !important;
 		}
 	}
+	.ef5-img{
+		@include transition(transform 1s);
+	}
+	&:hover{
+		.ef5-img{
+			@include transform(scale(1.1));
+		}
+	}
 }
 .ef5-banner-1{
 	position: relative;
