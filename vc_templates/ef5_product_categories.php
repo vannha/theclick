@@ -10,10 +10,10 @@ if(!empty($taxonomies)){
 	foreach ($taxonomies_arr as $tax) {
 		$i++;
 		$item_cls = 'col-4';
-		if( $i == 1 ){
+		if( $i === 1 ){
 			$item_cls = 'col-12';
 			$img_size = '800x300';
-		}if( $i == 2 || $i == 3 ){
+		}if( $i === 2 || $i === 3 ){
 			$item_cls = 'col-6';
 			$img_size = '800x500';
 		}else{
