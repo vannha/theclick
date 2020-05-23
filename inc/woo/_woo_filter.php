@@ -34,7 +34,8 @@ function theclick_woocommerce_filter_bar(){
                     $cat_show_hierarchy = theclick_get_theme_opt('cat_show_hierarchy',false);
                     $filter_category_args = [
                         'title'           => esc_html__('Categories','theclick'),
-                        'hierarchical'    => $cat_show_hierarchy
+                        'hierarchical'    => $cat_show_hierarchy,
+                        'hide_empty'      => 1
                     ];
                     the_widget(
                         'WC_Widget_Product_Categories',
