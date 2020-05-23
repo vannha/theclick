@@ -6,7 +6,7 @@ if(!empty($taxonomies)){
 	$taxonomies_arr = explode(',', $taxonomies);
 	foreach ($taxonomies_arr as $tax) {
 		$term = get_term_by('slug', $tax, 'product_cat');
-		var_dump($cat);
+		var_dump($term);
 	}
 	//$terms = get_terms(['slug' => $taxonomies_arr, 'taxonomy' => 'product_cat']);
 	
