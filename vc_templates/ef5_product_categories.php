@@ -12,14 +12,14 @@ if(!empty($taxonomies)){
 		$item_cls = 'col-4';
 		$img_size = $img_sizes;
 		if( $i == 1 ){
-			$item_cls = 'col-12';
+			$item_cls = 'col-12 offset-lg-1';
 			$img_size = '800x300';
 		}
 		if( $i == 2 || $i == 3 ){
 			$item_cls = 'col-6';
 			$img_size = '800x500';
 		}
-		echo '<div class="'.$item_cls. ' '.$i.'">';
+		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
 		 
