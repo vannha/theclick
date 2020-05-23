@@ -10,8 +10,14 @@ if(!empty($taxonomies)){
 	foreach ($taxonomies_arr as $tax) {
 		$i++;
 		$item_cls = 'col-4';
-		if($i==1) $item_cls = 'col-12';
-		if($i==2 || $i==3) $item_cls = 'col-6';
+		if($i==1){
+			$item_cls = 'col-12';
+			$img_size = '800x300';
+		} 
+		if($i==2 || $i==3){
+			$img_size = '800x500';
+			$item_cls = 'col-6';
+		} 
 		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
@@ -36,4 +42,3 @@ if(!empty($taxonomies)){
 		description
     } */ 
 }
-?>
