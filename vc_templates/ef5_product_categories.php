@@ -9,7 +9,7 @@ if(!empty($taxonomies)){
 	$i=0;
 	foreach ($taxonomies_arr as $tax) {
 		$i++;
-		$item_cls = 'col-3';
+		$item_cls = 'col-4';
 		if($i==1) $item_cls = 'col-12';
 		if($i==2 || $i == 3) $item_cls = 'col-6';
 		echo '<div class="'.$item_cls.'">';
