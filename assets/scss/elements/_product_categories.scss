@@ -8,6 +8,7 @@
 		position: relative;
 		.cat-img{
 			width: 100%;
+			@include transition(transform 0.5s);
 		}
 		.gradient{
 			position: absolute;
@@ -76,6 +77,11 @@
 				bottom: -6px;
 				background-color: #fff;
 				@include transition(width 0.4s);
+			}
+		}
+		&:hover{
+			.cat-img{
+				@include transform(scale(1.1));
 			}
 		}
 	}
