@@ -20,16 +20,19 @@ if(!empty($taxonomies)){
 			$img_size = '1000x500';
 		}
 		echo '<div class="'.$item_cls.'">';
-		$cat = get_term_by('slug', $tax, 'product_cat');
-		$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true ); 
-		 
-	    if(!empty($thumbnail_id)){
-    	 	theclick_image_by_size([
-	            'id'    => $thumbnail_id,
-	            'size'  => $img_size,
-	            'class' => 'cat-img'
-	        ]);
-	    } 
+			$cat = get_term_by('slug', $tax, 'product_cat');
+			$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true ); 
+			$bg_attr = 'style="background-image: url('.theclick_get_image_url_by_size(['id'=>$thumbnail_id,'size'=> 'full', 'default_thumb' => true]).'); background-size: cover;"';
+			if(!empty($thumbnail_id)){
+			echo '<div class="pcats-wrap" '.$bg_attr.'>'; 
+		    
+	    	 	theclick_image_by_size([
+		            'id'    => $thumbnail_id,
+		            'size'  => $img_size,
+		            'class' => 'cat-img invisible'
+		        ]);
+		    echo '</div>';
+			}
 	    echo '</div>';
 	}
 	echo '</div>';
