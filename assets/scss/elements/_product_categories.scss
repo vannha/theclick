@@ -23,6 +23,8 @@
 			position: absolute;
 			left: 60px;
 			bottom: 60px;
+			@include transform(translateY(0));
+			@include transition(transform 0.5s);
 			@media (max-width: 1600px){
 				left: 50px;
 				bottom: 50px;
@@ -83,6 +85,9 @@
 		&:hover{
 			.cat-img{
 				@include transform(scale(1.1));
+			}
+			.content-wrap{
+				@include transform(translateY(20px));
 			}
 		}
 	}
