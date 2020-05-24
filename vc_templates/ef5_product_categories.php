@@ -44,12 +44,4 @@ if(!empty($taxonomies)){
 	}
 	echo '</div>';
 	echo '</div>';
-	 
-	/*foreach ($terms as $cat) {
-		var_dump($cat);
-		term_id.
-		name
-		slug
-		description
-    } */ 
 }
