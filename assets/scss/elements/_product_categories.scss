@@ -47,6 +47,7 @@
 			line-height: 1.15;
 			margin-bottom: 8px;
 			color: #fff;
+			display: block;
 			@media (max-width: 576px){
 				font-size: 30px;
 			}
@@ -98,10 +99,8 @@
 	}
 	.col-one .pcats-wrap .main-title{
 		font-size: 60px;
-		margin-bottom: 15px;
 	}
 	.col-two .pcats-wrap .main-title{
 		font-size: 50px;
-		margin-bottom: 12px;
 	}
 }
