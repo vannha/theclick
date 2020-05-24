@@ -51,6 +51,9 @@
 			@media (max-width: 1199px){
 				margin-bottom: 0;
 			}
+			@media (max-width: 991px){
+				font-size: 30px;
+			}
 			@media (max-width: 576px){
 				font-size: 30px;
 			}
@@ -106,8 +109,14 @@
 	}
 	.col-one .pcats-wrap .main-title{
 		font-size: 60px;
+		@media (max-width: 991px){
+			font-size: 50px;
+		}
 	}
 	.col-two .pcats-wrap .main-title{
 		font-size: 50px;
+		@media (max-width: 991px){
+			font-size: 40px;
+		}
 	}
 }
