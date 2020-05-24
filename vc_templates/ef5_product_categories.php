@@ -12,7 +12,7 @@ if(!empty($taxonomies)){
 		$item_cls = 'col-4';
 		$img_size = $img_sizes;
 		if( $i == 1 ){
-			$item_cls = 'col-10 offset-lg-1 col-one';
+			$item_cls = 'col-12 col-lg-10 offset-lg-1 col-one';
 			$img_size = '1000x500';
 		}
 		if( $i == 2 || $i == 3 ){
