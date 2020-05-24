@@ -36,6 +36,10 @@
 				left: 30px;
 				bottom: 30px;
 			}
+			@media (max-width: 767px){
+				left: 15px;
+				bottom: 20px;
+			}
 			@media (max-width: 576px){
 				left: 15px;
 			}
@@ -78,6 +82,9 @@
 			position: relative;
 			@media (max-width: 1199px){
 				margin-top: 20px;
+			}
+			@media (max-width: 767px){
+				margin-top: 10px;
 			}
 			&:hover{
 				color: #fff;
