@@ -6,6 +6,7 @@
 	}
 	.pcats-wrap{
 		position: relative;
+		overflow: hidden;
 		.cat-img{
 			width: 100%;
 			@include transition(transform 0.5s);
