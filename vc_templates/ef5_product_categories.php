@@ -33,7 +33,9 @@ if(!empty($taxonomies)){
 			        ]);
 		        	echo '<div class="gradient"></div>';
 			        echo '<div class="content-wrap">';
+			        	if(!empty($cat->name))
 			        	echo '<span class="main-title">'.$cat->name.'</span>';
+			        	if(!empty($cat->description))
 			        	echo '<p class="sub-title">'.$cat->description.'</p>';
 			        	echo '<span class="cat-btn-link">'.esc_html__( 'Shop Now','theclick' ).'</span>';
 	 				echo '</div>';
