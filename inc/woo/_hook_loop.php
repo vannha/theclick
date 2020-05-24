@@ -55,7 +55,7 @@ function theclick_woocommerce_count_ordering(){
 			</div>
 		</div>
 		<?php } ?>
-		<div class="filter-icon"><a href="javascript:void(0);" class="woo-filter-toggle"><?php echo esc_html__('Filter by','theclick') ?><span><?php echo theclick_get_svg('outline-tune') ?></span></a></div>
+		<div class="filter-icon"><a href="javascript:void(0);" class="woo-filter-toggle"><span class="filter-txt"><?php echo esc_html__('Filter by','theclick') ?></span><span><?php echo theclick_get_svg('outline-tune') ?></span></a></div>
 	</div>
 <?php
 }
