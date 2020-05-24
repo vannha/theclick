@@ -24,12 +24,12 @@ if(!empty($taxonomies)){
 			$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true ); 
 			$bg_attr = 'style="background: url('.theclick_get_image_url_by_size(['id'=>$thumbnail_id,'size'=> 'full', 'default_thumb' => true]).') center center; background-size: cover;"';
 			if(!empty($thumbnail_id)){
-			echo '<div class="pcats-wrap" '.$bg_attr.'>'; 
+			echo '<div class="pcats-wrap">'; 
 				echo '<a href="'.esc_url(get_term_link($cat->term_id,'product_cat')).'">';
 		    	 	theclick_image_by_size([
 			            'id'    => $thumbnail_id,
 			            'size'  => $img_size,
-			            'class' => 'cat-img invisible'
+			            'class' => 'cat-img'
 			        ]);
 		        	echo '<div class="gradient"></div>';
 			        echo '<div class="content-wrap">';
