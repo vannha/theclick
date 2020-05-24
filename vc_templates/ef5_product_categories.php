@@ -17,7 +17,7 @@ if(!empty($taxonomies)){
 		}
 		if( $i == 2 || $i == 3 ){
 			$item_cls = 'col-6';
-			$img_size = '800x500';
+			$img_size = '1000x500';
 		}
 		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
