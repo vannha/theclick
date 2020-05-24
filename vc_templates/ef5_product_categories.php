@@ -21,7 +21,7 @@ if(!empty($taxonomies)){
 		}
 		echo '<div class="'.$item_cls.'">';
 		$cat = get_term_by('slug', $tax, 'product_cat');
-		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
+		$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true ); 
 		 
 	    if(!empty($thumbnail_id)){
     	 	theclick_image_by_size([
