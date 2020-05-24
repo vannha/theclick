@@ -13,11 +13,11 @@ if(!empty($taxonomies)){
 		$img_size = $img_sizes;
 		if( $i == 1 ){
 			$item_cls = 'col-10 offset-lg-1 col-one';
-			$img_size = '1000x600';
+			$img_size = '1000x500';
 		}
 		if( $i == 2 || $i == 3 ){
 			$item_cls = 'col-6 col-two';
-			$img_size = '1000x500';
+			$img_size = '800x500';
 		}
 		echo '<div class="'.$item_cls.'">';
 			$cat = get_term_by('slug', $tax, 'product_cat');
