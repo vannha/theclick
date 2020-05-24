@@ -22,7 +22,7 @@ if(!empty($taxonomies)){
 		echo '<div class="'.$item_cls.'">';
 			$cat = get_term_by('slug', $tax, 'product_cat');
 			$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true ); 
-			$bg_attr = 'style="background-image: url('.theclick_get_image_url_by_size(['id'=>$thumbnail_id,'size'=> 'full', 'default_thumb' => true]).'); background-size: cover;"';
+			$bg_attr = 'style="background: url('.theclick_get_image_url_by_size(['id'=>$thumbnail_id,'size'=> 'full', 'default_thumb' => true]).') center center; background-size: cover;"';
 			if(!empty($thumbnail_id)){
 			echo '<div class="pcats-wrap" '.$bg_attr.'>'; 
 		    
