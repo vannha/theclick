@@ -89,8 +89,10 @@
 			.cat-img{
 				@include transform(scale(1.1));
 			}
-			.content-wrap{
-				@include transform(translateY(20px));
+			@media (min-width: 1200px){
+				.content-wrap{
+					@include transform(translateY(20px));
+				}
 			}
 		}
 	}
