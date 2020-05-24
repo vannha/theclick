@@ -11,6 +11,11 @@
     		fill: $accent_color;
     	}
     }
+    @media (max-width: 480px){
+    	.filter-txt{
+    		display: none;
+    	}
+    }
 	span{
 		display: inline-block;
 		line-height: 1;
@@ -21,6 +26,9 @@
 	margin-bottom: 45px;
 	form.woocommerce-ordering{
 		min-width: 165px;
+		@media (max-width: 480px){
+			min-width: 145px;
+		}
 	}
 	select[name="orderby"]{
 		border: none;
