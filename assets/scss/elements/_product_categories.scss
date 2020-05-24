@@ -38,10 +38,6 @@
 			}
 			@media (max-width: 767px){
 				left: 15px;
-				bottom: 20px;
-			}
-			@media (max-width: 576px){
-				left: 15px;
 			}
 		}
 		
@@ -115,15 +111,21 @@
 		}
 	}
 	.col-one .pcats-wrap .main-title{
-		font-size: 60px;
-		@media (max-width: 991px){
+		@media (min-width: 768px){
 			font-size: 50px;
 		}
+		@media (min-width: 992px){
+			font-size: 60px;
+		}
+		 
 	}
 	.col-two .pcats-wrap .main-title{
-		font-size: 50px;
-		@media (max-width: 991px){
+		@media (min-width: 768px){
 			font-size: 40px;
 		}
+		@media (min-width: 992px){
+			font-size: 50px;
+		}
+		 
 	}
 }
