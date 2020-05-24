@@ -12,7 +12,6 @@ $grid-breakpoints: (
 ) !default;
 
 @import 'bootstrap/bootstrap-grid';
-@import 'bootstrap/utilities/visibility';
 @import 'functions';
 @import 'options';
 @import 'bootstrap-theme/bootstrap-theme';
@@ -44,9 +43,7 @@ $grid-breakpoints: (
 @import 'elements/elements';
 @import 'flexuser/flexuser';
 @import 'icons';
-
 @import 'woocommerce/woocommerce';
-
 @import 'classes';
 @import 'colors';
 @import 'gradient';

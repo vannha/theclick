@@ -49,7 +49,10 @@ a{
 		}
 	}
 }
-
+.invisible{
+	visibility: hidden;
+	opacity: 0;
+}
 // Rotate
 $rotate: (
 	'45',
