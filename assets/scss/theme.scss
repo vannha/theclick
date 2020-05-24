@@ -12,6 +12,7 @@ $grid-breakpoints: (
 ) !default;
 
 @import 'bootstrap/bootstrap-grid';
+@import 'bootstrap/utilities/visibility';
 @import 'functions';
 @import 'options';
 @import 'bootstrap-theme/bootstrap-theme';
