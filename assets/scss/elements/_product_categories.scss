@@ -98,7 +98,7 @@
 			}
 			@media (min-width: 1200px){
 				.content-wrap{
-					@include transform(translateY(20px));
+					@include transform(translateY(-20px));
 				}
 			}
 		}
