@@ -5,7 +5,7 @@ $img_sizes = !empty($image_size) ? $image_size : 'medium';
 if(!empty($taxonomies)){
 	$taxonomies_arr = explode(',', $taxonomies);
 	echo '<div class="ef5-categorys-wrap">';
-	echo '<div class="row">';
+	echo '<div class="row product-cats-row gutter-xl-50">';
 	$i=0;
 	foreach ($taxonomies_arr as $tax) {
 		$i++;
