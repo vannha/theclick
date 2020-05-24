@@ -33,8 +33,8 @@ if(!empty($taxonomies)){
 			        ]);
 		        	echo '<div class="gradient"></div>';
 			        echo '<div class="content-wrap">';
-			        	echo '<span>'.$cat->name.'</span>';
-			        	echo '<p>'.$cat->description.'</p>';
+			        	echo '<span class="main-title">'.$cat->name.'</span>';
+			        	echo '<p class="sub-title">'.$cat->description.'</p>';
 			        	echo '<span class="cat-btn-link">'.esc_html__( 'Shop Now','theclick' ).'</span>';
 	 				echo '</div>';
 	            echo '</a>';
