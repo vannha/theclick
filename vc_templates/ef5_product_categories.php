@@ -25,7 +25,6 @@ if(!empty($taxonomies)){
 			$bg_attr = 'style="background: url('.theclick_get_image_url_by_size(['id'=>$thumbnail_id,'size'=> 'full', 'default_thumb' => true]).') center center; background-size: cover;"';
 			if(!empty($thumbnail_id)){
 			echo '<div class="pcats-wrap" '.$bg_attr.'>'; 
-				$a_href = '#';
 				echo '<a href="'.esc_url(get_term_link($cat->term_id,'product_cat')).'">';
 		    	 	theclick_image_by_size([
 			            'id'    => $thumbnail_id,
@@ -39,7 +38,6 @@ if(!empty($taxonomies)){
 			        	echo '<span class="cat-btn-link">'.esc_html__( 'Shop Now','theclick' ).'</span>';
 	 				echo '</div>';
 	            echo '</a>';
-	            echo '</div>';
 		    echo '</div>';
 			}
 	    echo '</div>';
