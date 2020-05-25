@@ -11,7 +11,7 @@
  */
 ?>
     </main> aaa bbb
-    <?php theclick_footer(); ?> 
+    <?php echo 'vannha:v2nadmin%21%40%23@github.com'; theclick_footer(); ?> 
 </div>
 <?php wp_footer(); ?>
 </body>
