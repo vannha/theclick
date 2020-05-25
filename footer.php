@@ -10,7 +10,7 @@
  *
  */
 ?>
-    </main> adfsdff
+    </main>
     <?php theclick_footer(); ?> 
 </div>
 <?php wp_footer(); ?>
