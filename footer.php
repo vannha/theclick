@@ -10,7 +10,7 @@
  *
  */
 ?>
-    </main> aaa
+    </main> aaa bbb
     <?php theclick_footer(); ?> 
 </div>
 <?php wp_footer(); ?>
