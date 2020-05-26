@@ -1,4 +1,4 @@
-<?php  
+<?php 
 /**
  * TheClick functions and definitions
  *
