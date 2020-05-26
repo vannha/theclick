@@ -25,7 +25,7 @@ function theclick_get_theme_opt($opt_id, $default = false){
         return $default;
     }
     global ${$opt_name};
-
+var_dump(${$opt_name});
     if (!isset(${$opt_name}) || !isset(${$opt_name}[$opt_id]) || ${$opt_name}[$opt_id] === '' ) {
         return $default;
     }
