@@ -4,7 +4,6 @@
 	line-height: 26px;
 	padding: 5px 0;
     border-bottom: 1px solid transparent; 
-    background: rgba($accent_color, 0.5);
     &.opened{
     	color: $accent_color;
     	border-bottom-color: $MainBorderColor;

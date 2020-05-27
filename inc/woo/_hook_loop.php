@@ -20,6 +20,7 @@ add_filter('woocommerce_show_page_title', function(){ return false;});
  * @hooked woocommerce_result_count - 20
  * @hooked woocommerce_catalog_ordering - 30
 */
+remove_action('woocommerce_archive_description');
 remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
 remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
 add_action('woocommerce_before_shop_loop','theclick_woocommerce_count_ordering', 11);
