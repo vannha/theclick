@@ -62,13 +62,11 @@ class TheClick_CSS_Generator
      */
     function init()
     {
-        if ( ! class_exists( '\Leafo\ScssPhp\Compiler' ) )
-        {
+        if ( ! class_exists( '\Leafo\ScssPhp\Compiler' ) ){
             return;
         }
         $this->redux = ReduxFrameworkInstances::get_instance( $this->opt_name );
-        if ( empty( $this->redux ) || ! $this->redux instanceof ReduxFramework )
-        {
+        if ( empty( $this->redux ) || ! $this->redux instanceof ReduxFramework ){
             return;
         }
         $this->dev_mode = theclick_get_theme_opt('dev_mode', false);
