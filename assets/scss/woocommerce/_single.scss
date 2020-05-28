@@ -106,6 +106,12 @@ form.cart,
 	}
 	.single_add_to_cart_button {
 		padding: 12.5px 25px;
+		color: #fff;
+	    background-color: $primary_color;
+	    &:hover{
+	    	background-color: $accent_color;
+	    	color: #fff;
+	    }
 		&.disabled{
 			@include opacity(0.5);
 			cursor: not-allowed;
