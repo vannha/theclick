@@ -266,6 +266,12 @@ add_filter('woocommerce_product_description_heading', function(){ return false;}
 add_filter('woocommerce_product_additional_information_heading', function(){ return false;});
 
 
+//add_filter('woocommerce_product_related_posts_query', '__return_empty_array', 100);
+add_filter('woocommerce_product_related_posts_query', 'theclick_empty_related_array', 100);
+function theclick_empty_related_array($array){
+	$array = [];
+	return $array;
+}
 /*
  * Change column of related product
  * https://docs.woocommerce.com/document/change-number-of-related-products-output/
