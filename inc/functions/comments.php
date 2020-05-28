@@ -295,7 +295,7 @@ if(!function_exists('theclick_woocommerce_product_review_list_args')){
 							<span class="author-name">
 								<?php echo get_comment_author( $comment ); ?>
 							</span>
-							<span class="comment-time meta-color" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
+							<span class="comment-time meta-color" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( 'M d, Y' ) ); ?></span>
 						</div>
 						<div class="">
 							<?php woocommerce_review_display_rating(); ?>
