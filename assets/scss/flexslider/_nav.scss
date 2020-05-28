@@ -40,6 +40,10 @@
 		z-index: -1;
 		@include opacity(0);
 	}
+	.flex-prev-icon:before,
+	.flex-next-icon:before{
+		font-family: $FontAwesome;
+	}
 	.flex-prev-icon:before{
 		content: "\f11a";
 	}
