@@ -1462,6 +1462,12 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'default'  => '0',
                 ),
                 array(
+                    'id'       => 'single_product_related_number',
+                    'type'     => 'text',
+                    'title'    => esc_html__('Related number items', 'theclick'),
+                    'subtitle' => esc_html__('Enter the related number items.', 'theclick')
+                ),
+                array(
                     'id'       => 'single_product_related_columns',
                     'type'     => 'slider',
                     'title'    => esc_html__('Products Related Columns', 'theclick'),
