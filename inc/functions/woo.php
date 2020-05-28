@@ -457,8 +457,8 @@ if(!function_exists('theclick_woo_container_class')){
             } else {
                 $classes[] = 'container';
             }
-        }elseif (is_singular('product')) {
-            $product_style = isset($_GET['product_style']) && !empty($_GET['product_style']) ? $_GET['product_style'] : 'style-1';
+        }elseif(is_singular('product')) {
+            $product_style = (isset($_GET['product_style']) && !empty($_GET['product_style'])) ? $_GET['product_style'] : 'style-1';
             switch ($product_style) {
                 case 'style-1':
                     $classes[] = 'container'; 
