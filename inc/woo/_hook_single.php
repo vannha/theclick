@@ -270,7 +270,8 @@ add_action( 'the_post', 'theclick_empty_related_array' );
 function theclick_empty_related_array($array){
 	$single_product_related = theclick_get_theme_opt('single_product_related','0');
 	if($single_product_related == '0')
-		add_filter('woocommerce_product_related_posts_query', '__return_empty_array', 100);
+		remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+		//add_filter('woocommerce_product_related_posts_query', '__return_empty_array', 100);
 }
 /*
  * Change column of related product
