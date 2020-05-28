@@ -292,9 +292,10 @@ if(!function_exists('theclick_woocommerce_product_review_list_args')){
 				<div class="comment-info col">
 					<div class="d-flex justify-content-between">
 						<div class="author-info">
-							<div class="author-name h5">
+							<span class="author-name">
 								<?php echo get_comment_author( $comment ); ?>
-							</div>
+							</span>
+							<span class="comment-time meta-color">Dec 25, 2019 at 9:14 am</span>
 						</div>
 						<div class="">
 							<?php woocommerce_review_display_rating(); ?>
