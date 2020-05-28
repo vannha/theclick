@@ -280,7 +280,7 @@ if(!function_exists('theclick_woocommerce_output_related_products_args')){
 }
 // Add carousel to related
 if(!function_exists('theclick_single_product_scripts')){
-	add_action('wp_enqueue_scripts', 'theclick_single_product_scripts', 0);
+	add_action('wp_enqueue_scripts', 'theclick_single_product_scripts');
 	function theclick_single_product_scripts(){ 
 		if(is_singular('product')){
 			wp_enqueue_script('owl-carousel');

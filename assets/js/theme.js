@@ -847,7 +847,7 @@
     // Related product
     function theclick_woo_related_product(){
         "use strict";        
-        console.log(theclick_ajax_opts.ef5_owlCarousel);
+         
         if(theclick_ajax_opts.ef5_owlCarousel){
             $('.related.products .products').each(function(){
                 var $this = $(this),
