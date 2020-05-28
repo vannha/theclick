@@ -76,7 +76,9 @@ $gallery_thumbnail_space : #{$theclick_product_gallery_thumbnail_space}px;
 		border-bottom: 0;
 	}
 }
+
 /* Product Add to Cart Form */
+
 form.cart,
 .woocommerce-variation-add-to-cart{
 	@include d-flex();

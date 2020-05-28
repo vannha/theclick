@@ -34,4 +34,12 @@ $btn-pri-border-color-hover  : $primary_color;
         }
     }
 }
+.single_add_to_cart_button{
+	color: $btn-pri-color;
+    background-color: $btn-pri-bg-color;
+    &:hover{
+    	background-color: $btn-pri-bg-color-hover;
+    	color: $btn-pri-color-hover;
+    }
+}
 
