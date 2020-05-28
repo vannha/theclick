@@ -450,10 +450,24 @@ function theclick_ef5_product_filter_action_callback(){
  */
 if(!function_exists('theclick_woo_container_class')){
     function theclick_woo_container_class($class = ''){
-        $woo_fullwidth = theclick_get_opts('shop_full_width', '0');
-        if('1' === $woo_fullwidth){
-            $classes[] = 'no-container';
-        } else {
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag())) {  
+            $woo_fullwidth = theclick_get_opts('shop_full_width', '0');
+            if('1' === $woo_fullwidth){
+                $classes[] = 'no-container';
+            } else {
+                $classes[] = 'container';
+            }
+        }elseif (is_singular('product')) {
+            $product_style = isset($_GET['product_style']) && !empty($_GET['product_style']) ? $_GET['product_style'] : 'style-1';
+            switch ($product_style) {
+                case 'style-1':
+                    $classes[] = 'container'; 
+                    break;
+                default:
+                    $classes[] = 'container'; 
+                    break;
+            }
+        }else{
             $classes[] = 'container';
         }
         if(!empty($class)) $classes[] = $class;
