@@ -34,7 +34,7 @@ $btn-pri-border-color-hover  : $primary_color;
         }
     }
 }
-.single_add_to_cart_button{
+.single_add_to_cart_button.button{
 	color: $btn-pri-color;
     background-color: $btn-pri-bg-color;
     &:hover{
