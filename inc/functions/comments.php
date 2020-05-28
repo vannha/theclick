@@ -295,7 +295,7 @@ if(!function_exists('theclick_woocommerce_product_review_list_args')){
 							<span class="author-name">
 								<?php echo get_comment_author( $comment ); ?>
 							</span>
-							<span class="comment-time meta-color">Dec 25, 2019 at 9:14 am</span>
+							<span class="comment-time meta-color" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
 						</div>
 						<div class="">
 							<?php woocommerce_review_display_rating(); ?>
@@ -335,7 +335,7 @@ if(!function_exists('theclick_woocommerce_product_review_list_args')){
 							echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'theclick' ) . ')</em> ';
 						}
 						?>
-						<span class="comment-time meta-color" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
+						
 					</div>
 				</div>
 			</div>
