@@ -1470,7 +1470,24 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'min'       => 1,
                     'step'      => 1,
                     'max'       => 6,
-                    'display_value' => 'label'
+                    'display_value' => 'label',
+                    'required' => array(
+                        array('single_product_related', '=', '1')
+                    )
+                ),
+                array(
+                    'id'       => 'single_product_related_type',
+                    'type'     => 'button_set',
+                    'title'    => esc_html__('Related grid / carousel', 'theclick'),
+                    'subtitle' => esc_html__('select type display for product related', 'theclick'),
+                    'options'  => array(
+                        'grid' => esc_html__( 'Grid','theclick' ),
+                        'carousel' => esc_html__( 'Carousel','theclick' )
+                    ),
+                    'default'  => 'grid',
+                    'required' => array(
+                        array('single_product_related', '=', '1')
+                    )
                 ),
             )
         );
