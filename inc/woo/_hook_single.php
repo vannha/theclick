@@ -269,6 +269,8 @@ add_filter('woocommerce_product_additional_information_heading', function(){ ret
 //add_filter('woocommerce_product_related_posts_query', '__return_empty_array', 100);
 add_filter('woocommerce_product_related_posts_query', 'theclick_empty_related_array', 100);
 function theclick_empty_related_array($array){
+	$single_product_related = theclick_get_theme_opt('single_product_related','0');
+	if($single_product_related) return $array;
 	$array = [];
 	return $array;
 }
