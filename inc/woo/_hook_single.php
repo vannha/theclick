@@ -271,7 +271,6 @@ function theclick_empty_related_array($array){
 	$single_product_related = theclick_get_theme_opt('single_product_related','0');
 	if($single_product_related == '0')
 		remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-		//add_filter('woocommerce_product_related_posts_query', '__return_empty_array', 100);
 }
 /*
  * Change column of related product
@@ -290,7 +289,8 @@ if(!function_exists('theclick_woocommerce_output_related_products_args')){
 if(!function_exists('theclick_single_product_scripts')){
 	add_action('wp_enqueue_scripts', 'theclick_single_product_scripts');
 	function theclick_single_product_scripts(){ 
-		if(is_singular('product')){
+		$product_related_type = theclick_get_theme_opt('single_product_related_type','grid'); 
+		if( is_singular('product') && $product_related_type == 'carousel'){
 			wp_enqueue_script('owl-carousel');
 			wp_enqueue_style('owl-carousel');
 		}

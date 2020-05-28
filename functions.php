@@ -366,7 +366,8 @@ function theclick_scripts()
         'filter_clear_text'   => esc_html__('Clear All', 'theclick'),
         'has_select2'         => class_exists('Woocommerce') ? true : false,
         'is_rtl'              => is_rtl() ? 'true' : 'false',
-        'ef5_owlCarousel'     => class_exists('EF5Systems') ? true : false  
+        'ef5_owlCarousel'     => class_exists('EF5Systems') ? true : false,
+        'product_related_type' => theclick_get_theme_opt('single_product_related_type','grid') 
     );
     if(class_exists('Woocommerce')) {
         wp_enqueue_script('imagesloaded');
