@@ -273,8 +273,9 @@ add_filter('woocommerce_product_additional_information_heading', function(){ ret
 if(!function_exists('theclick_woocommerce_output_related_products_args')){
 	add_filter( 'woocommerce_output_related_products_args', 'theclick_woocommerce_output_related_products_args', 20 );
 	function theclick_woocommerce_output_related_products_args($args){
-		$args['posts_per_page'] = theclick_loop_shop_columns()*2; // 4 related products
-		$args['columns'] = theclick_loop_shop_columns(); // arranged in theclick_loop_shop_columns columns
+		$related_columns = theclick_get_theme_opt('single_product_related_columns', 4); 
+		$args['posts_per_page'] = $related_columns*2; // 4 related products
+		$args['columns'] = $related_columns; // arranged in theclick_loop_shop_columns columns
 		return $args;
 	}
 }

@@ -1439,7 +1439,6 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'type'     => 'switch',
                     'default'  => '0',
                 ),
-                // cart page
                 array(
                     'title'    => esc_html__('Cart item thumbnail size', 'theclick'),
                     'subtitle' => esc_html__('Enter the image size', 'theclick'),
@@ -1447,6 +1446,31 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'type'     => 'dimensions',
                     'units'    => array('px'),
                     'default'  => array(),
+                ),
+                array(
+                    'id'       => 'single_product_related_info',
+                    'type'     => 'info',
+                    'style'    => 'success',
+                    'title'    => esc_html__('Product Related', 'theclick'),
+                    'subtitle' => esc_html__('Custom product related, ...', 'theclick'),
+                ),
+                array(
+                    'id'       => 'single_product_related',
+                    'title'    => esc_html__('Single Product Related', 'theclick'),
+                    'subtitle' => esc_html__('Enable or disable product related section.', 'theclick'),
+                    'type'     => 'switch',
+                    'default'  => '0',
+                ),
+                array(
+                    'id'       => 'single_product_related_columns',
+                    'type'     => 'slider',
+                    'title'    => esc_html__('Products Related Columns', 'theclick'),
+                    'subtitle' => esc_html__('Choose products related columns show on single page, ...', 'theclick'),
+                    'default'   => 4,
+                    'min'       => 1,
+                    'step'      => 1,
+                    'max'       => 6,
+                    'display_value' => 'label'
                 ),
             )
         );
