@@ -1466,6 +1466,7 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'type'     => 'text',
                     'title'    => esc_html__('Related number items', 'theclick'),
                     'subtitle' => esc_html__('Enter the related number items.', 'theclick'),
+                    'default'  => '4',
                     'required' => array(
                         array('single_product_related', '=', '1')
                     )
