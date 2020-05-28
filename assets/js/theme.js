@@ -847,7 +847,7 @@
     // Related product
     function theclick_woo_related_product(){
         "use strict";        
-         
+
         if(theclick_ajax_opts.ef5_owlCarousel){
             $('.related.products .products').each(function(){
                 var $this = $(this),
@@ -857,7 +857,7 @@
                     rtl: rtl,
                     margin: 40,
                     loop: false,
-                    autoplay: true,
+                    autoplay: false,
                     autoplayTimeout: 2000,
                     slideBy: 'page',
                     responsive : {
