@@ -1357,6 +1357,21 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'default'  => theclick_product_sidebar_position()
                 ),
                 array(
+                    'id'       => 'product_style',
+                    'type'     => 'button_set',
+                    'title'    => esc_html__('Style', 'theclick'),
+                    'subtitle' => esc_html__('select a style for single product page', 'theclick'),
+                    'options'  => array(
+                        'style-1' => esc_html__( 'Style 1','theclick' ),
+                        'style-2' => esc_html__( 'Style 2','theclick' ),
+                        'style-3' => esc_html__( 'Style 3','theclick' ),
+                        'style-4' => esc_html__( 'Style 4','theclick' ),
+                        'style-5' => esc_html__( 'Style 5','theclick' ),
+                        'style-6' => esc_html__( 'Style 6','theclick' ),
+                    ),
+                    'default'  => 'style-1'
+                ),
+                array(
                     'id'       => 'product_gallery_layout',
                     'type'     => 'button_set',
                     'title'    => esc_html__('Gallery Layouts', 'theclick'),
