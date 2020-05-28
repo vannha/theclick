@@ -468,6 +468,7 @@ if(!function_exists('theclick_woo_container_class')){
                     $classes[] = 'container'; 
                     break;
             }
+            $classes[] = $product_style; 
         }else{
             $classes[] = 'container';
         }
