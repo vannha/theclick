@@ -265,7 +265,7 @@ if(!function_exists('theclick_woocommerce_product_meta_end')){
 add_filter('woocommerce_product_description_heading', function(){ return false;});
 add_filter('woocommerce_product_additional_information_heading', function(){ return false;});
 
-
+// Add on off related
 add_action( 'the_post', 'theclick_empty_related_array' );
 function theclick_empty_related_array($array){
 	$single_product_related = theclick_get_theme_opt('single_product_related','0');
