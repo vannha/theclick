@@ -16,7 +16,7 @@
     		display: none;
     	}
     }
-	span{
+	span +span{
 		display: inline-block;
 		line-height: 1;
 		margin-left: 10px;
