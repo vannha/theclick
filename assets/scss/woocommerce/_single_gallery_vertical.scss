@@ -51,14 +51,14 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 		.flex-prev{
 			top: 15px;
 			.flex-prev-icon:before{
-				content: "\f118";
+				content: "\f106";
 			}
 		}
 		.flex-next{
 			top: auto;
 			bottom: 15px;
 			.flex-next-icon:before{
-				content: "\f119";
+				content: "\f107";
 			}
 		}
 	}
