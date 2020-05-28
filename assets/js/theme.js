@@ -22,6 +22,7 @@
         theclick_woo_filters_toggle();
         theclick_woo_loop_thumb_gallery();
         theclick_wc_single_product_gallery();
+        theclick_woo_related_product();
         theclick_wooscp_change_text();
         theclick_quantity_plus_minus();
         theclick_quantity_plus_minus_action();
@@ -840,6 +841,43 @@
                         }
                     });
                 };
+            });
+        }
+    }
+    // Related product
+    function theclick_woo_related_product(){
+        "use strict";        
+        if(theclick_ajax_opts.ef5_owlCarousel){
+            $('.related.products .products').each(function(){
+                var $this = $(this),
+                    rtl = $('body').hasClass('rtl');
+                $this.addClass('owl-carousel');
+                $this.owlCarousel({
+                    rtl: rtl,
+                    margin: 40,
+                    loop: false,
+                    autoplay: true,
+                    autoplayTimeout: 2000,
+                    slideBy: 'page',
+                    responsive : {
+                        0 : {
+                            items : 1,
+                        },
+                        600 : {
+                            items : 2,
+                        },
+                        991 : {
+                            items : 3,
+                            nav: false,
+                            dots: true
+                        },
+                        1200 : {
+                            items : 4,
+                            nav: true,
+                            dots: false
+                        }
+                    }
+                });
             });
         }
     }
