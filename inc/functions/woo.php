@@ -450,7 +450,7 @@ function theclick_ef5_product_filter_action_callback(){
  */
 if(!function_exists('theclick_woo_container_class')){
     function theclick_woo_container_class($class = ''){
-        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag())) {  
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || (function_exists('is_shop') && is_shop()) || is_product_category() || is_product_tag())) {  
             $woo_fullwidth = theclick_get_opts('shop_full_width', '0');
             if('1' === $woo_fullwidth){
                 $classes[] = 'no-container';

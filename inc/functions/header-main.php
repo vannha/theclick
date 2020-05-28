@@ -44,6 +44,10 @@ if(!function_exists('theclick_header_class')){
 if(!function_exists('theclick_header_inner_class')){
     function theclick_header_inner_class($class = ''){
         $header_fullwidth = theclick_get_opts('header_fullwidth', '0');
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag())) { 
+            $header_shop_fullwidth = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_fullwidth', true);
+        }
+        $header_fullwidth = ($header_shop_fullwidth == '-1') ? $header_fullwidth : $header_shop_fullwidth;
         $classes = array('header-inner');
         if('1' === $header_fullwidth){
             $classes[] = 'no-container';
