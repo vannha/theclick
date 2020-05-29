@@ -17,6 +17,14 @@ class TheClick_Main_Menu_Walker extends Walker_Nav_Menu{
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
         $header_layout = theclick_get_opts('header_layout');
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag() || is_singular('product'))) { 
+            $woo_header_layout = theclick_get_theme_opt('woo_header_layout','');
+            $header_layout = !empty($woo_header_layout) ? $woo_header_layout : $header_layout;
+        }
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop())) { 
+            $woo_header_layout = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_layout', true);
+            $header_layout = $woo_header_layout != '-1' ? $woo_header_layout : $header_layout;
+        }
         switch ($header_layout) {
             case '3':
                 $output .= "\n$indent<ul class=\"ef5-submenu ef5-toggle-menu ef5-side-submenu ef5-side-submenu-base\">\n";

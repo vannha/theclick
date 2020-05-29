@@ -233,6 +233,14 @@ if(!function_exists('theclick_header_menu_class')){
     function theclick_header_menu_class($class=''){
         $classes = ['ef5-menu'];
         $header_layout = theclick_get_opts('header_layout', '1');
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag() || is_singular('product'))) { 
+            $woo_header_layout = theclick_get_theme_opt('woo_header_layout','');
+            $header_layout = !empty($woo_header_layout) ? $woo_header_layout : $header_layout;
+        }
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop())) { 
+            $woo_header_layout = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_layout', true);
+            $header_layout = $woo_header_layout != '-1' ? $woo_header_layout : $header_layout;
+        }
         $header_ontop  = theclick_get_opts('header_ontop','0');
         $header_sticky = theclick_get_opts('header_sticky','0');
         $header_helper_menu = theclick_get_opts('header_helper_menu','');
