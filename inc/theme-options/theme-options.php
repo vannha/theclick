@@ -883,6 +883,22 @@ Redux::setSection($opt_name, array(
                 '0'  => esc_html__('No','theclick'),
             ),
             'default'  => '1'
+        ),
+        array(
+            'title'    => esc_html__('Header Attribute (for category, tags archive)', 'theclick'),
+            'subtitle' => esc_html__('Make show, hide header attribute in woo archive', 'theclick'),
+            'id'       => 'woo_header_attr_archive',
+            'type'     => 'button_set',
+            'options'  => array(
+                ''            => esc_html__('Default','theclick'),
+                'search'      => esc_html__('Search','theclick'),
+                'cart'        => esc_html__('Cart','theclick'),
+                'wishlist'    => esc_html__('Wishlist','theclick'),
+                'compare'     => esc_html__('Compare','theclick'),
+                'login'       => esc_html__('Login','theclick'),
+                'side-widget' => esc_html__('Side-widget','theclick'),
+            ),
+            'default'  => ''
         )
     )
 ));
