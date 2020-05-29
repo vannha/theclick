@@ -372,22 +372,28 @@ table.variations .label,
 			    display: inline-block;
 			    padding: 0;
 			    margin: 0 12px;
-			    &.ef5-owl-prev .ef5-owl-nav-icon:before {
-				    content: '';
-				    display: block;
-				    width: 14px;
-				    height: 25px;
-				    background: url(../images/prev-icon.png) no-repeat 0 0;
-				    background-size: cover;
-				}
-				&.ef5-owl-next .ef5-owl-nav-icon:before {
-				    content: '';
-				    display: block;
-				    width: 14px;
-				    height: 25px;
-				    background: url(../images/next-icon.png) no-repeat 0 0;
-				    background-size: cover;
-				}
+			    &.ef5-owl-prev{
+			    	left: -30px;
+			    	.ef5-owl-nav-icon:before {
+					    content: '';
+					    display: block;
+					    width: 14px;
+					    height: 25px;
+					    background: url(../images/prev-icon.png) no-repeat 0 0;
+					    background-size: cover;
+					}
+			    } 
+				&.ef5-owl-next{
+					right: -30px;
+					.ef5-owl-nav-icon:before {
+					    content: '';
+					    display: block;
+					    width: 14px;
+					    height: 25px;
+					    background: url(../images/next-icon.png) no-repeat 0 0;
+					    background-size: cover;
+					}
+				} 
 			}
 		}
 	}
