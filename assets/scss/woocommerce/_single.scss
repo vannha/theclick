@@ -363,8 +363,8 @@ table.variations .label,
     		padding-top: 0;
 			button{
 				position: absolute;
-				top: 50%;
-				margin-top: -10px;
+				top: 35%;
+				margin-top: -15px;
 				background: transparent;
 			    width: 30px;
 			    height: 30px;
@@ -373,7 +373,7 @@ table.variations .label,
 			    padding: 0;
 			    margin: 0 12px;
 			    &.ef5-owl-prev{
-			    	left: -30px;
+			    	left: -80px;
 			    	.ef5-owl-nav-icon{
 			    		display: inline-block;
 			    		&:before {
@@ -387,7 +387,7 @@ table.variations .label,
 					}
 			    } 
 				&.ef5-owl-next{
-					right: -30px;
+					right: -80px;
 					.ef5-owl-nav-icon{
 						display: inline-block;
 						&:before {
