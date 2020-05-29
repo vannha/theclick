@@ -900,7 +900,7 @@ Redux::setSection($opt_name, array(
                 'social'      => esc_html__('Social','theclick'),
                 'side-widget' => esc_html__('Side-widget','theclick'),
             ),
-            'default'  => ''
+            'default'  => ['']
         )
     )
 ));
