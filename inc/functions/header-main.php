@@ -28,6 +28,15 @@ if(!function_exists('theclick_header_class')){
         $header_sticky = theclick_get_opts('header_sticky','0');
         $header_layout = theclick_get_opts('header_layout','1');
 
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag() || is_singular('product'))) { 
+            $woo_header_layout = theclick_get_theme_opt('woo_header_layout','');
+            $header_layout = !empty($woo_header_layout) ? $woo_header_layout : $header_layout;
+        }
+        if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop())) { 
+            $woo_header_layout = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_layout', true);
+            $header_layout = $woo_header_layout != '-1' ? $woo_header_layout : $header_layout;
+        }
+
         $classes[] = 'header-layout-'.$header_layout;
         if($header_layout === '3') $classes[] = 'side-header';
 
