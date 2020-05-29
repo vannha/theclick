@@ -1313,7 +1313,7 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
         $gallery_thumb_position['thumb-right'] = esc_html__('Right','theclick');
 
         return array(
-            'title'      => esc_html__('Single Product Design', 'theclick'),
+            'title'      => esc_html__('Single Product', 'theclick'),
             'icon'       => 'el el-shopping-cart',
             'subsection' => true,
             'fields'     => array(
