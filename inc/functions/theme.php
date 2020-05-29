@@ -52,10 +52,19 @@ function theclick_optimize_css_class($string){
 */
 function theclick_page_css_class($class = ''){
     $cls = apply_filters('theclick_page_css_class',[]);
+    $header_layout = theclick_get_opts('header_layout', '1');
+    if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag() || is_singular('product'))) { 
+        $woo_header_layout = theclick_get_theme_opt('woo_header_layout','');
+        $header_layout = !empty($woo_header_layout) ? $woo_header_layout : $header_layout;
+    }
+    if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop())) { 
+        $woo_header_layout = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_layout', true);
+        $header_layout = $woo_header_layout != '-1' ? $woo_header_layout : $header_layout;
+    }
     $classes = array_merge(
         [
             'ef5-page',
-            'page-header-'.theclick_get_opts('header_layout', '1'),
+            'page-header-'.$header_layout,
             $class
         ], 
         $cls

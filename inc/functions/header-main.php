@@ -36,7 +36,7 @@ if(!function_exists('theclick_header_class')){
             $woo_header_layout = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_layout', true);
             $header_layout = $woo_header_layout != '-1' ? $woo_header_layout : $header_layout;
         }
-var_dump($header_layout);
+
         $classes[] = 'header-layout-'.$header_layout;
         if($header_layout === '3') $classes[] = 'side-header';
 
