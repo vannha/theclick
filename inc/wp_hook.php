@@ -5,7 +5,17 @@ function theclick_body_class($classes){
 	$header_ontop = theclick_get_opts('header_ontop', '0');
 	$header_sticky = theclick_get_opts('header_sticky', '0');
 
-	$classes[] = 'header-'.theclick_get_opts('header_layout', '1');
+    $header_layout = theclick_get_opts('header_layout','1');
+    if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag() || is_singular('product'))) { 
+        $woo_header_layout = theclick_get_theme_opt('woo_header_layout','');
+        $header_layout = !empty($woo_header_layout) ? $woo_header_layout : $header_layout;
+    }
+    if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop())) { 
+        $woo_header_layout = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_layout', true);
+        $header_layout = $woo_header_layout != '-1' ? $woo_header_layout : $header_layout;
+    }
+	$classes[] = 'header-'.$header_layout;
+
 	// Header Ontop / Sticky 
 	if($header_ontop === '1' || $header_sticky === '1')
 		$classes[] = 'side-header-ontop';
