@@ -880,7 +880,7 @@ Redux::setSection($opt_name, array(
             'options'  => array(
                 '1'  => esc_html__('Yes','theclick'),
                 '0'  => esc_html__('No','theclick'),
-            );
+            ),
             'default'  => '1'
         )
     )
