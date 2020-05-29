@@ -834,6 +834,55 @@ Redux::setSection($opt_name, array(
             'units'    => array('px'),
             'default'  => array(),
         ),
+        array(
+            'id'       => 'woo_header_layout_info',
+            'type'     => 'info',
+            'style'    => 'success',
+            'title'    => esc_html__('Header options', 'theclick'),
+            'subtitle' => esc_html__('Custom header options, ...', 'theclick'),
+        ),
+        array(
+            'id'       => 'woo_header_layout',
+            'type'     => 'select',
+            'title'    => esc_html__('Layout', 'theclick'),
+            'subtitle' => esc_html__('Select a layout for header.', 'theclick'),
+            'options'  => array(
+                ''  => esc_html__('Default', 'theclick'),
+                '1' => esc_html__('Layout 1', 'theclick'),
+                '2' => esc_html__('Layout 1', 'theclick'),
+                '3' => esc_html__('Layout 1', 'theclick'),
+                '4' => esc_html__('Layout 1', 'theclick'),
+                '6' => esc_html__('Layout 1', 'theclick'),
+                '7' => esc_html__('Layout 1', 'theclick'),
+                '8' => esc_html__('Layout 1', 'theclick'),
+                '9' => esc_html__('Layout 1', 'theclick'),
+                '10' => esc_html__('Layout 1', 'theclick'),
+                '11' => esc_html__('Layout 1', 'theclick'),
+                '12' => esc_html__('Layout 1', 'theclick'),
+                '13' => esc_html__('Layout 1', 'theclick'),
+                '14' => esc_html__('Layout 1', 'theclick')
+            )
+            'default'  => ''
+        ),
+        array(
+            'id'       => 'woo_header_menu',
+            'type'     => 'select',
+            'options'  => theclick_get_nav_menu(['default' => $args['default'],'none' => true]),
+            'default'  => '0',
+            'title'    => esc_html__('Header Menu', 'theclick'),
+            'subtitle' => esc_html__('Choose a menu to show', 'theclick'),
+        ),
+        array(
+            'title'    => esc_html__('Header Width', 'theclick'),
+            'subtitle' => esc_html__('Make header content full width or not', 'theclick'),
+            'id'       => 'woo_header_fullwidth',
+            'type'     => 'button_set',
+            'options'  => array(
+                '1'  => esc_html__('Yes','theclick'),
+                '0'  => esc_html__('No','theclick'),
+            );
+            'default'  => '1'
+        )
     )
 ));
 Redux::setSection($opt_name, theclick_woocommerce_theme_opts());

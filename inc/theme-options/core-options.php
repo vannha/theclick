@@ -172,7 +172,6 @@ if(!function_exists('theclick_header_layout')){
         $layouts['2'] = get_template_directory_uri() . '/assets/images/header/header-2.png';
         $layouts['3'] = get_template_directory_uri() . '/assets/images/header/header-3.png';
         $layouts['4'] = get_template_directory_uri() . '/assets/images/header/header-4.png';
-        $layouts['5'] = get_template_directory_uri() . '/assets/images/header/header-5.png';
         $layouts['6'] = get_template_directory_uri() . '/assets/images/header/header-6.png';
         $layouts['7'] = get_template_directory_uri() . '/assets/images/header/header-7.png';
         $layouts['8'] = get_template_directory_uri() . '/assets/images/header/header-8.png';
