@@ -861,7 +861,7 @@ Redux::setSection($opt_name, array(
                 '12' => esc_html__('Layout 1', 'theclick'),
                 '13' => esc_html__('Layout 1', 'theclick'),
                 '14' => esc_html__('Layout 1', 'theclick')
-            )
+            ),
             'default'  => ''
         ),
         array(
