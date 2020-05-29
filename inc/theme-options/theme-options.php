@@ -889,7 +889,7 @@ Redux::setSection($opt_name, array(
             'subtitle' => esc_html__('Make show, hide header attribute in woo archive, single product', 'theclick'),
             'id'       => 'woo_header_attr_archive',
             'type'     => 'button_set',
-            'multiple' => true,
+            'multi'    => true,
             'options'  => array(
                 ''            => esc_html__('Default','theclick'),
                 'search'      => esc_html__('Search','theclick'),
