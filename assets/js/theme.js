@@ -859,6 +859,8 @@
                     autoplay: false,
                     autoplayTimeout: 2000,
                     slideBy: 'page',
+                    navClass: ['ef5-owl-nav-button ef5-owl-prev','ef5-owl-nav-button ef5-owl-next'],
+                    navText:  ['<span class="ef5-owl-nav-icon prev"></span>', '<span class="ef5-owl-nav-icon next"></span>'],
                     responsive : {
                         0 : {
                             items : 1,
