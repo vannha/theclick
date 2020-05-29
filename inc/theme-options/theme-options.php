@@ -885,10 +885,11 @@ Redux::setSection($opt_name, array(
             'default'  => '1'
         ),
         array(
-            'title'    => esc_html__('Header Attribute (for category, tags archive)', 'theclick'),
-            'subtitle' => esc_html__('Make show, hide header attribute in woo archive', 'theclick'),
+            'title'    => esc_html__('Header Attribute (for category, tags archive, single)', 'theclick'),
+            'subtitle' => esc_html__('Make show, hide header attribute in woo archive, single product', 'theclick'),
             'id'       => 'woo_header_attr_archive',
             'type'     => 'button_set',
+            'multiple' => true,
             'options'  => array(
                 ''            => esc_html__('Default','theclick'),
                 'search'      => esc_html__('Search','theclick'),
@@ -896,6 +897,7 @@ Redux::setSection($opt_name, array(
                 'wishlist'    => esc_html__('Wishlist','theclick'),
                 'compare'     => esc_html__('Compare','theclick'),
                 'login'       => esc_html__('Login','theclick'),
+                'social'      => esc_html__('Social','theclick'),
                 'side-widget' => esc_html__('Side-widget','theclick'),
             ),
             'default'  => ''
