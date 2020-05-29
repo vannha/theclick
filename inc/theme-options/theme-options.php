@@ -867,7 +867,7 @@ Redux::setSection($opt_name, array(
         array(
             'id'       => 'woo_header_menu',
             'type'     => 'select',
-            'options'  => theclick_get_nav_menu(['default' => $args['default'],'none' => true]),
+            'options'  => theclick_get_nav_menu(['default' => false,'none' => true]),
             'default'  => '0',
             'title'    => esc_html__('Header Menu', 'theclick'),
             'subtitle' => esc_html__('Choose a menu to show', 'theclick'),
