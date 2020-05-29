@@ -54,7 +54,7 @@ if(!function_exists('theclick_header_inner_class')){
     function theclick_header_inner_class($class = ''){
         $header_fullwidth = theclick_get_opts('header_fullwidth', '0');
         if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop() || is_product_category() || is_product_tag() || is_singular('product'))) { 
-            $woo_header_fullwidth = theclick_get_theme_opt('woo_header_fullwidth','');
+            $woo_header_fullwidth = theclick_get_theme_opt('woo_header_fullwidth','0');
             $header_fullwidth = !empty($woo_header_fullwidth) ? $woo_header_fullwidth : $header_fullwidth;
         }
         if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop())) { 
