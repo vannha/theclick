@@ -1219,40 +1219,10 @@ if(!function_exists('theclick_page_opts')){
 if(!function_exists('theclick_woocommerce_theme_opts')){
     function theclick_woocommerce_theme_opts($default = false){
         return array(
-            'title'      => esc_html__('WooCommerce', 'theclick'),
+            'title'      => esc_html__('Shop page', 'theclick'),
             'icon'       => 'el el-shopping-cart',
-            'subsection' => false,
+            'subsection' => true,
             'fields'     => array(
-                array(
-                    'id'       => 'loop_product_image',
-                    'type'     => 'info',
-                    'style'    => 'success',
-                    'title'    => esc_html__('Products Images', 'theclick'),
-                    'subtitle' => esc_html__('Custom products image size, ...', 'theclick'),
-                ),
-                array(
-                    'title'    => esc_html__('Main Images', 'theclick'),
-                    'subtitle' => esc_html__('Enter the Main image size', 'theclick'),
-                    'id'       => 'product_single_image_size',
-                    'type'     => 'dimensions',
-                    'units'    => array('px'),
-                    'default'  => array(),
-                ),
-                array(
-                    'title'    => esc_html__('Loop Images', 'theclick'),
-                    'subtitle' => esc_html__('Enter the Loop image size', 'theclick'),
-                    'id'       => 'product_loop_image_size',
-                    'type'     => 'dimensions',
-                    'units'    => array('px'),
-                    'default'  => array(),
-                ),
-                array(
-                    'id'       => 'loop_product_design',
-                    'type'     => 'info',
-                    'style'    => 'success',
-                    'title'    => esc_html__('Shop Page', 'theclick'),
-                    'subtitle' => esc_html__('Custom shop page design, ...', 'theclick'),
-                ),
                 array(
                     'title'     => esc_html__('Catalog Full Width', 'theclick'),
                     'id'        => 'shop_full_width',

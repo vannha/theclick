@@ -799,6 +799,43 @@ Redux::setSection($opt_name, theclick_footer_opts());
 /**
  # WooCommerce
 */
+Redux::setSection($opt_name, array(
+    'title'         => esc_html__('Woocommerces', 'theclick'),
+    'heading'       => '',
+    'icon'          => 'dashicons dashicons-editor-bold',
+    'fields'        => array(
+    )
+));
+Redux::setSection($opt_name, array(
+    'title' => esc_html__('General', 'bixbang'),
+    'icon' => 'el el-shopping-cart',
+    'subsection'    => true,
+    'fields' => array(
+        array(
+            'id'       => 'loop_product_image',
+            'type'     => 'info',
+            'style'    => 'success',
+            'title'    => esc_html__('Products Images', 'theclick'),
+            'subtitle' => esc_html__('Custom products image size, ...', 'theclick'),
+        ),
+        array(
+            'title'    => esc_html__('Main Images', 'theclick'),
+            'subtitle' => esc_html__('Enter the Main image size', 'theclick'),
+            'id'       => 'product_single_image_size',
+            'type'     => 'dimensions',
+            'units'    => array('px'),
+            'default'  => array(),
+        ),
+        array(
+            'title'    => esc_html__('Loop Images', 'theclick'),
+            'subtitle' => esc_html__('Enter the Loop image size', 'theclick'),
+            'id'       => 'product_loop_image_size',
+            'type'     => 'dimensions',
+            'units'    => array('px'),
+            'default'  => array(),
+        ),
+    )
+));
 Redux::setSection($opt_name, theclick_woocommerce_theme_opts());
 Redux::setSection($opt_name, theclick_woocommerce_single_theme_opts());
  
