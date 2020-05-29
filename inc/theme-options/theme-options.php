@@ -878,6 +878,7 @@ Redux::setSection($opt_name, array(
             'id'       => 'woo_header_fullwidth',
             'type'     => 'button_set',
             'options'  => array(
+                ''  => esc_html__('Default','theclick'),
                 '1'  => esc_html__('Yes','theclick'),
                 '0'  => esc_html__('No','theclick'),
             ),
