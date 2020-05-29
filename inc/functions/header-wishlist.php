@@ -21,6 +21,10 @@ if (!function_exists('theclick_header_wishlist')) {
 		]);
 		$classes = ['ef5-header-wishlist-icon header-icon has-badge', $args['class']];
 		$show_wishlist = theclick_get_opts('header_wishlist', '0');
+		if( class_exists('WooCommerce') && ( is_product_category() || is_product_tag() || is_singular('product')) ) { 
+            $woo_header_attr_archive = theclick_get_theme_opt('woo_header_attr_archive','');
+            $show_wishlist = in_array('wishlist', $woo_header_attr_archive) ? '1' : $show_wishlist;
+        }
 		if (!class_exists('WooCommerce') || !class_exists('WPcleverWoosw') || '0' === $show_wishlist) return;
 		echo wp_kses_post($args['before']);
 		?>

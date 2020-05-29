@@ -14,8 +14,7 @@ if(!function_exists('theclick_header_signin_signup')){
 		$login_register = theclick_get_opts('login_register','0');
 		if( class_exists('WooCommerce') && ( is_product_category() || is_product_tag() || is_singular('product')) ) { 
             $woo_header_attr_archive = theclick_get_theme_opt('woo_header_attr_archive','');
-            var_dump(in_array('login', $woo_header_attr_archive)); die('xxx');
-            //$login_register = !empty($woo_header_attr_archive) ? $woo_header_attr_archive : $login_register;
+            $login_register = in_array('login', $woo_header_attr_archive) ? '1' : $login_register;
         }
 		if($login_register == '0') return;
 		$login_regis_type     = theclick_get_opts('login_regis_type', 'both');

@@ -6,6 +6,10 @@
 if(!function_exists('theclick_header_side_nav_icon')){
 	function theclick_header_side_nav_icon($args = []){
 		$show_sidenav = theclick_get_opts('header_side_nav', '0');
+		if( class_exists('WooCommerce') && ( is_product_category() || is_product_tag() || is_singular('product')) ) { 
+	        $woo_header_attr_archive = theclick_get_theme_opt('woo_header_attr_archive','');
+	        $show_sidenav = in_array('side-widget', $woo_header_attr_archive) ? '1' : $show_sidenav;
+	    }
 		if ('0' === $show_sidenav || !is_active_sidebar('sidebar-nav')) return;
 		$args = wp_parse_args($args, [
 			'before'    => '<span id="ef5-main-sidenav" class="header-extra-icon '. $args['class'].'">',

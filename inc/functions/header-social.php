@@ -11,6 +11,10 @@ function theclick_header_social($args = []){
         'class'  => ''
     ]);
     $header_social = theclick_get_opts('header_social', '0');
+    if( class_exists('WooCommerce') && ( is_product_category() || is_product_tag() || is_singular('product')) ) { 
+        $woo_header_attr_archive = theclick_get_theme_opt('woo_header_attr_archive','');
+        $header_social = in_array('social', $woo_header_attr_archive) ? '1' : $header_social;
+    }
     if ($header_social === '0') return;
     
     $classes = [$args['class']];

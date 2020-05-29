@@ -39,6 +39,10 @@ if(!function_exists('theclick_header_search')){
 		$show_search = theclick_get_opts('header_search', '0');
 
 		$search_display = ($args['display'] !='') ? $args['display'] : theclick_get_opts('search_display', '0');
+		if( class_exists('WooCommerce') && ( is_product_category() || is_product_tag() || is_singular('product')) ) { 
+            $woo_header_attr_archive = theclick_get_theme_opt('woo_header_attr_archive','');
+            $show_search = in_array('search', $woo_header_attr_archive) ? '1' : $show_search;
+        }
 		if('0' === $show_search) return;
 
 		$link_classes = ['header-icon search-icon',$args['class']];

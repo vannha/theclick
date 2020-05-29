@@ -17,6 +17,10 @@ if (!function_exists('theclick_header_compare')) {
 		]);
 
 		$show_compare = theclick_get_opts('header_compare', '0');
+		if( class_exists('WooCommerce') && ( is_product_category() || is_product_tag() || is_singular('product')) ) { 
+            $woo_header_attr_archive = theclick_get_theme_opt('woo_header_attr_archive','');
+            $show_compare = in_array('compare', $woo_header_attr_archive) ? '1' : $show_compare;
+        }
 		if (!class_exists('WooCommerce') || !class_exists('WPcleverWooscp') || '0' === $show_compare) return;
 		$_wooscp_open_button = str_replace(array('.', '#'), '', get_option('_wooscp_open_button', 'ef5-header-compare-icon'));
 		echo wp_kses_post($args['before']);

@@ -16,6 +16,10 @@ function theclick_header_cart($args = [])
 		'class'	 => ''
 	]);
 	$show_cart = theclick_get_opts('header_cart', '0');
+	if( class_exists('WooCommerce') && ( is_product_category() || is_product_tag() || is_singular('product')) ) { 
+        $woo_header_attr_archive = theclick_get_theme_opt('woo_header_attr_archive','');
+        $show_cart = in_array('cart', $woo_header_attr_archive) ? '1' : $show_cart;
+    }
 	if ('0' === $show_cart) return;
 	$cart_classes = ['ef5-header-popup', 'ef5-header-cart-icon', 'header-icon', 'style-' . $args['style'], $args['class']];
 	switch ($args['style']) {
