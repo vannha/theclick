@@ -12,6 +12,7 @@ if(class_exists('WooCommerce') && (is_post_type_archive('product') || is_shop())
     $woo_header_menu = get_post_meta(get_option('woocommerce_shop_page_id'), 'header_menu', true);
     $header_menu = $woo_header_menu != '-1' ? $woo_header_menu : $header_menu;
 }
+var_dump($header_menu);
 if('none' === $header_menu) return;
 /* Mega Menu */
 $megamenu = apply_filters('ef5_enable_megamenu', false);
