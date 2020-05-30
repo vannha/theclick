@@ -12,6 +12,9 @@
 	background-attachment: fixed;
 	padding: 115px 0;
 	color: $white;
+	@media (max-width: 1199px){
+		padding: 80px 0;
+	}
 	a{
 		color: inherit;
 		&:hover{
