@@ -403,5 +403,18 @@ table.variations .label,
 			}
 		}
 	}
-
+}
+.ef5-product-gallery-wrap{
+	.flex-direction-nav{
+		a.flex-next{
+			background-color: --accent-color-05;
+			.flex-next-icon{
+				background: url(../images/next-icon.png) no-repeat 0 0;
+			    background-size: cover;
+			    width: 30px;
+			    height: 30px;
+			    display: inline-block;
+			}
+		}
+	}
 }
