@@ -413,24 +413,25 @@ table.variations .label,
 		    width: 25px;
 		    height: 25px;
 		    line-height: 1;
-		    .flex-prev-icon:before,
-		    .flex-next-icon:before{
-		    	display: none;
-		    }
-		    .flex-prev-icon{
-		    	background: url(../images/prev-icon.png) no-repeat center center;
-			    background-size: contain;
-			    width: 25px;
-			    height: 25px;
-			    display: inline-block;
-		    }
-			.flex-next-icon{
-				background: url(../images/next-icon.png) no-repeat center center;
-			    background-size: contain;
-			    width: 25px;
-			    height: 25px;
-			    display: inline-block;
-			}
+		    
+		}
+		.flex-prev-icon:before,
+	    .flex-next-icon:before{
+	    	display: none;
+	    }
+	    .flex-prev-icon{
+	    	background: url(../images/prev-icon.png) no-repeat center center;
+		    background-size: contain;
+		    width: 25px;
+		    height: 25px;
+		    display: inline-block;
+	    }
+		.flex-next-icon{
+			background: url(../images/next-icon.png) no-repeat center center;
+		    background-size: contain;
+		    width: 25px;
+		    height: 25px;
+		    display: inline-block;
 		}
 	}
 	.wc-gallery-sync.thumbnail_v{
