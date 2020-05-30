@@ -407,9 +407,13 @@ table.variations .label,
 .ef5-product-gallery-wrap{
 	.flex-direction-nav{
 		a.flex-next{
-			background-color: --accent-color-05;
+			background-color: transparent;
+		    display: inline-block;
+		    width: 25px;
+		    height: 25px;
+		    line-height: 1;
 			.flex-next-icon{
-				background: url(../images/next-icon.png) no-repeat 0 0;
+				background: url(../images/next-icon.png) no-repeat center center;
 			    background-size: cover;
 			    width: 30px;
 			    height: 30px;
