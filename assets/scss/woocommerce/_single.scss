@@ -438,5 +438,12 @@ table.variations .label,
 		.flex-next-icon{
 			@include transform(rotate(90deg));
 		}
+		.flex-prev-icon{
+	    	background: url(../images/prev-icon-white.png) no-repeat center center;
+	    }
+		.flex-next-icon{
+			background: url(../images/next-icon-white.png) no-repeat center center;
+		}
+		
 	}
 }
