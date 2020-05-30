@@ -815,10 +815,10 @@
                                 height       = $(asNavFor).height(),
                                 height_thumb = $(asNavFor).find('.flex-viewport').height(),
                                 window_w = $(window).width();
-                            if(window_w >= 1024) {
+                            //if(window_w >= 1024) {
                                 slider.css({'max-height' : height_thumb, 'overflow': 'hidden'});
                                 slider.find('> .flex-viewport > *').css({'height': height, 'width': ''});
-                            }
+                            //}
                         }
                     });
                 }
