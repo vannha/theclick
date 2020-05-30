@@ -436,7 +436,7 @@ table.variations .label,
 	.wc-gallery-sync.thumbnail_v{
 		.flex-prev-icon,
 		.flex-next-icon{
-			@include transform(scale(90deg));
+			@include transform(rotate(90deg));
 		}
 	}
 }
