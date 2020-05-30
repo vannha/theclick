@@ -441,9 +441,17 @@ table.variations .label,
 		}
 		.flex-prev-icon{
 	    	background: url(../images/prev-icon-white.png) no-repeat center center;
+	    	background-size: contain;
+		    width: 25px;
+		    height: 25px;
+		    display: inline-block;
 	    }
 		.flex-next-icon{
 			background: url(../images/next-icon-white.png) no-repeat center center;
+			background-size: contain;
+		    width: 25px;
+		    height: 25px;
+		    display: inline-block;
 		}
 		
 	}
