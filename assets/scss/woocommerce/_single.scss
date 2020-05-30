@@ -412,9 +412,13 @@ table.variations .label,
 		    width: 25px;
 		    height: 25px;
 		    line-height: 1;
+		    .flex-prev-icon:before,
+		    .flex-next-icon:before{
+		    	display: none;
+		    }
 			.flex-next-icon{
 				background: url(../images/next-icon.png) no-repeat center center;
-			    background-size: cover;
+			    background-size: contain;
 			    width: 30px;
 			    height: 30px;
 			    display: inline-block;
