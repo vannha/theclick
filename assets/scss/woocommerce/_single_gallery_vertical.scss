@@ -9,6 +9,11 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			width: 50%;
 			max-width: 100%;
 		}
+		@media (min-width: $screen-md-max){
+			flex : 0 0 100%;
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 	.ef5-product-gallery-inner{
 		@include d-flex();
