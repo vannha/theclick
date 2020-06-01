@@ -238,10 +238,10 @@ table.variations .label,
 
 /* Product Meta */
 .ef5-product-meta{
-	padding-top: 23px;
+	padding-top: 30px;
 	border-top: $MainBorder;
 	font-size: 13px;
-	margin-top: $grid-gutter-width;
+	margin-top: 40px;
 	> * {
 		display: block;
 		padding: 10px 0;
@@ -254,7 +254,7 @@ table.variations .label,
 		}
 	}
 	.meta-item{
-		padding: 3px 0;
+		padding: 5px 0;
 	}
 	.ef5-heading{
 		min-width: 100px;
