@@ -68,13 +68,7 @@ add_action('woocommerce_before_single_product_summary', function() {
 		?>
 		<div class="ef5-single-product-gallery-wraps <?php echo esc_attr($class);?>">
 		<div class="ef5-single-product-gallery-wraps-inner">
-			<?php 
-			if($product_style == 'sticky'){
-				do_action('theclick_woocommerce_single_gallery_sticky'); 
-			}else{
-				do_action('theclick_woocommerce_single_gallery'); 
-			}
-			?>
+			<?php do_action('theclick_woocommerce_single_gallery'); ?>
 		</div>
 		</div>
 		<?php
