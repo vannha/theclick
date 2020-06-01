@@ -41,7 +41,7 @@ add_action('woocommerce_before_single_product_summary', function() {
 /**
  * Wrap gallery in div
 */
-if(!function_exists('theclick_woocommerce_single_gallery')){
+//if(!function_exists('theclick_woocommerce_single_gallery')){
 	/**
 	 * Add product attributes to inside gallery
 	 * 
@@ -52,9 +52,11 @@ if(!function_exists('theclick_woocommerce_single_gallery')){
 	remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_images', 20);
 
 	add_action('woocommerce_before_single_product_summary','theclick_woocommerce_single_gallery', 1);
-	/*add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
+	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
-	add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);*/
+	add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
+
+	add_action('woocommerce_before_single_product_summary','theclick_woocommerce_single_gallery_sticky', 2);
 
 	function theclick_woocommerce_single_gallery(){
 		$class = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
@@ -64,17 +66,21 @@ if(!function_exists('theclick_woocommerce_single_gallery')){
 		<div class="ef5-single-product-gallery-wraps <?php echo esc_attr($class);?>">
 		<div class="ef5-single-product-gallery-wraps-inner">
 			<?php 
+			var_dump($product_style);
 			if($product_style == 'sticky'){
-				
+				do_action('theclick_woocommerce_single_gallery_sticky'); 
 			}else{
-				do_action('woocommerce_show_product_images'); 
+				do_action('theclick_woocommerce_single_gallery'); 
 			}
 			?>
 		</div>
 		</div>
 		<?php
 	}
-}
+	function theclick_woocommerce_single_gallery_sticky(){
+		echo 'aaa';
+	}
+//}
 
 /**
  * Add Custom CSS class to Gallery
