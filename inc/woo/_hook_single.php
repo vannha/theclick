@@ -243,7 +243,7 @@ if(!function_exists('theclick_woocommerce_product_meta_end')){
         $image = get_the_post_thumbnail_url($product->get_id());
         $title = get_the_title();
 		?>
-		<span class="meta-item">
+		<span class="meta-item product-sharing">
 			<span class="ef5-heading font-style-700 text-uppercase"><?php esc_html_e('Share:','theclick'); ?></span>
 			<span class="meta-share">
                 <a data-hint="<?php esc_attr_e('Share this post to Facebook','theclick'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
