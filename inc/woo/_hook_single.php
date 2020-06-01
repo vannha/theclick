@@ -26,12 +26,14 @@ if(!function_exists('theclick_woocommerce_after_single_product_summary')){
 add_action('woocommerce_before_single_product_summary', function() {
 	echo '<div class="ef5-product-gallery-wrap"><div class="ef5-product-gallery-inner">';
 }, 0);
+
 add_action('woocommerce_before_single_product_summary', function() { 
 	do_action('theclick_before_single_product_gallery');
 }, 1);
 add_action('woocommerce_before_single_product_summary', function() { 
 	do_action('theclick_after_single_product_gallery');
 }, 999);
+
 add_action('woocommerce_before_single_product_summary', function() {
 	echo '</div></div>';
 }, 1000);
@@ -52,7 +54,7 @@ if(!function_exists('theclick_woocommerce_single_gallery')){
 	add_action('woocommerce_before_single_product_summary','theclick_woocommerce_single_gallery', 1);
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
-	add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
+	//add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
 
 	function theclick_woocommerce_single_gallery(){
 		$class = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
