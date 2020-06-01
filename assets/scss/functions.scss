@@ -36,6 +36,10 @@ $container-wide-max-widths: (
     @include make-container();
     @include make-container-wide-max-widths();
   }
+  body.woocommerce .container {
+    @include make-container();
+    @include make-container-wide-max-widths();
+  }
 }
 
 // Return CSS Variables
