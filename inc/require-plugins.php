@@ -72,6 +72,16 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'required'           => false,
             ),
             array(
+                'name'               => esc_html__('WooCommerce Bought Together','theclick'),
+                'slug'               => 'woo-bought-together',
+                'required'           => false,
+            ),
+            array(
+                'name'               => esc_html__('WooCommerce Product Bundles','theclick'),
+                'slug'               => 'woo-product-bundle',
+                'required'           => false,
+            ),
+            array(
                 'name'               => esc_html__('WooCommerce Currency Switcher','theclick'),
                 'slug'               => 'woocommerce-currency-switcher',
                 'required'           => false,
