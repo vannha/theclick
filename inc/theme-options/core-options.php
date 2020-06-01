@@ -1330,8 +1330,8 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'title'    => esc_html__('Style', 'theclick'),
                     'subtitle' => esc_html__('select a style for single product page', 'theclick'),
                     'options'  => array(
-                        'style-1' => esc_html__( 'Style 1','theclick' ),
-                        'style-2' => esc_html__( 'Style 2','theclick' ),
+                        'default' => esc_html__( 'Basic','theclick' ),
+                        'sticky'  => esc_html__( 'Sticky','theclick' ),
                         'style-3' => esc_html__( 'Style 3','theclick' ),
                         'style-4' => esc_html__( 'Style 4','theclick' ),
                         'style-5' => esc_html__( 'Style 5','theclick' ),

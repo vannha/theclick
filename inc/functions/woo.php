@@ -458,10 +458,10 @@ if(!function_exists('theclick_woo_container_class')){
                 $classes[] = 'container';
             }
         }elseif(is_singular('product')) {
-            $product_style = theclick_get_theme_opt('product_style','style-1');
+            $product_style = theclick_get_theme_opt('product_style','default');
             $product_style = (isset($_GET['product_style']) && !empty($_GET['product_style'])) ? $_GET['product_style'] : $product_style;
             switch ($product_style) {
-                case 'style-1':
+                case 'default':
                     $classes[] = 'container'; 
                     break;
                 default:
