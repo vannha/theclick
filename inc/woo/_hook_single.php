@@ -52,16 +52,24 @@ if(!function_exists('theclick_woocommerce_single_gallery')){
 	remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_images', 20);
 
 	add_action('woocommerce_before_single_product_summary','theclick_woocommerce_single_gallery', 1);
-	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
+	/*add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
-	//add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
+	add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);*/
 
 	function theclick_woocommerce_single_gallery(){
 		$class = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
+		$product_style = theclick_get_theme_opt('product_style','default');
+        $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
 		?>
 		<div class="ef5-single-product-gallery-wraps <?php echo esc_attr($class);?>">
 		<div class="ef5-single-product-gallery-wraps-inner">
-			<?php do_action('theclick_woocommerce_single_gallery'); ?>
+			<?php 
+			if($product_style == 'sticky'){
+				
+			}else{
+				do_action('woocommerce_show_product_images'); 
+			}
+			?>
 		</div>
 		</div>
 		<?php
