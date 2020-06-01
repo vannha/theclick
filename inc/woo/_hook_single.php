@@ -74,7 +74,25 @@ add_action('woocommerce_before_single_product_summary', function() {
 		<?php
 	}
 	function theclick_woocommerce_single_gallery_sticky(){
-		echo 'aaa';
+		global $post, $product; 
+		 
+		$post_thumbnail_id = $product->get_image_id();
+		if ( $product->get_image_id() ) { 
+		?>
+		<div class="main-img-sticky">
+			 
+			<?php
+			
+			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
+			 
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );  
+
+			do_action( 'woocommerce_product_thumbnails' );
+			?>
+			 
+		</div>
+		<?php
+		}
 	}
 //}
 
