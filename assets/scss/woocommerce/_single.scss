@@ -86,6 +86,9 @@ form.cart,
 	> * {
 		margin: 5px;
 	}
+	table td, table th{
+		border: 0;
+	}
 	.quantity{
 		@include d-flex();
 		flex: 0 0 100%;
