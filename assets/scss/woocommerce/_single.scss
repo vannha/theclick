@@ -477,9 +477,11 @@ table.variations .label,
 			border: 0;		
 		}
 	} 
-	.woobt-products{
-		border: 0;		
+	.woobt-wrap .woobt-products.woobt-table{
 		margin-top: -20px;
+	}
+	.woobt-products{
+		border: 0;			
 		.woobt-product > td{
 			border: 0;		
 		}
