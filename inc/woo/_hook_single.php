@@ -149,7 +149,7 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
 		global $product;
 		$product_style = theclick_get_theme_opt('product_style','default');
         $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
-        
+
 		$gallery_layout = theclick_get_opts('product_gallery_layout', 'simple');
 		$product_gallery_thumb_position = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
         $args = wp_parse_args($args, [
@@ -157,7 +157,7 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
         ]);
         $post_thumbnail_id = $product->get_image_id();
     	$attachment_ids = array_merge( (array)$post_thumbnail_id , $product->get_gallery_image_ids() );
-
+var_dump($attachment_ids);
         if('simple' === $args['gallery_layout'] || empty($attachment_ids[0])) return;
         $flex_class = '';
 
