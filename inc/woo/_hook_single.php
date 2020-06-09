@@ -147,6 +147,9 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
 	add_action('theclick_after_single_product_gallery', 'theclick_product_gallery_thumbnail_sync');
 	function theclick_product_gallery_thumbnail_sync($args=[]){
 		global $product;
+		$product_style = theclick_get_theme_opt('product_style','default');
+        $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
+        
 		$gallery_layout = theclick_get_opts('product_gallery_layout', 'simple');
 		$product_gallery_thumb_position = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
         $args = wp_parse_args($args, [
