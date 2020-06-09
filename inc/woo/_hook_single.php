@@ -185,8 +185,14 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
 	            break;
 
 	    }
-	    $gallery_css_class = ['wc-gallery-sync', $gallery_layout, $product_gallery_thumb_position];
-	    $gal_cls = $product_style == 'sticky' ? 'wc-gallery-slicky' : 'wc-gallery-sync-slides flexslider '.$flex_class;
+	    if( $product_style == 'sticky'){
+	    	$gallery_css_class = ['wc-gallery-sticky-wrap', $gallery_layout, $product_gallery_thumb_position];
+	    	$gal_cls = 'wc-gallery-sticky';
+	    }else{
+	    	$gallery_css_class = ['wc-gallery-sync', $gallery_layout, $product_gallery_thumb_position];
+	    	$gal_cls = 'wc-gallery-sync-slides flexslider '.$flex_class;
+	    }
+	    
     ?>
     	<div class="<?php echo trim(implode(' ', $gallery_css_class));?>" data-thumb-w="<?php echo esc_attr($thumb_w);?>" data-thumb-h="<?php echo esc_attr($thumb_h);?>" data-thumb-margin="<?php echo esc_attr($thumb_margin); ?>">
 			<div class="<?php echo esc_attr($gal_cls);?>">

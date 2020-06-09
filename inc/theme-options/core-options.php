@@ -1345,7 +1345,10 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'title'    => esc_html__('Gallery Layouts', 'theclick'),
                     'subtitle' => esc_html__('select a layout for single product image...', 'theclick'),
                     'options'  => $gallery_layout,
-                    'default'  => $default_gallery_layout
+                    'default'  => $default_gallery_layout,
+                    'required' => array(
+                        array('product_style', '=', 'default')
+                    )
                 ),
                 array(
                     'id'       => 'product_gallery_thumb_position',
