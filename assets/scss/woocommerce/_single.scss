@@ -316,16 +316,18 @@ table.variations .label,
 			position: relative;
 			z-index: 1;
 			padding: 19px 0;
-			&:after{
-				content: '';
-				display: block;
-				width: 0px;
-				height: 4px;
-				background: $accent_color;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				@include transition();
+			@media (min-width: 576px){
+				&:after{
+					content: '';
+					display: block;
+					width: 0px;
+					height: 4px;
+					background: $accent_color;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					@include transition();
+				}
 			}
 		}
 
@@ -334,9 +336,11 @@ table.variations .label,
 			color: $HeadingColor;
 			a{
 				color: $HeadingColor;
-				&:after{
-					left: 0;
-					width: 100%;
+				@media (min-width: 576px){
+					&:after{
+						left: 0;
+						width: 100%;
+					}
 				}
 			}
 		}
