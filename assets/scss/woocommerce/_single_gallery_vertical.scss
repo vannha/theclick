@@ -76,8 +76,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 		margin-bottom: $gallery_thumbnail_space;
 	}
 	.woocommerce-product-gallery__image{
-		position: relative;
-		&:after{
+		/* &:after{
 			content: "";
 			background: rgba(0,0,0,0.5);
 			position: absolute;
@@ -87,7 +86,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			bottom: 0;
 			opacity: 0;
 			@include transition(opacity .3s linear 0s);
-		}
+		} */
 		img{
 			width: 100%;
 		}
@@ -95,43 +94,42 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			display: block;
 			position: relative;
 			&:before{
-			    content: "";
-			    width: 50px;
-			    height: 1px;
+			    content: "\f067";
+		        font-family: 'Font Awesome 5 Pro';
+    			font-weight: 300;
+    			font-style: 30px;
+			     
 			    background: #fff;
 			    position: absolute;
 			    left: 50%;
-			    margin-left: -25px;
+			    margin-left: -15px;
 			    top: 50%;
-			    margin-top: -1px;
+			    margin-top: -15px;
 			    z-index: 1;
 			    @include transform(scale(0));
 			    @include transition(all .3s linear 0s); 
 			}
 			&:after{
 			    content: "";
-			    width: 1px;
-			    height: 50px;
-			    background: #fff;
-			    position: absolute;
-			    top: 50%;
-			    margin-top: -25px;
-			    left: 50%;
-			    margin-left: -1px;
-			    z-index: 1;
-			    @include transform(scale(0));
-			    @include transition(all .3s linear 0s); 
+				background: rgba(0,0,0,0.5);
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				opacity: 0;
+				@include transition(opacity .3s linear 0s);
+			}
+			&:hover{
+				a:before{
+					@include transform(scale(1));
+				}
+				&:after{
+					opacity: 1;
+				}
 			}
 		}
-		/* &:hover{
-			cursor: pointer;
-			&:after{
-				opacity: 1;
-			}
-			a:before,a:after{
-				@include transform(scale(1));
-			}
-		} */
+		 
 	} 
 }
 .wc-gallery-sticky-wrap{
