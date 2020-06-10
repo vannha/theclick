@@ -75,7 +75,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 	>div{
 		margin-bottom: $gallery_thumbnail_space;
 	}
-	.wp-post-image,.ef5-img{
+	a > img{
 		width: 100%;
 	}
 }
