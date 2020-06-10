@@ -386,6 +386,7 @@ function theclick_scripts()
         wp_enqueue_style( 'select2' ); 
         if( is_singular( 'product' ) && $product_style == 'sticky'){
             wp_enqueue_script('sticky-kit',get_template_directory_uri().'/assets/js/jquery.sticky-kit.min.js',array('jquery'),'1.1.2',true);
+            
         }
     }
     if(class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_singular('product') ) ){
