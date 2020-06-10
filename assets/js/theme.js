@@ -56,7 +56,6 @@
 	// On scroll
 	$( window ).scroll( function() {
         "use strict";
-        theclick_product_single_sticky_active_class_thumbnail();
 	});
 	// On Resize
 	$( window ).resize( function() {
