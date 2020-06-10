@@ -97,8 +97,8 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			    content: "\f067";
 		        font-family: $FontAwesome5;
     			font-weight: 300;
-    			font-style: 30px;
-			     
+    			font-size: 30px;
+			    display: block;
 			    background: #fff;
 			    position: absolute;
 			    left: 50%;
