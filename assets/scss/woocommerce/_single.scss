@@ -12,7 +12,7 @@ $gallery_thumbnail_space : #{$theclick_product_gallery_thumbnail_space}px;
 .ef5-wc-img-summary{
 	@include d-flex();
 	justify-content: center;
-	margin: -17.5px;
+	margin: -20px;
 	.ef5-product-gallery-wrap{
 		flex: 0 0 auto;
 		width: #{$single_gallery_large_w}px;
@@ -32,7 +32,7 @@ $gallery_thumbnail_space : #{$theclick_product_gallery_thumbnail_space}px;
 		}
 	}
 	> div {
-		padding: 17.5px;
+		padding: 20px;
 	}
 	.ef5-product-gallery-inner{
 		position: relative;
@@ -486,5 +486,5 @@ table.variations .label,
 			border: 0;		
 		}
 	}
-	 
+
 }
