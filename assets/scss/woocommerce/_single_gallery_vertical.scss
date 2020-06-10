@@ -94,10 +94,10 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			display: block;
 			position: relative;
 			&:before{
-			    content: "\f067";
-		        font-family: $FontAwesome5;
+			    content: "\f117";
+		        font-family: Flaticon;
     			font-weight: 300;
-    			font-size: 30px;
+    			font-size: 24px;
 			    display: block;
 			    background: #fff;
 			    position: absolute;
