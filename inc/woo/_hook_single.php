@@ -186,7 +186,7 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
 
 	    }
 	    if( $product_style == 'sticky'){
-	    	$gallery_css_class = ['wc-gallery-sticky-wrap'];
+	    	$gallery_css_class = ['wc-gallery-sync wc-gallery-sticky-wrap'];
 	    	$gal_cls = 'wc-gallery-sticky';
 	    }else{
 	    	$gallery_css_class = ['wc-gallery-sync', $gallery_layout, $product_gallery_thumb_position];
