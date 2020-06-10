@@ -205,6 +205,17 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
 	}
 }
 
+/**
+ * single product submmary wrap
+ */
+add_action( 'woocommerce_single_product_summary', 'theclick_wrap_start_single_product_summary',1);
+function theclick_wrap_start_single_product_summary(){
+	echo '<div class="single-product-summary-wrap">';
+}
+add_action( 'woocommerce_single_product_summary', 'theclick_wrap_end_single_product_summary',99);
+function theclick_wrap_end_single_product_summary(){
+	echo '</div>';
+}
 /*
  * Single Product title
 */
