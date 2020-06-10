@@ -56,6 +56,7 @@
 	// On scroll
 	$( window ).scroll( function() {
         "use strict";
+        theclick_product_single_sticky_active_class_thumbnail();
 	});
 	// On Resize
 	$( window ).resize( function() {
@@ -1051,6 +1052,32 @@
              
         });
     }
+    function theclick_product_single_sticky_active_class_thumbnail(){
+        if ( $(window).width() < 768 ) {
+            return;
+        }
+        if ( ! $( '.product-style-sticky .wc-gallery-sticky').length ) {
+            return;
+        }
+        var scroll_top = $(window).scrollTop();
+        var top = 0;
+        if ( $( '#wpadminbar' ).length ) {
+            top += $( '#wpadminbar' ).height();
+        }
+
+        if ( $( '.sticky-on' ).length ) {
+            top += $( '.sticky-on' ).height();
+        }
+        $( '.product-style-sticky .wc-gallery-sticky .flex-control-thumb').each(function(index, el) {
+            var idx = $(this).attr('data-idx');
+            if( (scroll_top + top) >= $(this).offset().top){
+                $( '.product-style-sticky .wc-gallery-sticky .flex-control-thumb').removeClass('active');
+                $( '.product-style-sticky .wc-gallery-sticky .flex-control-thumb.idx-'+idx).addClass('active');
+            }
+        });
+    }
+     
+
     function theclick_woo_filter_sidebar(){
         'use strict';
         $('.filter-tune').on('click',function(e){
