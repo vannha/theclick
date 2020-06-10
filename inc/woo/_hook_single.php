@@ -87,8 +87,30 @@ function theclick_woocommerce_single_gallery_sticky(){
 		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		 
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );  
-		
-		do_action( 'woocommerce_product_thumbnails' );
+
+		$attachment_ids = $product->get_gallery_image_ids();
+
+		if ( $attachment_ids ) {
+			foreach ( $attachment_ids as $k => $attachment_id ) {
+				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
+				$full_src          = wp_get_attachment_image_src( $attachment_id, $full_size );
+				$attributes      = array(
+                    'title'                   => get_post_field( 'post_title', $attachment_id ),
+                    'data-caption'            => get_post_field( 'post_excerpt', $attachment_id ),
+                    'data-src'                => $full_src[0],
+                    'data-zoom-image'         => $full_src[0],  
+                    'data-large_image'        => $full_src[0],
+                    'data-large_image_width'  => $full_src[1],
+                    'data-large_image_height' => $full_src[2],
+                );
+                $html = '<a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
+                $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes );
+                $html .= '</a>';
+
+                echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
+			}
+		}
+		//do_action( 'woocommerce_product_thumbnails' );
 		?>
 		 
 	</div>
