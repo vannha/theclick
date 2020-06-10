@@ -197,7 +197,7 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
     	<div class="<?php echo trim(implode(' ', $gallery_css_class));?>" data-thumb-w="<?php echo esc_attr($thumb_w);?>" data-thumb-h="<?php echo esc_attr($thumb_h);?>" data-thumb-margin="<?php echo esc_attr($thumb_margin); ?>">
 			<div class="<?php echo esc_attr($gal_cls);?>">
 	            <?php foreach ( $attachment_ids as $attachment_id ) { ?>
-	                <div class="wc-gallery-sync-slide flex-control-thumb"><?php theclick_image_by_size(['id' => $attachment_id, 'size' => $thumbnail_size]);?></div>
+	                <div class="wc-gallery-sync-slide flex-control-thumb"><?php theclick_image_by_size(['id' => $attachment_id, 'size' => $thumbnail_size], 'class' => 'ef5-img');?></div>
 	            <?php } ?>
 	        </div>
 	    </div>
