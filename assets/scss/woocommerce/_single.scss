@@ -342,6 +342,13 @@ table.variations .label,
 						width: 100%;
 					}
 				}
+
+			}
+			@media (max-width: 575px){
+				color: var(--accent-color);
+				a{
+					color: var(--accent-color);
+				}
 			}
 		}
 	}
