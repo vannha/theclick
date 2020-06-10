@@ -334,7 +334,7 @@
             ====================*/
             $('.main-img-sticky').each(function() {
                 $(this).magnificPopup({
-                    delegate: '.woocommerce-product-gallery__image > a',
+                    delegate: '> a',
                     type: 'image',
                     gallery: {
                         enabled: true
