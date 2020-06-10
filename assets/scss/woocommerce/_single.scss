@@ -13,6 +13,9 @@ $gallery_thumbnail_space : #{$theclick_product_gallery_thumbnail_space}px;
 	@include d-flex();
 	justify-content: center;
 	margin: -20px;
+	@media( max-width: 1199px){
+		margin: -15px;
+	}
 	.ef5-product-gallery-wrap{
 		flex: 0 0 auto;
 		width: #{$single_gallery_large_w}px;
@@ -33,6 +36,9 @@ $gallery_thumbnail_space : #{$theclick_product_gallery_thumbnail_space}px;
 	}
 	> div {
 		padding: 20px;
+		@media( max-width: 1199px){
+			padding: 15px;
+		}
 	}
 	.ef5-product-gallery-inner{
 		position: relative;
