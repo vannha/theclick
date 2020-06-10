@@ -95,7 +95,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			position: relative;
 			&:before{
 			    content: "\f067";
-		        font-family: 'Font Awesome 5 Pro';
+		        font-family: $FontAwesome5;
     			font-weight: 300;
     			font-style: 30px;
 			     
