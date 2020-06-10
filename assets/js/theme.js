@@ -1050,9 +1050,6 @@
         });
     }
     function theclick_product_single_sticky_active_class_thumbnail(){
-        if ( $(window).width() < 768 ) {
-            return;
-        }
         if ( ! $( '.product-style-sticky .wc-gallery-sticky').length ) {
             return;
         }
