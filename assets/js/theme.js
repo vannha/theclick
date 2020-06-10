@@ -957,7 +957,7 @@
     }
 
     function theclick_product_single_sticky_thumb(){
-        var $details = $( '.wc-gallery-sticky-wrap' );
+        var $details = $( '.wc-gallery-sticky' );
         $('body').trigger( 'sticky_kit:recalc' );
         if ( $(window).width() < 768 ) {
             return;
