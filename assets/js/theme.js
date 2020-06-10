@@ -962,7 +962,7 @@
         if ( $(window).width() < 768 ) {
             return;
         }
-        console.log($details.length);
+         
         if ( ! $details.length ) {
             return;
         }
