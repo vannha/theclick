@@ -1052,7 +1052,8 @@
              
         });
     }
-    function theclick_product_single_sticky_active_class_thumbnail(){
+    //function theclick_product_single_sticky_active_class_thumbnail(){
+    $(window).on('scroll', function() {
         if ( $(window).width() < 768 ) {
             return;
         }
