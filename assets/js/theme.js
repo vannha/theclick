@@ -1068,7 +1068,7 @@
         if ( $( '.sticky-on' ).length ) {
             top += $( '.sticky-on' ).height();
         }
-        $( '.product-style-sticky .wc-gallery-sticky .flex-control-thumb').each(function(index, el) {
+        $( '.product-style-sticky .main-img-sticky .thumbnail-slider-item').each(function(index, el) {
             var idx = $(this).attr('data-idx');
             if( (scroll_top + top) >= $(this).offset().top){
                 $( '.product-style-sticky .wc-gallery-sticky .flex-control-thumb').removeClass('active');
