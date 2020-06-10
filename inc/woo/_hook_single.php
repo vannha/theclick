@@ -9,7 +9,7 @@ if(!function_exists('theclick_woocommerce_before_single_product_summary')){
 	function theclick_woocommerce_before_single_product_summary(){
 		$product_style = theclick_get_theme_opt('product_style','default');
         $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
-		$classes = ['ef5-wc-img-summary', theclick_get_opts('product_gallery_layout','simple'),$product_style];
+		$classes = ['ef5-wc-img-summary', theclick_get_opts('product_gallery_layout','simple'),'product-style-'.$product_style];
 		echo '<div class="'.trim(implode(' ', $classes)).'">';
 	}
 }
