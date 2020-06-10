@@ -75,7 +75,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 	>div{
 		margin-bottom: $gallery_thumbnail_space;
 	}
-	a > img{
+	.woocommerce-product-gallery__image img{
 		width: 100%;
 	}
 }
