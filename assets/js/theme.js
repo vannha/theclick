@@ -1033,7 +1033,7 @@
     }
     function theclick_product_single_sticky_click_thumbnail(){
         $('.product-style-sticky .wc-gallery-sticky .flex-control-thumb').live('click', function(event) {
-             
+            $('.product-style-sticky .wc-gallery-sticky .flex-control-thumb').removeClass('active'); 
             var idx = $(this).attr('data-idx');
             var top = 0;
             if ( $( '#wpadminbar' ).length ) {

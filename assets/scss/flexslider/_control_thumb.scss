@@ -6,6 +6,7 @@
 	@include opacity(0.5);
 	@include transition();
 	&:hover,
+	&.active,
 	&.flex-active-slide{
 		@include opacity(1);
 	}
