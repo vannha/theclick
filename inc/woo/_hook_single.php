@@ -43,60 +43,58 @@ add_action('woocommerce_before_single_product_summary', function() {
 /**
  * Wrap gallery in div
 */
-//if(!function_exists('theclick_woocommerce_single_gallery')){
-	/**
-	 * Add product attributes to inside gallery
-	 * 
-	 * add product badge: hot, new, sale, ...
-	 * Hook: woocommerce_product_thumbnails
-	*/
-	remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_sale_flash', 10);
-	remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_images', 20);
+/**
+ * Add product attributes to inside gallery
+ * 
+ * add product badge: hot, new, sale, ...
+ * Hook: woocommerce_product_thumbnails
+*/
+remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_sale_flash', 10);
+remove_action('woocommerce_before_single_product_summary','woocommerce_show_product_images', 20);
 
-	add_action('woocommerce_before_single_product_summary','theclick_woocommerce_single_gallery', 1);
-	 
-	function theclick_woocommerce_single_gallery(){
-		$class = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
-		$product_style = theclick_get_theme_opt('product_style','default');
-        $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
-        add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
-		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
-        if($product_style == 'sticky'){
-    		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_sticky', 3);
-        }else{
-			add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
-		}
+add_action('woocommerce_before_single_product_summary','theclick_woocommerce_single_gallery', 1);
  
-		?>
-		<div class="ef5-single-product-gallery-wraps <?php echo esc_attr($class);?>">
-		<div class="ef5-single-product-gallery-wraps-inner">
-			<?php do_action('theclick_woocommerce_single_gallery'); ?>
-		</div>
-		</div>
-		<?php
+function theclick_woocommerce_single_gallery(){
+	$class = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
+	$product_style = theclick_get_theme_opt('product_style','default');
+    $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
+    add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
+	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
+    if($product_style == 'sticky'){
+		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_sticky', 3);
+    }else{
+		add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
 	}
-	function theclick_woocommerce_single_gallery_sticky(){
-		global $post, $product; 
-		 
-		$post_thumbnail_id = $product->get_image_id();
-		if ( $product->get_image_id() ) { 
-		?>
-		<div class="main-img-sticky">
-			 
-			<?php
-			
-			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
-			 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );  
 
-			do_action( 'woocommerce_product_thumbnails' );
-			?>
-			 
-		</div>
+	?>
+	<div class="ef5-single-product-gallery-wraps <?php echo esc_attr($class);?>">
+	<div class="ef5-single-product-gallery-wraps-inner">
+		<?php do_action('theclick_woocommerce_single_gallery'); ?>
+	</div>
+	</div>
+	<?php
+}
+function theclick_woocommerce_single_gallery_sticky(){
+	global $post, $product; 
+	 
+	$post_thumbnail_id = $product->get_image_id();
+	if ( $product->get_image_id() ) { 
+	?>
+	<div class="main-img-sticky">
+		 
 		<?php
-		}
+		
+		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
+		 
+		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );  
+
+		do_action( 'woocommerce_product_thumbnails' );
+		?>
+		 
+	</div>
+	<?php
 	}
-//}
+}
 
 /**
  * Add Custom CSS class to Gallery
