@@ -78,6 +78,8 @@ function theclick_woocommerce_single_gallery_sticky(){
 	global $post, $product; 
 	 
 	$post_thumbnail_id = $product->get_image_id();
+	$full_size_image   = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
+	$image_single      = wp_get_attachment_image_src( $post_thumbnail_id, 'woocommerce_single' );
 	if ( $product->get_image_id() ) { 
 	?>
 	<div class="main-img-sticky">
@@ -86,7 +88,25 @@ function theclick_woocommerce_single_gallery_sticky(){
 		
 		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		 
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );  
+		//echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );  
+		if(has_post_thumbnail()){
+            $attributes_main = array(
+                'title'                   => get_post_field( 'post_title', $post_thumbnail_id ),
+                'data-caption'            => get_post_field( 'post_excerpt', $post_thumbnail_id ),
+                'data-src'                => $image_single[0],
+                'data-large_image'        => $full_size_image[0],
+                'data-zoom-image'         => $full_size_image[0],  
+                'data-large_image_width'  => $full_size_image[1],
+                'data-large_image_height' => $full_size_image[2],
+                'srcset'                  => ''  
+            );
+
+            $html = '<a href="' . esc_url( $image_full[0] ) . '" class="thumbnail-slider-item idx-0" data-idx="0">';
+            $html .= get_the_post_thumbnail( $post->ID, apply_filters( 'theclick_single_product_sticky_main_img_size', 'woocommerce_single' ), $attributes_main );
+            $html .= '</a>';
+            
+            echo apply_filters( 'woocommerce_single_product_image_thumbnail_html',$html,get_post_thumbnail_id( $post->ID ) );
+        }
 
 		$attachment_ids = $product->get_gallery_image_ids();
 
@@ -94,7 +114,7 @@ function theclick_woocommerce_single_gallery_sticky(){
 			foreach ( $attachment_ids as $k => $attachment_id ) {
 				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
 				$full_src          = wp_get_attachment_image_src( $attachment_id, $full_size );
-				$attributes      = array(
+				$attributes_gal      = array(
                     'title'                   => get_post_field( 'post_title', $attachment_id ),
                     'data-caption'            => get_post_field( 'post_excerpt', $attachment_id ),
                     'data-src'                => $full_src[0],
@@ -104,13 +124,12 @@ function theclick_woocommerce_single_gallery_sticky(){
                     'data-large_image_height' => $full_src[2],
                 );
                 $html = '<a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
-                $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes );
+                $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
                 $html .= '</a>';
 
                 echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
 			}
 		}
-		//do_action( 'woocommerce_product_thumbnails' );
 		?>
 		 
 	</div>
@@ -218,8 +237,8 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
     ?>
     	<div class="<?php echo trim(implode(' ', $gallery_css_class));?>" data-thumb-w="<?php echo esc_attr($thumb_w);?>" data-thumb-h="<?php echo esc_attr($thumb_h);?>" data-thumb-margin="<?php echo esc_attr($thumb_margin); ?>">
 			<div class="<?php echo esc_attr($gal_cls);?>">
-	            <?php foreach ( $attachment_ids as $attachment_id ) { ?>
-	                <div class="wc-gallery-sync-slide flex-control-thumb"><?php theclick_image_by_size(['id' => $attachment_id, 'size' => $thumbnail_size]);?></div>
+	            <?php foreach ( $attachment_ids as $k => $attachment_id ) { ?>
+	                <div class="wc-gallery-sync-slide flex-control-thumb thumbnail-slider-item idx-<?php echo esc_attr($k)?>" data-idx="<?php echo esc_attr($k)?>"><?php theclick_image_by_size(['id' => $attachment_id, 'size' => $thumbnail_size]);?></div>
 	            <?php } ?>
 	        </div>
 	    </div>
