@@ -121,7 +121,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 				@include transition(opacity .3s linear 0s);
 			}
 			&:hover{
-				a:before{
+				&:before{
 					@include transform(scale(1));
 				}
 				&:after{
