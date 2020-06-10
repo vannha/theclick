@@ -1075,7 +1075,7 @@
                 $( '.product-style-sticky .wc-gallery-sticky .flex-control-thumb.idx-'+idx).addClass('active');
             }
         });
-    });
+    };
      
 
     function theclick_woo_filter_sidebar(){
