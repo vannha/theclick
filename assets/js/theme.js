@@ -1043,7 +1043,7 @@
             if ( $( '.sticky-on' ).length ) {
                 top += $( '.sticky-on' ).height();
             }
-            var top_b = $( '.product-style-sticky .single-product-summary-wrap .woocommerce-product-gallery__image.idx-'+idx ).offset().top;
+            var top_b = $( '.product-style-sticky .main-img-sticky .thumbnail-slider-item.idx-'+idx ).offset().top;
             var topx = top_b - top;
             
             $('html, body').animate({scrollTop:topx},500);
