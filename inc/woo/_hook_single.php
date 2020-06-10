@@ -87,7 +87,7 @@ function theclick_woocommerce_single_gallery_sticky(){
 		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		 
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );  
-
+		
 		do_action( 'woocommerce_product_thumbnails' );
 		?>
 		 
