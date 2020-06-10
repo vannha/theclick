@@ -85,6 +85,8 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			left: 0;
 			right: 0;
 			bottom: 0;
+			opacity: 0;
+			@include transition(opacity .3s linear 0s);
 		}
 		img{
 			width: 100%;
@@ -102,6 +104,9 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			    margin-left: -25px;
 			    top: 50%;
 			    margin-top: -1px;
+			    z-index: 1;
+			    @include (transform(scale(0)));
+			     
 			}
 			&:after{
 			    content: "";
@@ -113,6 +118,17 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			    margin-top: -25px;
 			    left: 50%;
 			    margin-left: -1px;
+			    z-index: 1;
+			    @include (transform(scale(0)));
+			    
+			}
+		}
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+			a:before,a:after{
+				@include (transform(scale(1)));
 			}
 		}
 	} 
