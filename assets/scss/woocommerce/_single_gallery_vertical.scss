@@ -107,6 +107,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			    margin-top: -15px;
 			    z-index: 1;
 			    background: transparent;
+			    color: #fff;
 			    @include transform(scale(0));
 			    @include transition(all .3s linear 0s); 
 			}
