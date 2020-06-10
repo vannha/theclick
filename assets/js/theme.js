@@ -32,6 +32,7 @@
         theclick_woo_filter_type();
         theclick_woo_loadmore();
         theclick_infinite_woo();
+        theclick_product_single_sticky_thumb();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -62,6 +63,8 @@
         theclick_catalog_mega_menu();
 		theclick_touched_side();
         theclick_vcRow();
+        //woo
+        theclick_product_single_sticky_thumb();
 	});
 
     // Ajax Complete
@@ -951,6 +954,27 @@
                     
             });
         }
+    }
+
+    function theclick_product_single_sticky_thumb(){
+        var $details = $( '.wc-gallery-sticky-wrap' );
+        $('body').trigger( 'sticky_kit:recalc' );
+        if ( $(window).width() < 768 ) {
+            return;
+        }
+        if ( ! $details.length ) {
+            return;
+        }
+        var top = 0;
+        if ( $( '#wpadminbar' ).length ) {
+            top += $( '#wpadminbar' ).height();
+        }
+
+        if ( $( '.sticky-on' ).length ) {
+            top += $( '.sticky-on' ).height();
+        }
+        
+        $details.stick_in_parent({ offset_top: top });
     }
 
     function theclick_woo_filter_sidebar(){
