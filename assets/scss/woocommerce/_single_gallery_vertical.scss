@@ -124,6 +124,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			}
 		}
 		&:hover{
+			cursor: pointer;
 			&:after{
 				opacity: 1;
 			}
