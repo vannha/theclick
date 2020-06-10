@@ -75,6 +75,9 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 	>div{
 		margin-bottom: $gallery_thumbnail_space;
 	}
+	.wp-post-image{
+		width: 100%;
+	}
 }
 .wc-gallery-sticky-wrap{
 	padding-left: #{$theclick_product_gallery_thumbnail_space /2}px;
