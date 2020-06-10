@@ -47,7 +47,9 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 		float: none !important;
 		margin-bottom: $gallery_thumbnail_space;
 	}
-
+	.ef5-img{
+		width: 100%;
+	}
 	.wc-gallery-sync .flex-direction-nav{
 		a{
 			left: 50%;
