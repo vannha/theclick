@@ -981,7 +981,7 @@
     }
 
     function theclick_product_single_sticky_summary(){
-        var $details = $( '.product-style-sticky .summary' );
+        var $details = $( '.product-style-sticky .single-product-summary-wrap' );
         $('body').trigger( 'sticky_kit:recalc' );
         if ( $(window).width() < 992 ) {
             return;
