@@ -106,7 +106,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			    margin-top: -1px;
 			    z-index: 1;
 			    @include transform(scale(0));
-			     
+			    @include transition(scale .3s linear 0s); 
 			}
 			&:after{
 			    content: "";
@@ -120,7 +120,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			    margin-left: -1px;
 			    z-index: 1;
 			    @include transform(scale(0));
-			    
+			    @include transition(scale .3s linear 0s); 
 			}
 		}
 		&:hover{
