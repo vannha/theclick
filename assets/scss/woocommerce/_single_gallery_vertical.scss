@@ -74,3 +74,7 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 		margin-bottom: $gallery_thumbnail_space;
 	}
 }
+.wc-gallery-sticky-wrap{
+	padding-left: #{$theclick_product_gallery_thumbnail_space /2}px;
+	padding-right: #{$theclick_product_gallery_thumbnail_space /2}px;
+}
