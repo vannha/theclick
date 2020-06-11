@@ -157,7 +157,7 @@ if(!function_exists('theclick_wc_single_product_gallery_layout')){
 	add_filter('woocommerce_single_product_carousel_options', 'theclick_wc_single_product_gallery_layout' );
     function theclick_wc_single_product_gallery_layout($options){
         $gallery_layout = theclick_get_opts('product_gallery_layout', 'simple');
-
+        $gallery_layout = (isset($_GET['gallery_layout']) && !empty($_GET['gallery_layout'])) ? $_GET['gallery_layout'] : $gallery_layout;
         $options['prevText']     = '<span class="flex-prev-icon"></span>';
 		$options['nextText']     = '<span class="flex-next-icon"></span>';
 
@@ -192,6 +192,7 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
         $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
 
 		$gallery_layout = theclick_get_opts('product_gallery_layout', 'simple');
+		$gallery_layout = (isset($_GET['gallery_layout']) && !empty($_GET['gallery_layout'])) ? $_GET['gallery_layout'] : $gallery_layout;
 		$product_gallery_thumb_position = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
         $args = wp_parse_args($args, [
             'gallery_layout' => $gallery_layout
