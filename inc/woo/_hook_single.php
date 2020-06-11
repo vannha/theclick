@@ -9,7 +9,9 @@ if(!function_exists('theclick_woocommerce_before_single_product_summary')){
 	function theclick_woocommerce_before_single_product_summary(){
 		$product_style = theclick_get_theme_opt('product_style','default');
         $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
-		$classes = ['ef5-wc-img-summary', theclick_get_opts('product_gallery_layout','simple'),'product-style-'.$product_style];
+        $gallery_layout = theclick_get_opts('product_gallery_layout','simple');
+        $gallery_layout = (isset($_GET['gallery_layout']) && !empty($_GET['gallery_layout'])) ? $_GET['gallery_layout'] : $gallery_layout;
+		$classes = ['ef5-wc-img-summary', $gallery_layout,'product-style-'.$product_style];
 		echo '<div class="'.trim(implode(' ', $classes)).'">';
 	}
 }
@@ -142,7 +144,9 @@ function theclick_woocommerce_single_gallery_sticky(){
 */
 add_filter('woocommerce_single_product_image_gallery_classes','theclick_woocommerce_single_product_image_gallery_classes');
 function theclick_woocommerce_single_product_image_gallery_classes($class){
-	$class[] = 'ef5-'.theclick_get_opts('product_gallery_layout', 'simple');
+	$gallery_layout = theclick_get_opts('product_gallery_layout','simple');
+    $gallery_layout = (isset($_GET['gallery_layout']) && !empty($_GET['gallery_layout'])) ? $_GET['gallery_layout'] : $gallery_layout;
+	$class[] = 'ef5-'.$gallery_layout;
 	$class[] = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
 	return $class;
 }
