@@ -80,3 +80,5 @@ function theclick_get_product_categories_for_autocomplete(){
     }
     return $result;
 }
+
+

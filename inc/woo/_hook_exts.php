@@ -95,3 +95,45 @@ add_action('theclick_woocommerce_loop_product_add_to_cart','woocommerce_loop_com
 function woocommerce_loop_compare_quickview_wishlist_wrap_close(){
     echo '</div></div>';
 }
+
+add_action( 'pa_color_edit_form_fields', 'theclick_pa_color_taxonomy_edit_meta_field', 11, 2 );
+function theclick_pa_color_taxonomy_edit_meta_field($term) {
+    wp_enqueue_style( 'wp-color-picker');
+    wp_enqueue_script( 'wp-color-picker');
+    wp_enqueue_media();
+    $term_id = $term->term_id;
+    $color_value = theclick_get_custom_meta_pa_color($term_id);
+    $color_value = !empty($color_value) ? $color_value : '';
+    ?>
+
+    <tr class="form-field">
+        <th scope="row" valign="top">
+            <label for="color_value"><?php esc_html_e( 'Choosse a color', 'theclick' ); ?></label>
+        </th>
+        <td>
+            <div class="pagebox">
+                <input class="config_woo_color_field" type="text" name="color_value" value="<?php echo esc_attr( $color_value ); ?>"/>
+            </div>
+        </td>
+    </tr>
+    <?php
+}
+
+function theclick_get_custom_meta_pa_color($term_id)
+{
+    
+    $color_value = get_term_meta($term_id,'color_value',true)
+    if( empty($color_value) ){
+        $option_name =  "wc_pa_color_{$term_id}_custom_meta";
+        $color_value = get_option( $option_name ,'');
+    }
+    return $color_value;
+}
+
+function theclick_save_pa_color_custom_meta( $term_id ) {
+    if ( isset( $_POST['color_value'] ) ) {
+        update_term_meta($term_id,'color_value',$_POST['color_value']);
+    }
+}
+add_action( 'edited_pa_color', 'theclick_save_pa_color_custom_meta', 10, 2 );
+add_action( 'create_pa_color', 'theclick_save_pa_color_custom_meta', 10, 2 );
