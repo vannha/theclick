@@ -266,25 +266,110 @@ function theclick_wrap_end_single_product_summary(){
  * Single Product title
 */
 if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
-
-	/**
-	 * Output the product title.
-	 */
 	function woocommerce_template_single_title() {
 		the_title( '<div class="product-single-title ef5-heading h2">', '</div>' );
 	}
 }
+
 /**
  * Single Product Price
 **/
 if ( ! function_exists( 'woocommerce_template_single_price' ) ) {
-	/**
-	 * Output the product price.
-	 */
 	function woocommerce_template_single_price() {
 		global $product;
 		echo theclick_html($product->get_price_html());
 	}
+}
+/**
+ * Single Product variation attribute
+**/
+//add_filter('woocommerce_dropdown_variation_attribute_options_html', 'theclick_wc_dropdown_variation_filter_pa_color_add_custom_field', 11, 2);
+function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, $args)
+{
+    $single_template = theclick_get_opts('woo_single_template','default');
+    if(isset($_GET['single_template']) )
+        $single_template = $_GET['single_template'];
+
+    $variations_img = theclick_get_opts('woo_single_variations_img',false);
+    if(isset($_GET['variations_img']) && $_GET['variations_img'] == true )
+        $variations_img = $_GET['variations_img'];
+    $variations_img_cls = ($variations_img == true) ? 'variations-img' : '';
+
+    if ($args['attribute'] !== 'pa_color')
+        return $html;
+    $product = $args['product'];
+    $available_variations = $product->get_available_variations();
+    $terms = wc_get_product_terms($product->get_id(), 'pa_color', array('fields' => 'all'));
+    $terms_and_meta = [];
+    foreach ($terms as $term) {
+        $terms_and_meta[] = array(
+            'term'   => $term,
+            'custom' => theclick_get_custom_meta_pa_color($term->term_id)
+        );
+    };
+    $image_attach_color = array();
+    $image_attach_full_color = array();
+    $default_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),'shop_single');
+    $default_image = (!empty($default_image[0])) ?  $default_image[0] : '';
+    foreach ($available_variations as $variation)
+    {
+        if(empty($variation['attributes']) || empty($variation['attributes']['attribute_pa_color']))
+            continue;
+        $color =  $variation['attributes']['attribute_pa_color'];
+        if(!empty($variation['image_id'])){
+            $image_attach_color[$color] = wp_get_attachment_image_src($variation['image_id'],'shop_single');
+            if($single_template == 'gallery'){  
+                $image_attach_color[$color] = theclick_get_image_url_by_size($variation['image_id'],'600x690');
+            }
+            $image_attach_full_color[$color] = wp_get_attachment_image_src($variation['image_id'],'full');
+        }
+        
+        if(is_array($image_attach_color[$color])){
+            $image_attach_color[$color] = $image_attach_color[$color][0];
+            $image_attach_full_color[$color] = $image_attach_full_color[$color][0];
+        }else{
+            if($single_template == 'gallery'){  
+                $image_attach_color[$color] = $image_attach_color[$color];
+                $image_attach_full_color[$color] = $image_attach_full_color[$color][0];
+            }else{
+                $image_attach_color[$color] = $default_image;
+                $image_attach_full_color[$color] = $default_image;
+            }
+        }
+    }
+    ob_start(); ?>
+    <div id="bixbang-auto_refill" class="bixbang-auto_refill elevate-zooms" data-id="pa_color">
+        <?php foreach ($terms_and_meta as $term_and_meta): ?>
+            <?php extract($term_and_meta);
+            $type_use = 'name';
+            if (!empty($custom['color_value']))
+                $type_use = 'color';
+            if (!empty($custom['color_image']))
+                $type_use = 'image';
+            switch ($type_use) {
+                case 'image':
+                    $bg_css = "background-image:url({$custom['color_image']})";
+                    break;
+                default:
+                    $bg_css = "background-color:" . ((!empty($custom['color_value'])) ? $custom['color_value'] : $term->slug);
+                    break;
+            }
+
+            $image_attach = $image_attach_color[$term->slug];
+            $image_attach_full = $image_attach_full_color[$term->slug];
+
+            if($variations_img){
+                $bg_css = "background-image:url({$image_attach}); background-size: cover; background-position-y: center;";
+            }
+
+            ?>
+            <a href="#" onclick="return false;" aria-label="<?php echo esc_html($term->name) ?>"  class="auto_refill-element auto_refill-enabled product_refill-image single-color-att hint--top <?php echo esc_attr($variations_img_cls)?>" data-original-title="<?php echo esc_html($term->name) ?>" data-image="<?php echo esc_attr($image_attach) ?>" data-value="<?php echo esc_attr($term->slug) ?>" data-img-full="<?php echo esc_attr($image_attach_full)?>"
+                 style="<?php echo esc_attr($bg_css) ?>"><span class="fa fa-check"></span>
+            </a>
+        <?php endforeach; ?>
+    </div>
+    <?php
+    return ob_get_clean().$html;
 }
 /**
  * Single Product Quantity Form
