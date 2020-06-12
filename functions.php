@@ -248,6 +248,9 @@ add_action('admin_init', 'theclick_editor_styles');
 function theclick_admin_style()
 {
     wp_enqueue_style('theclick', get_template_directory_uri() . '/assets/admin/css/admin.css');
+    if(class_exists('Woocommerce')) {
+        wp_enqueue_script('theclick-admin', get_template_directory_uri() . '/assets/admin/js/admin-theme.js', array(), '1.0.0', true);
+    }
 }
 add_action('admin_enqueue_scripts', 'theclick_admin_style');
 
