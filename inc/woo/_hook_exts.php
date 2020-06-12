@@ -122,7 +122,7 @@ function theclick_pa_color_taxonomy_edit_meta_field($term) {
 function theclick_get_custom_meta_pa_color($term_id)
 {
     
-    $color_value = get_term_meta($term_id,'color_value',true)
+    $color_value = get_term_meta($term_id,'color_value',true);
     if( empty($color_value) ){
         $option_name =  "wc_pa_color_{$term_id}_custom_meta";
         $color_value = get_option( $option_name ,'');
