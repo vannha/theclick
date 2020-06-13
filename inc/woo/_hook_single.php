@@ -326,7 +326,7 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
             $image_attach_color[$color] = ''; 
             $image_attach_full_color[$color] = '';
         }
-    }
+    } var_dump($image_attach_color);
     ob_start(); ?>
     <div id="theclick-auto_refill" class="theclick-auto_refill" data-id="pa_color">
         <?php 
