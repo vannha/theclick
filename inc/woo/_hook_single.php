@@ -338,9 +338,9 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
         	foreach ($terms_and_meta as $term_and_meta):
 	            extract($term_and_meta);
 	            $bg_css = "background-color:" . (!empty($color_value) ? $color_value : $term->slug);
-	            var_dump($image_attach_color);
-	            $image_attach = $image_attach_color[$term->slug];
-	            $image_attach_full = $image_attach_full_color[$term->slug];
+	             
+	            $image_attach = !empty($image_attach_color) ? $image_attach_color[$term->slug] : '';
+	            $image_attach_full = !empty($image_attach_full_color) ? $image_attach_full_color[$term->slug] : '';
 
 	            $variations_img_cls = '';
 	            if(!empty($image_attach)){
