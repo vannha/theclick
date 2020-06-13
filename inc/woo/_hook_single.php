@@ -305,7 +305,7 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
     $image_attach_color = array();
     $image_attach_full_color = array();
 
-    $thumbnail_id = get_post_thumbnail_id( $product->get_id() ));
+    $thumbnail_id = get_post_thumbnail_id( $product->get_id() );
     foreach ($available_variations as $variation){
         if(empty($variation['attributes']) || empty($variation['attributes']['attribute_pa_color']))
             continue;
