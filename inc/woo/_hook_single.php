@@ -283,7 +283,7 @@ if ( ! function_exists( 'woocommerce_template_single_price' ) ) {
 /**
  * Single Product variation attribute
 **/
-//add_filter('woocommerce_dropdown_variation_attribute_options_html', 'theclick_wc_dropdown_variation_filter_pa_color_add_custom_field', 11, 2);
+add_filter('woocommerce_dropdown_variation_attribute_options_html', 'theclick_wc_dropdown_variation_filter_pa_color_add_custom_field', 11, 2);
 function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, $args)
 {
     $single_template = theclick_get_opts('woo_single_template','default');
