@@ -117,6 +117,7 @@ form.cart,
 		padding: 12.5px 25px;
 		color: #fff;
 	    background-color: $primary_color;
+	    margin-right: 20px;
 	    &:hover{
 	    	background-color: $accent_color;
 	    	color: #fff;
@@ -153,13 +154,7 @@ form.cart,
 		}
 	}
 }
-/* .single_variation_wrap{
-	.single_variation{
-		.woocommerce-variation-description{
-			padding-bottom: 30px;
-		}
-	}
-} */
+
 table.variations{
 	border: none;
 	margin-bottom: 10px;
