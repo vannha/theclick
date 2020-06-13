@@ -185,6 +185,27 @@ table.variations{
 			display: block !important;
 		}
 	}
+	select#pa_color{
+		display: none;
+	}
+	.single-color-att {
+	    width: 24px;
+	    height: 24px;
+	    background-color: #fafafa;
+	    display: inline-block;
+	    margin-right: 10px;
+	    border-radius: 50%;
+	    position: relative;
+	    line-height: 24px;
+	    text-align: center;
+	    font-size: 14px;
+	    &.variations-img{
+    	    width: 40px;
+		    height: 40px;
+		    line-height: 40px;
+		    border-radius: 0;
+	    }
+	}
 }
 table.woocommerce-grouped-product-list{
 	margin-bottom: 20px;
@@ -505,3 +526,4 @@ table.variations .label,
 	}
 
 }
+
