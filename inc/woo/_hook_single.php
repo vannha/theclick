@@ -316,6 +316,8 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
 	            if($product_style == 'gallery'){  
 	                $image_attach_color[$color] = theclick_get_image_url_by_size($variation['image_id'],'600x690');
 	            }
+	        }else{
+	        	$image_attach_color[$color] = '';
 	        }
             $image_attach_full_color[$color] = wp_get_attachment_image_src($variation['image_id'],'full');
         }
