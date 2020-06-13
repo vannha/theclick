@@ -290,11 +290,6 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
     if(isset($_GET['single_template']) )
         $single_template = $_GET['single_template'];
 
-    $variations_img = theclick_get_opts('woo_single_variations_img',false);
-    if(isset($_GET['variations_img']) && $_GET['variations_img'] == true )
-        $variations_img = $_GET['variations_img'];
-    $variations_img_cls = ($variations_img == true) ? 'variations-img' : '';
-
     if ($args['attribute'] !== 'pa_color')
         return $html;
     $product = $args['product'];
@@ -339,33 +334,23 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
     }
     ob_start(); ?>
     <div id="theclick-auto_refill" class="theclick-auto_refill" data-id="pa_color">
-        <?php foreach ($terms_and_meta as $term_and_meta): ?>
-            <?php extract($term_and_meta);
-            $type_use = 'name';
-            /*if (!empty($color_value))
-                $type_use = 'color';
-            if (!empty($custom['color_image']))
-                $type_use = 'image';
-            switch ($type_use) {
-                case 'image':
-                    $bg_css = "background-image:url({$custom['color_image']})";
-                    break;
-                default:
-                    $bg_css = "background-color:" . (!empty($color_value) ? $color_value : $term->slug);
-                    break;
-            }*/
-            $bg_css = "background-color:" . (!empty($color_value) ? $color_value : $term->slug);
-            $image_attach = $image_attach_color[$term->slug];
-            $image_attach_full = $image_attach_full_color[$term->slug];
-            var_dump($image_attach);
-            if($variations_img){
-                $bg_css = "background-image:url({$image_attach}); background-size: cover; background-position-y: center;";
-            }
+        <?php 
+        	foreach ($terms_and_meta as $term_and_meta):
+	            extract($term_and_meta);
+	            $bg_css = "background-color:" . (!empty($color_value) ? $color_value : $term->slug);
+	            $image_attach = $image_attach_color[$term->slug];
+	            $image_attach_full = $image_attach_full_color[$term->slug];
 
-            ?>
-            <a href="#" onclick="return false;" aria-label="<?php echo esc_html($term->name) ?>"  class="auto_refill-element auto_refill-enabled product_refill-image single-color-att hint--top <?php echo esc_attr($variations_img_cls)?>" data-original-title="<?php echo esc_html($term->name) ?>" data-image="<?php echo esc_attr($image_attach) ?>" data-value="<?php echo esc_attr($term->slug) ?>" data-img-full="<?php echo esc_attr($image_attach_full)?>"
-                 style="<?php echo esc_attr($bg_css) ?>"><span class="fa fa-check"></span>
-            </a>
+	            $variations_img_cls = '';
+	            if(!empty($image_attach)){
+	                $bg_css = "background-image:url({$image_attach}); background-size: cover; background-position-y: center;";
+	                $variations_img_cls = 'variations-img';
+	            }
+
+	            ?>
+	            <a href="#" onclick="return false;" aria-label="<?php echo esc_html($term->name) ?>"  class="auto_refill-element auto_refill-enabled product_refill-image single-color-att hint--top <?php echo esc_attr($variations_img_cls)?>" data-original-title="<?php echo esc_html($term->name) ?>" data-image="<?php echo esc_attr($image_attach) ?>" data-value="<?php echo esc_attr($term->slug) ?>" data-img-full="<?php echo esc_attr($image_attach_full)?>"
+	                 style="<?php echo esc_attr($bg_css) ?>"><span class="fa fa-check"></span>
+	            </a>
         <?php endforeach; ?>
     </div>
     <?php

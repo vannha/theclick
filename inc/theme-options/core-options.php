@@ -1332,12 +1332,10 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'options'  => array(
                         'default' => esc_html__( 'Basic','theclick' ),
                         'sticky'  => esc_html__( 'Sticky','theclick' ),
-                        'style-3' => esc_html__( 'Style 3','theclick' ),
-                        'style-4' => esc_html__( 'Style 4','theclick' ),
-                        'style-5' => esc_html__( 'Style 5','theclick' ),
-                        'style-6' => esc_html__( 'Style 6','theclick' ),
+                        'gallery' => esc_html__( 'Gallery','theclick' ),
+                        'grid'    => esc_html__( 'Grid','theclick' )
                     ),
-                    'default'  => 'style-1'
+                    'default'  => 'default'
                 ),
                 array(
                     'id'       => 'product_gallery_layout',
