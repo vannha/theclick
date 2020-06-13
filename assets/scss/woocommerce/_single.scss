@@ -163,6 +163,7 @@ form.cart,
 table.variations{
 	border: none;
 	margin-bottom: 22px;
+	width: auto;
 	td{
 		border: none;
 		padding: 0 0 20px 0;
@@ -176,13 +177,6 @@ table.variations{
 		&:focus,
 		&:active{
 			@include css3-prefix('box-shadow','none !important');
-		}
-	}
-	.reset_variations{
-		display: none;
-		color: $color_red;
-		&[style^="visibility: visible;"]{
-			display: block !important;
 		}
 	}
 	select#pa_color,
@@ -238,10 +232,14 @@ table.variations{
 		    color: #fff;
 		}
 	}
-	.reset_variations {
-	    float: right;
-	    line-height: 28px;
-	}
+	.reset_variations{
+		display: none;
+		color: $color_red;
+		float: right;
+		&[style^="visibility: visible;"]{
+			display: block !important;
+		}
+	} 
 }
 table.woocommerce-grouped-product-list{
 	margin-bottom: 20px;
