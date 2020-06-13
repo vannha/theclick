@@ -165,7 +165,7 @@ table.variations{
 	margin-bottom: 10px;
 	td{
 		border: none;
-		padding: 0 0 20px 0;
+		padding: 0 0 10px 0;
 		&.label{
 			max-width: 100px;
 		}
@@ -187,7 +187,9 @@ table.variations{
 	select#pa_size {
 		display: none;
 	}
-	 
+	.auto_refill-element{
+		margin-bottom: 10px;
+	} 
 	.single-color-att {
 	    width: 28px;
 	    height: 28px;
