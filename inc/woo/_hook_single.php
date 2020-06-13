@@ -357,7 +357,7 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
             $bg_css = "background-color:" . (!empty($color_value) ? $color_value : $term->slug);
             $image_attach = $image_attach_color[$term->slug];
             $image_attach_full = $image_attach_full_color[$term->slug];
-
+            var_dump($variations_img);
             if($variations_img){
                 $bg_css = "background-image:url({$image_attach}); background-size: cover; background-position-y: center;";
             }
