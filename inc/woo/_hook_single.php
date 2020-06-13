@@ -323,13 +323,8 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
             $image_attach_color[$color] = $image_attach_color[$color][0];
             $image_attach_full_color[$color] = $image_attach_full_color[$color][0];
         }else{
-            if($product_style == 'gallery'){  
-                $image_attach_color[$color] = $image_attach_color[$color];
-                $image_attach_full_color[$color] = $image_attach_full_color[$color][0];
-            }else{
-                $image_attach_color[$color] = $default_image;
-                $image_attach_full_color[$color] = $default_image;
-            }
+            $image_attach_color[$color] = ''; 
+            $image_attach_full_color[$color] = '';
         }
     }
     ob_start(); ?>
