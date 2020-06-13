@@ -171,6 +171,8 @@ table.variations{
 		}
 		&.value{
 			display: flex;
+			flex-wrap: wrap;
+			align-items:center;
 		}
 	}
 	select{
@@ -237,6 +239,7 @@ table.variations{
 	.reset_variations{
 		display: none;
 		color: $color_red;
+		margin-left: 10px;
 		&[style^="visibility: visible;"]{
 			display: block !important;
 		}
