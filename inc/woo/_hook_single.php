@@ -306,8 +306,8 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
     $image_attach_full_color = array();
     //$default_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),'shop_single');
     //$default_image = (!empty($default_image[0])) ?  $default_image[0] : '';
-    foreach ($available_variations as $variation)
-    {
+    foreach ($available_variations as $variation){
+    	var_dump($variation);
         if(empty($variation['attributes']) || empty($variation['attributes']['attribute_pa_color']))
             continue;
         $color =  $variation['attributes']['attribute_pa_color'];
@@ -326,7 +326,7 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
             $image_attach_color[$color] = ''; 
             $image_attach_full_color[$color] = '';
         }
-    } var_dump($image_attach_color);
+    } 
     ob_start(); ?>
     <div id="theclick-auto_refill" class="theclick-auto_refill" data-id="pa_color">
         <?php 
