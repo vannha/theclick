@@ -35,6 +35,7 @@
         theclick_product_single_sticky_thumb();
         theclick_product_single_sticky_summary();
         theclick_product_single_sticky_click_thumbnail();
+        theclick_product_single_variations_att();
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -1047,6 +1048,26 @@
             $('html, body').animate({scrollTop:topx},500);
             $(this).addClass('active');
              
+        });
+    }
+    function theclick_product_single_variations_att(){
+        $(document).on('mousedown', '.theclick-auto_refill .auto_refill-element', function (e) {
+            e.preventDefault();
+            var $this_var = $(this).closest('.variations'),this_tooltips = $(this).closest('.theclick-auto_refill'),
+                target_hidden = $this_var.find('#'+this_tooltips.attr('data-id'));
+            var $this = $(this);
+            if (!$this.hasClass('auto_refill-enabled'))
+                return;
+            var target = $this.attr('data-value');
+            if (!target)
+                return;
+           target_hidden.val(target).change();
+            this_tooltips.find('.auto_refill-element').removeClass('active');
+            $this.addClass('active');
+        });
+        $('.reset_variations').on('click', function (e) {
+            e.preventDefault();
+            $(this).parents('.variations').find('.auto_refill-element').removeClass('active');
         });
     }
     function theclick_product_single_sticky_active_class_thumbnail(){
