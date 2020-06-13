@@ -189,14 +189,14 @@ table.variations{
 		display: none;
 	}
 	.single-color-att {
-	    width: 24px;
-	    height: 24px;
+	    width: 28px;
+	    height: 28px;
 	    background-color: #fafafa;
 	    display: inline-block;
 	    margin-right: 10px;
 	    border-radius: 50%;
 	    position: relative;
-	    line-height: 24px;
+	    line-height: 28px;
 	    text-align: center;
 	    font-size: 14px;
 	    &.variations-img{
@@ -204,6 +204,18 @@ table.variations{
 		    height: 40px;
 		    line-height: 40px;
 		    border-radius: 0;
+	    }
+	    span{
+    	    visibility: hidden;
+		    opacity: 0;
+		    color: #fff;
+		    font-weight: 400;
+		    @include transition(all .3s linear 0s);
+	    }
+	    &:hover span, 
+	    &.active span{
+	    	visibility: visible;
+	    	opacity: 1;
 	    }
 	}
 }
