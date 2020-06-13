@@ -163,12 +163,14 @@ form.cart,
 table.variations{
 	border: none;
 	margin-bottom: 22px;
-	width: auto;
 	td{
 		border: none;
 		padding: 0 0 20px 0;
 		&.label{
 			max-width: 100px;
+		}
+		&.value{
+			display: flex;
 		}
 	}
 	select{
