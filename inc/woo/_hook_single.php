@@ -304,7 +304,7 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
     foreach ($terms as $term) {
         $terms_and_meta[] = array(
             'term'   => $term,
-            'custom' => theclick_get_custom_meta_pa_color($term->term_id)
+            'color_value' => theclick_get_custom_meta_pa_color($term->term_id)
         );
     };
     $image_attach_color = array();
@@ -338,11 +338,11 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
         }
     }
     ob_start(); ?>
-    <div id="bixbang-auto_refill" class="bixbang-auto_refill elevate-zooms" data-id="pa_color">
+    <div id="theclick-auto_refill" class="theclick-auto_refill" data-id="pa_color">
         <?php foreach ($terms_and_meta as $term_and_meta): ?>
             <?php extract($term_and_meta);
             $type_use = 'name';
-            if (!empty($custom['color_value']))
+            /*if (!empty($color_value))
                 $type_use = 'color';
             if (!empty($custom['color_image']))
                 $type_use = 'image';
@@ -351,10 +351,10 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
                     $bg_css = "background-image:url({$custom['color_image']})";
                     break;
                 default:
-                    $bg_css = "background-color:" . ((!empty($custom['color_value'])) ? $custom['color_value'] : $term->slug);
+                    $bg_css = "background-color:" . (!empty($color_value) ? $color_value : $term->slug);
                     break;
-            }
-
+            }*/
+            $bg_css = "background-color:" . (!empty($color_value) ? $color_value : $term->slug);
             $image_attach = $image_attach_color[$term->slug];
             $image_attach_full = $image_attach_full_color[$term->slug];
 
