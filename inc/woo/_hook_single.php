@@ -283,6 +283,24 @@ if ( ! function_exists( 'woocommerce_template_single_price' ) ) {
 /**
  * Single Product variation attribute
 **/
+add_filter('woocommerce_dropdown_variation_attribute_options_html','theclick_wc_dropdown_variation_filter_pa_size_add_custom_field',11,2);
+function theclick_wc_dropdown_variation_filter_pa_size_add_custom_field($html,$args)
+{
+    if ($args['attribute'] !== 'pa_size')
+        return $html;
+    $product = $args['product'];
+    $terms = wc_get_product_terms($product->get_id(), 'pa_size', array('fields' => 'all'));
+    ob_start(); ?>
+    <div class="theclick-auto_refill" data-id="pa_size">
+        <?php foreach ($terms as $term): ?>
+            <a href="#" onclick="return false;" class="auto_refill-element auto_refill-enabled single-size-att" data-value="<?php echo esc_attr($term->slug) ?>">
+                <?php echo esc_html($term->name) ?>
+            </a>
+        <?php endforeach; ?>
+    </div>
+    <?php
+    return ob_get_clean().$html;
+}
 add_filter('woocommerce_dropdown_variation_attribute_options_html', 'theclick_wc_dropdown_variation_filter_pa_color_add_custom_field', 11, 2);
 function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, $args)
 {
