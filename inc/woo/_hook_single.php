@@ -306,17 +306,19 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
     $image_attach_full_color = array();
     //$default_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),'shop_single');
     //$default_image = (!empty($default_image[0])) ?  $default_image[0] : '';
-    var_dump(get_post_thumbnail_id( $product->get_id() ));
+    $thumbnail_id = get_post_thumbnail_id( $product->get_id() ));
     foreach ($available_variations as $variation){
     	var_dump($variation['image_id']);
         if(empty($variation['attributes']) || empty($variation['attributes']['attribute_pa_color']))
             continue;
         $color =  $variation['attributes']['attribute_pa_color'];
-        if(!empty($variation['image_id'])){
-            $image_attach_color[$color] = wp_get_attachment_image_src($variation['image_id'],'shop_single');
-            if($product_style == 'gallery'){  
-                $image_attach_color[$color] = theclick_get_image_url_by_size($variation['image_id'],'600x690');
-            }
+        if( !empty($variation['image_id']) ){
+        	if( $variation['image_id'] != $thumbnail_id ){
+	            $image_attach_color[$color] = wp_get_attachment_image_src($variation['image_id'],'shop_single');
+	            if($product_style == 'gallery'){  
+	                $image_attach_color[$color] = theclick_get_image_url_by_size($variation['image_id'],'600x690');
+	            }
+	        }
             $image_attach_full_color[$color] = wp_get_attachment_image_src($variation['image_id'],'full');
         }
         
