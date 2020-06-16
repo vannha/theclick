@@ -70,6 +70,10 @@ function theclick_woocommerce_single_gallery(){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_sticky', 3);
     }elseif($product_style == 'gallery'){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_gallery', 3);
+		$class = '';
+    }elseif($product_style == 'grid'){
+		//add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_grid', 3);
+		$class = '';
     }else{
 		add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
 	}
