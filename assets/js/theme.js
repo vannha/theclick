@@ -1120,18 +1120,7 @@
                 }
             }
         });
-        $(document).on('click','#woosq-popup .product_refill-image',function () { 
-            var $this = $(this);
-            var new_src = $this.attr('data-image');
-            var new_src_full = $this.attr('data-img-full');
-            if(new_src){
-                var image = $('#woosq-popup .thumbnails .slick-current');
-                if(image.attr('src')!== new_src){
-                    image.attr('src',new_src);
-                }
-            }
-        });
-
+         
         $('.reset_variations').on('click', function (e) {
             e.preventDefault();
             $(this).parents('.variations').find('.auto_refill-element').removeClass('active');
