@@ -621,8 +621,8 @@ table.variations .label,
 				}
 		    }
 		}
-		.single_add_to_cart_button{
-			@media (max-width: 576px){
+		@media (max-width: 576px){
+			.single_add_to_cart_button{
 				margin-right: 0;
 			}
 		}
