@@ -254,7 +254,7 @@ if(!function_exists('theclick_product_gallery_thumbnail_sync')){
 		global $product;
 		$product_style = theclick_get_theme_opt('product_style','default');
         $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
-        if( $product_style == 'gallery') die('aaa');
+        if( $product_style == 'gallery') return;
 		$gallery_layout = theclick_get_opts('product_gallery_layout', 'simple');
 		$gallery_layout = (isset($_GET['gallery_layout']) && !empty($_GET['gallery_layout'])) ? $_GET['gallery_layout'] : $gallery_layout;
 		$product_gallery_thumb_position = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
