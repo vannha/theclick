@@ -585,11 +585,16 @@ table.variations .label,
 	.woocommerce-variation-add-to-cart{
 		justify-content: center;
 	}
+
 	form.cart,
 	.woocommerce-variation-add-to-cart{
+		justify-content:center;
 		.quantity{
 			justify-content: center;
 			margin: 0;
+			.screen-reader-text{
+				display: none;
+			}
 		}
 		>*{
 			flex: 0 0 auto;
