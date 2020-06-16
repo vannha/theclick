@@ -570,6 +570,11 @@ table.variations .label,
 	}
 
 }
+.product-style-gallery{
+	.ef5-single-product-gallery-wraps-inner{
+		overflow: visible;
+	}	
+}
 
 .main-img-gallery{
 	.slick-arrow {
@@ -585,7 +590,7 @@ table.variations .label,
 	}
 	.slick-prev {
 	    left: calc(50% - 46px);
-	    background: url(../images/next-icon.png) no-repeat center center;
+	    background: url(../images/pre-icon.png) no-repeat center center;
 	    background-size: contain;
 	    width: 25px;
 	    height: 25px;
