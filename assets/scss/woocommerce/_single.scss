@@ -585,7 +585,12 @@ table.variations .label,
 	.woocommerce-variation-add-to-cart{
 		justify-content: center;
 	}
-
+	.ef5-quantity{
+		margin-right: 30px;
+		.qty{
+			padding: 8px 40px;
+		}
+	} 
 	form.cart,
 	.woocommerce-variation-add-to-cart{
 		justify-content:center;
