@@ -1332,7 +1332,7 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'options'  => array(
                         'default' => esc_html__( 'Basic','theclick' ),
                         'sticky'  => esc_html__( 'Sticky','theclick' ),
-                        'gallery' => esc_html__( 'Gallery','theclick' ),
+                        'slider' => esc_html__( 'Slider','theclick' ),
                         'grid'    => esc_html__( 'Grid','theclick' )
                     ),
                     'default'  => 'default'

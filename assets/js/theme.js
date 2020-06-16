@@ -36,7 +36,7 @@
         theclick_product_single_sticky_summary();
         theclick_product_single_sticky_click_thumbnail();
         theclick_product_single_variations_att();
-        theclick_product_single_gallery_gallery_slider()
+        theclick_product_single_gallery_slider()
         // End WooCommerce
         theclick_svg_color();
         theclick_smooth_scroll();
@@ -1099,14 +1099,14 @@
             $(this).parents('.variations').find('.auto_refill-element').removeClass('active');
         });
 
-        $(document).on('click','.product-style-gallery .product_refill-image',function () { 
+        $(document).on('click','.product-style-slider .product_refill-image',function () { 
             var $this = $(this);
             var new_src = $this.attr('data-image');
             var new_src_full = $this.attr('data-img-full');
             
             if(new_src){
                 //var image = $('.thumbnails .slick-current .bixbang-single-img img');
-                var image = $('.product-style-gallery .thumbnail-slider-item.slick-current img');
+                var image = $('.product-style-slider .thumbnail-slider-item.slick-current img');
                 if( $('#woosq-popup .thumbnails .slick-current').length > 0){
                     image = $('#woosq-popup .thumbnails .slick-current');
                 }
@@ -1126,8 +1126,8 @@
         });
     }
 
-    function theclick_product_single_gallery_gallery_slider(){
-        $('.product-style-gallery .main-img-gallery').slick({
+    function theclick_product_single_gallery_slider(){
+        $('.product-style-slider .main-img-slider').slick({
             vertical: false,
             slidesToShow: 3,
             focusOnSelect: true,
