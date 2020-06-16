@@ -628,7 +628,15 @@ table.variations .label,
     		justify-content: center;
 		}
 	} 
-
+	.ef5-product-meta{
+		display: flex;
+	    flex-wrap: wrap;
+	    width: 100%;
+	    justify-content: space-around;
+	    .product-sharing{
+	    	margin: 0 !important;
+	    }
+	}
 	 
 }
 
