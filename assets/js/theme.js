@@ -361,7 +361,35 @@
                     }
                 });
             });
-
+            /*==================
+             Popup product gallery image
+            ====================*/
+            $('.product-style-gallery .main-img-gallery').each(function() {
+                $(this).magnificPopup({
+                    delegate: '> a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    },
+                    titleSrc: 'title',
+                    removalDelay: 300,
+                    mainClass: 'animated slideInRight mfp-gallery',
+                    closeBtnInside: false,
+                    zoom: {
+                        //enabled: true,
+                        duration: 300,
+                        easing: 'ease-in-out', 
+                        opener: function(openerElement) {
+                            return openerElement.is('img') ? openerElement : openerElement.find('img');
+                        }
+                    },
+                    callbacks: {
+                        beforeOpen: function() {
+                           this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure animated ' + this.st.el.attr('data-effect'));
+                        }
+                    }
+                });
+            });
         }
     }
     /**
