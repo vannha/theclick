@@ -364,7 +364,7 @@
             /*==================
              Popup product gallery image
             ====================*/
-            $('.product-style-gallery .main-img-gallery').each(function() {
+            $('.product-style-slider .main-img-slider').each(function() {
                 $(this).magnificPopup({
                     delegate: '.thumbnail-slider-item',
                     type: 'image',
