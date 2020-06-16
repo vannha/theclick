@@ -589,15 +589,15 @@ table.variations .label,
 	    background-color: transparent;
 	}
 	.slick-prev {
-	    left: calc(50% - 46px);
-	    background: url(../images/pre-icon.png) no-repeat center center;
+	    left: calc(50% - 30px);
+	    background: url(../images/prev-icon.png) no-repeat center center;
 	    background-size: contain;
 	    width: 25px;
 	    height: 25px;
 	    display: inline-block;
 	}
 	.slick-next {
-	    right: calc(50% - 46px);
+	    right: calc(50% - 30px);
         background: url(../images/next-icon.png) no-repeat center center;
 	    background-size: contain;
 	    width: 25px;
