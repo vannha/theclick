@@ -620,5 +620,17 @@ table.variations .label,
 	    height: 25px;
 	    display: inline-block;
 	}
+	.entry-summary{
+		margin-top: 65px;
+	}
+	.single-product-summary-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:center;
+		>*{
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
 	 
 }
