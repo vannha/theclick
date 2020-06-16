@@ -1100,12 +1100,10 @@
         });
 
         $(document).on('click','.product-style-gallery .product_refill-image',function () {
-            var $this = $(this),parent = $this.closest('.product');
+            var $this = $(this);
             var new_src = $this.attr('data-image');
             var new_src_full = $this.attr('data-img-full');
-            parent.find('.product_refill-image').removeClass('chosen');
-            $this.addClass('chosen');
-
+         
             if(new_src){
                 //var image = $('.thumbnails .slick-current .bixbang-single-img img');
                 var image = $('.product-style-gallery .slick-current .thumbnail-slider-item img');
