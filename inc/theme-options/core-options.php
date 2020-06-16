@@ -1399,7 +1399,10 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
                     'type'     => 'dimensions',
                     'height'   => false,
                     'units'    => array('px'),
-                    'default'  => array()
+                    'default'  => array(),
+                    'required' => array(
+                        array('product_style', '=', array('default','sticky'))
+                    )
                 ),
                 array(
                     'id'       => 'product_share_on',
