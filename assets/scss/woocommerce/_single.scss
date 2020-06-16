@@ -601,6 +601,18 @@ table.variations .label,
 		    max-width: auto;
 		    width: auto;
 		}
+		.single_variation_wrap{
+			flex: 0 0 100%;
+		    max-width: 100%;
+		    width: 100%;
+		    .woocommerce-variation-add-to-cart{
+		    	>*{
+					flex: 0 0 auto;
+				    max-width: auto;
+				    width: auto;
+				}
+		    }
+		}
 	}  
 	   
 	table.variations{
@@ -611,6 +623,7 @@ table.variations .label,
     		justify-content: center;
 		}
 	} 
+
 	 
 }
 
