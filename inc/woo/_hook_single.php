@@ -64,6 +64,8 @@ function theclick_woocommerce_single_gallery(){
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
     if($product_style == 'sticky'){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_sticky', 3);
+    }elseif($product_style == 'gallery'){
+		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_gallery', 3);
     }else{
 		add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
 	}
@@ -139,6 +141,64 @@ function theclick_woocommerce_single_gallery_sticky(){
 	}
 }
 
+function theclick_woocommerce_single_gallery_gallery(){
+	global $post, $product; 
+	 
+	$post_thumbnail_id = $product->get_image_id();
+	$full_size_image   = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
+	$image_single      = wp_get_attachment_image_src( $post_thumbnail_id, 'woocommerce_single' );
+	if ( $product->get_image_id() ) { 
+	?>
+	<div class="main-img-gallery">
+		<?php
+		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
+		if(has_post_thumbnail()){
+            $attributes_main = array(
+                'title'                   => get_post_field( 'post_title', $post_thumbnail_id ),
+                'data-caption'            => get_post_field( 'post_excerpt', $post_thumbnail_id ),
+                'data-src'                => $image_single[0],
+                'data-large_image'        => $full_size_image[0],
+                'data-zoom-image'         => $full_size_image[0],  
+                'data-large_image_width'  => $full_size_image[1],
+                'data-large_image_height' => $full_size_image[2],
+                'srcset'                  => ''  
+            );
+
+            $html = '<a href="' . esc_url( $full_size_image[0] ) . '" class="thumbnail-slider-item idx-0" data-idx="0">';
+            $html .= get_the_post_thumbnail( $post->ID, apply_filters( 'theclick_single_product_sticky_main_img_size', 'woocommerce_single' ), $attributes_main );
+            $html .= '</a>';
+            
+            echo apply_filters( 'woocommerce_single_product_image_thumbnail_html',$html,get_post_thumbnail_id( $post->ID ) );
+        }
+
+		$attachment_ids = $product->get_gallery_image_ids();
+
+		if ( $attachment_ids ) {
+			foreach ( $attachment_ids as $k => $attachment_id ) {
+				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
+				$full_src          = wp_get_attachment_image_src( $attachment_id, $full_size );
+				$attributes_gal      = array(
+                    'title'                   => get_post_field( 'post_title', $attachment_id ),
+                    'data-caption'            => get_post_field( 'post_excerpt', $attachment_id ),
+                    'data-src'                => $full_src[0],
+                    'data-zoom-image'         => $full_src[0],  
+                    'data-large_image'        => $full_src[0],
+                    'data-large_image_width'  => $full_src[1],
+                    'data-large_image_height' => $full_src[2],
+                );
+                $html = '<a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
+                $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
+                $html .= '</a>';
+
+                echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
+			}
+		}
+		?>
+		 
+	</div>
+	<?php
+	}
+}
 /**
  * Add Custom CSS class to Gallery
 */
@@ -331,9 +391,6 @@ function theclick_wc_dropdown_variation_filter_pa_color_add_custom_field($html, 
         if( !empty($variation['image_id']) ){
         	if( $variation['image_id'] != $thumbnail_id ){
 	            $image_attach_color[$color] = wp_get_attachment_image_src($variation['image_id'],'shop_single');
-	            /*if($product_style == 'gallery'){  
-	                $image_attach_color[$color] = theclick_get_image_url_by_size($variation['image_id'],'600x690');
-	            }*/
 	        }else{
 	        	$image_attach_color[$color] = '';
 	        }
