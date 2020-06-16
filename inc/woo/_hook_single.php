@@ -69,7 +69,7 @@ function theclick_woocommerce_single_gallery(){
     if($product_style == 'sticky'){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_sticky', 3);
     }elseif($product_style == 'slider'){
-		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_gallery', 3);
+		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_slider', 3);
 		$class = '';
     }elseif($product_style == 'grid'){
 		//add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_grid', 3);
@@ -149,7 +149,7 @@ function theclick_woocommerce_single_gallery_sticky(){
 	}
 }
 
-function theclick_woocommerce_single_gallery_gallery(){
+function theclick_woocommerce_single_gallery_slider(){
 	global $post, $product; 
 	 
 	$post_thumbnail_id = $product->get_image_id();
@@ -157,7 +157,7 @@ function theclick_woocommerce_single_gallery_gallery(){
 	$image_single      = wp_get_attachment_image_src( $post_thumbnail_id, 'woocommerce_single' );
 	if ( $product->get_image_id() ) { 
 	?>
-	<div class="main-img-gallery">
+	<div class="main-img-slider">
 		<?php
 		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		if(has_post_thumbnail()){
