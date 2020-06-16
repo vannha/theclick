@@ -1107,7 +1107,7 @@
                     image = $('#woosq-popup .thumbnails .slick-current');
                 }
 
-                if(image.attr('src')!== new_src){
+                if( image.attr('src') !== new_src ){
                     
                     image.attr('src',new_src);
                     image.attr('srcset',new_src); 
@@ -1127,9 +1127,11 @@
             if( $('.product-style-slider .thumbnail-slider-item').length > 0 ){
                var $current_img = $(document).find('.product-style-slider .thumbnail-slider-item.slick-current img');
                var data_src = $current_img.attr('data-src');
-               console.log(data_src);
+               var data_src_full = $current_img.attr('data-large_image');
                if($current_img.attr('src')!== data_src){
                     $current_img.attr('src',data_src);
+                    $current_img.attr('srcset',data_src);
+                    $current_img.parent('.thumbnail-slider-item').attr('href',data_src_full);
                 } 
             } 
         });
