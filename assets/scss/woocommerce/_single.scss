@@ -571,3 +571,23 @@ table.variations .label,
 
 }
 
+.main-img-gallery{
+	.slick-arrow {
+	    position: absolute;
+	    bottom: -44px;
+	    font-size: 0;
+	    text-align: center;
+	    border: none;
+	    z-index: 1;
+	    padding: 5px 8px;
+	    color: $primary_color;
+	    background-color: transparent;
+	}
+	.slick-prev {
+	    left: calc(50% - 46px);
+	}
+	.slick-next {
+	    right: calc(50% - 46px);
+	}
+	 
+}
