@@ -1110,10 +1110,11 @@
                 if( $('#woosq-popup .thumbnails .slick-current').length > 0){
                     image = $('#woosq-popup .thumbnails .slick-current');
                 }
-                console.log(image.attr('src'));  
+
                 if(image.attr('src')!== new_src){
                     
                     image.attr('src',new_src);
+                    image.attr('srcset',new_src); 
                     if(new_src_full.length == 0) 
                         new_src_full = new_src;
                      
