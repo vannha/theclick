@@ -619,10 +619,10 @@ table.variations .label,
 		    }
 		}
 	}  
-	   
 	table.variations{
-	    max-width: 400px;
-    	margin: 0 auto;
+		td.label{
+			padding-right: 20px;
+		}
 		td.value{
 			text-align: center;
     		justify-content: center;
