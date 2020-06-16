@@ -573,6 +573,9 @@ table.variations .label,
 .product-style-slider{
 	.ef5-single-product-gallery-wraps-inner{
 		overflow: visible;
+	}
+	.entry-summary{
+		margin-top: 65px;
 	}	
 }
 
@@ -620,11 +623,5 @@ table.variations .label,
 	    height: 25px;
 	    display: inline-block;
 	}
-	.entry-summary{
-		margin-top: 65px;
-	}
-	.single-product-summary-wrap{
-		 
-	}
-	 
+
 }
