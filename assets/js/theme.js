@@ -366,7 +366,7 @@
             ====================*/
             $('.product-style-gallery .main-img-gallery').each(function() {
                 $(this).magnificPopup({
-                    delegate: '.main-img-gallery .thumbnail-slider-item',
+                    delegate: '.thumbnail-slider-item',
                     type: 'image',
                     gallery: {
                         enabled: true
