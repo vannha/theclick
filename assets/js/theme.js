@@ -1106,7 +1106,7 @@
             console.log(new_src);
             if(new_src){
                 //var image = $('.thumbnails .slick-current .bixbang-single-img img');
-                var image = $('.product-style-gallery .slick-current .thumbnail-slider-item img');
+                var image = $('.product-style-gallery .thumbnail-slider-item.slick-current img');
                 if( $('#woosq-popup .thumbnails .slick-current').length > 0){
                     image = $('#woosq-popup .thumbnails .slick-current');
                 }
