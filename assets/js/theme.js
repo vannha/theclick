@@ -1099,11 +1099,11 @@
             $(this).parents('.variations').find('.auto_refill-element').removeClass('active');
         });
 
-        $(document).on('click','.product-style-gallery .product_refill-image',function () {
+        $(document).on('click','.product-style-gallery .product_refill-image',function () { 
             var $this = $(this);
             var new_src = $this.attr('data-image');
             var new_src_full = $this.attr('data-img-full');
-         
+            console.log(new_src);
             if(new_src){
                 //var image = $('.thumbnails .slick-current .bixbang-single-img img');
                 var image = $('.product-style-gallery .slick-current .thumbnail-slider-item img');
