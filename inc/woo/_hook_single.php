@@ -165,7 +165,7 @@ function theclick_woocommerce_single_gallery_gallery(){
             );
 
             $html = '<a href="' . esc_url( $full_size_image[0] ) . '" class="thumbnail-slider-item idx-0" data-idx="0">';
-            $html .= get_the_post_thumbnail( $post->ID, apply_filters( 'theclick_single_product_sticky_main_img_size', 'woocommerce_single' ), $attributes_main );
+            $html .= get_the_post_thumbnail( $post->ID, apply_filters( 'theclick_single_product_gallery_main_img_size', 'woocommerce_single' ), $attributes_main );
             $html .= '</a>';
             
             echo apply_filters( 'woocommerce_single_product_image_thumbnail_html',$html,get_post_thumbnail_id( $post->ID ) );
