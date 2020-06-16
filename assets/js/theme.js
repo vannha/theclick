@@ -1136,7 +1136,7 @@
             e.preventDefault();
             $(this).parents('.variations').find('.auto_refill-element').removeClass('active');
             if( $('.product-style-slider .thumbnail-slider-item').length > 0 ){
-               var $current_img = $('.product-style-slider .thumbnail-slider-item.slick-current img');
+               var $current_img = $(document).find('.product-style-slider .thumbnail-slider-item.slick-current img');
                var data_src = $current_img.attr('data-src');
                if($current_img.attr('src')!== data_src){
                     $current_img.attr('src',data_src);
