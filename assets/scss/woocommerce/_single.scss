@@ -78,6 +78,7 @@ $gallery_thumbnail_space : #{$theclick_product_gallery_thumbnail_space}px;
 	.woocommerce-review-link{
 		padding: 0 20px;
 		margin-top: -5px;
+		display: none;
 	}
 }
 .woocommerce-product-details__short-description{
@@ -581,13 +582,30 @@ table.variations .label,
 	.woocommerce-product-rating{
 	    justify-content: center;
 	}
-	form.cart, .woocommerce-variation-add-to-cart{
+	.woocommerce-variation-add-to-cart{
 		justify-content: center;
 	}
-	form.cart .quantity, 
-	.woocommerce-variation-add-to-cart .quantity{
-		justify-content: center;
-	}
+	form.cart,.woocommerce-variation-add-to-cart{
+		.quantity{
+			justify-content: center;
+			margin: 0;
+		}
+		>*{
+			flex: 0 0 auto;
+		    max-width: auto;
+		    width: auto;
+		}
+	}  
+	   
+	table.variations{
+	    max-width: 400px;
+    	margin: 0 auto;
+		td.value{
+			text-align: center;
+    		justify-content: center;
+		}
+	} 
+	.woocommerce-variation-add-to-cart
 }
 
 .main-img-slider{
