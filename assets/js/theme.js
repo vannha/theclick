@@ -1103,15 +1103,16 @@
             var $this = $(this);
             var new_src = $this.attr('data-image');
             var new_src_full = $this.attr('data-img-full');
-            console.log(new_src);
+            
             if(new_src){
                 //var image = $('.thumbnails .slick-current .bixbang-single-img img');
                 var image = $('.product-style-gallery .thumbnail-slider-item.slick-current img');
                 if( $('#woosq-popup .thumbnails .slick-current').length > 0){
                     image = $('#woosq-popup .thumbnails .slick-current');
                 }
+                console.log(image.attr('src'));  
                 if(image.attr('src')!== new_src){
-                      
+                    
                     image.attr('src',new_src);
                     if(new_src_full.length == 0) 
                         new_src_full = new_src;
