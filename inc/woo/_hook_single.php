@@ -9,9 +9,13 @@ if(!function_exists('theclick_woocommerce_before_single_product_summary')){
 	function theclick_woocommerce_before_single_product_summary(){
 		$product_style = theclick_get_theme_opt('product_style','default');
         $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
+
         $gallery_layout = theclick_get_opts('product_gallery_layout','simple');
         $gallery_layout = (isset($_GET['gallery_layout']) && !empty($_GET['gallery_layout'])) ? $_GET['gallery_layout'] : $gallery_layout;
-		$classes = ['ef5-wc-img-summary', $gallery_layout,'product-style-'.$product_style];
+        if( $product_style == 'gallery' || $product_style == 'grid')
+			$classes = ['ef5-wc-img-summary','product-style-'.$product_style];
+		else
+			$classes = ['ef5-wc-img-summary', $gallery_layout,'product-style-'.$product_style];
 		echo '<div class="'.trim(implode(' ', $classes)).'">';
 	}
 }
