@@ -126,10 +126,11 @@ function theclick_woocommerce_single_gallery_sticky(){
 			foreach ( $attachment_ids as $k => $attachment_id ) {
 				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
 				$full_src          = wp_get_attachment_image_src( $attachment_id, $full_size );
+				$image_single      = wp_get_attachment_image_src( $attachment_id, 'woocommerce_single' );
 				$attributes_gal      = array(
                     'title'                   => get_post_field( 'post_title', $attachment_id ),
                     'data-caption'            => get_post_field( 'post_excerpt', $attachment_id ),
-                    'data-src'                => $full_src[0],
+                    'data-src'                => $image_single[0],
                     'data-zoom-image'         => $full_src[0],  
                     'data-large_image'        => $full_src[0],
                     'data-large_image_width'  => $full_src[1],
