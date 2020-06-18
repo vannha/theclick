@@ -64,6 +64,12 @@ function theclick_woocommerce_single_gallery(){
 	$class = theclick_get_opts('product_gallery_thumb_position', 'thumb-right');
 	$product_style = theclick_get_theme_opt('product_style','default');
     $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
+
+    $video_url = theclick_get_page_opt('product-video-url',''); 
+    $video_file = theclick_get_page_opt('product-video-file',''); 
+    $video_embed = theclick_get_page_opt('product-video-html',''); 
+    var_dump([$video_url,$video_file,$video_embed]);
+
     add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
     if($product_style == 'sticky'){
