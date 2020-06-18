@@ -65,9 +65,10 @@ function theclick_woocommerce_single_gallery(){
 	$product_style = theclick_get_theme_opt('product_style','default');
     $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
 
-    $video_url = theclick_get_page_opt('product-video-url',''); 
-    $video_file = theclick_get_page_opt('product-video-file',''); 
-    $video_embed = theclick_get_page_opt('product-video-html',''); 
+	$video_type  = theclick_get_page_opt('video_type',''); 
+	$video_url   = theclick_get_page_opt('product-video-url',''); 
+	$video_file  = theclick_get_page_opt('product-video-file',''); 
+	$video_embed = theclick_get_page_opt('product-video-html',''); 
     var_dump([$video_url,$video_file,$video_embed]);
 
     add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
@@ -82,7 +83,13 @@ function theclick_woocommerce_single_gallery(){
 		$class = '';
     }else{
 		add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
-		echo 'aaa';
+		if( !empty($video_type) && ($video_type == 'url' || $video_type == 'file')){
+			$video_source_url = $video_type == 'url' ? $video_url : $video_file['url'];
+            if(!empty($video_source_url)){
+                echo '<a href="'.esc_url($video_source_url).'" class="video-feature"><i class="fa fa-play"></i>'.esc_html__( 'Play video','bixbang' ).'</a>';
+            }
+        }
+		 
 	}
 
 	?>
