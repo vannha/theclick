@@ -76,6 +76,7 @@ function theclick_woocommerce_single_gallery(){
 		$class = '';
     }else{
 		add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
+		echo 'aaa';
 	}
 
 	?>
