@@ -262,5 +262,46 @@ function theclick_page_options_register($metabox)
             )
         )
     ));
+
+    if (!$metabox->isset_args('product')) {
+        $metabox->set_args('product', array(
+            'opt_name'     => theclick_get_page_opt_name(),
+            'display_name' => esc_html__('Post Settings', 'theclick'),
+            'class'        => 'fully-expanded'
+        ), array(
+            'context'  => 'advanced',
+            'priority' => 'default',
+            'panels'   => true
+        ));
+    }
+    $metabox->add_section('product', array(
+        'title'  => esc_html__('Video', 'theclick'),
+        'icon'   => 'el-icon-home',
+        'fields' => array(
+            array(
+                'id'    => 'product-video-url',
+                'type'  => 'text',
+                'title' => esc_html__( 'Video URL', 'theclick' ),
+                'desc'  => esc_html__( 'YouTube or Vimeo video URL', 'theclick' )
+            ),
+
+            array(
+                'id'             => 'product-video-file',
+                'type'           => 'media',
+                'library_filter' => array('mp4','m4v','wmv','avi','mpg','ogv','3gp','3g2','ogg','mine'),
+                'title'          => esc_html__( 'Video Upload', 'theclick' ),
+                'desc'           => esc_html__( 'Upload or Choose video file', 'theclick' ), 
+                'url'            => true                       
+            ),
+
+            array(
+                'id'        => 'product-video-html',
+                'type'      => 'textarea',
+                'title'     => esc_html__( 'Embadded video', 'theclick' ),
+                'desc'  => esc_html__( 'Use this option when the video does not come from YouTube or Vimeo', 'theclick' )
+            )
+        )
+    ));
+   
 }
 add_action('ef5_post_metabox_register', 'theclick_page_options_register');
