@@ -89,6 +89,15 @@ function theclick_woocommerce_single_gallery(){
                 echo '<a href="'.esc_url($video_source_url).'" class="video-feature"><i class="fa fa-play"></i>'.esc_html__( 'Play video','bixbang' ).'</a>';
             }
         }
+        if( !empty($video_type) && $video_type == 'embed' && !empty($video_embed ) ){
+        	 
+            echo '<a href="#ef5-video-embed" class="ef5-video-embed"><i class="fa fa-play"></i>'.esc_html__( 'Play video','bixbang' ).'</a>';
+            
+            ?>
+            <div id="ef5-video-embed" class="mfp-hide fall-perspective"><?php echo theclick_html($video_embed) ?></div>
+	         
+	        <?php
+        }
 		 
 	}
 

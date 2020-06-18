@@ -416,7 +416,21 @@
                     }
                 });
             });
-             
+            $('.ef5-video-embed').each(function() {
+                $(this).magnificPopup({
+                    type:'inline',
+                    closeBtnInside: false,
+                    removalDelay: 400,
+                    mainClass: 'ef5-mfp-popup animated zoomIn',
+                    closeMarkup: '<button title="%title%" class="mfp-close"><span class="flaticon-letter-x"></span></button>',
+                    callbacks: {
+                        beforeClose: function() {
+                            $('.ef5-mfp-popup').addClass('zoomOut').removeClass('zoomIn');
+                        },
+                    }
+                });
+            });    
+            
         }
     }
     /**
