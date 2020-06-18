@@ -94,7 +94,7 @@ function theclick_woocommerce_single_gallery(){
             echo '<a href="#ef5-video-embed" class="ef5-video-embed"><i class="fa fa-play"></i>'.esc_html__( 'Play video','bixbang' ).'</a>';
             
             ?>
-            <div id="ef5-video-embed" class="mfp-hide fall-perspective"><?php echo theclick_html($video_embed) ?></div>
+            <div id="ef5-video-embed" class="mfp-hide fall-perspective text-center"><?php echo theclick_html($video_embed) ?></div>
 	         
 	        <?php
         }

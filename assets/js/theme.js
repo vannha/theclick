@@ -397,7 +397,7 @@
                     removalDelay: 160,
                     preloader: false,
                     fixedContentPos: false,
-                    mainClass: 'animated slideInRight mfp-gallery',
+                    mainClass: 'ef5-mfp-popup animated zoomIn',
                     closeOnContentClick: true,
                     closeBtnInside: false,
                     midClick: true,
@@ -411,7 +411,7 @@
                     },
                     callbacks: {
                         beforeOpen: function() {
-                           this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure animated ' + this.st.el.attr('data-effect'));
+                           $('.ef5-mfp-popup').addClass('zoomOut').removeClass('zoomIn');
                         }
                     }
                 });
