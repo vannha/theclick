@@ -69,7 +69,7 @@ function theclick_woocommerce_single_gallery(){
 	$video_url   = theclick_get_page_opt('product-video-url',''); 
 	$video_file  = theclick_get_page_opt('product-video-file',''); 
 	$video_embed = theclick_get_page_opt('product-video-html',''); 
-    var_dump([$video_url,$video_file,$video_embed]);
+    //var_dump([$video_url,$video_file,$video_embed]);
 
     add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_sale', 1);
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
