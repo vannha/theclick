@@ -1317,6 +1317,12 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
             'subsection' => true,
             'fields'     => array(
                 array(
+                    'title'     => esc_html__('Full Width', 'theclick'),
+                    'id'        => 'shop_single_full_width',
+                    'type'      => 'switch',
+                    'default'   => false
+                ),
+                array(
                     'id'       => 'product_sidebar_pos',
                     'type'     => 'button_set',
                     'title'    => esc_html__('Layouts', 'theclick'),

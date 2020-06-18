@@ -458,16 +458,16 @@ if(!function_exists('theclick_woo_container_class')){
                 $classes[] = 'container';
             }
         }elseif(is_singular('product')) {
+            $shop_single_full_width = theclick_get_theme_opt('shop_single_full_width','0');
+            $shop_single_full_width = (isset($_GET['fullwidth']) && !empty($_GET['fullwidth'])) ? $_GET['fullwidth'] : $shop_single_full_width;
             $product_style = theclick_get_theme_opt('product_style','default');
             $product_style = (isset($_GET['style']) && !empty($_GET['style'])) ? $_GET['style'] : $product_style;
-            switch ($product_style) {
-                case 'default':
-                    $classes[] = 'container'; 
-                    break;
-                default:
-                    $classes[] = 'container'; 
-                    break;
-            }
+
+            if($shop_single_full_width == '0')
+                $classes[] = 'container'; 
+            else
+                $classes[] = 'no-container'; 
+            
             $classes[] = 'product-single-'.$product_style; 
         }else{
             $classes[] = 'container';
