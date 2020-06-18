@@ -390,6 +390,33 @@
                     }
                 });
             });
+
+            $('.video-feature').each(function() {
+                $(this).magnificPopup({
+                    type: 'iframe',
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false,
+                    mainClass: 'animated slideInRight mfp-gallery',
+                    closeOnContentClick: true,
+                    closeBtnInside: false,
+                    midClick: true,
+                    zoom: {
+                        //enabled: true,
+                        duration: 300,
+                        easing: 'ease-in-out', 
+                        opener: function(openerElement) {
+                            return openerElement.is('iframe') ? openerElement : openerElement.find('iframe');
+                        }
+                    },
+                    callbacks: {
+                        beforeOpen: function() {
+                           this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure animated ' + this.st.el.attr('data-effect'));
+                        }
+                    }
+                });
+            });
+             
         }
     }
     /**
