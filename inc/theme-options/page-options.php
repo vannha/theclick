@@ -279,10 +279,24 @@ function theclick_page_options_register($metabox)
         'icon'   => 'el-icon-home',
         'fields' => array(
             array(
+                'id'       => 'video_type',
+                'type'     => 'select',
+                'title'    => esc_html__('Select Video Type', 'theclick'),
+                'options'  => array(
+                    'ulr'    => esc_html__('Video URL', 'theclick'),
+                    'file'    => esc_html__('Media', 'theclick'),
+                    'embed'    => esc_html__('Embed Video', 'theclick'),
+                ),
+                'default'      => 'file'
+            ),
+            array(
                 'id'    => 'product-video-url',
                 'type'  => 'text',
                 'title' => esc_html__( 'Video URL', 'theclick' ),
-                'desc'  => esc_html__( 'YouTube or Vimeo video URL', 'theclick' )
+                'desc'  => esc_html__( 'YouTube or Vimeo video URL', 'theclick' ),
+                'required' => array(
+                    array('video_type', '=', 'url')
+                )
             ),
 
             array(
@@ -291,14 +305,20 @@ function theclick_page_options_register($metabox)
                 'library_filter' => array('mp4','m4v','wmv','avi','mpg','ogv','3gp','3g2','ogg','mine'),
                 'title'          => esc_html__( 'Video Upload', 'theclick' ),
                 'desc'           => esc_html__( 'Upload or Choose video file', 'theclick' ), 
-                'url'            => true                       
+                'url'            => true,     
+                'required' => array(
+                    array('video_type', '=', 'file')
+                )                 
             ),
 
             array(
                 'id'        => 'product-video-html',
                 'type'      => 'textarea',
-                'title'     => esc_html__( 'Embadded video', 'theclick' ),
-                'desc'  => esc_html__( 'Use this option when the video does not come from YouTube or Vimeo', 'theclick' )
+                'title'     => esc_html__( 'Embed video', 'theclick' ),
+                'desc'  => esc_html__( 'Use this option when the video does not come from YouTube or Vimeo', 'theclick' ),
+                'required' => array(
+                    array('video_type', '=', 'embed')
+                ) 
             )
         )
     ));
