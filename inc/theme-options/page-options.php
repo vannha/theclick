@@ -283,7 +283,7 @@ function theclick_page_options_register($metabox)
                 'type'     => 'select',
                 'title'    => esc_html__('Select Video Type', 'theclick'),
                 'options'  => array(
-                    'ulr'    => esc_html__('Video URL', 'theclick'),
+                    'url'    => esc_html__('Video URL', 'theclick'),
                     'file'    => esc_html__('Media', 'theclick'),
                     'embed'    => esc_html__('Embed Video', 'theclick'),
                 ),
