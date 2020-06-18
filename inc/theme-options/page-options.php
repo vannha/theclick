@@ -287,7 +287,7 @@ function theclick_page_options_register($metabox)
                     'file'    => esc_html__('Media', 'theclick'),
                     'embed'    => esc_html__('Embed Video', 'theclick'),
                 ),
-                'default'      => 'file'
+                'default'      => 'url'
             ),
             array(
                 'id'    => 'product-video-url',
