@@ -83,21 +83,7 @@ function theclick_woocommerce_single_gallery(){
 		$class = '';
     }else{
 		add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
-		if( !empty($video_type) && ($video_type == 'url' || $video_type == 'file')){
-			$video_source_url = $video_type == 'url' ? $video_url : $video_file['url'];
-            if(!empty($video_source_url)){
-                echo '<a href="'.esc_url($video_source_url).'" class="video-feature"><i class="fa fa-play"></i>'.esc_html__( 'Play video','bixbang' ).'</a>';
-            }
-        }
-        if( !empty($video_type) && $video_type == 'embed' && !empty($video_embed ) ){
-        	 
-            echo '<a href="#ef5-video-embed" class="ef5-video-embed"><i class="fa fa-play"></i>'.esc_html__( 'Play video','bixbang' ).'</a>';
-            
-            ?>
-            <div id="ef5-video-embed" class="mfp-hide fall-perspective text-center"><?php echo theclick_html($video_embed) ?></div>
-	         
-	        <?php
-        }
+		
 		 
 	}
 
