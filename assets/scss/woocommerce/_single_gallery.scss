@@ -46,3 +46,32 @@
 		 
 	}
 }
+.video-feature{
+	position: absolute;
+	left: 25px;
+	bottom: 25px;
+	z-index: 1;
+	font-size: 12px;
+	font-weight: 500;
+	color: $white;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 3px 18px;
+	background-color: $primary_color;
+	@media (max-width: $screen_xl_max){
+		font-size: 0;
+	    text-align: center;
+	    padding: 0 15px;
+	}
+	i{
+		font-size: 10px;
+		margin-right: 10px;
+		@media (max-width: $screen_xl_max){
+			margin-right: 0;
+			line-height: 30px;
+		}
+	}
+	&:hover,&:active{
+		background-color: $primary_color;
+	}
+}
