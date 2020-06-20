@@ -246,6 +246,7 @@ function theclick_woocommerce_single_gallery_grid(){
 		$attachment_ids = $product->get_gallery_image_ids();
 		  
 		if ( $attachment_ids ) {
+			$html = '';
 			foreach ( $attachment_ids as $k => $attachment_id ) {
 				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
 				$full_src          = wp_get_attachment_image_src( $attachment_id, $full_size );
@@ -263,7 +264,6 @@ function theclick_woocommerce_single_gallery_grid(){
                 if( $k == 0 || $k == 1){
                 	$cls = 'col-12';
                 }
-                $html = '';
                 if( $k == 0){
                 	$html = '<div class="col-12"><div class="row">';
 
