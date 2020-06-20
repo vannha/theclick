@@ -282,7 +282,9 @@ function theclick_woocommerce_single_gallery_grid(){
 						$video_source_url = $video_type == 'url' ? $video_url : $video_file['url'];
 				        if(!empty($video_source_url)){
 				        	echo '<div class="p-gal product-video col-12 col-md-6">';
-				        		echo '<iframe src="'.esc_url($video_source_url).'" width="560" height="315" frameborder="0" allowfullscreen></iframe>';
+				        		//echo '<iframe src="'.esc_url($video_source_url).'" width="560" height="315" frameborder="0" allowfullscreen></iframe>';
+				        		echo '<video is="lv-loop" data-src="'.esc_url($video_source_url).'" data-ratio="skinny" data-id="1350727" muted="" loop="" playsinline="" aria-hidden="true" tabindex="-1" class="lv-loop" style="object-fit: cover;" data-active="" data-load="down" data-visibility="0.6029002150117279" data-visible="true"><source src="'.esc_url($video_source_url).'" type="video/mp4" media="screen"></video>';
+
  								echo '<button type="button" aria-pressed="false" class="lv-button-icon lv-loop-button" aria-label="Stop all animations" data-active=""><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-pause"><path stroke-width="0" d="M10,0 L30,0 L30,80 L10,80 Z M50,0 L70,0 L70,80 L50,80 Z"></path></svg><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-play"><path d="M76.3 40l-70 40V0z"></path></svg>
 									</button>';
 								
