@@ -73,5 +73,6 @@
 	}
 	&:hover,&:active{
 		background-color: $primary_color;
+		color: rgba(255,255,255,0.8);
 	}
 }
