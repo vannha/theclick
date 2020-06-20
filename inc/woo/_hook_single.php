@@ -221,7 +221,7 @@ function theclick_woocommerce_single_gallery_grid(){
 	if ( $product->get_image_id() ) { 
 	?>
 	<div class="main-img-grid">
-	<div class="row gutter-0">
+	<div class="row gutter-2 text-center">
 		<?php
 		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		if(has_post_thumbnail()){
@@ -259,7 +259,7 @@ function theclick_woocommerce_single_gallery_grid(){
                     'data-large_image_width'  => $full_src[1],
                     'data-large_image_height' => $full_src[2],
                 );
-                $html = '<div class="col-12 col-md-6"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
+                $html = '<div class="p-gal col-12 col-md-6"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
                 $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
                 $html .= '</a></div>';
 
