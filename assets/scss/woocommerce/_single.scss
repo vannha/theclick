@@ -66,9 +66,11 @@ $gallery_thumbnail_space : #{$theclick_product_gallery_thumbnail_space}px;
 	}
 	&.product-style-grid{
 		.ef5-product-gallery-wrap{
-			flex: 0 0 70%;
-			width: 70%;
-			max-width: 70%;
+			@media (min-width: $screen-lg-min){
+				flex: 0 0 70%;
+				width: 70%;
+				max-width: 70%;
+			}
 		}
 	}
 }
