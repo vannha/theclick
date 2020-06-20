@@ -1186,12 +1186,44 @@
                 }
             }
         });
+
+        $(document).on('click','.product-style-grid .product_refill-image',function () { 
+            var $this = $(this);
+            var new_src = $this.attr('data-image');
+            var new_src_full = $this.attr('data-img-full');
+            
+            if(new_src){
+                var image = $('.product-style-grid .p-thumb .thumbnail-slider-item img');
+                  
+                if( image.attr('src') !== new_src ){
+                    
+                    image.attr('src',new_src);
+                    image.attr('srcset',new_src); 
+                    if(new_src_full.length == 0) 
+                        new_src_full = new_src;
+                     
+                    image.parent('.thumbnail-slider-item').attr('href',new_src_full);
+                    image.addClass('replace-src'); 
+                     
+                }
+            }
+        });
          
         $('.reset_variations').on('click', function (e) {
             e.preventDefault();
             $(this).parents('.variations').find('.auto_refill-element').removeClass('active');
             if( $('.product-style-slider .thumbnail-slider-item').length > 0 ){
                var $current_img = $(document).find('.product-style-slider .thumbnail-slider-item.slick-current img');
+               var data_src = $current_img.attr('data-src');
+               var data_src_full = $current_img.attr('data-large_image');
+               if($current_img.attr('src')!== data_src){
+                    $current_img.attr('src',data_src);
+                    $current_img.attr('srcset',data_src);
+                    $current_img.parent('.thumbnail-slider-item').attr('href',data_src_full);
+                } 
+            } 
+            if( $('.product-style-grid .thumbnail-slider-item').length > 0 ){
+               var $current_img = $(document).find('.product-style-grid .p-thumb .thumbnail-slider-item img');
                var data_src = $current_img.attr('data-src');
                var data_src_full = $current_img.attr('data-large_image');
                if($current_img.attr('src')!== data_src){
