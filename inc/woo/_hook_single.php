@@ -245,6 +245,7 @@ function theclick_woocommerce_single_gallery_grid(){
 
 		$attachment_ids = $product->get_gallery_image_ids();
 		var_dump($attachment_ids);
+		
 		if ( $attachment_ids ) {
 			foreach ( $attachment_ids as $k => $attachment_id ) {
 				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
