@@ -271,7 +271,7 @@ function theclick_woocommerce_single_gallery_grid(){
                 echo '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
                 echo wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
                 echo '</a></div>';
-
+                if($k == 1) echo '</div>';
                 //echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
                 if( $k == 1 ){
                 	$video_type  = theclick_get_page_opt('video_type',''); 
@@ -292,7 +292,7 @@ function theclick_woocommerce_single_gallery_grid(){
 				    }
                 }
                 if( $k == 1){
-                	echo '</div></div></div>';
+                	echo '</div></div>';
                 }
 			}
 		}
