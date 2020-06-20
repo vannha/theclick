@@ -76,3 +76,50 @@
 		color: rgba(255,255,255,0.8);
 	}
 }
+
+.main-img-grid{
+	a.thumbnail-slider-item{
+		margin-bottom: $gallery_thumbnail_space;
+		display: block;
+		position: relative;
+		@media (min-width: 1200px){
+			&:before{
+			    content: "\f117";
+		        font-family: Flaticon;
+				font-weight: 300;
+				font-size: 24px;
+			    display: block;
+			    background: #fff;
+			    position: absolute;
+			    left: 50%;
+			    margin-left: -15px;
+			    top: 50%;
+			    margin-top: -15px;
+			    z-index: 1;
+			    background: transparent;
+			    color: #fff;
+			    @include transform(scale(0));
+			    @include transition(all .3s linear 0s); 
+			}
+			&:after{
+			    content: "";
+				background: rgba(0,0,0,0.5);
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				opacity: 0;
+				@include transition(opacity .3s linear 0s);
+			}
+			&:hover{
+				&:before{
+					@include transform(scale(1));
+				}
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+	} 
+}
