@@ -246,7 +246,7 @@ function theclick_woocommerce_single_gallery_grid(){
 		$attachment_ids = $product->get_gallery_image_ids();
 		  
 		if ( $attachment_ids ) {
-			$html = '';
+			 
 			foreach ( $attachment_ids as $k => $attachment_id ) {
 				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
 				$full_src          = wp_get_attachment_image_src( $attachment_id, $full_size );
@@ -262,17 +262,17 @@ function theclick_woocommerce_single_gallery_grid(){
                 );
                 $cls = 'col-12 col-md-6';
                 if( $k == 0 || $k == 1){
-                	$cls = 'col-12';
+                	$cls = 'itwoleft';
                 }
                 if( $k == 0){
-                	$html = '<div class="col-12"><div class="row">';
+                	$html = '<div class="col-12"><div class="row"><div class="col-12 col-md-6">';
 
                 } 
-                $html .= '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
-                $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
-                $html .= '</a></div>';
+                echo '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
+                echo wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
+                echo '</a></div>';
 
-                echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
+                //echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
                 if( $k == 1 ){
                 	$video_type  = theclick_get_page_opt('video_type',''); 
 					$video_url   = theclick_get_page_opt('product-video-url',''); 
@@ -292,7 +292,7 @@ function theclick_woocommerce_single_gallery_grid(){
 				    }
                 }
                 if( $k == 1){
-                	$html .= '</div></div>';
+                	echo '</div></div>';
                 }
 			}
 		}
