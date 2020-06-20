@@ -263,6 +263,7 @@ function theclick_woocommerce_single_gallery_grid(){
                 if( $k == 0 || $k == 1){
                 	$cls = 'col-12';
                 }
+                $html = '';
                 if( $k == 0){
                 	$html = '<div class="col-12"><div class="row">';
 
@@ -291,7 +292,7 @@ function theclick_woocommerce_single_gallery_grid(){
 				    }
                 }
                 if( $k == 1){
-                	$html = '</div></div>';
+                	$html .= '</div></div>';
                 }
 			}
 		}
