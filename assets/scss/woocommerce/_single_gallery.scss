@@ -58,7 +58,7 @@
 	display: inline-block;
 	padding: 3px 18px;
 	background-color: $primary_color;
-	@media (max-width: $screen_xl_max){
+	@media (max-width: 1199px){
 		font-size: 0;
 	    text-align: center;
 	    padding: 0 15px;
@@ -66,7 +66,7 @@
 	i{
 		font-size: 10px;
 		margin-right: 10px;
-		@media (max-width: $screen_xl_max){
+		@media (max-width: 1199px){
 			margin-right: 0;
 			line-height: 30px;
 		}
