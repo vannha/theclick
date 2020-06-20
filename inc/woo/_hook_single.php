@@ -245,7 +245,7 @@ function theclick_woocommerce_single_gallery_grid(){
 
 		$attachment_ids = $product->get_gallery_image_ids();
 		var_dump($attachment_ids);
-		
+
 		if ( $attachment_ids ) {
 			foreach ( $attachment_ids as $k => $attachment_id ) {
 				$full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
@@ -265,6 +265,24 @@ function theclick_woocommerce_single_gallery_grid(){
                 $html .= '</a></div>';
 
                 echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
+                if( $k == 2 ){
+                	$video_type  = theclick_get_page_opt('video_type',''); 
+					$video_url   = theclick_get_page_opt('product-video-url',''); 
+					$video_file  = theclick_get_page_opt('product-video-file',''); 
+					$video_embed = theclick_get_page_opt('product-video-html',''); 
+					if( !empty($video_type) && ($video_type == 'url' || $video_type == 'file')){
+						$video_source_url = $video_type == 'url' ? $video_url : $video_file['url'];
+				        if(!empty($video_source_url)){
+				        	echo '<div class="productVideo" style="">';
+				        		echo '<iframe src="'.esc_url($video_source_url).'" width="560" height="315" frameborder="0" allowfullscreen></iframe>';
+ 								echo '<button type="button" aria-pressed="false" class="lv-button-icon lv-loop-button" aria-label="Stop all animations" data-active=""><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-pause"><path stroke-width="0" d="M10,0 L30,0 L30,80 L10,80 Z M50,0 L70,0 L70,80 L50,80 Z"></path></svg><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-play"><path d="M76.3 40l-70 40V0z"></path></svg>
+									</button>';
+								
+							echo '</div>';
+				        	 
+				        }
+				    }
+                }
 			}
 		}
 		?>
