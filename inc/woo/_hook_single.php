@@ -262,10 +262,10 @@ function theclick_woocommerce_single_gallery_grid(){
                 );
                 $cls = 'col-12 col-md-6';
                 if( $k == 0 || $k == 1){
-                	$cls = 'itwoleft';
+                	$cls = 'p-gal itwoleft';
                 }
                 if( $k == 0){
-                	echo '<div class="p-gal col-12"><div class="row"><div class="col-12 col-md-6">';
+                	echo '<div class="col-12"><div class="row gutter-0"><div class="col-12 col-md-6">';
 
                 } 
                 echo '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
@@ -281,7 +281,7 @@ function theclick_woocommerce_single_gallery_grid(){
 					if( !empty($video_type) && ($video_type == 'url' || $video_type == 'file')){
 						$video_source_url = $video_type == 'url' ? $video_url : $video_file['url'];
 				        if(!empty($video_source_url)){
-				        	echo '<div class="product-video col-12 col-md-6">';
+				        	echo '<div class="p-gal product-video col-12 col-md-6">';
 				        		echo '<iframe src="'.esc_url($video_source_url).'" width="560" height="315" frameborder="0" allowfullscreen></iframe>';
  								echo '<button type="button" aria-pressed="false" class="lv-button-icon lv-loop-button" aria-label="Stop all animations" data-active=""><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-pause"><path stroke-width="0" d="M10,0 L30,0 L30,80 L10,80 Z M50,0 L70,0 L70,80 L50,80 Z"></path></svg><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-play"><path d="M76.3 40l-70 40V0z"></path></svg>
 									</button>';
