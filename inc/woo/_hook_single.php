@@ -264,7 +264,7 @@ function theclick_woocommerce_single_gallery_grid(){
                 $html .= '</a></div>';
 
                 echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
-                if( $k == 2 ){
+                if( $k == 1 ){
                 	$video_type  = theclick_get_page_opt('video_type',''); 
 					$video_url   = theclick_get_page_opt('product-video-url',''); 
 					$video_file  = theclick_get_page_opt('product-video-file',''); 
