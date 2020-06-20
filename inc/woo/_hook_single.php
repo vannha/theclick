@@ -267,7 +267,7 @@ function theclick_woocommerce_single_gallery_grid(){
                 	$html = '<div class="col-12"><div class="row">';
 
                 } 
-                $html = '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
+                $html .= '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
                 $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
                 $html .= '</a></div>';
 
