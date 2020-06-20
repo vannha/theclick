@@ -15,6 +15,13 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $theclick_product_
 			max-width: 100%;
 		} */
 	}
+	.summary.entry-summary{
+		@media (min-width: $screen-lg-min){
+			flex : 0 0 50%;
+			width: 50%;
+			max-width: 100%;
+		}
+	}
 	.ef5-product-gallery-inner{
 		@include d-flex();
 		margin-left: #{$theclick_product_gallery_thumbnail_space/-2}px;
