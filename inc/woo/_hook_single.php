@@ -221,7 +221,7 @@ function theclick_woocommerce_single_gallery_grid(){
 	if ( $product->get_image_id() ) { 
 	?>
 	<div class="main-img-grid">
-	<div class="row gutter-2 text-center">
+	<div class="row text-center">
 		<?php
 		$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		if(has_post_thumbnail()){

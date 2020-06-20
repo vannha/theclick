@@ -728,6 +728,12 @@ table.variations .label,
 }
 
 .main-img-grid{
+	>.row{
+		margin: -2px;
+		>div{
+			padding: 2px;
+		}
+	}
 	.p-gal{
 		img{
 			width: 100%;
