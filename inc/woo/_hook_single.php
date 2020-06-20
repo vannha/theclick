@@ -236,11 +236,14 @@ function theclick_woocommerce_single_gallery_grid(){
                 'srcset'                  => ''  
             );
 
-            $html = '<div class="p-thumb col-12"><a href="' . esc_url( $full_size_image[0] ) . '" class="thumbnail-slider-item idx-0" data-idx="0">';
-            $html .= get_the_post_thumbnail( $post->ID, apply_filters( 'theclick_single_product_slider_main_img_size', 'woocommerce_single' ), $attributes_main );
-            $html .= '</a></div>';
+            echo '<div class="p-thumb col-12">';
+            echo '<a href="' . esc_url( $full_size_image[0] ) . '" class="thumbnail-slider-item idx-0" data-idx="0">';
+            echo get_the_post_thumbnail( $post->ID, apply_filters( 'theclick_single_product_slider_main_img_size', 'woocommerce_single' ), $attributes_main );
+            echo '</a>';
+            theclick_woocommerce_video_feature();
+            echo '</div>';
             
-            echo apply_filters( 'woocommerce_single_product_image_thumbnail_html',$html,get_post_thumbnail_id( $post->ID ) );
+            //echo apply_filters( 'woocommerce_single_product_image_thumbnail_html',$html,get_post_thumbnail_id( $post->ID ) );
         }
 
 		$attachment_ids = $product->get_gallery_image_ids();
