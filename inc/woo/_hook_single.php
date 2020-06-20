@@ -259,7 +259,15 @@ function theclick_woocommerce_single_gallery_grid(){
                     'data-large_image_width'  => $full_src[1],
                     'data-large_image_height' => $full_src[2],
                 );
-                $html = '<div class="p-gal col-12 col-md-6"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
+                $cls = 'col-12 col-md-6';
+                if( $k == 0 || $k == 1){
+                	$cls = 'col-12';
+                }
+                if( $k == 0){
+                	$html = '<div class="col-12"><div class="row">';
+
+                } 
+                $html = '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
                 $html .= wp_get_attachment_image( $attachment_id, 'woocommerce_single',false, $attributes_gal );
                 $html .= '</a></div>';
 
@@ -272,7 +280,7 @@ function theclick_woocommerce_single_gallery_grid(){
 					if( !empty($video_type) && ($video_type == 'url' || $video_type == 'file')){
 						$video_source_url = $video_type == 'url' ? $video_url : $video_file['url'];
 				        if(!empty($video_source_url)){
-				        	echo '<div class="productVideo" style="">';
+				        	echo '<div class="p-gal product-video col-12 col-md-6">';
 				        		echo '<iframe src="'.esc_url($video_source_url).'" width="560" height="315" frameborder="0" allowfullscreen></iframe>';
  								echo '<button type="button" aria-pressed="false" class="lv-button-icon lv-loop-button" aria-label="Stop all animations" data-active=""><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-pause"><path stroke-width="0" d="M10,0 L30,0 L30,80 L10,80 Z M50,0 L70,0 L70,80 L50,80 Z"></path></svg><svg width="80" height="80" viewBox="0 0 80 80" focusable="false" aria-hidden="true" class="lv-icon lv-icon-play"><path d="M76.3 40l-70 40V0z"></path></svg>
 									</button>';
@@ -281,6 +289,9 @@ function theclick_woocommerce_single_gallery_grid(){
 				        	 
 				        }
 				    }
+                }
+                if( $k == 1){
+                	$html = '</div></div>';
                 }
 			}
 		}
