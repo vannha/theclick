@@ -69,6 +69,7 @@ function theclick_woocommerce_single_gallery(){
 	add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_show_product_loop_badges', 2);
     if($product_style == 'sticky'){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_sticky', 3);
+		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_video_feature', 4);
     }elseif($product_style == 'slider'){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_slider', 3);
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_video_feature', 4);
