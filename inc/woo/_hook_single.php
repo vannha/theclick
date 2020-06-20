@@ -177,7 +177,7 @@ function theclick_woocommerce_single_gallery_slider(){
                 'srcset'                  => ''  
             );
 
-            $html = '<a href="' . esc_url( $full_size_image[0] ) . '" class="thumbnail-slider-item idx-0" data-idx="0">';
+            $html = '<a href="' . esc_url( $full_size_image[0] ) . '" class="p-thumb thumbnail-slider-item idx-0" data-idx="0">';
             $html .= get_the_post_thumbnail( $post->ID, apply_filters( 'theclick_single_product_slider_main_img_size', 'woocommerce_single' ), $attributes_main );
             $html .= '</a>';
             
