@@ -265,7 +265,7 @@ function theclick_woocommerce_single_gallery_grid(){
                 	$cls = 'itwoleft';
                 }
                 if( $k == 0){
-                	$html = '<div class="p-gal col-12"><div class="row"><div class="col-12 col-md-6">';
+                	echo '<div class="p-gal col-12"><div class="row"><div class="col-12 col-md-6">';
 
                 } 
                 echo '<div class="'.$cls.'"><a href="' . esc_url( $full_src[0] ) . '" class="thumbnail-slider-item idx-'.esc_attr($k+1).'" data-idx="'.esc_attr($k+1).'">';
