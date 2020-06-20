@@ -262,7 +262,7 @@ function theclick_woocommerce_single_gallery_grid(){
                 );
                 $cls = 'p-gal col-12 col-md-6';
                 if( $k == 0 || $k == 1){
-                	$cls = 'p-gal itwoleft';
+                	$cls = 'itwoleft';
                 }
                 if( $k == 0){
                 	echo '<div class="p-gal col-12"><div class="row gutter-0"><div class="col-12 col-md-6">';

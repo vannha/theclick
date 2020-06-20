@@ -739,4 +739,7 @@ table.variations .label,
 			width: 100%;
 		}
 	}
+	.itwoleft + .itwoleft{
+		margin-top: 4px;
+	}
 }
