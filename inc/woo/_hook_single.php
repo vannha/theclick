@@ -71,6 +71,7 @@ function theclick_woocommerce_single_gallery(){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_sticky', 3);
     }elseif($product_style == 'slider'){
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_slider', 3);
+		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_video_feature', 4);
 		$class = '';
     }elseif($product_style == 'grid'){
 		//add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_single_gallery_grid', 3);
@@ -78,7 +79,6 @@ function theclick_woocommerce_single_gallery(){
     }else{
 		add_action('theclick_woocommerce_single_gallery', 'woocommerce_show_product_images', 3);
 		add_action('theclick_woocommerce_single_gallery', 'theclick_woocommerce_video_feature', 4);
-		 
 	}
 
 	?>
