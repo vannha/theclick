@@ -260,7 +260,7 @@ function theclick_woocommerce_single_gallery_grid(){
                     'data-large_image_width'  => $full_src[1],
                     'data-large_image_height' => $full_src[2],
                 );
-                $cls = 'col-12 col-md-6';
+                $cls = 'p-gal col-12 col-md-6';
                 if( $k == 0 || $k == 1){
                 	$cls = 'p-gal itwoleft';
                 }
