@@ -730,7 +730,7 @@ table.variations .label,
 .main-img-grid{
 	>.row{
 		margin: -2px;
-		.p-gal{
+		>div{
 			padding: 2px;
 		}
 	}
@@ -738,8 +738,5 @@ table.variations .label,
 		img{
 			width: 100%;
 		}
-	}
-	.itwoleft + .itwoleft{
-		margin-top: 4px;
 	}
 }
