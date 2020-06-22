@@ -202,6 +202,9 @@ table.woocommerce-cart-form__contents{
 			text-transform: uppercase;
 		}
 	}
+	input[type="radio"]{
+		margin-right: 5px;
+	}
 }
 .ef5-cart-checkout-btn{
 	@media (min-width: 480px){
