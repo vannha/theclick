@@ -36,11 +36,16 @@
 }
 
 #ef5-cart-popup .widget_shopping_cart{
-	min-width: 270px;
+	min-width: 370px;
+	background: #fff;
+    padding: 5px 30px 25px 30px;
 }
 
 .wcppec-cart-widget-button{
 	margin: 5px;
 	flex: 0 0 100%;
 	text-align: center;
+}
+li.woocommerce-mini-cart-item.mini_cart_item +li {
+    margin-top: -20px;
 }
