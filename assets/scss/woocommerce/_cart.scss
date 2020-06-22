@@ -139,8 +139,6 @@ table.woocommerce-cart-form__contents{
 			display: none;
 		}
 		input[name="coupon_code"]{
-			border: 2px solid $accent_color;
-		    border-radius: 23px;
 		    padding: 9px 20px;
 		    flex-basis: 0;
 		    flex-grow: 1;
@@ -154,8 +152,8 @@ table.woocommerce-cart-form__contents{
 		}
 		button[name="apply_coupon"]{
 			padding: 13.5px 33px;
-    		border-radius: 23px;
     		background: $accent_color;
+    		color: #fff;
     		flex: 0 0 auto;
 		    width: auto;
 		    max-width: 100%;
