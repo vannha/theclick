@@ -157,6 +157,9 @@ table.woocommerce-cart-form__contents{
     		flex: 0 0 auto;
 		    width: auto;
 		    max-width: 100%;
+		    &:hover{
+		    	background: $primary_color;
+		    }
 		}
 	}
 }
