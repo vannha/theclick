@@ -235,7 +235,7 @@ if(!function_exists('theclick_post_content')){
             'ef5-content',
             'ef5-content-'.get_post_type(),
         ];
-        if(is_singular() && $show_share == '1') $classes[] = 'd-flex';
+        //if(is_singular() && $show_share == '1') $classes[] = 'd-flex';
         if(is_singular()) $classes[] = 'ef5-single-content';
         $classes[] = 'clearfix';
     ?>
