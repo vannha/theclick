@@ -39,6 +39,9 @@
 	min-width: 370px;
 	background: #fff;
     padding: 5px 30px 25px 30px;
+    @media (max-width: 576px){
+    	padding: 5px 15px 25px 15px;
+    }
 }
 
 .wcppec-cart-widget-button{
