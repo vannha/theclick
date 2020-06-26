@@ -154,10 +154,10 @@ function theclick_sidebar_position(){
     } elseif(is_page()){
         if (class_exists('WooCommerce') && (is_checkout() || is_cart())) {
             $sidebar_position = theclick_get_opts('page_sidebar_pos',theclick_shop_sidebar_position());
-        } else {
-            //$sidebar_position = theclick_get_opts('page_sidebar_pos',theclick_page_sidebar_position());
             $sidebar_position = theclick_get_opts('page_sidebar_pos','none');
             var_dump($sidebar_position);
+        } else {
+            $sidebar_position = theclick_get_opts('page_sidebar_pos',theclick_page_sidebar_position());
         }
     } elseif (is_singular('post')) {
         $sidebar_position = theclick_get_opts('post_sidebar_pos',theclick_post_sidebar_position());

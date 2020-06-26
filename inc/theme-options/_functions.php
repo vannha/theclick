@@ -158,7 +158,7 @@ if( !function_exists('theclick_woo_filter_widget_opts')){
 }
  
 function theclick_shop_sidebar_position(){
-    return apply_filters('theclick_shop_sidebar_position','right');
+    return apply_filters('theclick_shop_sidebar_position','none');
 }
 
 function theclick_product_sidebar_position(){
