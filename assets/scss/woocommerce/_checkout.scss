@@ -83,6 +83,13 @@
 button[name="woocommerce_checkout_place_order"]{
 	margin-top: 30px;
 	float: right;
+	color: #fff;
+    background-color: $accent_color;
+    margin-right: 20px;
+    &:hover{
+    	background-color: $primary_color;
+    	color: #fff;
+    }
 	[dir="rtl"] &{
 		float: left;
 	}
