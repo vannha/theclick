@@ -295,7 +295,8 @@ if(!function_exists('theclick_header_opts')){
             array(
                 'id'     => 'header_bg',
                 'type'   => 'background',
-                'title'  => esc_html__('Background', 'theclick')
+                'title'  => esc_html__('Background', 'theclick'),
+                'output' => array('.header-default')
             ),
             array(
                 'id'          => 'header_text_color',
@@ -307,6 +308,7 @@ if(!function_exists('theclick_header_opts')){
                 'id'    => 'header_link_colors',
                 'type'  => 'link_color',
                 'title' => esc_html__('Link colors', 'theclick'),
+                'output' => array('.header-default')
             ),
             array(
                 'id'       => 'header_border',
@@ -1481,186 +1483,7 @@ if(!function_exists('theclick_woocommerce_single_theme_opts')){
         );
     }
 }
-if(!function_exists('theclick_woocommerce_single_theme_opts')){
-    function theclick_woocommerce_single_theme_opts($default = false){
-        $gallery_layout = $gallery_thumb_position        = array();
-        $default_value          = 'none';
-        $default_gallery_layout = 'simple';
-        $default_gallery_thumb_position = 'thumb-right';
-        if($default){
-            $gallery_layout['-1']         = esc_html__('Default','theclick');
-            $gallery_thumb_position['-1'] = esc_html__('Default','theclick');
-            $default_value                = '-1';
-            $default_gallery_layout       = '-1';
-            $default_gallery_thumb_position       = '-1';
-        }
-        $gallery_layout['simple']      = esc_html__('Simple', 'theclick');
-        $gallery_layout['thumbnail_v'] = esc_html__('Thumbnail Vertical', 'theclick');
-        $gallery_layout['thumbnail_h'] = esc_html__('Thumbnail Horizontal', 'theclick');
 
-        $gallery_thumb_position['thumb-left'] = esc_html__('Left','theclick');
-        $gallery_thumb_position['thumb-right'] = esc_html__('Right','theclick');
-
-        return array(
-            'title'      => esc_html__('Single Product Design', 'theclick'),
-            'icon'       => 'el el-shopping-cart',
-            'subsection' => true,
-            'fields'     => array(
-                array(
-                    'id'       => 'product_sidebar_pos',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__('Layouts', 'theclick'),
-                    'subtitle' => esc_html__('select a layout for single product page', 'theclick'),
-                    'options'  => theclick_sidebar_position_opts(),
-                    'default'  => theclick_product_sidebar_position()
-                ),
-                array(
-                    'id'       => 'product_style',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__('Style', 'theclick'),
-                    'subtitle' => esc_html__('select a style for single product page', 'theclick'),
-                    'options'  => array(
-                        'style-1' => esc_html__( 'Style 1','theclick' ),
-                        'style-2' => esc_html__( 'Style 2','theclick' ),
-                        'style-3' => esc_html__( 'Style 3','theclick' ),
-                        'style-4' => esc_html__( 'Style 4','theclick' ),
-                        'style-5' => esc_html__( 'Style 5','theclick' ),
-                        'style-6' => esc_html__( 'Style 6','theclick' ),
-                    ),
-                    'default'  => 'style-1'
-                ),
-                array(
-                    'id'       => 'product_gallery_layout',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__('Gallery Layouts', 'theclick'),
-                    'subtitle' => esc_html__('select a layout for single product image...', 'theclick'),
-                    'options'  => $gallery_layout,
-                    'default'  => $default_gallery_layout
-                ),
-                array(
-                    'id'       => 'product_gallery_thumb_position',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__('Thumbnail Position', 'theclick'),
-                    'subtitle' => esc_html__('select a position for gallery thumbnail', 'theclick'),
-                    'options'  => $gallery_thumb_position,
-                    'default'  => $default_gallery_thumb_position,
-                    'required' => array(
-                        array('product_gallery_layout', '=', 'thumbnail_v')
-                    )
-                ),
-                array(
-                    'title'    => esc_html__('Gallery Images Size', 'theclick'),
-                    'subtitle' => esc_html__('Enter the gallery image size (regenerate-thumbnails after change)', 'theclick'),
-                    'id'       => 'product_gallery_thumbnail_size',
-                    'type'     => 'dimensions',
-                    'units'    => array('px'),
-                    'default'  => array(),
-                    'required' => array(
-                        array('product_gallery_layout', '=', 'simple')
-                    )
-                ),
-                array(
-                    'title'    => esc_html__('Gallery Images Size', 'theclick'),
-                    'subtitle' => esc_html__('Enter the gallery image size', 'theclick'),
-                    'id'       => 'product_gallery_thumbnail_v_size',
-                    'type'     => 'dimensions',
-                    'units'    => array('px'),
-                    'default'  => array(),
-                    'required' => array(
-                        array('product_gallery_layout', '=', 'thumbnail_v')
-                    )
-                ),
-                array(
-                    'title'    => esc_html__('Gallery Images Size', 'theclick'),
-                    'subtitle' => esc_html__('Enter the gallery image size', 'theclick'),
-                    'id'       => 'product_gallery_thumbnail_h_size',
-                    'type'     => 'dimensions',
-                    'units'    => array('px'),
-                    'default'  => array(),
-                    'required' => array(
-                        array('product_gallery_layout', '=', 'thumbnail_h')
-                    )
-                ),
-                array(
-                    'title'    => esc_html__('Gallery Images Space', 'theclick'),
-                    'subtitle' => esc_html__('Enter space between each image', 'theclick'),
-                    'id'       => 'product_gallery_thumbnail_space',
-                    'type'     => 'dimensions',
-                    'height'   => false,
-                    'units'    => array('px'),
-                    'default'  => array()
-                ),
-                array(
-                    'id'       => 'product_share_on',
-                    'title'    => esc_html__('Share', 'theclick'),
-                    'subtitle' => esc_html__('Show share product to some socials network on each post.', 'theclick'),
-                    'type'     => 'switch',
-                    'default'  => '0',
-                ),
-                array(
-                    'title'    => esc_html__('Cart item thumbnail size', 'theclick'),
-                    'subtitle' => esc_html__('Enter the image size', 'theclick'),
-                    'id'       => 'theclick_woocommerce_cart_item_thumbnail_size',
-                    'type'     => 'dimensions',
-                    'units'    => array('px'),
-                    'default'  => array(),
-                ),
-                array(
-                    'id'       => 'single_product_related_info',
-                    'type'     => 'info',
-                    'style'    => 'success',
-                    'title'    => esc_html__('Product Related', 'theclick'),
-                    'subtitle' => esc_html__('Custom product related, ...', 'theclick'),
-                ),
-                array(
-                    'id'       => 'single_product_related',
-                    'title'    => esc_html__('Single Product Related', 'theclick'),
-                    'subtitle' => esc_html__('Enable or disable product related section.', 'theclick'),
-                    'type'     => 'switch',
-                    'default'  => '0',
-                ),
-                array(
-                    'id'       => 'single_product_related_number',
-                    'type'     => 'text',
-                    'title'    => esc_html__('Related number items', 'theclick'),
-                    'subtitle' => esc_html__('Enter the related number items.', 'theclick'),
-                    'default'  => '4',
-                    'required' => array(
-                        array('single_product_related', '=', '1')
-                    )
-                ),
-                array(
-                    'id'       => 'single_product_related_columns',
-                    'type'     => 'slider',
-                    'title'    => esc_html__('Products Related Columns', 'theclick'),
-                    'subtitle' => esc_html__('Choose products related columns show on single page, ...', 'theclick'),
-                    'default'   => 4,
-                    'min'       => 1,
-                    'step'      => 1,
-                    'max'       => 6,
-                    'display_value' => 'label',
-                    'required' => array(
-                        array('single_product_related', '=', '1')
-                    )
-                ),
-                array(
-                    'id'       => 'single_product_related_type',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__('Related grid / carousel', 'theclick'),
-                    'subtitle' => esc_html__('select type display for product related', 'theclick'),
-                    'options'  => array(
-                        'grid' => esc_html__( 'Grid','theclick' ),
-                        'carousel' => esc_html__( 'Carousel','theclick' )
-                    ),
-                    'default'  => 'grid',
-                    'required' => array(
-                        array('single_product_related', '=', '1')
-                    )
-                ),
-            )
-        );
-    }
-}
 /**
  * Theme Options 
  * Footer Area 

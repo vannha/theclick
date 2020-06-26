@@ -1517,7 +1517,7 @@
     }
 
     function theclick_link_search_toggle(){
-         $('.link-search-toggle').on('click',function(e){
+        $('.link-search-toggle').on('click',function(e){
             e.preventDefault();
             e.stopPropagation();
             $(this).toggleClass('clicked');
