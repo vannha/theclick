@@ -56,3 +56,42 @@
     visibility: visible;
     background: rgba(0, 0, 0, 0.7);
 }
+
+form.track_order {
+	@media (min-width: $screen_md_min){
+	    max-width: 712px;
+	    margin: 0 auto;
+        padding: 0 95px 28px 95px;
+    	background: #f5f5f5;
+	}
+	p:not(.form-row){
+		text-align: center;
+		@media (min-width: $screen_md_min){
+		    background: #fff;
+		    margin: 0 -95px;
+		    padding-bottom: 67px;
+		}
+	}
+	p.form-row{
+		margin-bottom: 22px;
+		label{
+			font-size: 16px;
+		    color: $heading_color;
+		    margin-bottom: 12px;
+		}
+	}
+	.form-row-first{
+		margin-top: 44px;
+	}
+	input[type="text"]{
+		@include placeholder(){
+			font-size: 15px;
+			font-weight: 500;
+		};
+	}
+	.button{
+		display: block;
+	    width: 100%;
+	    margin-top: 28px;
+	}
+}
