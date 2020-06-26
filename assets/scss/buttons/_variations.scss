@@ -8,8 +8,8 @@ $btn-text-style    : uppercase;
 $btn-letter-spacing: unset;
 $btn-color         : $primary_color;
 $btn-color-hover   : $accent_color;
-$btn-bg-color      : transparent;
-$btn-bg-color-hover: transparent;
+$btn-bg-color      : $primary_color;
+$btn-bg-color-hover: $accent_color;
 
 // Button Default 
 $btn-border   : 1px solid transparent;
