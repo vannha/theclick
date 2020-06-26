@@ -82,12 +82,6 @@ form.track_order {
 	.form-row-first{
 		margin-top: 44px;
 	}
-	input[type="text"]{
-		@include placeholder(){
-			font-size: 15px;
-			font-weight: 500;
-		};
-	}
 	.button{
 		display: block;
 	    width: 100%;
