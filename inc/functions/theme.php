@@ -97,7 +97,7 @@ function theclick_archive_sidebar_position(){
  * Page sidebar position 
 */
 function theclick_page_sidebar_position(){
-    return apply_filters('theclick_page_sidebar_position','bottom');
+    return apply_filters('theclick_page_sidebar_position','none');
 }
 /*
  * Archive content  grid column
