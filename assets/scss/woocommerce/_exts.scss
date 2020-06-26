@@ -71,6 +71,24 @@
 		text-align: left;
 	}
 }
+.woosw-content-items{
+	th,td{
+		padding: 5px 15px;
+	}
+	.ef5-products-price{
+		font-weight: 400;
+		font-size: 14px;
+	}
+	.button{
+	    margin-top: 28px;
+	    color: #fff;
+    	background-color: $accent_color;
+    	&:hover{
+	    	background-color: $primary_color;
+	    	color: #fff;
+	    }
+	}
+}
 form.track_order {
 	@media (min-width: $screen_md_min){
 	    max-width: 712px;
