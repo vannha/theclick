@@ -13,3 +13,11 @@
 		color: $accent_color;
 	}
 }
+.woocommerce-order{
+	table{
+		text-align: left;
+		th,td{
+			padding: 5px 15px;
+		}
+	}
+}
