@@ -58,7 +58,7 @@
 }
 .wooscp_table{
 	.button{
-	    margin-top: 28px;
+	    margin-top: 10px;
 	    color: #fff;
     	background-color: $accent_color;
     	&:hover{
@@ -69,18 +69,24 @@
 	table td, table th{
 		border: 0;
 		text-align: left;
+		p{
+			margin: 0;
+		}
 	}
 }
 .woosw-content-items{
 	th,td{
 		padding: 5px 15px;
+		p{
+			margin: 0;
+		}
 	}
 	.ef5-products-price{
 		font-weight: 400;
 		font-size: 14px;
 	}
 	.button{
-	    margin-top: 28px;
+	    margin-top: 10px;
 	    color: #fff;
     	background-color: $accent_color;
     	&:hover{
@@ -91,6 +97,10 @@
 }
 .ef5-content .woosw-list table.woosw-content-items tr td{
 	padding: 10px 15px;
+	p{
+		margin: 0;
+	}
+
 }
 form.track_order {
 	@media (min-width: $screen_md_min){
