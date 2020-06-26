@@ -156,6 +156,7 @@ function theclick_sidebar_position(){
             $sidebar_position = theclick_get_opts('page_sidebar_pos',theclick_shop_sidebar_position());
         } else {
             $sidebar_position = theclick_get_opts('page_sidebar_pos',theclick_page_sidebar_position());
+            var_dump($sidebar_position);
         }
     } elseif (is_singular('post')) {
         $sidebar_position = theclick_get_opts('post_sidebar_pos',theclick_post_sidebar_position());
@@ -206,7 +207,7 @@ function theclick_content_css_class($class=''){
 function theclick_sidebar(){
     $sidebar            = theclick_get_sidebar(false);
     $sidebar_position   = theclick_sidebar_position();
-    var_dump($sidebar_position);
+
     if($sidebar_position === 'none' || $sidebar_position === 'center') return;
     if( is_active_sidebar( $sidebar ) ) {
     ?>
