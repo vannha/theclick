@@ -56,7 +56,19 @@
     visibility: visible;
     background: rgba(0, 0, 0, 0.7);
 }
-
+.wooscp_table{
+	.button{
+		display: block;
+	    width: 100%;
+	    margin-top: 28px;
+	    color: #fff;
+    	background-color: $accent_color;
+    	&:hover{
+	    	background-color: $primary_color;
+	    	color: #fff;
+	    }
+	}
+}
 form.track_order {
 	@media (min-width: $screen_md_min){
 	    max-width: 712px;
