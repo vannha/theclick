@@ -206,7 +206,7 @@ function theclick_content_css_class($class=''){
 function theclick_sidebar(){
     $sidebar            = theclick_get_sidebar(false);
     $sidebar_position   = theclick_sidebar_position();
-
+    var_dump($sidebar_position);
     if($sidebar_position === 'none' || $sidebar_position === 'center') return;
     if( is_active_sidebar( $sidebar ) ) {
     ?>
