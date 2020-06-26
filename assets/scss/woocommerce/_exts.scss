@@ -92,5 +92,11 @@ form.track_order {
 		display: block;
 	    width: 100%;
 	    margin-top: 28px;
+	    color: #fff;
+    	background-color: $accent_color;
+    	&:hover{
+	    	background-color: $primary_color;
+	    	color: #fff;
+	    }
 	}
 }
