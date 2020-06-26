@@ -89,6 +89,9 @@
 	    }
 	}
 }
+.woosw-list table.woosw-content-items tr td{
+	padding: 10px 15px;
+}
 form.track_order {
 	@media (min-width: $screen_md_min){
 	    max-width: 712px;
