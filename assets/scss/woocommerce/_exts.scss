@@ -102,6 +102,10 @@
 	}
 
 }
+.woosw-copy .woosw-copy-url input{
+	padding: 0;
+	border: 0;
+}
 form.track_order {
 	@media (min-width: $screen_md_min){
 	    max-width: 712px;
