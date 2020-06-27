@@ -430,8 +430,8 @@ Redux::setSection($opt_name, array(
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-do_action('theclick_portfolio_theme_opts','theclick_portfolio_theme_opts');
-/*Redux::setSection($opt_name, array(
+ 
+Redux::setSection($opt_name, array(
     'title'  => esc_html__('Portfolio', 'theclick'),
     'icon'   => 'el el-th',
     'subsection' => true,
@@ -450,7 +450,7 @@ do_action('theclick_portfolio_theme_opts','theclick_portfolio_theme_opts');
             'default' => esc_html__('-1', 'theclick')
         ),
     )
-));*/
+));
 /*--------------------------------------------------------------
 # Service
 --------------------------------------------------------------*/
