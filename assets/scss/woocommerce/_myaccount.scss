@@ -39,6 +39,14 @@
 		input[type="checkbox"]{
 			margin-left: 0;
 		}
+		.button{
+		    color: #fff;
+	    	background-color: $accent_color;
+	    	&:hover{
+		    	background-color: $primary_color;
+		    	color: #fff;
+		    }
+		}
 	}
 	form .form-row{
 		label{
