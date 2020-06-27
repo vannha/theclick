@@ -322,6 +322,30 @@ function theclick_page_options_register($metabox)
             )
         )
     ));
-   
+    if (!$metabox->isset_args('portfolio')) {
+        $metabox->set_args('portfolio', array(
+            'opt_name'     => theclick_get_page_opt_name(),
+            'display_name' => esc_html__('Portfolio Settings', 'theclick'),
+            'class'        => 'fully-expanded'
+        ), array(
+            'context'  => 'advanced',
+            'priority' => 'default',
+            'panels'   => true
+        ));
+    }
+    $metabox->add_section('portfolio', array(
+        'title'  => esc_html__('Gallery', 'theclick'),
+        'icon'   => 'el-icon-home',
+        'fields' => array(
+            array(
+                'id' => 'port_gallery',
+                'type' => 'gallery',
+                'title' => esc_html__('Add/Edit Gallery', 'bixbang'),
+                'subtitle' => esc_html__('Create a new Gallery by selecting existing or uploading new images using the WordPress native uploader', 'theclick'),
+            )
+             
+        )
+    ));
+      
 }
 add_action('ef5_post_metabox_register', 'theclick_page_options_register');
