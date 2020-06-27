@@ -5,9 +5,9 @@
  * This custom make some custom to Portfolio
  *
  */
-add_filter('ef5_extra_post_type_portfolio', '__return_false');
+//add_filter('ef5_extra_post_type_portfolio', '__return_false');
 
-add_filter('ef5_extra_post_types', 'theclick_cpts_portfolio', 10 , 1);
+//add_filter('ef5_extra_post_types', 'theclick_cpts_portfolio', 10 , 1);
 function theclick_cpts_portfolio($post_types) {
 	$supported_portfolio = apply_filters('ef5_extra_post_type_portfolio', false);
     if($supported_portfolio) {
@@ -27,7 +27,7 @@ function theclick_cpts_portfolio($post_types) {
 	}
     return $post_types;
 }
-add_filter('ef5_extra_taxonomies', 'theclick_cpts_tax', 10 , 1);
+//add_filter('ef5_extra_taxonomies', 'theclick_cpts_tax', 10 , 1);
 function theclick_cpts_tax($taxo) {
 	$supported_portfolio = apply_filters('ef5_extra_post_type_portfolio', false);
     if($supported_portfolio) {
