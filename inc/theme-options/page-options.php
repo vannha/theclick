@@ -322,8 +322,8 @@ function theclick_page_options_register($metabox)
             )
         )
     ));
-    if (!$metabox->isset_args('portfolio')) {
-        $metabox->set_args('portfolio', array(
+    if (!$metabox->isset_args('ef5_portfolio')) {
+        $metabox->set_args('ef5_portfolio', array(
             'opt_name'     => theclick_get_page_opt_name(),
             'display_name' => esc_html__('Portfolio Settings', 'theclick'),
             'class'        => 'fully-expanded'
@@ -333,7 +333,7 @@ function theclick_page_options_register($metabox)
             'panels'   => true
         ));
     }
-    $metabox->add_section('portfolio', array(
+    $metabox->add_section('ef5_portfolio', array(
         'title'  => esc_html__('Gallery', 'theclick'),
         'icon'   => 'el-icon-home',
         'fields' => array(
