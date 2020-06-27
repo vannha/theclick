@@ -430,7 +430,7 @@ Redux::setSection($opt_name, array(
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
- 
+do_action('theclick_portfolio_theme_opts','theclick_portfolio_theme_opts');
 Redux::setSection($opt_name, array(
     'title'  => esc_html__('Portfolio', 'theclick'),
     'icon'   => 'el el-th',
