@@ -1,0 +1,91 @@
+.comment-respond{
+	margin-top: 75px;
+}
+.commentlist-wrap .comment-respond{
+	margin-top: 30px;
+}
+.comment-reply-title{
+	margin: 0 0 8px;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 17px;
+	text-transform: uppercase;
+}
+/* Comment Form */
+.comment-form{
+	@media (min-width: 768px){
+		.ef5-form-fields{
+			margin-top: -5px;
+		}
+	}
+	[class*="comment-form-"]{
+	    margin-bottom: 20px;
+	}
+	.ef5-form-fields input,
+	textarea[name="comment"]{
+		color: $BodyColor;
+	}
+	textarea[name="comment"]{
+		height: 140px;
+	}
+	label{
+		font-weight: 500;
+		font-size: 11px;
+		line-height: 14px;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+	}
+	.comment-form-cookies-consent label{
+		font-size: 14px;
+		text-transform: inherit;
+	}
+	button[type="submit"]{
+		display: block;
+		width: 100%;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		padding: 17px 22px 16px 22px;
+		text-transform: uppercase;
+	}
+	.logged-in-as{
+	    margin-top: 0;
+	    margin-bottom: 25px;
+	    font-size: 13px;
+	    line-height: 13px;
+	}
+}
+.comment-notes{
+	margin-top: 0;
+	margin-bottom: 25px;
+	font-size: 13px;
+	line-height: 13px;
+}
+
+.comment-respond #commentform .gglcptch{
+	margin: 0 0 30px;
+	padding: 0;
+}
+
+// WooCommerce
+.comment-form-rating{
+	margin-left: -15px;
+	margin-right: -15px;
+	@include d-flex();
+	> *{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+.woocommerce-noreviews{
+	padding-bottom: 30px;
+}
+#review_form{
+	.gglcptch_recaptcha > div{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.form-submit{
+		text-align: center;
+	}
+}

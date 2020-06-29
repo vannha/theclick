@@ -1,0 +1,234 @@
+$extra_breakpoints: (
+    'xxl': 1366px,
+    'xxxl': 1600px,
+    'xxxxl': 1800px
+);
+$grid-x-columns : (
+	'1\/5' : 20%,
+	'1\/7' : 14.2857142857%,
+	'1\/8' : 12.5%,
+	'1\/9' : 11.1111111111%,
+	'1\/11' : 9.09090909091%,
+	'2\/5' : 40%,
+	'3\/5' : 60%,
+	'4\/5' : 80%,
+	'1\/10' : 10%,
+	'3\/10' : 30%,
+	'5\/10' : 50%,
+	'7\/10' : 70%,
+	'9\/10' : 90%,
+	'29\/509' : 29.509%,
+	'70\/491' : 70.491%
+);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		@each $column, $column-value in $grid-x-columns{
+			.col#{$infix}-#{$column}{
+				flex: 0 0 $column-value;
+				max-width: $column-value;
+				position: relative;
+			}
+		}
+		// Offset
+		@each $column, $column-value in $grid-x-columns{
+			.offset#{$infix}-#{$column}{
+				margin-left: $column-value;
+			}
+		}
+		// RTL Offset 
+		@each $column, $column-value in $grid-x-columns{
+			.rtl .offset#{$infix}-#{$column}{
+				margin-right: $column-value;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+// Custom Gutters 
+$customs_gutters: (
+	0 : 0,
+	1 : 1px,
+	2 : 2px,
+	3 : 3px,
+	4 : 4px,
+	5 : 5px,
+	6 : 6px,
+	7 : 7px,
+	8 : 8px,
+	9 : 9px,
+	10 : 10px,
+	15 : 15px,
+	20 : 20px,
+	25 : 25px,
+	30 : 30px,
+	35 : 35px,
+	40 : 40px,
+	45 : 45px,
+	50 : 50px,
+	60 : 60px,
+	70 : 70px,
+	80 : 80px,
+	90 : 90px,
+	100 : 100px,
+	120 : 120px,
+	150 : 150px,
+	160 : 160px,
+);
+.vc_row{
+	margin-left: -15px;
+	margin-right: -15px;
+	> [class*='col'],
+	> *{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+//$ef5-gutters:('default':'','20':20px,'xl-45':45px,'50':50px);
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		@each $gutters , $gutters-value in $customs_gutters{
+			.gutter#{$infix}-#{$gutters},
+			.gutters#{$infix}-#{$gutters}{
+				margin-left: ($gutters-value / -2);
+				margin-right: ($gutters-value / -2);
+				> [class*='col'],
+				> *{
+					padding-left: ($gutters-value / 2);
+					padding-right: ($gutters-value / 2);
+				}
+			}
+			
+			.vc_row.gutter#{$infix}-#{$gutters},
+			.vc_row.gutters#{$infix}-#{$gutters}{
+				margin-left: ($gutters-value / -2);
+				margin-right: ($gutters-value / -2);
+				> [class*='col'],
+				> *{
+					padding-left: ($gutters-value / 2);
+					padding-right: ($gutters-value / 2);
+				}
+			}
+			.ef5-element-horizontal {
+				&.gutter#{$infix}-#{$gutters}{
+					> .vc_column-inner > .wpb_wrapper {
+						margin-left: ($gutters-value / -2);
+						margin-right: ($gutters-value / -2);
+						> *{
+							padding-left: ($gutters-value / 2);
+							padding-right: ($gutters-value / 2);
+						}
+					}
+				}
+			}
+		}
+		@each $gutters , $gutters-value in $ef5-gutters{
+			@if $gutters-value != ''{
+				.vc_row.gutter#{$infix}-#{$gutters},
+				.vc_row.gutters#{$infix}-#{$gutters}{
+					margin-left: ($gutters-value / -2);
+					margin-right: ($gutters-value / -2);
+					> [class*='col'],
+					> *{
+						padding-left: ($gutters-value / 2);
+						padding-right: ($gutters-value / 2);
+					}
+				}
+			}
+		}
+	}
+}
+@each $breakpoint in map-keys($extra_breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $extra_breakpoints);
+    @include media-breakpoint-up($breakpoint, $extra_breakpoints) {
+        @each $gutters , $gutters-value in $customs_gutters{
+			.gutter#{$infix}-#{$gutters},
+			.gutters#{$infix}-#{$gutters}{
+				margin-left: ($gutters-value / -2);
+				margin-right: ($gutters-value / -2);
+				> [class*='col'],
+				> *{
+					padding-left: ($gutters-value / 2);
+					padding-right: ($gutters-value / 2);
+				}
+			}
+		}
+          
+    }
+}
+// Grid Gutters
+@each $gutters , $gutters-value in $customs_gutters{
+	.grid-gutters-#{$gutters}{
+		margin: $gutters-value / -2!important;
+		> [class*='col']{
+			padding: $gutters-value / 2;
+			.overlay{
+				top: $gutters-value / 2;
+			    right: $gutters-value / 2;
+			    bottom: $gutters-value / 2;
+			    left: $gutters-value / 2;
+			}
+		}
+	}
+}
+
+.no-container{
+	padding-left: $grid-gutter-width / 2;
+	padding-right: $grid-gutter-width / 2;
+}
+.ef5-container2,
+.ef5-container3{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 200%;
+		background: inherit;
+		[dir="rtl"] &{
+			left: auto;
+			right: 0;
+		}
+	}
+}
+.ef5-container2{
+	padding: 30px;
+	@media (min-width: 1366px){
+		max-width: 75%;
+	}
+}
+.ef5-container3{
+	@media (min-width: 1366px){
+		max-width: 87.5%;
+		margin-right: unset;
+		[dir="rtl"] &{
+			margin-right: auto;
+			margin-left: unset;
+		}
+	}
+}
+.ef5-grid{
+	margin: -25px -15px;
+	> .ef5-grid-item{
+		padding: 25px 15px;
+	}
+}
+
+@media (min-width: 1600px){
+	.vc_row.gutter-xxl-160,
+	.vc_row.gutters-xxl-160{
+		margin-left: -80px;
+		margin-right: -80px;
+		> [class*='col'],
+		> *{
+			padding-left: 80px;
+	    	padding-right: 80px;
+		} 
+	}
+	 
+}

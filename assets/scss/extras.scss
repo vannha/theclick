@@ -1,0 +1,17 @@
+@media (max-width: 782px){
+	html[lang] {
+	    margin-top: 0px!important;
+	}
+	body.logged-in{
+		padding-top: 46px;
+	}
+}
+.pos-abs-1{
+	position: absolute;
+	left: 0;
+	bottom: 135px;
+	z-index: -1;
+	@media (max-width: 1199px){
+		bottom: 75px;
+	}
+}

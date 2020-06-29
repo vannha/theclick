@@ -1,0 +1,23 @@
+.woocommerce-thankyou-order-received{
+	font-size: 30px;
+	
+	color: $HeadingColor;
+}
+
+.woocommerce-thankyou-order-details{
+	list-style: none;
+	margin-bottom: 50px;
+	li:before{
+		content: "\f30b\00a0\00a0";
+		font-family: $FontAwesome;
+		color: $accent_color;
+	}
+}
+.woocommerce-order{
+	table{
+		text-align: left;
+		th,td{
+			padding: 5px 15px;
+		}
+	}
+}

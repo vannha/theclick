@@ -1,0 +1,28 @@
+.author-box{
+	border-top: 1px solid $MainBorderColor;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	.author-avatar{
+		margin-bottom: 20px;
+		img{
+			max-width: 86px;
+			border-radius: 50%;
+		}
+	}
+	.author-info {
+		padding-top: 11px;
+		margin-bottom: 20px;
+		.author-name .h4{
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 15px;
+			text-transform: uppercase;
+		}
+		.author-bio{
+			font-size: 13px;
+			line-height: 20px;
+			color: $accent_color;
+			margin-top: 9px;
+		}
+	}
+}

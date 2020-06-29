@@ -1,0 +1,90 @@
+.ef5-fancybox-1{
+	text-align: center;
+	.ef5-fancybox-icon{
+		margin-bottom: 25px;
+	}
+	.ef5-fancybox-heading{
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 41px;
+	}
+	.ef5-fancybox-desc{
+		margin-top: 15px;
+		font-size: 15px;
+		line-height: 24px;
+		margin-left: auto;
+		margin-right: auto;
+		@media (min-width: 1200px){
+			max-width: 300px;
+		}
+	}
+}
+.ef5-fancybox-2{
+	display: flex;
+	flex-wrap: wrap;
+	align-items:center;
+	justify-content: center;
+	padding: 15px;
+	@media(max-width: 1199px){
+		padding: 15px 10px;
+	}
+	.ef5-fancybox-heading{
+		flex: 0 0 auto;
+		width: auto;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.ef5-fancybox-link{
+		flex: 0 0 auto;
+		width: auto;
+		margin-left: 35px;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		position: relative;
+		padding-left: 28px;
+		@include transition();
+		@media(max-width: 1365px){
+			margin-left: 15px;
+			font-size: 12px;
+			line-height: 14px;
+		}
+		&:before{
+			content: "";
+			width: 20px;
+			height: 1px;
+			background: $primary_color;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			@include transition(width .3s ease);
+		}
+		&:hover{
+			padding-left: 0;
+			&:before{
+				width: 0;
+			}
+		}
+	}
+}
+.ef5-fancybox-3{
+	padding-bottom: 50px;
+	@media (min-width: 768px){
+		border-bottom: 1px solid $primary_color;	
+	}
+	.ef5-fancybox-icon{
+		font-size: 22px;
+		margin-bottom: 22px;
+	}
+	.ef5-fancybox-heading{
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 500;
+	}
+	.ef5-fancybox-desc{
+		margin-top: 15px;
+		font-size: 15px;
+		line-height: 24px;
+	}
+}

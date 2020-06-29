@@ -1,0 +1,43 @@
+.ef5-shares{
+	&.loop{
+		.ef5-share-wrap{
+			margin-left: -10px;
+    		margin-right: -10px;
+			>div{
+				padding-left: 10px;
+    			padding-right: 10px;
+			}
+		}
+	}
+	.share-title{
+		font-size: 10px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $accent_color;	
+		@media (max-width: 767px){
+			display: none;
+		}
+	}
+	.ef5-social-share{
+		margin: 0;
+		a{
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid $MainBorderColor;
+			border-radius: 50%;
+			font-size: 16px;
+			text-align: center;
+			margin-bottom: 5px;
+			@include theclick_social_color();
+			&:hover{
+			 	@include theclick_social_color('background');
+			 	@include theclick_social_color('border-color');
+			 	color: #fff;
+			}
+			+a{
+				margin-left: 5px;
+			}
+		}
+	}
+}

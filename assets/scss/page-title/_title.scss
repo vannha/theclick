@@ -1,0 +1,13 @@
+.page-title,
+.page-desc{
+    color: inherit;
+}
+.page-title{
+	font-size: 48px;
+	@media (max-width: 1199px){
+		font-size: 38px;
+	}
+	@media (max-width: 767px){
+		font-size: 32px;
+	}
+}

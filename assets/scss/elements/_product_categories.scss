@@ -1,0 +1,131 @@
+.ef5-categorys-wrap{
+	.product-cats-row{
+		>div{
+			margin-bottom: 50px;
+			@media (max-width: 1199px){
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.pcats-wrap{
+		position: relative;
+		overflow: hidden;
+		.cat-img{
+			width: 100%;
+			@include transition(transform 0.5s);
+		}
+		.gradient{
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 0%, rgba(0, 0, 0, 0.372842) 61.64%, rgba(0, 0, 0, 0.7444) 99.59%);
+		}
+		.content-wrap{
+			position: absolute;
+			left: 60px;
+			bottom: 60px;
+			@include transform(translateY(0));
+			@include transition(transform 0.5s);
+			@media (max-width: 1600px){
+				left: 50px;
+				bottom: 50px;
+			}
+			@media (max-width: 1430px){
+				left: 30px;
+				bottom: 30px;
+			}
+			@media (max-width: 576px){
+				left: 15px;
+			}
+		}
+		
+		.main-title{
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 1.15;
+			margin-bottom: 8px;
+			color: #fff;
+			display: block;
+			@media (max-width: 1199px){
+				margin-bottom: 0;
+			}
+			@media (max-width: 991px){
+				font-size: 30px;
+			}
+			@media (max-width: 576px){
+				font-size: 30px;
+			}
+		}
+		.sub-title{
+			display: block;
+			font-size: 18px;
+			line-height: 23px;
+			color: #fff;
+			margin: 0;
+			@media (max-width: 1199px){
+				display: none;
+			}
+		}
+		.cat-btn-link{
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 23px;
+			color: #fff;
+			display: inline-block;
+			margin-top: 30px;
+			position: relative;
+			@media (max-width: 1199px){
+				margin-top: 20px;
+			}
+			@media (max-width: 767px){
+				margin-top: 10px;
+			}
+			&:hover{
+				color: #fff;
+				&:after{
+					width: 100%;
+				}
+			}
+			&:after{
+				content: "";
+				width: 20px;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				bottom: -6px;
+				background-color: #fff;
+				@include transition(width 0.4s);
+			}
+		}
+		&:hover{
+			.cat-img{
+				@include transform(scale(1.1));
+			}
+			@media (min-width: 1200px){
+				.content-wrap{
+					@include transform(translateY(-20px));
+				}
+			}
+		}
+	}
+	.col-one .pcats-wrap .main-title{
+		@media (min-width: 768px){
+			font-size: 50px;
+		}
+		@media (min-width: 992px){
+			font-size: 60px;
+		}
+		 
+	}
+	.col-two .pcats-wrap .main-title{
+		@media (min-width: 768px){
+			font-size: 40px;
+		}
+		@media (min-width: 992px){
+			font-size: 50px;
+		}
+		 
+	}
+}

@@ -1,0 +1,68 @@
+// RTL offset
+@mixin make-col-offset-rtl($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: 0;
+  margin-right: if($num == 0, 0, percentage($num));
+}
+@mixin make-grid-columns-offset-rtl($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // RTL offset
+      @for $i from 0 through ($columns - 1) {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+          .rtl .offset#{$infix}-#{$i} {
+            @include make-col-offset-rtl($i, $columns);
+          }
+        }
+      }
+    }
+  }
+}
+@include make-grid-columns-offset-rtl();
+ 
+$max_width:(
+    10 : 10px,
+	15 : 15px,
+	20 : 20px,
+	25 : 25px,
+	30 : 30px,
+	35 : 35px,
+	40 : 40px,
+	50 : 50px,
+	60 : 60px,
+	70 : 70px,
+	80 : 80px,
+	90 : 90px,
+	100 : 100px,
+	380 : 380px,
+    auto: auto
+);
+
+// Width and Height with breakponits
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		@each $prop, $abbrev in (width: w, height: h) {
+		  @each $size, $length in $sizes {
+		    .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length!important; }
+		  }
+		}
+	}
+}
+
+/**
+ custom max-width max-height
+*/
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		@each $prop, $abbrev in (max-width: mw, max-height: mh) {
+		  @each $size, $length in $max_width {
+		    .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length!important; }
+		  }
+		}
+	}
+}
+
+ 
