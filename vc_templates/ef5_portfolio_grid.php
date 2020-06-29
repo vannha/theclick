@@ -30,7 +30,7 @@
     }
     $posts_args = array(
         'post_type' => 'ef5_portfolio',
-        'posts_per_page' => $posts_per_page,
+        'posts_per_page' => $post_per_page,
         'post_status' => 'publish',
         'tax_query' => $tax_query,
         'paged' => $paged,
