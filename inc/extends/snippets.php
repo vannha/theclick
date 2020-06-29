@@ -458,7 +458,6 @@ function theclick_tax_query($post_type, $taxonomies, $taxonomies_exclude ){
 }
 
 /* Convert hexdec color string to rgb(a) string */
- 
 function theclick_hex2rgba($color, $opacity = false) {
  
     $default = 'rgb(0,0,0)';

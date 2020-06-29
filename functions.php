@@ -8,7 +8,6 @@
  * @author EF5 Team
  *
 */
-
 if(!function_exists('theclick_configs')){
     function theclick_configs($value){
         $configs = [
