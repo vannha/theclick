@@ -7,7 +7,7 @@
  */
 add_filter( 'ef5_extra_post_types', 'theclick_add_posttype' );
 function theclick_add_posttype( $postypes ) {
-	$post_types['portfolio'] = array( 
+	$post_types['ef5_portfolio'] = array( 
     	'status'        => true,
 		'item_name' => esc_html__('Portfolio', 'theclick'),
 		'items_name'          => esc_html__('Portfolios', 'theclick'),
@@ -36,7 +36,7 @@ function theclick_add_tax( $taxonomies ) {
 
 	$taxonomies['portfolio_cat'] = array(
 		'status'     => true,
-		'post_type'  => array( 'portfolio' ),
+		'post_type'  => array( 'ef5_portfolio' ),
 		'taxonomy' => esc_html__( 'Portfolio Category', 'theclick' ),
 		'taxtheclickmy'   => esc_html__( 'Portfolio Category', 'theclick' ),
 		'taxonomies' => esc_html__( 'Portfolio Categories', 'theclick' ),
@@ -46,7 +46,7 @@ function theclick_add_tax( $taxonomies ) {
 
 	$taxonomies['portfolio_tag'] = array(
 		'status'     => true,
-		'post_type'  => array( 'portfolio' ),
+		'post_type'  => array( 'ef5_portfolio' ),
 		'taxonomy' => esc_html__( 'Portfolio Tag', 'theclick' ),
 		'taxtheclickmy'   => esc_html__( 'Portfolio Tag', 'theclick' ),
 		'taxonomies' => esc_html__( 'Portfolio Tags', 'theclick' ),
