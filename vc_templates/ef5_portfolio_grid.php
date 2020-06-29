@@ -64,7 +64,7 @@
                 </ul>
             </div>
         <?php endif;?>
-        <div class="row ef5-portfolio-grid-wrap">
+        <div class="row ef5-portfolio-grid-wrap <?php echo esc_attr($column_xl_gutter)?>">
             <?php
             switch ($layout_template) {
                 case '1':
