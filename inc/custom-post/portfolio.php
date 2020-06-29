@@ -31,7 +31,7 @@ function theclick_add_posttype( $postypes ) {
 	return $post_types;
 }
 
-add_filter( 'ef5_extra_taxonomies', 'theclick_add_tax' );
+//add_filter( 'ef5_extra_taxonomies', 'theclick_add_tax' );
 function theclick_add_tax( $taxonomies ) {
 
 	$taxonomies['portfolio_cat'] = array(

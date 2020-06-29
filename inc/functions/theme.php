@@ -263,4 +263,17 @@ if (!function_exists('theclick_get_svg')) {
         else return; 
     }
 }
- 
+
+function theclick_get_portfolio_categories_for_autocomplete(){
+    $product_categories = get_categories(array( 'taxonomy' => 'portfolio_cat' ));
+    $result = array();
+    foreach($product_categories as $category)
+    {
+        $result[] = array(
+            'label'=>$category->name,
+            'value'=>$category->slug,
+            'group'=>'Categories'
+        );
+    }
+    return $result;
+}
