@@ -31,11 +31,11 @@ add_filter('ef5_extra_taxonomies', 'theclick_cpts_tax', 10 , 1);
 function theclick_cpts_tax($taxo) {
 	$supported_portfolio = apply_filters('ef5_extra_post_type_portfolio', true);
     if($supported_portfolio) {
-	    $taxo['theclick_cat'] = array(
+	    $taxo['portfolio_cat'] = array(
 	        'taxonomy'   => esc_html__('Portfolio Category', 'portfolio'),
 	        'taxonomies' => esc_html__('Portfolio Categories', 'portfolio'),
 	    );
-	    $taxo['theclick_tag'] = array(
+	    $taxo['portfolio_tag'] = array(
 	        'taxonomy'   => esc_html__('Portfolio Tag', 'portfolio'),
 	        'taxonomies' => esc_html__('Portfolio Tags', 'portfolio'),
 	    );

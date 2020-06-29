@@ -8,4 +8,3 @@ function theclick_update_vc_grid_column_width(){
 		esc_html__( '29.509%', 'theclick' ) => '29/509'
 	];
 }
- 
