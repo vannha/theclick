@@ -11,10 +11,10 @@ function theclick_cpts_header_top($post_types)
 {
     $header_top = apply_filters('theclick_cpts_header_top', false);
     if($header_top) {
-        $post_types['ef5_header_top'] = array(
+        $post_types['ef5_header_top'] = array( 
             'status'        => true,
-            'name'          => esc_html__('TheClick Header Top', 'theclick'),
-            'singular_name' => esc_html__('TheClick Headers Top', 'theclick'),
+            'item_name'     => esc_html__('Header Top', 'theclick'),
+            'items_name'    => esc_html__('Headers Top', 'theclick'),
             'args'          => array(
                 'description'         => 'Add custom Header Top Layout ',
                 'public'              => true,
@@ -34,8 +34,7 @@ function theclick_cpts_header_top($post_types)
                 'menu_position'       => 20,
                 'menu_icon'           => 'dashicons-editor-insertmore',
                 'supports'            => array( 'title', 'editor','thumbnail' ),
-            ),
-            
+            )
         );
     }
     return $post_types;
@@ -52,10 +51,10 @@ add_filter('ef5_extra_post_types', 'theclick_cpts_footer', 10 , 1);
 function theclick_cpts_footer($post_types) {
     $enable_footer = apply_filters('theclick_cpts_footer', false);
     if($enable_footer) {
-        $post_types['ef5_footer'] = array(
+        $post_types['ef5_footer'] = array( 
             'status'        => true,
-            'name'          => esc_html__('TheClick Footer', 'theclick'),
-            'singular_name' => esc_html__('TheClick Footers', 'theclick'),
+            'item_name'     => esc_html__('Footer', 'theclick'),
+            'items_name'    => esc_html__('Footers', 'theclick'),
             'args'          => array(
                 'description'         => 'Add custom Footer Layout ',
                 'public'              => true,
@@ -75,8 +74,8 @@ function theclick_cpts_footer($post_types) {
                 'menu_position'       => 20,
                 'menu_icon'           => 'dashicons-editor-insertmore',
                 'supports'            => array( 'title', 'editor', 'thumbnail' ),
-            ),
-        );
+            )
+        ); 
     }
     return $post_types;    
 }

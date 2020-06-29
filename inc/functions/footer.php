@@ -5,7 +5,6 @@
 if(!function_exists('theclick_footer')){
 	function theclick_footer(){
 		$footer_layout = theclick_get_opts('footer_layout','');
-		var_dump(theclick_have_post('ef5_footer'));
 		if(theclick_have_post('ef5_footer') && $footer_layout !== ''){
 		$footer_title = sanitize_title(get_the_title(theclick_get_id_by_slug($footer_layout, 'ef5_footer')));
 	?>
