@@ -103,20 +103,15 @@
     </div>
 <?php
 $show_pagination = ($pagination == 'pagin') ? '1' : '0';
-/*if($ifp)
-    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '1']);
-else
-    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
-$this->view_all($atts);*/
-
-if($pagination == 'loadmore'){
-    $loadmore_text = !empty($loadmore_text) ? $loadmore_text : esc_html__( 'Load More','theclick' );  
-    var_dump(next_posts_link( $loadmore_text ));
-    echo '<div class="d-flex justify-content-center text-center">';
-        next_posts_link( $loadmore_text ); 
-    echo '</div>';
+if($pagination == 'pagin'){
+    if($ifp)
+        theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '1']);
+    else
+        theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
+}else if( $pagination == 'view_all'){
+    $this->view_all($atts);
+}else if( $pagination == 'loadmore'){
+    $this->loadmore($atts);
 }
-//$this->loadmore($atts);
-wp_reset_query();
 ?>
 </div>
