@@ -79,7 +79,7 @@
                             <?php theclick_post_media(['thumbnail_size' => 'medium']); ?>
                             <div class="ef5-port-content">
                                 <?php
-                                the_title();
+                                the_title( '<div class="ef5-heading text-20"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
                                 theclick_posted_in(['sep' => ',','post_type' => 'ef5_portfolio']);
                                 ?>
                             </div>
