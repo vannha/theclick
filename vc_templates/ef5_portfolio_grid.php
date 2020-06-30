@@ -108,6 +108,7 @@ if($ifp)
 else
     theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
+wp_reset_query();
 if($pagination == 'loadmore'){
     $loadmore_text = !empty($loadmore_text) ? $loadmore_text : esc_html__( 'Load More','theclick' );  
     var_dump(next_posts_link( $loadmore_text ));
