@@ -80,6 +80,7 @@
                             <div class="ef5-port-content">
                                 <?php
                                 the_title();
+                                theclick_posted_in(['sep' => ',','post_type' => 'ef5_portfolio']);
                                 ?>
                             </div>
                              
