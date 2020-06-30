@@ -1,5 +1,5 @@
 <?php 
-    global $wp_query;
+    global $paged, $wp_query;
     $atts = vc_map_get_attributes($this->getShortcode(), $atts);
     extract($atts);
 
@@ -22,24 +22,13 @@
 
     $tax_query = theclick_tax_query('ef5_portfolio', $taxonomies, $taxonomies_exclude);
     
-    if (get_query_var('paged')){ 
-        $paged = get_query_var('paged'); 
-    }elseif(get_query_var('page')){ 
-        $paged = get_query_var('page'); 
-    }else{ 
-        $paged = 1; 
-    }
-    /*if($paged > 1){
-        $args['paged'] = $paged;
-    }*/
-
-    /*if (get_query_var('paged')) {
+    if (get_query_var('paged')) {
         $paged = get_query_var('paged');
     } elseif (get_query_var('page')) {
         $paged = get_query_var('page');
     } else {
         $paged = 1;
-    }*/
+    }
     $posts_args = array(
         'post_type' => 'ef5_portfolio',
         'posts_per_page' => $post_per_page,
