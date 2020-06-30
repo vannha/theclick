@@ -142,7 +142,8 @@ vc_map(array(
 		            'param_name'    => 'thumbnail_size',
 		            'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','theclick'),
 		            'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
-		            'std'           => ''
+		            'std'           => '',
+		            "group" => esc_html__("Grid Settings", 'theclick')
 		        ),
 	        	array(
 		            "type" => "dropdown",
