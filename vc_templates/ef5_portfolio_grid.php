@@ -107,7 +107,13 @@ if($ifp)
 else
     theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
-$this->loadmore($atts);
+if($pagination == 'loadmore'){
+    $loadmore_text = !empty($loadmore_text) ? $loadmore_text : esc_html__( 'Load More','theclick' );  
+    echo '<div class="woocommerce-infinite d-flex justify-content-center text-center">';
+        next_posts_link( $loadmore_text ); 
+    echo '</div>';
+}
+//$this->loadmore($atts);
 wp_reset_query();
 ?>
 </div>

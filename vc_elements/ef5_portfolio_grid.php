@@ -219,11 +219,9 @@ class WPBakeryShortCode_ef5_portfolio_grid extends WPBakeryShortCode{
     protected function loadmore($atts = ''){
         extract($atts);
         if($pagination !== 'loadmore') return;
-        $loadmore_text = !empty($loadmore_text) ? $loadmore_text : esc_html__( 'Load More','theclick' );
-         
+        $loadmore_text = !empty($loadmore_text) ? $loadmore_text : esc_html__( 'Load More','theclick' );  
         echo '<div class="woocommerce-infinite d-flex justify-content-center text-center">';
-            //next_posts_link( $loadmore_text ); 
-        next_posts_link( 'load more'); 
+            next_posts_link( $loadmore_text ); 
         echo '</div>';
     }
 }
