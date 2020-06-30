@@ -109,11 +109,15 @@
     </div>
 <?php
 $show_pagination = ($pagination == 'pagin') ? '1' : '0';
-if($ifp)
-    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '1']);
-else
-    theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
-$this->view_all($atts);
-$this->loadmore($atts);
+if($pagination == 'pagin'){
+    if($ifp)
+        theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '1']);
+    else
+        theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
+}else if( $pagination == 'view_all'){
+    $this->view_all($atts);
+}else if( $pagination == 'loadmore'){
+    $this->loadmore($atts);
+}
 ?>
 </div>
