@@ -20,7 +20,7 @@
 		    padding-bottom: 17px;
 		    opacity: 0;
 		    visibility: hidden;
-		    @include transition(all .1s ease);
+		    @include transition(all .3s ease);
 		}
 		&:hover{
 			.ef5-port-content{
