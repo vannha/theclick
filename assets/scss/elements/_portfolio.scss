@@ -22,7 +22,7 @@
 		    padding-bottom: 17px;
 		    opacity: 0;
 		    visibility: hidden;
-		    @include transition(all .3s ease);
+		    @include transition(all .5s ease);
 		    >*{
 		    	flex: 0 0 100%;
 		    	max-width: 100%;
