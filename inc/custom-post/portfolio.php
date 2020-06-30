@@ -6,7 +6,7 @@
  *
  */
 add_filter( 'ef5_extra_post_types', 'theclick_add_posttype' );
-function theclick_add_posttype( $postypes ) {
+function theclick_add_posttype( $post_types ) {
 	$post_types['ef5_portfolio'] = array( 
     	'status'        => true,
 		'item_name' => esc_html__('Portfolio', 'theclick'),
