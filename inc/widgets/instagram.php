@@ -40,7 +40,7 @@ class CS_Instagram_Widget extends WP_Widget {
 
 			if ( is_wp_error($media_array) ) {
 
-			   echo juststartit_html($media_array->get_error_message());
+			   echo $media_array->get_error_message();
 
 			} else {
 
