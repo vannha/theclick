@@ -14,6 +14,8 @@
 		    left: 20px;
 		    bottom: 20px;
 		    right: 20px;
+	        @include d-flex();
+		    align-items: flex-end;
 		    background-color: rgba(255,255,255,0.8);
 		    padding-left: 25px;
 		    padding-right: 20px;
@@ -21,6 +23,10 @@
 		    opacity: 0;
 		    visibility: hidden;
 		    @include transition(all .3s ease);
+		    >*{
+		    	flex: 0 0 100%;
+		    	max-width: 100%;
+		    }
 		}
 		&:hover{
 			.ef5-port-content{
