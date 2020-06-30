@@ -1,4 +1,5 @@
 <?php 
+    global $paged, $wp_query;
     $atts = vc_map_get_attributes($this->getShortcode(), $atts);
     extract($atts);
 
@@ -20,7 +21,7 @@
     } 
 
     $tax_query = theclick_tax_query('ef5_portfolio', $taxonomies, $taxonomies_exclude);
-    global $paged, $wp_query;
+    
     if (get_query_var('paged')) {
         $paged = get_query_var('paged');
     } elseif (get_query_var('page')) {
@@ -109,7 +110,8 @@ else
 $this->view_all($atts);
 if($pagination == 'loadmore'){
     $loadmore_text = !empty($loadmore_text) ? $loadmore_text : esc_html__( 'Load More','theclick' );  
-    echo '<div class="woocommerce-infinite d-flex justify-content-center text-center">';
+    var_dump(next_posts_link( $loadmore_text ));
+    echo '<div class="d-flex justify-content-center text-center">';
         next_posts_link( $loadmore_text ); 
     echo '</div>';
 }
