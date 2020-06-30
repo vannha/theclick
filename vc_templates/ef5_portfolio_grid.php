@@ -108,5 +108,6 @@ else
     theclick_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3']);
 $this->view_all($atts);
 $this->loadmore($atts);
+wp_reset_query();
 ?>
 </div>
