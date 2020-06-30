@@ -9,7 +9,7 @@
 add_filter('ef5_extra_post_types', 'theclick_cpts_header_top', 10 , 1);
 function theclick_cpts_header_top($post_types)
 {
-    $header_top = apply_filters('theclick_cpts_header_top', false);
+    $header_top = apply_filters('theclick_cpts_header_top', true);
     if($header_top) {
         $post_types['ef5_header_top'] = array( 
             'status'        => true,
@@ -49,7 +49,7 @@ function theclick_cpts_header_top($post_types)
  */
 add_filter('ef5_extra_post_types', 'theclick_cpts_footer', 10 , 1);
 function theclick_cpts_footer($post_types) {
-    $enable_footer = apply_filters('theclick_cpts_footer', false);
+    $enable_footer = apply_filters('theclick_cpts_footer', true);
     if($enable_footer) {
         $post_types['ef5_footer'] = array( 
             'status'        => true,
