@@ -8,35 +8,33 @@
 */
 add_filter('ef5_extra_post_types', 'theclick_cpts_header_top', 10 , 1);
 function theclick_cpts_header_top($post_types)
-{
-    $header_top = apply_filters('theclick_cpts_header_top', true);
-    if($header_top) {
-        $post_types['ef5_header_top'] = array( 
-            'status'        => true,
-            'item_name'     => esc_html__('Header Top', 'theclick'),
-            'items_name'    => esc_html__('Headers Top', 'theclick'),
-            'args'          => array(
-                'description'         => 'Add custom Header Top Layout ',
-                'public'              => true,
-                'publicly_queryable'  => false,
-                'show_ui'             => true,
-                'show_in_rest'        => false,
-                'rest_base'           => '',
-                'has_archive'         => false,
-                'show_in_menu'        => true,
-                'show_in_nav_menus'   => false,
-                'exclude_from_search' => true,
-                'capability_type'     => 'post',
-                'map_meta_cap'        => true,
-                'hierarchical'        => false,
-                'rewrite'             => false,
-                'query_var'           => true,
-                'menu_position'       => 20,
-                'menu_icon'           => 'dashicons-editor-insertmore',
-                'supports'            => array( 'title', 'editor','thumbnail' ),
-            )
-        );
-    }
+{   
+    $post_types['ef5_header_top'] = array( 
+        'status'        => true,
+        'item_name'     => esc_html__('Header Top', 'theclick'),
+        'items_name'    => esc_html__('Headers Top', 'theclick'),
+        'args'          => array(
+            'description'         => 'Add custom Header Top Layout ',
+            'public'              => true,
+            'publicly_queryable'  => false,
+            'show_ui'             => true,
+            'show_in_rest'        => false,
+            'rest_base'           => '',
+            'has_archive'         => false,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => false,
+            'exclude_from_search' => true,
+            'capability_type'     => 'post',
+            'map_meta_cap'        => true,
+            'hierarchical'        => false,
+            'rewrite'             => false,
+            'query_var'           => true,
+            'menu_position'       => 20,
+            'menu_icon'           => 'dashicons-editor-insertmore',
+            'supports'            => array( 'title', 'editor','thumbnail' ),
+        )
+    );
+   
     return $post_types;
 }
 
@@ -49,33 +47,30 @@ function theclick_cpts_header_top($post_types)
  */
 add_filter('ef5_extra_post_types', 'theclick_cpts_footer', 10 , 1);
 function theclick_cpts_footer($post_types) {
-    $enable_footer = apply_filters('theclick_cpts_footer', true);
-    if($enable_footer) {
-        $post_types['ef5_footer'] = array( 
-            'status'        => true,
-            'item_name'     => esc_html__('Footer', 'theclick'),
-            'items_name'    => esc_html__('Footers', 'theclick'),
-            'args'          => array(
-                'description'         => 'Add custom Footer Layout ',
-                'public'              => true,
-                'publicly_queryable'  => false,
-                'show_ui'             => true,
-                'show_in_rest'        => false,
-                'rest_base'           => '',
-                'has_archive'         => false,
-                'show_in_menu'        => true,
-                'show_in_nav_menus'   => false,
-                'exclude_from_search' => true,
-                'capability_type'     => 'post',
-                'map_meta_cap'        => true,
-                'hierarchical'        => false,
-                'rewrite'             => false,
-                'query_var'           => true,
-                'menu_position'       => 20,
-                'menu_icon'           => 'dashicons-editor-insertmore',
-                'supports'            => array( 'title', 'editor', 'thumbnail' ),
-            )
-        ); 
-    }
+    $post_types['ef5_footer'] = array( 
+        'status'        => true,
+        'item_name'     => esc_html__('Footer', 'theclick'),
+        'items_name'    => esc_html__('Footers', 'theclick'),
+        'args'          => array(
+            'description'         => 'Add custom Footer Layout ',
+            'public'              => true,
+            'publicly_queryable'  => false,
+            'show_ui'             => true,
+            'show_in_rest'        => false,
+            'rest_base'           => '',
+            'has_archive'         => false,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => false,
+            'exclude_from_search' => true,
+            'capability_type'     => 'post',
+            'map_meta_cap'        => true,
+            'hierarchical'        => false,
+            'rewrite'             => false,
+            'query_var'           => true,
+            'menu_position'       => 20,
+            'menu_icon'           => 'dashicons-editor-insertmore',
+            'supports'            => array( 'title', 'editor', 'thumbnail' ),
+        )
+    ); 
     return $post_types;    
 }
