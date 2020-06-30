@@ -49,6 +49,23 @@ add_filter('ef5_extra_post_types', 'theclick_cpts_footer', 10 , 1);
 function theclick_cpts_footer($post_types) {
     $post_types['ef5_footer'] = array( 
         'status'        => true,
+        'item_name' => esc_html__('Footer', 'theclick'),
+        'items_name'          => esc_html__('Footers', 'theclick'),
+        'args'          => array(
+            'menu_icon'     => 'dashicons-portfolio',
+            'supports'           => array(
+                'title',
+                'thumbnail',
+                'editor',
+            ),
+            'public'             => true,
+            'has_archive'         => false,
+            'publicly_queryable' => true,
+            'rewrite'             => false,
+        ) 
+    );
+   /* $post_types['ef5_footer'] = array( 
+        'status'        => true,
         'item_name'     => esc_html__('Footer', 'theclick'),
         'items_name'    => esc_html__('Footers', 'theclick'),
         'args'          => array(
@@ -71,6 +88,6 @@ function theclick_cpts_footer($post_types) {
             'menu_icon'           => 'dashicons-editor-insertmore',
             'supports'            => array( 'title', 'editor', 'thumbnail' ),
         )
-    ); 
+    ); */
     return $post_types;    
 }
