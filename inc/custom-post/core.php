@@ -6,7 +6,7 @@
  * This custom post used for build Header Top section
  *
 */
-add_filter('ef5_extra_post_types', 'theclick_cpts_header_top', 10 , 1);
+add_filter('ef5_extra_post_types', 'theclick_cpts_header_top');
 function theclick_cpts_header_top($post_types)
 {   
     $post_types['ef5_header_top'] = array( 
@@ -45,7 +45,7 @@ function theclick_cpts_header_top($post_types)
  * This custom post used for build Footer Top section
  *
  */
-add_filter('ef5_extra_post_types', 'theclick_cpts_footer', 10 , 1);
+add_filter('ef5_extra_post_types', 'theclick_cpts_footer');
 function theclick_cpts_footer($post_types) {
     $post_types['ef5_footer'] = array( 
         'status'        => true,
