@@ -3,7 +3,7 @@ form button,
 form [type="button"],
 form [type="reset"],
 form [type="submit"],
-.grid-loadmore-btn,
+.grid-loadmore-btn a,
 .ef5-btn{
     padding: $btn-inner-space;
     font-size: $btn-font-size;
@@ -42,7 +42,7 @@ form [type="submit"],
     padding-bottom: 5px;
 }
 
-.grid-loadmore-btn{
+.grid-loadmore-btn a{
     border-color: $btn-color;
     &:hover{
         border-color: $btn-color-hover;
