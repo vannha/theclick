@@ -138,6 +138,13 @@ vc_map(array(
         	]),
 	        array(
 	        	array(
+		            'type'          => 'textfield',
+		            'param_name'    => 'thumbnail_size',
+		            'heading'       => esc_html__('Thumbnail Size (Leave blank to use default size)','theclick'),
+		            'description'   => esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','theclick'),
+		            'std'           => ''
+		        ),
+	        	array(
 		            "type" => "dropdown",
 		            "heading" => esc_html__("Column XL Gutter",'theclick'),
 		            "param_name" => "column_xl_gutter",

@@ -44,6 +44,8 @@
 
     $item_css_class = ['portfolio-grid-item', 'ef5-portfolio-item-layout-' . $layout_template, 'transition'];
 
+    $thumbnail_size = !empty( $thumbnail_size ) ? $thumbnail_size : 'medium';
+
 ?>
 <div class="ef5-posts ef5-portfolio-grid <?php echo esc_attr($el_class); ?>" id="<?php echo esc_attr($el_id); ?>">
     <div class="<?php $this->theclick_portfolios_wrap_css_class($atts);?>">
@@ -72,11 +74,15 @@
                 while ($wp_query->have_posts()) {
                     $wp_query->the_post();
                     $d++;
+                    $id = get_post_thumbnail_id(get_the_ID());
                     ?>
                     <div class="<?php echo trim(implode(' ', $grid_item_css_class)); ?>" style="animation-delay: <?php echo esc_html($d * 50); ?>ms">
-                        <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                             
-                            <?php theclick_post_media(['thumbnail_size' => 'medium']); ?>
+                        <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">     
+                            <?php 
+                            if( $id ){
+                                theclick_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => '']);
+                            }
+                            ?>
                             <div class="ef5-port-content">
                                 <?php
                                 the_title( '<div class="ef5-heading text-20"><a href="' . esc_url( get_permalink() ) . '">','</a></div>' );
