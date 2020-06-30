@@ -117,6 +117,6 @@ if($pagination == 'loadmore'){
     echo '</div>';
 }
 //$this->loadmore($atts);
-wp_reset_query();
+//wp_reset_query();
 ?>
 </div>
